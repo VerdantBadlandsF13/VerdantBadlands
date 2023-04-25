@@ -12,6 +12,11 @@
 #define FACTION_KHAN "Great Khans"
 #define FACTION_TRIBAL "Tribals"
 
+
+#define FACTION_DFS "Dry Fields Security"
+#define FACTION_LBJ "Lumberjack Camp"
+#define FACTION_GMB "Green Mountain Boys"
+
 #define ENGSEC			(1<<0)
 
 #define CAPTAIN			(1<<0)
@@ -186,6 +191,35 @@
 #define F13KHANSEN (1<<2)
 #define F13KHANSMITH (1<<3)
 #define F13KHANCOURT (1<<4)
+
+//BEGIN BADLANDS
+#define DFS		(1<<14)
+
+#define	F13DFSADVISOR			(1<<0)
+#define	F13DFSENFORCER			(1<<1)
+#define F13DFSAGENT				(1<<2)
+#define F13DFSREGULAR			(1<<3)
+#define F13DFSGRUNT				(1<<4)
+
+#define GMB		(1<<15)
+
+#define	F13GMBCOMMANDER			(1<<0)
+#define	F13GMBWATCHMAN			(1<<1)
+#define F13GMBWALKER			(1<<2)
+#define F13GMBMILITIA			(1<<3)
+#define F13GMBVOLUNTEER			(1<<4)
+
+#define LBJ		(1<<16)
+
+#define	F13LBJATTENDANT			(1<<0)
+#define	F13LBJFOREMAN			(1<<1)
+#define F13LBJLUMBERJACK		(1<<2)
+
+#define WASTREL	(1<<17)
+
+#define	F13WASTREL			(1<<0)
+#define	F13WASTRELRAIDER	(1<<1)
+//END BADLANDS
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1

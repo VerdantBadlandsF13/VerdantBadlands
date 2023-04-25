@@ -232,6 +232,11 @@ Uranium, Contaminated
 	sharpness = SHARP_NONE
 	wound_bonus = 0
 
+//used exclusively by the hooper boss
+/obj/item/projectile/bullet/c45/rubber/basketball
+	name = "miniaturised dunk'em brand basketball"
+	damage = 1
+
 /obj/item/projectile/bullet/c45/incendiary
 	name = ".45 incendiary bullet"
 	damage = 6

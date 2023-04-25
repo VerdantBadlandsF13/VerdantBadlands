@@ -111,6 +111,17 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_RAIDER		141 //raider door access
 #define ACCESS_RAIDER_BOSS		142 //raider boss door access
 
+//BEGIN BL
+#define ACCESS_GMB			143 //Compound access
+#define ACCESS_GMB_BOSS		144 //Compound Leader
+#define ACCESS_GMB_MOTORPOOL		145 //Compound access for the motorpool in BB.
+
+#define ACCESS_DFS			146 //Keys to true freedom.
+#define ACCESS_DFS_BOSS		147 //Hail to the king.
+
+#define ACCESS_LBJ			148 //The lights aren't real. Remain calm. The lights aren't real. Remain calm.
+//END BL
+
 	//The Syndicate
 #define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.
 #define ACCESS_SYNDICATE_LEADER 151//Nuke Op Leader Access

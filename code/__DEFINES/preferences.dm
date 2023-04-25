@@ -85,6 +85,11 @@
 #define EXP_TYPE_FOLLOWERS		"FoA"
 #define EXP_TYPE_OUTLAW			"Outlaw"
 #define EXP_TYPE_KHAN			"Great Khans"
+
+#define EXP_TYPE_DFS			"Dry Fields Security"
+#define EXP_TYPE_GMB			"Green Mountain Boys"
+#define EXP_TYPE_LBJ			"Lumberjack Camp"
+
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)
 #define DB_FLAG_AGE_CONFIRMATION_INCOMPLETE		(1<<1)

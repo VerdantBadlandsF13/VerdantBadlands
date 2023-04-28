@@ -324,3 +324,22 @@
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+//HOOOOOOOOOOOOOOOOOOOOPEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRSSSSSSSSSSS
+/mob/living/simple_animal/hostile/raider/ranged/hooperboss
+	name = "Hooper General"
+	desc = "Modern Hooper General. Even in death, he still balls."
+	icon_state = "hooperboss"
+	icon_living = "hooperboss"
+	icon_dead = "hooperboss_dead"
+	maxHealth = 620
+	health = 620
+	extra_projectiles = 5
+	projectiletype = /obj/item/projectile/bullet/c45/rubber/basketball
+	projectilesound = 'sound/block_parry/block_wood1.ogg'
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/f13/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness)
+	footstep_type = FOOTSTEP_MOB_SHOE
+
+/mob/living/simple_animal/hostile/raider/ranged/hooperboss/Aggro()
+	..()
+	summon_backup(15)
+	say("SCUFF 'IS GORDONS 'OLMS!")

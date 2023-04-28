@@ -771,7 +771,7 @@
 	short_desc = "You are a might warrior of Caesar's Legion. Retribution!"
 	flavour_text = "True to Caesar!"
 	assignedrole = "Prime Legionnaire"
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
+	outfit = /datum/outfit/job/caesarslegion/f13legionary
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
 		/obj/item/ammo_box/a357 = 3,
@@ -785,7 +785,7 @@
 	mob_name = "Veteran Legionnaire"
 	job_description = "Veteran Legionnaire"
 	assignedrole = "Veteran Legionnaire"
-	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
+	outfit = /datum/outfit/job/caesarslegion/vetlegionnaire
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 3,
@@ -875,7 +875,7 @@
 		/obj/item/binoculars = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1
 	)
-	
+
 /obj/effect/mob_spawn/human/fallout13/tribal/ranged
 	name = "Bow Hunter Spawn"
 	desc = "An entry point for bow hunters to join a battle."

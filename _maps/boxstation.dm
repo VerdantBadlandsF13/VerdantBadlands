@@ -1,1 +1,1 @@
-#define FORCE_MAP "_maps/pahrump.json"  // quick and dirty exclusion of broken boxstation
+#define FORCE_MAP "_maps/brattleboro.json"  // quick and dirty exclusion of broken boxstation

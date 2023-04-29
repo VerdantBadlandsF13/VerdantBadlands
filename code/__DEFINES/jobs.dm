@@ -211,9 +211,8 @@
 
 #define LBJ		(1<<16)
 
-#define	F13LBJATTENDANT			(1<<0)
-#define	F13LBJFOREMAN			(1<<1)
-#define F13LBJLUMBERJACK		(1<<2)
+#define	F13LBJFOREMAN			(1<<0)
+#define F13LBJLUMBERJACK		(1<<1)
 
 #define WASTREL	(1<<17)
 

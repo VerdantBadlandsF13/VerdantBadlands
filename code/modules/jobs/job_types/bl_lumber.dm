@@ -6,9 +6,11 @@
 
 	access = list(ACCESS_LBJ)
 	minimal_access = list(ACCESS_LBJ)
-	forbids = "The NCR forbids: Chem and drug use such as jet or alcohol while on duty. Execution of unarmed or otherwise subdued targets without authorisation."
-	enforces = "The NCR expects: Obeying the lawful orders of superiors. Proper treatment of prisoners.  Good conduct within the Republic's laws. Wearing the uniform."
-	objectivesList = list("Leadership recommends the following goal for this week: Establish an outpost at the radio tower","Leadership recommends the following goal for this week: Neutralize and capture dangerous criminals", "Leadership recommends the following goal for this week: Free slaves and establish good relations with unaligned individuals.")
+
+	forbids = "The LBJ forbids: Speaking of the lights."
+
+	enforces = "The LBJ expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
+				- Trading. Provide lumber, food and other material to those that require it in trade."
 
 /datum/outfit/job/lbj
 	name = "LBJdatums"
@@ -16,10 +18,29 @@
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = null
-	uniform	= /obj/item/clothing/under/f13/ncr
-	belt = /obj/item/storage/belt/military/assault/ncr
-	shoes = /obj/item/clothing/shoes/f13/military/ncr
-	l_pocket = /obj/item/book/manual/ncr/jobguide
+	uniform	= /obj/item/clothing/under/f13/lumberjack/lbj
+	shoes = /obj/item/clothing/shoes/f13/military
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid = 1,
 		)
+
+//Foreman
+/datum/job/lbj/foreman
+	title = "Foreman"
+	flag = F13LBJFOREMAN
+	total_positions = 1
+	spawn_positions = 1
+	description = "..."
+	supervisors = "Attendant."
+	outfit = /datum/outfit/job/lbj
+	req_admin_notify = 1
+
+//Lumberjack
+/datum/job/lbj/lumber
+	title = "Lumberjack"
+	flag = F13LBJLUMBERJACK
+	total_positions = -1
+	spawn_positions = -1
+	description = "..."
+	supervisors = "Foreman."
+	outfit = /datum/outfit/job/lbj

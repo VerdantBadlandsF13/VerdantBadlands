@@ -12,10 +12,10 @@
 #define FACTION_KHAN "Great Khans"
 #define FACTION_TRIBAL "Tribals"
 
-
 #define FACTION_DFS "Dry Fields Security"
 #define FACTION_LBJ "Lumberjack Camp"
 #define FACTION_GMB "Green Mountain Boys"
+
 
 #define ENGSEC			(1<<0)
 
@@ -213,11 +213,6 @@
 
 #define	F13LBJFOREMAN			(1<<0)
 #define F13LBJLUMBERJACK		(1<<1)
-
-#define WASTREL	(1<<17)
-
-#define	F13WASTREL			(1<<0)
-#define	F13WASTRELRAIDER	(1<<1)
 //END BADLANDS
 
 #define JOB_AVAILABLE 0

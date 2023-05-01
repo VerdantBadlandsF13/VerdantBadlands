@@ -20,15 +20,28 @@
 /datum/outfit/job/dfs
 	name = "DFSdatums"
 	jobtype = /datum/job/dfs
+	id = /obj/item/card/id/dfs_raider_tags
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	neck = /obj/item/storage/belt/holster/legholster
 	ears = null
 	uniform	= /obj/item/clothing/under/f13/merca/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
+	r_pocket = /obj/item/flashlight/flare
+	l_pocket = /obj/item/radio
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid = 1,
 		)
+
+/datum/outfit/job/dfs/advisor
+	name = "DFS Advisor"
+	jobtype = /datum/job/dfs/advisor
+	id = /obj/item/card/id/dfs_boss_raider_tags
+
+/datum/outfit/job/dfs/enforcer
+	name = "DFS Enforcer"
+	jobtype = /datum/job/dfs/enforcer
+	id = /obj/item/card/id/dfs_boss_raider_tags
 
 //DFS Advisor
 /datum/job/dfs/advisor
@@ -37,10 +50,13 @@
 	total_positions = 1
 	spawn_positions = 1
 	description = "The highest authority in Dry Fields Security.  \
-	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading his men directly in battle or while on patrol."
+	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading their troops directly in battle or while on patrol."
 	supervisors = "Morals."
-	outfit = /datum/outfit/job/dfs
+	outfit = /datum/outfit/job/dfs/advisor
 	req_admin_notify = 1
+	exp_requirements = 960
+	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
+	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
 //DFS Enforcer
 /datum/job/dfs/enforcer
@@ -51,7 +67,11 @@
 	description = "Stays near the compound to ensure nobody gets in or out without verification. \
 	Guards prisoners when applicable, stops infighting and otherwise keeps the compound secure."
 	supervisors = "Advisor."
-	outfit = /datum/outfit/job/dfs
+	outfit = /datum/outfit/job/dfs/enforcer
+	req_admin_notify = 1
+	exp_requirements = 480
+	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
+	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
 //DFS Agent
 /datum/job/dfs/agent
@@ -62,6 +82,7 @@
 	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
 	supervisors = "Enforcer."
 	outfit = /datum/outfit/job/dfs
+	exp_requirements = 240
 
 //DFS Regular
 /datum/job/dfs/regular
@@ -72,6 +93,7 @@
 	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
 	supervisors = "Agent."
 	outfit = /datum/outfit/job/dfs
+	exp_requirements = 120
 
 //DFS Grunt
 /datum/job/dfs/grunt
@@ -82,3 +104,5 @@
 	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
 	supervisors = "Regular."
 	outfit = /datum/outfit/job/dfs
+	exp_requirements = 60
+	exp_type = EXP_TYPE_WASTELAND

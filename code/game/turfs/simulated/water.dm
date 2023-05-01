@@ -71,7 +71,7 @@
 	if(locate(/obj/structure/lattice/catwalk) in loc)
 		return 0
 	loc = get_turf(src)
-	if(istype(loc, /turf/open/indestructible/ground/outside/water) || istype(loc, /turf/open/water))
+	if(istype(loc, /turf/open/indestructible/ground/outside/water) || istype(loc, /turf/open/water) || istype(loc, /turf/open/indestructible/sound/pool))
 		var/turf/open/T = loc
 		return T.depth
 	return 0

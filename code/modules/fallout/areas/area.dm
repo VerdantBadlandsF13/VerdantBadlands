@@ -733,6 +733,52 @@
 	environment = 15
 	grow_chance = 0
 
+//Badlands Parent Areas, Start.
+//Power later, when we sort the plant's function out gameplay wise. - Carl
+/area/f13/bl
+	name = "MASTER AREA DO NOT USE"
+	icon_state = "admin"
+	ambientsounds = list('sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg','sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg')
+	blob_allowed = 0
+	environment = 6
+	grow_chance = 5
+//	requires_power = TRUE
+
+/area/f13/wasteland/bl
+	name = "MASTER AREA DO NOT USE"
+	icon_state = "admin"
+	ambientsounds = list('sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg','sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg')
+	blob_allowed = 0
+	environment = 6
+	grow_chance = 5
+//	requires_power = TRUE
+
+/area/f13/bl/gmb
+	name = "Militia Camp"
+	icon_state = "brotherhood"
+
+/area/f13/wasteland/bl/gmb
+	name = "Militia Camp Exterior"
+	icon_state = "ncrex"
+
+/area/f13/bl/dfs
+	name = "Security Compound"
+	icon_state = "tribe"
+
+/area/f13/wasteland/bl/dfs
+	name = "Security Compound Exterior"
+	icon_state = "legionex"
+
+/area/f13/bl/lbj
+	name = "Lumberjack Camp"
+	icon_state = "forest"
+
+/area/f13/wasteland/bl/lbj
+	name = "Lumberjack Camp Exterior"
+	icon_state = "error"//:)
+
+//Badlands Parent Areas, End.
+
 //special
 /area/f13/vault_elevator
 	name = "elevator shaft"

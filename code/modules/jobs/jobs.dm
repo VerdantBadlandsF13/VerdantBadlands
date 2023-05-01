@@ -73,6 +73,10 @@ GLOBAL_LIST_INIT(command_positions, list(
 
 	"Raider Captain",
 
+	"Commander",
+	"DFS Advisor",
+	"Foreman",
+
 //	"Noyan",
 //	"Steward",
 	))
@@ -139,6 +143,21 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Followers Doctor",
 "Followers Scholar",
 "Followers Robot",
+
+"Commander",
+"Watchman",
+"Walker",
+"Militia",
+"Volunteer",
+
+"DFS Advisor",
+"DFS Enforcer",
+"DFS Agent",
+"DFS Regular",
+"DFS Grunt",
+
+"Foreman",
+"Lumberjack",
 
 "Cyborg",
 ))
@@ -295,6 +314,27 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Followers Robot",
 ))
 
+GLOBAL_LIST_INIT(gmb_positions, list(
+	"Commander",
+	"Watchman",
+	"Walker",
+	"Militia",
+	"Volunteer",
+))
+
+GLOBAL_LIST_INIT(dfs_positions, list(
+	"DFS Advisor",
+	"DFS Enforcer",
+	"DFS Agent",
+	"DFS Regular",
+	"DFS Grunt",
+))
+
+GLOBAL_LIST_INIT(lbj_positions, list(
+	"Foreman",
+	"Lumberjack",
+))
+
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
@@ -307,6 +347,9 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#434944"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
 	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),
+	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
+	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
+	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -320,7 +363,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | bighorn_positions | legion_positions | khan_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | outlaw_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | bighorn_positions | legion_positions | khan_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | outlaw_positions | followers_positions | enclave_positions | gmb_positions | dfs_positions | lbj_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = outlaw_positions),
 	EXP_TYPE_TRIBAL = list("titles" = tribal_positions),
@@ -336,6 +379,10 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
+
+	EXP_TYPE_GMB = list("titles" = gmb_positions),
+	EXP_TYPE_DFS = list("titles" = dfs_positions),
+	EXP_TYPE_LBJ = list("titles" = lbj_positions),
 
 	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Followers Administrator")),
 	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))

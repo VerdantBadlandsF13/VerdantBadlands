@@ -204,13 +204,13 @@
 // CELL DOOR - LEGION
 
 /obj/machinery/door/unpowered/celldoor/legion
-	name = "Prison door"
+	name = "cell door"
 	req_access_txt = "123"
 
 // CELL DOOR - RAIDER
 
 /obj/machinery/door/unpowered/celldoor/outlaw
-	name = "Prison door"
+	name = "cell door"
 	req_access_txt = "141"
 
 
@@ -318,3 +318,141 @@
 
 /obj/machinery/door/unpowered/securedoor/outlaw/boss
 	req_access_txt = "142"
+
+
+// ------------------------------------
+// Badlands
+// GMB
+/obj/machinery/door/unpowered/securedoor/gmb_exterior_door
+	name = "heavy secure door"
+	req_access_txt = "143"
+	icon_state = "secure_steel"
+
+/obj/machinery/door/unpowered/securedoor/gmb_exterior_door/update_icon()
+	if(density)
+		icon_state = "secure_steel"
+	else
+		icon_state = "secure_steel_open"
+
+/obj/machinery/door/unpowered/securedoor/gmb_exterior_door/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorshutter_open.ogg',40,1)
+			flick("secure_steel_opening", src)
+		if("closing")
+			playsound(src,'sound/f13machines/doorshutter_close.ogg',40,1)
+			flick("secure_steel_closing", src)
+
+/obj/machinery/door/unpowered/securedoor/gmb_mp_door
+	name = "large secure door"
+	req_access_txt = "145"
+
+/obj/machinery/door/unpowered/securedoor/gmb_door
+	name = "secure door"
+	req_access_txt = "143"
+
+/obj/machinery/door/unpowered/celldoor/gmb_gate
+	name = "cell door"
+	req_access_txt = "143"
+
+/obj/machinery/door/unpowered/securedoor/gmb_command
+	name = "secure door"
+	req_access_txt = "144"
+	icon_state = "metal"
+
+/obj/machinery/door/unpowered/securedoor/gmb_command/update_icon()
+	if(density)
+		icon_state = "metal"
+	else
+		icon_state = "metalopen"
+
+/obj/machinery/door/unpowered/securedoor/gmb_command/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',40,1)
+			flick("metalopening", src)
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',40,1)
+			flick("metalclosing", src)
+
+// ------------------------------------
+// Badlands
+// DFS
+/obj/machinery/door/unpowered/securedoor/dfs_exterior_door
+	name = "heavy secure door"
+	req_access_txt = "146"
+	icon_state = "secure_steel"
+
+/obj/machinery/door/unpowered/securedoor/dfs_exterior_door/update_icon()
+	if(density)
+		icon_state = "secure_steel"
+	else
+		icon_state = "secure_steel_open"
+
+/obj/machinery/door/unpowered/securedoor/dfs_exterior_door/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorshutter_open.ogg',40,1)
+			flick("secure_steel_opening", src)
+		if("closing")
+			playsound(src,'sound/f13machines/doorshutter_close.ogg',40,1)
+			flick("secure_steel_closing", src)
+
+/obj/machinery/door/unpowered/securedoor/dfs_door
+	name = "secure door"
+	req_access_txt = "146"
+
+/obj/machinery/door/unpowered/celldoor/dfs_gate
+	name = "cell door"
+	req_access_txt = "146"
+
+/obj/machinery/door/unpowered/securedoor/dfs_command
+	name = "secure door"
+	req_access_txt = "147"
+	icon_state = "metal"
+
+/obj/machinery/door/unpowered/securedoor/dfs_command/update_icon()
+	if(density)
+		icon_state = "metal"
+	else
+		icon_state = "metalopen"
+
+/obj/machinery/door/unpowered/securedoor/dfs_command/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/machines/door_open.ogg',40,1)
+			flick("metalopening", src)
+		if("closing")
+			playsound(src,'sound/machines/door_close.ogg',40,1)
+			flick("metalclosing", src)
+
+// ------------------------------------
+// Badlands
+// LBJ
+/obj/machinery/door/unpowered/securedoor/lbj_exterior_door
+	name = "heavy secure door"
+	req_access_txt = "148"
+	icon_state = "secure_steel"
+
+/obj/machinery/door/unpowered/securedoor/lbj_exterior_door/update_icon()
+	if(density)
+		icon_state = "secure_steel"
+	else
+		icon_state = "secure_steel_open"
+
+/obj/machinery/door/unpowered/securedoor/lbj_exterior_door/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'sound/f13machines/doorshutter_open.ogg',40,1)
+			flick("secure_steel_opening", src)
+		if("closing")
+			playsound(src,'sound/f13machines/doorshutter_close.ogg',40,1)
+			flick("secure_steel_closing", src)
+
+/obj/machinery/door/unpowered/securedoor/lbj_door
+	name = "secure door"
+	req_access_txt = "148"
+
+/obj/machinery/door/unpowered/celldoor/lbj_gate
+	name = "cell door"
+	req_access_txt = "148"

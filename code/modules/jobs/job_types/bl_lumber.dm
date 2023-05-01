@@ -15,11 +15,14 @@
 /datum/outfit/job/lbj
 	name = "LBJdatums"
 	jobtype = /datum/job/lbj
+	id = /obj/item/card/id/lbj_raider_tags
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = null
 	uniform	= /obj/item/clothing/under/f13/lumberjack/lbj
 	shoes = /obj/item/clothing/shoes/f13/military
+	r_pocket = /obj/item/flashlight/flare
+	l_pocket = /obj/item/radio
 	backpack_contents = list(
 		/obj/item/storage/survivalkit_aid = 1,
 		)
@@ -34,6 +37,7 @@
 	supervisors = "Attendant."
 	outfit = /datum/outfit/job/lbj
 	req_admin_notify = 1
+	exp_requirements = 1800
 
 //Lumberjack
 /datum/job/lbj/lumber
@@ -44,3 +48,5 @@
 	description = "..."
 	supervisors = "Foreman."
 	outfit = /datum/outfit/job/lbj
+	exp_requirements = 240
+	exp_type = EXP_TYPE_FALLOUT

@@ -7,12 +7,12 @@
 	access = list(ACCESS_GMB)
 	minimal_access = list(ACCESS_GMB)
 
-	forbids = "The GMB forbids: Marauding of any kind, unless it is a designated enemy stronghold. <br> \
+	forbids = "The Green Mountain Boys forbids: Marauding of any kind, unless it is a designated enemy stronghold. <br> \
 				- Slavery of any kind. <br> \
 				- Extortion. <br> \
 				- Kidnapping anyone but persons of interest."
 
-	enforces = "The GMB expects: Maintain relative peace and order within the outpost's area. <br> \
+	enforces = "The Green Mountain Boys expects: Maintain relative peace and order within the outpost's area. <br> \
 				- Protect the citizenry to the best of your ability. <br> \
 				- Ensure a consistent food supply for your militia company and citizens. <br> \
 				- Make contact and build rapport with existing powers in the area."
@@ -47,7 +47,7 @@
 	jobtype = /datum/job/gmb/walker
 	id = /obj/item/card/id/gmb_commander_keys
 
-//Commander
+// Commander
 /datum/job/gmb/commander
 	title = "Commander"
 	flag = F13GMBCOMMANDER
@@ -61,7 +61,7 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
-//Watchman
+// Watchman
 /datum/job/gmb/watchman
 	title = "Watchman"
 	flag = F13GMBWATCHMAN
@@ -75,7 +75,7 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
-//Walker
+// Walker
 /datum/job/gmb/walker
 	title = "Walker"
 	flag = F13GMBWALKER
@@ -89,7 +89,7 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 
-//Militia
+// Militia
 /datum/job/gmb/militia
 	title = "Militia"
 	flag = F13GMBMILITIA
@@ -100,7 +100,7 @@
 	outfit = /datum/outfit/job/gmb
 	exp_requirements = 120
 
-//Volunteer
+// Volunteer
 /datum/job/gmb/volunteer
 	title = "Volunteer"
 	flag = F13GMBVOLUNTEER

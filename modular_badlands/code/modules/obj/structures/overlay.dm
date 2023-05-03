@@ -1,4 +1,4 @@
-//Generic Waterside Effects
+// Generic Waterside Effects
 /obj/effect/overlay/turfs/water
 	name = "beach overlay"
 	icon_state = "sand_water_side"
@@ -6,7 +6,7 @@
 /obj/effect/overlay/turfs/water/corner
 	icon_state = "sand_water_corner"
 
-//General Water Effects
+// General Water Effects
 /obj/effect/overlay/river_water
 	name = "water"
 	icon = 'icons/turf/pool.dmi'

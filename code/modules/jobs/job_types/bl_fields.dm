@@ -7,11 +7,11 @@
 	access = list(ACCESS_DFS)
 	minimal_access = list(ACCESS_DFS)
 
-	forbids = "The DFS forbids: Provoking wars. You're tough, but not undefeatable. Know what battles you can and can't afford. <br> \
+	forbids = "Dry Fields Security forbids: Provoking wars. You're tough, but not undefeatable. Know what battles you can and can't afford. <br> \
 				- Farming. While not forbidden by any rule or technicality, it is much more cost effective to coerce the locals into giving you what you want. <br> \
 				- Overextend. Never isolate yourself unless you're undercover. A team works better together."
 
-	enforces = "The DFS expects: Strongarming. Appearing tough and responding to diplomacy with a show of force can work miracles. <br> \
+	enforces = "Dry Fields Security expects: Strongarming. Appearing tough and responding to diplomacy with a show of force can work miracles. <br> \
 				- Extortion. You want money and people may not want protection. Give them a reason to. <br> \
 				- Scavenging. You do not have a stable supply of food, water or components. <br> \
 				- Kidnapping. Someone have something you want? Try taking one of their friends, or them. People are usually worth a lot more than their share of cram alive. <br> \
@@ -43,7 +43,7 @@
 	jobtype = /datum/job/dfs/enforcer
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
-//DFS Advisor
+// DFS Advisor
 /datum/job/dfs/advisor
 	title = "DFS Advisor"
 	flag = F13DFSADVISOR
@@ -58,7 +58,7 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
-//DFS Enforcer
+// DFS Enforcer
 /datum/job/dfs/enforcer
 	title = "DFS Enforcer"
 	flag = F13DFSENFORCER
@@ -73,7 +73,7 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
-//DFS Agent
+// DFS Agent
 /datum/job/dfs/agent
 	title = "DFS Agent"
 	flag = F13DFSAGENT
@@ -84,7 +84,7 @@
 	outfit = /datum/outfit/job/dfs
 	exp_requirements = 240
 
-//DFS Regular
+// DFS Regular
 /datum/job/dfs/regular
 	title = "DFS Regular"
 	flag = F13DFSREGULAR

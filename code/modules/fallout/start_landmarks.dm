@@ -475,12 +475,6 @@
 	name = "Khan Courtesan"
 	icon_state = "Tribal"
 
-/*
-///////////////////////////
-// Badlands Stuff Below //
-//////////////////////////
-*/
-
 // GMB
 /obj/effect/landmark/start/f13/gmb_commander
 	name = "Commander"

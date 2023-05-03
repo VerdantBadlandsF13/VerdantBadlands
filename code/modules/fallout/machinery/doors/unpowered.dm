@@ -323,6 +323,7 @@
 // ------------------------------------
 // Badlands
 // GMB
+
 /obj/machinery/door/unpowered/securedoor/gmb_exterior_door
 	name = "heavy secure door"
 	req_access_txt = "143"
@@ -378,6 +379,7 @@
 // ------------------------------------
 // Badlands
 // DFS
+
 /obj/machinery/door/unpowered/securedoor/dfs_exterior_door
 	name = "heavy secure door"
 	req_access_txt = "146"
@@ -429,6 +431,7 @@
 // ------------------------------------
 // Badlands
 // LBJ
+
 /obj/machinery/door/unpowered/securedoor/lbj_exterior_door
 	name = "heavy secure door"
 	req_access_txt = "148"

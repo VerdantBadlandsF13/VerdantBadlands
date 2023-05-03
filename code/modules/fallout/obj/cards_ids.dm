@@ -421,7 +421,7 @@ KEYS AND STUFF AAAAAAAAA
 	uses_overlays = FALSE
 	access = list(ACCESS_TRIBE)
 
-//dfs
+// DFS
 /obj/item/card/id/dfs_raider_tags
 	name = "frail rusted keychain"
 	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
@@ -440,7 +440,7 @@ KEYS AND STUFF AAAAAAAAA
 	uses_overlays = FALSE
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
-//gmb
+// GMB
 /obj/item/card/id/gmb_keys
 	name = "frail rusted keychain"
 	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
@@ -459,7 +459,7 @@ KEYS AND STUFF AAAAAAAAA
 	uses_overlays = FALSE
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
-//lbj
+// LBJ
 /obj/item/card/id/lbj_raider_tags
 	name = "frail rusted keychain"
 	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."

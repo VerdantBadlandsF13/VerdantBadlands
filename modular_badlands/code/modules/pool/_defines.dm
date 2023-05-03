@@ -8,8 +8,8 @@ Houses the defines required, to keep this modular.
 
 #define MOVESPEED_ID_SWIMMING "SWIMMING_SPEED_MOD"
 
-//Not quite a set of defines but whatever aaaaaaaa
-//Can't this also be put into the other proc?????
+// Not quite a set of defines but whatever aaaaaaaa
+// Can't this also be put into the other proc?????
 /turf/attack_hand(mob/user)
 	. = ..()
 	if(SEND_SIGNAL(user, COMSIG_MOB_ATTACK_HAND_TURF, src) & COMPONENT_NO_ATTACK_HAND)

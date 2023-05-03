@@ -3748,7 +3748,6 @@
 #include "interface\skin.dmf"
 #include "modular_badlands\code\modules\defenses\obstacles.dm"
 #include "modular_badlands\code\modules\obj\structures\overlay.dm"
-#include "modular_badlands\code\modules\obj\structures\service_ladder.dm"
 #include "modular_badlands\code\modules\pool\_defines.dm"
 #include "modular_badlands\code\modules\pool\modifiers.dm"
 #include "modular_badlands\code\modules\pool\pool.dm"

@@ -1,4 +1,4 @@
-//Tank Traps
+// Tank Traps
 /obj/structure/tanktrap
 	name = "Czech hedgehog"
 	desc = "An odd set of angled beams. What're these doing all the way in Vermont?"
@@ -19,7 +19,7 @@
 /obj/structure/tanktrap/old/light
 	icon_state = "iron_barricade2A"
 
-//Sandbags Kinda
+// Sandbags Kinda
 /obj/structure/barricade/sandbag_wall
 	name = "sandbag wall"
 	desc = "Neatly stacked sandbags. <br>\
@@ -35,7 +35,7 @@
 /obj/structure/barricade/sandbag_wall/multi
 	icon_state = "sandbag_horizontal"
 
-//Cliff walls for rivers and such.
+// Cliff walls for rivers and such.
 /obj/structure/barricade/cliff_face
 	name = "steep incline"
 	desc = "Too steep to climb. <br>\

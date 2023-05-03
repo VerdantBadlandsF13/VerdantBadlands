@@ -7,9 +7,9 @@
 	access = list(ACCESS_LBJ)
 	minimal_access = list(ACCESS_LBJ)
 
-	forbids = "The LBJ forbids: Speaking of the lights."
+	forbids = "The logging camp forbids: Speaking of the lights."
 
-	enforces = "The LBJ expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
+	enforces = "The logging expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
 				- Trading. Provide lumber, food and other material to those that require it in trade."
 
 /datum/outfit/job/lbj
@@ -27,7 +27,7 @@
 		/obj/item/storage/survivalkit_aid = 1,
 		)
 
-//Foreman
+// Foreman
 /datum/job/lbj/foreman
 	title = "Foreman"
 	flag = F13LBJFOREMAN
@@ -39,7 +39,7 @@
 	req_admin_notify = 1
 	exp_requirements = 1800
 
-//Lumberjack
+// Lumberjack
 /datum/job/lbj/lumber
 	title = "Lumberjack"
 	flag = F13LBJLUMBERJACK

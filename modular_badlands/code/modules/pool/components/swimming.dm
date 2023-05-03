@@ -1,9 +1,9 @@
-//Component used to show that a mob is swimming, and force them to swim a lil' bit slower. Components are actually really based!
+// Component used to show that a mob is swimming, and force them to swim a lil' bit slower. Components are actually really based!
 
 /datum/component/swimming
 	dupe_mode = COMPONENT_DUPE_UNIQUE
-	var/lengths = 0 //How far have we swum?
-	var/lengths_for_bonus = 25 //If you swim this much, you'll count as having "excercised" and thus gain a buff.
+	var/lengths = 0 // How far have we swum?
+	var/lengths_for_bonus = 25 // If you swim this much, you'll count as having "excercised" and thus gain a buff.
 	var/list/species = list()
 	var/drowning = FALSE
 	var/ticks_drowned = 0
@@ -16,7 +16,7 @@
 	. = ..()
 	if(!isliving(parent))
 		message_admins("Swimming component erroneously added to a non-living mob ([parent]).")
-		return INITIALIZE_HINT_QDEL //Only mobs can swim, like Ian...
+		return INITIALIZE_HINT_QDEL // Only mobs can swim, like Ian...
 	var/mob/M = parent
 	M.visible_message("<span class='notice'>[parent] starts splashing around in the water!</span>")
 	M.add_movespeed_modifier(/datum/movespeed_modifier/water_wading)
@@ -31,11 +31,11 @@
 	if(lengths > lengths_for_bonus)
 		var/mob/living/L = parent
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "exercise", /datum/mood_event/exercise)
-		L.apply_status_effect(STATUS_EFFECT_EXERCISED) //Swimming is really good excercise!
-		L.adjustStaminaLoss(5) //Tiring, however.
+		L.apply_status_effect(STATUS_EFFECT_EXERCISED) // Swimming is really good excercise!
+		L.adjustStaminaLoss(5) // Tiring, however.
 		lengths = 0
 
-//Damn edge cases
+// Damn edge cases
 /datum/component/swimming/proc/onChangeSpecies()
 	var/mob/living/carbon/C = parent
 	var/component_type = /datum/component/swimming
@@ -102,7 +102,7 @@
 		return
 	if(iscarbon(victim))
 		var/mob/living/carbon/C = victim
-		if(C.get_breath_from_internal(0)) //check if we have internals on
+		if(C.get_breath_from_internal(0)) // check if we have internals on
 			return
 	return (!(victim.mobility_flags & MOBILITY_STAND)) && (!HAS_TRAIT(victim, TRAIT_NOBREATH))
 
@@ -132,6 +132,6 @@
 /datum/component/swimming/proc/enter_pool()
 	return
 
-//Essentially the same as remove component, but easier for overiding
+// Essentially the same as remove component, but easier for overiding
 /datum/component/swimming/proc/exit_pool()
 	return

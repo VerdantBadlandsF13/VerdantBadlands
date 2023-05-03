@@ -733,8 +733,8 @@
 	environment = 15
 	grow_chance = 0
 
-//Badlands Parent Areas, Start.
-//Power later, when we sort the plant's function out gameplay wise. - Carl
+// Badlands Parent Areas, Start.
+// Power later, when we sort the plant's function out gameplay wise. - Carl
 /area/f13/bl
 	name = "MASTER AREA DO NOT USE"
 	icon_state = "admin"
@@ -777,9 +777,9 @@
 	name = "Lumberjack Camp Exterior"
 	icon_state = "error"//:)
 
-//Badlands Parent Areas, End.
+// Badlands Parent Areas, End.
 
-//special
+// special
 /area/f13/vault_elevator
 	name = "elevator shaft"
 	icon_state = "error"

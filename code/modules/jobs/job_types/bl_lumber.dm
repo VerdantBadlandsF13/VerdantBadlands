@@ -7,9 +7,9 @@
 	access = list(ACCESS_LBJ)
 	minimal_access = list(ACCESS_LBJ)
 
-	forbids = "The logging camp forbids: Speaking of the lights."
+	forbids = "The Logging Camp forbids: Speaking of the lights."
 
-	enforces = "The logging expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
+	enforces = "The Logging Camp expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
 				- Trading. Provide lumber, food and other material to those that require it in trade."
 
 /datum/outfit/job/lbj

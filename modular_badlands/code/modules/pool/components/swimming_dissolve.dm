@@ -20,7 +20,7 @@
 	if(L.stat == DEAD)
 		L.visible_message("<span class='warning'>[L] dissolves into the pool!</span>")
 		var/obj/item/organ/brain = L.getorgan(/obj/item/organ/brain)
-		brain.Remove(L)	//Maybe making them completely unrecoverable is too far
+		brain.Remove(L)	// Maybe making them completely unrecoverable is too far
 		brain.forceMove(get_turf(L))
 		qdel(L)
 

@@ -2,9 +2,9 @@
 Houses the defines required, to keep this modular.
 */
 
-#define COMSIG_MOB_ATTACK_HAND_TURF "mob_attack_hand_turf"		//from the base of turf/attack_hand
+#define COMSIG_MOB_ATTACK_HAND_TURF "mob_attack_hand_turf"    // from the base of turf/attack_hand
 
-#define COMSIG_CARBON_SPECIESCHANGE "mob_carbon_specieschange" //from  base of mob/living/carbon/set_species(): (new_race)
+#define COMSIG_CARBON_SPECIESCHANGE "mob_carbon_specieschange"    // from base of mob/living/carbon/set_species(): (new_race)
 
 #define MOVESPEED_ID_SWIMMING "SWIMMING_SPEED_MOD"
 
@@ -19,5 +19,5 @@ Houses the defines required, to keep this modular.
 	user.Move_Pulled(src)
 
 /datum/species
-	//The component to add when swimming
+	// The component to add when swimming
 	var/swimming_component = /datum/component/swimming

@@ -1845,15 +1845,7 @@
 	item_state = "bibledog"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 2, "energy" = 2, "bomb" = 5, "bio" = 0, "rad" = 10, "fire" = 50, "acid" = 40)
 
-
-
-/*
-///////////////////////////////////////////
-// This is used for Badlands Content.     /
-// Primarily, the GMB, DFS and LBJ groups./
-///////////////////////////////////////////
-*/
-//GMB
+// GMB
 /obj/item/clothing/under/f13/ranger/modif_ranger/gmb
 	name = "surplus militia outfit"
 	desc = "A surplus outfit with a green cotton longshirt and dark grey jeans along with a black bandana around the neck. It has been fitted with the militia's patch."
@@ -1866,7 +1858,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-//DFS
+// DFS
 /obj/item/clothing/under/f13/merca/dfs
 	name = "security team outfit"
 	desc = "A well put together uniform, alongside the DFS insignia."
@@ -1880,7 +1872,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 
-//LBJ - WHY ARE THERE TWO COPIES OF ONE OBJECT ABOVE FOR LUMBERJACKS?
+// LBJ - WHY ARE THERE TWO COPIES OF ONE OBJECT ABOVE FOR LUMBERJACKS?
 /obj/item/clothing/under/f13/lumberjack/lbj
 	name = "lumberjack outfit"
 	desc = "The apparel of a potentially psychotic lumberjack. The lights in the sky aren't real."

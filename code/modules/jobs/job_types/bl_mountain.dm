@@ -7,12 +7,12 @@
 	access = list(ACCESS_GMB)
 	minimal_access = list(ACCESS_GMB)
 
-	forbids = "The Green Mountain Boys forbids: Marauding of any kind, unless it is a designated enemy stronghold. <br> \
+	forbids = "The Green Mountain Boys forbid: Marauding of any kind, unless it is a designated enemy stronghold. <br> \
 				- Slavery of any kind. <br> \
 				- Extortion. <br> \
 				- Kidnapping anyone but persons of interest."
 
-	enforces = "The Green Mountain Boys expects: Maintain relative peace and order within the outpost's area. <br> \
+	enforces = "The Green Mountain Boys expect: Maintain relative peace and order within the outpost's area. <br> \
 				- Protect the citizenry to the best of your ability. <br> \
 				- Ensure a consistent food supply for your militia company and citizens. <br> \
 				- Make contact and build rapport with existing powers in the area."

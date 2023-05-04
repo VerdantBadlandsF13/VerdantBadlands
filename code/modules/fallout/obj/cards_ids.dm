@@ -420,6 +420,55 @@ KEYS AND STUFF AAAAAAAAA
 	assignment = "old keys"
 	uses_overlays = FALSE
 	access = list(ACCESS_TRIBE)
+
+// DFS
+/obj/item/card/id/dfs_raider_tags
+	name = "frail rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_DFS)
+
+/obj/item/card/id/dfs_boss_raider_tags
+	name = "hardened rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel sturdy."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
+
+// GMB
+/obj/item/card/id/gmb_keys
+	name = "frail rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_GMB)
+
+/obj/item/card/id/gmb_commander_keys
+	name = "hardened rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel sturdy."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
+
+// LBJ
+/obj/item/card/id/lbj_raider_tags
+	name = "frail rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_LBJ)
+
 /*
 end of
 */

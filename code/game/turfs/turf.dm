@@ -83,7 +83,7 @@
 	levelupdate()
 	if(smooth)
 		queue_smooth(src)
-	
+
 	// visibilityChanged() will never hit any path with side effects during mapload
 	if (!mapload)
 		visibilityChanged()

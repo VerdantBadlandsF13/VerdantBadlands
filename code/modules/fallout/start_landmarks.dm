@@ -474,3 +474,54 @@
 /obj/effect/landmark/start/f13/khan_court
 	name = "Khan Courtesan"
 	icon_state = "Tribal"
+
+// GMB
+/obj/effect/landmark/start/f13/gmb_commander
+	name = "Commander"
+	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/gmb_watchman
+	name = "Watchman"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/gmb_walker
+	name = "Walker"
+	icon_state = "Boss"
+
+/obj/effect/landmark/start/f13/gmb_militia
+	name = "Militia"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/gmb_volunteer
+	name = "Volunteer"
+	icon_state = "Tribal"
+
+// DFS
+/obj/effect/landmark/start/f13/dfs_advisor
+	name = "DFS Advisor"
+	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/dfs_enforcer
+	name = "DFS Enforcer"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/dfs_agent
+	name = "DFS Agent"
+	icon_state = "Boss"
+
+/obj/effect/landmark/start/f13/dfs_regular
+	name = "DFS Regular"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/dfs_grunt
+	name = "DFS Grunt"
+	icon_state = "Tribal"
+
+// LBJ
+/obj/effect/landmark/start/f13/lbj_foreman
+	name = "Foreman"
+	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/lbj_lumberjack
+	name = "Lumberjack"
+	icon_state = "Pusher"

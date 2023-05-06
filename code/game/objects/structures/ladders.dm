@@ -2,7 +2,7 @@
 /obj/structure/ladder
 	name = "ladder"
 	desc = "A sturdy metal ladder."
-	icon = 'icons/obj/structures.dmi'
+	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/decals.dmi'
 	icon_state = "ladder11"
 	anchored = TRUE
 	var/obj/structure/ladder/down   //the ladder below this one
@@ -157,6 +157,7 @@
 
 	else if(down)
 		icon_state = "manhole_open"
+		name = "manhole"
 
 	else	//wtf make your ladders properly assholes
 		icon_state = "ladder00"
@@ -247,6 +248,11 @@
 	else
 		user.visible_message("[user] climbs down [src].","<span class='notice'>You climb down [src].</span>")
 
+// Indestructible ladders. Identical to normal, except being, well, unbreakable.
+/obj/structure/ladder/unbreakable_normal
+	name = "sturdy ladder"
+	desc = "An extremely sturdy metal ladder."
+	resistance_flags = INDESTRUCTIBLE
 
 // Indestructible away mission ladders which link based on a mapped ID and height value rather than X/Y/Z.
 /obj/structure/ladder/unbreakable
@@ -338,7 +344,7 @@
 /obj/structure/ladder/unbreakable/binary/unlinked //Crew gets to complete one
 	id = "unlinked_binary"
 	area_to_place = null
-	
+
 /obj/structure/ladder/unbreakable/transition
 	name = "transition zone"
 	desc = "<font color='#6eaa2c'>Head to the other side.</font>"

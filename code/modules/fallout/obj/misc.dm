@@ -263,30 +263,9 @@
 		if(do_after(user, 60, target = src))
 			var/obj/item/stack/sheet/leather/H = I
 			if(H.use(1))
-				var/list/choices = list("NCR", "Legion", "Bighorn", "BOS", "Followers", "Great Khans")
+				var/list/choices = list("BOS", "Enclave")
 				var/flag = input("Please choose which faction flag you wish to create.") in choices
 				switch(flag)
-					if(FACTION_NCR)
-						name = "NCR flag"
-						desc = "A flag with a two headed bear, the symbol of the New California Republic."
-						icon_state = "ncrflag"
-						item_state = "ncrflag"
-						faction = "NCR"
-						anchored = 1
-					if(FACTION_LEGION)
-						name = "Legion flag"
-						desc = "A flag with a golden bull, the symbol of Caesar's Legion."
-						icon_state = "legionflag"
-						item_state = "legionflag"
-						faction = FACTION_LEGION
-						anchored = 1
-					if(FACTION_BIGHORN)
-						name = "Bighorn flag"
-						desc = "A flag depicting the head of a bighorner. It's the symbol of the town of Bighorn."
-						icon_state = "bighornflag"
-						item_state = "bighornflag"
-						faction = FACTION_BIGHORN
-						anchored = 1
 					if(FACTION_BROTHERHOOD)
 						name = "BOS flag"
 						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
@@ -294,23 +273,9 @@
 						item_state = "bosflag"
 						faction = FACTION_BROTHERHOOD
 						anchored = 1
-					if("Followers")
-						name = "Followers of the Apocalypse flag"
-						desc = "A white flag with the black Follower's of the Apocalpyse cross on it."
-						icon_state = "followersflag"
-						item_state = "followersflag"
-						faction = FACTION_FOLLOWERS
-						anchored = 1
-					if("Great Khans")
-						name = "Great Khans flag"
-						desc = "A flag worn and weathered from a long cherished history. A decorated smiling skull smiles mockingly upon those who challenge it."
-						icon_state = "khanflag"
-						item_state = "khanflag"
-						faction = "Great Khans"
-						anchored = 1
 					if(FACTION_ENCLAVE)
 						name = "Enclave flag"
-						desc = "A flag worn and weathered from the Casper's Snow."
+						desc = "A flag worn and weathered from the snow."
 						icon_state = "enclaveflag"
 						item_state = "enclaveflag"
 						faction = FACTION_ENCLAVE

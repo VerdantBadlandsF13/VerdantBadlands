@@ -1,4 +1,28 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/sign/poster/prewar/poster79{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/transparent/openspace,
+/area/f13/village)
+"aab" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/mob/living/simple_animal/hostile/raider/junker/creator,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/village)
 "aaz" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
@@ -40,7 +64,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "agQ" = (
 /obj/structure/table/booth,
 /obj/item/trash/f13/crisps,
@@ -48,7 +72,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aht" = (
 /obj/structure/simple_door/metal/store,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -146,7 +170,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "asG" = (
 /obj/structure/sink{
 	pixel_y = 20
@@ -193,7 +217,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "axo" = (
 /obj/structure/curtain{
 	color = "#363636"
@@ -238,7 +262,7 @@
 	pixel_y = 20
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aAo" = (
 /obj/structure/simple_door/interior,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -289,7 +313,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aFn" = (
 /obj/machinery/workbench,
 /turf/open/floor/f13/wood,
@@ -315,7 +339,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aKQ" = (
 /obj/structure/table/booth,
 /turf/open/floor/f13/wood,
@@ -406,7 +430,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aYL" = (
 /obj/structure/reagent_dispensers/barrel/two,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -453,7 +477,7 @@
 	dir = 1
 	},
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bcY" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -542,7 +566,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bpT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -553,10 +577,7 @@
 /turf/open/floor/carpet/red,
 /area/f13/village)
 "bqg" = (
-/obj/structure/railing{
-	dir = 9;
-	icon_state = "railing_corner"
-	},
+/obj/structure/railing/corner,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/village)
 "bqB" = (
@@ -633,7 +654,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bwc" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -670,7 +691,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bzG" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -690,7 +711,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bAS" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/sign/poster/prewar/poster65{
@@ -788,7 +809,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bMs" = (
 /obj/structure/sink{
 	dir = 4;
@@ -824,11 +845,11 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bOm" = (
 /obj/structure/campfire/barrel,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bSx" = (
 /obj/structure/table/wood/settler,
 /obj/item/paper_bin,
@@ -846,7 +867,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bTr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
@@ -894,7 +915,7 @@
 /obj/structure/bookcase,
 /obj/effect/spawner/lootdrop/f13/traitbooks/low,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ccG" = (
 /obj/structure/railing{
 	dir = 10;
@@ -937,7 +958,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cgv" = (
 /turf/open/floor/carpet/red,
 /area/f13/village)
@@ -1004,7 +1025,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cnH" = (
 /obj/machinery/vending/games,
 /obj/effect/decal/cleanable/dirt,
@@ -1057,13 +1078,13 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cse" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "csr" = (
 /turf/open/floor/wood/wood_common{
 	icon_state = "common-broken2"
@@ -1135,7 +1156,7 @@
 	icon_state = "Junk_3"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cyv" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
@@ -1189,7 +1210,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cGw" = (
 /obj/structure/table/wood,
 /obj/item/instrument/guitar,
@@ -1220,7 +1241,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cLg" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
 /obj/effect/decal/remains/human,
@@ -1244,7 +1265,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cMp" = (
 /obj/structure/bed/wooden,
 /obj/effect/spawner/lootdrop/bedsheet,
@@ -1277,7 +1298,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cOc" = (
 /obj/structure/chair/booth{
 	dir = 8
@@ -1286,7 +1307,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cOd" = (
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -1305,7 +1326,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cQo" = (
 /obj/effect/overlay/junk/toilet{
 	dir = 8
@@ -1328,7 +1349,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cRf" = (
 /obj/structure/railing{
 	dir = 8;
@@ -1367,7 +1388,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cVn" = (
 /obj/structure/table,
 /turf/open/floor/f13/wood,
@@ -1394,7 +1415,7 @@
 /area/f13/building)
 "cZq" = (
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cZx" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -1462,7 +1483,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dho" = (
 /obj/machinery/light{
 	dir = 4;
@@ -1492,7 +1513,7 @@
 "dmu" = (
 /obj/structure/nest/ghoul,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dmF" = (
 /obj/structure/closet/fridge,
 /obj/item/storage/box/ingredients/fruity,
@@ -1503,7 +1524,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dpr" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -1558,7 +1579,7 @@
 	},
 /obj/machinery/light,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dul" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt,
@@ -1582,7 +1603,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dwq" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/wood/wood_common,
@@ -1593,7 +1614,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dwN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/broken{
@@ -1686,7 +1707,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dJc" = (
 /obj/structure/bed/wooden,
 /obj/effect/spawner/lootdrop/bedsheet,
@@ -1718,7 +1739,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dKI" = (
 /obj/machinery/shower{
 	dir = 1
@@ -1735,7 +1756,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dLb" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light{
@@ -1745,7 +1766,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dLT" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowbottom"
@@ -1813,7 +1834,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dSD" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/under/f13/mechanic,
@@ -1833,14 +1854,14 @@
 /obj/structure/table/wood,
 /obj/machinery/computer/terminal,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dUc" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dVM" = (
 /obj/item/trash/f13/rotten,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1848,7 +1869,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dWi" = (
 /obj/structure/chair/wood,
 /turf/open/floor/wood/wood_common,
@@ -1962,7 +1983,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eje" = (
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -1988,7 +2009,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ekQ" = (
 /obj/structure/toilet/secret/high_loot{
 	dir = 8
@@ -2031,7 +2052,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "erC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2050,7 +2071,7 @@
 	pixel_x = 2
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "esh" = (
 /obj/structure/railing{
 	dir = 4;
@@ -2061,7 +2082,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "etr" = (
 /obj/machinery/shower{
 	dir = 1
@@ -2094,7 +2115,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ezB" = (
 /obj/structure/curtain{
 	color = "#363636";
@@ -2121,7 +2142,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eFF" = (
 /obj/structure/chair/right{
 	dir = 1
@@ -2131,7 +2152,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eHl" = (
 /obj/machinery/microwave/stove,
 /turf/open/floor/wood/wood_common,
@@ -2174,7 +2195,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eNf" = (
 /obj/machinery/light{
 	dir = 4;
@@ -2184,7 +2205,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eOe" = (
 /obj/structure/chair/sofa{
 	dir = 8
@@ -2201,7 +2222,7 @@
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ePh" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbrokenvertical"
@@ -2245,7 +2266,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eWf" = (
 /obj/machinery/light{
 	dir = 1
@@ -2287,7 +2308,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fdt" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -2310,7 +2331,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/ammo/civilian,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fhF" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/wood/wood_common,
@@ -2370,7 +2391,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fnG" = (
 /obj/machinery/light/floor,
 /obj/machinery/light/floor,
@@ -2378,7 +2399,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fnH" = (
 /obj/structure/chair/sofa,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
@@ -2416,7 +2437,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "frL" = (
 /obj/structure/table/booth,
 /obj/effect/decal/cleanable/dirt,
@@ -2499,7 +2520,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fxR" = (
 /obj/structure/bed/wooden,
 /obj/effect/spawner/lootdrop/bedsheet,
@@ -2541,7 +2562,7 @@
 "fBv" = (
 /obj/structure/wreck/trash/machinepile,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fCa" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -2561,7 +2582,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fCF" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
@@ -2624,7 +2645,7 @@
 /area/f13/caves)
 "fHJ" = (
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fJn" = (
 /obj/item/storage/trash_stack,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2632,7 +2653,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fJF" = (
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -2671,7 +2692,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fNy" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/light/small/broken{
@@ -2721,7 +2742,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fVf" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_2"
@@ -2760,7 +2781,7 @@
 "fZi" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gaZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2866,7 +2887,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gik" = (
 /obj/structure/fence/wooden{
 	density = 0;
@@ -2915,7 +2936,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gpu" = (
 /obj/structure/sign/plaques{
 	desc = "A plaque detailling tribal weaponsmiths and craftsmen, including times for live demonstrations to take place.";
@@ -2941,7 +2962,7 @@
 	dir = 4
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "guK" = (
 /obj/structure/curtain{
 	color = "#363636";
@@ -2979,7 +3000,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gyO" = (
 /obj/structure/chair/sofa/right{
 	dir = 4
@@ -2996,7 +3017,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gzm" = (
 /obj/structure/displaycase,
 /obj/item/stack/sheet/mineral/silver{
@@ -3043,7 +3064,7 @@
 "gCG" = (
 /obj/structure/simple_door/metal/dirtystore,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gDY" = (
 /obj/structure/chair/right,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3051,7 +3072,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gEa" = (
 /obj/structure/railing{
 	dir = 10
@@ -3087,7 +3108,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gHb" = (
 /obj/effect/overlay/junk/sink{
 	dir = 4;
@@ -3130,7 +3151,7 @@
 "gII" = (
 /obj/structure/barricade/bars,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gIU" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -3147,7 +3168,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gLf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/booth,
@@ -3174,7 +3195,7 @@
 /area/f13/village)
 "gPQ" = (
 /turf/open/transparent/openspace,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gQa" = (
 /obj/structure/nest/protectron{
 	layer = 3;
@@ -3185,7 +3206,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gQI" = (
 /obj/machinery/light,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
@@ -3198,7 +3219,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gVb" = (
 /obj/structure/railing{
 	dir = 1
@@ -3245,7 +3266,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hbg" = (
 /obj/machinery/shower{
 	pixel_y = 18
@@ -3322,7 +3343,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hmS" = (
 /obj/structure/table/booth,
 /obj/item/trash/popcorn,
@@ -3330,7 +3351,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hnP" = (
 /obj/machinery/shower{
 	dir = 8
@@ -3385,7 +3406,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hqO" = (
 /obj/structure/railing{
 	dir = 9;
@@ -3417,7 +3438,7 @@
 "hsA" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hsS" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
@@ -3457,7 +3478,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hwM" = (
 /obj/structure/railing/corner{
 	color = "#A47449";
@@ -3480,7 +3501,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hBE" = (
 /obj/machinery/light{
 	dir = 4;
@@ -3493,7 +3514,7 @@
 	icon_state = "trash_2"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hCE" = (
 /obj/structure/table/wood,
 /obj/item/defibrillator/primitive,
@@ -3575,7 +3596,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hKj" = (
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -3606,7 +3627,7 @@
 	icon_state = "Junk_3"
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hMB" = (
 /obj/structure/chair/sofa{
 	dir = 4
@@ -3633,7 +3654,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hOl" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/fluff/railing/corner{
@@ -3651,7 +3672,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hSp" = (
 /obj/structure/railing{
 	dir = 9
@@ -3679,7 +3700,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hUp" = (
 /obj/structure/table/wood/poker,
 /obj/item/toy/cards/deck,
@@ -3796,7 +3817,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ijt" = (
 /obj/structure/railing{
 	dir = 8
@@ -3889,14 +3910,14 @@
 	icon_state = "technical_pile2"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iuQ" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iuV" = (
 /obj/structure/toilet{
 	dir = 4
@@ -3976,7 +3997,7 @@
 	icon_state = "skin"
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iCO" = (
 /obj/machinery/vending/cola,
 /obj/effect/decal/cleanable/dirt,
@@ -4017,7 +4038,7 @@
 "iJF" = (
 /obj/structure/simple_door/metal/dirtystore,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iJO" = (
 /obj/machinery/smartfridge/bottlerack/seedbin/primitive,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -4121,7 +4142,7 @@
 	layer = 2
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iVf" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/reagent_containers/glass/bottle/hydrogen{
@@ -4189,12 +4210,12 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jbh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/storage/trash_stack,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jbB" = (
 /obj/structure/railing{
 	dir = 8;
@@ -4255,7 +4276,7 @@
 	icon_state = "Junk_3"
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jpe" = (
 /obj/structure/fence/corner/wooden{
 	dir = 8
@@ -4322,7 +4343,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jwS" = (
 /obj/structure/railing{
 	color = "#A47449"
@@ -4351,7 +4372,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jyK" = (
 /obj/structure/chair/bench,
 /obj/structure/destructible/tribal_torch/wall/lit,
@@ -4372,7 +4393,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jBk" = (
 /obj/structure/fluff/railing{
 	dir = 8
@@ -4398,7 +4419,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jHl" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 1
@@ -4409,7 +4430,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jIZ" = (
 /obj/structure/chair/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -4429,7 +4450,7 @@
 "jJK" = (
 /obj/item/storage/trash_stack,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jKt" = (
 /obj/structure/sign/warning/explosives{
 	icon_state = "explosives2"
@@ -4447,7 +4468,7 @@
 "jKI" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jMB" = (
 /obj/structure/sign/poster/prewar/poster65{
 	pixel_x = -32
@@ -4492,7 +4513,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jRd" = (
 /obj/structure/closet/crate/bin/trashbin{
 	pixel_x = 6
@@ -4568,7 +4589,7 @@
 "kbf" = (
 /obj/structure/simple_door/metal/dirtystore,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kcf" = (
 /obj/machinery/vending/cola/space_up,
 /obj/structure/sign/poster/contraband/space_cola{
@@ -4578,7 +4599,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kdp" = (
 /turf/open/floor/wood/wood_fancy{
 	icon_state = "fancy-broken6"
@@ -4645,7 +4666,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "klP" = (
 /obj/machinery/light,
 /turf/open/floor/wood/wood_wide,
@@ -4673,20 +4694,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"kmx" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/sign/poster/prewar/poster79{
-	pixel_y = 32
-	},
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/village)
 "kmK" = (
 /obj/structure/railing{
 	dir = 6
@@ -4695,7 +4702,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "knw" = (
 /obj/structure/chair/left{
 	dir = 1
@@ -4704,7 +4711,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "koc" = (
 /mob/living/simple_animal/hostile/renegade/soldier{
 	name = "Runnings Contractor";
@@ -4755,7 +4762,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kwg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/vending/boozeomat,
@@ -4763,7 +4770,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kwi" = (
 /obj/structure/table,
 /obj/item/trash/f13/cram,
@@ -4804,7 +4811,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kEh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/paint/yellow{
@@ -4851,7 +4858,7 @@
 	dir = 8
 	},
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kHl" = (
 /obj/structure/toilet{
 	dir = 4
@@ -4914,7 +4921,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kNz" = (
 /obj/structure/table/wood,
 /obj/item/storage/book/bible,
@@ -4983,7 +4990,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lcH" = (
 /obj/structure/chair/sofa{
 	dir = 8
@@ -5001,7 +5008,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lfd" = (
 /obj/structure/fluff/rails,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5009,7 +5016,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lfw" = (
 /obj/structure/table,
 /obj/structure/sign/plaques{
@@ -5020,7 +5027,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lfT" = (
 /obj/structure/railing{
 	dir = 4
@@ -5077,7 +5084,7 @@
 	icon_state = "Junk_2"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lkd" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -5094,7 +5101,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lnv" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 4
@@ -5103,7 +5110,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lnE" = (
 /obj/item/clothing/suit/armor/f13/sulphitearmor,
 /obj/item/clothing/head/helmet/f13/sulphitehelm,
@@ -5226,7 +5233,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lzm" = (
 /obj/machinery/vending/medical,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5279,7 +5286,7 @@
 "lHF" = (
 /mob/living/simple_animal/hostile/ghoul/glowing,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lHJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/trashcart,
@@ -5287,7 +5294,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lIF" = (
 /obj/structure/chair/sofa{
 	dir = 4
@@ -5321,7 +5328,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lLZ" = (
 /mob/living/simple_animal/chicken,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -5401,7 +5408,7 @@
 "lRB" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lUL" = (
 /obj/structure/curtain{
 	color = "#363636";
@@ -5463,7 +5470,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mey" = (
 /obj/structure/fluff/railing/corner{
 	dir = 8
@@ -5483,7 +5490,7 @@
 /obj/effect/spawner/lootdrop/f13/traitbooks,
 /obj/effect/spawner/lootdrop/f13/traitbooks/low,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mfm" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -5521,7 +5528,7 @@
 "mjm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mjp" = (
 /obj/structure/chair/booth{
 	dir = 8
@@ -5531,7 +5538,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mjN" = (
 /obj/structure/chair/left{
 	dir = 1
@@ -5541,7 +5548,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mkm" = (
 /obj/structure/chair/stool/retro/tan,
 /obj/effect/decal/cleanable/dirt,
@@ -5563,7 +5570,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mlt" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "storewindowbottom"
@@ -5706,7 +5713,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mEj" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5736,14 +5743,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mJs" = (
 /obj/machinery/light/floor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mJt" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -5755,7 +5762,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mMR" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -5775,7 +5782,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mTa" = (
 /mob/living/simple_animal/hostile/renegade/defender{
 	name = "Runnings Heavy";
@@ -5929,7 +5936,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nlx" = (
 /obj/machinery/smartfridge/bottlerack/alchemy_rack,
 /turf/open/floor/plasteel/f13/stone/rugged,
@@ -5943,7 +5950,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nmK" = (
 /obj/effect/decal/cleanable/glass,
 /obj/structure/curtain{
@@ -6011,7 +6018,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nur" = (
 /obj/structure/sink{
 	dir = 8;
@@ -6023,9 +6030,8 @@
 	},
 /area/f13/village)
 "nuO" = (
-/obj/structure/railing{
-	dir = 8;
-	icon_state = "railing_corner"
+/obj/structure/railing/corner{
+	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/village)
@@ -6049,7 +6055,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nxx" = (
 /obj/structure/fluff/railing{
 	dir = 1
@@ -6111,7 +6117,7 @@
 "nIS" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nJg" = (
 /obj/item/scythe,
 /turf/open/floor/carpet/red,
@@ -6120,7 +6126,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nLm" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/wasteland)
@@ -6155,7 +6161,7 @@
 	dir = 8
 	},
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nRT" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light{
@@ -6209,7 +6215,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oad" = (
 /obj/structure/table/booth,
 /obj/item/trash/f13/dandyapples,
@@ -6218,7 +6224,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "obR" = (
 /obj/structure/bookcase,
 /obj/effect/spawner/lootdrop/f13/traitbooks,
@@ -6226,7 +6232,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "odC" = (
 /obj/structure/chair/wood{
 	dir = 8
@@ -6281,7 +6287,7 @@
 	icon_state = "trash_2"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "omQ" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -6324,7 +6330,7 @@
 	pixel_y = 20
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oqZ" = (
 /obj/structure/table,
 /obj/item/kirbyplants/random{
@@ -6350,7 +6356,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "osF" = (
 /obj/machinery/shower{
 	dir = 4
@@ -6379,7 +6385,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oxd" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -6407,16 +6413,6 @@
 /obj/structure/table/optable,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/village)
-"oyZ" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/junker/creator,
-/obj/structure/chair/office/dark{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/village)
 "oAL" = (
 /obj/structure/simple_door/room,
 /obj/effect/decal/cleanable/dirt,
@@ -6437,7 +6433,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oCP" = (
 /obj/structure/simple_door/wood,
 /turf/open/floor/wood/wood_wide,
@@ -6489,7 +6485,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oKw" = (
 /obj/structure/railing{
 	dir = 1
@@ -6499,7 +6495,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oKK" = (
 /obj/structure/table/booth,
 /obj/item/storage/fancy/cigarettes/cigars/cohiba,
@@ -6580,7 +6576,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oTU" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -6671,7 +6667,7 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "phL" = (
 /obj/structure/railing{
 	dir = 4
@@ -6687,7 +6683,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "phT" = (
 /obj/structure/railing{
 	dir = 4;
@@ -6833,21 +6829,21 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "psy" = (
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "psF" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pua" = (
 /obj/structure/fluff/rails,
 /obj/structure/cargocrate{
@@ -6857,7 +6853,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "puI" = (
 /turf/closed/indestructible/rock,
 /area/f13/caves)
@@ -6867,7 +6863,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pvj" = (
 /obj/structure/railing{
 	dir = 5
@@ -6876,7 +6872,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pvy" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /obj/machinery/light/small{
@@ -6900,7 +6896,7 @@
 /area/f13/village)
 "pwz" = (
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pxi" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6909,7 +6905,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pBK" = (
 /obj/structure/lattice/catwalk,
 /obj/item/trash/f13/tin_large,
@@ -6940,7 +6936,7 @@
 	icon_state = "Junk_6"
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pHs" = (
 /obj/structure/bed/wooden,
 /obj/effect/spawner/lootdrop/bedsheet,
@@ -6968,7 +6964,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pLo" = (
 /obj/item/stack/sheet/mineral/gold{
 	amount = 20
@@ -6992,7 +6988,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pMj" = (
 /turf/closed/wall/f13/wood,
 /area/f13/village)
@@ -7022,7 +7018,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pOw" = (
 /obj/structure/simple_door/metal/dirtystore,
 /obj/effect/decal/cleanable/dirt,
@@ -7213,7 +7209,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qiA" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 6;
@@ -7260,7 +7256,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qtr" = (
 /obj/structure/bed/wooden,
 /obj/item/bedsheet/black,
@@ -7314,7 +7310,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qAO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_common{
@@ -7334,7 +7330,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qBP" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/spray/cleaner,
@@ -7345,7 +7341,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qCD" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
@@ -7366,7 +7362,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qEq" = (
 /obj/structure/filingcabinet/medical,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7405,12 +7401,12 @@
 /area/f13/caves)
 "qJK" = (
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qLg" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qLp" = (
 /obj/structure/window/fulltile/wood,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
@@ -7426,7 +7422,7 @@
 	icon_state = "Junk_6"
 	},
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qMU" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -7444,7 +7440,7 @@
 "qNR" = (
 /obj/structure/barricade/bars,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qOU" = (
 /obj/machinery/vending/cola/red,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -7463,7 +7459,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qRs" = (
 /obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/inside/mountain,
@@ -7528,7 +7524,7 @@
 	icon_state = "Junk_7"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qYS" = (
 /obj/effect/mob_spawn/human/corpse/raider/ranged,
 /turf/open/indestructible/ground/inside/mountain,
@@ -7570,7 +7566,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rfm" = (
 /obj/structure/table/wood,
 /obj/machinery/processor/chopping_block,
@@ -7586,7 +7582,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rjo" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/chair/left,
@@ -7594,7 +7590,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rkS" = (
 /obj/structure/curtain,
 /obj/machinery/shower{
@@ -7648,7 +7644,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rrq" = (
 /obj/machinery/light/small/broken{
 	dir = 4
@@ -7708,7 +7704,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ryN" = (
 /obj/structure/simple_door/room,
 /obj/effect/decal/cleanable/dirt,
@@ -7802,7 +7798,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rGO" = (
 /obj/structure/simple_door/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -7816,7 +7812,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rKZ" = (
 /turf/open/floor/wood/wood_fancy,
 /area/f13/building)
@@ -7851,7 +7847,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rOy" = (
 /obj/structure/chair/sofa/right{
 	dir = 8
@@ -7863,7 +7859,7 @@
 	icon_state = "Junk_11"
 	},
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rQG" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -7905,7 +7901,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rTV" = (
 /obj/structure/chair/sofa/right{
 	dir = 4
@@ -7956,7 +7952,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rXZ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8004,7 +8000,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "scb" = (
 /obj/structure/railing{
 	dir = 1;
@@ -8085,7 +8081,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light,
 /turf/open/floor/plating/rust,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "spx" = (
 /obj/structure/simple_door/metal/store,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8111,7 +8107,7 @@
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sqy" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -8242,7 +8238,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sQO" = (
 /obj/machinery/light,
 /turf/open/floor/f13/wood,
@@ -8279,7 +8275,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sXS" = (
 /obj/structure/railing{
 	dir = 1
@@ -8290,7 +8286,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sZh" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
@@ -8519,7 +8515,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tvO" = (
 /obj/structure/closet/crate/wicker,
 /turf/open/floor/plasteel/f13/stone/rugged,
@@ -8541,7 +8537,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "txo" = (
 /obj/structure/railing,
 /obj/machinery/light/floor,
@@ -8549,7 +8545,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "txE" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/curtain{
@@ -8657,7 +8653,7 @@
 "tIk" = (
 /obj/structure/table,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tIA" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/transparent/openspace,
@@ -8667,7 +8663,7 @@
 /obj/effect/spawner/lootdrop/ammo/civilian,
 /obj/effect/spawner/lootdrop/ammo/civilian,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tKv" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
@@ -8710,7 +8706,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tNb" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -8733,7 +8729,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tOU" = (
 /obj/structure/fence/wooden{
 	density = 0;
@@ -8800,7 +8796,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/wreck/trash/machinepile,
 /turf/open/floor/plating,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tVR" = (
 /obj/structure/curtain{
 	color = "#845f58"
@@ -8878,7 +8874,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uoD" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowvertical"
@@ -8930,7 +8926,7 @@
 "utS" = (
 /obj/structure/sign/barsign,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uud" = (
 /obj/structure/closet/fridge,
 /obj/item/storage/box/ingredients/exotic,
@@ -8943,7 +8939,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uzP" = (
 /obj/structure/chair/sofa/corner{
 	dir = 4
@@ -8994,7 +8990,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uFA" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing{
@@ -9042,7 +9038,7 @@
 "uMa" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/f13/wood,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uMK" = (
 /obj/structure/simple_door/room/dirty,
 /obj/effect/decal/cleanable/dirt,
@@ -9061,7 +9057,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uRA" = (
 /obj/structure/chair/middle{
 	dir = 1
@@ -9071,7 +9067,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uSn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/wood{
@@ -9167,7 +9163,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vaQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9208,7 +9204,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vea" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -9250,14 +9246,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vjR" = (
 /obj/structure/chair/right,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vke" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
@@ -9284,7 +9280,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vyw" = (
 /obj/structure/bed/wooden,
 /obj/item/bedsheet/black,
@@ -9328,7 +9324,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vCz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -9344,7 +9340,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vEj" = (
 /obj/structure/railing{
 	dir = 8
@@ -9354,7 +9350,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vEu" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
@@ -9437,7 +9433,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vSa" = (
 /obj/machinery/light{
 	dir = 8
@@ -9464,7 +9460,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vUf" = (
 /obj/structure/railing{
 	dir = 9;
@@ -9476,7 +9472,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vVc" = (
 /obj/structure/railing,
 /turf/open/indestructible/ground/outside/roof,
@@ -9627,7 +9623,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wtR" = (
 /obj/structure/railing{
 	dir = 8;
@@ -9638,7 +9634,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wvo" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/inside/mountain,
@@ -9675,14 +9671,14 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wCo" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wCH" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/glass/primitive_chem_isolator,
@@ -9716,7 +9712,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wHu" = (
 /obj/machinery/smartfridge/bottlerack/seedbin,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
@@ -9751,7 +9747,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wLC" = (
 /obj/machinery/shower{
 	dir = 1
@@ -9837,7 +9833,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wVO" = (
 /obj/structure/toilet{
 	dir = 1;
@@ -9862,7 +9858,7 @@
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wYN" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 4;
@@ -9894,7 +9890,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xdd" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -9926,7 +9922,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xeu" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/booth,
@@ -9938,7 +9934,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xfg" = (
 /obj/structure/fluff/railing{
 	dir = 4
@@ -9960,7 +9956,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xiK" = (
 /obj/structure/chair/sofa/corp{
 	dir = 1
@@ -9970,7 +9966,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xjd" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/wood_common,
@@ -9988,7 +9984,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xks" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10042,7 +10038,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xsI" = (
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
@@ -10092,7 +10088,7 @@
 "xyg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xzN" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10181,7 +10177,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xMl" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
@@ -10206,7 +10202,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xOS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/curtain{
@@ -10263,7 +10259,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xTm" = (
 /obj/structure/railing{
 	dir = 8;
@@ -10314,7 +10310,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xWt" = (
 /obj/structure/rack,
 /obj/item/stack/sheet/leather/twenty,
@@ -10399,7 +10395,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "yjg" = (
 /obj/structure/railing{
 	color = "#A47449"
@@ -10413,7 +10409,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "yke" = (
 /obj/structure/glowshroom/single,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10425,7 +10421,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "yli" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 8;
@@ -60916,7 +60912,7 @@ fsx
 fsx
 fsx
 aox
-kmx
+aaa
 xxv
 fJF
 fJF
@@ -63664,7 +63660,7 @@ aox
 vCz
 nSb
 ctH
-oyZ
+aab
 fxg
 aox
 fsx

@@ -1,6 +1,7 @@
-//Globa job defines
+//Global job defines
 
 //Defines Factions
+
 #define FACTION_NCR "NCR"
 #define FACTION_LEGION "Legion"
 #define FACTION_BROTHERHOOD "BOS"

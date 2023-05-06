@@ -1,4 +1,90 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/mirelurkegg,
+/mob/living/simple_animal/hostile/mirelurk/baby,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/wasteland)
+"aab" = (
+/obj/structure/mirelurkegg,
+/obj/structure/decoration/rag{
+	pixel_y = 32
+	},
+/mob/living/simple_animal/hostile/mirelurk/baby,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
+"aac" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-06"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aad" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aae" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaf" = (
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/structure/chair,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aag" = (
+/obj/structure/chair,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aah" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/official/safety_report{
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/robot_debris/limb,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aai" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_casing/spent,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aak" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/official/safety_internals{
+	pixel_y = 32
+	},
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aal" = (
+/obj/item/ammo_casing/spent,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
 "aam" = (
 /obj/structure/toilet{
 	dir = 4;
@@ -11,6 +97,81 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/bl/gmb)
+"aan" = (
+/obj/effect/decal/cleanable/vomit/old,
+/obj/item/kirbyplants/dead,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aao" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/official/work_for_a_future{
+	pixel_x = -32
+	},
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aap" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaq" = (
+/obj/effect/decal/cleanable/vomit/old,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aar" = (
+/obj/item/storage/trash_stack,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aas" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/official/medical_green_cross{
+	pixel_y = -32
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aat" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/robot_debris,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aau" = (
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aav" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaw" = (
+/obj/structure/simple_door/metal/store,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
 "aax" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -18,11 +179,165 @@
 /obj/item/target/vaultie2,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"aay" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/warning/nosmoking{
+	pixel_x = 33
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaA" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaB" = (
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaD" = (
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	faction = list("raider, wastebot");
+	name = "Techfiend Shooter";
+	desc = "A Techfiend raider with a keen eye for guns."
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaE" = (
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaF" = (
+/obj/item/kirbyplants/dead,
+/obj/machinery/light,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
 "aaG" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowleft"
 	},
 /turf/open/floor/plasteel/dark,
+/area/f13/village)
+"aaH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants{
+	icon_state = "plant-17"
+	},
+/obj/machinery/light,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/human,
+/obj/machinery/light,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/trash,
+/obj/machinery/light,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaM" = (
+/obj/structure/simple_door/metal/store,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaO" = (
+/obj/structure/simple_door/metal/store,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaQ" = (
+/obj/structure/simple_door/metal/store,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/plasteel,
 /area/f13/village)
 "aaR" = (
 /obj/structure/sign/poster/prewar/poster70{
@@ -30,18 +345,547 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
+"aaS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	faction = list("raider, wastebot");
+	name = "Techfiend Shooter";
+	desc = "A Techfiend raider with a keen eye for guns."
+	},
+/turf/open/floor/f13,
+/turf/open/floor/plasteel,
+/area/f13/village)
+"aaU" = (
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/firefighter{
+	name = "Cannibal Butcher"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
+"aaV" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/firefighter{
+	name = "Cannibal Butcher"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
+"aaW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/lit,
+/mob/living/simple_animal/hostile/raider/firefighter{
+	name = "Cannibal Butcher"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/building)
+"aaX" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"aaY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"aaZ" = (
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/handy{
+	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
+	name = "Mr. Techfiend";
+	faction = list("wastebot, raider")
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"aba" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/village)
+"abb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/handy{
+	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
+	name = "Mr. Techfiend";
+	faction = list("wastebot, raider")
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abc" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/retaliate/poison/snake{
+	name = "Bastard";
+	desc = "Look at 'em go.";
+	faction = list("neutral")
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
+"abd" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
+"abe" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
+"abf" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
+"abg" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/fireaxecabinet{
+	pixel_y = 32
+	},
+/mob/living/simple_animal/hostile/raider/junker{
+	name = "Techfiend Marauder";
+	desc = "A raider from the Techfiend gang."
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/village)
+"abh" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/floor/plasteel{
+	icon_state = "asteroidfloor"
+	},
+/area/f13/village)
+"abi" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/floor/wood,
+/area/f13/building)
+"abj" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/ghoul,
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/wasteland)
+"abk" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/ghoul,
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/wasteland)
+"abl" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abm" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/floor/wood,
+/area/f13/building)
+"abn" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/ghoul/glowing,
+/turf/open/floor/wood,
+/area/f13/building)
+"abo" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abp" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
+"abq" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged{
+	name = "Cannibal Brute"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building)
+"abr" = (
+/obj/effect/decal/cleanable/blood,
+/mob/living/simple_animal/hostile/raider/ranged{
+	desc = "Never thought you'd live to see the day when raiders were balling.";
+	name = "Mainstreet Hoopers Raider"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticaloutermain1"
+	},
+/area/f13/wasteland)
+"abs" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/carpet/blue,
+/area/f13/village)
+"abt" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider{
+	name = "Mainstreet Hoopers Raider";
+	desc = "Never thought you'd live to see the day when raiders were balling."
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticaloutermain1"
+	},
+/area/f13/wasteland)
 "abu" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abv" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider{
+	name = "Mainstreet Hoopers Raider";
+	desc = "Never thought you'd live to see the day when raiders were balling."
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"abw" = (
+/obj/effect/overlay/junk/sink{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluerustychess"
+	},
+/area/f13/village)
+"abx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged{
+	desc = "Never thought you'd live to see the day when raiders were balling.";
+	name = "Mainstreet Hoopers Raider"
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"aby" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
+"abz" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider{
+	name = "Mainstreet Hoopers Raider";
+	desc = "Never thought you'd live to see the day when raiders were balling."
+	},
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/wasteland)
+"abA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider{
+	name = "Backstreet Fellas Raider";
+	desc = "Maybe the 'ardest raider to ever raid."
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abB" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker/creator{
+	name = "Granite Gang Tinkerer"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abC" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker/creator{
+	name = "Granite Gang Tinkerer"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged/boss{
+	name = "Granite Gang Overboss"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abE" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/baseball{
+	name = "Granite Gang Enforcer"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abF" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13{
+	icon_state = "redchess"
+	},
+/area/f13/village)
+"abG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/protectron,
+/turf/open/floor/carpet/red,
+/area/f13/village)
+"abH" = (
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#c1caff";
+	pixel_y = 15
+	},
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13{
+	icon_state = "floordirty"
+	},
+/area/f13/village)
+"abI" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/f13{
+	icon_state = "floordirty"
+	},
+/area/f13/village)
+"abJ" = (
+/obj/structure/table,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/village)
+"abK" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy,
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abL" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/trash,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/wood/wood_worn/wood_worn_dark{
+	icon_state = "wide_dark1"
+	},
+/area/f13/village)
+"abM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/ranged{
 	name = "Granite Gang Raider"
 	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abN" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/wood/wood_worn/wood_worn_dark{
+	icon_state = "wide_dark1"
+	},
+/area/f13/village)
+"abO" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged{
+	name = "Granite Gang Raider"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/building/mall)
+"abP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
+"abQ" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/baseball{
+	name = "Granite Gang Enforcer"
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/f13/building/mall)
+"abR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/baseball{
+	name = "Granite Gang Enforcer"
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/f13/building/mall)
+"abS" = (
 /obj/effect/decal/cleanable/robot_debris,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged{
+	name = "Granite Gang Raider"
+	},
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
+"abT" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged{
+	name = "Granite Gang Raider"
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluerustychess"
+	},
+/area/f13/building/mall)
+"abU" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/tribal{
+	name = "Feral Junkie"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abV" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/baseball{
+	name = "Granite Gang Enforcer"
+	},
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitebluerustychess"
+	},
+/area/f13/building/mall)
+"abW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/tribal{
+	name = "Feral Junkie"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"abX" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/village)
+"abY" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/contraband/pinup_anthro9{
+	pixel_x = -32
+	},
+/mob/living/simple_animal/hostile/renegade{
+	desc = "An individual employed by Marlin Runnings. Acts as watch and scouting.";
+	name = "Runnings Recruit"
+	},
+/turf/open/floor/f13{
+	icon_state = "white"
+	},
+/area/f13/building)
+"abZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	desc = "A man dressed in ragged raider attire, smelling of gunpowder and whiskey.";
+	name = "Cave Diving Dale"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "acg" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood/wood_common,
@@ -205,7 +1049,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ajI" = (
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontaldegraded"
@@ -283,7 +1127,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "amx" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -316,7 +1160,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "amF" = (
 /obj/machinery/microwave/stove,
 /turf/open/floor/wood/wood_common,
@@ -346,7 +1190,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aoc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/stool/retro/tan,
@@ -375,13 +1219,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aoV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aoX" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -459,7 +1303,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "asQ" = (
 /turf/open/indestructible/ground/outside/dirt/harsh/corner{
 	dir = 1
@@ -517,7 +1361,7 @@
 	light_color = "#706891"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "awv" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -621,7 +1465,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aAo" = (
 /obj/structure/junk/drawer,
 /turf/open/floor/wood/wood_common,
@@ -642,7 +1486,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aAZ" = (
 /obj/machinery/light/small/broken{
 	dir = 4
@@ -774,7 +1618,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aDL" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/curtain{
@@ -802,7 +1646,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aEZ" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "innershade"
@@ -831,7 +1675,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aIj" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -937,15 +1781,6 @@
 	icon_state = "outerborder"
 	},
 /area/f13/wasteland)
-"aMR" = (
-/mob/living/simple_animal/hostile/raider/ranged/biker{
-	desc = "A man dressed in ragged raider attire, smelling of gunpowder and whiskey.";
-	name = "Cave Diving Dale"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "aMX" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -968,7 +1803,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aOA" = (
 /obj/structure/fence/cut/large{
 	dir = 4;
@@ -1023,7 +1858,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aPC" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -1091,7 +1926,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aRQ" = (
 /mob/living/simple_animal/cow/brahmin,
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
@@ -1119,7 +1954,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aTh" = (
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontalcorroded"
@@ -1136,7 +1971,7 @@
 "aTR" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aUw" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /obj/effect/decal/cleanable/oil,
@@ -1192,7 +2027,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aVU" = (
 /obj/structure/table/wood/settler,
 /obj/item/reagent_containers/food/drinks/flask,
@@ -1286,7 +2121,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aYD" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1302,7 +2137,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "aZx" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
@@ -1604,7 +2439,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bke" = (
 /obj/effect/overlay/turfs/cliff{
 	dir = 1;
@@ -1786,11 +2621,6 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland)
-"bqE" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "bqU" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -1860,12 +2690,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"btf" = (
-/obj/item/kirbyplants/dead,
-/obj/machinery/light,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "bti" = (
 /turf/closed/wall/f13/wood,
 /area/f13/building)
@@ -1887,7 +2711,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "buo" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/wood/wood_wide,
@@ -2095,7 +2919,7 @@
 	light_color = "#706891"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bzK" = (
 /obj/structure/rack/shelf_metal,
 /obj/machinery/light{
@@ -2134,7 +2958,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bAi" = (
 /obj/structure/cargocrate,
 /turf/open/indestructible/ground/outside/road,
@@ -2152,7 +2976,7 @@
 /obj/machinery/processor,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bBx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
@@ -2179,7 +3003,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bCK" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/cigarettes/cigpack_robustgold,
@@ -2276,23 +3100,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"bGH" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/obj/structure/fireaxecabinet{
-	pixel_y = 32
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/village)
+/area/f13/building/mall)
 "bHd" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/armor/costumes,
@@ -2338,7 +3146,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bIx" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "topshadowleft"
@@ -2436,11 +3244,6 @@
 /obj/structure/simple_door/wood,
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"bLD" = (
-/mob/living/simple_animal/hostile/ghoul,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "bLO" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -2461,6 +3264,12 @@
 	icon_state = "cafeteria"
 	},
 /area/f13/building)
+"bMc" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/village)
 "bMn" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
@@ -2510,7 +3319,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bNQ" = (
 /obj/structure/car/rubbish1,
 /turf/open/indestructible/ground/outside/road{
@@ -2567,29 +3376,11 @@
 /obj/machinery/microwave/stove,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"bPo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/remains/human,
-/obj/machinery/light,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "bPC" = (
 /obj/structure/table,
 /turf/open/floor/wood/wood_worn/wood_worn_dark{
 	icon_state = "wide_dark-broken4"
 	},
-/area/f13/village)
-"bPH" = (
-/mob/living/simple_animal/hostile/handy{
-	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
-	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
 /area/f13/village)
 "bQb" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -2653,7 +3444,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "bRS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt{
@@ -2977,13 +3768,6 @@
 	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/wasteland)
-"ceH" = (
-/mob/living/simple_animal/hostile/ghoul,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/indestructible/ground/outside/dirt/harsh,
-/area/f13/wasteland)
 "ceV" = (
 /obj/structure/decoration/clock{
 	pixel_y = 30
@@ -3069,7 +3853,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "chz" = (
 /obj/structure/fence{
 	dir = 4
@@ -3817,7 +4601,7 @@
 "cLB" = (
 /obj/structure/decoration/rag,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cLM" = (
 /obj/structure/chair/wood{
 	dir = 1
@@ -3849,7 +4633,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cMz" = (
 /obj/effect/decal/waste{
 	icon_state = "goo10"
@@ -3881,12 +4665,6 @@
 /obj/effect/spawner/lootdrop/clothing_low,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"cOl" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_common,
-/area/f13/village)
 "cOJ" = (
 /obj/structure/closet/fridge,
 /obj/machinery/light/small/broken{
@@ -3909,7 +4687,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cPP" = (
 /obj/structure/wreck/trash/two_tire{
 	pixel_y = -11;
@@ -4017,7 +4795,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cUc" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibup1"
@@ -4051,7 +4829,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cVX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4111,18 +4889,13 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "cYZ" = (
 /mob/living/simple_animal/radstag,
 /turf/open/indestructible/ground/outside/savannah{
 	name = "grass"
 	},
 /area/f13/wasteland)
-"cZa" = (
-/obj/item/ammo_casing/spent,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "cZo" = (
 /obj/structure/chair/booth{
 	dir = 4
@@ -4274,7 +5047,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ddQ" = (
 /obj/structure/barricade/wooden/strong,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -4356,7 +5129,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dgy" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/brews,
 /turf/open/floor/f13{
@@ -4451,13 +5224,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/indestructible/sound/pool/river,
 /area/f13/wasteland)
-"dkq" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel{
-	icon_state = "asteroidfloor"
-	},
-/area/f13/village)
 "dkv" = (
 /obj/structure/car/rubbish3,
 /turf/open/indestructible/ground/outside/road{
@@ -4647,30 +5413,12 @@
 	},
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/city/bighorn)
-"drg" = (
-/mob/living/simple_animal/hostile/raider{
-	name = "Mainstreet Hoopers Raider";
-	desc = "Never thought you'd live to see the day when raiders were balling."
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "dri" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_west_north"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"drs" = (
-/obj/effect/decal/cleanable/vomit/old,
-/obj/item/kirbyplants/dead,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "drG" = (
 /obj/machinery/light{
@@ -4854,7 +5602,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dyY" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/decoration/rag{
@@ -4883,7 +5631,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dAa" = (
 /obj/structure/chair/sofa/corp,
 /turf/open/floor/wood/wood_fancy/wood_fancy_light,
@@ -4996,7 +5744,7 @@
 "dET" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dEV" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/ammo/shotgun,
@@ -5008,7 +5756,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dFl" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin";
@@ -5042,7 +5790,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dGV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5093,7 +5841,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dHX" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 10;
@@ -5298,7 +6046,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dTc" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -5311,7 +6059,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dTM" = (
 /obj/structure/decoration/rag{
 	icon_state = "skulls";
@@ -5406,7 +6154,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "dWG" = (
 /obj/machinery/light{
 	light_color = "#e8eaff"
@@ -5419,15 +6167,6 @@
 	dir = 4
 	},
 /area/f13/wasteland/bighorn)
-"dWX" = (
-/mob/living/simple_animal/hostile/raider/baseball{
-	name = "Granite Gang Enforcer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluerustychess"
-	},
-/area/f13/raider_mall)
 "dXg" = (
 /obj/structure/wreck/trash/four_barrels,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -5518,13 +6257,6 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/f13/wasteland)
-"ebo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/spent,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "ebA" = (
 /obj/structure/junk/small/bed2,
 /turf/open/floor/f13/wood{
@@ -5603,7 +6335,7 @@
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
 	},
-/area/f13/wasteland)
+/area/f13/village)
 "edS" = (
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 12
@@ -5695,13 +6427,6 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"eii" = (
-/obj/structure/simple_door/metal/store,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "eim" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5752,7 +6477,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eiQ" = (
 /obj/item/ammo_casing/a50,
 /turf/open/indestructible/ground/inside/mountain,
@@ -5848,7 +6573,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ekG" = (
 /obj/structure/lattice,
 /obj/structure/junk/small/tv,
@@ -6032,7 +6757,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ert" = (
 /obj/structure/car/rubbish1,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -6078,7 +6803,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "esZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
@@ -6209,7 +6934,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "exz" = (
 /obj/structure/chair/wood,
 /turf/open/floor/wood/wood_common,
@@ -6294,7 +7019,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eCp" = (
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
@@ -6358,7 +7083,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eEg" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plasteel/cafeteria,
@@ -6403,7 +7128,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eER" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6447,13 +7172,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"eGd" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "eGv" = (
 /obj/item/bedsheet,
 /obj/machinery/light/small{
@@ -6506,7 +7225,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eHU" = (
 /turf/closed/wall/f13/wood{
 	name = "palisade";
@@ -6541,7 +7260,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eJh" = (
 /obj/machinery/light{
 	dir = 4;
@@ -6659,14 +7378,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eOd" = (
 /obj/item/storage/trash_stack,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eOh" = (
 /obj/effect/overlay/turfs/cliff{
 	dir = 4;
@@ -6697,7 +7416,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eOP" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/trash,
@@ -6729,7 +7448,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eQu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6752,6 +7471,12 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/indestructible/ground/outside/desert/harsh,
 /area/f13/wasteland)
+"eQI" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/village)
 "eQT" = (
 /obj/structure/railing{
 	dir = 9;
@@ -6855,7 +7580,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "eUN" = (
 /obj/structure/sink{
 	dir = 8;
@@ -7008,14 +7733,6 @@
 	icon_state = "redchess"
 	},
 /area/f13/village)
-"eYO" = (
-/obj/structure/chair,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "eZa" = (
 /obj/structure/junk/small/tv,
 /turf/open/floor/f13/wood,
@@ -7090,12 +7807,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"fei" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "feo" = (
 /obj/structure/chair/booth,
 /obj/machinery/light{
@@ -7130,7 +7841,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ffy" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7157,7 +7868,7 @@
 	name = "human skulls"
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fgk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -7195,7 +7906,7 @@
 	light_color = "#c1caff"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fgY" = (
 /obj/structure/barricade/wooden,
 /obj/effect/decal/cleanable/dirt,
@@ -7203,7 +7914,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fhr" = (
 /obj/structure/fence/corner{
 	dir = 1
@@ -7313,6 +8024,12 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"fmw" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/village)
 "fmG" = (
 /mob/living/simple_animal/mouse,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -7355,7 +8072,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "for" = (
 /obj/structure/bed/mattress/pregame,
 /obj/effect/decal/cleanable/dirt,
@@ -7445,7 +8162,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fro" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo,
@@ -7516,7 +8233,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fuC" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticaldegraded"
@@ -7614,7 +8331,7 @@
 "fxh" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fxI" = (
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
@@ -7841,16 +8558,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
-"fFg" = (
-/mob/living/simple_animal/hostile/raider/ranged{
-	name = "Granite Gang Raider"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "fFh" = (
 /obj/structure/decoration/rag{
 	layer = 8
@@ -7967,7 +8674,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
+"fJc" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/road{
+	dir = 8;
+	icon_state = "horizontaltopborderbottom2right"
+	},
+/area/f13/village)
 "fJj" = (
 /obj/structure/junk/arcade,
 /obj/effect/decal/cleanable/dirt,
@@ -7975,7 +8689,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fJp" = (
 /obj/structure/chair/f13foldupchair{
 	dir = 8
@@ -7991,7 +8705,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fJs" = (
 /obj/structure/simple_door/room,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -8036,7 +8750,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fLu" = (
 /obj/structure/decoration/clock/old{
 	pixel_y = 32
@@ -8240,7 +8954,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fTN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood/house,
@@ -8264,7 +8978,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fWm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/sign/poster/official/cleanliness{
@@ -8317,7 +9031,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fYc" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
@@ -8364,7 +9078,7 @@
 "fZI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "fZJ" = (
 /mob/living/simple_animal/mouse/brown,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -8392,7 +9106,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gas" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -8585,7 +9299,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ghl" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8696,7 +9410,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gjQ" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -8727,13 +9441,6 @@
 	icon_state = "bar"
 	},
 /area/f13/building)
-"glc" = (
-/obj/structure/fence,
-/turf/open/indestructible/ground/outside/desert,
-/turf/open/indestructible/ground/outside/desert/harsh{
-	name = "dry dirt"
-	},
-/area/f13/wasteland)
 "glh" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -8887,7 +9594,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "grC" = (
 /obj/machinery/deepfryer,
 /obj/effect/decal/cleanable/dirt,
@@ -8896,7 +9603,7 @@
 	light_color = "#c1caff"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "grV" = (
 /obj/structure/decoration/rag,
 /obj/structure/decoration/rag{
@@ -8984,7 +9691,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "guI" = (
 /obj/structure/simple_door/metal/iron,
 /turf/open/floor/f13/wood,
@@ -9005,7 +9712,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gvn" = (
 /obj/structure/fence{
 	pixel_y = 1
@@ -9249,7 +9956,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gFk" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -9411,13 +10118,7 @@
 	icon_state = "bloodpaw1"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
-"gKo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "gKp" = (
 /obj/item/shard,
 /turf/open/floor/wood/wood_wide,
@@ -9458,7 +10159,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gLR" = (
 /obj/structure/filingcabinet{
 	pixel_x = 11
@@ -9483,7 +10184,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gMi" = (
 /obj/structure/chair/sofa/left{
 	dir = 4
@@ -9590,7 +10291,7 @@
 	light_color = "#e8eaff"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gPk" = (
 /obj/structure/table/wood,
 /obj/machinery/reagentgrinder{
@@ -9685,7 +10386,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gSJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9697,15 +10398,6 @@
 	name = "dry dirt"
 	},
 /area/f13/bl/gmb)
-"gSY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/warning/nosmoking{
-	pixel_x = 33
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "gTw" = (
 /obj/structure/decoration/shock{
 	pixel_x = -32
@@ -9846,7 +10538,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gWp" = (
 /obj/structure/table/reinforced,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -9865,7 +10557,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "gXi" = (
 /obj/structure/filingcabinet,
 /obj/machinery/light/small{
@@ -9947,6 +10639,13 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"gZq" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerbordercorner"
+	},
+/area/f13/village)
 "gZz" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -9993,7 +10692,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hcd" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -10022,7 +10721,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hdf" = (
 /obj/structure/rack/shelf_metal,
 /obj/machinery/door/window/left{
@@ -10121,7 +10820,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hgk" = (
 /obj/structure/table/wood/settler,
 /obj/machinery/computer/terminal{
@@ -10174,16 +10873,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/village)
-"hiI" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/wood,
-/area/f13/building)
 "hjg" = (
 /obj/item/shard,
 /turf/open/floor/wood/wood_worn/wood_worn_dark{
@@ -10212,15 +10901,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"hlU" = (
-/mob/living/simple_animal/hostile/raider/ranged{
-	name = "Granite Gang Raider"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluerustychess"
-	},
-/area/f13/raider_mall)
 "hmh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10249,7 +10929,7 @@
 	light_color = "#e8eaff"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hmL" = (
 /obj/machinery/door/unpowered/securedoor/gmb_door,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -10274,7 +10954,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hnF" = (
 /obj/structure/table/booth,
 /obj/item/book/granter/action/drink_fling,
@@ -10330,6 +11010,12 @@
 	},
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
+	},
+/area/f13/village)
+"hrQ" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/village)
 "hsD" = (
@@ -10436,7 +11122,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hxV" = (
 /obj/item/shard,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -10594,7 +11280,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hDe" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/drinkingglass{
@@ -10640,6 +11326,12 @@
 	},
 /turf/closed/wall/f13/store,
 /area/f13/village)
+"hFo" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalbottombordertop0"
+	},
+/area/f13/village)
 "hFQ" = (
 /mob/living/simple_animal/hostile/retaliate/spaceman{
 	name = "John Wasteland"
@@ -10672,13 +11364,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"hGS" = (
-/mob/living/simple_animal/hostile/ghoul/glowing,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/wood,
-/area/f13/building)
 "hHs" = (
 /obj/structure/table/wood/settler,
 /obj/effect/spawner/lootdrop/clothing_low,
@@ -10722,17 +11407,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/village)
-"hIT" = (
-/mob/living/simple_animal/hostile/raider/firefighter{
-	name = "Cannibal Butcher"
-	},
-/obj/effect/spawner/lootdrop/f13/junkspawners,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2"
-	},
-/area/f13/building)
 "hIW" = (
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
 	dir = 10
@@ -10779,7 +11453,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hJS" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -10823,7 +11497,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hLf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10880,7 +11554,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hMn" = (
 /obj/structure/table/wood,
 /turf/open/floor/f13,
@@ -10923,7 +11597,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hNR" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -11001,7 +11675,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hQc" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -11031,7 +11705,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "hRu" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/plasteel/f13{
@@ -11187,9 +11861,9 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland/bl/dfs)
 "hXy" = (
-/mob/living/simple_animal/hostile/bloatfly,
-/turf/open/indestructible/sound/pool/river,
-/area/f13/wasteland)
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/village)
 "hYg" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowvertical"
@@ -11215,7 +11889,12 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
+"hYW" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/village)
 "hZR" = (
 /obj/structure/table,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -11443,7 +12122,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ikN" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/decoration/rag{
@@ -11483,16 +12162,6 @@
 /obj/structure/fence/wooden,
 /turf/open/indestructible/ground/outside/dirt/harsh/corner,
 /area/f13/caves)
-"ilO" = (
-/mob/living/simple_animal/hostile/raider/ranged{
-	desc = "Never thought you'd live to see the day when raiders were balling.";
-	name = "Mainstreet Hoopers Raider"
-	},
-/obj/effect/decal/cleanable/blood,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticaloutermain1"
-	},
-/area/f13/wasteland)
 "ilW" = (
 /obj/effect/decal/cleanable/glass,
 /obj/structure/curtain{
@@ -11535,7 +12204,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "imU" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -11547,20 +12216,6 @@
 "ink" = (
 /obj/structure/campfire/stove,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"inl" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
-	name = "Techfiend Shooter";
-	desc = "A Techfiend raider with a keen eye for guns."
-	},
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "inv" = (
 /obj/structure/junk/small/bed,
@@ -11838,7 +12493,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ixI" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo,
 /turf/open/indestructible/ground/inside/mountain,
@@ -11976,15 +12631,6 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/village)
-"iCN" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/official/safety_report{
-	pixel_y = 32
-	},
-/obj/effect/decal/cleanable/robot_debris/limb,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "iCR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11995,7 +12641,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iCY" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood/wood_common{
@@ -12076,7 +12722,7 @@
 /obj/item/storage/box/ingredients/grains,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iFR" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
@@ -12171,7 +12817,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iIC" = (
 /obj/structure/fence/corner{
 	dir = 4;
@@ -12222,7 +12868,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iMe" = (
 /obj/structure/window/fulltile/house{
 	dir = 2
@@ -12261,7 +12907,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iNl" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13/wood,
@@ -12289,7 +12935,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iOT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12577,7 +13223,7 @@
 "iYF" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "iZg" = (
 /obj/structure/table/wood/settler,
 /obj/effect/spawner/lootdrop/clothing_low,
@@ -12689,7 +13335,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jdD" = (
 /obj/structure/rack{
 	pixel_y = 7
@@ -12730,7 +13376,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jet" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small,
@@ -12876,7 +13522,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jjA" = (
 /obj/structure/closet/fridge/standard,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -13014,12 +13660,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/village)
-"jnO" = (
-/mob/living/simple_animal/hostile/handy/protectron,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/f13/village)
 "jnR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road,
@@ -13060,7 +13700,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jpd" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -13076,7 +13716,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jpL" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/road{
@@ -13131,6 +13771,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/village)
+"jrU" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/landmark/observer_start,
+/turf/open/floor/carpet/red,
 /area/f13/village)
 "jsN" = (
 /obj/effect/decal/cleanable/blood,
@@ -13230,7 +13877,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jwF" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/f13{
@@ -13386,7 +14033,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jBE" = (
 /obj/structure/fence{
 	dir = 4;
@@ -13431,13 +14078,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"jCV" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "jEb" = (
 /obj/structure/debris/v3,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -13470,16 +14110,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"jEG" = (
-/obj/structure/chair/office/dark{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "jFn" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/dirt{
@@ -13565,7 +14196,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jJy" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -13598,6 +14229,10 @@
 	},
 /obj/structure/musician/piano,
 /turf/open/floor/f13/wood,
+/area/f13/village)
+"jKr" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/village)
 "jKs" = (
 /mob/living/simple_animal/hostile/radroach,
@@ -13656,7 +14291,7 @@
 	light_color = "#c1caff"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jNh" = (
 /obj/structure/reagent_dispensers/barrel,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -13672,7 +14307,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jNE" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -13741,7 +14376,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jQb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -13760,7 +14395,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jQn" = (
 /obj/machinery/light{
 	dir = 4
@@ -13810,7 +14445,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jRV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -13852,7 +14487,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jTI" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/snacks/sosjerky/ration,
@@ -13875,7 +14510,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jUO" = (
 /obj/structure/flora/junglebush/large,
 /turf/open/indestructible/ground/outside/road,
@@ -13942,7 +14577,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "jWO" = (
 /obj/machinery/light{
 	dir = 8
@@ -14002,12 +14637,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"jZR" = (
-/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
-/obj/structure/chair,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "jZT" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -14144,7 +14773,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/stool,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kgl" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt,
@@ -14153,7 +14782,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kgz" = (
 /obj/structure/junk/cabinet,
 /obj/item/clothing/suit/beekeeper_suit,
@@ -14179,7 +14808,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "khJ" = (
 /obj/structure/chair/right,
 /obj/effect/decal/cleanable/dirt,
@@ -14209,7 +14838,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kiP" = (
 /obj/item/shard,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -14220,7 +14849,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kju" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
@@ -14234,7 +14863,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kke" = (
 /obj/structure/railing/wood/underlayer{
 	pixel_y = -1
@@ -14337,7 +14966,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "knC" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbroken"
@@ -14354,12 +14983,6 @@
 	icon_state = "outerpavement";
 	name = "road"
 	},
-/area/f13/village)
-"knE" = (
-/obj/structure/simple_door/metal/store,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "kob" = (
 /obj/structure/simple_door/house,
@@ -14459,7 +15082,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "krS" = (
 /obj/machinery/washing_machine,
 /obj/effect/decal/cleanable/glass,
@@ -14521,7 +15144,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kun" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin"
@@ -14560,7 +15183,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kvW" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14611,14 +15234,14 @@
 	pixel_x = 2
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kyE" = (
 /obj/structure/weightmachine/stacklifter,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kyZ" = (
 /obj/structure/table,
 /obj/item/trash/sosjerky,
@@ -14698,7 +15321,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kBo" = (
 /obj/structure/lamp_post{
 	dir = 1
@@ -14774,7 +15397,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kEj" = (
 /obj/structure/chair/comfy/beige,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14807,7 +15430,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kEY" = (
 /obj/structure/table/wood,
 /obj/item/camera/detective{
@@ -14828,7 +15451,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kFO" = (
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -14849,7 +15472,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kGK" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
@@ -14869,7 +15492,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kHg" = (
 /obj/structure/table/wood,
 /obj/item/stack/f13Cash/caps{
@@ -15019,13 +15642,6 @@
 	dir = 1
 	},
 /area/f13/wasteland/bl/gmb)
-"kLs" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/blue,
-/area/f13/village)
 "kLu" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalcorroded"
@@ -15150,7 +15766,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kOV" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -15177,7 +15793,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kPM" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -15205,11 +15821,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"kSf" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_common,
-/area/f13/village)
 "kSu" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
@@ -15218,7 +15829,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kSG" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -15248,14 +15859,6 @@
 	pixel_y = 32
 	},
 /turf/open/floor/wood/wood_common,
-/area/f13/village)
-"kTO" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	icon_state = "redchess"
-	},
 /area/f13/village)
 "kTP" = (
 /obj/structure/table/wood,
@@ -15298,7 +15901,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kVc" = (
 /obj/structure/tires/five,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -15362,7 +15965,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kXr" = (
 /obj/machinery/autolathe/constructionlathe,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -15400,7 +16003,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kYx" = (
 /obj/structure/sink{
 	dir = 8;
@@ -15466,7 +16069,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "kZT" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -15545,7 +16148,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lcw" = (
 /obj/structure/simple_door/metal/fence{
 	dir = 4;
@@ -15718,7 +16321,7 @@
 	layer = 8
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ljW" = (
 /obj/machinery/button{
 	pixel_y = 40;
@@ -15772,7 +16375,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "llG" = (
 /obj/structure/sign/poster/official/twelve_gauge{
 	pixel_x = -32
@@ -15831,7 +16434,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lnq" = (
 /obj/item/kirbyplants/random,
 /obj/structure/curtain{
@@ -15866,7 +16469,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "loR" = (
 /turf/open/floor/wood/wood_worn/wood_worn_dark{
 	icon_state = "wide_dark1"
@@ -15919,7 +16522,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lqy" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/road,
@@ -16118,7 +16721,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lAY" = (
 /obj/structure/junk/micro,
 /obj/effect/decal/cleanable/dirt,
@@ -16133,17 +16736,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
-"lBM" = (
-/mob/living/simple_animal/hostile/retaliate/poison/snake{
-	name = "Bastard";
-	desc = "Look at 'em go.";
-	faction = list("neutral")
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
-/area/f13/bl/dfs)
+/area/f13/building/mall)
 "lBP" = (
 /obj/structure/wreck/trash/four_barrels,
 /turf/open/indestructible/ground/inside/mountain,
@@ -16306,7 +16899,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lLq" = (
 /obj/effect/spawner/lootdrop/f13/armor/random,
 /turf/open/floor/f13/wood,
@@ -16325,7 +16918,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lLH" = (
 /obj/structure/wreck/trash/machinepile{
 	layer = 3
@@ -16334,16 +16927,6 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bl/gmb)
-"lMG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "lMN" = (
 /obj/structure/decoration/rag{
 	pixel_y = 33
@@ -16361,7 +16944,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lMZ" = (
 /obj/structure/chair/stool,
 /obj/structure/curtain{
@@ -16433,7 +17016,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lOQ" = (
 /obj/machinery/light{
 	dir = 8;
@@ -16443,7 +17026,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lPw" = (
 /obj/structure/fluff/rails{
 	dir = 4
@@ -16463,7 +17046,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lQt" = (
 /obj/item/reagent_containers/food/snacks/f13/canned/dog,
 /obj/item/reagent_containers/food/snacks/f13/canned/dog,
@@ -16483,7 +17066,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lRe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/stairs/east{
@@ -16587,7 +17170,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "lVI" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticaldegraded"
@@ -16985,7 +17568,7 @@
 /area/f13/village)
 "mhN" = (
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mij" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17004,7 +17587,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "miT" = (
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
@@ -17229,7 +17812,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mqV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -17256,7 +17839,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "msH" = (
 /obj/structure/rack,
 /obj/machinery/light{
@@ -17322,7 +17905,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "muZ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -17360,13 +17943,8 @@
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/bl/gmb)
 "mvS" = (
-/obj/effect/overlay/turfs/cliff{
-	dir = 4;
-	pixel_x = 6
-	},
-/mob/living/simple_animal/hostile/bloatfly,
-/turf/open/indestructible/sound/pool/river,
-/area/f13/wasteland)
+/turf/closed/indestructible/f13/matrix,
+/area/f13/village)
 "mwf" = (
 /obj/structure/rack,
 /obj/item/storage/backpack,
@@ -17474,7 +18052,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mze" = (
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
@@ -17491,7 +18069,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mAM" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -17523,7 +18101,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mBu" = (
 /obj/structure/chalkboard,
 /turf/open/floor/wood/wood_common,
@@ -17556,16 +18134,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"mCV" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "mDo" = (
 /obj/structure/fence{
 	dir = 4;
@@ -17654,7 +18223,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mFS" = (
 /obj/structure/railing/handrail/rusty,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -17724,7 +18293,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mIP" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal{
@@ -17827,7 +18396,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mLy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/mountain,
@@ -17846,7 +18415,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mMj" = (
 /obj/structure/sink{
 	dir = 4;
@@ -18000,7 +18569,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "mQc" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -18347,7 +18916,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nfD" = (
 /mob/living/simple_animal/hostile/raider/firefighter{
 	name = "Granite Gang Woodsman"
@@ -18418,16 +18987,6 @@
 /obj/structure/table/wood/settler,
 /obj/item/mining_scanner,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"njB" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-06"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "njQ" = (
 /obj/structure/bed/mattress/pregame,
@@ -18502,7 +19061,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nlI" = (
 /obj/structure/wreck/trash/halftire,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -18516,7 +19075,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluechess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nlU" = (
 /obj/structure/chair/comfy{
 	dir = 1
@@ -18554,7 +19113,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nmu" = (
 /mob/living/simple_animal/hostile/giantant,
 /turf/open/indestructible/ground/inside/mountain,
@@ -18658,7 +19217,7 @@
 /obj/structure/simple_door/metal/store,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nqr" = (
 /obj/structure/car/rubbish1,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -18733,16 +19292,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"nvv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "nvw" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/plasteel/cafeteria,
@@ -18776,7 +19325,7 @@
 /obj/item/storage/box/ingredients/carnivore,
 /obj/item/storage/box/ingredients/grains,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nwp" = (
 /turf/open/indestructible/ground/outside/road{
 	dir = 8;
@@ -19015,7 +19564,7 @@
 	icon_state = "skin"
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nHW" = (
 /obj/structure/sign/departments/medbay,
 /turf/closed/wall/f13/store,
@@ -19077,7 +19626,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nKw" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "shadowright"
@@ -19111,7 +19660,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nKQ" = (
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/f13{
@@ -19211,7 +19760,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nNy" = (
 /obj/structure/chair/sofa/right,
 /obj/effect/decal/cleanable/dirt,
@@ -19238,7 +19787,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nOL" = (
 /obj/structure/table/wood/settler,
 /obj/item/storage/backpack/satchel/leather/withwallet,
@@ -19533,7 +20082,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "nZL" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/costume,
@@ -19564,7 +20113,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oax" = (
 /obj/structure/dresser,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -19650,7 +20199,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluechess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ocF" = (
 /obj/structure/closet,
 /turf/open/floor/f13/wood,
@@ -19755,7 +20304,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ogn" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/armor/tier2,
@@ -19810,13 +20359,6 @@
 	icon_state = "horizontalbottomborderbottom2"
 	},
 /area/f13/wasteland)
-"ojc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/robot_debris,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "ojG" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -19996,7 +20538,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ooQ" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/costume,
@@ -20057,7 +20599,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oqZ" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/remains/human,
@@ -20084,7 +20626,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "orp" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/toolsbasic,
@@ -20176,7 +20718,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "otR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -20258,13 +20800,6 @@
 	icon_state = "floordirty"
 	},
 /area/f13/village)
-"oxE" = (
-/obj/structure/simple_door/metal/store,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/desert,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "oyc" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -20311,7 +20846,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ozc" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/wood/wood_wide,
@@ -20401,6 +20936,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/bl/dfs)
+"oBY" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/village)
 "oCd" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt{
@@ -20598,7 +21139,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oJf" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -20621,15 +21162,6 @@
 /obj/item/stack/sheet/cloth/thirty,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
-"oKc" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/desert,
-/turf/open/indestructible/ground/outside/desert/harsh{
-	name = "dry dirt"
-	},
-/area/f13/wasteland)
 "oKK" = (
 /obj/effect/overlay/junk/sink{
 	dir = 4;
@@ -20751,7 +21283,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oPl" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -20780,13 +21312,6 @@
 /obj/structure/table,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
-	},
-/area/f13/village)
-"oQt" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/structure/table,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluechess"
 	},
 /area/f13/village)
 "oRd" = (
@@ -20837,7 +21362,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oUq" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop1"
@@ -20907,7 +21432,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oWw" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
@@ -21003,7 +21528,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oYD" = (
 /obj/structure/chair/booth{
 	dir = 8
@@ -21018,7 +21543,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "oYV" = (
 /obj/item/clothing/accessory/necklace,
 /obj/structure/displaycase,
@@ -21244,7 +21769,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pho" = (
 /obj/effect/decal/marking,
 /turf/open/indestructible/ground/outside/road{
@@ -21293,7 +21818,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "piD" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
@@ -21395,7 +21920,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "png" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbrokenvertical"
@@ -21432,7 +21957,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ppr" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -21481,7 +22006,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pqT" = (
 /obj/structure/chair/f13chair2{
 	dir = 1
@@ -21504,7 +22029,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "prq" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/f13{
@@ -21531,7 +22056,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "psa" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowright"
@@ -21675,7 +22200,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pxh" = (
 /obj/structure/chair/sofa,
 /obj/structure/curtain{
@@ -21708,7 +22233,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pxU" = (
 /obj/machinery/workbench/forge,
 /obj/item/clothing/gloves/f13/blacksmith,
@@ -21909,7 +22434,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pFl" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
@@ -21960,24 +22485,12 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pIl" = (
 /obj/item/chair/wood{
 	pixel_y = -3
 	},
 /turf/open/floor/wood/wood_common,
-/area/f13/building)
-"pIp" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged{
-	name = "Cannibal Brute"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/f13/wood,
 /area/f13/building)
 "pIA" = (
 /obj/item/kirbyplants/random,
@@ -21989,16 +22502,6 @@
 	icon_state = "redchess"
 	},
 /area/f13/village)
-"pJp" = (
-/mob/living/simple_animal/hostile/raider/junker/creator{
-	name = "Granite Gang Tinkerer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "pJD" = (
 /obj/machinery/light{
 	dir = 1
@@ -22014,7 +22517,7 @@
 	},
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pJX" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -22104,21 +22607,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/wood/wood_common,
 /area/f13/city/bighorn)
-"pMR" = (
-/obj/machinery/door/unpowered/securedoor/gmb_door,
-/turf/closed/wall/f13/wood/house,
-/area/f13/bl/gmb)
-"pMT" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/machinery/light{
-	dir = 8;
-	light_color = "#c1caff";
-	pixel_y = 15
-	},
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/village)
 "pNa" = (
 /obj/structure/table/glass,
 /turf/open/floor/f13,
@@ -22256,7 +22744,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "pTd" = (
 /obj/structure/tires/five,
 /obj/structure/wreck/trash/two_tire{
@@ -22599,11 +23087,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"qeh" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_common,
-/area/f13/village)
 "qeZ" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/toy/plush/tree,
@@ -22655,18 +23138,6 @@
 	icon_state = "redsolid"
 	},
 /area/f13/village)
-"qgU" = (
-/mob/living/simple_animal/hostile/raider/junker/creator{
-	name = "Granite Gang Tinkerer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "qho" = (
 /obj/effect/decal/remains/human,
 /obj/item/storage/backpack/trekker,
@@ -22704,7 +23175,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qic" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/terminal{
@@ -22726,7 +23197,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qiZ" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/f13/wood,
@@ -23025,21 +23496,13 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluechess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qtY" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/wasteland)
-"quM" = (
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "quX" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/trash,
@@ -23080,7 +23543,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qwU" = (
 /obj/structure/closet,
 /obj/item/clothing/under/f13/doctor,
@@ -23123,16 +23586,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
-"qym" = (
-/mob/living/simple_animal/hostile/raider{
-	name = "Mainstreet Hoopers Raider";
-	desc = "Never thought you'd live to see the day when raiders were balling."
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticaloutermain1"
-	},
 /area/f13/wasteland)
 "qyx" = (
 /obj/structure/chair/right,
@@ -23208,7 +23661,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qBu" = (
 /obj/structure/railing/wood/underlayer{
 	pixel_y = -1
@@ -23334,7 +23787,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qDS" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -23370,7 +23823,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qEO" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -23438,7 +23891,7 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qHU" = (
 /obj/structure/railing{
 	dir = 9;
@@ -23514,11 +23967,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
-"qKL" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "qLd" = (
 /obj/structure/chair/f13chair2{
 	dir = 4
@@ -23546,7 +23994,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qLM" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/wood/wood_wide,
@@ -23582,12 +24030,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"qMB" = (
-/mob/living/simple_animal/hostile/handy,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "qMC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -23658,7 +24100,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qNY" = (
 /obj/structure/wreck/trash/machinepile,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -23751,7 +24193,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qSE" = (
 /obj/structure/filingcabinet,
 /obj/effect/decal/cleanable/dirt,
@@ -23776,11 +24218,6 @@
 /obj/structure/chair/stool/retro/tan,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"qTA" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "qTP" = (
 /obj/structure/table/glass,
 /turf/open/floor/carpet/orange,
@@ -23815,7 +24252,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qVi" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -23836,7 +24273,7 @@
 /area/f13/village)
 "qVF" = (
 /turf/open/transparent/openspace,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qVP" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/road{
@@ -23901,22 +24338,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"qXI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/official/medical_green_cross{
-	pixel_y = -32
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "qYe" = (
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "qYq" = (
 /obj/structure/chair/wood/wings{
 	dir = 4
@@ -24019,14 +24448,6 @@
 	icon_state = "redchess"
 	},
 /area/f13/village)
-"rcM" = (
-/mob/living/simple_animal/hostile/raider{
-	name = "Mainstreet Hoopers Raider";
-	desc = "Never thought you'd live to see the day when raiders were balling."
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "rdM" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -24126,7 +24547,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rhq" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/gun/ballistic/automatic/assault_carbine/policerifle,
@@ -24162,13 +24583,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"rii" = (
-/obj/structure/simple_door/metal/store,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/desert,
-/turf/open/floor/plasteel,
-/area/f13/village)
+/area/f13/building/mall)
 "riq" = (
 /obj/machinery/processor,
 /obj/effect/decal/cleanable/dirt,
@@ -24422,7 +24837,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rsA" = (
 /obj/machinery/workbench,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -24491,7 +24906,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ruh" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/f13/brahmin,
@@ -24522,7 +24937,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ruX" = (
 /obj/structure/closet,
 /obj/item/clothing/under/f13/mechanic,
@@ -24600,7 +25015,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ryN" = (
 /obj/structure/simple_door/room,
 /obj/effect/decal/cleanable/dirt,
@@ -24739,7 +25154,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rCB" = (
 /obj/structure/chair/sofa{
 	dir = 4
@@ -24760,7 +25175,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rDb" = (
 /obj/structure/car/rubbish2,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -24799,15 +25214,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"rDG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "rDN" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/decoration/rag,
@@ -24817,7 +25223,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rDO" = (
 /obj/machinery/vending/cola/space_up,
 /obj/effect/decal/cleanable/dirt,
@@ -24825,7 +25231,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rDQ" = (
 /obj/machinery/light{
 	dir = 1;
@@ -24841,7 +25247,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rEn" = (
 /obj/item/chair/stool/bar,
 /obj/machinery/light/small/broken{
@@ -24889,7 +25295,7 @@
 /obj/item/storage/box/ingredients/wildcard,
 /obj/item/storage/box/ingredients/grains,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rFN" = (
 /obj/structure/decoration/rag{
 	layer = 8
@@ -24897,7 +25303,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rFO" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/road{
@@ -24967,15 +25373,6 @@
 	},
 /turf/open/floor/wood/wood_common/wood_common_light,
 /area/f13/wasteland)
-"rIi" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_worn/wood_worn_dark{
-	icon_state = "wide_dark1"
-	},
-/area/f13/village)
 "rIr" = (
 /obj/structure/wreck/trash/one_tire,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -25047,7 +25444,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rKm" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -25080,12 +25477,6 @@
 	},
 /turf/open/indestructible/sound/pool/river,
 /area/f13/wasteland)
-"rLl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "rLy" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small{
@@ -25140,7 +25531,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rOz" = (
 /obj/effect/overlay/junk/shower{
 	dir = 4
@@ -25288,7 +25679,6 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "rUT" = (
-/mob/living/simple_animal/hostile/bloatfly,
 /obj/effect/overlay/turfs/cliff{
 	dir = 5;
 	pixel_y = 14;
@@ -25328,7 +25718,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "rWD" = (
 /obj/structure/table/wood/poker,
 /turf/open/floor/wood/wood_common,
@@ -25554,14 +25944,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/village)
-"sde" = (
-/obj/structure/mirelurkegg,
-/mob/living/simple_animal/hostile/mirelurk/baby,
-/obj/structure/decoration/rag{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/building)
 "sdo" = (
 /obj/structure/barricade/bars,
 /obj/structure/window/fulltile/house,
@@ -25634,15 +26016,6 @@
 	dir = 4
 	},
 /turf/open/floor/wood/wood_common,
-/area/f13/village)
-"sfq" = (
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
 /area/f13/village)
 "sfB" = (
 /obj/effect/decal/marking{
@@ -25803,11 +26176,6 @@
 /obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/bl/gmb)
-"slk" = (
-/mob/living/simple_animal/hostile/mirelurk/baby,
-/obj/structure/mirelurkegg,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/wasteland)
 "slJ" = (
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/f13/wood,
@@ -25905,13 +26273,6 @@
 /obj/structure/closet/crate/bin,
 /obj/machinery/light/broken,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"spy" = (
-/obj/item/storage/trash_stack,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "sqC" = (
 /obj/structure/rack,
@@ -26017,7 +26378,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "svd" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/cultivator,
@@ -26046,7 +26407,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "svO" = (
 /obj/item/clothing/head/hardhat/white{
 	desc = "A beat up and cracked hard hat. Still good for protecting heads but is beginning to show its age.";
@@ -26069,7 +26430,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "swu" = (
 /obj/structure/fence{
 	pixel_x = 17
@@ -26111,7 +26472,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "syN" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -26119,14 +26480,6 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/bundle/costume/maid,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"syS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair{
-	dir = 1
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "syT" = (
 /obj/structure/sink/kitchen{
@@ -26166,7 +26519,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sAu" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowtop"
@@ -26183,13 +26536,6 @@
 	icon_state = "verticalleftborderright0"
 	},
 /area/f13/wasteland)
-"sBp" = (
-/mob/living/simple_animal/hostile/raider/baseball{
-	name = "Granite Gang Enforcer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
 "sBS" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -26238,14 +26584,6 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
-"sEk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/trash,
-/obj/machinery/light,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "sEl" = (
 /obj/machinery/light{
 	dir = 8;
@@ -26297,7 +26635,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sHs" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
@@ -26330,7 +26668,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sJq" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom2left"
@@ -26356,7 +26694,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sKf" = (
 /obj/structure/rack/shelf_metal,
 /obj/machinery/door/window/left{
@@ -26366,21 +26704,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sKl" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"sKv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "sKz" = (
 /obj/structure/window/fulltile/house{
@@ -26473,7 +26802,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sNZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/mineral/random/low_chance,
@@ -26491,7 +26820,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sOE" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/road{
@@ -26595,13 +26924,6 @@
 "sQZ" = (
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"sRA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "sRF" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -26645,7 +26967,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sTt" = (
 /obj/item/ammo_casing/spent,
 /turf/open/indestructible/ground/outside/road{
@@ -26738,16 +27060,6 @@
 	name = "road"
 	},
 /area/f13/wasteland)
-"sWr" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/official/safety_internals{
-	pixel_y = 32
-	},
-/obj/effect/decal/remains/human,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/hobo,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "sWs" = (
 /obj/item/reagent_containers/food/snacks/badrecipe{
 	desc = "Long rotten something. Is it molerat waste? Is it a burger? Is it fruit? Probably shouldn't eat this.";
@@ -26803,7 +27115,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "sZy" = (
 /obj/structure/toilet{
 	pixel_y = 12
@@ -26931,11 +27243,6 @@
 	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
-"tdE" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "tdK" = (
 /obj/effect/overlay/junk/shower{
 	dir = 8
@@ -27059,7 +27366,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tjM" = (
 /obj/structure/fence/cut/large{
 	dir = 4;
@@ -27079,7 +27386,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tjU" = (
 /obj/structure/table/booth,
 /obj/effect/decal/cleanable/blood/old{
@@ -27140,15 +27447,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
-"tmn" = (
-/mob/living/simple_animal/hostile/raider/tribal{
-	name = "Feral Junkie"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
+/area/f13/building/mall)
 "tmB" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -27165,7 +27464,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tmU" = (
 /mob/living/simple_animal/hostile/raider/baseball{
 	name = "Granite Gang Enforcer"
@@ -27227,7 +27526,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tpo" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/wood/wood_common,
@@ -27244,7 +27543,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tqQ" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -27269,7 +27568,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "trn" = (
 /obj/structure/simple_door/room/dirty,
 /obj/effect/decal/cleanable/dirt,
@@ -27352,8 +27651,11 @@
 	},
 /area/f13/wasteland)
 "tvu" = (
-/turf/open/indestructible/ground/outside/water,
-/area/f13/wasteland)
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/village)
 "tvH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -27362,7 +27664,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "twc" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -27404,7 +27706,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "txs" = (
 /obj/structure/closet,
 /obj/item/storage/medical/ancientfirstaid,
@@ -27436,7 +27738,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tzo" = (
 /obj/machinery/light{
 	dir = 4;
@@ -27588,7 +27890,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tEo" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -27617,7 +27919,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tFR" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/trash,
@@ -27652,22 +27954,6 @@
 /obj/item/toy/cards/deck,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"tGt" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/renegade{
-	desc = "An individual employed by Marlin Runnings. Acts as watch and scouting.";
-	name = "Runnings Recruit"
-	},
-/obj/structure/sign/poster/contraband/pinup_anthro9{
-	pixel_x = -32
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/building)
 "tGK" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/curtain{
@@ -27692,7 +27978,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tHS" = (
 /obj/structure/fence{
 	dir = 4;
@@ -27778,7 +28064,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tLp" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
@@ -27802,7 +28088,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tMQ" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -27841,7 +28127,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tPa" = (
 /obj/structure/kitchenspike,
 /turf/open/floor/f13/wood,
@@ -27878,7 +28164,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "tPV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28001,15 +28287,6 @@
 	},
 /turf/open/floor/carpet/green,
 /area/f13/village)
-"tVk" = (
-/mob/living/simple_animal/hostile/raider{
-	name = "Backstreet Fellas Raider";
-	desc = "Maybe the 'ardest raider to ever raid."
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "tVG" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28091,17 +28368,6 @@
 /obj/item/target,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/bl/dfs)
-"tXl" = (
-/mob/living/simple_animal/hostile/raider/ranged/boss{
-	name = "Granite Gang Overboss"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "tXn" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/shoes/sneakers/black,
@@ -28211,7 +28477,7 @@
 	light_color = "#706891"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uaW" = (
 /obj/structure/junk/micro,
 /turf/open/floor/wood/wood_common,
@@ -28228,7 +28494,7 @@
 /area/f13/village)
 "ubM" = (
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uce" = (
 /obj/structure/chair/bench{
 	dir = 1
@@ -28282,7 +28548,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ufv" = (
 /obj/structure/safe,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28335,7 +28601,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ugj" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -28392,7 +28658,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uhI" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/drinkingglass{
@@ -28416,7 +28682,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uie" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2bottom"
@@ -28431,7 +28697,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uiI" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
@@ -28442,7 +28708,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uiN" = (
 /obj/structure/railing{
 	dir = 8
@@ -28467,7 +28733,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ujl" = (
 /obj/structure/stairs/south,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -28516,34 +28782,10 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bl/dfs)
-"ukv" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/overlay/junk/sink{
-	dir = 4;
-	pixel_x = 12;
-	pixel_y = 14
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluerustychess"
-	},
-/area/f13/village)
 "ukD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
-	},
-/area/f13/village)
-"ukQ" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitegreenrustychess"
 	},
 /area/f13/village)
 "ukU" = (
@@ -28831,7 +29073,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uvf" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -28860,7 +29102,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uvx" = (
 /obj/structure/table/wood/settler,
 /obj/effect/decal/cleanable/dirt,
@@ -28919,7 +29161,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uxc" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -28944,7 +29186,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uyf" = (
 /obj/structure/flora/rock/pile/largejungle,
 /turf/open/indestructible/ground/outside/savannah{
@@ -28979,7 +29221,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uzh" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt,
@@ -29179,11 +29421,6 @@
 	icon_state = "verticalleftborderright0"
 	},
 /area/f13/village)
-"uFz" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "uFH" = (
 /obj/structure/table,
 /obj/item/trash/sosjerky,
@@ -29211,7 +29448,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uHj" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -29249,19 +29486,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
-"uIv" = (
-/obj/machinery/light/small/broken{
-	dir = 8
-	},
-/mob/living/simple_animal/hostile/handy{
-	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
-	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "uIQ" = (
 /obj/effect/overlay/turfs/cliff{
 	pixel_y = -14;
@@ -29300,7 +29524,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uKh" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -29330,7 +29554,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uKW" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -29611,7 +29835,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uUt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -29678,7 +29902,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uVO" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /turf/open/floor/plasteel/f13/vault_floor,
@@ -29703,7 +29927,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uWY" = (
 /obj/structure/chair/wood/fancy{
 	dir = 4
@@ -29717,7 +29941,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "uXy" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
@@ -29805,14 +30029,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"uZY" = (
-/mob/living/simple_animal/hostile/raider/ranged{
-	desc = "Never thought you'd live to see the day when raiders were balling.";
-	name = "Mainstreet Hoopers Raider"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/wasteland)
 "vak" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
@@ -29850,7 +30066,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vcB" = (
 /obj/structure/tires/half,
 /obj/effect/decal/cleanable/dirt,
@@ -29947,27 +30163,6 @@
 	icon_state = "verticalrightborderright3"
 	},
 /area/f13/wasteland)
-"vgU" = (
-/obj/structure/chair/office/dark{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
-	name = "Techfiend Shooter";
-	desc = "A Techfiend raider with a keen eye for guns."
-	},
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
-"vhp" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "vhy" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
@@ -30015,15 +30210,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
-"vja" = (
-/mob/living/simple_animal/hostile/raider/baseball{
-	name = "Granite Gang Enforcer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vje" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
@@ -30121,7 +30308,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vmX" = (
 /obj/structure/closet/crate/footlocker,
 /obj/item/pickaxe,
@@ -30309,19 +30496,6 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
-"vrZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/plasteel,
-/area/f13/village)
 "vsb" = (
 /turf/closed/wall/f13/tentwall,
 /area/f13/city/bighorn)
@@ -30365,7 +30539,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vti" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal{
@@ -30374,7 +30548,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vtp" = (
 /obj/structure/closet/crate/footlocker{
 	anchored = 1
@@ -30434,6 +30608,10 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
+/area/f13/village)
+"vwv" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/village)
 "vxp" = (
 /obj/structure/disposalpipe/segment{
@@ -30530,7 +30708,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vAV" = (
 /obj/effect/overlay/junk{
 	pixel_y = 30
@@ -30580,14 +30758,14 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vDI" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vDP" = (
 /obj/structure/chair,
 /obj/effect/decal/remains/human,
@@ -30612,13 +30790,6 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/village)
-"vEh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "vEJ" = (
 /obj/structure/table,
@@ -30741,7 +30912,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vKc" = (
 /obj/structure/closet/secure_closet/freezer/gulag_fridge,
 /turf/open/floor/f13{
@@ -30757,19 +30928,6 @@
 	icon_state = "cafeteria"
 	},
 /area/f13/building)
-"vKD" = (
-/mob/living/simple_animal/hostile/raider/ranged{
-	name = "Granite Gang Raider"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "vKH" = (
 /obj/structure/fence/wooden{
 	density = 0;
@@ -30910,16 +31068,6 @@
 	icon_state = "sheetUSA"
 	},
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"vSd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/kirbyplants{
-	icon_state = "plant-17"
-	},
-/obj/machinery/light,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "vSp" = (
 /obj/effect/overlay/junk/sink{
@@ -31063,16 +31211,6 @@
 	icon_state = "outermaincornerinner"
 	},
 /area/f13/wasteland)
-"vWq" = (
-/mob/living/simple_animal/hostile/ghoul,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/indestructible/ground/outside/dirt/harsh,
-/area/f13/wasteland)
 "vWs" = (
 /obj/structure/railing{
 	dir = 8
@@ -31153,7 +31291,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "vZO" = (
 /obj/structure/decoration/hatch{
 	dir = 4
@@ -31187,7 +31325,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "waU" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/outside/dirt/harsh{
@@ -31337,7 +31475,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wgr" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -31398,7 +31536,7 @@
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wif" = (
 /obj/structure/sign/poster/contraband/pinup_anthro13{
 	pixel_x = 32
@@ -31522,17 +31660,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/bl/dfs)
-"wmo" = (
-/obj/effect/landmark/start/f13/wastelander,
-/turf/open/floor/wood/wood_common/wood_common_light,
-/area/f13/wasteland)
 "wmC" = (
 /obj/structure/decoration/rag,
 /obj/structure/decoration/rag{
 	icon_state = "skin"
 	},
 /turf/closed/wall/f13/store,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wmL" = (
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/f13{
@@ -31591,7 +31725,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wnr" = (
 /obj/effect/landmark/start/f13/dfs_regular,
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -31785,13 +31919,6 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/wasteland)
-"wvm" = (
-/mob/living/simple_animal/hostile/raider/tribal{
-	name = "Feral Junkie"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "wwi" = (
 /obj/structure/tires/two{
 	pixel_x = 4;
@@ -31878,7 +32005,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wyp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -31891,7 +32018,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wzl" = (
 /obj/structure/stairs/west{
 	color = "#A47449"
@@ -32001,7 +32128,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/stool,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wDv" = (
 /obj/structure/table/wood/settler,
 /obj/item/reagent_containers/food/drinks/bottle/whiskey,
@@ -32026,7 +32153,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wDN" = (
 /obj/structure/debris/v3,
 /obj/effect/decal/cleanable/glass,
@@ -32076,16 +32203,6 @@
 /obj/machinery/washing_machine,
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/village)
-"wFR" = (
-/mob/living/simple_animal/hostile/raider/baseball{
-	name = "Granite Gang Enforcer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "wGt" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/road{
@@ -32207,13 +32324,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood,
 /area/f13/building)
-"wKn" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/village)
 "wKp" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/mask/cigarette/cigar/ncr{
@@ -32279,13 +32389,6 @@
 /obj/item/ammo_casing/spent,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"wLD" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/wood,
-/area/f13/building)
 "wLO" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -32342,15 +32445,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/blue,
 /area/f13/village)
-"wOi" = (
-/mob/living/simple_animal/hostile/raider/firefighter{
-	name = "Cannibal Butcher"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2"
-	},
-/area/f13/building)
 "wOu" = (
 /obj/structure/fence/corner{
 	dir = 1;
@@ -32391,13 +32485,6 @@
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/wood/wood_common,
-/area/f13/village)
-"wQD" = (
-/obj/effect/decal/cleanable/vomit/old,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
 /area/f13/village)
 "wQE" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -32610,23 +32697,13 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"wXX" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/official/work_for_a_future{
-	pixel_x = -32
-	},
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "wYa" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "wYh" = (
 /obj/structure/flora/tree/jungle/small{
 	desc = "The vibrant green of this tree sticks out against the dry and cracked wasteland."
@@ -32716,7 +32793,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xav" = (
 /obj/machinery/light{
 	light_color = "#706891";
@@ -32822,7 +32899,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/cafeteria,
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xdt" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -32998,7 +33075,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xkV" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/inside/mountain,
@@ -33063,7 +33140,7 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xnc" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/under/suit_jacket/female,
@@ -33074,7 +33151,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xno" = (
 /turf/open/floor/f13/wood,
 /area/f13/bl/dfs)
@@ -33118,30 +33195,9 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"xoE" = (
-/mob/living/simple_animal/hostile/raider/baseball{
-	name = "Granite Gang Enforcer"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/raider_mall)
 "xoH" = (
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
-"xoM" = (
-/mob/living/simple_animal/hostile/raider/firefighter{
-	name = "Cannibal Butcher"
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/destructible/tribal_torch/lit,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2-broken"
-	},
-/area/f13/building)
 "xoS" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -33404,7 +33460,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xys" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -33514,15 +33570,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"xBm" = (
-/obj/structure/fence/corner{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/desert,
-/turf/open/indestructible/ground/outside/desert/harsh{
-	name = "dry dirt"
-	},
-/area/f13/wasteland)
 "xBq" = (
 /obj/structure/nest/fireant,
 /obj/structure/junk/small/bed,
@@ -33583,7 +33630,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xDf" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
@@ -33627,7 +33674,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xEz" = (
 /obj/structure/debris/v4,
 /obj/effect/decal/cleanable/glass,
@@ -33678,7 +33725,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xFM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -33724,6 +33771,12 @@
 /area/f13/building)
 "xGE" = (
 /turf/open/floor/plating/wooden,
+/area/f13/village)
+"xGN" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
 /area/f13/village)
 "xHe" = (
 /obj/structure/table/wood,
@@ -33785,7 +33838,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xIP" = (
 /obj/structure/junk/micro,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -33911,7 +33964,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xLk" = (
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_8"
@@ -34010,7 +34063,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xPS" = (
 /obj/structure/table/booth,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -34039,14 +34092,6 @@
 	icon_state = "verticalrightborderright1"
 	},
 /area/f13/wasteland)
-"xQB" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood/wood_worn/wood_worn_dark{
-	icon_state = "wide_dark1"
-	},
-/area/f13/village)
 "xQE" = (
 /obj/structure/cargocrate,
 /turf/open/indestructible/ground/outside/road{
@@ -34152,6 +34197,12 @@
 	icon_state = "verticalrightborderleft0"
 	},
 /area/f13/wasteland)
+"xTz" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaloutermain0"
+	},
+/area/f13/village)
 "xTD" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 1;
@@ -34205,7 +34256,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "xWY" = (
 /obj/structure/table,
 /obj/structure/wreck/trash/five_tires{
@@ -34369,14 +34420,6 @@
 "ydR" = (
 /turf/open/transparent/openspace,
 /area/f13/wasteland/bl/gmb)
-"ydW" = (
-/mob/living/simple_animal/hostile/radroach,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood2-broken"
-	},
-/area/f13/village)
 "yef" = (
 /obj/effect/decal/cleanable/vomit/old,
 /obj/effect/decal/cleanable/dirt,
@@ -34574,7 +34617,7 @@
 	icon_state = "floorrustysolid";
 	name = "store floor"
 	},
-/area/f13/raider_mall)
+/area/f13/building/mall)
 "ymd" = (
 /obj/structure/simple_door/metal/fence{
 	pixel_y = 1
@@ -34790,10 +34833,10 @@ oMJ
 oMJ
 oMJ
 oMJ
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34808,14 +34851,14 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34826,10 +34869,10 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
 ppz
 ppz
 ppz
@@ -34840,10 +34883,10 @@ ppz
 ppz
 ppz
 ppz
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34854,42 +34897,11 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
-uMg
-ppz
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-ppz
-uMg
-uMg
-uMg
-uMg
-uMg
-ppz
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-hKj
-ppz
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34904,15 +34916,46 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
+mvS
+ppz
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+ppz
+mvS
+mvS
+mvS
+ppz
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+hKj
+ppz
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34931,10 +34974,10 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34946,9 +34989,9 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
 ppz
 hKj
 hKj
@@ -34961,13 +35004,13 @@ hKj
 hKj
 hKj
 ppz
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
-uMg
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
+mvS
 oMJ
 oMJ
 oMJ
@@ -35247,10 +35290,10 @@ fwb
 fwb
 fwb
 fwb
-bxh
-bxh
-bxh
-bxh
+eQI
+tvu
+tvu
+eQI
 ppz
 ppz
 ppz
@@ -35265,14 +35308,14 @@ ppz
 ppz
 ppz
 ppz
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+eQI
+tvu
+tvu
+tvu
+tvu
+tvu
+tvu
+eQI
 ppz
 hKj
 hKj
@@ -35283,11 +35326,11 @@ hKj
 hKj
 hKj
 ppz
-bxh
-bxh
-bxh
-bxh
-bxh
+eQI
+tvu
+tvu
+eQI
+qCL
 edK
 pqb
 sDW
@@ -35296,11 +35339,11 @@ mzx
 mzx
 mzx
 mzx
-mzx
-mzx
-mzx
-mzx
-mho
+hYW
+hrQ
+xGN
+xGN
+gZq
 ppz
 hKj
 hKj
@@ -35311,11 +35354,11 @@ hKj
 hKj
 hKj
 ppz
-mPu
-mPu
-mPu
-mPu
-mPu
+jKr
+hXy
+hXy
+hXy
+jKr
 ppz
 ppz
 ppz
@@ -35330,11 +35373,11 @@ ppz
 ppz
 ppz
 ppz
-mPu
-mPu
-mPu
-mPu
-mPu
+jKr
+hXy
+hXy
+hXy
+jKr
 ppz
 ppz
 ppz
@@ -35344,10 +35387,15 @@ ppz
 ppz
 ppz
 ppz
-bxh
-bxh
-bxh
+tvu
+eQI
+tvu
 ppz
+hKj
+hKj
+hKj
+hKj
+hKj
 hKj
 hKj
 hKj
@@ -35355,21 +35403,16 @@ hKj
 hKj
 hKj
 hKj
-hKj
-hKj
-hKj
-hKj
-hKj
 ppz
-rjo
-nRs
-mgP
-oeM
-oeM
-oeM
-sHs
-pqb
-mPu
+xTz
+fmw
+fJc
+vwv
+vwv
+vwv
+hFo
+bMc
+jKr
 ppz
 ppz
 ppz
@@ -35388,10 +35431,10 @@ ppz
 ppz
 ppz
 ppz
-mPu
-mPu
-mPu
-nRs
+jKr
+hXy
+hXy
+oBY
 ppz
 ppz
 ppz
@@ -35403,9 +35446,9 @@ ppz
 ppz
 ppz
 ppz
-bxh
-bxh
-bxh
+tvu
+eQI
+tvu
 ppz
 hKj
 hKj
@@ -35418,14 +35461,14 @@ ppz
 ppz
 ppz
 ppz
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+eQI
+tvu
+tvu
+tvu
+tvu
+tvu
+tvu
+eQI
 fwb
 oMJ
 oMJ
@@ -35740,11 +35783,11 @@ hKj
 hKj
 hKj
 ppz
-bxh
-bxh
-bxh
-bxh
-bxh
+qCL
+qCL
+qCL
+qCL
+qCL
 edK
 pqb
 nRs
@@ -36045,7 +36088,7 @@ fwb
 bti
 txi
 rrP
-wOi
+aaV
 ije
 qxU
 vWi
@@ -36197,7 +36240,7 @@ hKj
 hKj
 hKj
 ppz
-bxh
+qCL
 aox
 aox
 aox
@@ -36654,7 +36697,7 @@ ppz
 ppz
 ppz
 ppz
-bxh
+qCL
 aox
 hUX
 uPC
@@ -36957,7 +37000,7 @@ fwb
 fwb
 fwb
 bti
-hIT
+aaU
 hLf
 bxO
 wJM
@@ -38331,7 +38374,7 @@ kun
 lbC
 xGf
 hUM
-xoM
+aaW
 vfT
 jFS
 bti
@@ -48177,7 +48220,7 @@ fDe
 bhZ
 fDe
 gKQ
-bhZ
+jrU
 fDe
 bhZ
 fDe
@@ -51160,7 +51203,7 @@ vga
 mez
 mnN
 mez
-quM
+aaX
 qvr
 wUs
 qvr
@@ -53575,7 +53618,7 @@ tIX
 rjo
 vga
 pJD
-fei
+mWB
 qvr
 qvr
 gYe
@@ -53590,7 +53633,7 @@ iWq
 pKk
 mez
 jsN
-uFz
+abo
 mez
 mez
 ezr
@@ -54499,7 +54542,7 @@ mez
 vga
 iWp
 hCq
-qym
+abt
 iWq
 iWq
 iWq
@@ -54952,7 +54995,7 @@ bxn
 wUs
 mez
 jQn
-uFz
+abo
 iWq
 eeS
 jZn
@@ -55420,7 +55463,7 @@ vga
 dUO
 pRW
 siI
-qKL
+abu
 aPG
 nQq
 oMj
@@ -55881,7 +55924,7 @@ iWq
 iWq
 ifI
 vil
-ukv
+abw
 vga
 tPV
 vga
@@ -56791,7 +56834,7 @@ ncv
 ncv
 mPu
 jZT
-qym
+abt
 jZn
 xZU
 fbY
@@ -56810,7 +56853,7 @@ pGk
 rqz
 vga
 etj
-tVk
+abA
 gYe
 mez
 vga
@@ -57111,7 +57154,7 @@ gUZ
 dce
 ifC
 sel
-uIv
+aaZ
 eUN
 rYe
 xCk
@@ -57261,7 +57304,7 @@ lep
 wbJ
 jZn
 jZn
-qym
+abt
 bHM
 all
 hJz
@@ -57555,7 +57598,7 @@ bxh
 bxh
 bxh
 vga
-quM
+aaX
 qvr
 ekb
 qvr
@@ -57655,7 +57698,7 @@ bxh
 bxh
 vga
 gzh
-tdE
+abl
 tyF
 mez
 ajA
@@ -58932,7 +58975,7 @@ gYe
 gYe
 gYe
 qvr
-sfq
+aaY
 xGm
 gUZ
 mPu
@@ -58946,7 +58989,7 @@ qvr
 mez
 mnN
 qvr
-bPH
+abb
 xGm
 nRs
 wko
@@ -59020,7 +59063,7 @@ dce
 mez
 mez
 lKk
-tdE
+abl
 vga
 vga
 vga
@@ -59064,7 +59107,7 @@ ksa
 rWD
 oZl
 rNe
-kLs
+abs
 uKM
 pvC
 mXy
@@ -59994,7 +60037,7 @@ uAJ
 xQU
 tAL
 ncv
-uZY
+abx
 ncv
 ncv
 nqz
@@ -60398,7 +60441,7 @@ qvr
 kxI
 qvr
 mez
-bLD
+iqC
 qvr
 vGu
 mPu
@@ -60430,7 +60473,7 @@ tIX
 tIX
 vga
 pvC
-kSf
+abp
 fRN
 cVX
 rIt
@@ -60915,7 +60958,7 @@ puj
 cyZ
 mfV
 lBR
-drg
+abz
 wUg
 jpZ
 ebT
@@ -61286,11 +61329,11 @@ bxh
 bxh
 bxh
 bxh
-xBm
-glc
-glc
-glc
-glc
+abd
+abf
+abf
+abf
+abf
 vga
 azl
 lCk
@@ -61421,7 +61464,7 @@ pqb
 ajA
 sjT
 gUV
-qMB
+abK
 mkl
 qOZ
 xhr
@@ -61743,7 +61786,7 @@ bOs
 bxh
 bxh
 bxh
-oKc
+abe
 gPn
 gPn
 gPn
@@ -62200,7 +62243,7 @@ bxh
 bxh
 bxh
 bxh
-oKc
+abe
 gPn
 gPn
 gPn
@@ -62270,14 +62313,14 @@ jZn
 jZn
 hEL
 eeS
-qym
+abt
 dGV
 eeS
 ncv
 jZn
 ncv
 dGV
-rcM
+abv
 ncv
 jiY
 tWT
@@ -62657,7 +62700,7 @@ bxh
 bxh
 bxh
 bxh
-oKc
+abe
 gPn
 gPn
 gPn
@@ -63114,7 +63157,7 @@ bxh
 bxh
 bxh
 bxh
-oKc
+abe
 gPn
 gPn
 gPn
@@ -63198,7 +63241,7 @@ tWT
 doB
 swz
 qGM
-qeh
+aby
 pvC
 gDK
 udr
@@ -63571,7 +63614,7 @@ bxh
 bxh
 bxh
 bxh
-oKc
+abe
 gPn
 gPn
 gPn
@@ -63633,7 +63676,7 @@ gpr
 crG
 eeS
 eeS
-ilO
+abr
 pDB
 eeS
 mjz
@@ -63971,7 +64014,7 @@ biY
 jAk
 vga
 hyH
-ydW
+aba
 mez
 qrc
 xGm
@@ -64909,7 +64952,7 @@ kLx
 xFM
 kLx
 lkH
-lBM
+abc
 lkv
 dhO
 qrd
@@ -65521,7 +65564,7 @@ aOJ
 liD
 tdQ
 tdQ
-oQt
+abJ
 vHV
 rjo
 bzW
@@ -65536,7 +65579,7 @@ gKa
 jEb
 tFR
 wZH
-xQB
+abN
 wYE
 qDv
 tUp
@@ -65880,7 +65923,7 @@ mez
 mez
 qvr
 qvr
-uFz
+abo
 hKj
 qvr
 qvr
@@ -68733,7 +68776,7 @@ oiS
 mPu
 hvE
 tyw
-rIi
+abL
 seb
 tKo
 seb
@@ -71457,7 +71500,7 @@ rjo
 tIX
 ppz
 iSd
-kTO
+abF
 iSd
 tbm
 lVi
@@ -72376,7 +72419,7 @@ tXs
 egy
 nDz
 egy
-jnO
+abG
 ppz
 pqb
 bzW
@@ -72828,7 +72871,7 @@ gUZ
 rjo
 ppz
 acr
-jnO
+abG
 sSD
 wNn
 wNn
@@ -74108,7 +74151,7 @@ pEg
 mRI
 lZh
 nLI
-kSf
+abp
 huY
 pEg
 mPu
@@ -75914,7 +75957,7 @@ bxh
 xhr
 smT
 mDQ
-dkq
+abh
 dMA
 fHq
 xhr
@@ -77859,7 +77902,7 @@ sci
 xhr
 sSl
 chD
-pMT
+abH
 okR
 xhr
 pqb
@@ -78340,7 +78383,7 @@ pEg
 ptV
 khV
 pyB
-cOl
+abP
 uyr
 vga
 nRs
@@ -78528,7 +78571,7 @@ pqb
 aox
 bJS
 omY
-sKv
+aav
 omY
 jEB
 sza
@@ -78985,7 +79028,7 @@ pqb
 aox
 rJz
 uPw
-gKo
+aap
 uPw
 rqZ
 uPw
@@ -79442,7 +79485,7 @@ pqb
 aox
 sza
 uPw
-eii
+aaw
 uPw
 uPw
 sza
@@ -79897,11 +79940,11 @@ oeM
 oeM
 pqb
 aox
-njB
-wXX
-gKo
-gKo
-btf
+aac
+aao
+aap
+aap
+aaF
 uPw
 oMj
 oMj
@@ -80144,7 +80187,7 @@ wOh
 xhr
 xrf
 pZQ
-wKn
+abI
 sSl
 xhr
 pqb
@@ -80354,11 +80397,11 @@ vdk
 oeM
 pqb
 aox
-rLl
-gKo
-nvv
-vhp
-rDG
+aad
+aap
+aay
+aaB
+aaH
 sza
 iuf
 oMj
@@ -80811,26 +80854,26 @@ vdk
 oeM
 pqb
 aox
-sRA
-wQD
-gKo
-gKo
-syS
+aae
+aaq
+aap
+aap
+aaI
 sza
 sza
-oxE
+aaO
 uPw
 uPw
 aox
-rii
+aaQ
 sza
 uPw
 uPw
-rii
+aaQ
 aox
 sza
 uPw
-rii
+aaQ
 sza
 aox
 bxh
@@ -81268,27 +81311,27 @@ vdk
 oeM
 pqb
 aox
-rLl
-gKo
-gKo
+aad
+aap
+aap
 dAI
-gKo
-knE
-qTA
-qTA
-gKo
-sKv
-vhp
-gKo
-gKo
-sKv
-gKo
-eGd
+aap
+aaM
+aai
+aai
+aap
+aav
+aaB
+aap
+aap
+aav
+aap
+aai
 dAI
-sKv
-qTA
-qTA
-spy
+aav
+aai
+aai
+aar
 aox
 bxh
 bxh
@@ -81725,26 +81768,26 @@ vdk
 lYh
 pqb
 aox
-jZR
-gKo
-ebo
-qTA
-gKo
-knE
-gKo
-gKo
-gKo
-lMG
-gKo
-qTA
-qTA
-mCV
+aaf
+aap
+aaj
+aai
+aap
+aaM
+aap
+aap
+aap
+aaP
+aap
+aai
+aai
+aaS
 dAI
-qTA
-qTA
-inl
-gKo
-gKo
+aai
+aai
+aaT
+aap
+aap
 jdU
 aox
 bxh
@@ -81973,7 +82016,7 @@ xhr
 qIC
 wox
 aXg
-wKn
+abI
 xhr
 pqb
 nRs
@@ -82182,26 +82225,26 @@ oeM
 vdk
 pqb
 aox
-eYO
-spy
-gSY
-vEh
-vSd
+aag
+aar
+aaz
+aaC
+aaJ
 sza
 uPw
-oxE
+aaO
 sza
 sza
 uPw
-oxE
+aaO
 sza
 uPw
 uPw
-oxE
+aaO
 aox
 sza
 aox
-oxE
+aaO
 aox
 aox
 bxh
@@ -82639,8 +82682,8 @@ vdk
 vdk
 pqb
 aox
-iCN
-qTA
+aah
+aai
 uPw
 uPw
 aox
@@ -83096,11 +83139,11 @@ ckt
 vdk
 pqb
 aox
-qTA
-qXI
+aai
+aas
 uPw
-vEh
-bPo
+aaC
+aaK
 uPw
 oMj
 oMj
@@ -83553,11 +83596,11 @@ oeM
 vdk
 pqb
 hUV
-ebo
-ojc
-jCV
-vgU
-gKo
+aaj
+aat
+aaA
+aaD
+aap
 sza
 nQq
 iFY
@@ -83893,7 +83936,7 @@ efh
 efh
 efh
 efh
-pMR
+eRL
 pue
 pue
 wwE
@@ -84010,11 +84053,11 @@ vdk
 oeM
 pqb
 hUV
-qTA
-gKo
-jCV
-jEG
-qTA
+aai
+aap
+aaA
+aaE
+aai
 sza
 oMj
 tdQ
@@ -84467,11 +84510,11 @@ oeM
 oeM
 pqb
 aox
-qTA
-ebo
+aai
+aaj
 sza
-gKo
-sEk
+aap
+aaL
 uPw
 hAD
 liD
@@ -84924,10 +84967,10 @@ gbW
 oeM
 pqb
 aox
-sWr
-gKo
+aak
+aap
 sza
-eii
+aaw
 sza
 uPw
 uPw
@@ -85381,10 +85424,10 @@ oeM
 oeM
 pqb
 aox
-cZa
-ebo
-gKo
-gKo
+aal
+aaj
+aap
+aap
 jXe
 jXe
 cdK
@@ -85508,7 +85551,7 @@ bxh
 bxh
 bxh
 aox
-bGH
+abg
 thf
 eDe
 dhS
@@ -85838,13 +85881,13 @@ xWa
 sPn
 pqb
 aox
-drs
-bqE
-qTA
-qTA
+aan
+aau
+aai
+aai
 cdK
 cdK
-vrZ
+aaN
 jXe
 nvz
 cdK
@@ -86402,7 +86445,7 @@ ssJ
 oCD
 sfW
 aRz
-bLD
+iqC
 mez
 svp
 mEU
@@ -87320,7 +87363,7 @@ mez
 mez
 wBi
 mez
-bLD
+iqC
 fTN
 khb
 pPt
@@ -108219,7 +108262,7 @@ kWs
 kWs
 kWs
 kWs
-sde
+aab
 pYd
 tkq
 dmn
@@ -109201,7 +109244,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -109384,7 +109427,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -109589,11 +109632,11 @@ mij
 vfE
 xOv
 gTw
-slk
+aaa
 vxp
 tPQ
 gBj
-slk
+aaa
 gTw
 qOR
 mij
@@ -109742,7 +109785,7 @@ rsU
 anP
 ofN
 anP
-ceH
+abk
 sea
 bMY
 xRT
@@ -109801,7 +109844,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -110208,7 +110251,7 @@ xSc
 cZO
 cZO
 tEo
-hGS
+abn
 tEo
 cZO
 cZO
@@ -111119,7 +111162,7 @@ anP
 ofN
 ofN
 xSc
-wLD
+abm
 cZO
 cZO
 tEo
@@ -111527,7 +111570,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -112483,7 +112526,7 @@ rsU
 ofN
 xSc
 kNs
-hiI
+abi
 tEo
 cZO
 ofN
@@ -112499,7 +112542,7 @@ ofN
 ofN
 uMJ
 anP
-ceH
+abk
 ofN
 ofN
 uMJ
@@ -114099,7 +114142,7 @@ rsU
 rsU
 rsU
 rsU
-tvu
+rsU
 fDt
 "}
 (175,1,1) = {"
@@ -114311,7 +114354,7 @@ rsU
 rsU
 anP
 ofN
-vWq
+abj
 uMJ
 ofN
 ofN
@@ -114391,7 +114434,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -115724,7 +115767,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -116937,7 +116980,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -118131,7 +118174,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -118488,7 +118531,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -119724,9 +119767,9 @@ rsU
 rsU
 udj
 lFD
-wmo
-wmo
-wmo
+lFD
+lFD
+lFD
 lFD
 qBu
 rsU
@@ -120047,7 +120090,7 @@ fDt
 uMg
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -120480,7 +120523,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -120638,9 +120681,9 @@ anP
 anP
 hcJ
 lFD
-wmo
-wmo
-wmo
+lFD
+lFD
+lFD
 lFD
 qBu
 nnI
@@ -121616,7 +121659,7 @@ nnI
 nnI
 nnI
 nnI
-mvS
+nnI
 nnI
 nnI
 nnI
@@ -121908,7 +121951,7 @@ rsU
 rsU
 rsU
 rsU
-hXy
+rsU
 rsU
 rsU
 rsU
@@ -127255,7 +127298,7 @@ dVf
 kbu
 kbu
 mez
-tmn
+abW
 mez
 iNl
 bgm
@@ -128166,7 +128209,7 @@ riq
 xhr
 qvr
 xhr
-wvm
+abU
 qvr
 mez
 qvr
@@ -128951,7 +128994,7 @@ anP
 bti
 qEd
 jFn
-pIp
+abq
 qiq
 ujO
 gEj
@@ -133610,7 +133653,7 @@ eEd
 oYS
 tzj
 qDL
-pJp
+abB
 fZI
 oYS
 qDL
@@ -134978,7 +135021,7 @@ fwb
 ubM
 wZW
 qDL
-tXl
+abD
 aRL
 nNo
 qDL
@@ -135890,11 +135933,11 @@ fwb
 oMJ
 oMJ
 ubM
-pJp
+abB
 qDL
 nNo
 jwf
-xoE
+kYu
 nNo
 rWo
 oYS
@@ -135973,7 +136016,7 @@ vSJ
 vSJ
 oPD
 vSJ
-ukQ
+abX
 vSJ
 vSJ
 vSJ
@@ -136366,7 +136409,7 @@ hYA
 nNo
 rhe
 qDL
-xoE
+kYu
 ork
 qXp
 oYS
@@ -136806,14 +136849,14 @@ fwb
 ubM
 sOx
 nNo
-xoE
+kYu
 yly
 qDL
 nNo
 vDz
 qDL
 jwf
-xoE
+kYu
 oYS
 jJm
 qDL
@@ -136849,7 +136892,7 @@ gSx
 bCF
 mzb
 tmG
-dWX
+abV
 nlS
 sNY
 gjE
@@ -138217,7 +138260,7 @@ qDL
 nNo
 gSx
 pHT
-abu
+abS
 bCF
 trf
 pHT
@@ -139569,7 +139612,7 @@ tKK
 fZI
 qiw
 nNo
-vKD
+abM
 oYS
 qDL
 jTF
@@ -140928,7 +140971,7 @@ qDL
 oYS
 oYS
 nNo
-xoE
+kYu
 oYS
 fZI
 txm
@@ -141375,7 +141418,7 @@ oMJ
 fwb
 ubM
 dzH
-qgU
+abC
 oYS
 exc
 jwf
@@ -141413,7 +141456,7 @@ tmk
 dET
 qHE
 eEP
-vja
+abR
 bzA
 tKK
 qSv
@@ -143680,7 +143723,7 @@ eEd
 oYS
 oYS
 nNo
-wFR
+abE
 oYS
 nNo
 oYS
@@ -143693,7 +143736,7 @@ tzj
 ubM
 dET
 qSv
-sBp
+abQ
 dTK
 jML
 qSv
@@ -144258,7 +144301,7 @@ fwb
 tso
 nFR
 nFR
-aMR
+abZ
 oPI
 fwb
 fwb
@@ -145494,7 +145537,7 @@ qDL
 lnn
 tKK
 qDL
-wFR
+abE
 qDL
 qDL
 oYS
@@ -145989,7 +146032,7 @@ pHT
 gSx
 kjx
 lLG
-dWX
+abV
 qtQ
 pHT
 wgj
@@ -146403,7 +146446,7 @@ fwb
 cLB
 oYS
 oYS
-wFR
+abE
 qDL
 aYt
 nNo
@@ -146900,7 +146943,7 @@ qDL
 qDL
 gSx
 pHT
-hlU
+abT
 mzb
 jAI
 tqp
@@ -146965,7 +147008,7 @@ bxh
 bxh
 bxh
 bti
-tGt
+abY
 oDP
 sdA
 bTr
@@ -147788,7 +147831,7 @@ lbX
 tKK
 qDL
 qDL
-xoE
+kYu
 qDL
 oYS
 dyL
@@ -147798,7 +147841,7 @@ tzj
 oYS
 qDL
 qDL
-fFg
+abO
 qDL
 tzj
 qDL

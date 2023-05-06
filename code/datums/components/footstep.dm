@@ -1,4 +1,4 @@
-///Footstep component. Plays footsteps at parents location when it is appropriate.
+w///Footstep component. Plays footsteps at parents location when it is appropriate.
 /datum/component/footstep
 	///How many steps the parent has taken since the last time a footstep was played
 	var/steps = 0
@@ -149,6 +149,7 @@
 			L[turf_footstep][2] * volume,
 			TRUE,
 			L[turf_footstep][3] + e_range)
+
 //fortuna edit. power armor sound check proc
 /datum/component/footstep/proc/powerarmorcheck()
 	var/mob/living/carbon/human/P = parent

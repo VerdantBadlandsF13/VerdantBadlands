@@ -7,13 +7,13 @@
 	faction = FACTION_WASTELAND
 	total_positions = -1
 	spawn_positions = -1
-	description = "The most broad and open role, you have arrived in the region for purposes known only to you. If you're new, the settlement of Bighorn to the southwest may prove a valuable first stop. Try to make a living for yourself - or simply survive - and craft your own unique story."
+	description = "Whether you're a veteran pathfinder, or just someone down on their luck? You've the misfortune to be in this horrid place."
 	supervisors = "fate"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
-	access = list()		//we can expand on this and make alterations as people suggest different loadouts
+	access = list()
 	minimal_access = list()
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
@@ -43,12 +43,12 @@
 	/datum/outfit/loadout/scavenger,
 	/datum/outfit/loadout/settler,
 	/datum/outfit/loadout/warrior,
+	/datum/outfit/loadout/bos_exile,/*,
 	/datum/outfit/loadout/ncrcitizen,
 	/datum/outfit/loadout/legioncivilian,
 	/datum/outfit/loadout/wastelander_desert_ranger,
-	/datum/outfit/loadout/bos_exile,
 	/datum/outfit/loadout/ncr_exile,
-	/datum/outfit/loadout/legion_exile)
+	/datum/outfit/loadout/legion_exile*/)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -174,6 +174,16 @@
 		/obj/item/melee/onehanded/machete/scrapsabre = 1,
 		)
 
+/datum/outfit/loadout/bos_exile
+	name = "Brotherhood Exile"
+	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
+	id = /obj/item/card/id/rusted/brokenholodog
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/grenade/f13/frag = 2,
+		)
+/*
 /datum/outfit/loadout/legioncivilian
 	name = "Legion Civilian"
 	uniform = /obj/item/clothing/under/f13/doctor
@@ -211,16 +221,6 @@
 		/obj/item/binoculars=1,
 		/obj/item/radio=1)
 
-/datum/outfit/loadout/bos_exile
-	name = "Brotherhood Exile"
-	suit = /obj/item/clothing/suit/armor/f13/exile/bosexile
-	id = /obj/item/card/id/rusted/brokenholodog
-	backpack_contents = list(
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/grenade/f13/frag = 2,
-		)
-
 /datum/outfit/loadout/ncr_exile
 	name = "Transient NCR Deserter"
 	suit = /obj/item/clothing/suit/armor/f13/exile/ncrexile
@@ -239,4 +239,4 @@
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete = 1,
 		/obj/item/storage/backpack/spearquiver = 1
-		)
+		)*/

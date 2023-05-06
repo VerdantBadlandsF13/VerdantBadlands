@@ -52,4 +52,4 @@
 			humanAM.disable_sprint_mode()
 			humanAM.AdjustKnockdown(25)
 			visible_message("<span class='warning'>[humanAM] falls into [src]!</span>")
-			humanAM.throw_at(get_step_towards(src,humanAM), 3, 1)
+			humanAM.throw_at(get_step_towards(src,humanAM), 3, 1)// TODO: Have it throw into water, as message suggests.

@@ -18,7 +18,7 @@
 	end_message = "<span class='userdanger'>The downpour gradually slows to a light shower. It should be safe outside now.</span>"
 	end_sound = 'sound/ambience/acidrain_end.ogg'
 
-	area_types = list(/area/f13/wasteland, /area/f13/desert, /area/f13/farm, /area/f13/forest, /area/f13/ruins)
+	area_types = list(/area/f13/wasteland)
 	target_trait = ZTRAIT_SURFACE
 	protect_indoors = TRUE
 
@@ -27,9 +27,9 @@
 	barometer_predictable = TRUE
 
 /datum/weather/acid_rain/weather_act(mob/living/L)
-//	var/resist = L.getarmor(null, "acid")
-//	if(prob(max(0,100-resist)))
-//		L.acid_act(45, 10)
+	var/resist = L.getarmor(null, "acid")
+	if(prob(max(0,100-resist)))
+		L.acid_act(45, 10)
 	L.adjust_bodytemperature(rand(20, 30))
 	L.adjustFireLoss(2)
 

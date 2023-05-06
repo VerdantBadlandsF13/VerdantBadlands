@@ -3,7 +3,6 @@
 */
 
 /datum/wound/slash
-	sound_effect = 'sound/weapons/slice.ogg'
 	processes = TRUE
 	wound_type = WOUND_SLASH
 	treatable_by = list(/obj/item/stack/medical/suture)

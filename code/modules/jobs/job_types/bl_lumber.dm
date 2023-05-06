@@ -1,3 +1,6 @@
+// This entire faction is handled by the techno_jacks module, in regards to spawning and a lot of gameplay.
+// The 'forbids' and 'enforces' section is a set of directives for when they wake up.
+
 /datum/job/lbj
 	department_flag = LBJ
 	selection_color = "#6b2f37"
@@ -7,10 +10,15 @@
 	access = list(ACCESS_LBJ)
 	minimal_access = list(ACCESS_LBJ)
 
-	forbids = "The Logging Camp forbids: Speaking of the lights."
+	forbids = "Directives, Strictly Forbidden: <br> \
+				- Betrayal: Speaking of the lights. <br> \
+				- Dishonour: Allowing outsiders access to the sanctuary. <br> \
+				- Cowardice: The facility will bring you back, week after week. You have no reason to fear death."
 
-	enforces = "The Logging Camp expects: Defence. Protect the sancutary from outside incursion at all costs. <br> \
-				- Trading. Provide lumber, food and other material to those that require it in trade."
+	enforces = "Directives, Required: <br> \
+				- Defence. Protect the sanctuary from outside incursion at all costs. <br> \
+				- Trading. Provide lumber, food and other material to those that require it in trade. <br> \
+				- Secrecy. You are not to speak of your origin, if you even remember such."
 
 /datum/outfit/job/lbj
 	name = "LBJdatums"

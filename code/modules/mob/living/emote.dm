@@ -1,3 +1,4 @@
+// Hey, Carl here. A number of these are given audio in 'modular_badlands\code\modules\rp_misc\emotes.dm'. Go see it there.
 /datum/emote/living/blush
 	key = "blush"
 	key_third_person = "blushes"
@@ -28,7 +29,7 @@
 	key_third_person = "chokes"
 	message = "chokes!"
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/f13effects/sunsetsounds/choke.ogg' //Sunset Edit - TK
+//	sound = 'sound/f13effects/sunsetsounds/choke.ogg' //Sunset Edit - TK | View in the module. - Carl
 
 /datum/emote/living/cross
 	key = "cross"
@@ -42,7 +43,7 @@
 	message = "chuckles."
 	emote_type = EMOTE_AUDIBLE
 
-/* Sunset Attempt - I tried bro ~TK  This lets females have a chuckle, but males don't.  idk man, I'm dumb.
+/* Sunset Attempt - I tried bro ~TK  This lets females have a chuckle, but males don't.  idk man, I'm dumb. | View in the module. - Carl
 /datum/emote/living/chuckle/get_sound(mob/living/user) //Sunset Edit -TK
 	. = ..()
 	if(ishuman(user))
@@ -82,6 +83,7 @@
 	message = "dances around happily."
 	restraint_check = TRUE
 
+/* // View in the module. - Carl
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
@@ -108,6 +110,7 @@
 		playsound(user, user.deathsound, 200, TRUE, TRUE)
 	if(. && isalienadult(user))
 		playsound(user.loc, 'sound/voice/hiss6.ogg', 80, 1, 1)
+*/
 
 /datum/emote/living/drool
 	key = "drool"
@@ -371,7 +374,7 @@
 	key = "sulk"
 	key_third_person = "sulks"
 	message = "sulks down sadly."
-
+/* // View in the module. - Carl
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"
@@ -391,6 +394,7 @@
 		var/mob/living/L = user
 		L.Knockdown(200)
 		L.Paralyze(200)
+*/
 
 /datum/emote/living/sway
 	key = "sway"
@@ -570,21 +574,6 @@
 		var/mob/living/carbon/C = user
 		if(isjellyperson(C))
 			pick(playsound(C, 'sound/effects/meatslap.ogg', 50, 1),playsound(C, 'sound/effects/gib_step.ogg', 50, 1))
-
-/datum/emote/living/surrender
-	key = "surrender"
-	key_third_person = "surrenders"
-	message = "puts their hands on their head and falls to the ground, they surrender!"
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/surrender/run_emote(mob/user, params)
-	. = ..()
-	if(. && isliving(user))
-		var/mob/living/L = user
-		L.Knockdown(200)
-
-
-
 
 		///////////////////////////////////////
 		//Sunset Emotes                      //

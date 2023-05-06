@@ -7,7 +7,7 @@
 /obj/machinery/sleeper
 	name = "autodoc"
 	desc = "An old pre war machine, used to stablize and heal patients"
-	icon = 'icons/obj/machines/autodoc.dmi'
+	icon = 'modular_badlands/code/modules/techno_jacks/icons/autodoc.dmi'
 	icon_state = "autodoc"
 	layer = 3.3
 	density = FALSE

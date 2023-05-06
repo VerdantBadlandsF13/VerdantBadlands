@@ -36,11 +36,13 @@
 /datum/outfit/job/dfs/advisor
 	name = "DFS Advisor"
 	jobtype = /datum/job/dfs/advisor
+	uniform = /obj/item/clothing/under/f13/mercc/dfs
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
 	jobtype = /datum/job/dfs/enforcer
+	uniform = /obj/item/clothing/under/f13/mercc/dfs
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
 // DFS Advisor

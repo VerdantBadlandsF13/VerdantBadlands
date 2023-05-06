@@ -418,7 +418,7 @@
 	glass_desc = "An extremely blue and glowing combination of Nuka-Cola and (REDACTED)"
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
-	
+
 
 /datum/reagent/consumable/ethanol/nukaquantum/on_mob_life(mob/living/carbon/M)
 	M.drowsyness = 0
@@ -1179,7 +1179,7 @@
 /datum/reagent/consumable/ethanol/spiritcleanser/on_mob_add(mob/living/M) //spiritual shizzle, also admemes getting booled on
 	ADD_TRAIT(M, TRAIT_SPIRITUAL, "[type]")
 	if(prob(50))
-		M.playsound_local(M, 'sound/f13ambience/bird_6.ogg', 100, 0)
+		M.playsound_local(M, 'sound/f13ambience/animals/bird_6.ogg', 100, 0)
 	if(prob(50))
 		M.playsound_local(M, 'sound/effects/his_grace_awaken.ogg', 100, 0)
 	M.radiation = max(M.radiation-5,0)

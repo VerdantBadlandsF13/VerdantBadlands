@@ -1,7 +1,7 @@
 /obj/machinery/atmospherics/components/unary/cryo_cell
 	name = "cryo cell"
 	icon = 'icons/obj/cryogenics.dmi'
-	icon_state = "pod-off"
+	icon_state = "cell-off"
 	density = TRUE
 	max_integrity = 350
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 100, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 30, "acid" = 30)
@@ -92,14 +92,15 @@
 	cut_overlays()
 
 	if(panel_open)
-		add_overlay("pod-panel")
+		add_overlay("cell-panel")
 
 	if(state_open)
-		icon_state = "pod-open"
+		icon_state = "cell-open"
 		return
 
 	if(occupant)
-		var/image/occupant_overlay
+		icon_state = "cell-occupied"
+/*		var/image/occupant_overlay
 
 		if(ismonkey(occupant)) // Monkey
 			occupant_overlay = image(CRYOMOBS, "monkey")
@@ -131,14 +132,14 @@
 			icon_state = "pod-off"
 			add_overlay(occupant_overlay)
 			add_overlay("cover-off")
-
+*/
 	else if(on && is_operational())
-		icon_state = "pod-on"
-		add_overlay("cover-on")
+		icon_state = "cell-on"
+//		add_overlay("cover-on")
 	else
-		icon_state = "pod-off"
-		add_overlay("cover-off")
-
+		icon_state = "cell-off"
+//		add_overlay("cover-off")
+/*
 /obj/machinery/atmospherics/components/unary/cryo_cell/proc/run_anim(anim_up, image/occupant_overlay)
 	if(!on || !occupant || !is_operational())
 		running_anim = FALSE
@@ -153,7 +154,7 @@
 	add_overlay(occupant_overlay)
 	add_overlay("cover-on")
 	addtimer(CALLBACK(src, .proc/run_anim, anim_up, occupant_overlay), 7, TIMER_UNIQUE)
-
+*/
 /obj/machinery/atmospherics/components/unary/cryo_cell/nap_violation(mob/violator)
 	open_machine()
 

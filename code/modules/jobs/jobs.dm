@@ -336,7 +336,7 @@ GLOBAL_LIST_INIT(lbj_positions, list(
 ))
 
 // job categories for rendering the late join menu
-GLOBAL_LIST_INIT(position_categories, list(
+GLOBAL_LIST_INIT(position_categories, list(/*
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
@@ -346,7 +346,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_OUTLAW = list("jobs" = outlaw_positions, "color" = "#db3529"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#434944"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
-	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),
+	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),*/
 	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
 	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
 	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),

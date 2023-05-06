@@ -16,7 +16,7 @@
 	end_duration = 300
 	end_overlay = "light_ash"
 
-	area_types = list(/area/f13/wasteland, /area/f13/desert, /area/f13/farm, /area/f13/forest, /area/f13/ruins)
+	area_types = list(/area/f13/wasteland)
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_SURFACE
 
@@ -89,17 +89,17 @@
 /datum/weather/ash_storm/sandstorm
 	name = "sandstorm"
 	desc = "A passing sand storm blankets the area in harmless sands."
-	probability = 15
-	
+	probability = 0
+
 	telegraph_message = "<span class='userdanger'>Sandstorm is coming to the area, decreasing overall visibility outside.</span>"
-	
+
 	weather_message = "<span class='boldannounce'>Sand waft down around you like grotesque snow. The sandstorm is here...</span>"
-	
+
 	end_message = "<span class='boldannounce'>The sandstorm slows, stops. Another layer of sand to the ground beneath your feet.</span>"
 	end_sound = null
-	
+
 	aesthetic = TRUE
-	
+
 	target_trait = ZTRAIT_SURFACE
 
 /datum/weather/ash_storm/dust_event
@@ -119,7 +119,7 @@
 	end_duration = 3000
 	end_overlay = "light_ash"
 
-	area_types = list(/area/f13/wasteland, /area/f13/desert, /area/f13/farm, /area/f13/forest, /area/f13/ruins)
+	area_types = list(/area/f13/wasteland)
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_SURFACE
 

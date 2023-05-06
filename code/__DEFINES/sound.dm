@@ -76,8 +76,11 @@
 	'sound/hallucinations/look_up1.ogg', 'sound/hallucinations/look_up2.ogg', 'sound/hallucinations/over_here1.ogg', 'sound/hallucinations/over_here2.ogg', 'sound/hallucinations/over_here3.ogg',\
 	'sound/hallucinations/turn_around1.ogg', 'sound/hallucinations/turn_around2.ogg', 'sound/hallucinations/veryfar_noise.ogg', 'sound/hallucinations/wail.ogg')
 
-//fortuna addition. wasteland ambient music goes here.
-#define WASTELAND_AMBIENCE list('sound/f13ambience/music/ccc_doesntworkforfree_ambience.ogg','sound/f13ambience/music/hailcaesar_ambience.ogg',\
-	'sound/f13ambience/music/invisible_ghosts_ambience.ogg',\
-	'sound/f13ambience/music/mole_miners_ambience.ogg',\
-	'sound/f13ambience/music/portaltothepast_ambience.ogg','sound/f13ambience/music/wind_and_the_reeds_ambience.ogg')
+// Wasteland | General Ambience for areas goes below.
+#define WASTELAND_AMBIENCE list('sound/f13ambience/music/new_explore_01.ogg','sound/f13ambience/music/new_explore_02.ogg',\
+	'sound/f13ambience/music/new_explore_03.ogg', 'sound/f13ambience/music/new_explore_04.ogg', \
+	'sound/f13ambience/music/new_explore_05.ogg','sound/f13ambience/music/new_explore_06.ogg', \
+	'sound/f13ambience/music/new_explore_07.ogg')
+
+#define BACKGROUND_AMBIENCE list('sound/f13ambience/distant_combat/artillery.ogg','sound/f13ambience/distant_combat/battle_1.ogg',\
+	'sound/f13ambience/distant_combat/battle_2.ogg', 'sound/f13ambience/distant_combat/battle_3.ogg')

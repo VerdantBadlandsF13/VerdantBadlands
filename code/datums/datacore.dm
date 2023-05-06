@@ -91,6 +91,86 @@
 	if(foundrecord)
 		foundrecord.fields["rank"] = assignment
 
+
+/datum/datacore/proc/get_manifest_vb(monochrome, OOC)
+	var/list/leaders = list()
+	var/list/gmb = list()
+	var/list/dfs = list()
+	var/list/lbj = list()
+	var/list/waster = list()
+	var/list/other = list()
+	var/dat = {"
+	<head><style>
+		.manifest {border-collapse:collapse;}
+		.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color:white; color:black"]; padding:.25em}
+		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: #48C; color:white"]}
+		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: #488;"] }
+		.manifest td:first-child {text-align:right}
+		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: #DEF"]}
+	</style></head>
+	<table class="manifest" width='350px'>
+	<tr class='head'><th>Name</th><th>Occupation</th></tr>
+	"}
+	var/even = 0
+	// sort mobs
+	for(var/datum/data/record/t in GLOB.data_core.general)
+		var/name = t.fields["name"]
+		var/rank = t.fields["rank"]
+		var/department = 0
+		if(rank in GLOB.command_positions)
+			leaders[name] = rank
+			department = 1
+		if(rank in GLOB.gmb_positions)
+			gmb[name] = rank
+			department = 1
+		if(rank in GLOB.dfs_positions)
+			dfs[name] = rank
+			department = 1
+		if(rank in GLOB.lbj_positions)
+			lbj[name] = rank
+			department = 1
+		if(rank in GLOB.wasteland_positions)
+			waster[name] = rank
+			department = 1
+		if(!department && !(name in leaders))
+			other[name] = rank
+	if(length(leaders))
+		dat += "<tr><th colspan=3>Leaders</th></tr>"
+		for(var/name in leaders)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leaders[name]]</td></tr>"
+			even = !even
+	if(length(gmb))
+		dat += "<tr><th colspan=3>Green Mountain Boys</th></tr>"
+		for(var/name in gmb)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[gmb[name]]</td></tr>"
+			even = !even
+	if(length(dfs))
+		dat += "<tr><th colspan=3>Dry Fields Security</th></tr>"
+		for(var/name in dfs)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[dfs[name]]</td></tr>"
+			even = !even
+	if(length(lbj))
+		dat += "<tr><th colspan=3>Lumber Camp</th></tr>"
+		for(var/name in lbj)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[lbj[name]]</td></tr>"
+			even = !even
+	if(length(waster))
+		dat += "<tr><th colspan=3>Wasteland</th></tr>"
+		for(var/name in waster)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[waster[name]]</td></tr>"
+			even = !even
+	// misc guys
+	if(length(other))
+		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
+		for(var/name in other)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[other[name]]</td></tr>"
+			even = !even
+
+	dat += "</table>"
+	dat = replacetext(dat, "\n", "")
+	dat = replacetext(dat, "\t", "")
+	return dat
+
 /datum/datacore/proc/get_manifest_dr(monochrome, OOC)
 	var/list/command = list()
 	var/list/bos = list()

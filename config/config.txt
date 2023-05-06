@@ -21,16 +21,16 @@ $include policy.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME Sunset Wasteland
+SERVERNAME Verdant Badlands
 
 ## Server tagline: This will appear right below the server's title.
-SERVERTAGLINE [18+] The first furry-friendly Fallout server! MRP/HRP
+SERVERTAGLINE [18+ | HRP] An F13 server set in post-apocalyptic Vermont. 
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Sunset Wasteland
+STATIONNAME Brattleboro
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -168,10 +168,10 @@ LOG_VIRUS
 PICTURE_LOGGING_CAMERA
 
 ## period of time in seconds for players to be considered inactive
-# INACTIVITY_PERIOD 300
+INACTIVITY_PERIOD 900
 
 ## period of time in seconds for players to be considered afk and kickable
-# AFK_PERIOD 600
+AFK_PERIOD 1800
 
 ## disconnect players who are considered afk
 # KICK_INACTIVE
@@ -199,10 +199,10 @@ VOTE_PERIOD 600
 
 ## autovote initial delay (deciseconds) before first automatic transfer vote call (default 120 minutes)
 ## Set to 0 to disable the subsystem altogether.
-VOTE_AUTOTRANSFER_INITIAL 0
+VOTE_AUTOTRANSFER_INITIAL 144000
 
 ## autovote delay (deciseconds) before sequential automatic transfer votes are called (default 30 minutes)
-VOTE_AUTOTRANSFER_INTERVAL 0
+VOTE_AUTOTRANSFER_INTERVAL 18000
 
 ## autovote maximum votes until automatic transfer call. (default 4)
 ## Set to 0 to force automatic crew transfer after the 'vote_autotransfer_initial' elapsed.
@@ -222,7 +222,7 @@ DEFAULT_NO_VOTE
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Rigbe
+HOSTEDBY BadManCarl
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -263,19 +263,19 @@ CHECK_RANDOMIZER
 # SERVER ss13.example.com:2506
 
 ## forum address
-# FORUMURL https://citadel-station.net/forum/
+# FORUMURL https://discord.gg/RZ2V8bcFQh
 
 ## Wiki address
-# WIKIURL https://f13wiki.herma.moe/index.php/Main_Page
+# WIKIURL https://discord.gg/RZ2V8bcFQh
 
 ## Rules address
-RULESURL https://discord.gg/xCgEwJTppx
+RULESURL https://discord.gg/RZ2V8bcFQh
 
 ## Github address
-# GITHUBURL https://github.com/Citadel-Station-13/Citadel-Station-13
+# GITHUBURL https://github.com/VerdantBadlandsF13/VerdantBadlands
 
 ## Discord Link
-DISCORDURL https://discord.gg/F5Z2tVXVyt
+DISCORDURL https://discord.gg/RZ2V8bcFQh
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
@@ -291,7 +291,7 @@ DISCORDURL https://discord.gg/F5Z2tVXVyt
 ## Github repo id
 ##This can be found by going to https://api.github.com/users/<user name here>/repos
 ##Or https://api.github.com/orgs/<org name here>/repos if the repo owner is an organization
-# GITHUBREPOID 62485194
+GITHUBREPOID 631741024
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS https://citadel-station.net/forum/viewforum.php?f=8&sid=a0ce5331d5594ef6d49661609c6f4ff9
@@ -336,7 +336,7 @@ TICKLAG 0.5
 #AUTOMUTE_ON
 
 ## Uncomment this to let players see their own notes (they can still be set by admins only)
-#SEE_OWN_NOTES
+SEE_OWN_NOTES
 
 ### Comment these two out to prevent notes fading out over time for admins.
 ## Notes older then this will start fading out.
@@ -347,30 +347,30 @@ NOTE_STALE_DAYS 365.2422
 ##Note: all population caps can be used with each other if desired.
 
 ## Uncomment for 'soft' population caps, players will be warned while joining if the living crew exceeds the listed number.
-#SOFT_POPCAP 80
+SOFT_POPCAP 60
 
 ## Message for soft cap
-SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number of users, consider using alternative game servers.
+SOFT_POPCAP_MESSAGE Be warned that the server is currently serving a high number of users. Gameplay quality may be diminished.
 
 ## Uncomment for 'hard' population caps, players will not be allowed to spawn if the living crew exceeds the listed number, though they may still observe or wait for the living crew to decrease in size.
-#HARD_POPCAP 120
+HARD_POPCAP 80
 
 ## Message for hard cap
-HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join. You may wait for the number of living crew to decline, observe, or find alternative servers.
+HARD_POPCAP_MESSAGE The server is currently serving a high number of users, You cannot currently join, though you may wait for the number of living crew to decline, observe, or find alternative servers.
 
 ## Uncomment for 'extreme' population caps, players will not be allowed to join the server if living crew exceeds the listed number.
-#EXTREME_POPCAP 200
+EXTREME_POPCAP 120
 
 ## Message for extreme cap
-EXTREME_POPCAP_MESSAGE The server is currently serving a high number of users, find alternative servers.
+EXTREME_POPCAP_MESSAGE The server is currently at capacity and not accepting further connections.
 
 ## Notify admins when a new player connects for the first x days a player's been around. (0 for first connection only, -1 for never)
 ##	Requres database
-NOTIFY_NEW_PLAYER_AGE 0
+NOTIFY_NEW_PLAYER_AGE 1
 
 ## Notify admins when a player connects if their byond account was created in the last X days
 ## Requires database
-NOTIFY_NEW_PLAYER_ACCOUNT_AGE 1
+NOTIFY_NEW_PLAYER_ACCOUNT_AGE 120
 
 ## Notify the irc channel when a new player makes their first connection
 ##	Requres database
@@ -388,7 +388,7 @@ NOTIFY_NEW_PLAYER_ACCOUNT_AGE 1
 #PANIC_SERVER_NAME [Put the name here]
 
 ##Automated age verification, comment this out to not ask new users if they are 18+
-#AGE_VERIFICATION
+AGE_VERIFICATION
 
 ## Uncomment to have the changelog file automatically open when a user connects and hasn't seen the latest changelog
 #AGGRESSIVE_CHANGELOG
@@ -400,11 +400,11 @@ AUTOCONVERT_NOTES
 ANNOUNCE_ADMIN_LOGOUT
 
 ## Uncomment to have an admin message sent anytime an admin connects to a round in play, you can edit the messages in admin.dm
-#ANNOUNCE_ADMIN_LOGIN
+ANNOUNCE_ADMIN_LOGIN
 
 ## Map rotation
 ## You should edit maps.txt to match your configuration when you enable this.
-MAPROTATION
+#MAPROTATION
 
 ## TG-style map rotation
 ## By default, Citadel uses a more traditional method of map voting, where at the end of a round, players are given a full upfront vote.
@@ -414,7 +414,7 @@ MAPROTATION
 ## Map voting
 ## Allows players to vote for their preffered map
 ## When it's set to zero, the map will be randomly picked each round
-ALLOW_MAP_VOTING 1
+ALLOW_MAP_VOTING 0
 
 ## Map voting type
 ## Determines what kind of vote the map vote is
@@ -550,13 +550,11 @@ FAIL2TOPIC_RULE_NAME _dd_fail2topic
 CENTCOM_BAN_DB https://centcom.melonmesa.com/ban/search
 
 
-## If the server only accepts whitelisted connections
-## 0 Disables Border Control
-## 1 Puts Border Control into 'learning mode' and will have it automatically whitelist new connections
-## 2 Puts Border Control into 'enforcing mode' and will have it deny connections that are not already whitelisted.
-BORDER_CONTROL 0
-
-## If the server border control rejects clients entirely, or lets them into lobby only.
-## 0 Border control rejects an unauthenticated client entirely
-## 1 Border control will let the client into the lobby, but not connect.
-BORDER_CONTROL_STYLE 1
+## Border control material below this.
+## 0 = Disabled. No use of the whitelist, actively allows people to connect.
+## 1 = Learning. Lets players in and actively adds them to the whitelist for when 'Enforced' is utilised.
+## 2 = Enforced.
+BORDER_CONTROL = 2
+## 0 = None. No connection by those not on the whitelist when border control is enabled.
+## 1 = Lobby. Those not on the whitelist Can connect to lobby, but not play, when border control is enabled.
+BORDER_CONTROL_STYLE = 1

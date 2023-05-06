@@ -497,6 +497,7 @@
 	icon_state = "Tribal"
 
 // DFS
+
 /obj/effect/landmark/start/f13/dfs_advisor
 	name = "DFS Advisor"
 	icon_state = "Raider"

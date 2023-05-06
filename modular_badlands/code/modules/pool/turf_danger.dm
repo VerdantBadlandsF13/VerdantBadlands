@@ -22,7 +22,6 @@
 /turf/open/indestructible/sound/pool/river/Initialize(mapload)
 	. = ..()
 	water_overlay = new /obj/effect/overlay/riverwater(get_turf(src))
-	flags_2 |= GLOBAL_LIGHT_TURF_2
 
 /turf/open/indestructible/sound/pool/river/Entered(atom/movable/AM, atom/oldloc)
 	. = ..()

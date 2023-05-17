@@ -8,7 +8,7 @@
 	volume = 75
 
 // Handle occupant spawning.
-/obj/machinery/cryostasis/proc/set_occupant(var/mob/living/carbon/occupant)
+/obj/machinery/cryostasis/proc/set_occupant(mob/living/carbon/occupant)
 	src.occupant = occupant
 	if(!occupant)
 		name = (initial(name))
@@ -122,7 +122,7 @@
 		qdel(src)
 
 
-/obj/machinery/cryostasis/update_icon(var/mob/living/carbon/occupant)
+/obj/machinery/cryostasis/update_icon(mob/living/carbon/occupant)
 	src.occupant = occupant
 	cut_overlays()
 	if(state_open)// Shouldn't ever be the case. For now.

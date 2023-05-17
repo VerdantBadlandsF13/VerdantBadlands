@@ -30,7 +30,7 @@
 		return FALSE
 	. = ..()
 
-/mob/living/carbon/human/proc/trip_act(var/obj/O)
+/mob/living/carbon/human/proc/trip_act(obj/O)
 	apply_damage(5, BRUTE)
 	src.DefaultCombatKnockdown(5)
 	visible_message(\

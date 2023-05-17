@@ -9,6 +9,8 @@
 	hub = "Exadv1.spacestation13"
 	name = "/tg/ Station 13"
 	fps = 20
+	movement_mode = TILE_MOVEMENT_MODE
+
 #ifdef FIND_REF_NO_CHECK_TICK
 	loop_checks = FALSE
 #endif

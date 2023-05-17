@@ -1688,7 +1688,7 @@
 /obj/item/clothing/head/helmet/plate/crusader,
 /obj/item/clothing/suit/armor/plate/crusader/red,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
-/obj/item/dice/d20/fate/one_use,
+/obj/item/eldritch_deal,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "dOS" = (
@@ -2019,11 +2019,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "eMf" = (
-/mob/living/simple_animal/hostile/eldritch/stalker,
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibdown1"
 	},
 /obj/effect/decal/remains/human,
+/mob/living/simple_animal/hostile/faithless,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "eMp" = (
@@ -2542,10 +2542,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "fXi" = (
-/mob/living/simple_animal/hostile/megafauna/wendigo{
-	name = "Steven";
-	faction = list("neutral","boss")
+/obj/effect/decal/cleanable/blood/gibs/down{
+	icon_state = "gibdown1"
 	},
+/obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "fXj" = (
@@ -7563,8 +7563,8 @@
 	},
 /area/f13/bl/gmb)
 "rwX" = (
-/mob/living/simple_animal/hostile/eldritch/raw_prophet,
 /obj/structure/glowshroom/glowcap,
+/mob/living/simple_animal/hostile/faithless,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "ryy" = (
@@ -9258,10 +9258,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
-/area/f13/tunnel)
-"vju" = (
-/mob/living/simple_animal/hostile/eldritch/raw_prophet,
-/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "vkm" = (
 /obj/item/storage/trash_stack,
@@ -113636,7 +113632,7 @@ anP
 fCZ
 bQJ
 bQJ
-skZ
+rwX
 fCZ
 anP
 anP
@@ -114547,7 +114543,7 @@ bQJ
 skZ
 mvi
 mvi
-eMf
+fXi
 mVy
 bQJ
 fCZ
@@ -117285,8 +117281,8 @@ bQJ
 bQJ
 bQJ
 bQJ
-vju
-skZ
+bQJ
+rwX
 fCZ
 fCZ
 anP
@@ -120471,7 +120467,7 @@ bQJ
 bQJ
 rwB
 gfe
-gfe
+sDg
 rwB
 skZ
 fCZ
@@ -125016,8 +125012,8 @@ anP
 anP
 sDg
 cbp
+tWl
 bQJ
-fXi
 tMQ
 mvi
 xml

@@ -197,18 +197,22 @@
 			setInsanityEffect(MAJOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/insane)
 			sanity_level = 6
+			master.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 3)
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
 			setInsanityEffect(MINOR_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/crazy)
 			sanity_level = 5
+			master.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 2)
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
 			setInsanityEffect(SLIGHT_INSANITY_PEN)
 			master.add_movespeed_modifier(/datum/movespeed_modifier/sanity/disturbed)
 			sanity_level = 4
+			master.overlay_fullscreen("depression", /obj/screen/fullscreen/depression, 1)
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			setInsanityEffect(0)
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)
 			sanity_level = 3
+			master.clear_fullscreen("depression")
 		if(SANITY_NEUTRAL+1 to SANITY_GREAT+1) //shitty hack but +1 to prevent it from responding to super small differences
 			setInsanityEffect(0)
 			master.remove_movespeed_modifier(MOVESPEED_ID_SANITY)

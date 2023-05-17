@@ -61,7 +61,7 @@
 	name = "barbed wire coil"
 	desc = "A coil of thorny wire. You could probably use this to set up some manner of barrier."
 	icon = 'modular_badlands/code/modules/unsorted/icons/items.dmi'
-	icon_state = "barbwire"
+	icon_state = "barbwire_coil"
 	item_state = "rods"
 	flags_1 = CONDUCT_1
 	w_class = WEIGHT_CLASS_NORMAL

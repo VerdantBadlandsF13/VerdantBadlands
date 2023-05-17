@@ -341,7 +341,6 @@ GLOBAL_LIST_INIT(position_categories, list(/*
 	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
-	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#825b73"),
 	EXP_TYPE_OUTLAW = list("jobs" = outlaw_positions, "color" = "#db3529"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#434944"),
@@ -350,6 +349,7 @@ GLOBAL_LIST_INIT(position_categories, list(/*
 	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
 	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
 	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),
+	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

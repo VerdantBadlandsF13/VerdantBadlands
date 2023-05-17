@@ -4,7 +4,7 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		#include "map_files\Pahrump-Sunset\Dungeons.dmm"
+		#include "map_files\Brattleboro\Dungeons.dmm"
 		#include "map_files\Brattleboro\brattleboro-Upper.dmm"
 		#include "map_files\Brattleboro\brattleboro.dmm"
 		#include "map_files\Brattleboro\brattleboro-Lower.dmm"

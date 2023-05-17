@@ -90,7 +90,7 @@
 		var/obj/structure/obstacle/barbedwire/W = new /obj/structure/obstacle/barbedwire(get_turf(user))
 		W.dir = user.dir
 		return
-		if(!src) return
+
 	if(!do_mob(user, 30, src))
 		to_chat(user, "<span class='warning'>You must stand still to do that.</span>")
 		return

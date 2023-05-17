@@ -1,4 +1,4 @@
-w///Footstep component. Plays footsteps at parents location when it is appropriate.
+///Footstep component. Plays footsteps at parents location when it is appropriate.
 /datum/component/footstep
 	///How many steps the parent has taken since the last time a footstep was played
 	var/steps = 0

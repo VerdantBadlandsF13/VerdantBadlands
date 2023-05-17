@@ -446,8 +446,7 @@
 /area/f13/caves
 	name = "Caves"
 	icon_state = "caves"
-//	ambience_area =  list('sound/f13ambience/cave.ogg')
-//	ambientmusic = list('sound/f13music/fo2_caves.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_necropolis.ogg','sound/misc/null.ogg')
+	ambientmusic = list('sound/f13ambience/cave.ogg')
 //	ambientsounds = list('sound/f13ambience/ambigen_15.ogg','sound/f13ambience/ambigen_16.ogg','sound/f13ambience/ambigen_17.ogg','sound/f13ambience/ambigen_18.ogg','sound/f13ambience/ambigen_19.ogg')
 	environment = 8
 	grow_chance = 75

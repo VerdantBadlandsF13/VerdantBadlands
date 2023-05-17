@@ -179,7 +179,7 @@
 	var/turf/T = get_turf(src)
 	if (T && AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[T.z] -= src
-	
+
 	QDEL_NULL(access_card)
 
 	return ..()
@@ -373,7 +373,7 @@
 		if(death_sound)
 			playsound(get_turf(src),death_sound, 200, 1)
 		if(deathmessage || !del_on_death)
-			INVOKE_ASYNC(src, .proc/emote, "deathgasp")
+			INVOKE_ASYNC(src, .proc/emote, "deathgasp_simple")
 	if(del_on_death)
 		..()
 		//Prevent infinite loops if the mob Destroy() is overridden in such

@@ -12,28 +12,20 @@
 /mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)
 	var/lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/inhale.ogg"
 	var/lowstam_cooldown = 5 SECONDS
-	if(UNCONSCIOUS)
-		return
-	if(DEAD)
-		return
 	if(lowstam_cooldown <= world.time)
-		lowstam_cooldown = world.time + 1250
+		lowstam_cooldown = world.time + 100
 		playsound(src, lowstam_sound, 50, 1)
 		to_chat(src, span_warning("You're becoming winded. Take a break."))
 
 /mob/living/carbon/proc/handle_crit_stamina_sound(mob/living/M)
 	var/critstam_sound
 	var/critstam_cooldown = 5 SECONDS
-	if(UNCONSCIOUS)
-		return
-	if(DEAD)
-		return
 	if(src.gender == FEMALE)
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
 	else
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/fatigue[rand(1,3)].ogg"
 	if(critstam_cooldown <= world.time)
-		critstam_cooldown = world.time + 1250
+		critstam_cooldown = world.time + 350
 		playsound(src, critstam_sound, 50, 1)
 		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
 

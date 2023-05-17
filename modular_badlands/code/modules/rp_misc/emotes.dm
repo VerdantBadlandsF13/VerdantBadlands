@@ -84,6 +84,18 @@
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
 
+/datum/emote/living/deathgasp_simple
+	key = "deathgasp_simple"
+	key_third_person = "deathgasps"
+	message_simple =  "stops moving..."
+
+/datum/emote/living/deathgasp_simple/run_emote(mob/user, params)
+	var/mob/living/simple_animal/S = user
+	if(istype(S) && S.deathmessage)
+		message_simple = S.deathmessage
+	. = ..()
+	message_simple = initial(message_simple)
+
 /datum/emote/living/deathgasp
 	key = "deathgasp"
 	key_third_person = "deathgasps"
@@ -93,9 +105,7 @@
 	message_alien = "lets out a waning guttural screech, green blood bubbling from its maw..."
 	message_larva = "lets out a sickly hiss of air and falls limply to the floor..."
 	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
-	message_simple =  "stops moving..."
 	stat_allowed = UNCONSCIOUS
-	only_forced_audio = TRUE// Prevents deathgasp audio spam. Better than a cooldown, given we can prevent it entirely. The proc attempts this, or DID, unsuccessfully.
 	// We Ignore the mob's usual deathsound. Deathsound will be called elsewhere, reused for a better purpose.
 	var/deathrattle = "modular_badlands/code/modules/rp_misc/sound/gore/deathrattle.ogg"
 

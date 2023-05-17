@@ -39,7 +39,8 @@
 
 	dizziness = 0
 	jitteriness = 0
-	playsound(src.deathsound)
+
+	playsound(src, deathsound)
 
 	if(ismecha(loc))
 		var/obj/mecha/M = loc

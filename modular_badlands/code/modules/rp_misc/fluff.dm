@@ -11,15 +11,15 @@
 // TODO: Extend breathing audio to standard states, not just low stamina?
 /mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)
 	var/lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/inhale.ogg"
-	var/lowstam_cooldown = 5 SECONDS
+	var/lowstam_cooldown = 15 SECONDS
 	if(lowstam_cooldown <= world.time)
-		lowstam_cooldown = world.time + 100
+		lowstam_cooldown = world.time
 		playsound(src, lowstam_sound, 50, 1)
 		to_chat(src, span_warning("You're becoming winded. Take a break."))
 
 /mob/living/carbon/proc/handle_crit_stamina_sound(mob/living/M)
 	var/critstam_sound
-	var/critstam_cooldown = 5 SECONDS
+	var/critstam_cooldown = 35 SECONDS
 	if(src.gender == FEMALE)
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
 	else

@@ -49,7 +49,7 @@
 	playsound(src, radtune_sound, rand(20, 30))
 
 // Receiving a message provides feedback.
-// Not used as of current. Sorry.
+// Not used as of current in its intended form. It's hooked as a random chance into tuning.
 /obj/item/radio/proc/play_receive_transmission()
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	var/radrec_cooldown = 5 SECONDS

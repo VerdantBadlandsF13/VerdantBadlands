@@ -8,7 +8,6 @@
 		#include "map_files\Brattleboro\brattleboro-Upper.dmm"
 		#include "map_files\Brattleboro\brattleboro.dmm"
 		#include "map_files\Brattleboro\brattleboro-Lower.dmm"
-		#include "map_files\Brattleboro\WestBratTriLevel.dmm"
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
 		#endif

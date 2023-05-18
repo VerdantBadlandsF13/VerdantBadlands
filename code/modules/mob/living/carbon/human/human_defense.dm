@@ -112,6 +112,12 @@
 		if(spec_return)
 			return spec_return
 
+	if(istype(P, /obj/item/ammo_casing/energy))
+		if(P.firer)
+			var/mob/living/carbon/firerMob = P.firer
+			if(firerMob.perks.have(/datum/perk/lasercommander))
+				P.damage *= 1.15
+
 	if(mind) //martial art stuff
 		if(mind.martial_art && mind.martial_art.can_use(src)) //Some martial arts users can deflect projectiles!
 			var/martial_art_result = mind.martial_art.on_projectile_hit(src, P, def_zone)

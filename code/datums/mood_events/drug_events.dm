@@ -60,7 +60,7 @@
 	description = "<span class='nicegreen'>YES! YES!! YES!!!</span>\n"
 	mood_change = 20
 	timeout = 300
-	//special_screen_obj = "mood_happiness_good" Originally in tg, but I personally think they look dumb
+	special_screen_obj = "mood_happiness_good"
 
 /datum/mood_event/nuka
 	description = "the whole world loves Nuka-cola!"
@@ -70,7 +70,7 @@
 	description = "<span class='boldwarning'>NO! NO!! NO!!!</span>\n"
 	mood_change = -20
 	timeout = 300
-	//special_screen_obj = "mood_happiness_bad" Originally in tg
+	special_screen_obj = "mood_happiness_bad"
 
 /datum/mood_event/eigenstate
 	mood_change = -3

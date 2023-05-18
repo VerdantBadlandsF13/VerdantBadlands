@@ -7,6 +7,7 @@ GLOBAL_LIST_INIT(engineering_positions, list(
 
 
 GLOBAL_LIST_INIT(medical_positions, list(
+	"Vault-tec Doctor",
 	"Chief Medical Officer",
 	"Medical Doctor",
 	"Geneticist",
@@ -17,6 +18,7 @@ GLOBAL_LIST_INIT(medical_positions, list(
 
 
 GLOBAL_LIST_INIT(science_positions, list(
+	"Vault-tec Scientist",
 	"Research Director",
 	"Scientist",
 	"Roboticist",
@@ -76,6 +78,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
+
+	"Overseer",
 
 //	"Noyan",
 //	"Steward",
@@ -160,6 +164,12 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Lumberjack",
 
 "Cyborg",
+"Overseer",
+"Chief of Security",
+"Vault-tec Doctor",
+"Vault-tec Scientist",
+"Vault-tec Security",
+"Vault-tec Engineer",
 ))
 
 GLOBAL_LIST_INIT(brotherhood_positions, list(
@@ -246,6 +256,12 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 
 GLOBAL_LIST_INIT(vault_positions, list(
 	"Cyborg",
+	"Overseer",
+	"Chief of Security",
+	"Vault-tec Doctor",
+	"Vault-tec Scientist",
+	"Vault-tec Security",
+	"Vault-tec Engineer",
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
@@ -336,20 +352,21 @@ GLOBAL_LIST_INIT(lbj_positions, list(
 ))
 
 // job categories for rendering the late join menu
-GLOBAL_LIST_INIT(position_categories, list(
+GLOBAL_LIST_INIT(position_categories, list(/*
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
-	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#825b73"),
 	EXP_TYPE_OUTLAW = list("jobs" = outlaw_positions, "color" = "#db3529"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#434944"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
-	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),
+	EXP_TYPE_BIGHORN = list("jobs" = bighorn_positions, "color" = "#d7b088"),*/
 	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
 	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
 	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),
+	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
+	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#961e1e"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

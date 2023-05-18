@@ -6,6 +6,7 @@
 	transfer_access = ACCESS_HEADS
 	requires_ntnet = TRUE
 	size = 4
+	available_on_ntnet = 0
 	tgui_id = "NtosCrewManifest"
 
 /datum/computer_file/program/crew_manifest/ui_static_data(mob/user)

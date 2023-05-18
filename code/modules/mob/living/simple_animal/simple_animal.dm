@@ -362,6 +362,12 @@
 			new drop(drop_location())
 
 /mob/living/simple_animal/death(gibbed)
+	spawn(5)
+		if(murder)
+			if(istype(murder, /mob/living/carbon))
+				var/mob/living/carbon/carbonMurder = murder
+				if(carbonMurder.experience)
+					carbonMurder.experience.add(XP)
 	movement_type &= ~FLYING
 	if(nest)
 		nest.spawned_mobs -= WEAKREF(src)

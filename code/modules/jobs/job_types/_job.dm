@@ -99,6 +99,9 @@
 	/// Which kind of matchmaking this job allows, and with which departments. Associative list:  matchmaking_allowed[matchmaking datum typepath] -> list(job datum typepaths allowed)
 	var/list/matchmaking_allowed
 
+	var/karma = 0
+	var/datum/perkController/perks
+
 
 /datum/job/proc/after_spawn(mob/living/spawner, mob/client_holder, latejoin = FALSE)
 	SHOULD_CALL_PARENT(TRUE)

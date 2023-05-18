@@ -70,7 +70,6 @@
 #define EXP_TYPE_ADMIN			"Admin"
 //f13 stuff
 #define EXP_TYPE_FALLOUT		"Fallout"
-#define EXP_TYPE_VAULT			"Vault"
 #define EXP_TYPE_BROTHERHOOD	"Bos"
 #define EXP_TYPE_NCR			"Ncr"
 #define EXP_TYPE_BIGHORN		"Bighorn"
@@ -89,6 +88,7 @@
 #define EXP_TYPE_DFS			"Dry Fields Security"
 #define EXP_TYPE_GMB			"Green Mountain Boys"
 #define EXP_TYPE_LBJ			"Lumberjack Camp"
+#define EXP_TYPE_VAULT			"Vault 58"
 
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)

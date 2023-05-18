@@ -24,11 +24,15 @@
 	SIGNAL_HANDLER
 	if(triggered || !isturf(loc) || !isliving(usr) || isstructure(usr) || isnottriggermine(usr))
 		return
-	
-	var/atom/movable/AM = usr
-	
+
 	if(AM.movement_type & FLYING)
 		return
+
+	var/atom/movable/AM = usr
+	if(user.perks.have(/datum/perk/lightstep))
+		if(prob(90))
+			user.visible_message("<font color='green'>[user] deftly steps around [src]!</font>")
+			return
 
 	INVOKE_ASYNC(src, .proc/triggermine, AM)
 

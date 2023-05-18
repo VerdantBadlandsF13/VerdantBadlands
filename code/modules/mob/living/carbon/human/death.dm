@@ -35,6 +35,11 @@
 	if(H)
 		H.beat = BEAT_NONE
 
+	if(murder)
+		if(murder != src)
+			if(istype(murder, /mob/living/carbon/human))
+				murder:karmaAdd(karma * -0.33)
+
 	. = ..()
 
 	dizziness = 0

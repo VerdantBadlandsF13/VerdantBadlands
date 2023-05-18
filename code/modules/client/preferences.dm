@@ -191,13 +191,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/hide_ckey = FALSE //pref for hiding if your ckey shows round-end or not
 
-	var/special_s = 5
-	var/special_p = 5
-	var/special_e = 5
-	var/special_c = 5
-	var/special_i = 5
-	var/special_a = 5
-	var/special_l = 5
+	var/special_s = 0
+	var/special_p = 0
+	var/special_e = 0
+	var/special_c = 0
+	var/special_i = 0
+	var/special_a = 0
+	var/special_l = 0
 
 	/// Associative list: matchmaking_prefs[/datum/matchmaking_pref subtype] -> number of desired matches
 	var/list/matchmaking_prefs = list()
@@ -315,7 +315,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Refresh once the game has finished setting up...</b><br>"
 			dat += "</td>"
 
-/*
+
 			dat += "<b>Special Names:</b><BR>"
 			var/old_group
 			for(var/custom_name_id in GLOB.preferences_custom_names)
@@ -327,7 +327,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<br>"
 				dat += "<a href ='?_src_=prefs;preference=[custom_name_id];task=input'><b>[namedata["pref_name"]]:</b> [custom_names[custom_name_id]]</a> "
 			dat += "<br><br>"
-
+/*
 Records disabled until a use for them is found
 			dat += "<b>Custom job preferences:</b><BR>"
 			dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Preferred AI Core Display:</b> [preferred_ai_core_display]</a><br>"
@@ -349,9 +349,9 @@ Records disabled until a use for them is found
 				else
 					dat += "[medical_records]"
 			else
-				dat += "[TextPreview(medical_records)]...<BR>"
+				dat += "[TextPreview(medical_records)]...<BR>"*/
 			dat += "<br><b>Hide ckey: <a href='?_src_=prefs;preference=hide_ckey;task=input'>[hide_ckey ? "Enabled" : "Disabled"]</b></a><br>"
-*/
+
 			dat += "</tr></table>"
 
 
@@ -1380,8 +1380,8 @@ Records disabled until a use for them is found
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
 	dat += "<center><b>Allocate points</b></center>"
-	dat += "<center>Note: SPECIAL is purely cosmetic. These points have no effect on gameplay.</center><br>"
-	dat += "<center>[total] out of 40 possible</center><br>"
+	dat += "<center>Note: SPECIAL is essential to gameplay.</center><br>"
+	dat += "<center>[total] out of 24 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
 	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
 	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
@@ -1389,8 +1389,8 @@ Records disabled until a use for them is found
 	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
 	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
 	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
-	if (total>40)
-		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
+	if (total>24)
+		dat += "<center>Maximum exceeded, please change until your total is at or below 24<center>"
 	else
 		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 

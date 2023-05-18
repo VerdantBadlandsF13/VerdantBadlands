@@ -166,3 +166,8 @@
 	//---End
 
 	var/disconnect_time //how long have we been dc'd for
+
+	var/murder = null // Unused. Meant for Karma.
+
+	var/datum/experience/experience
+	var/datum/perkController/perks

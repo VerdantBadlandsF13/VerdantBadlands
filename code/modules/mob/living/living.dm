@@ -5,6 +5,9 @@
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
+	experience = new /datum/experience(src)
+	perks = new /datum/perkController(src)
+
 	register_init_signals()
 	if(unique_name)
 		name = "[name] ([rand(1, 1000)])"
@@ -894,6 +897,11 @@
 		if (istype(g))
 			strip_mod = g.strip_mod
 			strip_silence = g.strip_silence
+
+	var/mob/living/carbon/user = src
+	if((user.perks.have(/datum/perk/thief)))
+		strip_silence = TRUE
+
 	if(!strip_silence)
 		who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
 					"<span class='userdanger'>[src] tries to remove your [what.name].</span>", target = src,
@@ -1119,6 +1127,12 @@
 	amount -= RAD_BACKGROUND_RADIATION // This will always be at least 1 because of how skin protection is calculated
 
 	var/blocked = getarmor(null, "rad")
+	var/mob/living/carbon/user = src
+	if(user.perks.have(/datum/perk/radresist))
+		blocked *= 1.25
+//	if(user.perks.have(/datum/perk/radresist_mutants))
+//		blocked *= 2500
+
 	apply_effect((amount*RAD_MOB_COEFFICIENT)/max(1, (radiation**2)*RAD_OVERDOSE_REDUCTION), EFFECT_IRRADIATE, blocked)
 	if(HAS_TRAIT(src,TRAIT_RADIMMUNE)) //prevents you from being burned by rads if radimmune but you can still accumulate
 		return

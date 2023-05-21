@@ -1,5 +1,7 @@
 // Contains items intended for eldritch themed locations.
 // The initial item here is a D20, rethemed.
+// As of current, it just kills the person using it and curses the rest.
+// Not intended for actual gameplay, just like the eldritch locations.
 
 /obj/item/eldritch_deal
 	name = "\improper Crusader's Vow"

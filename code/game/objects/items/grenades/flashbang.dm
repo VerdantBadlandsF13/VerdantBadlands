@@ -144,8 +144,7 @@
 	shrapnel_type = /obj/item/projectile/bullet/pellet/stingball
 
 /obj/item/grenade/flashbang/sentry
-	name = "defensive flashbang" //for sentrybots
-	desc = "Why are you staring at this?!"
-	flashbang_range = 7
+	name = "defensive flashbang"
+	desc = "<b>OH GOD. OH FUCK.</b>"
+	flashbang_range = 12
 	det_time = 1 SECONDS
-

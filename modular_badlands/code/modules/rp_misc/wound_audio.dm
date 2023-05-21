@@ -1,10 +1,10 @@
 // Contains various audio overrides for wounds. So they're not so bland, anyhow.
 // Blunt trauma.
 /datum/wound/blunt
-	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/punch1.ogg'
+	sound_effect = 'sound/weapons/punch1.ogg'
 
 /datum/wound/blunt/moderate
-	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/punch2.ogg'
+	sound_effect = 'sound/weapons/punch2.ogg'
 
 /datum/wound/blunt/severe
 	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/trauma1.ogg'

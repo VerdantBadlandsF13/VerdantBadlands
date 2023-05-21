@@ -141,6 +141,3 @@
 	SLEEP_CHECK_DEATH(12)
 	can_move = TRUE
 	return
-
-/mob/living/simple_animal/hostile/megafauna/behemoth/devour()
-	return

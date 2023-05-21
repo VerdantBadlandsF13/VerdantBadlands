@@ -59,14 +59,6 @@
 /*
 	var/charging = FALSE
 */
-/mob/living/simple_animal/hostile/deathclaw/playable
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = FALSE
-
 // Mother death claw
 /mob/living/simple_animal/hostile/deathclaw/mother
 	name = "mother deathclaw"

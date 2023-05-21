@@ -1,33 +1,9 @@
 // A variety of things, such as sounds and so on, to make the world feel more alive. A lot of this is pulled directly, almost 1:1, from Interbay.
 // Gasmask fluff from IB.
 /mob/living/carbon/human/proc/handle_gas_mask_sound()
-	//var/soundcooldown = world.time
 	if(istype(wear_mask, /obj/item/clothing/mask/gas))
-		//if((world.time - soundcooldown) >= 300)
 		var/mask_sound = "modular_badlands/code/modules/rp_misc/sound/mask/gasmask[rand(1,10)].ogg"
 		playsound(src, mask_sound, 50, 1)
-
-// Audio for breathing, when stamina is low.
-// TODO: Extend breathing audio to standard states, not just low stamina?
-/mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)
-	var/lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/inhale.ogg"
-	var/lowstam_cooldown = 15 SECONDS
-	if(lowstam_cooldown <= world.time)
-		lowstam_cooldown = world.time
-		playsound(src, lowstam_sound, 50, 1)
-		to_chat(src, span_warning("You're becoming winded. Take a break."))
-
-/mob/living/carbon/proc/handle_crit_stamina_sound(mob/living/M)
-	var/critstam_sound
-	var/critstam_cooldown = 35 SECONDS
-	if(src.gender == FEMALE)
-		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
-	else
-		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/fatigue[rand(1,3)].ogg"
-	if(critstam_cooldown <= world.time)
-		critstam_cooldown = world.time + 350
-		playsound(src, critstam_sound, 50, 1)
-		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
 
 // Audio for bleeding.
 /mob/living/carbon/proc/handle_blood_drip_sound()
@@ -47,12 +23,46 @@
 /obj/item/radio/proc/play_change_freq()
 	var/radtune_sound = "modular_badlands/code/modules/rp_misc/sound/radio/radiohiss.ogg"
 	playsound(src, radtune_sound, rand(20, 30))
+	play_receive_transmission()
 
 // Receiving a message provides feedback.
-// Not used as of current in its intended form. It's hooked as a random chance into tuning.
+// Not used as of current in its intended form. It's hooked into frequency change.
 /obj/item/radio/proc/play_receive_transmission()
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
-	var/radrec_cooldown = 5 SECONDS
-	if(radrec_cooldown <= world.time)
-		radrec_cooldown = world.time + 50
-		playsound(src, radrec_sound, rand(20, 30))
+	playsound(src, radrec_sound, rand(20, 30))
+
+/*
+This is a huge block for stamina garbage.
+Ignore it, if possible.
+*/
+
+// The define. Not going to undefine it afterwards, as we can use it elsewhere.
+// For example, with effects relating to cycling status states. - Carl
+#define BREATH_COOLDOWN 300 // By default, thirty seconds.
+// Audio for breathing, when stamina is low.
+// TODO: Extend breathing audio to standard states, not just low stamina?
+/mob/living/carbon/proc/handle_stamina_sounds(mob/living/M, var/last_breath = 0)
+	if(last_breath+BREATH_COOLDOWN > world.time)
+		return
+	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
+		handle_crit_stamina_sound()
+		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
+		last_breath = world.time + 30 SECONDS
+		return
+	if(getStaminaLoss() > STAMINA_LOW)
+		handle_low_stamina_sound()
+		to_chat(src, span_warning("You're becoming winded. Take a break."))
+		last_breath = world.time + 60 SECONDS
+		return
+
+/mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)
+	var/lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/inhale.ogg"
+	playsound(src, lowstam_sound, 50, 1)
+
+/mob/living/carbon/proc/handle_crit_stamina_sound(mob/living/M)
+	var/critstam_sound
+	if(src.gender == FEMALE)
+		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
+	else
+		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/fatigue[rand(1,3)].ogg"
+	playsound(src, critstam_sound, 50, 1)

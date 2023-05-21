@@ -62,7 +62,6 @@
 	caliber = "m5mm"
 	projectile_type = /obj/item/projectile/bullet/m5mm
 
-
 /obj/item/ammo_casing/m5mm/shock
 	name = "5mm shock bullet casing"
 	desc = "A 5mm shock bullet casing."

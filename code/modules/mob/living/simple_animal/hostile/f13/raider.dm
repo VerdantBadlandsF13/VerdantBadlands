@@ -284,11 +284,11 @@
 	minimum_distance = 8
 	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/weapons/gunshot.ogg'
+	footstep_type = FOOTSTEP_MOB_SHOE/*
 	var/max_mobs = 2
-	var/mob_types = list(/mob/living/simple_animal/hostile/eyebot/reinforced)
+	var/mob_types = list(/mob/living/simple_animal/hostile/eyebot)
 	var/spawn_time = 15 SECONDS
 	var/spawn_text = "flies from"
-	footstep_type = FOOTSTEP_MOB_SHOE
 
 
 /mob/living/simple_animal/hostile/raider/junker/creator/Initialize()
@@ -302,7 +302,7 @@
 /mob/living/simple_animal/hostile/raider/junker/creator/Destroy()
 	qdel(GetComponent(/datum/component/spawner/ranged))
 	. = ..()
-
+*/
 /mob/living/simple_animal/hostile/raider/junker/creator/Aggro()
 	..()
 	summon_backup(10)

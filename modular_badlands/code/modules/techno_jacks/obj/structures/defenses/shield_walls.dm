@@ -35,6 +35,7 @@
 	radio.listening = 0
 	radio.recalculateChannels()
 	soundloop = new(src, TRUE)
+	soundloop.start()
 
 // Lazy examine addition from holosigns. >:(
 /obj/structure/shieldwall/examine(mob/user)

@@ -1,7 +1,8 @@
 /* IN THIS FILE
 Horrors.
 Generally stuff we use in dark caverns, that you could imagine come from FEV.
-Vermont forest creatures with a temporary sprite from IS12.
+Vermont forest creatures with a temporary sprite from you know where.
+Don't use these.
 */
 
 //Base Horror
@@ -58,11 +59,11 @@ Vermont forest creatures with a temporary sprite from IS12.
 //Parasite from Horror
 /mob/living/simple_animal/hostile/horror/parasite
 	name = "horror"
-	desc = "Some manner of creature churned out by the Vermont wilds. Its flesh ripples as if something unseen lurks beneath."
+	desc = "Some manner of creature churned out by the Vermont wilds."
 	icon = 'modular_badlands/code/modules/unsorted/icons/horrors_32x32.dmi'
-	icon_state = "horror1"
-	icon_living = "horror1"
-	icon_dead = "horror1"// Never seen. Creature is immediately qdel'd and replaced with the parasite on death.
+	icon_state = "horror_spawn2"
+	icon_living = "horror_spawn2"
+	icon_dead = "horror_spawn2_dead"
 	mob_biotypes = MOB_UNDEAD|MOB_BEAST// Not undead, but it fits.
 	robust_searching = 1
 	turns_per_move = 5
@@ -108,10 +109,10 @@ Vermont forest creatures with a temporary sprite from IS12.
 /mob/living/simple_animal/hostile/horror/large
 	name = "horror"
 	desc = "Some manner of creature churned out by the Vermont wilds. Its flesh ripples as if something unseen lurks beneath."
-	icon = 'modular_badlands/code/modules/unsorted/icons/horrors_32x32.dmi'
-	icon_state = "horror1"
-	icon_living = "horror1"
-	icon_dead = "horror1"// Never seen. Creature is immediately qdel'd and replaced with the parasite on death.
+	icon = 'modular_badlands/code/modules/unsorted/icons/horrors_64x32.dmi'
+	icon_state = "horror_large"
+	icon_living = "horror_large"
+	icon_dead = "horror_large_dead"// Never seen. Creature is immediately qdel'd and replaced with the parasite on death.
 	mob_biotypes = MOB_UNDEAD|MOB_BEAST// Not undead, but it fits.
 	robust_searching = 1
 	turns_per_move = 5

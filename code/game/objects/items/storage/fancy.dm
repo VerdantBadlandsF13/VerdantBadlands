@@ -173,7 +173,7 @@
 		return
 	if(!length(user.get_empty_held_indexes()))
 		to_chat(user, "<span class='warning'>Your hands are full!</span>")
-		return	
+		return
 	var/obj/item/lighter/L = locate() in contents
 	if(L)
 		SEND_SIGNAL(src, COMSIG_TRY_STORAGE_TAKE, L, user)

@@ -507,12 +507,9 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		bufferedstam = max(bufferedstam - drainrate, 0)
 	//END OF CIT CHANGES
 
-	// Neither of these should be here, but it works, so, whatever.
-	if(getStaminaLoss() > STAMINA_LOW)
-		handle_low_stamina_sound()// These shouldn't be together, but whatever. If they double, it'll be funny.
-	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
-		handle_crit_stamina_sound()// These shouldn't be together, but whatever. If they double, it'll be funny.
-	// End of garbage.
+	// This really shouldn't be here, but it works for now. - Carl
+	handle_stamina_sounds()
+	// End of the Carlening. Or something. >:(
 
 	var/restingpwr = 1 + 4 * !CHECK_MOBILITY(src, MOBILITY_STAND)
 

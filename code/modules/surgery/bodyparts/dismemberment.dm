@@ -22,6 +22,7 @@
 	SEND_SIGNAL(C, COMSIG_ADD_MOOD_EVENT, "dismembered", /datum/mood_event/dismembered)
 	drop_limb()
 	C.update_equipment_speed_mods() // Update in case speed affecting item unequipped by dismemberment
+	playsound(get_turf(C), "modular_badlands/code/modules/rp_misc/sound/gore/destroyed_limb[rand(1,3)].ogg", 80, 1)
 
 	C.bleed(40)
 
@@ -64,7 +65,7 @@
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)
 	C.bleed(50)
-	playsound(get_turf(C), 'sound/misc/splort.ogg', 80, 1)
+	playsound(get_turf(C), "modular_badlands/code/modules/rp_misc/sound/gore/destroyed_limb[rand(1,3)].ogg", 80, 1)
 	for(var/X in C.internal_organs)
 		var/obj/item/organ/O = X
 		if(O.organ_flags & ORGAN_NO_DISMEMBERMENT || check_zone(O.zone) != BODY_ZONE_CHEST)

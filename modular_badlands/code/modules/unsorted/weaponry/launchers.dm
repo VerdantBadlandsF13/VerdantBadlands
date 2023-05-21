@@ -23,13 +23,13 @@ Properly dangerous.
 	icon = 'modular_badlands/code/modules/unsorted/icons/fatman.dmi'
 	icon_state = "mini_nuke_proj"
 	damage = 250// How would you even get hit by this in the first place?
-	armour_penetration = 0.15
-	ricochets_max = 0 //it's a MISSILE
-	shrapnel_magnitude = 12
+	armour_penetration = 1
+	ricochets_max = 0
+	shrapnel_magnitude = 2
 
 /obj/item/projectile/bullet/rocket/fatman/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 1, 2, 4)
+	explosion(target, 3, 2, 4, 6)
 
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
 		if(istype(victim) && victim.stat != DEAD)
@@ -57,11 +57,15 @@ Properly dangerous.
 	fire_sound = 'modular_badlands/code/modules/unsorted/sound/fatman_fire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	can_suppress = FALSE
+	can_scope = FALSE
+	casing_ejector = FALSE
+	zoomable = TRUE
+	zoom_amt = 10
+	zoom_out_amt = 13
 	burst_size = 1
 	slowdown = 1
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
-	casing_ejector = FALSE
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "mini nuke"
 

@@ -34,6 +34,8 @@ Houses the defines required, to keep this modular.
 		T.heavyfootstep = FOOTSTEP_PLATING
 		T.depth = 0
 		return 0
+	if(istype(loc, /turf/open/indestructible/ground/outside/water) || istype(loc, /turf/open/water) || istype(loc, /turf/open/indestructible/sound/pool))
+		return T.depth
 	if(!locate(/obj/structure/lattice/catwalk) in loc)
 		T.slowdown = 2
 		T.footstep = FOOTSTEP_WATER
@@ -42,8 +44,6 @@ Houses the defines required, to keep this modular.
 		T.heavyfootstep = FOOTSTEP_WATER
 		T.depth = 1
 		return 0
-	if(istype(loc, /turf/open/indestructible/ground/outside/water) || istype(loc, /turf/open/water) || istype(loc, /turf/open/indestructible/sound/pool))
-		return T.depth
 	return 0
 
 // Use this to have things react to having water applied to them.
@@ -51,17 +51,6 @@ Houses the defines required, to keep this modular.
 	return
 
 /mob/living/water_act(amount)
-	if(ishuman(src))
-		var/mob/living/carbon/human/drownee = src
-		if(!drownee || drownee.stat == DEAD)
-			return
-		if(drownee.resting && !drownee.internal)
-			if(drownee.stat != CONSCIOUS)
-				drownee.adjustOxyLoss(1)
-			else
-				drownee.adjustOxyLoss(1)
-				if(prob(35))
-					to_chat(drownee, "<span class='danger'>You're drowning!</span>")
 	adjust_fire_stacks(-amount * 5)
 	for(var/atom/movable/AM in contents)
 		AM.water_act(amount)

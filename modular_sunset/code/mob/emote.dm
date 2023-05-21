@@ -1,9 +1,4 @@
 // Normal emotes
-/datum/emote/warcry
-	key = "warcry"
-	key_third_person = "warcrys"
-	message = "<b>let out a warcry!!</b>"
-
 /datum/emote/flap
 	key = "flap"
 	key_third_person = "flaps"

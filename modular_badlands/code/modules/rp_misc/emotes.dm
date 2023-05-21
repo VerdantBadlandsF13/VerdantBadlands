@@ -62,16 +62,14 @@
 	message = "chuckles."
 	emote_type = EMOTE_AUDIBLE
 
-/* Sunset Attempt - I tried bro ~TK  This lets females have a chuckle, but males don't.  idk man, I'm dumb.
-/datum/emote/living/chuckle/get_sound(mob/living/user) //Sunset Edit -TK
-	. = ..()
-	if(ishuman(user))
-		if(user.gender == FEMALE)
-			sound = 'sound/f13effects/sunsetsounds/femalechuckle.ogg'
-		else
-			sound = 'sound/f13effects/sunsetsounds/malechuckle.ogg'
-		return sound
-*/
+/datum/emote/living/chuckle/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_giggle[rand(1,2)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/male_laugh3.ogg"
 
 /datum/emote/living/cough
 	key = "cough"
@@ -83,6 +81,15 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
+
+/datum/emote/living/cough/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_cough[rand(1,6)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/male_cough[rand(1,4)].ogg"
 
 /datum/emote/living/deathgasp_simple
 	key = "deathgasp_simple"
@@ -130,6 +137,15 @@
 	message = "gags."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/gag/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)// Same here. Sorry.
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/gasp_female[rand(1,7)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/gasp_male[rand(1,7)].ogg"
+
 /datum/emote/living/gasp
 	key = "gasp"
 	key_third_person = "gasps"
@@ -137,16 +153,45 @@
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = UNCONSCIOUS
 
+/datum/emote/living/gasp/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/gasp_female[rand(1,7)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/gasp_male[rand(1,7)].ogg"
+
 /datum/emote/living/giggle
 	key = "giggle"
 	key_third_person = "giggles"
 	message = "giggles."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/groan
-	key = "groan"
-	key_third_person = "groans"
-	message = "groans!"
+/datum/emote/living/giggle/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)// I know. Same sounds. We don't have better, I think.
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_giggle[rand(1,2)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/male_laugh3.ogg"
+
+/datum/emote/living/carbon/moan
+	key = "moan"
+	key_third_person = "moans"
+	message = "moans!"
+	emote_type = EMOTE_AUDIBLE
+	stat_allowed = SOFT_CRIT
+
+/datum/emote/living/moan/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/female_moan[rand(1,3)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_moan[rand(1,3)].ogg"
 
 /datum/emote/living/audible
 	emote_type = EMOTE_AUDIBLE
@@ -163,19 +208,13 @@
 	message = "laughs."
 
 /datum/emote/living/audible/laugh/get_sound(mob/living/user)
-	. = ..()
-	if(ishuman(user))
-		var/mob/living/carbon/human/human_user = user
-		//power armor laugh track.... spooky
-		if(istype(human_user.get_item_by_slot(ITEM_SLOT_OCLOTHING), /obj/item/clothing/suit/armor/f13/power_armor))
-			return 'sound/voice/robolaugh.ogg'
-		return human_user.dna.species.get_laugh_sound(user)
-
-/datum/emote/living/pout
-	key = "pout"
-	key_third_person = "pouts"
-	message = "pouts."
-	emote_type = EMOTE_AUDIBLE
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_laugh[rand(1,3)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/male_laugh[rand(1,3)].ogg"
 
 /datum/emote/living/scream
 	key = "scream"
@@ -183,11 +222,64 @@
 	message = "screams."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/shiver
-	key = "shiver"
-	key_third_person = "shiver"
-	message = "shivers."
-	emote_type = EMOTE_AUDIBLE
+/datum/emote/living/scream/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(ismonkey(user))
+		return 'modular_citadel/sound/voice/scream_monkey.ogg'
+	if(istype(user, /mob/living/simple_animal/hostile/gorilla))
+		return 'sound/creatures/gorilla.ogg'
+	if(is_species(user, /datum/species/jelly))
+		if(user.gender == FEMALE)
+			return "modular_citadel/sound/voice/scream_jelly_f[rand(1,2)].ogg"
+		else
+			return "modular_citadel/sound/voice/scream_jelly_m[rand(1,2)].ogg"
+	if(is_species(user, /datum/species/android) || is_species(user, /datum/species/synth) || is_species(user, /datum/species/ipc))
+		return 'modular_citadel/sound/voice/scream_silicon.ogg'
+	if(is_species(user, /datum/species/lizard))
+		return 'modular_citadel/sound/voice/scream_lizard.ogg'
+	if(is_species(user, /datum/species/skeleton))
+		return 'modular_citadel/sound/voice/scream_skeleton.ogg'
+	if (is_species(user, /datum/species/fly) || is_species(user, /datum/species/insect))
+		return 'modular_citadel/sound/voice/scream_moth.ogg'
+	if(human_user.gender == FEMALE)
+		if(user.is_muzzled())
+			return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/gagscream[rand(1,3)].ogg"
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/female_scream[rand(1,3)].ogg"
+	else
+		if(user.is_muzzled())
+			return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/muffled[rand(1,2)].ogg"
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_scream[rand(1,3)].ogg"
+
+/datum/emote/warcry
+	key = "warcry"
+	key_third_person = "warcrys"
+	message = "<b>let out a warcry!!</b>"
+
+/datum/emote/warcry/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/angryscream2.ogg"
+
+
+/datum/emote/living/whimper
+	key = "whimper"
+	key_third_person = "whimpers"
+	message = "whimpers."
+
+/datum/emote/living/whimper/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/whimper_female[rand(1,3)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/whimper_male[rand(1,3)].ogg"
 
 /datum/emote/living/sigh
 	key = "sigh"
@@ -195,11 +287,29 @@
 	message = "sighs."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sigh/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/sigh_female.ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/sigh_male.ogg"
+
 /datum/emote/living/sneeze
 	key = "sneeze"
 	key_third_person = "sneezes"
 	message = "sneezes."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sneeze/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/fneezef[rand(1,2)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/sneezem[rand(1,2)].ogg"
 
 /datum/emote/living/sniff
 	key = "sniff"
@@ -207,12 +317,10 @@
 	message = "sniffs."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/snore
-	key = "snore"
-	key_third_person = "snores"
-	message = "snores."
-	emote_type = EMOTE_AUDIBLE
-	stat_allowed = UNCONSCIOUS
+/datum/emote/living/sniff/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	return  "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/sniff.ogg"
 
 /datum/emote/living/surrender
 	key = "surrender"
@@ -233,8 +341,3 @@
 		var/mob/living/L = user
 		L.Knockdown(200)
 		L.Paralyze(200)
-
-/datum/emote/living/whimper
-	key = "whimper"
-	key_third_person = "whimpers"
-	message = "whimpers."

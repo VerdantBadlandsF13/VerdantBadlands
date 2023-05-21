@@ -36,13 +36,6 @@
 	key_third_person = "gnarls"
 	message = "gnarls and shows its teeth..."
 
-/datum/emote/living/carbon/moan
-	key = "moan"
-	key_third_person = "moans"
-	message = "moans!"
-	emote_type = EMOTE_AUDIBLE
-	stat_allowed = SOFT_CRIT
-
 /datum/emote/living/carbon/roll
 	key = "roll"
 	key_third_person = "rolls"

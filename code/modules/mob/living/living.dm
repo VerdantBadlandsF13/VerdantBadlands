@@ -1450,6 +1450,3 @@
 		span_notice("You give \the [target] a [gift].")
 		)
 
-
-/mob/living/proc/update_water()
-	return

@@ -15,11 +15,14 @@ Just a simple, cheap replacement to atmos in a few locations.
 
 /area/f13/hostile/Entered(atom/movable/AM, atom/oldloc)
 	. = ..()
+	if(istype(wear_mask, /obj/item/clothing/mask/gas))
+
 	for(var/mob/living/M as AM in arrived.get_all_contents_type(/mob/living))
 		to_chat(enterer, span_userdanger("This was a bad idea..."))
 		enterer.dust(TRUE, FALSE, TRUE)
 
 	if(istype(wear_mask, /obj/item/clothing/mask/gas))
+		if(C.get_breath_from_internal(0)) // check if we have internals on
 
 	if(C.blood_volume <= (BLOOD_VOLUME_SURVIVE*C.blood_ratio))
 		to_chat(C, "<span class='danger'>You ran out of blood!</span>")

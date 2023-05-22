@@ -29,27 +29,30 @@ Properly dangerous.
 
 /obj/item/projectile/bullet/rocket/fatman/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 3, 2, 4, 6)
+	explosion(target, 3, 6, 12, 12, TRUE, TRUE, 12, FALSE, TRUE)
 
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
 		if(istype(victim) && victim.stat != DEAD)
 			victim.rad_act(12500)//I'm sorry, little one. :(
 
-	for(var/turf/open/turf in view(src,2))//Probably too little?
-		if(istype(turf))
-			var/obj/effect/decal/waste/WS = locate() in turf.contents
-			if(!WS)
-				WS = new/obj/effect/decal/waste(turf)
-
 	new /obj/effect/temp_visual/explosion(get_turf(target))
 	return BULLET_ACT_HIT
 
 	radiation_pulse(src, 3500) //General rad pulse. Stacks with the above.
+
+	spawn(15)//brief delay on creating rad decals.
+		for(var/turf/open/turf in view(src,2))//Probably too little?
+			if(istype(turf))
+				var/obj/effect/decal/waste/WS = locate() in turf.contents
+				if(!WS)
+					WS = new/obj/effect/decal/waste(turf)
+
 	qdel(src)
 
 /obj/item/gun/ballistic/fatman
 	name = "\improper Fat Man"
-	desc = "A launch platform for a football sized nuclear warhead. How'd you get this?"
+	desc = "A launch platform for a football sized nuclear warhead. <br>\
+	This specific model appears to be fitted with a rangefinder."
 	icon = 'modular_badlands/code/modules/unsorted/icons/fatman.dmi'
 	icon_state = "fatman"
 	item_state = "fatman"
@@ -66,6 +69,7 @@ Properly dangerous.
 	slowdown = 1
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
+	scope_name = "rangefinder"
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "mini nuke"
 
@@ -94,7 +98,7 @@ Properly dangerous.
 			if(!user.put_in_hands(AC))
 				AC.bounce_away(FALSE, NONE)
 			to_chat(user, "<span class='notice'>You remove \the [AC] from \the [src]!</span>")
-			playsound(src, 'sound/weapons/gun_magazine_remove_full.ogg', 70, TRUE)
+			playsound(src, 'modular_badlands/code/modules/unsorted/sound/fatman_unload.ogg', 70, TRUE)
 			chambered = null
 		else
 			to_chat(user, "<span class='notice'>There's no [magazine_wording] in [src].</span>")

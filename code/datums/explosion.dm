@@ -110,8 +110,8 @@ GLOBAL_LIST_EMPTY(explosions)
 	if(!silent)
 		var/frequency = get_rand_frequency()
 		var/sound/explosion_sound = sound(get_sfx("explosion"))
-		var/sound/far_explosion_sound = sound('sound/effects/explosionfar.ogg')
-		var/sound/explosion_echo_sound = sound('sound/effects/explosion_distant.ogg')
+		var/sound/far_explosion_sound = sound("sound/f13effects/explosion_distant_[rand(1,4)].ogg")
+		var/sound/explosion_echo_sound = sound('sound/f13effects/explosion_fire.ogg')
 
 		for(var/mob/M in GLOB.player_list)
 			// Double check for client

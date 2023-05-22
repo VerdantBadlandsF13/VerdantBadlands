@@ -212,6 +212,7 @@ ATTACHMENTS
 	var/mutable_appearance/scope_overlay
 	var/can_scope = FALSE
 	var/scope_state = "scope"
+	var/scope_name = "scope"
 
 	var/mutable_appearance/flashlight_overlay
 	var/can_attachments = FALSE
@@ -970,14 +971,14 @@ ATTACHMENTS
 		user.client.pixel_y = world.icon_size*_y
 		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
-		user.visible_message("<span class='notice'>[user] looks down the scope of [src].</span>", "<span class='notice'>You look down the scope of [src].</span>")
+		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
-		user.visible_message("<span class='notice'>[user] looks up from the scope of [src].</span>", "<span class='notice'>You look up from the scope of [src].</span>")
+		user.visible_message("<span class='notice'>[user] looks up from the [src.scope_name] of [src].</span>", "<span class='notice'>You look up from the [src.scope_name] of [src].</span>")
 		RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/on_walk) //Extra proc to make sure your zoom resets for bug where you don't unzoom when toggling while moving
 
 /obj/item/gun/proc/on_walk(mob/living/user)

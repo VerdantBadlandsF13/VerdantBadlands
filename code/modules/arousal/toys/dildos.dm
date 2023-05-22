@@ -141,7 +141,6 @@
 	user.death(0)
 
 /obj/item/dildo/suicide_act(mob/living/user)
-//	is_knotted = ((src.dildo_shape == "knotted")?"They swallowed the knot":"Their face is turning blue")
 	if(do_after(user,17,target=src))
 		user.visible_message("<span class='suicide'>[user] tears-up and gags as they shove [src] down their throat! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		playsound(loc, 'sound/weapons/gagging.ogg', 50, 1, -1)
@@ -155,6 +154,14 @@
 	if(do_after(user,35,target=src))
 		user.visible_message("<span class='suicide'>[user] tears-up and gags as they try to deepthroat the [src]! WHY WOULD THEY DO THAT? It looks like [user.p_theyre()] trying to commit suicide!!</span>")
 		playsound(loc, 'sound/weapons/gagging.ogg', 50, 2, -1)
+		user.Stun(300)
+		user.adjust_blurriness(8)
+	return MANUAL_SUICIDE
+
+/obj/item/dildo/knotted/suicide_act(mob/living/user)
+	if(do_after(user,20,target=src))
+		user.visible_message("<span class='suicide'>[user] tears-up and gags as [user.p_they()] swallow the knot! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		playsound(loc, 'sound/weapons/gagging.ogg', 50, 1, -1)
 		user.Stun(300)
 		user.adjust_blurriness(8)
 	return MANUAL_SUICIDE

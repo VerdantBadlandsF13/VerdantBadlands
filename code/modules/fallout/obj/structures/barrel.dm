@@ -142,7 +142,7 @@
 	var/flicker_chance = 1 // percent
 
 /obj/structure/destructible/hobo_barrel/update_icon()
-	icon_state = "single_rusted[burning ? null : "un"]lit"
+	icon_state = "single_rusted_[burning ? null : "un"]lit"
 
 /obj/structure/destructible/hobo_barrel/attack_hand(mob/user)
 	. = ..()

@@ -112,7 +112,7 @@
 //Gas alerts
 /obj/screen/alert/not_enough_oxy
 	name = "Choking (No O2)"
-	desc = "You're not getting enough oxygen. Find some good air before you pass out! The box in your backpack has an oxygen tank and breath mask in it."
+	desc = "You're not getting enough oxygen. Find some good air before you pass out!"
 	icon_state = "not_enough_oxy"
 
 /obj/screen/alert/too_much_oxy
@@ -147,7 +147,7 @@
 
 /obj/screen/alert/too_much_tox
 	name = "Choking (Plasma)"
-	desc = "There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air. The box in your backpack has an oxygen tank and gas mask in it."
+	desc = "There's highly flammable, toxic plasma in the air and you're breathing it in. Find some fresh air."
 	icon_state = "too_much_tox"
 
 /obj/screen/alert/not_enough_ch4
@@ -167,26 +167,11 @@
 
 /obj/screen/alert/too_much_ch3br
 	name = "Choking (CH3Br)"
-	desc = "There's highly toxic methyl bromide in the air and you're breathing it in. Find some fresh air. The box in your backpack has an oxygen tank and gas mask in it."
+	desc = "There's highly toxic methyl bromide in the air and you're breathing it in. Find some fresh air."
 	icon_state = "too_much_tox"
 
 //End gas alerts
 
-
-/obj/screen/alert/fat
-	name = "Fat"
-	desc = "You ate too much food, lardass. Run around the station and lose some weight."
-	icon_state = "fat"
-
-/obj/screen/alert/hungry
-	name = "Hungry"
-	desc = "Some food would be good right about now."
-	icon_state = "hungry"
-
-/obj/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
-	icon_state = "starving"
 
 /obj/screen/alert/gross
 	name = "Grossed out."
@@ -717,42 +702,56 @@ so as to remain in compliance with the most up-to-date laws."
 /////////
 /obj/screen/alert/thirst1
 	name = "Thirst"
-	desc = "Your mouth is slightly dry."
-	icon_state = "water1"//temp
+	desc = "Your mouth is dry."
+	icon_state = "water1"
 
 /obj/screen/alert/thirst2
 	name = "Thirst"
 	desc = "You're starting to feel the effects of slight fatigue. Find something to drink."
-	icon_state = "water2"//temp
+	icon_state = "water2"
 
 /obj/screen/alert/thirst3
 	name = "Thirst"
 	desc = "You're starting to feel the effects of extreme fatigue. Find something to drink."
-	icon_state = "water3"//temp
+	icon_state = "water3"
 
 /obj/screen/alert/thirst4
 	name = "Thirst"
 	desc = "Drink something, or you're soon going to waste away."
-	icon_state = "water4"//temp
-
+	icon_state = "water4"
 
 
 /obj/screen/alert/hunger1
 	name = "Hunger"
 	desc = "You could do with something to eat."
-	icon_state = "starv1"//temp
+	icon_state = "starv1"
 
 /obj/screen/alert/hunger2
 	name = "Hunger"
 	desc = "You're more than peckish. Get something to snack on."
-	icon_state = "starv2"//temp
+	icon_state = "starv2"
 
 /obj/screen/alert/hunger3
 	name = "Hunger"
 	desc = "You feel as if your stomach is in freefall. Find something to eat."
-	icon_state = "starv3"//temp
+	icon_state = "starv3"
 
 /obj/screen/alert/hunger4
 	name = "Hunger"
 	desc = "Your body is slowly starting to waste away. Find food. Soon."
-	icon_state = "starv4"//temp
+	icon_state = "starv4"
+
+/obj/screen/alert/fat
+	name = "Fat"
+	desc = "You ate too much food, lardass. Run around the station and lose some weight."
+	icon_state = "fat"
+
+/obj/screen/alert/hungry
+	name = "Hungry"
+	desc = "Some food would be good right about now."
+	icon_state = "hungry"
+
+/obj/screen/alert/starving
+	name = "Starving"
+	desc = "You're severely malnourished. The hunger pains make moving around a chore."
+	icon_state = "starving"

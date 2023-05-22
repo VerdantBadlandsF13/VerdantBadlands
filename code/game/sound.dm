@@ -141,7 +141,7 @@
 			if ("shatter")
 				soundin = pick('sound/effects/glassbr1.ogg','sound/effects/glassbr2.ogg','sound/effects/glassbr3.ogg')
 			if ("explosion")
-				soundin = pick('sound/effects/explosion1.ogg','sound/effects/explosion2.ogg')
+				soundin = pick('sound/f13effects/explosion_1.ogg','sound/f13effects/explosion_2.ogg')
 			if ("sparks")
 				soundin = pick('sound/effects/sparks1.ogg','sound/effects/sparks2.ogg','sound/effects/sparks3.ogg','sound/effects/sparks4.ogg')
 			if ("rustle")

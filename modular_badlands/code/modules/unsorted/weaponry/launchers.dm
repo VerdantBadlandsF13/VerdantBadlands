@@ -29,7 +29,7 @@ Properly dangerous.
 
 /obj/item/projectile/bullet/rocket/fatman/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 3, 6, 12, 12, TRUE, TRUE, 12, FALSE, TRUE)
+	explosion(target, 0, 3, 12, 12, TRUE, TRUE, 12, FALSE, TRUE)
 
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
 		if(istype(victim) && victim.stat != DEAD)

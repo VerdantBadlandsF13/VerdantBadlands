@@ -160,7 +160,7 @@
 
 /obj/item/dildo/knotted/suicide_act(mob/living/user)
 	if(do_after(user,20,target=src))
-		user.visible_message("<span class='suicide'>[user] tears-up and gags as [user.p_they()] swallow the knot! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+		user.visible_message("<span class='suicide'>[user] tears-up and gags as [user.p_they()] swallows the knot! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 		playsound(loc, 'sound/weapons/gagging.ogg', 50, 1, -1)
 		user.Stun(300)
 		user.adjust_blurriness(8)

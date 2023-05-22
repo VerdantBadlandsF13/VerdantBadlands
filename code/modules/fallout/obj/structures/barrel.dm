@@ -6,6 +6,8 @@
 	icon = 'icons/fallout/trash.dmi'
 	icon_state = "single_dark"
 	tank_volume = 500
+	density = TRUE
+	anchored = TRUE
 	reagent_id = /datum/reagent/water/dwater
 
 /obj/structure/reagent_dispensers/barrel/two
@@ -130,7 +132,7 @@
 	desc = "An ancient metal barrel, repurposed as a firepit."
 	icon = 'icons/fallout/trash.dmi'
 	icon_state = "single_rusted"
-	density = FALSE
+	density = TRUE
 	anchored = TRUE
 	light_color = LIGHT_COLOR_FIRE
 	light_power = 1

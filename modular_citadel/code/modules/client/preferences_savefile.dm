@@ -14,6 +14,12 @@
 	features["mcolor2"]	= sanitize_hexcolor(features["mcolor2"], 6, FALSE)
 	features["mcolor3"]	= sanitize_hexcolor(features["mcolor3"], 6, FALSE)
 
+	extremepref = sanitize_text(S["extremepref"], "No")
+	if(!length(extremepref))
+		extremepref = "No"
+	extremeharm = sanitize_text(S["extremeharm"], "No")
+	if(!length(extremeharm) || (extremepref = "No"))
+		extremeharm = "No"
 
 /datum/preferences/proc/cit_character_pref_save(savefile/S)
 	//ipcs

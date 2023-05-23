@@ -15,6 +15,7 @@
 #define DISABLE_DEATHRATTLE		(1<<12)
 #define DISABLE_ARRIVALRATTLE	(1<<13)
 #define COMBOHUD_LIGHTING		(1<<14)
+#define VERB_CONSENT			(1<<15)
 // Gap in prefs between tg and fortune13 prefs.
 #define SPLIT_ADMIN_TABS (1<<23)
 

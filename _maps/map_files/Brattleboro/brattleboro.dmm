@@ -3506,7 +3506,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "bTG" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -8737,7 +8737,7 @@
 	},
 /area/f13/village)
 "fLj" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
@@ -8989,7 +8989,7 @@
 	},
 /area/f13/village)
 "fWn" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
 "fWp" = (
@@ -10694,7 +10694,7 @@
 	},
 /area/f13/building/mall)
 "hcd" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermain2"
 	},
@@ -11835,7 +11835,7 @@
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalcorroded"
 	},
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "hWS" = (
@@ -13005,7 +13005,7 @@
 	},
 /area/f13/village)
 "iQS" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain0"
 	},
@@ -19981,7 +19981,7 @@
 	},
 /area/f13/wasteland)
 "nWu" = (
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
 	},
@@ -22821,7 +22821,7 @@
 	},
 /area/f13/village)
 "pUE" = (
-/obj/structure/campfire/barrel{
+/obj/structure/destructible/hobo_barrel{
 	pixel_y = -3;
 	pixel_x = -8
 	},
@@ -25305,7 +25305,7 @@
 /turf/closed/wall/f13/store,
 /area/f13/building/mall)
 "rFO" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2left"
 	},
@@ -26187,7 +26187,7 @@
 	},
 /area/f13/wasteland)
 "slV" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/gravel{
 	dir = 1
 	},
@@ -27261,7 +27261,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
 "tdT" = (
-/obj/structure/campfire/barrel{
+/obj/structure/destructible/hobo_barrel{
 	pixel_x = -9
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -32029,7 +32029,7 @@
 	},
 /area/f13/wasteland)
 "wzx" = (
-/obj/structure/campfire/barrel{
+/obj/structure/destructible/hobo_barrel{
 	pixel_y = -8
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -32996,7 +32996,7 @@
 	},
 /area/f13/village)
 "xif" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermain1"
 	},
@@ -33077,7 +33077,7 @@
 	},
 /area/f13/building/mall)
 "xkV" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "xlc" = (

@@ -1512,7 +1512,7 @@
 /obj/effect/decal/waste{
 	icon_state = "goo10"
 	},
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "bUv" = (
@@ -2471,7 +2471,7 @@
 /area/f13/vault)
 "den" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -4363,7 +4363,7 @@
 /turf/open/floor/f13,
 /area/f13/city)
 "fnZ" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 10;
 	icon_state = "dirt"
@@ -6350,7 +6350,7 @@
 	},
 /area/f13/bunker)
 "hJK" = (
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -7835,7 +7835,7 @@
 	},
 /area/f13/ahs)
 "jwW" = (
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -8243,7 +8243,7 @@
 	},
 /area/f13/bunker)
 "jXb" = (
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "jXe" = (
@@ -10481,7 +10481,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "mAA" = (
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess2"
 	},
@@ -12654,7 +12654,7 @@
 	},
 /area/f13/tunnel)
 "oYB" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "oZg" = (
@@ -13658,7 +13658,7 @@
 /obj/effect/decal/waste{
 	icon_state = "goo10"
 	},
-/obj/structure/reagent_dispensers/barrel/old,
+/obj/structure/reagent_dispensers/barrel,
 /turf/open/floor/plating,
 /area/f13/bunker)
 "qcK" = (
@@ -13796,7 +13796,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "qjS" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -14312,9 +14312,6 @@
 	},
 /turf/open/floor/plasteel/neutral,
 /area/f13/vault)
-"qSc" = (
-/turf/open/indestructible/ground/outside/sidewalk,
-/area/f13/bunker)
 "qSv" = (
 /obj/machinery/shower{
 	dir = 4
@@ -19976,7 +19973,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault)
 "xOb" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -20043,10 +20040,6 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "xRK" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot{
-	health = 550;
-	name = "annihilator sentry bot"
-	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/bunker)
 "xSi" = (
@@ -23133,10 +23126,10 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -23389,12 +23382,12 @@ shC
 shC
 shC
 sor
-qSc
 xRK
-qSc
 xRK
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -23645,14 +23638,14 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
 ylO
-qSc
+xRK
 uOD
-qSc
+xRK
 sor
 shC
 shC
@@ -23901,16 +23894,16 @@ shC
 shC
 shC
 sor
-qSc
-qSc
+xRK
+xRK
 iSf
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -24158,17 +24151,17 @@ shC
 shC
 sor
 gDA
-qSc
+xRK
 aOD
-qSc
-qSc
+xRK
+xRK
 bMw
-qSc
-qSc
+xRK
+xRK
 tLA
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -24414,17 +24407,17 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
+xRK
 iSf
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
 aOD
-qSc
+xRK
 dzK
 sor
 shC
@@ -24671,18 +24664,18 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -24928,18 +24921,18 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
 tLA
-qSc
+xRK
 vBM
-qSc
-qSc
+xRK
+xRK
 bMw
-qSc
+xRK
 tLA
-qSc
+xRK
 sor
 shC
 shC
@@ -25186,16 +25179,16 @@ shC
 shC
 shC
 sor
-qSc
-qSc
+xRK
+xRK
 ylO
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -25444,14 +25437,14 @@ shC
 shC
 shC
 sor
-qSc
-qSc
+xRK
+xRK
 dsR
-qSc
-qSc
+xRK
+xRK
 ylO
-qSc
-qSc
+xRK
+xRK
 sor
 shC
 shC
@@ -25702,12 +25695,12 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC
@@ -25960,10 +25953,10 @@ shC
 shC
 shC
 sor
-qSc
-qSc
-qSc
-qSc
+xRK
+xRK
+xRK
+xRK
 sor
 shC
 shC

@@ -847,7 +847,7 @@
 	},
 /area/f13/building/mall)
 "bOm" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/floor/plating/rust,
 /area/f13/building/mall)
 "bSx" = (
@@ -2429,7 +2429,7 @@
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
 "frJ" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -2977,7 +2977,7 @@
 	},
 /area/f13/building)
 "guV" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/caves)
 "guX" = (
@@ -4401,7 +4401,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "jDA" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jDR" = (
@@ -9335,7 +9335,7 @@
 	},
 /area/f13/village)
 "vCM" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
@@ -9597,7 +9597,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
 "wpC" = (
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
 "wpO" = (
@@ -10082,7 +10082,7 @@
 "xxv" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/fluff/railing,
-/obj/structure/campfire/barrel,
+/obj/structure/destructible/hobo_barrel,
 /turf/open/transparent/openspace,
 /area/f13/village)
 "xyg" = (

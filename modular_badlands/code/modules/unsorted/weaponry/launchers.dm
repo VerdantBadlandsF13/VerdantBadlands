@@ -34,12 +34,8 @@ Properly dangerous.
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
 		if(istype(victim) && victim.stat != DEAD)
 			victim.rad_act(12500)//I'm sorry, little one. :(
-
 	new /obj/effect/temp_visual/explosion(get_turf(target))
-	return BULLET_ACT_HIT
-
-	radiation_pulse(src, 3500) //General rad pulse. Stacks with the above.
-
+	radiation_pulse(src, 3500)
 	spawn(15)//brief delay on creating rad decals.
 		for(var/turf/open/turf in view(src,2))//Probably too little?
 			if(istype(turf))
@@ -47,6 +43,7 @@ Properly dangerous.
 				if(!WS)
 					WS = new/obj/effect/decal/waste(turf)
 
+	return BULLET_ACT_HIT
 	qdel(src)
 
 /obj/item/gun/ballistic/fatman

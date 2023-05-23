@@ -41,4 +41,7 @@
 	//flavor text
 	WRITE_FILE(S["feature_flavor_text"], features["flavor_text"])
 	WRITE_FILE(S["silicon_feature_flavor_text"], features["silicon_flavor_text"])
+	//ERP prefs
+	WRITE_FILE(S["extremepref"], extremepref)
+	WRITE_FILE(S["extremeharm"], extremeharm)
 

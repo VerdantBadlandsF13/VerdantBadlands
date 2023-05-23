@@ -3739,6 +3739,7 @@
 #include "interface\skin.dmf"
 #include "modular_badlands\code\modules\lewd_code\_readme.dm"
 #include "modular_badlands\code\modules\lewd_code\preferences_toggles.dm"
+#include "modular_badlands\code\modules\lewd_code\unholy_mobs.dm"
 #include "modular_badlands\code\modules\lewd_code\interactions\_interaction.dm"
 #include "modular_badlands\code\modules\lewd_code\interactions\interaction_definitions.dm"
 #include "modular_badlands\code\modules\lewd_code\interactions\interaction_interface.dm"

@@ -100,6 +100,7 @@
 /obj/item/organ/genital/penis/genital_examine(mob/user)
 	. = list()
 	var/lowershape = lowertext(shape)
+	if(user?.client?.prefs?.toggles)
 		. |= "<span class='notice'>You see [aroused_state ? "an erect" : "a flaccid"] [lowershape] [name]. You estimate it's about [round(length, 0.1)] inch[round(length, 0.1) != 1 ? "es" : ""] long and [round(diameter, 0.1)] inch[round(diameter, 0.1) != 1 ? "es" : ""] in diameter.</span>"
 
 /obj/item/organ/genital/penis/get_features(mob/living/carbon/human/H)

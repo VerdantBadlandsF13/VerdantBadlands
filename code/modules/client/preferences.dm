@@ -2214,7 +2214,7 @@ Records disabled until a use for them is found
 					var/max_D = CONFIG_GET(number/penis_max_inches_prefs)
 					var/new_length = input(user, "Penis length in inches:\n([min_D]-[max_D])", "Character Preference") as num|null
 					if(new_length)
-						features["cock_length"] = clamp(round(new_length), min_D, max_D)
+						features["cock_length"] = clamp(round(new_length, 0.1), min_D, max_D)
 
 				if("cock_shape")
 					var/new_shape
@@ -2631,6 +2631,24 @@ Records disabled until a use for them is found
 				if("publicity")
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
+
+				if("extremepref") //i hate myself for doing this
+					switch(extremepref) //why the fuck did this need to use cycling instead of input from a list
+						if("Yes")		//seriously this confused me so fucking much
+							extremepref = "Ask"
+						if("Ask")
+							extremepref = "No"
+							extremeharm = "No"
+						if("No")
+							extremepref = "Yes"
+				if("extremeharm")
+					switch(extremeharm)
+						if("Yes")	//this is cursed code
+							extremeharm = "No"
+						if("No")
+							extremeharm = "Yes"
+					if(extremepref == "No")
+						extremeharm = "No"
 
 				if("body_model")
 					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE

@@ -118,7 +118,7 @@
 	if(LAZYLEN(internal_organs) && CHECK_BITFIELD(user.client?.prefs.cit_toggles, GENITAL_EXAMINE))
 		for(var/obj/item/organ/genital/dicc in internal_organs)
 			if(istype(dicc) && dicc.is_exposed())
-				. += "[dicc.desc]"
+				. |= dicc.genital_examine(user)
 	//END OF CIT CHANGES
 
 	//Jitters
@@ -148,6 +148,12 @@
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
 	var/list/msg = list()
+
+	if(client && client.prefs)
+		if(client.prefs.toggles & VERB_CONSENT)
+			. += "[t_His] player has allowed lewd verbs.\n"
+		else
+			. += "[t_His] player has not allowed lewd verbs.\n"
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()

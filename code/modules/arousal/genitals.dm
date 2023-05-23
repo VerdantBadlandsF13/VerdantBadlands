@@ -63,7 +63,7 @@
 /obj/item/organ/genital/proc/is_exposed()
 	if(!owner || genital_flags & (GENITAL_INTERNAL|GENITAL_HIDDEN))
 		return FALSE
-	/* skyrat edit
+
 	if(genital_flags & GENITAL_UNDIES_HIDDEN && ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		if(!(NO_UNDERWEAR in H.dna.species.species_traits))
@@ -71,7 +71,7 @@
 			var/datum/sprite_accessory/underwear/bottom/B = H.hidden_underwear ? null : GLOB.underwear_list[H.underwear]
 			if(zone == BODY_ZONE_CHEST ? (T?.covers_chest || B?.covers_chest) : (T?.covers_groin || B?.covers_groin))
 				return FALSE
-	*/
+
 	if(genital_flags & GENITAL_THROUGH_CLOTHES)
 		return TRUE
 
@@ -105,7 +105,7 @@
 	set desc = "Allows you to toggle which genitals should show through clothes or not."
 
 	if(stat != CONSCIOUS)
-		to_chat(usr, "<span class='warning'>You can toggle genitals visibility right now...</span>")
+		to_chat(usr, "<span class='warning'>You can't toggle genitals visibility right now...</span>")
 		return
 
 	var/list/genital_list = list()

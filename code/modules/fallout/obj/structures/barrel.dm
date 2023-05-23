@@ -20,7 +20,7 @@
 	icon_state = "three_c"
 	tank_volume = 1500
 
-/obj/structure/reagent_dispensers/barrel/c
+/obj/structure/reagent_dispensers/barrel/four
 	name = "four old barrels"
 	icon_state = "four_c"
 	tank_volume = 2000

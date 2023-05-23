@@ -34,17 +34,15 @@ Properly dangerous.
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
 		if(istype(victim) && victim.stat != DEAD)
 			victim.rad_act(12500)//I'm sorry, little one. :(
-	new /obj/effect/temp_visual/explosion(get_turf(target))
+	new /obj/effect/temp_visual/explosion/nuke(get_turf(target))
 	radiation_pulse(src, 3500)
-	spawn(15)//brief delay on creating rad decals.
-		for(var/turf/open/turf in view(src,2))//Probably too little?
-			if(istype(turf))
-				var/obj/effect/decal/waste/WS = locate() in turf.contents
-				if(!WS)
-					WS = new/obj/effect/decal/waste(turf)
-
-	return BULLET_ACT_HIT
+	for(var/turf/open/turf in view(src,2))//Probably too little?
+		if(istype(turf))
+			var/obj/effect/decal/waste/WS = locate() in turf.contents
+			if(!WS)
+				WS = new/obj/effect/decal/waste(turf)
 	qdel(src)
+	return BULLET_ACT_HIT
 
 /obj/item/gun/ballistic/fatman
 	name = "\improper Fat Man"

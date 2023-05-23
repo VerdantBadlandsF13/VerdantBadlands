@@ -23,10 +23,9 @@
 /obj/item/radio/proc/play_change_freq()
 	var/radtune_sound = "modular_badlands/code/modules/rp_misc/sound/radio/radiohiss.ogg"
 	playsound(src, radtune_sound, rand(20, 30))
-	play_receive_transmission()
 
 // Receiving a message provides feedback.
-// Not used as of current in its intended form. It's hooked into frequency change.
+// Not used as of current in its intended form.
 /obj/item/radio/proc/play_receive_transmission()
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	playsound(src, radrec_sound, rand(20, 30))
@@ -41,18 +40,19 @@ Ignore it, if possible.
 #define BREATH_COOLDOWN 300 // By default, thirty seconds.
 // Audio for breathing, when stamina is low.
 // TODO: Extend breathing audio to standard states, not just low stamina?
-/mob/living/carbon/proc/handle_stamina_sounds(mob/living/M, var/last_breath = 0)
+/mob/living/carbon/proc/handle_stamina_sounds(mob/living/M)
+	var/last_breath = 0
 	if(last_breath+BREATH_COOLDOWN > world.time)
 		return
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
 		handle_crit_stamina_sound()
 		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
-		last_breath = world.time + 30 SECONDS
+		last_breath = world.time + 300
 		return
 	if(getStaminaLoss() > STAMINA_LOW)
 		handle_low_stamina_sound()
 		to_chat(src, span_warning("You're becoming winded. Take a break."))
-		last_breath = world.time + 60 SECONDS
+		last_breath = world.time + 600
 		return
 
 /mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)

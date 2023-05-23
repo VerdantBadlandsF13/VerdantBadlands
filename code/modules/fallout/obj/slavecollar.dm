@@ -107,7 +107,7 @@ Here you go.
 			tagname = t
 			name = "[initial(name)] - [t]"
 		return
-	if(istype(W, /obj/item/clothing/head/helmet))``````` //lazy method of denying this
+	if(istype(W, /obj/item/clothing/head/helmet))//lazy method of denying this
 		return
 /*	if(istype(W, /obj/item/key/bcollar)) //SCRAPPING FOR NOW
 		if(lock != FALSE)

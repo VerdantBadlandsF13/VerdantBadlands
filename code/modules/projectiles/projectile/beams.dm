@@ -307,10 +307,6 @@
 	is_reflectable = TRUE
 	pixels_per_second = TILES_TO_PIXELS(50)
 
-//Securitrons Beam
-/obj/item/projectile/beam/laser/pistol/ultraweak
-	damage = 15 //quantity over quality
-
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem
 	name = "plasma bolt"
@@ -337,6 +333,13 @@
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
+
+//Sentrybot Gatling
+/obj/item/projectile/beam/laser/lasgun/hitscan/sentrybot
+	damage = 15
+	armour_penetration = 0.3
+	wound_bonus = 45
+	bare_wound_bonus = 50
 
 /obj/item/projectile/beam/laser/lasgun/hitscan/recharger //it's blue now
 	name = "recharger beam"

@@ -313,7 +313,7 @@ MINIMUM_SECBORG_ALERT 0
 #ROUNDSTART_AWAY
 
 ## Uncomment to load one of the virtual reality levels from vr_config at roundstart.
-ROUNDSTART_VR
+#ROUNDSTART_VR
 
 ## How long the delay is before the Away Mission gate opens. Default is half an hour.
 ## 600 is one minute.
@@ -680,4 +680,4 @@ BODY_SIZE_SLOWDOWN_MULTIPLIER 0
 
 ## Enables the FoV component, which hides objects and mobs behind the parent from their sight, unless they turn around, duh.
 ## Camera mobs, AIs, ghosts and some other are of course exempt from this. This also doesn't influence simplemob AI, for the best.
-#USE_FIELD_OF_VISION
+USE_FIELD_OF_VISION

@@ -44,12 +44,11 @@
 			new_size = 1
 		if(7 to 11) //If large
 			new_size = 2
-		if(12 to 20) //If massive
+		if(12 to 36) //If massive
 			new_size = 3
-		if(21 to 34) //If massive and due for large effects
-			new_size = 3
-		if(35 to INFINITY) //If comical
+		if(37 to INFINITY) //If comical
 			new_size = 4 //no new sprites for anything larger yet
+
 	if(linked_organ)
 		linked_organ.size = clamp(size + new_size, BALLS_SIZE_MIN, BALLS_SIZE_MAX)
 		linked_organ.update()
@@ -64,7 +63,7 @@
 	diameter = (length * diameter_ratio)//Is it just me or is this ludicous, why not make it exponentially decay?
 
 
-/obj/item/organ/genital/penis/update_appearance()
+/obj/item/organ/genital/penis/update_appearance_genitals()
 	. = ..()
 	var/datum/sprite_accessory/S = GLOB.cock_shapes_list[shape]
 	var/icon_shape = S ? S.icon_state : "human"
@@ -72,7 +71,7 @@
 	var/lowershape = lowertext(shape)
 
 	if(owner)
-		if(owner.dna.species.use_skintones)
+		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
 			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
 				var/mob/living/carbon/human/H = owner // only human mobs have skin_tone, which we need.
 				color = SKINTONE2HEX(H.skin_tone)
@@ -89,7 +88,7 @@
 
 /obj/item/organ/genital/penis/get_features(mob/living/carbon/human/H)
 	var/datum/dna/D = H.dna
-	if(D.species.use_skintones)
+	if(D.species.use_skintones && D.features["genitals_use_skintone"])
 		color = SKINTONE2HEX(H.skin_tone)
 	else
 		color = "#[D.features["cock_color"]]"

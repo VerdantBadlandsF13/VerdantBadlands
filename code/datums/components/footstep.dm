@@ -149,6 +149,7 @@
 			L[turf_footstep][2] * volume,
 			TRUE,
 			L[turf_footstep][3] + e_range)
+
 //fortuna edit. power armor sound check proc
 /datum/component/footstep/proc/powerarmorcheck()
 	var/mob/living/carbon/human/P = parent

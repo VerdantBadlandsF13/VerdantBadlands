@@ -80,50 +80,6 @@
 		return
 	return try_cover_with(I, user)
 
-//the nests themselves
-/*
-	var/list/cazadors 	= list(/mob/living/simple_animal/hostile/cazador = 5,
-					/mob/living/simple_animal/hostile/cazador/young = 3,)
-
-	var/list/ghouls 	= list(/mob/living/simple_animal/hostile/ghoul = 5,
-					/mob/living/simple_animal/hostile/ghoul/reaver = 3,
-					/mob/living/simple_animal/hostile/ghoul/glowing = 1)
-
-	var/list/deathclaw 	= list(/mob/living/simple_animal/hostile/deathclaw = 19,
-					/mob/living/simple_animal/hostile/deathclaw/mother = 1)
-
-	var/list/scorpion	= list(/mob/living/simple_animal/hostile/radscorpion = 1,
-					/mob/living/simple_animal/hostile/radscorpion/black = 1)
-
-	var/list/radroach	= list(/mob/living/simple_animal/hostile/radroach = 1)
-
-	var/list/fireant	= list(/mob/living/simple_animal/hostile/fireant = 1,
-					/mob/living/simple_animal/hostile/giantant = 1)
-
-	var/list/wanamingo 	= list(/mob/living/simple_animal/hostile/alien = 1)
-
-	var/list/molerat	= list(/mob/living/simple_animal/hostile/molerat = 1)
-
-	var/list/mirelurk	= list(/mob/living/simple_animal/hostile/mirelurk = 2,
-					/mob/living/simple_animal/hostile/mirelurk/hunter = 1,
-					/mob/living/simple_animal/hostile/mirelurk/baby = 5)
-
-	var/list/raider		= list(/mob/living/simple_animal/hostile/raider = 5,
-					/mob/living/simple_animal/hostile/raider/firefighter = 2,
-					/mob/living/simple_animal/hostile/raider/baseball = 2,
-					/mob/living/simple_animal/hostile/raider/ranged = 2,
-					/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 1,
-					/mob/living/simple_animal/hostile/raider/ranged/biker = 1,
-					/mob/living/simple_animal/hostile/raider/ranged/boss = 1,
-					/mob/living/simple_animal/hostile/raider/legendary = 1)
-
-	var/list/protectron	= list(/mob/living/simple_animal/hostile/handy/protectron = 5,
-					/mob/living/simple_animal/hostile/handy = 3)
-
-	var/list/cazador	= list(/mob/living/simple_animal/hostile/cazador = 5,
-					/mob/living/simple_animal/hostile/cazador/young = 3,)
-
-*/
 /obj/structure/nest/ghoul
 	name = "ghoul nest"
 	max_mobs = 10
@@ -166,7 +122,7 @@
 /obj/structure/nest/wanamingo
 	name = "wanamingo nest"
 	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/alien = 1)
+	mob_types = list(/mob/living/simple_animal/hostile/wanamingo = 1)
 
 /obj/structure/nest/molerat
 	name = "molerat nest"
@@ -219,17 +175,10 @@
 
 /obj/structure/nest/protectron
 	name = "protectron pod"
-	desc = "An old robot storage system. This one looks like it is connected to space underground."
+	desc = "An old robot storage system. This one looks like it is connected to a storage system underground."
 	max_mobs = 3
 	icon_state = "scanner_modified"
 	mob_types = list(/mob/living/simple_animal/hostile/handy/protectron = 5)
-
-/obj/structure/nest/securitron
-	name = "securitron pod"
-	desc = "An old securitron containment pod system. This one looks like it is connected to a storage system underground."
-	max_mobs = 3
-	icon_state = "scanner_modified"
-	mob_types = list(/mob/living/simple_animal/hostile/securitron = 5)
 
 /obj/structure/nest/assaultron
 	name = "assaultron pod"
@@ -289,15 +238,7 @@
 	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/stalker = 5,
 					/mob/living/simple_animal/hostile/stalkeryoung = 5)
-/*
-//Event Nests
-/obj/structure/nest/zombieghoul
-	name = "ravenous ghoul nest"
-	max_mobs = 5
-	mob_types = list(/mob/living/simple_animal/hostile/ghoul/zombie = 5,
-					/mob/living/simple_animal/hostile/ghoul/zombie/reaver = 3,
-					/mob/living/simple_animal/hostile/ghoul/zombie/glowing = 1)
-*/
+
 /obj/structure/nest/tunneler
 	name = "tunneler tunnel"
 	desc = "A tunnel which leads to an underground network of even more tunnels, made by the dangerous tunnelers."

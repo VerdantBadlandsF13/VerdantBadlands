@@ -334,12 +334,14 @@ heavy rifle calibers (12.7, 14mm, 7.62): Uranium, Contaminated, Incin
 
 //////////////////////////
 // 5 MM minigun special //
+// Intended for SB use  //
 //////////////////////////
 
-/obj/item/projectile/bullet/c5mm
-	damage = 19
-	armour_penetration = 0.5
-
+/obj/item/projectile/bullet/sb5mm
+	damage = 16
+	wound_bonus = 64
+	bare_wound_bonus = 32
+	armour_penetration = 0.6
 
 /////////////////////////
 //2 MM ELECTROMAGNETIC //

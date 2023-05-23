@@ -47,32 +47,9 @@
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/three)
 
-/mob/living/simple_animal/hostile/handy/playable
-	health = 300
-	maxHealth = 300
-	attack_verb_simple = "shoots a burst of flame at"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	ranged = FALSE
-
 /mob/living/simple_animal/hostile/handy/Initialize()
 	. = ..()
 	add_overlay("eyes-[initial(icon_state)]")
-
-/mob/living/simple_animal/hostile/handy/nsb //NSB + Raider Bunker specific
-	name = "mr.handy"
-	aggro_vision_range = 15
-	faction = list("raider")
-	obj_damage = 300
 
 /mob/living/simple_animal/hostile/handy/gutsy
 	name = "mr. gutsy"
@@ -100,31 +77,6 @@
 
 	aggrosound = list('sound/f13npc/gutsy/aggro1.ogg', 'sound/f13npc/gutsy/aggro2.ogg', 'sound/f13npc/gutsy/aggro3.ogg', 'sound/f13npc/gutsy/aggro4.ogg', 'sound/f13npc/gutsy/aggro5.ogg', 'sound/f13npc/gutsy/aggro6.ogg')
 	idlesound = list('sound/f13npc/gutsy/idle1.ogg', 'sound/f13npc/gutsy/idle2.ogg', 'sound/f13npc/gutsy/idle3.ogg')
-
-/mob/living/simple_animal/hostile/handy/gutsy/playable
-	health = 340
-	maxHealth = 340
-	speed = 1
-	attack_verb_simple = "shoots a burst of flame at"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 2 //can break lockers, but not walls
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	dextrous = TRUE
-	ranged = FALSE
-
-/mob/living/simple_animal/hostile/handy/gutsy/nsb //NSB + Raider Bunker specific
-	name = "mr. gutsy"
-	aggro_vision_range = 15
-	faction = list("raider")
-	obj_damage = 300
 
 /mob/living/simple_animal/hostile/handy/liberator
 	name = "liberator"
@@ -180,7 +132,7 @@
 	melee_damage_upper = 72//why would you even get close?
 	extra_projectiles = 0
 	ranged_cooldown_time = 12//big ol' 'fuck off' laser
-	stat_attack = UNCONSCIOUS || SOFT_CRIT
+	stat_attack = UNCONSCIOUS
 	ranged = TRUE
 	retreat_distance = 6
 	minimum_distance = 8
@@ -210,7 +162,6 @@
 		M.confused = max(M.confused, 8)
 		M.hallucination += 15
 
-
 /mob/living/simple_animal/hostile/handy/robobrain/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		CRASH("[src] robobrain invoked bullet_act() without a projectile")
@@ -239,14 +190,6 @@
 	. = ..()
 	summon_backup(15)
 
-/mob/living/simple_animal/hostile/handy/robobrain/nsb //NSB + Raider Bunker specific
-	name = "robobrain"
-	aggro_vision_range = 15
-	faction = list("raider")
-	obj_damage = 300
-	health = 300
-	maxHealth = 300
-
 /mob/living/simple_animal/hostile/handy/protectron
 	name = "protectron"
 	desc = "A pre-war security robot armed with deadly lasers."
@@ -257,10 +200,9 @@
 	health = 130
 	maxHealth = 130
 	speed = 4
-	melee_damage_lower = 5 //severely reduced melee damage here because its silly to have a ranged mob also be a cqc master
-	melee_damage_upper = 10
-	extra_projectiles = 0 //removed extra projectiles to make these easier to deal with on super lowpop
-	stat_attack = CONSCIOUS
+	melee_damage_lower = 15
+	melee_damage_upper = 25
+	extra_projectiles = 2
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
@@ -270,6 +212,7 @@
 	projectiletype = /obj/item/projectile/beam/laser/pistol
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
+	stat_attack = UNCONSCIOUS
 	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five)
 
 	emote_taunt_sound = list('sound/f13npc/protectron/taunt1.ogg', 'sound/f13npc/protectron/taunt2.ogg', 'sound/f13npc/protectron/taunt3.ogg')
@@ -277,32 +220,6 @@
 
 	aggrosound = list('sound/f13npc/protectron/aggro1.ogg', 'sound/f13npc/protectron/aggro2.ogg', 'sound/f13npc/protectron/aggro3.ogg', 'sound/f13npc/protectron/aggro4.ogg')
 	idlesound = list('sound/f13npc/protectron/idle1.ogg', 'sound/f13npc/protectron/idle2.ogg', 'sound/f13npc/protectron/idle3.ogg', 'sound/f13npc/protectron/idle4.ogg',)
-
-/mob/living/simple_animal/hostile/handy/protectron/playable
-	ranged = FALSE
-	melee_damage_lower = 35
-	melee_damage_upper = 45
-	health = 400
-	maxHealth = 400
-	speed = 2
-	attack_verb_simple = "clamps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	environment_smash = 1 //can break lockers, but not walls
-	wander = FALSE
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-
-/mob/living/simple_animal/hostile/handy/protectron/nsb //NSB + Raider Bunker specific
-	name = "protectron"
-	aggro_vision_range = 15
-	faction = list("raider")
-	obj_damage = 300
 
 /mob/living/simple_animal/pet/dog/protectron //Not an actual dog
 	name = "Trading Protectron"
@@ -350,44 +267,3 @@
 
 	aggrosound = FALSE
 	idlesound = FALSE
-
-/mob/living/simple_animal/hostile/handy/assaultron/nsb //NSB + Raider Bunker specific.
-	name = "assaultron"
-	aggro_vision_range = 15
-	faction = list("raider")
-	obj_damage = 300
-
-/mob/living/simple_animal/hostile/handy/assaultron/playable
-	see_in_dark = 8
-	force_threshold = 15
-	wander = 0
-	anchored = FALSE
-	del_on_death = FALSE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM, INTENT_GRAB, INTENT_DISARM)
-	dextrous = TRUE
-	deathmessage = "abruptly shuts down, falling to the ground!"
-
-/mob/living/simple_animal/hostile/handy/assaultron/playable/medical
-	name = "SA-S-E"
-	desc = "An Assaultron modified for the Medical field, SA-S-E forgoes the weaponry and deadliness of her military countarparts to save lives. Painted white with blue highlights, and a blue cross on the front of her visor, this robot comes equipped with what looks like modified medical gear. Her head has no eye-laser, instead a gently pulsing blue eye that scans people the analyze their health, a defibrilator on her back, and articulated hands to be able to use the myriad medical tools strapped to parts of her body under protective cases all show this model is meant to save lives. She's stockier than other Assaultrons due to all the added gear, and her legs seem much thicker than normal due to reinforced servos and gears."
-	icon_state = "assaultron_sase"
-	icon_dead = "assaultron_sase_dead"
-
-//Junkers
-/mob/living/simple_animal/hostile/handy/gutsy/flamer
-	name = "Mr. Burnsy"
-	desc = "A modified mr. gutsy, equipped with a more precise flamer, ditching it's plasma weaponry."
-	color = "#B85C00"
-	projectilesound = 'sound/magic/fireball.ogg'
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
-	extra_projectiles = 1
-
-/mob/living/simple_animal/hostile/handy/assaultron/laser
-	name = "red eye assaultron"
-	desc = "A modified assaultron. It's eye has been outfitted with a deadly laser."
-	color = "#B85C00"
-	ranged = TRUE
-	retreat_distance = null
-	minimum_distance = 1
-	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/lasgun

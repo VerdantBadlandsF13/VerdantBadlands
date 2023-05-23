@@ -234,7 +234,7 @@
 			surgeries += beep
 
 /obj/item/disk/surgery/bighorn
-	name = "bighorn surgery disk"
+	name = "Brattleboro surgery disk"
 	surgeries = list(	/datum/surgery/advanced/lobotomy,
 						/datum/surgery/advanced/reconstruction)
 

@@ -1,8 +1,8 @@
 	// Custom NCRCF Jacket FLUFF ITEM >> Balanced around the standard kevlar vest.
 
 /obj/item/clothing/suit/toggle/labcoat/abeljacket
-	name = "modified NCRCF jacket"
-	desc = "A modified NCR Correctional Facility inmate jacket, sporting the added protection of a ballistic vest and the added utility of a bandolier and leather shoulderpad."
+	name = "modified jacket"
+	desc = "A modified jacket, sporting the added protection of a ballistic vest and the added utility of a bandolier and leather shoulderpad."
 	icon = 'modular_sunset/icons/mob/clothing/abel_jacket.dmi'
 	icon_state = "abeljacket"
 	item_state = "abeljacket"
@@ -16,8 +16,8 @@
 	// Custom NCR Officer Vest FLUFF ITEM >> Balanced around the standard NCR Officer Vest.
 
 /obj/item/clothing/suit/armor/f13/ncrarmor/bellacoat
-	name = "Grizzled Campaign Coat"
-	desc = "An old custom fitted NCR coat rarely used anymore given it's old age and design featuring custom stitchwork, additional protective padding, lenghtier sizing and a higher collar. Anyone waering this has been around a while."
+	name = "campaign coat"
+	desc = "An old custom coat rarely used anymore given it's old age and design featuring custom stitchwork, additional protective padding,  upsizing and a higher collar. The owner has clearly been around a while."
 	icon = 'modular_sunset/icons/mob/clothing/abel_jacket.dmi'
 	icon_state = "bellacoat"
 	item_state = "bellacoat"

@@ -209,10 +209,10 @@
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
 	//fortuna addition. list of random names for the roundend news author
-	var/list/publisher = list("Bighorn Publishing","Brotherhood News","Wyoming Publishing","FEV News")
+	var/list/publisher = list("Mountain Boy News","Vermont Publishing")
 	//tell the nice people on discord what went on before the salt cannon happens.
 	// send2chat sending the new round ping off
-	send2chat(" <@&922230570791108628> ", CONFIG_GET(string/discord_channel_serverstatus))
+	send2chat(" <@&1100493376207462464> ", CONFIG_GET(string/discord_channel_serverstatus))
 	world.TgsTargetedChatBroadcast("The current round has ended. Please standby for your [pick(publisher)] report!", FALSE)
 	//lonestar edit. i'm adding a timer here because i'm tired of the messages being sent out of order
 	addtimer(CALLBACK(src, .proc/send_roundinfo), 3 SECONDS)

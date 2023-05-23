@@ -58,6 +58,7 @@
 	SEND_SIGNAL(src, COMSIG_RADIO_NEW_FREQUENCY, args)
 	remove_radio(src, frequency)
 	frequency = add_radio(src, new_frequency)
+	play_change_freq()// Plays the audio.
 
 /obj/item/radio/proc/recalculateChannels()
 	channels = list()
@@ -406,20 +407,20 @@
 			to_chat(user, "<span class='notice'>The radio can no longer be modified or attached!</span>")
 	else
 		return ..()
-/*
+
 /obj/item/radio/emp_act(severity)
 	. = ..()
 	if (. & EMP_PROTECT_SELF)
 		return
 	if(prob(severity * 1.5))
-		if(listening && ismob(loc))	// if the radio is turned on and on someone's person they notice
+		if(listening && ismob(loc))// if the radio is turned on and on someone's person they notice
 			to_chat(loc, "<span class='warning'>\The [src] shorts out!</span>")
 		broadcasting = FALSE
 		listening = FALSE
 		for (var/ch_name in channels)
 			channels[ch_name] = 0
 		on = FALSE
-*/
+
 ///////////////////////////////
 //////////Borg Radios//////////
 ///////////////////////////////

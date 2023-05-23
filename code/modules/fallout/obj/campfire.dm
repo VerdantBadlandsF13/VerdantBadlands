@@ -134,12 +134,6 @@
 	icon_state = "campfire21"
 	fuel = 999999999
 
-/obj/structure/campfire/barrel
-	name = "steel drum firepit"
-	desc = "A campfire made out of an old steel drum. You're not going to fall into the fire, but you feel like a hobo using it. Which you are."
-	icon_state = "drumfire"
-	density = 1
-
 /obj/structure/campfire/stove
 	name = "pot belly stove"
 	desc = "A warm stove, for cooking food, or keeping warm in the winter. It's really old fashioned, but works wonders when there's no electricity."

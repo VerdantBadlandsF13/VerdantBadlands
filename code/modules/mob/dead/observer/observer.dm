@@ -788,7 +788,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	return 1
 
 /mob/dead/observer/verb/view_manifest()
-	set name = "View Crew Manifest"
+	set name = "View Vermont Census"
 	set category = "Ghost"
 
 	if(!client)
@@ -798,8 +798,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	client.crew_manifest_delay = world.time + (1 SECONDS)
 
 	var/dat
-	dat += "<h4>Crew Manifest</h4>"
-	dat += GLOB.data_core.get_manifest_dr()
+	dat += "<h4>Vermont Census</h4>"
+	dat += GLOB.data_core.get_manifest_vb()
 
 	src << browse(dat, "window=manifest;size=387x420;can_close=1")
 

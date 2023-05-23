@@ -101,8 +101,19 @@
 		new /obj/effect/hotspot(location)
 		location.hotspot_expose(700, 50, 1)
 
+// Sentrybot utilised. Perhaps expand later? - Carl
+/obj/item/projectile/bullet/rocket/a84mm_he/sb_missile
+	name ="\improper missile (HE)"
+	desc = "OH GOD OH FUCK."
+	damage = 62
+	armour_penetration = 0.42
+	shrapnel_magnitude = 12
 
-
+/obj/item/projectile/bullet/rocket/a84mm_he/sb_missile/on_hit(atom/target, blocked=0)
+	..()
+	explosion(target, 0, 1, 2, 4)
+	new /obj/effect/temp_visual/explosion(get_turf(target))
+	return BULLET_ACT_HIT
 
 /////////////////////////////////////////////
 //Not getting the below outside admin abuse./

@@ -99,11 +99,19 @@
 	appearance_flags = PLANE_MASTER //should use client color
 	blend_mode = BLEND_OVERLAY
 
+/obj/screen/plane_master/objitem/Initialize()
+	. = ..()
+	add_filter("vision_cone", 100, list(type="alpha", render_source=FIELD_OF_VISION_RENDER_TARGET, flags=MASK_INVERSE))
+
 /obj/screen/plane_master/mob
 	name = "mob plane master"
 	plane = MOB_PLANE
 	appearance_flags = PLANE_MASTER //should use client color
 	blend_mode = BLEND_OVERLAY
+
+/obj/screen/plane_master/mob/Initialize()
+	. = ..()
+	add_filter("vision_cone", 100, list(type="alpha", render_source=FIELD_OF_VISION_RENDER_TARGET, flags=MASK_INVERSE))
 
 //Reserved to chat messages, so they are still displayed above the field of vision masking.
 /obj/screen/plane_master/chat_messages

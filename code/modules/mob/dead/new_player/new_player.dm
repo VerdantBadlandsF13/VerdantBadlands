@@ -61,8 +61,8 @@
 		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Refresh)</a></p>"
 		output += "<p><a href='byond://?src=[REF(src)];refresh_chat=1)'>(Fix Chat Window)</a></p>"
 	else
-		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>View the Crew Manifest</a></p>"
-		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Join Game!</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];manifest=1'>View the Vermont Census</a></p>"
+		output += "<p><a href='byond://?src=[REF(src)];late_join=1'>Embark</a></p>"
 		output += "<p>[LINKIFY_READY("Observe", PLAYER_READY_TO_OBSERVE)]</p>"
 		output += "<p><a href='byond://?src=[REF(src)];refresh_chat=1)'>(Fix Chat Window)</a></p>"
 
@@ -639,8 +639,8 @@
 	client.crew_manifest_delay = world.time + (1 SECONDS)
 
 	var/dat = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'></head><body>"
-	dat += "<h4>Crew Manifest</h4>"
-	dat += GLOB.data_core.get_manifest_dr(OOC = 1)
+	dat += "<h4>Vermont Census</h4>"
+	dat += GLOB.data_core.get_manifest_vb(OOC = 1)
 
 	src << browse(dat, "window=manifest;size=387x420;can_close=1")
 

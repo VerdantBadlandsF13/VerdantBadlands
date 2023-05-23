@@ -9,6 +9,7 @@
 	var/hidden_underwear = FALSE
 	var/hidden_undershirt = FALSE
 	var/hidden_socks = FALSE
+	var/arousal_rate = 1
 
 //Mob procs
 /mob/living/carbon/human/verb/underwear_toggle()
@@ -20,36 +21,41 @@
 		return
 	if(confirm == "Top")
 		hidden_undershirt = !hidden_undershirt
+		log_message("[hidden_undershirt ? "removed" : "put on" ] [p_their()] undershirt.", LOG_EMOTE)
 
 	if(confirm == "Bottom")
 		hidden_underwear = !hidden_underwear
+		log_message("[hidden_underwear ? "removed" : "put on"] [p_their()] underwear.", LOG_EMOTE)
 
 	if(confirm == "Socks")
 		hidden_socks = !hidden_socks
+		log_message("[hidden_socks ? "removed" : "put on"] [p_their()] socks.", LOG_EMOTE)
 
 	if(confirm == "All")
 		var/on_off = (hidden_undershirt || hidden_underwear || hidden_socks) ? FALSE : TRUE
 		hidden_undershirt = on_off
 		hidden_underwear = on_off
 		hidden_socks = on_off
+		log_message("[on_off ? "removed" : "put on"] all [p_their()] undergarments.", LOG_EMOTE)
 
 	update_body(TRUE)
 
 
-/mob/living/carbon/human/proc/adjust_arousal(strength,aphro = FALSE,maso = FALSE) // returns all genitals that were adjust
+/mob/living/carbon/human/proc/adjust_arousal(strength, cause = "manual toggle", aphro = FALSE,maso = FALSE) // returns all genitals that were adjust
 	var/list/obj/item/organ/genital/genit_list = list()
 	if(!client?.prefs.arousable || (aphro && (client?.prefs.cit_toggles & NO_APHRO)) || (maso && !HAS_TRAIT(src, TRAIT_MASO)))
 		return // no adjusting made here
+	var/enabling = strength > 0
 	for(var/obj/item/organ/genital/G in internal_organs)
-		if(G.genital_flags & GENITAL_CAN_AROUSE && !G.aroused_state && prob(strength*G.sensitivity))
-			G.set_aroused_state(strength > 0)
-			G.update_appearance()
+		if(G.genital_flags & GENITAL_CAN_AROUSE && !G.aroused_state && prob(abs(strength)*G.sensitivity * arousal_rate))
+			G.set_aroused_state(enabling,cause)
+			G.update_appearance_genitals()
 			if(G.aroused_state)
 				genit_list += G
 	return genit_list
 
 /obj/item/organ/genital/proc/climaxable(mob/living/carbon/human/H, silent = FALSE) //returns the fluid source (ergo reagents holder) if found.
-	if(CHECK_BITFIELD(genital_flags, GENITAL_FLUID_PRODUCTION))
+	if((genital_flags & GENITAL_FLUID_PRODUCTION))
 		. = reagents
 	else
 		if(linked_organ)
@@ -64,10 +70,11 @@
 		return
 	var/turfing = isturf(target)
 	G.generate_fluid(R)
+	log_message("Climaxed using [G] with [target]", LOG_EMOTE)
 	if(spill && R.total_volume >= 5)
 		R.reaction(turfing ? target : target.loc, TOUCH, 1, 0)
 	if(!turfing)
-		R.trans_to(target, R.total_volume * (spill ? G.fluid_transfer_factor : 1))
+		R.trans_to(target, R.total_volume * (spill ? G.fluid_transfer_factor : 1), log = TRUE)
 	G.last_orgasmed = world.time
 	R.clear_reagents()
 
@@ -110,6 +117,8 @@
 		if(!do_after(src, mb_time, target = src) || !in_range(src, container) || !G.climaxable(src, TRUE))
 			return
 	to_chat(src,"<span class='userlove'>You used your [G.name] to fill [container].</span>")
+	message_admins("[ADMIN_LOOKUPFLW(src)] used their [G.name] to fill [container].")
+	log_consent("[key_name(src)] used their [G.name] to fill [container].")
 	do_climax(fluid_source, container, G, FALSE)
 
 /mob/living/carbon/human/proc/pick_climax_genitals(silent = FALSE)
@@ -117,7 +126,7 @@
 	var/list/worn_stuff = get_equipped_items()
 
 	for(var/obj/item/organ/genital/G in internal_organs)
-		if(CHECK_BITFIELD(G.genital_flags, CAN_CLIMAX_WITH) && G.is_exposed(worn_stuff)) //filter out what you can't masturbate with
+		if((G.genital_flags & CAN_CLIMAX_WITH) && G.is_exposed(worn_stuff)) //filter out what you can't masturbate with
 			LAZYADD(genitals_list, G)
 	if(LAZYLEN(genitals_list))
 		var/obj/item/organ/genital/ret_organ = input(src, "with what?", "Climax", null) as null|obj in genitals_list
@@ -137,7 +146,7 @@
 			partners -= L
 		if(iscarbon(L))
 			var/mob/living/carbon/C = L
-			if(!C.exposed_genitals.len && !C.is_groin_exposed() && !C.is_chest_exposed()) //Nothing through_clothing, no proper partner.
+			if(!C.exposed_genitals.len && !C.is_groin_exposed() && !C.is_chest_exposed() && C.is_mouth_covered()) //Nothing through_clothing, no proper partner.
 				partners -= C
 	//NOW the list should only contain correct partners
 	if(!partners.len)
@@ -151,8 +160,8 @@
 		if(consenting == "Yes")
 			return target
 		else
-			message_admins("[src] tried to climax with [target], but [target] did not consent.")
-			log_consent("[src] tried to climax with [target], but [target] did not consent.")
+			message_admins("[ADMIN_LOOKUPFLW(src)] tried to climax with [target], but [target] did not consent.")
+			log_consent("[key_name(src)] tried to climax with [target], but [target] did not consent.")
 
 /mob/living/carbon/human/proc/pick_climax_container(silent = FALSE)
 	var/list/containers_list = list()
@@ -171,8 +180,26 @@
 	else if(!silent)
 		to_chat(src, "<span class='warning'>You cannot do this without an appropriate container.</span>")
 
+/mob/living/carbon/human/proc/available_rosie_palms(silent = FALSE, list/whitelist_typepaths = list(/obj/item/dildo))
+	if(restrained(TRUE)) //TRUE ignores grabs
+		if(!silent)
+			to_chat(src, "<span class='warning'>You can't do that while restrained!</span>")
+		return FALSE
+	if(!get_num_arms() || !get_empty_held_indexes())
+		if(whitelist_typepaths)
+			if(!islist(whitelist_typepaths))
+				whitelist_typepaths = list(whitelist_typepaths)
+			for(var/path in whitelist_typepaths)
+				if(is_holding_item_of_type(path))
+					return TRUE
+		if(!silent)
+			to_chat(src, "<span class='warning'>You need at least one free arm.</span>")
+		return FALSE
+	return TRUE
+
 //Here's the main proc itself
-/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE) //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
+/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE,cause = "") //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
+	set waitfor = FALSE
 	if(mb_cd_timer > world.time)
 		if(!forced_climax) //Don't spam the message to the victim if forced to come too fast
 			to_chat(src, "<span class='warning'>You need to wait [DisplayTimeText((mb_cd_timer - world.time), TRUE)] before you can do that again!</span>")
@@ -185,32 +212,10 @@
 			to_chat(src, "<span class='warning'>You can't do that while dead!</span>")
 		return
 	if(forced_climax) //Something forced us to cum, this is not a masturbation thing and does not progress to the other checks
+		log_message("was forced to climax by [cause]",LOG_EMOTE)
 		for(var/obj/item/organ/genital/G in internal_organs)
-			if(!CHECK_BITFIELD(G.genital_flags, CAN_CLIMAX_WITH)) //Skip things like wombs and testicles
+			if(!(G.genital_flags & CAN_CLIMAX_WITH)) //Skip things like wombs and testicles
 				continue
-			var/mob/living/partner
-			var/check_target
-			var/list/worn_stuff = get_equipped_items()
-
-			if(G.is_exposed(worn_stuff))
-				if(pulling) //Are we pulling someone? Priority target, we can't be making option menus for this, has to be quick
-					if(isliving(pulling)) //Don't fuck objects
-						check_target = pulling
-				if(pulledby && !check_target) //prioritise pulled over pulledby
-					if(isliving(pulledby))
-						check_target = pulledby
-				//Now we should have a partner, or else we have to come alone
-				if(check_target)
-					if(iscarbon(check_target)) //carbons can have clothes
-						var/mob/living/carbon/C = check_target
-						if(C.exposed_genitals.len || C.is_groin_exposed() || C.is_chest_exposed()) //Are they naked enough?
-							partner = C
-					else //A cat is fine too
-						partner = check_target
-				if(partner) //Did they pass the clothing checks?
-					mob_climax_partner(G, partner, mb_time = 0) //Instant climax due to forced
-					continue //You've climaxed once with this organ, continue on
-			//not exposed OR if no partner was found while exposed, climax alone
 			mob_climax_outside(G, mb_time = 0) //removed climax timer for sudden, forced orgasms
 		//Now all genitals that could climax, have.
 		//Since this was a forced climax, we do not need to continue with the other stuff
@@ -223,8 +228,42 @@
 		return
 
 	//Ok, now we check what they want to do.
-	var/choice = input(src, "Select sexual activity", "Sexual activity:") as null|anything in list("Climax with partner")
+	var/choice = input(src, "Select sexual activity", "Sexual activity:") as null|anything in list("Climax alone","Climax with partner", "Fill container")
 	if(!choice)
 		return
 
+	switch(choice)
+		if("Climax alone")
+			if(!available_rosie_palms())
+				return
+			var/obj/item/organ/genital/picked_organ = pick_climax_genitals()
+			if(picked_organ && available_rosie_palms(TRUE))
+				mob_climax_outside(picked_organ)
+		if("Climax with partner")
+			//We need no hands, we can be restrained and so on, so let's pick an organ
+			var/obj/item/organ/genital/picked_organ = pick_climax_genitals()
+			if(picked_organ)
+				var/mob/living/partner = pick_partner() //Get someone
+				if(partner)
+					var/spillage = input(src, "Would your fluids spill outside?", "Choose overflowing option", "Yes") as null|anything in list("Yes", "No")
+					if(spillage && in_range(src, partner))
+						mob_climax_partner(picked_organ, partner, spillage == "Yes" ? TRUE : FALSE)
+		if("Fill container")
+			//We'll need hands and no restraints.
+			if(!available_rosie_palms(FALSE, /obj/item/reagent_containers))
+				return
+			//We got hands, let's pick an organ
+			var/obj/item/organ/genital/picked_organ
+			picked_organ = pick_climax_genitals() //Gotta be climaxable, not just masturbation, to fill with fluids.
+			if(picked_organ)
+				//Good, got an organ, time to pick a container
+				var/obj/item/reagent_containers/fluid_container = pick_climax_container()
+				if(fluid_container && available_rosie_palms(TRUE, /obj/item/reagent_containers))
+					mob_fill_container(picked_organ, fluid_container)
 	mb_cd_timer = world.time + mb_cd_length
+
+/mob/living/carbon/human/verb/climax_verb()
+	set category = "IC"
+	set name = "Climax"
+	set desc = "Lets you choose a couple ways to ejaculate."
+	mob_climax()

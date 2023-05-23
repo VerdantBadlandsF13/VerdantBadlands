@@ -1,8 +1,6 @@
 /datum/wound/loss
 	name = "Dismembered"
 	desc = "oof ouch!!"
-
-	sound_effect = 'sound/effects/dismember.ogg'
 	severity = WOUND_SEVERITY_LOSS
 	threshold_minimum = 180
 	status_effect_type = null

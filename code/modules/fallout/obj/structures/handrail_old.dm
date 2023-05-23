@@ -7,6 +7,7 @@
 	density = 0
 	anchored = 1
 	pixel_y = 0
+	layer = WALL_OBJ_LAYER
 
 /obj/structure/handrail/g_central/New()
 	layer = 4.2

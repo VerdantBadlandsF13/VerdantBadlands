@@ -97,6 +97,7 @@
 /mob/living/carbon/proc/bleed(amt)
 	if(blood_volume)
 		blood_volume = max(blood_volume - amt, 0)
+		handle_blood_drip_sound()
 		if(isturf(src.loc)) //Blood loss still happens in locker, floor stays clean
 			if(amt >= 10)
 				add_splatter_floor(src.loc)

@@ -25,7 +25,7 @@
 /obj/item/organ/genital/testicles/upon_link()
 	size = linked_organ.size
 	update_size()
-	update_appearance()
+	update_appearance_genitals()
 
 /obj/item/organ/genital/testicles/update_size(modified = FALSE)
 	switch(size)
@@ -38,14 +38,14 @@
 		else
 			size_name = "nonexistant"
 
-/obj/item/organ/genital/testicles/update_appearance()
+/obj/item/organ/genital/testicles/update_appearance_genitals()
 	. = ..()
 	desc = "You see an [size_name] pair of testicles."
 	var/datum/sprite_accessory/S = GLOB.balls_shapes_list[shape]
 	var/icon_shape = S ? S.icon_state : "single"
 	icon_state = "testicles_[icon_shape]_[size]"
 	if(owner)
-		if(owner.dna.species.use_skintones)
+		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
 			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
 				var/mob/living/carbon/human/H = owner // only human mobs have skin_tone, which we need.
 				color = SKINTONE2HEX(H.skin_tone)
@@ -56,7 +56,7 @@
 
 /obj/item/organ/genital/testicles/get_features(mob/living/carbon/human/H)
 	var/datum/dna/D = H.dna
-	if(D.species.use_skintones)
+	if(D.species.use_skintones && D.features["genitals_use_skintone"])
 		color = SKINTONE2HEX(H.skin_tone)
 	else
 		color = "#[D.features["balls_color"]]"

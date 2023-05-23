@@ -174,3 +174,9 @@
 	plane = LIGHTING_PLANE
 	blend_mode = BLEND_ADD
 	show_when_dead = TRUE
+
+// Reintroduction of fuzz from sad states.
+/obj/screen/fullscreen/depression
+	icon_state = "depression"
+	layer = FLASH_LAYER
+	plane = FULLSCREEN_PLANE

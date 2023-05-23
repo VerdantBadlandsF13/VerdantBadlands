@@ -33,18 +33,22 @@
 	linked_organ = null
 	. = ..()
 
-/obj/item/organ/genital/proc/set_aroused_state(new_state)
+/obj/item/organ/genital/on_life()
+	return
+
+/obj/item/organ/genital/proc/set_aroused_state(new_state,cause = "manual toggle")
 	if(!(genital_flags & GENITAL_CAN_AROUSE))
 		return FALSE
 	if(!((HAS_TRAIT(owner,TRAIT_PERMABONER) && !new_state) || HAS_TRAIT(owner,TRAIT_NEVERBONER) && new_state))
 		aroused_state = new_state
+	owner.log_message("[src]'s arousal was [new_state ? "enabled" : "disabled"] due to [cause]", LOG_EMOTE)
 	return aroused_state
 
 /obj/item/organ/genital/proc/update()
 	if(QDELETED(src))
 		return
 	update_size()
-	update_appearance()
+	update_appearance_genitals()
 	if(genital_flags & UPDATE_OWNER_APPEARANCE && owner && ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		H.update_genitals()
@@ -82,11 +86,19 @@
 		if(GEN_VISIBLE_ALWAYS)
 			genital_flags |= GENITAL_THROUGH_CLOTHES
 			if(owner)
+				owner.log_message("Exposed their [src]",LOG_EMOTE)
 				owner.exposed_genitals += src
+		if(GEN_VISIBLE_NO_CLOTHES)
+			if(owner)
+				owner.log_message("Hid their [src] under clothes only",LOG_EMOTE)
 		if(GEN_VISIBLE_NO_UNDIES)
 			genital_flags |= GENITAL_UNDIES_HIDDEN
+			if(owner)
+				owner.log_message("Hid their [src] under underwear",LOG_EMOTE)
 		if(GEN_VISIBLE_NEVER)
 			genital_flags |= GENITAL_HIDDEN
+			if(owner)
+				owner.log_message("Hid their [src] completely",LOG_EMOTE)
 
 	if(update && owner && ishuman(owner)) //recast to use update genitals proc
 		var/mob/living/carbon/human/H = owner
@@ -97,9 +109,13 @@
 	set name = "Expose/Hide genitals"
 	set desc = "Allows you to toggle which genitals should show through clothes or not."
 
+	if(stat != CONSCIOUS)
+		to_chat(usr, "<span class='warning'>You can toggle genitals visibility right now...</span>")
+		return
+
 	var/list/genital_list = list()
 	for(var/obj/item/organ/genital/G in internal_organs)
-		if(!CHECK_BITFIELD(G.genital_flags, GENITAL_INTERNAL))
+		if(!(G.genital_flags & GENITAL_INTERNAL))
 			genital_list += G
 	if(!genital_list.len) //There is nothing to expose
 		return
@@ -112,7 +128,7 @@
 			picked_organ.toggle_visibility(picked_visibility)
 	return
 
-/*/mob/living/carbon/verb/toggle_arousal_state()
+/mob/living/carbon/verb/toggle_arousal_state()
 	set category = "IC"
 	set name = "Toggle genital arousal"
 	set desc = "Allows you to toggle which genitals are showing signs of arousal."
@@ -131,8 +147,11 @@
 			to_chat(src,"<span class='userlove'>[picked_organ.aroused_state ? picked_organ.arousal_verb : picked_organ.unarousal_verb].</span>")
 		else
 			to_chat(src,"<span class='userlove'>You can't make that genital [picked_organ.aroused_state ? "unaroused" : "aroused"]!</span>")
-		picked_organ.update_appearance()
-	return*/
+		picked_organ.update_appearance_genitals()
+		if(ishuman(src))
+			var/mob/living/carbon/human/human = src
+			human.update_genitals()
+	return
 
 
 /obj/item/organ/genital/proc/modify_size(modifier, min = -INFINITY, max = INFINITY)
@@ -143,7 +162,7 @@
 /obj/item/organ/genital/proc/update_size()
 	return
 
-/obj/item/organ/genital/proc/update_appearance()
+/obj/item/organ/genital/proc/update_appearance_genitals()
 	if(!owner || owner.stat == DEAD)
 		aroused_state = FALSE
 
@@ -180,7 +199,7 @@
 	. = ..()
 	if(.)
 		update()
-		RegisterSignal(owner, COMSIG_MOB_DEATH, .proc/update_appearance)
+		RegisterSignal(owner, COMSIG_MOB_DEATH, .proc/update_appearance_genitals)
 		if(genital_flags & GENITAL_THROUGH_CLOTHES)
 			owner.exposed_genitals += src
 
@@ -212,6 +231,8 @@
 		give_genital(/obj/item/organ/genital/breasts)
 	if(dna.features["has_cock"])
 		give_genital(/obj/item/organ/genital/penis)
+	if(dna.features["has_butt"])
+		give_genital(/obj/item/organ/genital/butt)
 
 /mob/living/carbon/human/proc/give_genital(obj/item/organ/genital/G)
 	if(!dna || (NOGENITALS in dna.species.species_traits) || getorganslot(initial(G.slot)))
@@ -269,6 +290,8 @@
 					S = GLOB.vagina_shapes_list[G.shape]
 				if(/obj/item/organ/genital/breasts)
 					S = GLOB.breasts_shapes_list[G.shape]
+				if(/obj/item/organ/genital/butt)
+					S = GLOB.butt_shapes_list[G.shape]
 
 			if(!S || S.icon_state == "none")
 				continue
@@ -289,7 +312,7 @@
 			if(do_center)
 				genital_overlay = center_image(genital_overlay, dim_x, dim_y)
 
-			if(dna.species.use_skintones)
+			if(dna.species.use_skintones && dna.features["genitals_use_skintone"])
 				genital_overlay.color = SKINTONE2HEX(skin_tone)
 			else
 				switch(S.color_src)
@@ -301,6 +324,8 @@
 						genital_overlay.color = "#[dna.features["breasts_color"]]"
 					if("vag_color")
 						genital_overlay.color = "#[dna.features["vag_color"]]"
+					if("butt_color")
+						genital_overlay.color = "#[dna.features["butt_color"]]"
 
 			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
 
@@ -324,24 +349,36 @@
 
 //Checks to see if organs are new on the mob, and changes their colours so that they don't get crazy colours.
 /mob/living/carbon/human/proc/emergent_genital_call()
-	if(!client?.prefs?.arousable)
+	if(!client.prefs.arousable)
 		return FALSE
 
 	var/organCheck = locate(/obj/item/organ/genital) in internal_organs
 	var/breastCheck = getorganslot(ORGAN_SLOT_BREASTS)
 	var/willyCheck = getorganslot(ORGAN_SLOT_PENIS)
+	var/buttCheck = getorganslot(ORGAN_SLOT_BUTT)
+	var/ballCheck = getorganslot(ORGAN_SLOT_TESTICLES)
 
 	if(organCheck == FALSE)
-		if(src.dna.species.fixed_mut_color)
+		if(ishuman(src) && dna.species.use_skintones)
+			dna.features["genitals_use_skintone"] = TRUE
+		if(dna.species.fixed_mut_color)
 			dna.features["cock_color"] = "[dna.species.fixed_mut_color]"
 			dna.features["breasts_color"] = "[dna.species.fixed_mut_color]"
+			dna.features["butt_color"] = "[dna.species.fixed_mut_color]"
+			dna.features["testicles_color"] = "[dna.species.fixed_mut_color]"
 			return
 		//So people who haven't set stuff up don't get rainbow surprises.
 		dna.features["cock_color"] = "[dna.features["mcolor"]]"
 		dna.features["breasts_color"] = "[dna.features["mcolor"]]"
+		dna.features["butt_color"] = "[dna.features["mcolor"]]"
+		dna.features["testicles_color"] = "[dna.features["mcolor"]]"
 	else //If there's a new organ, make it the same colour.
 		if(breastCheck == FALSE)
 			dna.features["breasts_color"] = dna.features["cock_color"]
 		else if (willyCheck == FALSE)
 			dna.features["cock_color"] = dna.features["breasts_color"]
+		else if (buttCheck == FALSE)
+			dna.features["butt_color"] = dna.features["butt_color"]
+		else if (ballCheck == FALSE)
+			dna.features["testicles_color"] = dna.features["testicles_color"]
 	return TRUE

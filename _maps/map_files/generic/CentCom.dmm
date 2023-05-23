@@ -1,20 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /turf/open/space/basic,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ab" = (
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ac" = (
 /obj/structure/window/reinforced,
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ad" = (
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ae" = (
 /turf/open/space/transit,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "af" = (
 /turf/open/floor/holofloor/snow,
 /area/holodeck/rec_center/winterwonderland)
@@ -23,7 +23,7 @@
 	dir = 4
 	},
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ah" = (
 /obj/structure/foamedmetal,
 /obj/structure/window{
@@ -119,7 +119,7 @@
 	dir = 8
 	},
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "aw" = (
 /turf/closed/indestructible/rock,
 /area/vertibird_interior)
@@ -371,7 +371,7 @@
 	dir = 8
 	},
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "bk" = (
 /obj/effect/holodeck_effect/mobspawner/bee,
 /turf/open/floor/holofloor/asteroid,
@@ -1227,11 +1227,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1253,11 +1253,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1268,11 +1268,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
+	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1889,7 +1889,7 @@
 	width = 3
 	},
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "fy" = (
 /obj/machinery/igniter/on,
 /obj/effect/turf_decal/delivery,
@@ -2167,6 +2167,12 @@
 	},
 /turf/open/floor/f13,
 /area/vertibird_interior)
+"gs" = (
+/obj/vertibird,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/vertibird_interior/temp)
 "gt" = (
 /obj/item/book/granter/trait/pilot,
 /turf/open/floor/f13{
@@ -2180,7 +2186,7 @@
 /turf/closed/indestructible/fakedoor{
 	name = "CentCom Warehouse"
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "gZ" = (
 /obj/machinery/computer/camera_advanced/verti,
 /turf/open/floor/f13{
@@ -2439,11 +2445,11 @@
 	name = "cargo display"
 	},
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iG" = (
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iH" = (
 /obj/machinery/light{
 	dir = 8
@@ -2483,7 +2489,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iO" = (
 /obj/machinery/light{
 	dir = 1
@@ -2491,12 +2497,12 @@
 /turf/open/floor/plasteel/brown{
 	dir = 1
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iP" = (
 /turf/open/floor/plasteel/brown{
 	dir = 1
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iQ" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -2505,14 +2511,10 @@
 /turf/open/floor/plasteel/brown{
 	dir = 5
 	},
-/area/f13/underground/mountain)
-"iR" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iS" = (
 /turf/open/floor/plasteel/neutral,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iT" = (
 /turf/closed/indestructible/fakedoor{
 	name = "Thunderdome Admin"
@@ -2540,12 +2542,12 @@
 /turf/open/floor/plasteel/brown{
 	dir = 4
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/sign/warning/vacuum/external,
 /turf/open/floor/plating,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "iZ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -2555,7 +2557,7 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ja" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/light{
@@ -2572,12 +2574,12 @@
 /turf/open/floor/plasteel/brown{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jc" = (
 /turf/open/floor/plasteel/yellowsiding{
 	dir = 1
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jd" = (
 /obj/machinery/light{
 	dir = 4
@@ -2585,7 +2587,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 4
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "je" = (
 /obj/machinery/door/poddoor{
 	id = "XCCQMLoaddoor2";
@@ -2599,7 +2601,7 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jf" = (
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line,
@@ -2608,7 +2610,7 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jg" = (
 /obj/machinery/computer/secure_data,
 /obj/effect/turf_decal/stripes/line,
@@ -2653,7 +2655,7 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jl" = (
 /obj/effect/turf_decal/stripes/end,
 /obj/machinery/conveyor/inverted{
@@ -2661,24 +2663,24 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jm" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jn" = (
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jo" = (
 /obj/item/stack/packageWrap,
 /obj/item/hand_labeler,
 /obj/structure/table,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jp" = (
 /obj/machinery/door/airlock/external{
 	name = "Supply Shuttle";
@@ -2688,24 +2690,24 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jq" = (
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jr" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "js" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jt" = (
 /obj/machinery/button/door{
 	id = "XCCQMLoaddoor";
@@ -2726,13 +2728,13 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "ju" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jv" = (
 /obj/structure/filingcabinet/security,
 /obj/effect/turf_decal/stripes/line{
@@ -2750,7 +2752,7 @@
 "jy" = (
 /obj/machinery/status_display,
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jz" = (
 /obj/structure/flora/tree/jungle/small,
 /turf/open/floor/grass,
@@ -2787,7 +2789,7 @@
 	width = 3
 	},
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jD" = (
 /obj/machinery/door/poddoor{
 	id = "XCCQMLoaddoor";
@@ -2801,7 +2803,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jE" = (
 /obj/structure/plasticflaps,
 /obj/machinery/conveyor{
@@ -2810,7 +2812,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jF" = (
 /obj/structure/flora/tree/joshua,
 /turf/open/floor/grass,
@@ -2845,7 +2847,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jJ" = (
 /obj/effect/turf_decal/stripes/end{
 	dir = 1
@@ -2855,18 +2857,18 @@
 	id = "XCCQMLoad2"
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jL" = (
 /obj/structure/closet/wardrobe/cargotech,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jM" = (
 /obj/machinery/conveyor_switch/oneway{
 	dir = 8;
@@ -2876,7 +2878,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jN" = (
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/machinery/airalarm{
@@ -2885,15 +2887,15 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jP" = (
 /turf/open/floor/plasteel/brown{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jQ" = (
 /turf/open/floor/plasteel/yellowsiding,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "jR" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -3010,7 +3012,7 @@
 "kj" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/brown,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "kk" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -3040,7 +3042,7 @@
 /area/centcom/evac)
 "kw" = (
 /turf/open/floor/plasteel/brown,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "kx" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -3185,12 +3187,12 @@
 	pixel_y = -26
 	},
 /turf/open/floor/plasteel/brown,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lo" = (
 /turf/open/floor/plasteel/brown{
 	dir = 6
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lp" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Shuttle Control Office";
@@ -3198,7 +3200,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lq" = (
 /obj/machinery/door/airlock/centcom{
 	name = "CentCom Supply";
@@ -3206,7 +3208,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lr" = (
 /obj/machinery/status_display/ai,
 /turf/closed/wall/f13/vault,
@@ -3282,13 +3284,13 @@
 /area/vertibird_interior)
 "lI" = (
 /turf/open/indestructible/binary,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lJ" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lK" = (
 /obj/machinery/computer/auxillary_base{
 	pixel_y = 32
@@ -3300,7 +3302,7 @@
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "lL" = (
 /obj/structure/table/wood,
 /obj/item/taperecorder,
@@ -3410,14 +3412,14 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mc" = (
 /obj/machinery/computer/shuttle/mining,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "md" = (
 /obj/machinery/light{
 	dir = 1
@@ -3429,12 +3431,12 @@
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "me" = (
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mf" = (
 /obj/machinery/airalarm{
 	dir = 8;
@@ -3444,12 +3446,12 @@
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mg" = (
 /turf/open/floor/plasteel/brown{
 	dir = 9
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mh" = (
 /obj/machinery/airalarm{
 	dir = 8;
@@ -3458,11 +3460,11 @@
 /turf/open/floor/plasteel/brown{
 	dir = 5
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mi" = (
 /obj/machinery/status_display/ai,
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mj" = (
 /obj/machinery/computer/cargo{
 	dir = 4
@@ -3471,7 +3473,7 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mk" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -3514,7 +3516,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 9
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mE" = (
 /obj/machinery/button/flasher{
 	id = "tdomeflash"
@@ -3531,7 +3533,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 1
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mG" = (
 /obj/structure/noticeboard{
 	dir = 8;
@@ -3540,7 +3542,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 5
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mH" = (
 /obj/machinery/computer/security/mining{
 	dir = 4
@@ -3549,16 +3551,16 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mI" = (
 /turf/open/floor/plasteel/brown{
 	dir = 10
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mJ" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel/brown,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "mK" = (
 /obj/item/storage/briefcase{
 	pixel_x = -3;
@@ -3678,7 +3680,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nm" = (
 /obj/item/clipboard,
 /obj/item/stamp/denied{
@@ -3690,7 +3692,7 @@
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nn" = (
 /obj/machinery/keycard_auth{
 	pixel_y = -24
@@ -3702,7 +3704,7 @@
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "no" = (
 /obj/machinery/newscaster/security_unit{
 	pixel_y = -32
@@ -3714,7 +3716,7 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "np" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light{
@@ -3816,14 +3818,14 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nE" = (
 /obj/machinery/light,
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nF" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -3836,7 +3838,7 @@
 /turf/open/floor/plasteel/vault{
 	dir = 4
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nG" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -3845,7 +3847,7 @@
 /turf/open/floor/plasteel/brown{
 	dir = 6
 	},
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "nH" = (
 /obj/vehicle/ridden/atv,
 /turf/open/floor/plasteel,
@@ -5025,7 +5027,7 @@
 /area/centcom/evac)
 "rb" = (
 /turf/closed/indestructible/rock,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "rk" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/drinkingglasses,
@@ -5437,7 +5439,7 @@
 /area/centcom/evac)
 "sE" = (
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "sF" = (
 /obj/structure/cable/white{
 	icon_state = "1-4"
@@ -5449,7 +5451,7 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "sH" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -5571,7 +5573,7 @@
 /area/centcom/evac)
 "tc" = (
 /turf/closed/wall/f13/tunnel,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "td" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
@@ -5580,13 +5582,13 @@
 "tj" = (
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/inside/subway,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "tk" = (
 /turf/closed/wall/f13,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "tl" = (
 /turf/open/indestructible/ground/inside/subway,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "tm" = (
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/inside/subway,
@@ -6311,7 +6313,7 @@
 	width = 3
 	},
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "vf" = (
 /turf/open/floor/plasteel/blue/side,
 /area/centcom/evac)
@@ -6336,7 +6338,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "vo" = (
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/o2{
@@ -6809,7 +6811,7 @@
 	width = 5
 	},
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "xc" = (
 /turf/closed/wall/f13,
 /area/centcom/evac)
@@ -6940,7 +6942,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "yr" = (
 /obj/machinery/light/small/broken{
 	dir = 1
@@ -7354,13 +7356,10 @@
 /area/centcom/evac)
 "BP" = (
 /turf/closed/indestructible/opshuttle,
-/area/f13/underground/mountain)
-"BT" = (
-/turf/open/floor/plasteel/dark,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "BU" = (
 /turf/open/floor/plasteel/stairs,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "BZ" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -7853,13 +7852,13 @@
 "FU" = (
 /obj/structure/speaking_tile,
 /turf/closed/mineral/ash_rock,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "Ga" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Gb" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
@@ -7890,7 +7889,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Gu" = (
 /obj/structure/destructible/tribal_torch/lit,
 /obj/structure/barricade/sandbags,
@@ -7914,7 +7913,7 @@
 	pixel_y = -25
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "GB" = (
 /obj/machinery/camera{
 	c_tag = "Communications Relay";
@@ -7922,7 +7921,7 @@
 	network = list("mine")
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "GG" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 9
@@ -7946,7 +7945,7 @@
 /obj/machinery/light,
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Hf" = (
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/one)
@@ -7959,7 +7958,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Hl" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -7972,7 +7971,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Hq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -7996,7 +7995,7 @@
 	},
 /obj/machinery/light,
 /turf/open/floor/plating/f13/inside/mountain,
-/area/f13/tcoms)
+/area/f13/admeme)
 "HB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood/poker,
@@ -8528,11 +8527,11 @@
 	dir = 1
 	},
 /turf/closed/indestructible/riveted,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "KM" = (
 /obj/effect/landmark/shuttle_import,
 /turf/open/space/basic,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "KN" = (
 /obj/structure/window/reinforced,
 /obj/structure/shuttle/engine/heater{
@@ -8710,7 +8709,7 @@
 	width = 20
 	},
 /turf/open/space,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "Lt" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/centcom/evac)
@@ -8911,7 +8910,7 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/inside/subway,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "NY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line,
@@ -9037,7 +9036,7 @@
 	width = 5
 	},
 /turf/open/indestructible/ground/inside/subway,
-/area/f13/underground/mountain)
+/area/f13/admeme)
 "QD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/decoration/rag,
@@ -9094,10 +9093,10 @@
 /turf/closed/wall/r_wall/f13superstore{
 	icon_state = "supermart0"
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "RM" = (
 /turf/closed/wall/r_wall,
-/area/f13/tcoms)
+/area/f13/admeme)
 "RO" = (
 /obj/structure/bed/old,
 /obj/effect/decal/remains/human,
@@ -9113,13 +9112,13 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "RU" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/yellow/side{
 	dir = 9
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "RV" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -9128,13 +9127,13 @@
 	pixel_y = 26
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "RW" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sb" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -9142,7 +9141,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sc" = (
 /obj/machinery/computer/message_monitor{
 	dir = 4
@@ -9150,21 +9149,21 @@
 /turf/open/floor/plasteel/yellow/side{
 	dir = 8
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "Se" = (
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sf" = (
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sg" = (
 /obj/structure/table,
 /obj/item/paper_bin,
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sh" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/indestructible/ground/inside/subway,
@@ -9177,13 +9176,13 @@
 /turf/open/floor/plasteel/yellow/side{
 	dir = 10
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sk" = (
 /obj/structure/table,
 /obj/item/folder/blue,
 /obj/item/pen/blue,
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sp" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -9193,7 +9192,7 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sq" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -9201,15 +9200,15 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sr" = (
 /obj/machinery/status_display,
 /turf/closed/wall,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Ss" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "St" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Control Room";
@@ -9217,15 +9216,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Su" = (
 /turf/open/floor/plasteel/dark,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Sz" = (
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SA" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -9237,35 +9236,35 @@
 /turf/open/floor/plasteel/vault{
 	dir = 5
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SC" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SD" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SE" = (
 /obj/effect/turf_decal/bot_white/right,
 /turf/open/floor/plasteel/vault{
 	dir = 1
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SF" = (
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SH" = (
 /obj/effect/turf_decal/bot_white/left,
 /turf/open/floor/plasteel/vault{
 	dir = 4
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SI" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -9273,7 +9272,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -9283,14 +9282,14 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SK" = (
 /obj/structure/sign/warning/securearea{
 	desc = "A warning sign which reads 'SERVER ROOM'.";
 	name = "SERVER ROOM"
 	},
 /turf/closed/wall,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SL" = (
 /obj/machinery/requests_console{
 	announcementConsole = 1;
@@ -9300,27 +9299,27 @@
 	pixel_x = 30
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SM" = (
 /obj/structure/table,
 /obj/item/multitool,
 /turf/open/floor/plasteel/yellow/side{
 	dir = 9
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SR" = (
 /obj/machinery/light_switch{
 	pixel_x = 27
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "SS" = (
 /obj/machinery/gravity_generator/main/station,
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "ST" = (
 /obj/machinery/computer/telecomms/monitor{
 	dir = 4;
@@ -9329,7 +9328,7 @@
 /turf/open/floor/plasteel/yellow/side{
 	dir = 8
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "SU" = (
 /obj/machinery/vending/wallmed{
 	pixel_x = -32
@@ -9345,21 +9344,21 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Tg" = (
 /obj/structure/table,
 /obj/item/radio/off,
 /turf/open/floor/plasteel/yellow/side{
 	dir = 10
 	},
-/area/f13/tcoms)
+/area/f13/admeme)
 "Th" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -35
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Tj" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical{
@@ -9367,7 +9366,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/plasteel,
-/area/f13/tcoms)
+/area/f13/admeme)
 "Tm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
@@ -19936,13 +19935,13 @@ aa
 aa
 rb
 BP
-BT
+Su
 BP
-BT
-BT
-BT
-BT
-BT
+Su
+Su
+Su
+Su
+Su
 BP
 rb
 aa
@@ -20193,13 +20192,13 @@ aa
 aa
 rb
 BP
-BT
+Su
 BU
-BT
-BT
-BT
-BT
-BT
+Su
+Su
+Su
+Su
+Su
 BP
 rb
 aa
@@ -20450,13 +20449,13 @@ aa
 aa
 rb
 BP
-BT
+Su
 BP
-BT
-BT
-BT
-BT
-BT
+Su
+Su
+Su
+Su
+Su
 BP
 rb
 aa
@@ -56619,19 +56618,19 @@ aa
 aa
 aa
 aa
-iR
+Ss
 je
 jp
-iR
+Ss
 jp
 jD
-iR
+Ss
 aa
 aa
 aa
 aa
-iR
-iR
+Ss
+Ss
 mi
 jy
 ab
@@ -56879,7 +56878,7 @@ aa
 iY
 jf
 jq
-iR
+Ss
 jq
 jE
 iY
@@ -56887,7 +56886,7 @@ aa
 aa
 aa
 aa
-iR
+Ss
 lJ
 mj
 mH
@@ -57132,17 +57131,17 @@ aa
 aa
 ab
 iF
-iR
-iR
+Ss
+Ss
 jk
 jp
-iR
+Ss
 jp
 jI
-iR
-iR
-iR
-iR
+Ss
+Ss
+Ss
+Ss
 iF
 ab
 lK
@@ -57401,7 +57400,7 @@ iZ
 iZ
 iG
 iG
-iR
+Ss
 mb
 iP
 mJ
@@ -57658,7 +57657,7 @@ jP
 jP
 ju
 ju
-iR
+Ss
 mc
 mF
 kw
@@ -58733,7 +58732,7 @@ gq
 gq
 gp
 gq
-gq
+gs
 gq
 gq
 go

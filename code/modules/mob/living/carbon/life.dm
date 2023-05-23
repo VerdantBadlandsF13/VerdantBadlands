@@ -507,6 +507,10 @@ GLOBAL_LIST_INIT(ballmer_windows_me_msg, list("Yo man, what if, we like, uh, put
 		bufferedstam = max(bufferedstam - drainrate, 0)
 	//END OF CIT CHANGES
 
+	// This really shouldn't be here, but it works for now. - Carl
+	handle_stamina_sounds()
+	// End of the Carlening. Or something. >:(
+
 	var/restingpwr = 1 + 4 * !CHECK_MOBILITY(src, MOBILITY_STAND)
 
 	//Dizziness

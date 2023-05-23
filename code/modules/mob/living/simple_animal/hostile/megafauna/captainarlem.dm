@@ -61,7 +61,7 @@
 		else
 			INVOKE_ASYNC(src, .proc/triple_charge)
 			visible_message("<span class='colossus'>\"<b>YOUR RIDE IS OVER MUTIE, TIME TO DIE!</b>\"</span>")
-			
+
 /mob/living/simple_animal/hostile/megafauna/captainarlem/Initialize()
 	. = ..()
 	for(var/mob/living/simple_animal/hostile/megafauna/captainarlem/B in GLOB.mob_list)
@@ -167,7 +167,7 @@
 	for(var/obj/effect/decal/remains/deadeyebot/H in range(src, 10))
 		if(prob(40))
 			new /mob/living/simple_animal/hostile/eyebot(H.loc)
-	
+
 /mob/living/simple_animal/hostile/megafauna/captainarlem/proc/self_destruct()
 	explosion(src,3,5,7,7)
 	qdel(src)

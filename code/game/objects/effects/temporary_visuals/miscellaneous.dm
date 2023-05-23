@@ -320,6 +320,22 @@
 	icon_state = "explosionfast"
 	duration = 4
 
+/obj/effect/temp_visual/explosion/nuke
+	name = "explosion"
+	icon = 'icons/effects/160x160.dmi'
+	icon_state = "epicexplosion"
+	pixel_x = -64
+	pixel_y = -64
+	duration = 17
+
+/obj/effect/temp_visual/explosion/larger
+	name = "explosion"
+	icon = 'icons/effects/160x160.dmi'
+	icon_state = "longexplosion"
+	pixel_x = -64
+	pixel_y = -64
+	duration = 24
+
 /obj/effect/temp_visual/blob
 	name = "blob"
 	icon_state = "blob_attack"

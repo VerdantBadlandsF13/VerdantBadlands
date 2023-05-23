@@ -803,13 +803,3 @@ use_mob_overlay_icon: if FALSE, it will always use the default_icon_file even if
 
 	update_inv_head()
 	update_inv_wear_mask()
-
-//fortuna edit. for applying effects to players that enter water
-/mob/living/carbon/human/update_water()
-	if(QDESTROYING(src))
-		return
-	var/depth = check_submerged()
-	if(!depth)
-		return
-	if(lying)
-		return

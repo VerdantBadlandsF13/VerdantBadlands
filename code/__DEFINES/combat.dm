@@ -72,6 +72,8 @@
 #define CHECK_STAMCRIT(mob)					((mob.combat_flags & COMBAT_FLAG_HARD_STAMCRIT)? HARD_STAMCRIT : ((mob.combat_flags & COMBAT_FLAG_SOFT_STAMCRIT)? SOFT_STAMCRIT : NOT_STAMCRIT))
 
 //stamina stuff
+///Winded. Just flavour. Lets you know you're burning stamina.
+#define STAMINA_LOW							40
 ///Threshold over which attacks start being hindered.
 #define STAMINA_NEAR_SOFTCRIT				90
 ///softcrit for stamina damage. prevents standing up, some actions that cost stamina, etc, but doesn't force a rest or stop movement

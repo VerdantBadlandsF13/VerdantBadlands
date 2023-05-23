@@ -1,119 +1,6 @@
 /*
-IN THIS DOCUMENT: Universal Gun system rules/keywords. Universal gun template and procs/vars.
-
-/////////////////////////////////////
-//UNIVERSAL GUN KEYWORDS AND SYSTEM//
-/////////////////////////////////////
-
-GENERAL
-
-	Bonuses should not go far from this framework, for non-unique stuff plus minus one or two is enough to give a good spread, considering its compounded by tinkering and attachments and ammo.
-	A reduction of 1 in burst shot delay gives a lot more effect than adding 1 damage.
-
-KEYWORDS
-
-	SINGLE ACTION REVOLVER
-	fire_delay = 6
-	spread = 1
-
-	DOUBLE ACTION REVOLVER
-	fire_delay = 5
-	spread = 1
-
-	SEMI-AUTOMATIC PISTOL
-	fire_delay = 3-5
-	spread = 2
-
-	SEMI-AUTOMATIC RIFLE
-	fire_delay = 3-6
-	spread = 1
-
-	AUTOMATIC SMG
-	fire_delay = 2.5-6
-	burst_shot_delay = 2.75
-	spread = 8-14
-
-	AUTOMATIC RIFLE
-	fire_delay = 3-6
-	burst_shot_delay = 3
-	spread = 7-12
-
-	REPEATER
-	fire_delay = 6
-	spread = 0
-
-	DOUBLE BARREL
-	fire_delay = 0.5
-	extra damage = 1
-
-	PUMP-ACTION
-	fire_delay = 7
-	extra damage = 1
-	spread = 1 (to avoid slugs being too good snipers, might need to be set to 2 for all shotguns)
-	(requires manual action to cycle)
-
-	BOLT-ACTION
-	fire_delay = 10-15
-	extra damage = 6
-	extra_speed = 800
-	spread = 0
-	(requires manual action to cycle)
-
-	PISTOL GRIP/FOLDED STOCK MALUS (For rifles, not pistols obviously)
-	recoil = 0.5
-	spread = +2 (not for shotguns)
-	w_class = WEIGHT_CLASS_NORMAL
-
-	SAWN OFF
-	recoil = 1
-	spread = 10
-	weapon_weight = WEAPON_LIGHT
-
-	LONG BARREL/LASERSIGHT
-	extra_damage = +2
-	spread = -1
-
-	SHORT BARREL
-	extra_damage = -2
-	spread = +2
-
-	HEAVY
-	recoil = 0.1
-	weapon_weight = WEAPON_MEDIUM at least (no dual wield)
-
-GENERAL RULES
-
-	SMALL GUNS
-	slowdown = 0.1-0.2
-	w_class = WEIGHT_CLASS_SMALL
-	weapon_weight = WEAPON_LIGHT - MEDIUM
-
-	MEDIUM GUNS
-	slowdown = 0.3-0.4
-	w_class = WEIGHT_CLASS_NORMAL - BULKY
-	weapon_weight = WEAPON_MEDIUM - HEAVY
-
-	RIFLES
-	slowdown = 0.5
-	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
-
-	AMMO RECOIL BASE VALUES
-	.50  recoil = 1
-	.45/70  recoil = 0.25
-
-	2-ROUND BURST
-	recoil = 0.1
-
-	3-ROUND BURST
-	recoil = 0.25
-
-	FORCE
-	Delicate, clumsy or small gun force 10
-	Pistol whip force 12
-	Rifle type force 15
-	Unusually sturdy clublike 20
-
+In this file is the parent of firearms. |
+- - - - - - - - - - - - - - - - - - - -
 ATTACHMENTS
 
 	BURST CAM
@@ -212,6 +99,7 @@ ATTACHMENTS
 	var/mutable_appearance/scope_overlay
 	var/can_scope = FALSE
 	var/scope_state = "scope"
+	var/scope_name = "scope"
 
 	var/mutable_appearance/flashlight_overlay
 	var/can_attachments = FALSE
@@ -970,14 +858,14 @@ ATTACHMENTS
 		user.client.pixel_y = world.icon_size*_y
 		RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
-		user.visible_message("<span class='notice'>[user] looks down the scope of [src].</span>", "<span class='notice'>You look down the scope of [src].</span>")
+		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)
-		user.visible_message("<span class='notice'>[user] looks up from the scope of [src].</span>", "<span class='notice'>You look up from the scope of [src].</span>")
+		user.visible_message("<span class='notice'>[user] looks up from the [src.scope_name] of [src].</span>", "<span class='notice'>You look up from the [src.scope_name] of [src].</span>")
 		RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/on_walk) //Extra proc to make sure your zoom resets for bug where you don't unzoom when toggling while moving
 
 /obj/item/gun/proc/on_walk(mob/living/user)

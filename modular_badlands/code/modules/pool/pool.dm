@@ -181,16 +181,7 @@ For our purposes, it's effectively just for rivers / standing water. Potentially
 		return TRUE
 	if(H.head && !(CS.clothing_flags & THICKMATERIAL))
 		return TRUE
-/*
-/turf/open/indestructible/sound/pool/singularity_act() // Pool's closed
-	playsound(src, 'modular_badlands/code/modules/pool/sound/splosh.ogg', 100, 1) // Slourmping up all the pool water is very sploshy.
-	visible_message(span_warning("The pool's water is sucked into the singularity!"))
-	for(var/turf/open/indestructible/sound/pool/water in get_area_turfs(get_area(src))) // Basically, we can just turn into plating or something.
-		if(water != src)
-			if(isnull(id) || id == water.id) // To make sure this is the same pool being drained
-				water.ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
-	ChangeTurf(/turf/open/floor/plating, flags = CHANGETURF_INHERIT_AIR)
-*/
+
 /obj/effect/turf_decal/pool
 	name = "Pool siding"
 	icon = 'modular_badlands/code/modules/pool/icons/pool.dmi'

@@ -120,11 +120,10 @@
 	var/atom/movable/remote_control //Calls relaymove() to whatever it is
 
 	/**
-	  * The sound made on death
-	  *
-	  * leave null for no sound. used for *deathgasp
+	  * The sound made on death, played exclusively to the client.
+	  * Used as a notifier that they're dead, and can safely ghost.
 	  */
-	var/deathsound = null
+	var/deathsound = "modular_badlands/code/modules/rp_misc/sound/gore/death.ogg"
 
 	var/turf/listed_turf = null	//the current turf being examined in the stat panel
 

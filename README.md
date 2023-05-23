@@ -1,4 +1,4 @@
-## Sunset Wasteland
+## Verdant Badlands
 Based and maintained from Citadel Station by way of Desert Rose, Fortuna and The Wasteland.
 
 [![CI Suite](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland/actions/workflows/ci_suite.yml/badge.svg?branch=master&event=push)](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland/actions/workflows/ci_suite.yml)

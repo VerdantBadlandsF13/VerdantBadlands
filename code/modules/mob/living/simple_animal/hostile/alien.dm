@@ -1,10 +1,10 @@
 /mob/living/simple_animal/hostile/alien
-	name = "wanamingo"
+	name = "something"// Placeholder.
 	desc = "Hiss!"
-	icon = 'icons/fallout/mobs/monsters/wanamingo.dmi'
-	icon_state = "wanamingo"
-	icon_living = "wanamingo"
-	icon_dead = "wanamingo_dead"
+	icon = 'icons/mob/alien.dmi'
+	icon_state = "alienother"
+	icon_living = "alienother"
+	icon_dead = "nestoverlay"// Placeholder.
 
 	speed = 0
 	maxHealth = 275

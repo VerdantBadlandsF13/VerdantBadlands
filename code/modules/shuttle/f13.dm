@@ -96,7 +96,7 @@
 
 /obj/machinery/computer/shuttle/vault113elevator
 	name = "vault 113 elevator controls"
-	desc = "Controls the elevator between the Vault and Bighorn."
+	desc = "Controls the elevator between the Vault and Brattleboro."
 	icon_screen = "shuttle"
 	icon_keyboard = "tech_key"
 	light_color = LIGHT_COLOR_CYAN

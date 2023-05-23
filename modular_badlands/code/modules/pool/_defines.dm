@@ -21,3 +21,36 @@ Houses the defines required, to keep this modular.
 /datum/species
 	// The component to add when swimming
 	var/swimming_component = /datum/component/swimming
+
+/mob/living/proc/check_submerged()
+	var/turf/open/T = loc
+	if(buckled)
+		return 0
+	if(locate(/obj/structure/lattice/catwalk) in loc)// Both of these are super hacky, but work.
+		T.slowdown = 0
+		T.footstep = FOOTSTEP_PLATING
+		T.barefootstep = FOOTSTEP_PLATING
+		T.clawfootstep = FOOTSTEP_PLATING
+		T.heavyfootstep = FOOTSTEP_PLATING
+		T.depth = 0
+		return 0
+	if(istype(loc, /turf/open/indestructible/ground/outside/water) || istype(loc, /turf/open/water) || istype(loc, /turf/open/indestructible/sound/pool))
+		return T.depth
+	if(!locate(/obj/structure/lattice/catwalk) in loc)
+		T.slowdown = 2
+		T.footstep = FOOTSTEP_WATER
+		T.barefootstep = FOOTSTEP_WATER
+		T.clawfootstep = FOOTSTEP_WATER
+		T.heavyfootstep = FOOTSTEP_WATER
+		T.depth = 1
+		return 0
+	return 0
+
+// Use this to have things react to having water applied to them.
+/atom/movable/proc/water_act(amount)
+	return
+
+/mob/living/water_act(amount)
+	adjust_fire_stacks(-amount * 5)
+	for(var/atom/movable/AM in contents)
+		AM.water_act(amount)

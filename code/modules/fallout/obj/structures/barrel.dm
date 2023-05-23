@@ -2,23 +2,41 @@
 
 /obj/structure/reagent_dispensers/barrel
 	name = "barrel"
-	desc = "A metal container with something in it.<br>By the looks of it, it was manufactured recently."
+	desc = "An ancient metal barrel. The material used to make it is starting to decay from time. Is this safe?"
 	icon = 'icons/fallout/trash.dmi'
-	icon_state = "single"
+	icon_state = "single_dark"
 	tank_volume = 500
-	reagent_id = /datum/reagent/fluorine
-//	self_weight = 200
+	density = TRUE
+	anchored = TRUE
+	reagent_id = /datum/reagent/water/dwater
+
+/obj/structure/reagent_dispensers/barrel/two
+	name = "two old barrels"
+	icon_state = "two_c"
+	tank_volume = 1000
+
+/obj/structure/reagent_dispensers/barrel/three
+	name = "three old barrels"
+	icon_state = "three_c"
+	tank_volume = 1500
+
+/obj/structure/reagent_dispensers/barrel/four
+	name = "four old barrels"
+	icon_state = "four_c"
+	tank_volume = 2000
 
 /obj/structure/reagent_dispensers/barrel/dangerous
 	name = "waste barrel"
-	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a strange label on it, but you can't quite make it out..."
-	icon_state = "dangerous"
+	icon_state = "single_dark_fev"
 	tank_volume = 500
-	reagent_id = /datum/reagent/radium
+	reagent_id = /datum/reagent/toxin/FEV_solution/two
 	light_color = LIGHT_COLOR_GREEN
 	light_power = 3
 	light_range = 2
-//	self_weight = 200
+
+/obj/structure/reagent_dispensers/barrel/dangerous/New()
+	..()
+	icon_state = "single_dark_fev[rand(0,1)]"
 
 /obj/structure/reagent_dispensers/barrel/dangerous/Initialize()
 	. = ..()
@@ -51,8 +69,7 @@
 
 /obj/structure/reagent_dispensers/barrel/explosive
 	name = "fuel barrel"
-	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a label on it, with a drawing of flames.<br>You wonder if there is anything left in it..."
-	icon_state = "explosive"
+	icon_state = "single_dark_explosive"
 	tank_volume = 500
 	reagent_id = /datum/reagent/fuel
 //	self_weight = 200
@@ -69,10 +86,6 @@
 
 /obj/structure/reagent_dispensers/barrel/explosive/fire_act(exposed_temperature, exposed_volume)
 	boom()
-/*
-/obj/structure/reagent_dispensers/barrel/explosive/tesla_act()
-	..() //extend the zap
-	boom()*/
 
 /obj/structure/reagent_dispensers/barrel/explosive/bullet_act(obj/item/projectile/P)
 	..()
@@ -114,37 +127,71 @@
 		return
 	return ..()
 
-/obj/structure/reagent_dispensers/barrel/old
-	name = "old barrel"
-	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
-	icon_state = "one_b"
-	tank_volume = 500
-	reagent_id = /datum/reagent/water/dwater
-//	self_weight = 200
+/obj/structure/destructible/hobo_barrel
+	name = "barrel"
+	desc = "An ancient metal barrel, repurposed as a firepit."
+	icon = 'icons/fallout/trash.dmi'
+	icon_state = "single_rusted"
+	density = TRUE
+	anchored = TRUE
+	light_color = LIGHT_COLOR_FIRE
+	light_power = 1
+	light_range = 0
+	break_sound = 'modular_badlands/code/modules/rp_misc/sound/gore/nonorganic_impact/bash1.ogg'
+	debris = list(/obj/item/stack/sheet/metal = 2)
+	var/burning = FALSE
+	var/flickering = FALSE
+	var/flicker_chance = 1 // percent
 
-/obj/structure/reagent_dispensers/barrel/two
-	name = "two old barrels"
-	desc = "A couple of old barrels. Oddly enough, they stand undamaged after all this time.<br>You wonder if there is anything left in these."
-	icon_state = "two_b"
-	tank_volume = 1000
-	reagent_id = /datum/reagent/water/dwater
-	anchored = 1
-//	self_weight = 400
+/obj/structure/destructible/hobo_barrel/update_icon()
+	icon_state = "single_rusted_[burning ? null : "un"]lit"
 
-/obj/structure/reagent_dispensers/barrel/three
-	name = "three old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
-	icon_state = "three_b"
-	tank_volume = 1500
-	reagent_id = /datum/reagent/water/dwater
-	anchored = 1
-//	self_weight = 600
+/obj/structure/destructible/hobo_barrel/attack_hand(mob/user)
+	. = ..()
+	if(.)
+		return
+	if(burning)
+		user.visible_message("<span class='notice'>[user] snuffs [src] out.</span>", "<span class='notice'>You snuff [src] out.</span>")
+		burning = FALSE
+		playsound(src, "modular_badlands/code/modules/rp_misc/sound/fire_related/fire0[rand(1,3)].ogg", 50, 1)
+		update_icon()
+		set_light(0)
+		return
+	if(!burning)
+		return
 
-/obj/structure/reagent_dispensers/barrel/four
-	name = "four old barrels"
-	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
-	icon_state = "four_b"
-	tank_volume = 2000
-	reagent_id = /datum/reagent/water/dwater
-	anchored = 1
-//	self_weight = 60
+/obj/structure/destructible/hobo_barrel/attackby(obj/item/W, mob/user, params)
+	if(W.get_temperature())
+		StartBurning()
+		user.visible_message("<span class='notice'>[user] lights [src] with [W].</span>", "<span class='notice'>You light [src] with [W].</span>")
+		return
+
+/obj/structure/destructible/hobo_barrel/proc/StartBurning()
+	if(!burning)
+		burning = TRUE
+		set_light(7)
+		update_icon()
+		return
+
+/obj/structure/destructible/hobo_barrel/process()
+	. = ..()
+	if(!flickering && prob(flicker_chance))
+		flicker(rand(1, 4)) // 0.1 to 0.4 seconds
+
+/obj/structure/destructible/hobo_barrel/proc/flicker(duration)
+	addtimer(CALLBACK(src, .proc/unflicker, light_range), duration)
+	set_light(light_range - rand(1, 2))
+	flickering = TRUE
+	addtimer(CALLBACK(src, .proc/unflicker), duration)
+
+/obj/structure/destructible/hobo_barrel/proc/unflicker(new_range)
+	set_light(new_range)
+	flickering = FALSE
+
+/obj/structure/destructible/hobo_barrel/fire_act(exposed_temperature, exposed_volume)
+	StartBurning()
+
+/obj/structure/destructible/hobo_barrel/lit//Barrel for mapping. :)
+	burning = TRUE
+	icon_state = "single_rusted_lit"
+	light_range = 7

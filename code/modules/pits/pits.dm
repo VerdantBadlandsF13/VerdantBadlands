@@ -144,12 +144,12 @@
 					if(istype(src, /turf/open/indestructible/ground/outside/desert))
 						finishBury(user)
 						finishBody()
-				/*for(var/mob/H in oview(src, 7))
+				for(var/mob/H in oview(src, 7))
 					for(var/F in gravebody.faction)
 						if(F in H.faction)
 							if(F != "neutral") // I don't know why but this won't fit in the above if statement
 								SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "buried_faction_member", /datum/mood_event/buried_faction_member)
-								LAZYREMOVE(H.faction_deaths, gravebody.real_name)
+/*								LAZYREMOVE(H.faction_deaths, gravebody.real_name)
 								if(LAZYLEN(H.faction_deaths) < 3)
 									SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, "saw_many_unburied_faction")*/
 			else if (gravecoffin != null)

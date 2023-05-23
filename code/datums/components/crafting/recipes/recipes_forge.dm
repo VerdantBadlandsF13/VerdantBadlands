@@ -83,7 +83,7 @@
 
 /datum/crafting_recipe/barrelfire
 	name = "Stoke barrel fire"
-	result = /obj/structure/campfire/barrel
+	result = /obj/structure/destructible/hobo_barrel
 	reqs = list(
 		/obj/item/stack/sheet/mineral/wood = 15,
 		/obj/item/stack/sheet/metal = 10,

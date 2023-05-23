@@ -577,62 +577,61 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/send_news_report()
 	var/news_message
-	var/news_source = "Oasis Publishing"
+	var/news_source = "Brattleboro Publishing"
 	switch(news_report)
 		if(NUKE_SYNDICATE_BASE)
-			news_message = "In a daring raid, the heroic crew of [station_name()] detonated a nuclear device in the heart of a terrorist base."
+			news_message = "In a daring raid, the heroic few of [station_name()] detonated a nuclear device in the heart of a terrorist base."
 		if(STATION_DESTROYED_NUKE)
-			news_message = "We would like to reassure all employees that the reports of a Syndicate backed nuclear attack on [station_name()] are, in fact, a hoax. Have a secure day!"
+			news_message = "We would like to reassure all employees that the reports of nuclear strike on [station_name()] are, in fact, a hoax. Have a secure day!"
 		if(STATION_EVACUATED)
 			news_message = "The inhabitants of [station_name()] breathe a sigh of the relief as the week comes to an end. "
 		if(BLOB_WIN)
-			news_message = "[station_name()] was overcome by an unknown biological outbreak, killing all crew on board. Don't let it happen to you! Remember, a clean work station is a safe work station."
+			news_message = "[station_name()] was overcome by an unknown biological outbreak, killing all in the vicinity."
 		if(BLOB_NUKE)
-			news_message = "[station_name()] is currently undergoing decontanimation after a controlled burst of radiation was used to remove a biological ooze. All employees were safely evacuated prior, and are enjoying a relaxing vacation."
+			news_message = "[station_name()] is currently undergoing decontanimation after a controlled burst of radiation was used to remove a biological ooze."
 		if(BLOB_DESTROYED)
-			news_message = "[station_name()] is currently undergoing decontamination procedures after the destruction of a biological hazard. As a reminder, any crew members experiencing cramps or bloating should report immediately to security for incineration."
+			news_message = "[station_name()] is currently undergoing decontamination procedures after the destruction of a biological hazard. As a reminder, any individuals experiencing cramps or bloating should immediately report for incineration."
 		if(CULT_ESCAPE)
 			news_message = "Security Alert: A group of religious fanatics have escaped from [station_name()]."
 		if(CULT_FAILURE)
-			news_message = "Following the dismantling of a restricted cult aboard [station_name()], we would like to remind all employees that worship outside of the Chapel is strictly prohibited, and cause for termination."
+			news_message = "Following the dismantling of a restricted cult within [station_name()], we would like to remind all of you that it is strictly prohibited to practice religion outside of assigned areas."
 		if(CULT_SUMMON)
-			news_message = "Company officials would like to clarify that [station_name()] was scheduled to be decommissioned following meteor damage earlier this year. Earlier reports of an unknowable eldritch horror were made in error."
+			news_message = "Officials would like to clarify that [station_name()] was scheduled to be evacuated following radioactive fallout earlier this year. Earlier reports of an unknowable eldritch horror were made in error."
 		if(NUKE_MISS)
-			news_message = "The Syndicate have bungled a terrorist attack [station_name()], detonating a nuclear weapon in empty space nearby."
+			news_message = "A terrorist attack within [station_name()] has gone awry, as the nuclear device failed to detonate."
 		if(OPERATIVES_KILLED)
-			news_message = "Repairs to [station_name()] are underway after an elite Syndicate death squad was wiped out by the crew."
+			news_message = "Repairs to [station_name()] are underway after an elite death squad was wiped out by the crew."
 		if(OPERATIVE_SKIRMISH)
-			news_message = "A skirmish between security forces and Syndicate agents aboard [station_name()] ended with both sides bloodied but intact."
+			news_message = "A skirmish between local forces and outside agents within the vicinity [station_name()] have ended with both sides bloodied but intact."
 		if(REVS_WIN)
-			news_message = "Company officials have reassured investors that despite a union led revolt aboard [station_name()] there will be no wage increases for workers."
+			news_message = "Officials have reassured inhabitants that despite a union led revolt in the vicinity of [station_name()], there will be no wage increases for workers."
 		if(REVS_LOSE)
 			news_message = "[station_name()] quickly put down a misguided attempt at mutiny. Remember, unionizing is illegal!"
 		if(WIZARD_KILLED)
-			news_message = "Tensions have flared with the Space Wizard Federation following the death of one of their members aboard [station_name()]."
+			news_message = "Tensions have flared with an underground cult, following the death of one of their members in the vicinity of [station_name()]."
 		if(STATION_NUKED)
-			news_message = "[station_name()] activated its self destruct device for unknown reasons. Attempts to clone the Captain so he can be arrested and executed are underway."
+			news_message = "[station_name()] inhabitants accidentally activated a nuclear device during a routine salvage operation. There were no survivors."
 		if(CLOCK_SUMMON)
-			news_message = "The garbled messages about hailing a mouse and strange energy readings from [station_name()] have been discovered to be an ill-advised, if thorough, prank by a clown."
+			news_message = "The garbled messages about hailing a mouse and strange energy readings from [station_name()] have been discovered to be an ill-advised, if thorough, false flag attack."
 		if(CLOCK_SILICONS)
-			news_message = "The project started by [station_name()] to upgrade their silicon units with advanced equipment have been largely successful, though they have thus far refused to release schematics in a violation of company policy."
+			news_message = "The project started by [station_name()] to upgrade their mechanical units with advanced equipment have been largely successful, though they have thus far refused to release schematics."
 		if(CLOCK_PROSELYTIZATION)
-			news_message = "The burst of energy released near [station_name()] has been confirmed as merely a test of a new weapon. However, due to an unexpected mechanical error, their communications system has been knocked offline."
+			news_message = "The burst of energy released near [station_name()] has been confirmed as merely a test of a new weapon. However, due to an unexpected mechanical error, all local communications have been knocked offline."
 		if(SHUTTLE_HIJACK)
-			news_message = "During routine evacuation procedures, the emergency shuttle of [station_name()] had its navigation protocols corrupted and went off course, but was recovered shortly after."
+			news_message = "During routine evacuation procedures, the train of [station_name()] had violently derailed. There were no survivors."
 		if(GANG_VICTORY)
-			news_message = "Company officials reaffirmed that sudden deployments of special forces are not in any way connected to rumors of [station_name()] being covered in graffiti."
+			news_message = "Officials reaffirmed that sudden deployments of a task force are not in any way connected to rumors of [station_name()] being covered in graffiti."
 
 	if(SSblackbox.first_death)
 		var/list/ded = SSblackbox.first_death
-		//fortuna addition. list of random names for the roundend news investigator
-		var/list/investigator = list("Oasis Investigators","A band of couriers","Patrolling rangers","A few mysterious strangers","The NCR","The Legion","The Brotherhood","The Den")
+		var/list/investigator = list("The Green Mountain Boys","A few mumbling cretins","Dry Fields Security")
 		if(ded.len)
 			news_message += "[pick(investigator)] discovered the corpse of a person of interest in the area. Their name was: [ded["name"]], the [ded["role"]], who died in a nearby [ded["area"]].[ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""]"
 		else
 			news_message += " [pick(investigator)] have reported a relatively safe week so far!"
 
 		//role ping for discord
-		news_message += " \n <@&922230570791108628> "
+		news_message += " \n <@&1100493376207462464> "
 
 	if(news_message)
 		send2otherserver(news_source, news_message,"News_Report")
@@ -724,20 +723,27 @@ SUBSYSTEM_DEF(ticker)
 	update_everything_flag_in_db()
 	if(!round_end_sound)
 		round_end_sound = pick(\
-		'sound/roundend/fallout_dodgeball_truncated.ogg',
-		'sound/roundend/get_fucked.ogg',
-		'sound/roundend/roundend_jean_baptist.ogg',
-		'sound/roundend/roundend_nuclear_backyard.ogg',
-		'sound/roundend/roundend_patrolling.ogg',
-		'sound/roundend/roundend_real_tunnel_snake.ogg',
-		'sound/roundend/roundend_smoothskin.ogg',
-		'sound/roundend/roundend_tunnel_snakes_rule.ogg',
-		'sound/roundend/gondolabridge.ogg',
-		'sound/roundend/haveabeautifultime.ogg',
-		'sound/roundend/whereisyourpowerarmor.ogg',
-		'sound/roundend/timetodie.ogg',
-		'sound/roundend/ishouldkickyourass.ogg',
-		'sound/roundend/evilmrnv.ogg'\
+		'sound/roundend/advisor.ogg',
+		'sound/roundend/boykisser.ogg',
+		'sound/roundend/bullets.ogg',
+		'sound/roundend/erp.ogg',
+		'sound/roundend/firebomb.ogg',
+		'sound/roundend/hestia.ogg',
+		'sound/roundend/repeating.ogg',
+		'sound/roundend/shard.ogg',
+		'sound/roundend/stuck.ogg',
+		'sound/roundend/guns.ogg',
+		'sound/roundend/imout.ogg',
+		'sound/roundend/longer.ogg',
+		'sound/roundend/moreroaches.ogg',
+		'sound/roundend/relax.ogg',
+		'sound/roundend/reportfiled.ogg',
+		'sound/roundend/seeyoulater.ogg',
+		'sound/roundend/settledown.ogg',
+		'sound/roundend/special.ogg',
+		'sound/roundend/stopfucking.ogg',
+		'sound/roundend/thinkyahard.ogg',
+		'sound/roundend/yeayeah.ogg'\
 		)
 
 	SEND_SOUND(world, sound(round_end_sound))

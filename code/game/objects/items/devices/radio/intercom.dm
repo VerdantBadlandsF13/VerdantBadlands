@@ -136,7 +136,7 @@
 	return FALSE
 
 /obj/item/radio/intercom/kebob
-	name = "Bighorn intercom"
+	name = "Brattleboro intercom"
 	freqlock = TRUE
 	frequency = 1369
 	channels = list(RADIO_CHANNEL_TOWN = 1)

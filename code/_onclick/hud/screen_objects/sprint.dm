@@ -1,5 +1,5 @@
 /obj/screen/mov_intent
-	icon = 'icons/fallout/UI/buttons_fallout2.dmi'
+	icon = 'icons/fallout/UI/buttons_badlands.dmi'
 
 /obj/screen/mov_intent/update_icon()
 	// todo: report back if this causes lag
@@ -9,7 +9,7 @@
 
 /obj/screen/sprintbutton
 	name = "toggle sprint"
-	icon = 'icons/fallout/UI/buttons_fallout2.dmi'
+	icon = 'icons/fallout/UI/buttons_badlands.dmi'
 	icon_state = "act_sprint"
 	layer = HUD_LAYER - 0.1
 	var/mutable_appearance/flashy
@@ -55,7 +55,7 @@
 
 /obj/screen/sprint_buffer
 	name = "sprint buffer"
-	icon = 'icons/fallout/UI/sprintbar.dmi'
+	icon = 'icons/fallout/UI/sprintbar_badlands.dmi'
 	icon_state = "prog_bar_100"
 
 /obj/screen/sprint_buffer/update_icon()
@@ -64,8 +64,8 @@
 	if(!istype(user) || !user.client)
 		return
 	switch(hud.ui_style)
-		if('icons/fallout/UI/screen_fallout2.dmi', 'icons/fallout/UI/screen_fallout2_dark.dmi')
-			icon = 'icons/fallout/UI/sprintbar.dmi'
+		if('icons/fallout/UI/screen_badlands.dmi')
+			icon = 'icons/fallout/UI/sprintbar_badlands.dmi'
 		else
 			icon = 'icons/effects/progessbar.dmi'
 

@@ -18,6 +18,8 @@
 		message = "muffles something."
 	. = ..()
 
+// Hey, Carl here. This is redone in 'modular_badlands\code\modules\rp_misc\emotes.dm'. Go see it there.
+/*
 /datum/emote/living/scream/run_emote(mob/living/user, params) //I can't not port this shit, come on.
 	if(user.nextsoundemote >= world.time || user.stat != CONSCIOUS)
 		return
@@ -67,7 +69,7 @@
 	else
 		message = "makes a very loud noise."
 	. = ..()
-
+*/
 /datum/emote/living/snap
 	key = "snap"
 	key_third_person = "snaps"

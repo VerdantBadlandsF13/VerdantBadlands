@@ -35,8 +35,8 @@
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
 	status_flags = CANPUSH
-	vision_range = 7 //reduced from 13 to 7 because who needs that kind of shit in their life
-	aggro_vision_range = 7 //as above
+	vision_range = 13
+	aggro_vision_range = 2
 	ranged = 1
 	projectiletype = /obj/item/projectile/beam/laser/pistol/wattz
 	projectilesound = 'sound/weapons/resonator_fire.ogg'
@@ -47,7 +47,7 @@
 
 /mob/living/simple_animal/hostile/eyebot/New()
 	..()
-	name = "ED-[rand(1,99)]"
+	name = "ED-[rand(1000,9999)]"
 
 /mob/living/simple_animal/hostile/eyebot/emp_act(severity)
 	. = ..()
@@ -55,24 +55,6 @@
 		return
 	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
 	adjustBruteLoss(emp_damage)
-
-/mob/living/simple_animal/hostile/eyebot/playable
-	ranged = FALSE
-	health = 200
-	maxHealth = 200
-	attack_verb_simple = "zaps"
-	emote_taunt_sound = null
-	emote_taunt = null
-	aggrosound = null
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	speed = -1
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye
 	name = "floating eyebot"
@@ -89,7 +71,7 @@
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye/New()
 	..()
-	name = "FEB-[rand(1,99)]"
+	name = "FEB-[rand(1000,9999)]"
 
 /mob/living/simple_animal/pet/dog/eyebot //It's a propaganda eyebot, not a dog, but...
 	name = "propaganda eyebot"
@@ -133,33 +115,3 @@
 		return
 	var/emp_damage = round((maxHealth * 0.1) * (severity * 0.1)) // 10% of max HP * 10% of severity(Usually around 20-40)
 	adjustBruteLoss(emp_damage)
-
-/mob/living/simple_animal/pet/dog/eyebot/playable
-	health = 200
-	maxHealth = 200
-	attack_verb_simple = "zaps"
-	aggrosound = null
-	speak_chance = 0
-	idlesound = null
-	see_in_dark = 8
-	wander = 0
-	force_threshold = 10
-	anchored = FALSE
-	del_on_death = FALSE
-	dextrous = TRUE
-	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
-	speed = -1
-
-//Junkers
-/mob/living/simple_animal/hostile/eyebot/reinforced
-	name = "reinforced eyebot"
-	desc = "An eyebot with beefier protection, and extra electronic aggression."
-	color = "#B85C00"
-	maxHealth = 150
-	health = 150
-	faction = list("raider", "wastebot")
-	extra_projectiles = 1
-	melee_damage_lower = 20
-	melee_damage_upper = 30
-	minimum_distance = 4
-	retreat_distance = 6

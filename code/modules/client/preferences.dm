@@ -155,6 +155,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//bad stuff
 	var/cit_toggles = TOGGLES_CITADEL
+	var/vb_toggles = TOGGLES_VB
+	var/ext_toggles = TOGGLES_VBE
 
 	//backgrounds
 	var/mutable_appearance/character_background
@@ -999,12 +1001,17 @@ Records disabled until a use for them is found
 					dat += "</table>"
 		if(CONTENT_PREFERENCES_TAB)
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-			dat += "<h2>Adult content prefs</h2>"
+			dat += "<h2>General Content</h2>"
+			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
+			dat += "<br>"
+			dat += "<h2>Adult Content</h2>"
+			dat += "<b>Lewd Verbs:</b><a href='?_src_=prefs;preference=verb_consent'>[(vb_toggles & VERB_CONSENT) ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Genital examine text</b>:<a href='?_src_=prefs;preference=genital_examine'>[(cit_toggles & GENITAL_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
-			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
-			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
+			dat += "<br>"
+			dat += "<h2>Fetish Content</h2>"
+			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Forced Feminization:</b> <a href='?_src_=prefs;preference=feminization'>[(cit_toggles & FORCED_FEM) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Forced Masculinization:</b> <a href='?_src_=prefs;preference=masculinization'>[(cit_toggles & FORCED_MASC) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Lewd Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & HYPNO) ? "Allowed" : "Disallowed"]</a><br>"
@@ -1012,7 +1019,12 @@ Records disabled until a use for them is found
 			dat += "<b>Breast Enlargement:</b> <a href='?_src_=prefs;preference=breast_enlargement'>[(cit_toggles & BREAST_ENLARGEMENT) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Penis Enlargement:</b> <a href='?_src_=prefs;preference=penis_enlargement'>[(cit_toggles & PENIS_ENLARGEMENT) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Butt Enlargement:</b> <a href='?_src_=prefs;preference=butt_enlargement'>[(cit_toggles & BUTT_ENLARGEMENT) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<br>"
+			dat += "<h2>Extreme Fetish Content</h2>"
+			dat += "<b>Extreme Lewd Verbs:</b> <a href='?_src_=prefs;preference=ext_consent'>[(ext_toggles & EXT_CONSENT) ? "Disallowed" : "Allowed"]</a><br>"
+
 			dat += "</td>"
+
 			dat += "</tr></table>"
 			dat += "<br>"
 
@@ -2836,6 +2848,13 @@ Records disabled until a use for them is found
 					cit_toggles ^= NO_AUTO_WAG
 
 				//END CITADEL EDIT
+				// VB edit start
+				if("verb_consent")
+					vb_toggles ^= VERB_CONSENT
+
+				if("ext_consent")
+					ext_toggles ^= EXT_CONSENT
+
 
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion

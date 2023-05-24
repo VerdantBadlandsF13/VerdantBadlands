@@ -37,7 +37,7 @@ Ignore it, if possible.
 
 // The define. Not going to undefine it afterwards, as we can use it elsewhere.
 // For example, with effects relating to cycling status states. - Carl
-#define BREATH_COOLDOWN 300 // By default, thirty seconds.
+#define BREATH_COOLDOWN 1200
 // Audio for breathing, when stamina is low.
 // TODO: Extend breathing audio to standard states, not just low stamina?
 /mob/living/carbon/proc/handle_stamina_sounds(mob/living/M)
@@ -47,12 +47,12 @@ Ignore it, if possible.
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
 		handle_crit_stamina_sound()
 		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
-		last_breath = world.time + 300
+		last_breath = world.time + 1200
 		return
 	if(getStaminaLoss() > STAMINA_LOW)
 		handle_low_stamina_sound()
 		to_chat(src, span_warning("You're becoming winded. Take a break."))
-		last_breath = world.time + 600
+		last_breath = world.time + 1200
 		return
 
 /mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)

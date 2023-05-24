@@ -23,13 +23,6 @@
 #define REQUIRE_UNEXPOSED 2
 #define REQUIRE_ANY 3
 
-/*
---------------------------------------------------
--------------------MOB STUFF----------------------
---------------------------------------------------
-*/
-//I'm sorry, lewd should not have mob procs such as life() and such in it. //NO SHIT IT SHOULDNT I REMOVED THEM
-
 // Lewd interactions have a blacklist for certain mobs. When we evalute the user and target, both of
 // their requirements must be satisfied, and the mob must not be of a blacklisted type.
 // This should not be too weighty on the server, as the check is only run to generate the menu options.
@@ -119,7 +112,7 @@
 	lust = num
 	lastlusttime = world.time
 
-/mob/living/proc/has_penis(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_penis(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(issilicon(src) && C.has_penis)
 		return TRUE
@@ -143,7 +136,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_balls(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_balls(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_TESTICLES)
@@ -165,7 +158,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_vagina(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_vagina(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(issilicon(src) && C.has_vagina)
 		return TRUE
@@ -189,7 +182,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_breasts(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_breasts(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_BREASTS)
@@ -211,7 +204,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_anus(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_anus(nintendo = REQUIRE_ANY)
 	if(issilicon(src))
 		return TRUE
 	switch(nintendo)
@@ -230,7 +223,7 @@
 		else
 			return TRUE
 
-/mob/living/proc/has_hand(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_hand(nintendo = REQUIRE_ANY)
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
 		var/handcount = 0
@@ -262,7 +255,7 @@
 				return handcount
 	return FALSE
 
-/mob/living/proc/has_feet(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_feet(nintendo = REQUIRE_ANY)
 	if(iscarbon(src))
 		var/mob/living/carbon/C = src
 		var/feetcount = 0
@@ -298,7 +291,7 @@
 	return has_feet(REQUIRE_ANY)
 
 //weird procs go here
-/mob/living/proc/has_ears(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_ears(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/peepee = C.getorganslot(ORGAN_SLOT_EARS)
@@ -320,7 +313,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_earsockets(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_earsockets(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/peepee = C.getorganslot(ORGAN_SLOT_EARS)
@@ -342,7 +335,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_eyes(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_eyes(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/peepee = C.getorganslot(ORGAN_SLOT_EYES)
@@ -364,7 +357,7 @@
 					return TRUE
 	return FALSE
 
-/mob/living/proc/has_eyesockets(var/nintendo = REQUIRE_ANY)
+/mob/living/proc/has_eyesockets(nintendo = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(istype(C))
 		var/obj/item/organ/peepee = C.getorganslot(ORGAN_SLOT_EYES)
@@ -401,18 +394,7 @@
 			return TRUE
 	else
 		return TRUE
-/*
-/proc/cum_splatter(target, var/mob/living/user) // Like blood_splatter(), but much more questionable on a resume.
-	if(user.has_penis() && !user.has_vagina())
-		new /obj/effect/decal/cleanable/semen(get_turf(target))
-	else if(user.has_vagina() && !user.has_penis())
-		new /obj/effect/decal/cleanable/femcum(get_turf(target))
-	else if(user.has_vagina() && user.has_penis())
-		new /obj/effect/decal/cleanable/femcum(get_turf(target))
-		new /obj/effect/decal/cleanable/semen(get_turf(target))
-	//var/obj/effect/decal/cleanable/cum/C = (get_turf(target))
-	//C.add_blood_DNA(list(data["blood_DNA"] = data["blood_type"]))
-*/
+
 /mob/living/proc/moan()
 	if(!(prob(get_lust() / lust_tolerance * 65)))
 		return
@@ -753,9 +735,6 @@
 	visible_message(message = "<span class='userlove'><b>\The [src]</b> [message]</span>", ignored_mobs = get_unconsenting())
 	multiorgasms += 1
 
-	/*if(multiorgasms == 1)
-		add_logs(partner, src, "came on")*/
-
 	if(multiorgasms > (sexual_potency * 0.34)) //AAAAA, WE DONT WANT NEGATIVES HERE, RE
 		refractory_period = world.time + rand(300, 900) - sexual_potency//sex cooldown
 		src.set_drugginess(rand(20, 30))
@@ -770,23 +749,18 @@
 			else
 				H.mob_climax(TRUE, partner, !cumin)
 	set_lust(0)
-/*
-/mob/living/cum(mob/living/partner, target_orifice)
-	. = ..()
-	if(multiorgasms < sexual_potency)
-		cum_splatter((partner ? partner : src), src)
-*/
+
 /mob/living/proc/is_fucking(mob/living/partner, orifice)
 	if(partner == last_partner && orifice == last_orifice)
 		return TRUE
 	return FALSE
 
-/mob/living/proc/set_is_fucking(mob/living/partner, orifice, var/obj/item/organ/genital/genepool)
+/mob/living/proc/set_is_fucking(mob/living/partner, orifice, obj/item/organ/genital/genepool)
 	last_partner = partner
 	last_orifice = orifice
 	last_genital = genepool
 
-/mob/living/proc/do_fucking_animation(fuckdir) // Today I wrote 'var/fuckdir' with a straight face. Not a milestone I ever expected to pass. dont worry, we dont use heretic proc/name(var/dir)
+/mob/living/proc/do_fucking_animation(fuckdir)
 	if(!fuckdir)
 		return
 
@@ -820,7 +794,7 @@
   --------------------------------------------------
  */
 
-/mob/living/proc/do_oral(mob/living/partner, var/fucktarget = "penis")
+/mob/living/proc/do_oral(mob/living/partner, fucktarget = "penis")
 	var/message
 	var/obj/item/organ/genital/peepee = null
 	var/lust_increase = NORMAL_LUST
@@ -934,7 +908,7 @@
 	do_fucking_animation(get_dir(src, partner))
 	lust_increase = NORMAL_LUST //RESET IT REE
 
-/mob/living/proc/do_facefuck(mob/living/partner, var/fucktarget = "penis")
+/mob/living/proc/do_facefuck(mob/living/partner, fucktarget = "penis")
 	var/message
 	var/obj/item/organ/genital/peepee = null
 	var/retaliation_message = FALSE
@@ -1030,7 +1004,7 @@
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
-/mob/living/proc/thigh_smother(mob/living/partner, var/fucktarget = "penis")
+/mob/living/proc/thigh_smother(mob/living/partner, fucktarget = "penis")
 
 	var/message
 	var/obj/item/organ/genital/peepee = null
@@ -1164,7 +1138,7 @@
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
-/mob/living/proc/nut_face(var/mob/living/partner)
+/mob/living/proc/nut_face(mob/living/partner)
 
 	var/message
 
@@ -1609,7 +1583,7 @@
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
-/mob/living/proc/get_shoes(var/singular = FALSE)
+/mob/living/proc/get_shoes(singular = FALSE)
 	var/obj/A = get_item_by_slot(SLOT_SHOES)
 	if(A)
 		var/txt = A.name
@@ -1638,7 +1612,7 @@
 	else
 		moan()
 
-/mob/living/proc/get_unconsenting(var/extreme = FALSE, var/list/ignored_mobs)
+/mob/living/proc/get_unconsenting(extreme = FALSE, var/list/ignored_mobs)
 	var/list/nope = list()
 	nope += ignored_mobs
 	for(var/mob/M in range(7, src))
@@ -1646,7 +1620,7 @@
 			var/client/cli = M.client
 			if(!(cli.prefs.toggles & VERB_CONSENT)) //Note: This probably could do with a specific preference
 				nope += M
-			else if(extreme && (cli.prefs.extremepref == "No"))
+			else if(extreme && (cli.prefs.toggles & VERB_EXTREME))
 				nope += M
 		else
 			nope += M
@@ -1665,7 +1639,7 @@
 		var/client/cli = partner.client
 		var/mob/living/carbon/C = partner
 		if(cli && istype(C))
-			if(cli.prefs.extremeharm != "No")
+			if(cli.prefs.toggles & VERB_HARMEXT)
 				if(prob(15))
 					C.bleed(2)
 				if(prob(25))
@@ -1695,7 +1669,7 @@
 		var/client/cli = partner.client
 		var/mob/living/carbon/C = partner
 		if(cli && istype(C))
-			if(cli.prefs.extremeharm != "No")
+			if(cli.prefs.toggles & VERB_HARMEXT)
 				if(prob(15))
 					C.bleed(2)
 				if(prob(25))

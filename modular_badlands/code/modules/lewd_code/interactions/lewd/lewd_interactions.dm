@@ -524,7 +524,7 @@
 		return "<font color='#FF0000'><b>EXTREME:</b></font> [..()]"
 	return "<font color='#FF0000'><b>LEWD:</b></font> [..()]"
 
-/mob/living/list_interaction_attributes(var/mob/living/LM)
+/mob/living/list_interaction_attributes(mob/living/LM)
 	var/dat = ..()
 	if(get_refraction_dif())
 		dat += "<br>...are sexually exhausted for the time being."

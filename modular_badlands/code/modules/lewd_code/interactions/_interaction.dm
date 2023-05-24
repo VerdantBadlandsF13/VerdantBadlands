@@ -1,16 +1,5 @@
-/*********************************
-*******Interactions code by HONKERTRON feat TestUnit********
-**Contains a lot ammount of ERP and MEHANOYEBLYA**
-**CREDIT TO ATMTA STATION FOR MOST OF THIS CODE, I ONLY MADE IT WORK IN /vg/ - Matt
-** Rewritten 30/08/16 by Zuhayr, sry if I removed anything important.
-**I removed ERP and replaced it with handholding. Nothing of worth was lost. - Vic
-**Fuck you, Vic. ERP is back. - TT
-**>using var/ on everything, also TRUE
-***********************************/
-
-
-// Rectum? Damn near killed 'em.
-var/list/interactions
+/datum/interaction
+	var/list/interactions
 
 /proc/make_interactions(interaction)
 	if(!interactions)
@@ -112,6 +101,12 @@ var/list/interactions
 	return FALSE
 
 /datum/interaction/proc/do_action(mob/living/user, mob/living/target)
+
+	if(!ishuman(user))
+		to_chat(user, "<span class='warning'>You cannot do that.</span>")
+		message_admins("[ADMIN_LOOKUPFLW(user)] tried to interact with [ADMIN_LOOKUPFLW(target)] from beyond the grave.")
+		return
+
 	if(!user_is_target)
 		if(user == target) //tactical href fix
 			to_chat(user, "<span class='warning'>You cannot target yourself.</span>")
@@ -137,13 +132,6 @@ var/list/interactions
 	display_interaction(user, target)
 	post_interaction(user, target)
 
-	//if(write_log_user)
-		//add_logs(target, user, "fucked")
-	//user.attack_log += text("\[[time_stamp()]\] <font color='red'>[write_log_user] [target.name] ([target.ckey])</font>")
-	//if(write_log_target)
-		//add_logs(target, user, "fucked2")
-	//target.attack_log += text("\[[time_stamp()]\] <font color='orange'>[write_log_target] [user.name] ([user.ckey])</font>")
-
 /datum/interaction/proc/display_interaction(mob/living/user, mob/living/target)
 	if(simple_message)
 		var/use_message = replacetext(simple_message, "USER", "\the [user]")
@@ -155,29 +143,3 @@ var/list/interactions
 	if(interaction_sound)
 		playsound(get_turf(user), interaction_sound, 50, 1, -1)
 	return
-/*
-/atom/movable/attack_hand(mob/living/user)
-	. = ..()
-	if(can_buckle && buckled_mob)
-		if(user_unbuckle_mob(user))
-			return TRUE
-
-/atom/movable/MouseDrop_T(mob/living/M, mob/living/user)
-	. = ..()
-	if(can_buckle && istype(M) && !buckled_mob)
-		if(user_buckle_mob(M, user))
-			return TRUE
-
-
-/atom/movable/attack_hand(mob/living/user)
-	. = ..()
-	if(can_buckle && buckled_mob)
-		if(user_unbuckle_mob(user))
-			return TRUE
-
-/atom/movable/MouseDrop_T(mob/living/carbon/human/M, mob/living/user)
-	. = ..()
-	if(can_buckle && istype(M) && !buckled_mob)
-		if(user_buckle_mob(M, user))
-			return TRUE
-*/

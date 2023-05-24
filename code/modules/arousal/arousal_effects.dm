@@ -55,7 +55,7 @@
 	sizeMoveMod(1)
 	return ..()
 
-/datum/status_effect/chem/breast_enlarger/proc/sizeMoveMod(var/value)
+/datum/status_effect/chem/breast_enlarger/proc/sizeMoveMod(value)
 	if(cachedmoveCalc == value)
 		return
 	owner.action_cooldown_mod /= cachedmoveCalc

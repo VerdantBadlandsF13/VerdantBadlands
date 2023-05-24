@@ -1,14 +1,6 @@
 /mob/proc/try_interaction()
 	return
 
-/*
-/mob/living/carbon/human/MouseDrop(var/mob/living/carbon/human/dropped_on, mob/living/carbon/human/user as mob)
-	if(src != dropped_on && !src.restrained())
-		try_interaction(dropped_on)
-		return
-	return ..()
-*/
-
 /mob/living/MouseDrop_T(mob/M as mob, mob/living/user as mob)
 	. = ..()
 	if(M == src || src == usr || M != usr)
@@ -68,17 +60,3 @@
 	var/datum/browser/popup = new(usr, "interactions", "Interactions", 340, 480)
 	popup.set_content(dat)
 	popup.open()
-
-/*
-/atom/movable/attack_hand(mob/living/carbon/human/user)
-	. = ..()
-	if(can_buckle && buckled_mob)
-		if(user_unbuckle_mob(user))
-			return 1
-
-/atom/movable/MouseDrop_T(mob/living/carbon/human/M, mob/living/carbon/human/user)
-	. = ..()
-	if(can_buckle && istype(M) && !buckled_mob)
-		if(user_buckle_mob(M, user))
-			return 1
-*/

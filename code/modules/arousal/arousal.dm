@@ -196,7 +196,7 @@
 
 //Here's the main proc itself
 //skyrat edit - forced partner and spillage
-/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE, var/mob/living/forced_partner = null, var/forced_spillage = TRUE) //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
+/mob/living/carbon/human/proc/mob_climax(forced_climax=FALSE, mob/living/forced_partner = null, forced_spillage = TRUE) //Forced is instead of the other proc, makes you cum if you have the tools for it, ignoring restraints
 	if(mb_cd_timer > world.time)
 		if(!forced_climax) //Don't spam the message to the victim if forced to come too fast
 			to_chat(src, "<span class='warning'>You need to wait [DisplayTimeText((mb_cd_timer - world.time), TRUE)] before you can do that again!</span>")

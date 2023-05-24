@@ -35,20 +35,6 @@
 	else
 		return TRUE
 
-///atom/movable/attack_hand(mob/living/carbon/human/user)
-//	. = ..()
-//	if(can_buckle && buckled_mob)
-//		if(user_unbuckle_mob(user))
-//			return 1
-/*
-/atom/movable/MouseDrop_T(mob/living/carbon/human/M, mob/living/carbon/human/user)
-	. = ..()
-	if(can_buckle && istype(M) && !buckled_mob)
-		if(user_buckle_mob(M, user))
-			return TRUE
-
-*/
-
 /mob/living/proc/do_blowsmoke(mob/living/partner)
 	to_chat(src, "<span class='warning'>You aren't even humanoid. How are you hoping to accomplish this?</span>")
 	return
@@ -72,7 +58,7 @@
 		var/client/cli = partner.client
 		var/mob/living/carbon/C = partner
 		if(cli && istype(C))
-			if(cli.prefs.extremeharm != "No")
+			if(cli.prefs.toggles & VERB_HARMEXT)
 				if(prob(65) && C.oxyloss < 36) //So it won't go further than 51.
 					C.adjustOxyLoss(15)
 		var/datum/effect_system/smoke_spread/chem/smoke_machine/s = new

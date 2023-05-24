@@ -155,8 +155,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	//bad stuff
 	var/cit_toggles = TOGGLES_CITADEL
-	var/extremepref = "No" //This is for extreme shit, maybe even literal shit, better to keep it on no by default
-	var/extremeharm = "No" //If "extreme content" is enabled, this option serves as a toggle for the related interactions to cause damage or not
 
 	//backgrounds
 	var/mutable_appearance/character_background
@@ -1018,9 +1016,9 @@ Records disabled until a use for them is found
 			dat += "</td>"
 			dat +="<td width='300px' height='300px' valign='top'>"
 			dat += "<h2>Extreme Fetish Content</h2>"
-			dat += 	"<b>Extreme ERP verbs :</b> <a href='?_src_=prefs;preference=extremepref'>[extremepref]</a><br>" // https://youtu.be/0YrU9ASVw6w
-			if(extremepref != "No")
-				dat += "<b><span style='color: #e60000;'Harmful ERP verbs :</b> <a href='?_src_=prefs;preference=extremeharm'>[extremeharm]</a><br>"
+			dat += "<b>Extreme Verbs:</b> <a href='?_src_=prefs;preference=extremepref'>[(toggles & VERB_EXTREME) ? "Allowed" : "Disallowed"]</a><br>"
+			if(cli.prefs.toggles & VERB_EXTREME)
+				dat += "<b>Verb Harm:</b> <a href='?_src_=prefs;preference=extremeharm'>[(toggles & VERB_HARMEXT) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "</td>"
 			dat += "</tr></table>"
 			dat += "<br>"
@@ -2627,23 +2625,8 @@ Records disabled until a use for them is found
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
 
-				if("extremepref") //i hate myself for doing this
-					switch(extremepref) //why the fuck did this need to use cycling instead of input from a list
-						if("Yes")		//seriously this confused me so fucking much
-							extremepref = "Ask"
-						if("Ask")
-							extremepref = "No"
-							extremeharm = "No"
-						if("No")
-							extremepref = "Yes"
-				if("extremeharm")
-					switch(extremeharm)
-						if("Yes")	//this is cursed code
-							extremeharm = "No"
-						if("No")
-							extremeharm = "Yes"
-					if(extremepref == "No")
-						extremeharm = "No"
+				if("body_model")
+					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE
 
 				if("body_model")
 					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE
@@ -2824,8 +2807,6 @@ Records disabled until a use for them is found
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
 
-				// Citadel edit - Prefs don't work outside of this. :c
-
 				if("genital_examine")
 					cit_toggles ^= GENITAL_EXAMINE
 
@@ -2862,9 +2843,12 @@ Records disabled until a use for them is found
 				if("auto_wag")
 					cit_toggles ^= NO_AUTO_WAG
 
-				//END CITADEL EDIT
 				if("verb_consent")
 					toggles ^= VERB_CONSENT
+				if("extremepref")
+					toggles ^= VERB_EXTREME
+				if("extremeharm")
+					toggles ^= VERB_HARMEXT
 
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion

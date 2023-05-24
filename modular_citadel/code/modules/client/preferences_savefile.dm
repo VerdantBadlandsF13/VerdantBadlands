@@ -14,13 +14,6 @@
 	features["mcolor2"]	= sanitize_hexcolor(features["mcolor2"], 6, FALSE)
 	features["mcolor3"]	= sanitize_hexcolor(features["mcolor3"], 6, FALSE)
 
-	extremepref = sanitize_text(S["extremepref"], "No")
-	if(!length(extremepref))
-		extremepref = "No"
-	extremeharm = sanitize_text(S["extremeharm"], "No")
-	if(!length(extremeharm) || (extremepref = "No"))
-		extremeharm = "No"
-
 /datum/preferences/proc/cit_character_pref_save(savefile/S)
 	//ipcs
 	WRITE_FILE(S["feature_ipc_screen"], features["ipc_screen"])
@@ -41,7 +34,3 @@
 	//flavor text
 	WRITE_FILE(S["feature_flavor_text"], features["flavor_text"])
 	WRITE_FILE(S["silicon_feature_flavor_text"], features["silicon_flavor_text"])
-	//ERP prefs
-	WRITE_FILE(S["extremepref"], extremepref)
-	WRITE_FILE(S["extremeharm"], extremeharm)
-

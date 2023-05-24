@@ -50,57 +50,57 @@
 	if(user.a_intent == INTENT_HELP)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[user]</b> gently gropes \the <b>[target]</b>'s breast.</font>",
-					 "<font color=purple>\The <b>[user]</b> softly squeezes \the <b>[target]</b>'s breasts.</font>",
-					 "<font color=purple>\The <b>[user]</b> grips \the <b>[target]</b>'s breasts.</font>",
-					 "<font color=purple>\The <b>[user]</b> runs a few fingers over \the <b>[target]</b>'s breast.</font>",
-					 "<font color=purple>\The <b>[user]</b> delicately teases \the <b>[target]</b>'s nipple.</font>",
-					 "<font color=purple>\The <b>[user]</b> traces a touch across \the <b>[target]</b>'s breast.</font>"))
+					"<font color=purple>\The <b>[user]</b> softly squeezes \the <b>[target]</b>'s breasts.</font>",
+					"<font color=purple>\The <b>[user]</b> grips \the <b>[target]</b>'s breasts.</font>",
+					"<font color=purple>\The <b>[user]</b> runs a few fingers over \the <b>[target]</b>'s breast.</font>",
+					"<font color=purple>\The <b>[user]</b> delicately teases \the <b>[target]</b>'s nipple.</font>",
+					"<font color=purple>\The <b>[user]</b> traces a touch across \the <b>[target]</b>'s breast.</font>"))
 	if(user.a_intent == INTENT_HARM)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[user]</b> aggressively gropes \the <b>[target]</b>'s breast.</font>",
-					 "<font color=purple>\The <b>[user]</b> grabs \the <b>[target]</b>'s breasts.</font>",
-					 "<font color=purple>\The <b>[user]</b> tightly squeezes \the <b>[target]</b>'s breasts.</font>",
-					 "<font color=purple>\The <b>[user]</b> slaps at \the <b>[target]</b>'s breasts.</font>",
-					 "<font color=purple>\The <b>[user]</b> gropes \the <b>[target]</b>'s breasts roughly.</font>"))
+					"<font color=purple>\The <b>[user]</b> grabs \the <b>[target]</b>'s breasts.</font>",
+					"<font color=purple>\The <b>[user]</b> tightly squeezes \the <b>[target]</b>'s breasts.</font>",
+					"<font color=purple>\The <b>[user]</b> slaps at \the <b>[target]</b>'s breasts.</font>",
+					"<font color=purple>\The <b>[user]</b> gropes \the <b>[target]</b>'s breasts roughly.</font>"))
 	if(prob(5 + target.get_lust()))
 		if(target.a_intent == INTENT_HELP)
 			user.visible_message(
 				pick("<font color=purple>\The <b>[target]</b> shivers in arousal.</font>",
-					 "<font color=purple>\The <b>[target]</b> moans quietly.</font>",
-					 "<font color=purple>\The <b>[target]</b> breathes out a soft moan.</font>",
-					 "<font color=purple>\The <b>[target]</b> gasps.</font>",
-					 "<font color=purple>\The <b>[target]</b> shudders softly.</font>",
-					 "<font color=purple>\The <b>[target]</b> trembles as hands run across bare skin.</font>"))
+					"<font color=purple>\The <b>[target]</b> moans quietly.</font>",
+					"<font color=purple>\The <b>[target]</b> breathes out a soft moan.</font>",
+					"<font color=purple>\The <b>[target]</b> gasps.</font>",
+					"<font color=purple>\The <b>[target]</b> shudders softly.</font>",
+					"<font color=purple>\The <b>[target]</b> trembles as hands run across bare skin.</font>"))
 			if(target.get_lust() < 5)
 				target.set_lust(5)
 		if(target.a_intent == INTENT_DISARM)
 			if (target.restrained())
 				user.visible_message(
 					pick("<font color=purple>\The <b>[target]</b> twists playfully against the restraints.</font>",
-						 "<font color=purple>\The <b>[target]</b> squirms away from <b>[user]</b>'s hand.</font>",
-						 "<font color=purple>\The <b>[target]</b> slides back from <b>[user]</b>'s roaming hand.</font>",
-						 "<font color=purple>\The <b>[target]</b> thrusts bare breasts forward into <b>[user]</b>'s hands.</font>"))
+						"<font color=purple>\The <b>[target]</b> squirms away from <b>[user]</b>'s hand.</font>",
+						"<font color=purple>\The <b>[target]</b> slides back from <b>[user]</b>'s roaming hand.</font>",
+						"<font color=purple>\The <b>[target]</b> thrusts bare breasts forward into <b>[user]</b>'s hands.</font>"))
 			else
 				user.visible_message(
 					pick("<font color=purple>\The <b>[target]</b> playfully bats at <b>[user]</b>'s hand.</font>",
-						 "<font color=purple>\The <b>[target]</b> squirms away from <b>[user]</b>'s hand.</font>",
-						 "<font color=purple>\The <b>[target]</b> guides <b>[user]</b>'s hand across bare breasts.</font>",
-						 "<font color=purple>\The <b>[target]</b> teasingly laces a few fingers over <b>[user]</b>'s knuckles.</font>"))
+						"<font color=purple>\The <b>[target]</b> squirms away from <b>[user]</b>'s hand.</font>",
+						"<font color=purple>\The <b>[target]</b> guides <b>[user]</b>'s hand across bare breasts.</font>",
+						"<font color=purple>\The <b>[target]</b> teasingly laces a few fingers over <b>[user]</b>'s knuckles.</font>"))
 			if(target.get_lust() < 10)
 				target.add_lust(1)
 	if(target.a_intent == INTENT_GRAB)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[target]</b> grips <b>[user]</b>'s wrist tight.</font>",
-				 "<font color=purple>\The <b>[target]</b> digs nails into <b>[user]</b>'s arm.</font>",
-				 "<font color=purple>\The <b>[target]</b> grabs <b>[user]</b>'s wrist for a second.</font>"))
+				"<font color=purple>\The <b>[target]</b> digs nails into <b>[user]</b>'s arm.</font>",
+				"<font color=purple>\The <b>[target]</b> grabs <b>[user]</b>'s wrist for a second.</font>"))
 	if(target.a_intent == INTENT_HARM)
 		user.adjustBruteLoss(1)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[target]</b> pushes <b>[user]</b> roughly away.</font>",
-				 "<font color=purple>\The <b>[target]</b> digs nails angrily into <b>[user]</b>'s arm.</font>",
-				 "<font color=purple>\The <b>[target]</b> fiercely struggles against <b>[user]</b>.</font>",
-				 "<font color=purple>\The <b>[target]</b> claws <b>[user]</b>'s forearm, drawing blood.</font>",
-				 "<font color=purple>\The <b>[target]</b> slaps <b>[user]</b>'s hand away.</font>"))
+				"<font color=purple>\The <b>[target]</b> digs nails angrily into <b>[user]</b>'s arm.</font>",
+				"<font color=purple>\The <b>[target]</b> fiercely struggles against <b>[user]</b>.</font>",
+				"<font color=purple>\The <b>[target]</b> claws <b>[user]</b>'s forearm, drawing blood.</font>",
+				"<font color=purple>\The <b>[target]</b> slaps <b>[user]</b>'s hand away.</font>"))
 	return
 
 /datum/interaction/lewd/nipsuck
@@ -230,16 +230,16 @@
 	if(target.a_intent == INTENT_GRAB)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[target]</b> grips \the <b>[user]</b>'s head tight.</font>",
-				 "<font color=purple>\The <b>[target]</b> digs nails into \the <b>[user]</b>'s scalp.</font>",
-				 "<font color=purple>\The <b>[target]</b> grabs and shoves \the <b>[user]</b>'s head away.</font>"))
+				"<font color=purple>\The <b>[target]</b> digs nails into \the <b>[user]</b>'s scalp.</font>",
+				"<font color=purple>\The <b>[target]</b> grabs and shoves \the <b>[user]</b>'s head away.</font>"))
 	if(target.a_intent == INTENT_HARM)
 		user.adjustBruteLoss(1)
 		user.visible_message(
 				pick("<font color=purple>\The <b>[target]</b> slaps \the <b>[user]</b> away.</font>",
-				 "<font color=purple>\The <b>[target]</b> scratches <b>[user]</b>'s face.</font>",
-				 "<font color=purple>\The <b>[target]</b> fiercely struggles against <b>[user]</b>.</font>",
-				 "<font color=purple>\The <b>[target]</b> claws <b>[user]</b>'s face, drawing blood.</font>",
-				 "<font color=purple>\The <b>[target]</b> elbows <b>[user]</b>'s mouth away.</font>"))
+				"<font color=purple>\The <b>[target]</b> scratches <b>[user]</b>'s face.</font>",
+				"<font color=purple>\The <b>[target]</b> fiercely struggles against <b>[user]</b>.</font>",
+				"<font color=purple>\The <b>[target]</b> claws <b>[user]</b>'s face, drawing blood.</font>",
+				"<font color=purple>\The <b>[target]</b> elbows <b>[user]</b>'s mouth away.</font>"))
 	target.dir = get_dir(target, user)
 	user.dir = get_dir(user, target)
 	playlewdinteractionsound(user.loc, pick('modular_badlands/code/modules/lewd_code/interactions/sound/oral1.ogg',
@@ -528,7 +528,7 @@
 	write_log_target = "was smothered by"
 
 /datum/interaction/lewd/thighs/display_interaction(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target)
-    user.thigh_smother(target)
+	user.thigh_smother(target)
 
 /datum/interaction/lewd/nuts
 	command = "nut_face"

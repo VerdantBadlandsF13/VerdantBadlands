@@ -8,7 +8,7 @@
 //Weird defines go here
 #define CUM_TARGET_EARS "ears"
 #define CUM_TARGET_EYES "eyes"
-//
+
 #define GRINDING_FACE_WITH_ANUS "faceanus"
 #define GRINDING_FACE_WITH_FEET "facefeet"
 #define GRINDING_MOUTH_WITH_FEET "mouthfeet"
@@ -23,9 +23,10 @@
 #define REQUIRE_UNEXPOSED 2
 #define REQUIRE_ANY 3
 
-/*--------------------------------------------------
-  -------------------MOB STUFF----------------------
-  --------------------------------------------------
+/*
+--------------------------------------------------
+-------------------MOB STUFF----------------------
+--------------------------------------------------
 */
 //I'm sorry, lewd should not have mob procs such as life() and such in it. //NO SHIT IT SHOULDNT I REMOVED THEM
 
@@ -384,8 +385,6 @@
 				else
 					return TRUE
 	return FALSE
-//
-
 
 /mob/living/proc/is_topless()
 	if(istype(src, /mob/living/carbon/human))

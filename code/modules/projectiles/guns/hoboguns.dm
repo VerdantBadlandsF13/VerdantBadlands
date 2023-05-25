@@ -219,7 +219,6 @@
 	can_attachments = FALSE
 	can_automatic = FALSE
 	automatic_burst_overlay = TRUE
-	can_scope = FALSE
 	scope_state = "scope_medium"
 	scope_x_offset = 6
 	scope_y_offset = 14

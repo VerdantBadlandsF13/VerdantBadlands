@@ -102,7 +102,7 @@ GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 		set category = "Admin"
 		if(!src.holder)	return
 		message_admins("[key_name_admin(usr)] manually reloaded mentors")
-
+/*
 /mob/living/carbon/proc/has_penis()
 	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_PENIS)
 	if(G && istype(G, /obj/item/organ/genital/penis))
@@ -124,7 +124,7 @@ GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 	if(getorganslot(ORGAN_SLOT_BREASTS))
 		return TRUE
 	return FALSE
-
+*/
 /mob/living/carbon/proc/has_butt()
 	if(getorganslot(ORGAN_SLOT_BUTT))
 		return TRUE

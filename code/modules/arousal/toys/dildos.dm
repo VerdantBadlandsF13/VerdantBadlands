@@ -20,7 +20,7 @@
 	var/is_knotted		= FALSE
 	//Lists moved to _cit_helpers.dm as globals so they're not instanced individually
 
-/obj/item/dildo/proc/update_appearance_dildo()
+/obj/item/dildo/proc/update_appearance()
 	icon_state = "[dildo_type]_[dildo_shape]_[dildo_size]"
 	var/sizeword = ""
 	switch(dildo_size)
@@ -50,28 +50,28 @@
 		if(src && color_choice && !user.incapacitated() && in_range(user,src))
 			sanitize_inlist(color_choice, GLOB.dildo_colors, "Red")
 			color = GLOB.dildo_colors[color_choice]
-	update_appearance_dildo()
+	update_appearance()
 	if(src && !user.incapacitated() && in_range(user,src))
 		var/shape_choice = input(user,"Choose a shape for your dildo.","Dildo Shape") as null|anything in GLOB.dildo_shapes
 		if(src && shape_choice && !user.incapacitated() && in_range(user,src))
 			sanitize_inlist(shape_choice, GLOB.dildo_colors, "Knotted")
 			dildo_shape = GLOB.dildo_shapes[shape_choice]
-	update_appearance_dildo()
+	update_appearance()
 	if(src && !user.incapacitated() && in_range(user,src))
 		var/size_choice = input(user,"Choose the size for your dildo.","Dildo Size") as null|anything in GLOB.dildo_sizes
 		if(src && size_choice && !user.incapacitated() && in_range(user,src))
 			sanitize_inlist(size_choice, GLOB.dildo_colors, "Medium")
 			dildo_size = GLOB.dildo_sizes[size_choice]
-	update_appearance_dildo()
+	update_appearance()
 	if(src && !user.incapacitated() && in_range(user,src))
 		var/transparency_choice = input(user,"Choose the transparency of your dildo. Lower is more transparent!(192-255)","Dildo Transparency") as null|num
 		if(src && transparency_choice && !user.incapacitated() && in_range(user,src))
 			sanitize_integer(transparency_choice, 192, 255, 192)
 			alpha = transparency_choice
-	update_appearance_dildo()
+	update_appearance()
 	return TRUE
 
-/obj/item/dildo/Initialize(mapload)
+/obj/item/dildo/Initialize()
 	. = ..()
 	if(random_color == TRUE)
 		var/randcolor = pick(GLOB.dildo_colors)
@@ -82,7 +82,7 @@
 	if(random_size == TRUE)
 		var/randsize = pick(GLOB.dildo_sizes)
 		dildo_size = GLOB.dildo_sizes[randsize]
-	update_appearance_dildo()
+	update_appearance()
 	alpha		= rand(192, 255)
 	pixel_y 	= rand(-7,7)
 	pixel_x 	= rand(-7,7)

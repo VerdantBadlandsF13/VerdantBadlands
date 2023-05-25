@@ -3,7 +3,7 @@
 
 /obj/item/gun/ballistic/revolver
 	slowdown = 0.1
-	name = "revolver template" 
+	name = "revolver template"
 	desc = "should not exist."
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
@@ -221,7 +221,6 @@
 	icon = 'icons/obj/guns/gunfruits2022/pistols.dmi'
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	recoil = 0.1
-	can_scope = FALSE
 	scope_state = "revolver_scope"
 	scope_x_offset = 6
 	scope_y_offset = 24
@@ -233,7 +232,6 @@
 	desc = "A custom, modernized S&W Model 29 revolver with a chrome finish and a polymer grip."
 	item_state = "44magnum"
 	icon_state = "mysterious_m29"
-	can_scope = FALSE
 	extra_damage = 5
 	extra_speed = 80
 

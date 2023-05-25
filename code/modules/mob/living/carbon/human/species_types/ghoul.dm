@@ -113,8 +113,6 @@
 	else
 		H.remove_status_effect(/datum/status_effect/ghoulheal)
 
-
-
 /datum/species/ghoul/glowing
 	name = "Glowing Ghoul"
 	id = "glowing ghoul"

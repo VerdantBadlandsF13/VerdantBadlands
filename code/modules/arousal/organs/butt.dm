@@ -42,7 +42,7 @@
 			to_chat(H, "<span class='warning'>Your buttcheeks [pick("shrink down to", "decrease into", "wobble down into", "diminish into", "deflate into", "contracts into")] a smaller pair.</span>")
 
 
-/obj/item/organ/genital/butt/update_appearance_genitals()
+/obj/item/organ/genital/butt/update_appearance()
 	var/lowershape = lowertext(shape)
 
 	//Reflect the size of dat ass on examine.

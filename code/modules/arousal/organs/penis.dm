@@ -39,16 +39,26 @@
 		return
 	var/rounded_length = round(length)
 	var/new_size
+	var/enlargement = FALSE
 	switch(rounded_length)
 		if(0 to 6) //If modest size
 			new_size = 1
 		if(7 to 11) //If large
 			new_size = 2
-		if(12 to 36) //If massive
+		if(12 to 20) //If massive
 			new_size = 3
-		if(37 to INFINITY) //If comical
+		if(21 to 34) //If massive and due for large effects
+			new_size = 3
+			enlargement = TRUE
+		if(35 to INFINITY) //If comical
 			new_size = 4 //no new sprites for anything larger yet
-
+			enlargement = TRUE
+	if(owner)
+		var/status_effect = owner.has_status_effect(STATUS_EFFECT_PENIS_ENLARGEMENT)
+		if(enlargement && !status_effect)
+			owner.apply_status_effect(STATUS_EFFECT_PENIS_ENLARGEMENT)
+		else if(!enlargement && status_effect)
+			owner.remove_status_effect(STATUS_EFFECT_PENIS_ENLARGEMENT)
 	if(linked_organ)
 		linked_organ.size = clamp(size + new_size, BALLS_SIZE_MIN, BALLS_SIZE_MAX)
 		linked_organ.update()
@@ -56,20 +66,23 @@
 
 	if(owner)
 		if (round(length) > round(prev_length))
-			to_chat(owner, "<span class='warning'>Your [pick(GLOB.dick_nouns)] [pick("swells up to", "flourishes into", "expands into", "bursts forth into", "grows eagerly into", "amplifys into")] a [uppertext(round(length))] inch penis.</b></span>")
+			if(owner?.client?.prefs?.toggles)
+				to_chat(owner, "<span class='warning'>Your [pick(GLOB.dick_nouns)] [pick("swells up to", "flourishes into", "expands into", "bursts forth into", "grows eagerly into", "amplifys into")] a [round(length, 0.1)] inch penis.</b></span>")
+			//
 		else if ((round(length) < round(prev_length)) && (length > 0.5))
-			to_chat(owner, "<span class='warning'>Your [pick(GLOB.dick_nouns)] [pick("shrinks down to", "decreases into", "diminishes into", "deflates into", "shrivels regretfully into", "contracts into")] a [uppertext(round(length))] inch penis.</b></span>")
+			if(owner?.client?.prefs?.toggles)
+				to_chat(owner, "<span class='warning'>Your [pick(GLOB.dick_nouns)] [pick("shrinks down to", "decreases into", "diminishes into", "deflates into", "shrivels regretfully into", "contracts into")] a [round(length, 0.1)] inch penis.</b></span>")
+			//
 	icon_state = sanitize_text("penis_[shape]_[size]")
 	diameter = (length * diameter_ratio)//Is it just me or is this ludicous, why not make it exponentially decay?
 
 
-/obj/item/organ/genital/penis/update_appearance_genitals()
+/obj/item/organ/genital/penis/update_appearance()
 	. = ..()
 	var/datum/sprite_accessory/S = GLOB.cock_shapes_list[shape]
 	var/icon_shape = S ? S.icon_state : "human"
 	icon_state = "penis_[icon_shape]_[size]"
 	var/lowershape = lowertext(shape)
-
 	if(owner)
 		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
 			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
@@ -84,7 +97,11 @@
 			if(T.taur_mode & S.accepted_taurs) //looks out of place on those.
 				lowershape = "taur, [lowershape]"
 
-	desc = "You see [aroused_state ? "an erect" : "a flaccid"] [lowershape] [name]. You estimate it's about [round(length, 0.25)] inch[round(length, 0.25) != 1 ? "es" : ""] long and [round(diameter, 0.25)] inch[round(diameter, 0.25) != 1 ? "es" : ""] in diameter."
+/obj/item/organ/genital/penis/genital_examine(mob/user)
+	. = list()
+	var/lowershape = lowertext(shape)
+	if(user?.client?.prefs?.toggles)
+		. |= "<span class='notice'>You see [aroused_state ? "an erect" : "a flaccid"] [lowershape] [name]. You estimate it's about [round(length, 0.1)] inch[round(length, 0.1) != 1 ? "es" : ""] long and [round(diameter, 0.1)] inch[round(diameter, 0.1) != 1 ? "es" : ""] in diameter.</span>"
 
 /obj/item/organ/genital/penis/get_features(mob/living/carbon/human/H)
 	var/datum/dna/D = H.dna

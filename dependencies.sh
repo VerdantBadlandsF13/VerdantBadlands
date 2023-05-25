@@ -21,7 +21,7 @@ export SPACEMAN_DMM_VERSION=suite-1.7.2
 export PYTHON_VERSION=3.7.9
 
 # Auxmos repository name
-export AUXMOS_REPOSITORY=verdantbadlandsF13/auxmos
+export AUXMOS_REPOSITORY=verdantbadlandsf13/auxmos
 
 # Auxmos git tag
 export AUXMOS_VERSION=v2.3.1

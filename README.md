@@ -1,58 +1,9 @@
 ## Verdant Badlands
-Based and maintained from Citadel Station by way of Desert Rose, Fortuna and The Wasteland.
+Based and maintained from an amalgam of servers.
 
-[![CI Suite](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland/actions/workflows/ci_suite.yml/badge.svg?branch=master&event=push)](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland/actions/workflows/ci_suite.yml)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/sunset-wasteland/sunset-wasteland.svg)](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/sunset-wasteland/sunset-wasteland.svg)](https://isitmaintained.com/project/sunset-wasteland/sunset-wasteland "Average time to resolve an issue")
-
-[![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
-
-**Sunset Wasteland Information**
-* **Code:** <https://github.com/sunset-wasteland/sunset-wasteland>
-* **Wiki:** <https://sunsetwasteland.com/index.php/Main_Page>
-* **Discord:** <https://discord.gg/h5UDdCMHhm>
-
-**The Wasteland Information**  
-* **Code:** <https://github.com/ogrigbe/thewasteland>
-* **Wiki:** <>
-* **Discord:** <https://discord.gg/xCgEwJTppx>
-All relevant forum content takes place on the Discord!
-
-**Desert Rose Information**
-* **Code** <https://github.com/DesertRose2/desertrose>
-* **Legacy Code** <https://github.com/judgex/desertrose>
-
-**Citadel Station Information**  
-* **Website:** <http://citadel-station.net>
-* **Code:** <https://github.com/Citadel-Station-13/Citadel-Station-13>
-* **Wiki:** <https://citadel-station.net/wiki/index.php?title=Main_Page>
-* **Forums:** <http://citadel-station.net/forum>
-* **Ban Appeals:** <http://citadel-station.net/forum/forumdisplay.php?fid=8>
-* **Discord:**  <https://discord.gg/E6SQuhz>
-
-**/tg/station Information**  
-* **Website:** <https://www.tgstation13.org>
-* **Code:** <https://github.com/tgstation/tgstation>
-* **Wiki:** <https://tgstation13.org/wiki/Main_Page>
-* **Codedocs:** <https://codedocs.tgstation13.org>
-* **/tg/station Discord:** <https://tgstation13.org/phpBB/viewforum.php?f=60>
-* **Coderbus Discord:** <https://discord.gg/Vh8TJp9>
-* ~~**IRC:** <irc://irc.rizon.net/coderbus>~~ (dead)  
-  
-## DOWNLOADING
-
-There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://www.tgstation13.org/wiki/Downloading_the_source_code
-
-Option 1:
-Follow this: http://www.tgstation13.org/wiki/Setting_up_git. Make sure to do
-this for Sunset Wasteland instead of TG, i.e. replace the URL for TG's
-repository with `https://github.com/sunset-wasteland/sunset-wasteland.git`
-and go to the Sunset Wasteland repo when it mentions TG's repo.
-
-Option 2: Download the source code as a zip by clicking the ZIP button in the
-code tab of https://github.com/sunset-wasteland/sunset-wasteland
-(note: this will use a lot of bandwidth if you wish to update and is a lot of
-hassle if you want to make any changes at all, so it's not recommended.)
+**Verdant Badlands Information**
+* **Code:** <https://github.com/VerdantBadlandsF13/VerdantBadlands>
+* **Discord:** ~~<LINK HERE>~~ (TBA)  
 
 ## INSTALLATION
 
@@ -60,14 +11,14 @@ First-time installation should be fairly straightforward. First, you'll need
 BYOND installed. You can get it from https://www.byond.com/download. Once you've done
 that, extract the game files to wherever you want to keep them. This is a
 sourcecode-only release, so the next step is to compile the server files.
-~~Open fortune13.dme by double-clicking it, open the Build menu, and click
+~~Open verdant.dme by double-clicking it, open the Build menu, and click
 compile.~~ Use the **BUILD.bat** file instead as the reglar DM compiler can't 
 handle the codebase properly. This'll take a little while, and if everything's
 done right you'll get a message like this:
 
 ```
-saving fortune13.dmb (DEBUG mode)
-fortune13.dmb - 0 errors, 0 warnings
+saving verdant.dmb (DEBUG mode)
+verdant.dmb - 0 errors, 0 warnings
 ```
 
 If you see any errors or warnings, something has gone wrong - possibly a corrupt
@@ -108,7 +59,7 @@ repo](https://github.com/Putnam3145/auxmos), maintained by Putnam3145. Exact
 version info can be found in `dependencies.sh` in this folder.
 
 Finally, to start the server, run Dream Daemon and enter the path to your
-compiled fortune13.dmb file. Make sure to set the port to the one you
+compiled verdant.dmb file. Make sure to set the port to the one you
 specified in the config.txt, and set the Security box to 'Trusted'. Then press
 GO and the server should start up and be ready to join. It is also recommended
 that you set up the SQL backend (see below).
@@ -132,15 +83,6 @@ https://github.com/tgstation/tgstation-server
 
 ## MAPS
 
-/tg/station currently comes equipped with five maps.
-
-* [BoxStation (default)](http://tgstation13.org/wiki/Boxstation)
-* [MetaStation](https://tgstation13.org/wiki/MetaStation)
-* [DeltaStation](https://tgstation13.org/wiki/DeltaStation)
-* [OmegaStation](https://tgstation13.org/wiki/OmegaStation)
-* [PubbyStation](https://tgstation13.org/wiki/PubbyStation)
-
-
 All maps have their own code file that is in the base of the _maps directory. Maps are loaded dynamically when the game starts. Follow this guideline when adding your own map, to your fork, for easy compatibility.
 
 The map that will be loaded for the upcoming round is determined by reading data/next_map.json, which is a copy of the json files found in the _maps tree. If this file does not exist, the default map from config/maps.txt will be loaded. Failing that, BoxStation will be loaded. If you want to set a specific map to load next round you can use the Change Map verb in game before restarting the server or copy a json from _maps to data/next_map.json before starting the server. Also, for debugging purposes, ticking a corresponding map's code file in Dream Maker will force that map to load every round.
@@ -150,8 +92,6 @@ If you are hosting a server, and want randomly picked maps to be played each rou
 **Anytime you want to make changes to a map it's imperative you use the [Map Merging tools](http://tgstation13.org/wiki/Map_Merger).**
 
 ## AWAY MISSIONS
-
-/tg/station supports loading away missions however they are disabled by default.
 
 Map files for away missions are located in the _maps/RandomZLevels directory. Each away mission includes it's own code definitions located in /code/modules/awaymissions/mission_code. These files must be included and compiled with the server beforehand otherwise the server will crash upon trying to load away missions that lack their code.
 

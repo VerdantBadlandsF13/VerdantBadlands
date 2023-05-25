@@ -29,14 +29,14 @@ jobs:
           tools/bootstrap/python -c ''
       - name: Run Linters
         run: |
-          bash tools/ci/check_filedirs.sh fortune13.dme
+          bash tools/ci/check_filedirs.sh verdant.dme
           bash tools/ci/check_changelogs.sh
           find . -name "*.php" -print0 | xargs -0 -n1 php -l
           find . -name "*.json" -not -path "*/node_modules/*" -print0 | xargs -0 python3 ./tools/json_verifier.py
           tgui/bin/tgui --lint
           tgui/bin/tgui --test
           bash tools/ci/check_grep.sh
-          tools/bootstrap/python tools/validate_dme.py < fortune13.dme
+          tools/bootstrap/python tools/validate_dme.py < verdant.dme
           tools/bootstrap/python -m dmi.test
           tools/bootstrap/python -m mapmerge2.dmm_test
           ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1

@@ -1,4 +1,4 @@
-FROM fortune13/byond:513.1536	 as base
+FROM verdant/byond:513.1536	 as base
 
 FROM base as rust_g
 
@@ -27,13 +27,13 @@ RUN /bin/bash -c "source dependencies.sh \
 
 FROM base as dm_base
 
-WORKDIR /fortune13
+WORKDIR /verdant
 
 FROM dm_base as build
 
 COPY . .
 
-RUN DreamMaker -max_errors 0 fortune13.dme \
+RUN DreamMaker -max_errors 0 verdant.dme \
     && tools/deploy.sh /deploy \
 	&& rm /deploy/*.dll
 
@@ -57,6 +57,6 @@ RUN apt-get update \
 COPY --from=rust_g /rust_g/target/release/librust_g.so /root/.byond/bin/rust_g
 COPY --from=build /deploy ./
 
-VOLUME [ "/fortune13/config", "/fortune13/data" ]
+VOLUME [ "/verdant/config", "/verdant/data" ]
 
-ENTRYPOINT [ "DreamDaemon", "fortune13.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
+ENTRYPOINT [ "DreamDaemon", "verdant.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]

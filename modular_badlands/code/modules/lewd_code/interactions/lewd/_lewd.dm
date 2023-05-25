@@ -789,10 +789,11 @@
 	animate(src, pixel_x = pixel_x + pixel_x_diff, pixel_y = pixel_y + pixel_y_diff, time = 2)
 	animate(pixel_x = initial(pixel_x), pixel_y = final_pixel_y, time = 2)
 
-/*--------------------------------------------------
-  ---------------LEWD PROCESS DATUM-----------------
-  --------------------------------------------------
- */
+/*
+	--------------------------------------------------
+	---------------LEWD PROCESS DATUM-----------------
+	--------------------------------------------------
+*/
 
 /mob/living/proc/do_oral(mob/living/partner, fucktarget = "penis")
 	var/message
@@ -1612,7 +1613,7 @@
 	else
 		moan()
 
-/mob/living/proc/get_unconsenting(extreme = FALSE, var/list/ignored_mobs)
+/mob/living/proc/get_unconsenting(extreme = FALSE, ignored_mobs)
 	var/list/nope = list()
 	nope += ignored_mobs
 	for(var/mob/M in range(7, src))

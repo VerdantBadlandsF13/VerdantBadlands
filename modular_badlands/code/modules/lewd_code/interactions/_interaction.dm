@@ -1,6 +1,3 @@
-/datum/interaction
-	var/list/interactions
-
 /proc/make_interactions(interaction)
 	if(!interactions)
 		interactions = list()

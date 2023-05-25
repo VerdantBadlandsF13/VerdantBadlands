@@ -26,7 +26,6 @@
 	var/require_target_topless
 	var/require_user_bottomless
 	var/require_target_bottomless
-	//
 
 	//REQUIRE_NONE for doesn't require.
 	//REQUIRE_EXPOSED for requires exposed.
@@ -273,7 +272,7 @@
 		if(extreme)
 			var/client/cli = user.client
 			if(cli)
-				if(cli.prefs.extremepref == "No")
+				if(!(cli.prefs.toggles & VERB_EXTREME))
 					if(!silent)
 						to_chat(user, "<span class = 'warning'>That's way too much for you.</span>")
 					return FALSE
@@ -489,7 +488,7 @@
 		if(extreme)
 			var/client/cli = target.client
 			if(cli)
-				if(target.client.prefs.extremepref == "No")
+				if(!(target.client.prefs.toggles & VERB_EXTREME))
 					if(!silent)
 						to_chat(user, "<span class = 'warning'>For some reason, you don't want to do this to [target].</span>")
 					return FALSE
@@ -540,8 +539,8 @@
 	if(client)
 		var/client/cli = client
 		var/client/ucli = LM.client
-		if(cli.prefs.extremepref != "No")
-			if(!ucli || (ucli.prefs.extremepref != "No"))
+		if(cli.prefs.toggles & VERB_EXTREME)
+			if(!ucli || (ucli.prefs.toggles & VERB_EXTREME))
 				if(!get_item_by_slot(ITEM_SLOT_EARS))
 					if(has_ears())
 						dat += "<br>...have unprotected ears."
@@ -556,7 +555,7 @@
 						dat += "<br>...have exposed eyesockets."
 				else
 					dat += "<br>...have covered eyes."
-	//
+
 	if(is_topless()  && is_bottomless())
 		dat += "<br>...are naked."
 	else

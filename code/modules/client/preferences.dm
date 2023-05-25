@@ -997,7 +997,7 @@ Records disabled until a use for them is found
 			dat += "<h2>General Content</h2>"
 			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
 			dat += "<br>"
-			dat += "<h2>Adult Content</h2>"
+			dat += "<h2>Lewd Content</h2>"
 			dat += "<b>Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>"
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Genital examine text</b>:<a href='?_src_=prefs;preference=genital_examine'>[(cit_toggles & GENITAL_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
@@ -1017,8 +1017,7 @@ Records disabled until a use for them is found
 			dat +="<td width='300px' height='300px' valign='top'>"
 			dat += "<h2>Extreme Fetish Content</h2>"
 			dat += "<b>Extreme Verbs:</b> <a href='?_src_=prefs;preference=extremepref'>[(toggles & VERB_EXTREME) ? "Allowed" : "Disallowed"]</a><br>"
-			if(cli.prefs.toggles & VERB_EXTREME)
-				dat += "<b>Verb Harm:</b> <a href='?_src_=prefs;preference=extremeharm'>[(toggles & VERB_HARMEXT) ? "Allowed" : "Disallowed"]</a><br>"
+			dat += "<b>Verb Harm:</b> <a href='?_src_=prefs;preference=extremeharm'>[(toggles & VERB_HARMEXT) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "</td>"
 			dat += "</tr></table>"
 			dat += "<br>"
@@ -2624,9 +2623,6 @@ Records disabled until a use for them is found
 				if("publicity")
 					if(unlock_content)
 						toggles ^= MEMBER_PUBLIC
-
-				if("body_model")
-					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE
 
 				if("body_model")
 					features["body_model"] = features["body_model"] == MALE ? FEMALE : MALE

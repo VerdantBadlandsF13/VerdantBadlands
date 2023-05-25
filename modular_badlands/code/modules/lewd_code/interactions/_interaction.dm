@@ -1,9 +1,9 @@
 /proc/make_interactions(interaction)
-	if(!interactions)
-		interactions = list()
+	if(!GLOB.interactions)
+		GLOB.interactions = list()
 		for(var/itype in subtypesof(/datum/interaction))
 			var/datum/interaction/I = new itype()
-			interactions[I.command] = I
+			GLOB.interactions[I.command] = I
 
 /mob/living/proc/list_interaction_attributes()
 	var/dat = ""

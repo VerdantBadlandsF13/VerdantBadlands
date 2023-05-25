@@ -118,7 +118,7 @@
 	if(LAZYLEN(internal_organs) && CHECK_BITFIELD(user.client?.prefs.cit_toggles, GENITAL_EXAMINE))
 		for(var/obj/item/organ/genital/dicc in internal_organs)
 			if(istype(dicc) && dicc.is_exposed())
-				. += "[dicc.desc]"
+				. |= dicc.genital_examine(user)
 	//END OF CIT CHANGES
 
 	//Jitters
@@ -134,20 +134,26 @@
 	if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		appears_dead = 1
 		if(suiciding)
-			. += "<span class='warning'>[t_He] appear[p_s()] to have committed suicide... there is no hope of recovery.</span>"
+			. += "<span class='ooc'>OOC: [t_He] [t_has] used the suicide verb to leave the round. It is not possible to revive this player.</span>"
 		if(hellbound)
-			. += "<span class='warning'>[t_His] soul seems to have been ripped out of [t_his] body.  Revival is impossible.</span>"
-		if(getorgan(/obj/item/organ/brain) && !key && !get_ghost(FALSE, TRUE))
+			. += "<span class='ooc'>OOC: [t_He] [t_has] been marked as hellbound. It is not possible to revive this player.</span>"
+/*		if(getorgan(/obj/item/organ/brain) && !key && !get_ghost(FALSE, TRUE))
 			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and resuscitation is not possible...</span>"
 		else
 			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life, however resuscitation may be possible...</span>"
 
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
-		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
+		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"*/
 
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
 	var/list/msg = list()
+
+	if(client && client.prefs)
+		if(client.prefs.toggles & VERB_CONSENT)
+			. += "[t_His] player has allowed lewd verbs.\n"
+		else
+			. += "[t_His] player has not allowed lewd verbs.\n"
 
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
@@ -216,7 +222,7 @@
 				msg += "<B>[t_He] [t_has] severe burns!</B>\n"
 			else
 				msg += "<B>[t_He] [t_has] extreme burns!</B>\n"
-
+/*
 		temp = getCloneLoss()
 		if(temp)
 			if(temp < 25)
@@ -227,7 +233,7 @@
 				msg += "<b>[t_He] [t_has] severe cellular damage!</b>\n"
 			else
 				msg += "<b>[t_He] [t_has] extreme cellular damage!</b>\n"
-
+*/
 
 
 	if(fire_stacks > 0)
@@ -241,7 +247,7 @@
 
 	if(nutrition < NUTRITION_LEVEL_STARVING - 50)
 		msg += "[t_He] [t_is] severely malnourished.\n"
-	else if(nutrition >= NUTRITION_LEVEL_FAT)
+/*	else if(nutrition >= NUTRITION_LEVEL_FAT)
 		if(user.nutrition < NUTRITION_LEVEL_STARVING - 50)
 			msg += "[t_He] [t_is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else
@@ -253,7 +259,7 @@
 			msg += "[t_He] look[p_s()] really grossed out.\n"
 		if(DISGUST_LEVEL_DISGUSTED to INFINITY)
 			msg += "[t_He] look[p_s()] extremely disgusted.\n"
-
+*/
 	if(water < THIRST_LEVEL_HARD - 50)
 		msg += "[t_He] [t_is] severely dehydrated.\n"
 

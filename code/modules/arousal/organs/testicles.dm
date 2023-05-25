@@ -25,7 +25,7 @@
 /obj/item/organ/genital/testicles/upon_link()
 	size = linked_organ.size
 	update_size()
-	update_appearance_genitals()
+	update_appearance()
 
 /obj/item/organ/genital/testicles/update_size(modified = FALSE)
 	switch(size)
@@ -38,9 +38,8 @@
 		else
 			size_name = "nonexistant"
 
-/obj/item/organ/genital/testicles/update_appearance_genitals()
+/obj/item/organ/genital/testicles/update_appearance()
 	. = ..()
-	desc = "You see an [size_name] pair of testicles."
 	var/datum/sprite_accessory/S = GLOB.balls_shapes_list[shape]
 	var/icon_shape = S ? S.icon_state : "single"
 	icon_state = "testicles_[icon_shape]_[size]"
@@ -53,6 +52,10 @@
 					icon_state += "_s"
 		else
 			color = "#[owner.dna.features["balls_color"]]"
+
+/obj/item/organ/genital/testicles/genital_examine(mob/user)
+	. = list()
+	. |= "<span class='notice'>You see an [size_name] pair of testicles.</span>"
 
 /obj/item/organ/genital/testicles/get_features(mob/living/carbon/human/H)
 	var/datum/dna/D = H.dna

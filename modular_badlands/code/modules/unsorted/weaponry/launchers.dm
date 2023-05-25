@@ -54,6 +54,7 @@ Properly dangerous.
 	mag_type = /obj/item/ammo_box/magazine/internal/fatman
 	fire_sound = 'modular_badlands/code/modules/unsorted/sound/fatman_fire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = null// NO
 	can_suppress = FALSE
 	can_scope = FALSE
 	casing_ejector = FALSE

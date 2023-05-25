@@ -310,7 +310,7 @@ GENETICS SCANNER
 			else if(istype(O, /obj/item/organ/genital/penis))
 				var/obj/item/organ/genital/penis/P = O
 				if(P.length>20)
-					temp_message += " <span class='info'>Subject has a sizeable gentleman's organ at [P.length] inches.</span>"
+					temp_message += " <span class='info'>Subject has a sizeable gentleman's organ at [round(P.length, 0.1)] inches.</span>"
 
 			else if(istype(O, /obj/item/organ/genital/breasts))
 				var/obj/item/organ/genital/breasts/Br = O
@@ -628,9 +628,9 @@ GENETICS SCANNER
 	var/turf/location = get_turf(user)
 	if(!istype(location))
 		return
-	
+
 	scan_turf(user, location)
-	
+
 /obj/item/analyzer/AltClick(mob/user) //Barometer output for measuring when the next storm happens
 	. = ..()
 

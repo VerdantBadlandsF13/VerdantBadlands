@@ -28,30 +28,8 @@
 		prev_size = cached_size
 	return ..()
 
-/obj/item/organ/genital/breasts/update_appearance_genitals()
+/obj/item/organ/genital/breasts/update_appearance()
 	. = ..()
-	var/lowershape = lowertext(shape)
-	switch(lowershape)
-		if("pair")
-			desc = "You see a pair of breasts."
-		if("quad")
-			desc = "You see two pairs of breast, one just under the other."
-		if("sextuple")
-			desc = "You see three sets of breasts, running from their chest to their belly."
-		else
-			desc = "You see some breasts, they seem to be quite exotic."
-	if(size == "huge")
-		desc = "You see [pick("some serious honkers", "a real set of badonkers", "some dobonhonkeros", "massive dohoonkabhankoloos", "two big old tonhongerekoogers", "a couple of giant bonkhonagahoogs", "a pair of humongous hungolomghnonoloughongous")]. Their volume is way beyond cupsize now, measuring in about [round(cached_size)]cm in diameter."
-	else
-		if (size == "flat")
-			desc += " They're very small and flatchested, however."
-		else
-			desc += " You estimate that they're [uppertext(size)]-cups."
-
-	if((genital_flags & GENITAL_FLUID_PRODUCTION) && aroused_state)
-		var/datum/reagent/R = GLOB.chemical_reagents_list[fluid_id]
-		if(R)
-			desc += " They're leaking [lowertext(R.name)]."
 	var/datum/sprite_accessory/S = GLOB.breasts_shapes_list[shape]
 	var/icon_shape = S ? S.icon_state : "pair"
 	var/icon_size = clamp(breast_values[size], BREASTS_ICON_MIN_SIZE, BREASTS_ICON_MAX_SIZE)
@@ -65,6 +43,33 @@
 					icon_state += "_s"
 		else
 			color = "#[owner.dna.features["breasts_color"]]"
+
+/obj/item/organ/genital/breasts/genital_examine(mob/user)
+	. = list()
+	var/lowershape = lowertext(shape)
+	var/txt = "<span class='notice'>"
+	switch(lowershape)
+		if("pair")
+			txt += "You see a pair of breasts."
+		if("quad")
+			txt += "You see two pairs of breast, one just under the other."
+		if("sextuple")
+			txt += "You see three sets of breasts, running from their chest to their belly."
+		else
+			txt += "You see some breasts, they seem to be quite exotic."
+	if(size == "huge")
+		txt = "<span class='notice'>You see [pick("some serious honkers", "a real set of badonkers", "some dobonhonkeros", "massive dohoonkabhankoloos", "two big old tonhongerekoogers", "a couple of giant bonkhonagahoogs", "a pair of humongous hungolomghnonoloughongous")]. Their volume is way beyond cupsize now, measuring in about [round(cached_size)]cm in diameter."
+	else
+		if (size == "flat")
+			txt += " They're very small and flatchested, however."
+		else
+			txt += " You estimate that they're [uppertext(size)]-cups."
+	if(CHECK_BITFIELD(genital_flags, GENITAL_FLUID_PRODUCTION) && aroused_state)
+		var/datum/reagent/R = GLOB.chemical_reagents_list[fluid_id]
+		if(R)
+			txt += " They're leaking [lowertext(R.name)]."
+	txt += "</span>"
+	. |= txt
 
 //Allows breasts to grow and change size, with sprite changes too.
 //maximum wah
@@ -88,6 +93,7 @@
 			to_chat(owner, "<span class='warning'>You feel your breasts shrinking away from your body as your chest flattens out.</span>")
 		QDEL_IN(src, 1)
 		return
+	var/enlargement = FALSE
 	switch(rounded_cached)
 		if(0) //flatchested
 			size = "flat"
@@ -95,8 +101,16 @@
 			size = breast_values[rounded_cached]
 		if(9 to 15) //massive
 			size = breast_values[rounded_cached]
+			enlargement = TRUE
 		if(16 to INFINITY) //rediculous
 			size = "huge"
+			enlargement = TRUE
+	if(owner)
+		var/status_effect = owner.has_status_effect(STATUS_EFFECT_BREASTS_ENLARGEMENT)
+		if(enlargement && !status_effect)
+			owner.apply_status_effect(STATUS_EFFECT_BREASTS_ENLARGEMENT)
+		else if(!enlargement && status_effect)
+			owner.remove_status_effect(STATUS_EFFECT_BREASTS_ENLARGEMENT)
 
 	if(rounded_cached < 16 && owner)//Because byond doesn't count from 0, I have to do this.
 		var/mob/living/carbon/human/H = owner
@@ -115,7 +129,7 @@
 	size = D.features["breasts_size"]
 	shape = D.features["breasts_shape"]
 	if(!D.features["breasts_producing"])
-		genital_flags &= ~ (GENITAL_FLUID_PRODUCTION|CAN_CLIMAX_WITH|CAN_MASTURBATE_WITH)
+		DISABLE_BITFIELD(genital_flags, GENITAL_FLUID_PRODUCTION|CAN_CLIMAX_WITH|CAN_MASTURBATE_WITH)
 	if(!isnum(size))
 		cached_size = breast_values[size]
 	else

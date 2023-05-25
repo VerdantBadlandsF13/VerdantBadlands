@@ -364,8 +364,7 @@
 	decompose = FALSE
 	sharpness = SHARP_EDGED //They need to cut their finger nails
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-
-//Halloween Event Ghouls
+*/
 /mob/living/simple_animal/hostile/ghoul/zombie
 	name = "ravenous feral ghoul"
 	desc = "A ferocious feral ghoul, hungry for human meat."
@@ -381,7 +380,7 @@
 		var/mob/living/carbon/human/H = target
 		try_to_ghoul_zombie_infect(H)
 
-/mob/living/simple_animal/hostile/ghoul/zombie/reaver
+/mob/living/simple_animal/hostile/ghoul/reaver/zombie
 	name = "ravenous feral ghoul reaver"
 	desc = "A ferocious feral ghoul, hungry for human meat. This one is strapped with metal armor, and appears far stronger."
 	icon_state = "ghoulreaver"
@@ -395,7 +394,13 @@
 	melee_damage_upper = 30
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
-/mob/living/simple_animal/hostile/ghoul/zombie/glowing
+/mob/living/simple_animal/hostile/ghoul/reaver/zombie/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		try_to_ghoul_zombie_infect(H)
+
+/mob/living/simple_animal/hostile/ghoul/glowing/zombie
 	name = "ravenous glowing feral ghoul"
 	desc = "A ferocious feral ghoul, hungry for human meat. This one has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
 	icon_state = "glowinghoul"
@@ -411,25 +416,13 @@
 	light_range = 2
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 
-/mob/living/simple_animal/hostile/ghoul/zombie/glowing/Initialize(mapload)
-	. = ..()
-	// we only heal BRUTELOSS because each type directly heals a simplemob's health
-	// therefore setting it to BRUTELOSS | FIRELOSS | TOXLOSS | OXYLOSS would mean healing 4x as much
-	// aka 40% of max life every tick, which is basically unkillable
-	// TODO: refactor this if simple_animals ever get damage types
-	AddComponent(/datum/component/glow_heal, chosen_targets = /mob/living/simple_animal/hostile/ghoul, allow_revival = FALSE, restrict_faction = null, type_healing = BRUTELOSS)
-
-/mob/living/simple_animal/hostile/ghoul/zombie/glowing/Aggro()
-	..()
-	summon_backup(10)
-
-/mob/living/simple_animal/hostile/ghoul/zombie/glowing/AttackingTarget()
+/mob/living/simple_animal/hostile/ghoul/glowing/zombie/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.apply_effect(20, EFFECT_IRRADIATE, 0)
+		try_to_ghoul_zombie_infect(H)
 
-/mob/living/simple_animal/hostile/ghoul/zombie/legendary
+/mob/living/simple_animal/hostile/ghoul/legendary/zombie
 	name = "legendary ravenous ghoul"
 	desc = "A ferocious feral ghoul, hungry for human meat. This one has exceptionally large, bulging muscles. It looks quite strong."
 	icon_state = "glowinghoul"
@@ -446,4 +439,9 @@
 	wound_bonus = 0
 	bare_wound_bonus = 0
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-*/
+
+/mob/living/simple_animal/hostile/ghoul/legendary/zombie/AttackingTarget()
+	. = ..()
+	if(. && ishuman(target))
+		var/mob/living/carbon/human/H = target
+		try_to_ghoul_zombie_infect(H)

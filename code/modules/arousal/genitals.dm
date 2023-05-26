@@ -100,7 +100,7 @@
 		H.update_genitals()
 
 /mob/living/carbon/verb/toggle_genitals()
-	set category = "IC"
+	set category = "Lewd"
 	set name = "Expose/Hide genitals"
 	set desc = "Allows you to toggle which genitals should show through clothes or not."
 
@@ -124,7 +124,7 @@
 	return
 
 /mob/living/carbon/verb/toggle_arousal_state()
-	set category = "IC"
+	set category = "Lewd"
 	set name = "Toggle genital arousal"
 	set desc = "Allows you to toggle which genitals are showing signs of arousal."
 	var/list/genital_list = list()
@@ -235,6 +235,8 @@
 		give_genital(/obj/item/organ/genital/breasts)
 	if(dna.features["has_cock"])
 		give_genital(/obj/item/organ/genital/penis)
+	if(dna.features["has_butt"])
+		give_genital(/obj/item/organ/genital/butt)
 
 /mob/living/carbon/human/proc/give_genital(obj/item/organ/genital/G)
 	if(!dna || (NOGENITALS in dna.species.species_traits) || getorganslot(initial(G.slot)))
@@ -343,6 +345,8 @@
 						genital_overlay.color = "#[dna.features["breasts_color"]]"
 					if("vag_color")
 						genital_overlay.color = "#[dna.features["vag_color"]]"
+					if("butt_color")
+						genital_overlay.color = "#[dna.features["butt_color"]]"
 
 			genital_overlay.icon_state = "[G.slot]_[S.icon_state]_[size][(dna.species.use_skintones && !dna.skin_tone_override) ? "_s" : ""]_[aroused_state]_[layertext]"
 

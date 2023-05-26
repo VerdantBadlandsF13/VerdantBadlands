@@ -6,6 +6,9 @@ Alongside a Fisto mob, maybe. We'll see.
 #define CUM_TARGET_THROAT_CLAW "throat"
 #define CUM_TARGET_VAGINA_CLAW "vagina"
 #define CUM_TARGET_ANUS_CLAW "anus"
+
+#define CUM_TARGET_MOUTH_CLAW "mouth"
+#define THIGH_SMOTHERING_CLAW "thigh_smother"
 /*
 Funclaw, given three modes.
 #1: Rape. Harms players to roughly half health and instagrabs them.
@@ -14,8 +17,8 @@ Funclaw, given three modes.
 These function regardless of prefs, as they're intended to be admin-spawn only.
 */
 /mob/living/simple_animal/hostile/deathclaw/funclaw
-	name = "Funclaw"
-	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one seems to have a strange look in its eyes.."
+	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. <br>\
+	It would appear that this one is covered in blood and various other fluids. Probably yours for the former."
 	var/change_target_hole_cooldown = 0
 	var/chosen_hole
 	var/deathclaw_mode = "rape"
@@ -23,17 +26,33 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 	retreat_distance = 0
 	minimum_distance = 1
 	wander = FALSE
-	has_penis = TRUE
 	a_intent = INTENT_HARM
+	var/male = TRUE// Handles the obvious.
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/fem
+	male = FALSE
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/gentle
-	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. This one has the bedroom eyes.."
+	deathclaw_mode = "gentle"
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/fem/gentle
 	deathclaw_mode = "gentle"
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/death
-	desc = "A massive, reptilian creature with powerful muscles, razor-sharp claws, and aggression to match. <br>\
-	It would appear that this one is covered in blood and various other fluids. Probably yours for the former."
 	deathclaw_mode = "death"
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/fem/death
+	deathclaw_mode = "death"
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/New()
+	. = ..()
+	if(male)
+		has_penis = TRUE
+		gender = MALE
+	else
+		male = FALSE
+		has_vagina = TRUE
+		gender = FEMALE
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/AttackingTarget()
 	var/mob/living/M = target
@@ -65,20 +84,37 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 			span_userdanger("[src] violently grabs you!"))
 		setGrabState(GRAB_NECK) //Instant neck grab
 
+		if(!ishuman(M) || M.health <= 0)
+			src.drop_all_held_items()
+			src.stop_pulling()
+
 		return
 
 	if(get_refraction_dif() > 0)
 		..()
 		return
 
-	if(change_target_hole_cooldown < world.time)
-		chosen_hole = null
-		while (chosen_hole == null)
-			pickNewHole(M)
-		change_target_hole_cooldown = world.time + 100
+	if(male)
+		if(change_target_hole_cooldown < world.time)
+			chosen_hole = null
+			while (chosen_hole == null)
+				pickNewHole(M)
+			change_target_hole_cooldown = world.time + 100
 
-	pound(M)
-	addtimer(CALLBACK(src, .proc/pound, M), rand(8, 12))
+	if(!male)
+		if(change_target_hole_cooldown < world.time)
+			chosen_hole = null
+			while (chosen_hole == null)
+				pickNewHolef(M)
+			change_target_hole_cooldown = world.time + 100
+
+	if(male)
+		pound(M)
+		addtimer(CALLBACK(src, .proc/pound, M), rand(8, 12))
+
+	if(!male)
+		poundf(M)
+		addtimer(CALLBACK(src, .proc/poundf, M), rand(8, 12))
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/pickNewHole(mob/living/M)
 	switch(rand(2))
@@ -91,6 +127,18 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 				chosen_hole = CUM_TARGET_ANUS_CLAW
 		if(2)
 			chosen_hole = CUM_TARGET_THROAT_CLAW
+
+/mob/living/simple_animal/hostile/deathclaw/funclaw/proc/pickNewHolef(mob/living/M)
+	switch(rand(2))
+		if(0)
+			chosen_hole = CUM_TARGET_MOUTH_CLAW
+		if(1)
+			if(M.has_penis())
+				chosen_hole = CUM_TARGET_VAGINA_CLAW
+			else
+				chosen_hole = THIGH_SMOTHERING_CLAW
+		if(2)
+			chosen_hole = THIGH_SMOTHERING_CLAW
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/pound(mob/living/M)
 	if(refractory_period > 0)
@@ -118,9 +166,45 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 				return
 			do_throatfuck(M)
 
+/mob/living/simple_animal/hostile/deathclaw/funclaw/proc/poundf(mob/living/M)
+	if(refractory_period > 0)
+		return
+
+	switch(chosen_hole)
+		if(CUM_TARGET_MOUTH_CLAW)
+			if(tearSlot(M, SLOT_HEAD))
+				return
+			if(tearSlot(M, SLOT_WEAR_MASK))
+				return
+			do_facefuck(M)
+
+		if(CUM_TARGET_VAGINA_CLAW)
+			if(tearSlot(M, SLOT_WEAR_SUIT))
+				return
+			if(tearSlot(M, SLOT_W_UNIFORM))
+				return
+			do_mount(M)
+
+		if(THIGH_SMOTHERING_CLAW)
+			if(tearSlot(M, SLOT_HEAD))
+				return
+			if(tearSlot(M, SLOT_WEAR_MASK))
+				return
+			thigh_smother(M)
+
 /mob/living/simple_animal/hostile/deathclaw/funclaw/cum(mob/living/M)
 
 	if(get_refraction_dif() > 0)
+		return
+
+	if(!male)
+		shake_camera(M, 6, 1)
+		set_is_fucking(null ,null)
+
+		refractory_period = world.time + rand(100, 150) // Sex cooldown
+		set_lust(0) // Nuts at 400
+
+		addtimer(CALLBACK(src, .proc/slap, M), 15)
 		return
 
 	var/message

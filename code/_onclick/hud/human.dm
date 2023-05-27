@@ -6,12 +6,16 @@
 	name = "interface"
 	icon = 'icons/mob/screen_full_badlands.dmi'
 	icon_state = "hud_collapsed"
+	layer = HUCON_LAYER
 //	var/mutable_appearance/scanlines
 
 /obj/screen/fullscreen/hud_cont_screen/card
 	icon = 'icons/mob/screen_full_badlands.dmi'
 	icon_state = "hud_full_card"
-/*
+
+/obj/screen/hud_cont_screen/proc/update_container()
+	update_icon_state()
+
 /obj/screen/hud_cont_screen/update_icon_state()
 	var/mob/living/user = hud?.mymob
 	if(!user)
@@ -19,7 +23,7 @@
 	if(hud.inventory_shown)
 		icon_state = "hud_full"
 	else
-		icon_state = "hud_collapsed"*/
+		icon_state = "hud_collapsed"
 // Badlands Hud Container - End
 
 /obj/screen/human/toggle
@@ -105,18 +109,14 @@
 	..()
 	owner.overlay_fullscreen("see_through_darkness", /obj/screen/fullscreen/see_through_darkness)
 
-	var/widescreenlayout = FALSE //CIT CHANGE - adds support for different hud layouts depending on widescreen pref
-	if(owner.client && owner.client.prefs && owner.client.prefs.widescreenpref) //CIT CHANGE - ditto
-		widescreenlayout = TRUE // CIT CHANGE - ditto
+	var/widescreenlayout = FALSE
+	if(owner.client && owner.client.prefs && owner.client.prefs.widescreenpref)
+		widescreenlayout = TRUE
 
 	var/obj/screen/using
 	var/obj/screen/inventory/inv_box
 
 	using = new /obj/screen/fullscreen/hud_cont_screen
-//	using.screen_loc = ui_container
-//	using.alpha = 150
-//	using.layer = FULLSCREEN_LAYER
-//	using.mouse_opacity = 0
 	static_inventory += using
 
 	oxy = new /obj/screen/oxy()
@@ -133,15 +133,15 @@
 
 	using = new/obj/screen/language_menu
 	using.icon = ui_style
-	if(!widescreenlayout) // CIT CHANGE
-		using.screen_loc = ui_boxlang // CIT CHANGE
+	if(!widescreenlayout)
+		using.screen_loc = ui_boxlang
 	using.hud = src
 	static_inventory += using
 
 	using = new /obj/screen/area_creator
 	using.icon = ui_style
-	if(!widescreenlayout) // CIT CHANGE
-		using.screen_loc = ui_boxarea // CIT CHANGE
+	if(!widescreenlayout)
+		using.screen_loc = ui_boxarea
 	using.hud = src
 	static_inventory += using
 
@@ -151,20 +151,18 @@
 	static_inventory += action_intent
 
 	using = new /obj/screen/mov_intent
-	using.icon = tg_ui_icon_to_cit_ui(ui_style) // CIT CHANGE - overrides mov intent icon
+	using.icon = tg_ui_icon_to_cit_ui(ui_style)
 	using.icon_state = (mymob.m_intent == MOVE_INTENT_RUN ? "running" : "walking")
 	using.screen_loc = ui_movi
 	using.hud = src
 	static_inventory += using
 
-	//CITADEL CHANGES - sprint button
 	using = new /obj/screen/sprintbutton
 	using.icon = tg_ui_icon_to_cit_ui(ui_style)
 	using.icon_state = ((owner.combat_flags & COMBAT_FLAG_SPRINT_ACTIVE) ? "act_sprint_on" : "act_sprint")
 	using.screen_loc = ui_movi
 	using.hud = src
 	static_inventory += using
-	//END OF CITADEL CHANGES
 
 	//same as above but buffer.
 	sprint_buffer = new /obj/screen/sprint_buffer
@@ -280,7 +278,7 @@
 
 	using = new /obj/screen/resist()
 	using.icon = ui_style
-	using.screen_loc = ui_overridden_resist // CIT CHANGE - changes this to overridden resist
+	using.screen_loc = ui_overridden_resist
 	using.hud = src
 	hotkeybuttons += using
 
@@ -289,7 +287,6 @@
 	using.screen_loc = ui_pull_resist
 	using.hud = src
 	static_inventory += using
-	//END OF CIT CHANGES
 
 	using = new /obj/screen/human/toggle()
 	using.icon = ui_style
@@ -374,7 +371,6 @@
 		staminabuffer = new /obj/screen/staminabuffer()
 		staminabuffer.hud = src
 		infodisplay += staminabuffer
-	//END OF CIT CHANGES
 
 	healthdoll = new /obj/screen/healthdoll()
 	healthdoll.hud = src

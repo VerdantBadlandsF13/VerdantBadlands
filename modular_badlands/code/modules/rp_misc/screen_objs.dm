@@ -16,7 +16,7 @@ Shhh.
 /obj/screen/oxy/Click(location,control,params)
 	if(isliving(usr))
 		var/mob/living/L = usr
-		to_chat(L, "<span class='notice'><b>[src.desc]</b>")
+		to_chat(L, "<span class='notice'>[src.desc]")
 
 /obj/screen/oxy/update_icon()
 	. = ..()
@@ -68,7 +68,7 @@ Shhh.
 /obj/screen/water/Click(location,control,params)
 	if(isliving(usr))
 		var/mob/living/L = usr
-		to_chat(L, "<span class='notice'><b>[src.desc]</b>")
+		to_chat(L, "<span class='notice'>[src.desc]")
 
 /obj/screen/water/update_icon()
 	. = ..()
@@ -137,7 +137,7 @@ Shhh.
 /obj/screen/food/Click(location,control,params)
 	if(isliving(usr))
 		var/mob/living/L = usr
-		to_chat(L, "<span class='notice'><b>[src.desc]</b>")
+		to_chat(L, "<span class='notice'>[src.desc]")
 
 /obj/screen/food/update_icon()
 	. = ..()

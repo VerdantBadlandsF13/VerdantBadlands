@@ -65,6 +65,7 @@
 
 /mob/living/carbon/human/breathe()
 	handle_gas_mask_sound()
+	update_oxy_hud()
 	if(!dna.species.breathe(src))
 		..()
 

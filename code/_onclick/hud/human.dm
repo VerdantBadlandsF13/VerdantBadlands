@@ -1,6 +1,27 @@
 /obj/screen/human
 	icon = 'icons/fallout/UI/screen_badlands.dmi'
 
+// Badlands Hud Container - Start
+/obj/screen/fullscreen/hud_cont_screen
+	name = "interface"
+	icon = 'icons/mob/screen_full_badlands.dmi'
+	icon_state = "hud_collapsed"
+//	var/mutable_appearance/scanlines
+
+/obj/screen/fullscreen/hud_cont_screen/card
+	icon = 'icons/mob/screen_full_badlands.dmi'
+	icon_state = "hud_full_card"
+/*
+/obj/screen/hud_cont_screen/update_icon_state()
+	var/mob/living/user = hud?.mymob
+	if(!user)
+		return
+	if(hud.inventory_shown)
+		icon_state = "hud_full"
+	else
+		icon_state = "hud_collapsed"*/
+// Badlands Hud Container - End
+
 /obj/screen/human/toggle
 	name = "toggle"
 	icon_state = "toggle"
@@ -90,6 +111,13 @@
 
 	var/obj/screen/using
 	var/obj/screen/inventory/inv_box
+
+	using = new /obj/screen/fullscreen/hud_cont_screen
+//	using.screen_loc = ui_container
+//	using.alpha = 150
+//	using.layer = FULLSCREEN_LAYER
+//	using.mouse_opacity = 0
+	static_inventory += using
 
 	using = new/obj/screen/language_menu
 	using.icon = ui_style

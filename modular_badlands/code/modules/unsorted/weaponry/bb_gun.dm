@@ -28,6 +28,8 @@
 /obj/item/gun/ballistic/shotgun/bb
 	name = "BB gun"
 	desc = "A Red Ryder BB gun. The classic."
+	icon = 'icons/obj/guns/projectile.dmi'
+	mob_overlay_icon = 'modular_badlands/code/modules/unsorted/icons/backslot_weapon.dmi'
 	icon_state = "bb_gun"
 	item_state = "varmintrifle"
 	dryfire_sound = 'sound/f13weapons/bbgun_noammo.ogg'

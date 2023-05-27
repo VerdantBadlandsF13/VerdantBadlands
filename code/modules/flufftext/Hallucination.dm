@@ -931,9 +931,9 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.throw_alert(alert_type, /obj/screen/alert/too_much_tox, override = TRUE)
 		if("nutrition")
 			if(prob(50))
-				target.throw_alert(alert_type, /obj/screen/alert/fat, override = TRUE)
+				target.throw_alert(alert_type, /obj/screen/alert/food/fat, override = TRUE)
 			else
-				target.throw_alert(alert_type, /obj/screen/alert/starving, override = TRUE)
+				target.throw_alert(alert_type, /obj/screen/alert/food/hunger4, override = TRUE)
 		if("gravity")
 			target.throw_alert(alert_type, /obj/screen/alert/weightless, override = TRUE)
 		if("fire")

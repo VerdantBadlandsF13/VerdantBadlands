@@ -10,12 +10,33 @@ Properly dangerous.
 
 /obj/item/ammo_casing/caseless/fatman
 	name = "\improper mini nuke"
-	desc = "A football sized nuclear warhead. How'd you get this?"
+	desc = "A football sized nuclear warhead. As a highly volatile weapon, you'd be wise to keep this away from open flames."
 	caliber = "mn"
 	icon = 'modular_badlands/code/modules/unsorted/icons/fatman.dmi'
 	icon_state = "mini_nuke"
 	projectile_type = /obj/item/projectile/bullet/rocket/fatman
 	is_pickable = FALSE
+
+/obj/item/ammo_casing/caseless/fatman/proc/det()
+	..()
+	explosion(src, 0, 3, 12, 12, TRUE, TRUE, 12, FALSE, TRUE)
+
+	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.
+		if(istype(victim) && victim.stat != DEAD)
+			victim.rad_act(12500)//I'm sorry, little one. :(
+	new /obj/effect/temp_visual/explosion/nuke(get_turf(src))
+	radiation_pulse(src, 3500)
+	for(var/turf/open/turf in view(src,2))//Probably too little?
+		if(istype(turf))
+			var/obj/effect/decal/waste/WS = locate() in turf.contents
+			if(!WS)
+				WS = new/obj/effect/decal/waste(turf)
+	qdel(src)
+
+/obj/item/ammo_casing/caseless/fatman/ex_act()
+	det()
+/obj/item/ammo_casing/caseless/fatman/fire_act()
+	det()
 
 /obj/item/projectile/bullet/rocket/fatman
 	name ="\improper mini nuke"
@@ -25,7 +46,7 @@ Properly dangerous.
 	damage = 250// How would you even get hit by this in the first place?
 	armour_penetration = 1
 	ricochets_max = 0
-	shrapnel_magnitude = 2
+	shrapnel_magnitude = 0
 
 /obj/item/projectile/bullet/rocket/fatman/on_hit(atom/target, blocked=0)
 	..()
@@ -48,9 +69,15 @@ Properly dangerous.
 	name = "\improper Fat Man"
 	desc = "A launch platform for a football sized nuclear warhead. <br>\
 	This specific model appears to be fitted with a rangefinder."
+
 	icon = 'modular_badlands/code/modules/unsorted/icons/fatman.dmi'
+	mob_overlay_icon = 'modular_badlands/code/modules/unsorted/icons/backslot_weapon.dmi'
+	lefthand_file = 'modular_badlands/code/modules/unsorted/icons/items_lefthand.dmi'
+	righthand_file = 'modular_badlands/code/modules/unsorted/icons/items_righthand.dmi'
+
 	icon_state = "fatman"
 	item_state = "fatman"
+
 	mag_type = /obj/item/ammo_box/magazine/internal/fatman
 	fire_sound = 'modular_badlands/code/modules/unsorted/sound/fatman_fire.ogg'
 	w_class = WEIGHT_CLASS_BULKY
@@ -97,13 +124,13 @@ Properly dangerous.
 			playsound(src, 'modular_badlands/code/modules/unsorted/sound/fatman_unload.ogg', 70, TRUE)
 			chambered = null
 		else
-			to_chat(user, "<span class='notice'>There's no [magazine_wording] in [src].</span>")
+			to_chat(user, "<span class='notice'>There's no [magazine_wording] in \the [src].</span>")
 	update_icon()
 
 /obj/item/gun/ballistic/fatman/attackby(obj/item/A, mob/user, params)
 	if(magazine && istype(A, /obj/item/ammo_casing))
 		if(chambered)
-			to_chat(user, "<span class='notice'>[src] already has a [magazine_wording] chambered.</span>")
+			to_chat(user, "<span class='notice'>[src] already has a [magazine_wording] on the launch platform.</span>")
 			return
 		if(magazine.attackby(A, user, silent = TRUE))
 			to_chat(user, "<span class='notice'>You load a new [A] into \the [src].</span>")

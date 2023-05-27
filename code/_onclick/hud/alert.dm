@@ -110,6 +110,7 @@
 
 
 //Gas alerts
+/*
 /obj/screen/alert/not_enough_oxy
 	name = "Choking (No O2)"
 	desc = "You're not getting enough oxygen. Find some good air before you pass out!"
@@ -119,7 +120,7 @@
 	name = "Choking (O2)"
 	desc = "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!"
 	icon_state = "too_much_oxy"
-
+*/
 /obj/screen/alert/not_enough_nitro
 	name = "Choking (No N2)"
 	desc = "You're not getting enough nitrogen. Find some good air before you pass out!"
@@ -701,7 +702,7 @@ so as to remain in compliance with the most up-to-date laws."
 /*
 /////////
 // Food/Water
-// OLD. Refer to hydhung.dm for the new way of handling this.
+// OLD. Refer to screen_objs.dm for the new way of handling this.
 /////////
 /obj/screen/alert/water
 	screen_loc = ui_alert_water

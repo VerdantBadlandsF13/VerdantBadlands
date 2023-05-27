@@ -119,6 +119,18 @@
 //	using.mouse_opacity = 0
 	static_inventory += using
 
+	oxy = new /obj/screen/oxy()
+	oxy.hud = src
+	infodisplay += oxy
+
+	water = new /obj/screen/water
+	water.hud = src
+	infodisplay += water
+
+	food = new /obj/screen/food()
+	food.hud = src
+	infodisplay += food
+
 	using = new/obj/screen/language_menu
 	using.icon = ui_style
 	if(!widescreenlayout) // CIT CHANGE

@@ -259,7 +259,6 @@
 		breath.adjust_moles(gas, mole_adjustments[gas])
 
 	if(breath)	// If there's some other shit in the air lets deal with it here.
-
 	// N2O
 
 		var/SA_pp = PP(breath, GAS_NITROUS)

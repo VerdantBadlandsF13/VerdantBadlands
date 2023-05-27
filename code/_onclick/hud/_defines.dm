@@ -102,8 +102,9 @@
 #define ui_alert5 "EAST-1:28,CENTER+1:19"
 
 //Bottom Right. Status for hunger and hydration.
-#define ui_water	"EAST-0.8,CENTER-5"
-#define ui_food		"EAST-0.8,CENTER-4.2"
+#define ui_hydration	"EAST-0.8,CENTER-5"
+#define ui_hunger		"EAST-0.8,CENTER-4.2"
+#define ui_oxy			"EAST+0.1,CENTER-3.1"
 
 //Middle right (status indicators)
 #define ui_healthdoll "EAST-1:28,CENTER-2.3"
@@ -170,7 +171,7 @@
 
 
 //UI position overrides for 1:1 screen layout. (default is 7:5)
-#define ui_stamina "EAST-1:22,CENTER:-18"
+#define ui_stamina "EAST-1:25,CENTER:-18"
 #define ui_overridden_resist "EAST-3:24,SOUTH+1:7"
 #define ui_clickdelay "CENTER,SOUTH+1:-31"
 #define ui_resistdelay "EAST-3:24,SOUTH+1:4"

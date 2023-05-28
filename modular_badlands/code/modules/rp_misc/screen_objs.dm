@@ -18,26 +18,34 @@ Shhh.
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
 
+/obj/screen/oxy/MouseEntered(location,control,params)
+	if(!QDELETED(src))
+		openToolTip(usr,src,params,title = name,content = desc)
+
+/obj/screen/oxy/action_button/MouseExited()
+	closeToolTip(usr)
+
 /obj/screen/oxy/update_icon()
 	. = ..()
 
 /////////
 // Oxygen Update
 /////////
-/mob/living/carbon/human/proc/update_oxy_hud()
+/mob/living/carbon/human/proc/update_oxy_hud(datum/gas_mixture/breath)
+
 	if(!client)
 		return
 
-	if(src.o2overloadtime > 0)
-		hud_used.oxy.icon_state = "too_much_oxy"
-		hud_used.oxy.desc = "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!"
-		return
-	else if(src.failed_last_breath == 1)
+	if(failed_last_breath == 1)
 		hud_used.oxy.icon_state = "not_enough_oxy"
 		hud_used.oxy.desc = "You're not getting enough oxygen. Find some good air before you pass out!"
 		return
+	else if(o2overloadtime > 0)
+		hud_used.oxy.icon_state = "too_much_oxy"
+		hud_used.oxy.desc = "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!"
+		return
 	else
-		hud_used.healths.icon_state = "enough_oxy"
+		hud_used.oxy.icon_state = "enough_oxy"
 		hud_used.oxy.desc = "You're breathing just fine."
 	return
 
@@ -69,6 +77,13 @@ Shhh.
 	if(isliving(usr))
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
+
+/obj/screen/water/MouseEntered(location,control,params)
+	if(!QDELETED(src))
+		openToolTip(usr,src,params,title = name,content = desc)
+
+/obj/screen/water/action_button/MouseExited()
+	closeToolTip(usr)
 
 /obj/screen/water/update_icon()
 	. = ..()
@@ -138,6 +153,13 @@ Shhh.
 	if(isliving(usr))
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
+
+/obj/screen/food/MouseEntered(location,control,params)
+	if(!QDELETED(src))
+		openToolTip(usr,src,params,title = name,content = desc)
+
+/obj/screen/food/action_button/MouseExited()
+	closeToolTip(usr)
 
 /obj/screen/food/update_icon()
 	. = ..()

@@ -10,20 +10,8 @@
 //	var/mutable_appearance/scanlines
 
 /obj/screen/fullscreen/hud_cont_screen/card
-	icon = 'icons/mob/screen_full_badlands.dmi'
 	icon_state = "hud_full_card"
-
-/obj/screen/hud_cont_screen/proc/update_container()
-	update_icon_state()
-
-/obj/screen/hud_cont_screen/update_icon_state()
-	var/mob/living/user = hud?.mymob
-	if(!user)
-		return
-	if(hud.inventory_shown)
-		icon_state = "hud_full"
-	else
-		icon_state = "hud_collapsed"
+	layer = HUCONC_LAYER
 // Badlands Hud Container - End
 
 /obj/screen/human/toggle
@@ -117,9 +105,14 @@
 	var/obj/screen/inventory/inv_box
 
 	using = new /obj/screen/fullscreen/hud_cont_screen
+	using.name = "interface"
 	static_inventory += using
 
-	oxy = new /obj/screen/oxy()
+	inv_box = new /obj/screen/fullscreen/hud_cont_screen/card
+	inv_box.name = "interface"
+	toggleable_inventory += inv_box
+
+	oxy = new /obj/screen/oxy
 	oxy.hud = src
 	infodisplay += oxy
 
@@ -127,7 +120,7 @@
 	water.hud = src
 	infodisplay += water
 
-	food = new /obj/screen/food()
+	food = new /obj/screen/food
 	food.hud = src
 	infodisplay += food
 

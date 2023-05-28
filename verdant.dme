@@ -3737,6 +3737,7 @@
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+#include "modular_badlands\_readme.dm"
 #include "modular_badlands\code\modules\lewd_code\_globals.dm"
 #include "modular_badlands\code\modules\lewd_code\_readme.dm"
 #include "modular_badlands\code\modules\lewd_code\preferences_toggles.dm"

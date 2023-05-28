@@ -18,7 +18,6 @@ Properly dangerous.
 	is_pickable = FALSE
 
 /obj/item/ammo_casing/caseless/fatman/proc/det()
-	..()
 	explosion(src, 0, 3, 12, 12, TRUE, TRUE, 12, FALSE, TRUE)
 
 	for(var/mob/living/carbon/human/victim in view(src,6))//Step of six for radiation.

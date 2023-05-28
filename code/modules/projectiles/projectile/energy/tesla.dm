@@ -22,13 +22,6 @@
 	QDEL_NULL(chain)
 	return ..()
 
-/obj/item/projectile/energy/tesla/revolver
-	name = "energy orb"
-
-/obj/item/projectile/energy/tesla/cannon
-	name = "tesla orb"
-	power = 20000
-
 /obj/item/projectile/energy/teslacannon
 	name = "tesla beam"
 	icon_state = "omnilaser"
@@ -50,17 +43,3 @@
 	impact_light_intensity = 8
 	impact_light_range = 3.75
 	impact_light_color_override = LIGHT_COLOR_BLUE
-
-/obj/item/projectile/energy/teslacannon/oasis
-	name = "shock beam"
-	damage = 8
-	armour_penetration = 0.01 //avoid pa deflect
-	stamina = 10
-	flag = "energy"
-	wound_bonus = -10
-	bare_wound_bonus = 30
-
-/obj/item/projectile/energy/teslacannon/oasis/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(!ismob(target) || blocked >= 100) //Fully blocked by mob or collided with dense object - burst into sparks!
-		do_sparks(1, TRUE, src)

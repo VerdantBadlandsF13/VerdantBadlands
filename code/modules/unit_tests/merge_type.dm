@@ -14,25 +14,7 @@
 							  /obj/item/stack/f13Cash/random/med,
 							  /obj/item/stack/f13Cash/random/high,
 							  /obj/item/stack/f13Cash/random/banker,
-							  /obj/item/stack/f13Cash/random,
-							  /obj/item/stack/f13Cash/random/denarius/low,
-							  /obj/item/stack/f13Cash/random/denarius/med,
-							  /obj/item/stack/f13Cash/random/denarius/high,
-							  /obj/item/stack/f13Cash/random/denarius/legionpay_basic,
-							  /obj/item/stack/f13Cash/random/denarius/legionpay_veteran,
-							  /obj/item/stack/f13Cash/random/denarius/legionpay_officer,
-							  /obj/item/stack/f13Cash/random/denarius,
-							  /obj/item/stack/f13Cash/random/aureus/low,
-							  /obj/item/stack/f13Cash/random/aureus/med,
-							  /obj/item/stack/f13Cash/random/aureus/high,
-							  /obj/item/stack/f13Cash/random/aureus,
-							  /obj/item/stack/f13Cash/random/ncr/low,
-							  /obj/item/stack/f13Cash/random/ncr/med,
-							  /obj/item/stack/f13Cash/random/ncr/high,
-							  /obj/item/stack/f13Cash/random/ncr/ncrpay_basic,
-							  /obj/item/stack/f13Cash/random/ncr/ncrpay_veteran,
-							  /obj/item/stack/f13Cash/random/ncr/ncrpay_officer,
-							  /obj/item/stack/f13Cash/random/ncr)
+							  /obj/item/stack/f13Cash/random)
 
 	var/list/paths = subtypesof(/obj/item/stack) - blacklist
 

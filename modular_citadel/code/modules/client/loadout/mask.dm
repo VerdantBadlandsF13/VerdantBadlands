@@ -3,10 +3,6 @@
 	subcategory = LOADOUT_SUBCATEGORY_MASK_GENERAL
 	slot = SLOT_WEAR_MASK
 
-/datum/gear/mask/facewrap
-	name = "desert facewrap"
-	path = /obj/item/clothing/mask/ncr_facewrap
-
 // Masks ///
 
 /datum/gear/mask/rat

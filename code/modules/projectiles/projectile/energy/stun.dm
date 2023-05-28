@@ -35,17 +35,3 @@
 /obj/item/projectile/energy/electrode/on_range() //to ensure the bolt sparks when it reaches the end of its range if it didn't hit a target yet
 	do_sparks(1, TRUE, src)
 	..()
-
-/obj/item/projectile/energy/electrode/security
-	tase_duration = 30
-	knockdown = 0
-	stamina = 10
-	knockdown_stamoverride = 0
-	knockdown_stam_max = 0
-	strong_tase = FALSE
-
-/obj/item/projectile/energy/electrode/security/hos
-	knockdown = 100
-	knockdown_stamoverride = 30
-	knockdown_stam_max = null
-	tase_duration = 10

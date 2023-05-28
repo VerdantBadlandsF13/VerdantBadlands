@@ -351,20 +351,6 @@
 	name = "grey turtleneck"
 	path = /obj/item/clothing/under/suit/turtle/grey
 	cost = 2
-/*
-/datum/gear/uniform/detbrown
-	name = "Brown Worn Suit"
-	path = /obj/item/clothing/under/rank/security/detective/brown
-	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SUITS
-
-/datum/gear/uniform/detbrown/detbrown2
-	name = "Padded Worn Suit"
-	path = /obj/item/clothing/under/rank/security/detective/brown/brown2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Detective"
-	restricted_roles = list("Detective")
-*/
 
 // Grey utility
 
@@ -373,69 +359,7 @@
 	path = /obj/item/clothing/under/rank/civilian/util
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 
-/*
-/datum/gear/uniform/grey/sec
-	name = "Security Utility Uniform"
-	path = /obj/item/clothing/under/rank/security/officer/util
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Security"
-	restricted_roles = list("Detective", "Security Officer", "Warden", "Head of Security")
-
-/datum/gear/uniform/grey/sci
-	name = "Science Utility Uniform"
-	path = /obj/item/clothing/under/rank/rnd/scientist/util
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Science"
-	restricted_roles = list("Scientist", "Roboticist", "Research Director", "Geneticist")
-*/
-
-/*
-/datum/gear/uniform/grey/supply
-	name = "Supply Utility Uniform"
-	path = /obj/item/clothing/under/rank/cargo/util
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Supply"
-	restricted_roles = list("Shaft Miner", "Cargo Technician", "Quartermaster")
-
-/datum/gear/uniform/grey/com
-	name = "Command Utility Uniform"
-	path = /obj/item/clothing/under/rank/captain/util
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_JOBS
-	restricted_desc = "Command"
-	restricted_roles = list("Quartermaster", "Research Director", "Chief Medical Officer", "Head Of Security", "Head Of Personnel", "Captain")
-*/
-
-//Memes
-
-//Christmas
-/*Commenting out Until next Christmas or made automatic
-/datum/gear/uniform/christmasmaler
-	name = "Red Masculine Christmas Suit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/costume/christmas
-
-/datum/gear/uniform/christmasmaleg
-	name = "Green Masculine Christmas Suit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/costume/christmas/green
-
-/datum/gear/uniform/christmasfemaler
-	name = "Red Feminine Christmas Suit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/costume/christmas/croptop
-
-/datum/gear/uniform/christmasfemaleg
-	name = "Green Feminine Christmas Suit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/costume/christmas/croptop/green
-
-/datum/gear/uniform/pinkstripper
-	name = "Pink stripper outfit"
-	category = SLOT_W_UNIFORM
-	path = /obj/item/clothing/under/misc/stripper
-	cost = 3
-*/
-
+// Memes
 /datum/gear/uniform/flapper
 	name = "flapper dress"
 	path = /obj/item/clothing/under/f13/female/flapper
@@ -453,44 +377,8 @@
 	name = "green stripper outfit"
 	path = /obj/item/clothing/under/misc/stripper/green
 	cost = 5
-/*
-/datum/gear/uniform/qipao
-	name = "Qipao, Black"
-	path = /obj/item/clothing/under/costume/qipao
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
-/datum/gear/uniform/qipao/white
-	name = "Qipao, White"
-	path = /obj/item/clothing/under/costume/qipao/white
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-
-/datum/gear/uniform/qipao/red
-	name = "Qipao, Red"
-	path = /obj/item/clothing/under/costume/qipao/red
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-
-/datum/gear/uniform/cheongsam
-	name = "Cheongsam, Black"
-	path = /obj/item/clothing/under/costume/cheongsam
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-
-/datum/gear/uniform/cheongsam/white
-	name = "Cheongsam, White"
-	path = /obj/item/clothing/under/costume/cheongsam/white
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-
-/datum/gear/uniform/cheongsam/red
-	name = "Cheongsam, Red"
-	path = /obj/item/clothing/under/costume/cheongsam/red
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-*/
-
+// Dresses
 /datum/gear/uniform/dress/black
 	name = "black dress"
 	path = /obj/item/clothing/under/f13/blackdress
@@ -510,30 +398,8 @@
 /datum/gear/uniform/bathrobe
 	name = "bathrobe"
 	path = /obj/item/clothing/under/misc/bathrobe
-/*
-/datum/gear/uniform/kimono
-	name = "Kimono"
-	path = /obj/item/clothing/under/costume/kimono
-
-/datum/gear/uniform/kimono/black
-	name = "Black kimono"
-	path = /obj/item/clothing/under/costume/kimono/black
-
-/datum/gear/uniform/kimono/kamishimo
-	name = "Kamishimo"
-	path = /obj/item/clothing/under/costume/kimono/kamishimo
-
-/datum/gear/uniform/kimono/fancy
-	name = "Fancy kimono"
-	path = /obj/item/clothing/under/costume/kimono/fancy
-
-/datum/gear/uniform/kimono/sakura
-	name = "Sakura kimono"
-	path = /obj/item/clothing/under/costume/kimono/sakura
-*/
 
 //POLICE
-
 /datum/gear/uniform/police
 	name = "Police Officer's uniform"
 	path = /obj/item/clothing/under/f13/police/officer
@@ -545,7 +411,6 @@
 	cost = 3
 
 //US
-
 /datum/gear/uniform/usarmy
 	name = "US Army combat uniform"
 	path = /obj/item/clothing/under/f13/army
@@ -567,7 +432,6 @@
 	cost = 3
 
 //CHINA
-
 /datum/gear/uniform/chinese
 	name = "PLA uniform"
 	path = /obj/item/clothing/under/f13/chinese
@@ -578,132 +442,7 @@
 	path = /obj/item/clothing/under/f13/chinese/officer
 	cost = 3
 
-//Factions
-//NCR
-
-/datum/gear/uniform/ncr_fatigue_pants
-	name = "NCR fatigue pants"
-	path = /obj/item/clothing/under/f13/ncr/pants
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-						)
-
-/datum/gear/uniform/ncr_shorts
-	name = "NCR fatigue shorts"
-	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-						)
-
-/datum/gear/uniform/ncr_officer_dress
-	name = "NCR Officer Dress"
-	path = /obj/item/clothing/under/f13/ncr_female_officer
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Senior Enlisted Advisor",
-							"NCR Representative"
-						)
-
-/datum/gear/uniform/sniper
-	name = "NCR sniper outfit"
-	path = /obj/item/clothing/under/f13/ncr/sniper
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Sergeants, Corporals"
-	restricted_roles = list("NCR Corporal",
-							"NCR Sergeant"
-						)
-
-/datum/gear/uniform/ranger
-	name = "ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Rangers"
-	restricted_roles = list("NCR Veteran Ranger", "NCR Ranger")
-
-/datum/gear/uniform/ranger/trail
-	name = "trail ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger/trail
-
-/datum/gear/uniform/ranger/patrol
-	name = "patrol ranger outfit"
-	path = /obj/item/clothing/under/f13/ranger/patrol
-
-/datum/gear/uniform/ranger/vet
-	name = "ranger flannel outfit"
-	path = /obj/item/clothing/under/f13/ranger/vet
-
-//Oasis
-
-/datum/gear/uniform/suit/blueshift
-	name = "security suit and tie"
-	path = /obj/item/clothing/under/rank/security/officer/blueshirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Oasis"
-	restricted_roles = list("Mayor",
-							"Secretary",
-							"Sheriff",
-							"Doctor",
-							"Citizen",
-							"Deputy",
-							"Shopkeeper",
-							"Farmer",
-							"Prospector",
-							"Detective",
-							"Barkeep",
-							)
-
-//Khans
-
-/datum/gear/uniform/khans
-	name = "great khans jorts"
-	path = /obj/item/clothing/under/f13/khan/shorts
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "KHAN"
-	restricted_roles = list("Great Khan")
-
-/datum/gear/uniform/khans/booty
-	name = "great khans booty shorts"
-	path = /obj/item/clothing/under/f13/khan/booty
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "KHAN"
-	restricted_roles = list("Great Khan")
-
 //Skirts
-
 /datum/gear/uniform/skirt/white
 	name = "white suitskirt"
 	path = /obj/item/clothing/under/suit/white_on_white/skirt
@@ -880,66 +619,6 @@
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
-/datum/gear/uniform/wasteland/bone/dancer
-	name = "Bone dancer outfit"
-	path = /obj/item/clothing/under/f13/bone
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/sorrows
-	name = "Sorrows garb"
-	path = /obj/item/clothing/under/f13/sorrows
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/deadhorses
-	name = "Dead horses garb"
-	path = /obj/item/clothing/under/f13/deadhorses
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/rustwalker
-	name = "Rust walkers outfit"
-	path = /obj/item/clothing/under/f13/rustwalkers
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/whitelegs
-	name = "White legs outfit"
-	path = /obj/item/clothing/under/f13/whitelegs
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/masonduds
-	name = "Vagabond's gang attire"
-	path = /obj/item/clothing/under/f13/masonduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/helenduds
-	name = "Gambler's gang attire"
-	path = /obj/item/clothing/under/f13/helenduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/ikeduds
-	name = "Gunfighter's gang attire"
-	path = /obj/item/clothing/under/f13/ikeduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/marlowduds
-	name = "Marlow gang attire"
-	path = /obj/item/clothing/under/f13/marlowduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/locust
-	name = "Locust Uniform"
-	path = /obj/item/clothing/under/f13/locust
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
 /datum/gear/uniform/wasteland/keksweater
 	name = "Red sweater"
 	path = /obj/item/clothing/under/f13/keksweater
@@ -949,12 +628,6 @@
 /datum/gear/uniform/wasteland/jamrock
 	name = "Disco shirt and pants"
 	path = /obj/item/clothing/under/f13/jamrock
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
-
-/datum/gear/uniform/wasteland/ravenharness
-	name = "Raven harness"
-	path = /obj/item/clothing/under/f13/ravenharness
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 

@@ -1,15 +1,9 @@
 //IN THIS DOCUMENT: Rifle template, Lever-action rifles, Bolt-action rifles, Magazine-fed bolt-action rifles
-// See gun.dm for keywords and the system used for gun balance
-
-
-
 ////////////////////
 // RIFLE TEMPLATE //
 ////////////////////
 
-
 /obj/item/gun/ballistic/rifle
-
 	name = "rifle template"
 	desc = "Should not exist"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -92,7 +86,6 @@
 //REPEATER RIFLES//
 ///////////////////
 
-
 /obj/item/gun/ballistic/rifle/repeater
 	name = "repeater template"
 	desc = "should not exist"
@@ -108,10 +101,8 @@
 	..()
 	src.pump(user)
 
-
-//Cowboy Repeater						Keywords: .357, Lever action, 12 round internal, Long barrel
 /obj/item/gun/ballistic/rifle/repeater/cowboy
-	name = "cowboy repeater"
+	name = ".357 repeater"
 	desc = "A lever action rifle chambered in .357 Magnum. Smells vaguely of whiskey and cigarettes."
 	icon_state = "cowboyrepeater"
 	item_state = "cowboyrepeater"
@@ -120,10 +111,8 @@
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
 	extra_damage = 4
 
-
-//Trail carbine							Keywords: .44, Lever action, 12 round internal, Long barrel
 /obj/item/gun/ballistic/rifle/repeater/trail
-	name = "trail carbine"
+	name = ".44 repeater"
 	desc = "A lever action rifle chambered in .44 Magnum."
 	icon_state = "trailcarbine"
 	item_state = "trailcarbine"
@@ -132,11 +121,9 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	extra_damage = 4
 
-
-//Brush gun								Keywords: .45-70, Lever action, 10 round internal, Long barrel
 /obj/item/gun/ballistic/rifle/repeater/brush
-	name = "brush gun"
-	desc = "A short lever action rifle chambered in the heavy 45-70 round. Issued to NCR Veteran Rangers in the absence of heavier weaponry."
+	name = ".45-70 repeater"
+	desc = "A short lever action rifle chambered in the heavy 45-70 round."
 	icon_state = "brushgun"
 	item_state = "brushgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
@@ -146,25 +133,10 @@
 	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
 	extra_penetration = 0.12
 
-//Medicine Stick						Keywords: .45-70, Lever action, 8 round internal, Long barrel, Unique
-/obj/item/gun/ballistic/rifle/repeater/brush/medistick
-	name = "medicine stick"
-	desc = "A custom-made Gun Runners brush gun with a shorter tube, featuring a sturdier frame, longer barrel, reinforced rifling, padded lever and a muzzle device. A medicine wheel is attached to one side of the stock along with two feathers."
-	icon_state = "medistick"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570/medicine
-	extra_speed = 150
-	fire_delay = 2.25
-	recoil = 0.10
-	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
-	extra_penetration = 0.4
-
-
 ////////////////////////
 // BOLT ACTION RIFLES //
 ////////////////////////
 
-
-//Hunting Rifle							Keywords: .308, Bolt-action, 5 rounds internal
 /obj/item/gun/ballistic/rifle/hunting
 	name = "hunting rifle"
 	desc = "A sturdy hunting rifle, chambered in .308. and in use before the war."
@@ -192,7 +164,6 @@
 		if(W.active)
 			sawoff(user)
 
-//Remington rifle						Keywords: 7.62, Bolt-action, 5 rounds internal
 /obj/item/gun/ballistic/rifle/hunting/remington
 	name = "Remington rifle"
 	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy."
@@ -211,35 +182,6 @@
 	else
 		..()
 
-
-//Paciencia								Keywords: UNIQUE, .308, Bolt-action, 3 rounds internal, Scoped
-/obj/item/gun/ballistic/rifle/hunting/paciencia
-	name = "Paciencia"
-	desc = "A modified .308 hunting rifle with a reduced magazine but an augmented receiver. A Mexican flag is wrapped around the stock. You only have three shots- make them count."
-	icon_state = "paciencia"
-	item_state = "paciencia"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting/paciencia
-	fire_delay = 9
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
-	can_scope = FALSE
-	extra_speed = 1000
-	extra_penetration = 0.7
-	extra_damage = 10.4
-
-/obj/item/gun/ballistic/rifle/hunting/paciencia/attackby(obj/item/A, mob/user, params) //no sawing off this one
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
-		return
-	else if(istype(A, /obj/item/melee/transforming/energy))
-		var/obj/item/melee/transforming/energy/W = A
-		if(W.active)
-			return
-	else
-		..()
-
-
-//Mosin-Nagant							Keywords: 7.62, Bolt-action, 5 rounds internal. Better pen than the Enfield, lower damage.
 /obj/item/gun/ballistic/rifle/mosin
 	name = "Mosin-Nagant m38"
 	desc = "A rusty old Russian bolt action chambered in 7.62."
@@ -262,7 +204,6 @@
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
 
-//Lee-Enfield,SMLE 						Keywords: 7.62, Bolt-action, 10 rounds internal, very fast firing rate, high stamina cost on working bolt
 /obj/item/gun/ballistic/rifle/enfield
 	name = "Lee-Enfield rifle"
 	desc = "A british rifle sometimes known as the SMLE. It seems to have been re-chambered in .308."
@@ -287,13 +228,9 @@
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
 	pump_stam_cost = 15
 
-
-
-
 /////////////////////////////////////
 // MAGAZINE FED BOLT-ACTION RIFLES //
 /////////////////////////////////////
-
 
 /obj/item/gun/ballistic/rifle/mag
 	name = "magazine fed bolt-action rifle template"
@@ -360,9 +297,3 @@
 		to_chat(user, "<span class ='danger'>You attempt to fire the rifle from the hip unprepared, tossing you to the ground!</span>")
 		H.visible_message("<span class='danger'>[H] drops to the floor from recoil as they fire unprepared!</span>")
 		user.Knockdown(60)
-
-// BETA // Obsolete
-/obj/item/gun/ballistic/rifle/rifletesting
-	name = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/testbullet
-	extra_damage = 30

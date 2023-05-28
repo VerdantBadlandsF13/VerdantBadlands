@@ -1,9 +1,6 @@
-//KEEP IN MIND: These are different from gun/grenadelauncher. These are designed to shoot premade rocket and grenade projectiles, not flashbangs or chemistry casings etc.
-//Put handheld rocket launchers here if someone ever decides to make something so hilarious ~Paprika
-
 /obj/item/gun/ballistic/revolver/grenadelauncher
-	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "M79 grenade launcher"
+	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	icon_state = "dshotgun-sawn"
 	item_state = "gun"
 	inaccuracy_modifier = 0.5
@@ -81,8 +78,8 @@
 		chamber_round()
 
 /obj/item/gun/ballistic/rocketlauncher
-	name = "\improper rocket launcher"
-	desc = "Technically, this is actually a rocket propelled grenade launcher, rather than a true rocket launcher. The person you shot is unlikely to care much, though."
+	name = "\improper Rockwell BigBazooka"
+	desc = "A Rockwell BigBazooka rocket launcher, with the deluxe 3 lb. trigger."
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher

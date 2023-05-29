@@ -43,9 +43,11 @@
 	e_cost = 200 //10 shots
 	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
 
-/obj/item/ammo_casing/energy/laser/gatling/hitscan
+/obj/item/ammo_casing/energy/laser/gatling
 	projectile_type = /obj/item/projectile/beam/laser/gatling
 	e_cost = 10
+	variance = 0.5
+	click_cooldown_override = 1
 
 /obj/item/ammo_casing/energy/wattz2k
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k

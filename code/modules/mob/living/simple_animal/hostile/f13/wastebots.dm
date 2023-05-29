@@ -209,7 +209,7 @@
 	attack_verb_simple = "slaps"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol/hitscan
+	projectiletype = /obj/item/projectile/beam/laser/pistol
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	stat_attack = UNCONSCIOUS

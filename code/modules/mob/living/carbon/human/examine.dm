@@ -134,17 +134,18 @@
 	if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		appears_dead = 1
 		if(suiciding)
-			. += "<span class='ooc'>OOC: [t_He] [t_has] used the suicide verb to leave the round. It is not possible to revive this player.</span>"
+			. += "<span class='revenminor'>OOC: [t_He] [t_has] used the suicide verb to leave the round. It is not possible to revive this player.</span>"
 		if(hellbound)
-			. += "<span class='ooc'>OOC: [t_He] [t_has] been marked as hellbound. It is not possible to revive this player.</span>"
+			. += "<span class='revenminor'>OOC: [t_He] [t_has] been marked as hellbound. It is not possible to revive this player.</span>"
 /*		if(getorgan(/obj/item/organ/brain) && !key && !get_ghost(FALSE, TRUE))
 			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and resuscitation is not possible...</span>"
-		else
-			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life, however resuscitation may be possible...</span>"
-
+		else*/
+		if(getorgan(/obj/item/organ/brain))
+			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive.</span>"
+/*
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
-		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"*/
-
+		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
+*/
 	var/temp = getBruteLoss() //no need to calculate each of these twice
 
 	var/list/msg = list()
@@ -377,9 +378,9 @@
 				msg += "[t_He] [t_is] barely conscious.\n"
 		if(getorgan(/obj/item/organ/brain) && !(living_flags & HIDE_OFFLINE_INDICATOR))
 			if(!key)
-				msg += "<span class='deadsay'>[t_He] [t_is] totally catatonic. The stresses of the Wasteland must have been too much for [t_him]. Any recovery is unlikely.</span>\n"
+				msg += "<span class='revenminor'>OOC: [src] has been abandoned by their player.</span>\n"
 			else if(!client)
-				msg += "[t_He] [t_has] a blank, absent-minded stare and appears completely unresponsive to anything. [t_He] may snap out of it soon.\n"
+				msg += "<span class='revenminor'>OOC: [t_He] [t_is] not currently hosting a client. The player may or may not return at any moment.</span>\n"
 			else if(client && ((client.inactivity / 10) / 60 > 10)) //10 Minutes
 				msg += "\[Inactive for [round((client.inactivity/10)/60)] minutes\]"
 			else if(disconnect_time)

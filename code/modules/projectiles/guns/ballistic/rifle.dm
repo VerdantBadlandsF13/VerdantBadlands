@@ -102,28 +102,30 @@
 	src.pump(user)
 
 /obj/item/gun/ballistic/rifle/repeater/cowboy
-	name = ".357 repeater"
-	desc = "A lever action rifle chambered in .357 Magnum. Smells vaguely of whiskey and cigarettes."
+	name = "Winchester Model 1873"
+	desc = "A lever action rifle chambered in .357 Magnum."
 	icon_state = "cowboyrepeater"
 	item_state = "cowboyrepeater"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube357
 	extra_speed = 300
+	recoil = 0.8
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
 	extra_damage = 4
 
 /obj/item/gun/ballistic/rifle/repeater/trail
-	name = ".44 repeater"
+	name = "Marlin Model 1894"
 	desc = "A lever action rifle chambered in .44 Magnum."
 	icon_state = "trailcarbine"
 	item_state = "trailcarbine"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube44
 	extra_speed = 200
+	recoil = 0.12
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	extra_damage = 4
 
 /obj/item/gun/ballistic/rifle/repeater/brush
-	name = ".45-70 repeater"
-	desc = "A short lever action rifle chambered in the heavy 45-70 round."
+	name = "Marlin Model 1895"
+	desc = "A hefty lever action rifle chambered in the heavy 45-70 round."
 	icon_state = "brushgun"
 	item_state = "brushgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube4570
@@ -139,7 +141,7 @@
 
 /obj/item/gun/ballistic/rifle/hunting
 	name = "hunting rifle"
-	desc = "A sturdy hunting rifle, chambered in .308. and in use before the war."
+	desc = "A sturdy hunting rifle, chambered in .308."
 	icon_state = "308"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting
@@ -164,26 +166,8 @@
 		if(W.active)
 			sawoff(user)
 
-/obj/item/gun/ballistic/rifle/hunting/remington
-	name = "Remington rifle"
-	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy."
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting/remington
-	fire_delay = 2
-	extra_speed = 800
-	force = 18
-
-/obj/item/gun/ballistic/rifle/hunting/remington/attackby(obj/item/A, mob/user, params) //DO NOT BUBBA YOUR STANDARD ISSUE RIFLE SOLDIER!
-	if(istype(A, /obj/item/circular_saw))
-		return
-	else if(istype(A, /obj/item/melee/transforming/energy))
-		var/obj/item/melee/transforming/energy/W = A
-		if(W.active)
-			return
-	else
-		..()
-
 /obj/item/gun/ballistic/rifle/mosin
-	name = "Mosin-Nagant m38"
+	name = "Mosin-Nagant M38"
 	desc = "A rusty old Russian bolt action chambered in 7.62."
 	icon_state = "mosin"
 	item_state = "308"

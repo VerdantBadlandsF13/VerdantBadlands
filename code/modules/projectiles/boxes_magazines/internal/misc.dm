@@ -1,6 +1,6 @@
 /obj/item/ammo_box/magazine/internal/minigun
 	name = "gatling gun fusion core"
-	ammo_type = /obj/item/ammo_casing/caseless/laser/gatling
+	ammo_type = /obj/item/ammo_casing/energy/laser/gatling
 	caliber = "gatling"
 	max_ammo = 5000
 

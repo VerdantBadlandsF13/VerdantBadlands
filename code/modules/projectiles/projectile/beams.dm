@@ -76,10 +76,6 @@
 	impact_type = /obj/effect/projectile/impact/pulse
 	light_color = LIGHT_COLOR_BLUE
 
-/obj/item/projectile/beam/laser/gatling //Gatling Laser Projectile
-	name = "rapid-fire laser beam"
-	damage = 12
-
 /obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
 	name = "weak laser beam"
 	damage = 18

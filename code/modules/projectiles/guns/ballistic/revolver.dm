@@ -15,6 +15,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	var/select = 0
 	equipsound = 'sound/f13weapons/equipsounds/pistolequip.ogg'
+	can_jam = 0
 
 /obj/item/gun/ballistic/revolver/Initialize()
 	. = ..()

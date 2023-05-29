@@ -83,9 +83,6 @@
 	if (chambered)
 		. += "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
-/obj/item/gun/ballistic/shotgun/lethal
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
-
 //////////////////////////////////////
 //			SINGLE SHOTGUN			//
 //////////////////////////////////////
@@ -97,15 +94,14 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "winchesterbore"
-	item_state = "winchesterbore"
+	icon_prefix = "pepperbox"
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_MEDIUM
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
 	fire_delay = 0.5
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
-
-/obj/item/gun/ballistic/revolver/single_shotgun/update_icon_state()
-	icon_state = "[initial(icon_state)][chambered ? "" : "-e"]"
+	extra_damage = 4
+	extra_penetration = 0.1
 
 ////////////////////////////////////////
 //DOUBLE BARREL & PUMP ACTION SHOTGUNS//
@@ -113,7 +109,7 @@
 
 /obj/item/gun/ballistic/revolver/caravan_shotgun
 	name = "over-under shotgun"
-	desc = "A common over-under double barreled shotgun made in the post-war era."
+	desc = "A common over-under double barreled shotgun, made in the post-war era."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'

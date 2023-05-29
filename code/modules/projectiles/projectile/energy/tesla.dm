@@ -43,3 +43,9 @@
 	impact_light_intensity = 8
 	impact_light_range = 3.75
 	impact_light_color_override = LIGHT_COLOR_BLUE
+
+/obj/item/projectile/energy/tesla/teslacannon/arc
+	name = "arc welder stream"
+	damage = 45
+	armour_penetration = 0.65
+	wound_bonus = 60

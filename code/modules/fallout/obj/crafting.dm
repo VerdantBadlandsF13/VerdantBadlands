@@ -162,3 +162,13 @@
 	name = "campfire kit"
 	desc = "A small box filled with an assortment of wood and tender. Useful for quickly making a fire."
 	icon_state = "lunchbox"
+
+/obj/item/crafting/weapon_repair_kit
+	name = "Weapon repair kit"
+	desc = "It can be used to repair your weapons, but that's about it."
+	icon_state = "weapon_repair_set"
+
+/obj/item/crafting/reloader_set
+	name = "powder kit"
+	desc = "Used to create additional ammunition. Not good for much else."
+	icon_state = "reloader_set"

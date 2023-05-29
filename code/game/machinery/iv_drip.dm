@@ -86,6 +86,9 @@
 		return
 
 	if(Adjacent(target) && usr.Adjacent(target))
+		usr.visible_message(span_warning("[usr] begins attaching [src] to [target]..."), span_warning("You begin attaching [src] to [target]."))
+		if(!do_after(usr, 1 SECONDS, target))
+			return
 		if(beaker)
 			usr.visible_message("<span class='warning'>[usr] attaches [src] to [target].</span>", "<span class='notice'>You attach [src] to [target].</span>")
 			log_combat(usr, target, "attached", src, "containing: [beaker.name] - ([beaker.reagents.log_list()])")
@@ -123,9 +126,11 @@
 		return PROCESS_KILL
 
 	if(!(get_dist(src, attached) <= 1 && isturf(attached.loc)))
-		to_chat(attached, "<span class='userdanger'>The IV drip needle is ripped out of you!</span>")
-		attached.apply_damage(3, BRUTE, pick(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM))
-		attached = null
+		to_chat(attached, span_userdanger("The IV drip needle is ripped out of you, leaving an open bleeding wound!"))
+		var/list/arm_zones = shuffle(list(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM))
+		var/obj/item/bodypart/chosen_limb = attached.get_bodypart(arm_zones[1]) || attached.get_bodypart(arm_zones[2]) || attached.get_bodypart(BODY_ZONE_CHEST)
+		chosen_limb.receive_damage(3)
+		chosen_limb.force_wound_upwards(/datum/wound/pierce/moderate)
 		update_icon()
 		return PROCESS_KILL
 

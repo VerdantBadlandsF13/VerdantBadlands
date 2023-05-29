@@ -23,8 +23,7 @@
 	ranged = TRUE
 	del_on_death = FALSE
 	robust_searching = TRUE
-	environment_smash = 0
-//	environment_smash = ENVIRONMENT_SMASH_RWALLS
+	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_range = 5
@@ -62,7 +61,7 @@
 
 	idlesound = list('sound/f13npc/sentry/idle1.ogg', 'sound/f13npc/sentry/idle2.ogg')
 
-	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/mfc)
+	loot = list(/obj/effect/decal/cleanable/robot_debris, /obj/item/stack/crafting/electronicparts/five, /obj/item/stock_parts/cell/ammo/ecp)
 
 	faction = list("wastebot")
 	vision_range = 12
@@ -75,6 +74,11 @@
 	var/movement_audio = 'sound/f13npc/sentry/movement.ogg'
 	var/attack_windup = 'sound/f13npc/sentry/ready_weapon.ogg'
 // The rest is below.
+
+/mob/living/simple_animal/hostile/sentrybot/Initialize()
+	. = ..()
+	resize = 1.2
+	update_transform()
 
 /mob/living/simple_animal/hostile/sentrybot/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

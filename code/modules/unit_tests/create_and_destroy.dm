@@ -40,13 +40,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		/obj/item/locked_box/armor,
 		/obj/item/locked_box/medical,
 		/obj/item/locked_box/misc,
-		/obj/item/locked_box/misc/money,
-		/obj/item/locked_box/misc/money/all,
-		/obj/item/locked_box/misc/blueprints,
-		/obj/item/locked_box/weapon,
-		/obj/item/locked_box/weapon/ammo,
-		/obj/item/locked_box/weapon/melee,
-		/obj/item/locked_box/weapon/range,
 		//needs a mob passed to view it
 		/obj/screen/credit,
 		//template type
@@ -101,8 +94,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	//No trauma to pass in
 	ignore += typesof(/mob/camera/imaginary_friend)
 	//No linked console
-	ignore += typesof(/mob/camera/aiEye/remote/base_construction)
-	//See above
 	ignore += typesof(/mob/camera/aiEye/remote/shuttle_docker)
 	//No one to be friends with :(
 	ignore += typesof(/obj/effect/mob_spawn/human/demonic_friend)

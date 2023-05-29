@@ -1823,6 +1823,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 											"<span class='userdanger'>You have been knocked senseless!</span>")
 							H.confused = max(H.confused, 20)
 							H.adjust_blurriness(10)
+							SEND_SOUND(H, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 						if(prob(10))
 							H.gain_trauma(/datum/brain_trauma/mild/concussion)
 					else

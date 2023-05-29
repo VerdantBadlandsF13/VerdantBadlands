@@ -9,6 +9,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin
+	can_jam = 0
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/attackby(obj/item/A, mob/user, params)
 	..()
@@ -48,6 +49,7 @@
 	casing_ejector = FALSE
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "rocket"
+	condition = 0
 
 /obj/item/gun/ballistic/rocketlauncher/handle_atom_del(atom/A)
 	if(A == chambered)

@@ -279,7 +279,7 @@
 	melee_block_threshold = 45
 	armor_block_threshold = 0.45
 	armor_block_chance = 60
-	deflection_chance = 10 
+	deflection_chance = 10
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/hellfire
 	name = "hellfire power armor"

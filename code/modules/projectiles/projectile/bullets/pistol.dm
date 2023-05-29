@@ -43,7 +43,7 @@
 	damage = 24
 	wound_bonus = 15
 
-/obj/item/projectile/bullet/c45/rubber/basketball
+/obj/item/projectile/bullet/c45/basketball
 	name = "miniaturised dunk'em brand basketball"
 	damage = 1
 
@@ -105,7 +105,7 @@
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		if(blocked != 100) // not completely blocked
-			if(M.can_inject(null, FALSE, def_zone, piercing)) // Pass the hit zone to see if it can inject by whether it hit the head or the body.
+			if(M.can_inject(null, FALSE, def_zone)) // Pass the hit zone to see if it can inject by whether it hit the head or the body.
 				..()
 				if(skip == TRUE)
 					return BULLET_ACT_HIT

@@ -13,45 +13,6 @@
 
 //fallout changes
 
-/datum/supply_pack/security/energyweapons
-	name = "Energy Weapons Crate"
-	desc = "Contains one randomly selected gun from HQ for any brotherhood member that needs a spare."
-	cost = 25000
-	contains = list(/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/buyable)
-
-/datum/supply_pack/security/grenadef13
-	name = "Grenade Crate"
-	desc = "Contains two randomly selected grenades from HQ for any brotherhood member that needs a spare."
-	cost = 15000
-	contains = list(/obj/effect/spawner/lootdrop/f13/bomb/tier2)
-
-/datum/supply_pack/security/attachmentslowtf13
-	name = "Low tier Attachments Crate"
-	desc = "Contains three randomly selected attachments from HQ, one of the finest and few gunsmiths have made these."
-	cost = 9000
-	contains = list(/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/gunparts/tier1)
-
-/datum/supply_pack/security/attachmentshightf13
-	name = "High tier Attachments Crate"
-	desc = "Contains three randomly selected attachments from HQ, one of the finest and few gunsmiths have made these."
-	cost = 18000
-	contains = list(/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/gunparts/tier2)
-
-/datum/supply_pack/security/attachmentsbesttf13
-	name = "Highest tier Attachments Crate"
-	desc = "Contains three randomly selected attachments from HQ, one of the finest and few gunsmiths have made these."
-	cost = 27000
-	contains = list(/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/attachments,
-					/obj/effect/spawner/lootdrop/f13/gunparts/tier3)
-
 /datum/supply_pack/security/binocularamapf13
 	name = "Binoculars and map Crate"
 	desc = "Contains three Binoculars and a map. A must for any scouts of the brotherhood."
@@ -89,16 +50,7 @@
 					/obj/item/clothing/suit/armor/vest,
 					/obj/item/clothing/suit/armor/vest)
 	crate_name = "armor crate"
-/*
-/datum/supply_pack/security/disabler
-	name = "Disabler Crate"
-	desc = "Three stamina-draining disabler weapons. Requires Security access to open."
-	cost = 1300
-	contains = list(/obj/item/gun/energy/disabler,
-					/obj/item/gun/energy/disabler,
-					/obj/item/gun/energy/disabler)
-	crate_name = "disabler crate"
-*/
+
 /datum/supply_pack/security/forensics
 	name = "Forensics Crate"
 	desc = "Stay hot on the criminal's heels with brotherhoods's Detective Essentials(tm). Contains a forensics scanner, six evidence bags, camera, tape recorder, white crayon, and of course, a fedora. Requires Security access to open."
@@ -129,47 +81,6 @@
 					/obj/item/gun/energy/laser/wattz,
 					/obj/item/gun/energy/laser/wattz)
 	crate_name = "laser crate"
-
-/datum/supply_pack/security/russianclothing
-	name = "Russian Surplus Clothing"
-	desc = "An old russian crate full of surplus armor that they used to use! Has two sets of bulletproff armor, a few union suits and some warm hats!"
-	cost = 5750 // Its basicly sec suits, good boots/gloves
-	contains = list(/obj/item/clothing/suit/armor/navyblue/russian,
-					/obj/item/clothing/suit/armor/navyblue/russian,
-					/obj/item/clothing/shoes/combat,
-					/obj/item/clothing/shoes/combat,
-					/obj/item/clothing/head/ushanka,
-					/obj/item/clothing/head/ushanka,
-					/obj/item/clothing/suit/armor/bulletproof,
-					/obj/item/clothing/suit/armor/bulletproof,
-					/obj/item/clothing/head/helmet/alt,
-					/obj/item/clothing/head/helmet/alt,
-					/obj/item/clothing/gloves/tackler/combat/insulated,
-					/obj/item/clothing/gloves/tackler/combat/insulated,
-					/obj/item/clothing/mask/gas,
-					/obj/item/clothing/mask/gas)
-	crate_name = "surplus russian clothing"
-	crate_type = /obj/structure/closet/crate/internals
-/*
-/datum/supply_pack/security/sechardsuit
-	name = "Sec Hardsuit"
-	desc = "One Sec Hardsuit with a small air tank and mask."
-	cost = 3000 // half of SWAT gear for have the armor and half the gear
-	contains = list(/obj/item/clothing/suit/space/hardsuit/security,
-					/obj/item/tank/internals/air,
-					/obj/item/clothing/mask/gas)
-	crate_name = "sec hardsuit crate"
-*/
-/datum/supply_pack/security/securitybarriers
-	name = "Security Barrier Grenades"
-	desc = "Stem the tide with four Security Barrier grenades. Requires Security access to open."
-	contains = list(/obj/item/grenade/barrier,
-					/obj/item/grenade/barrier,
-					/obj/item/grenade/barrier,
-					/obj/item/grenade/barrier)
-	cost = 2000
-	crate_name = "security barriers crate"
-	can_private_buy = TRUE
 
 /datum/supply_pack/security/securityclothes
 	name = "Security Clothing Crate"
@@ -225,15 +136,6 @@
 					/obj/item/melee/baton/loaded,
 					/obj/item/melee/baton/loaded)
 	crate_name = "stun baton crate"
-
-/datum/supply_pack/security/taser //Fallout themed
-	name = "Disabler Crate"
-	desc = "Contains three disablers tasers, capable of firing disabling shots."
-	cost = 3500
-	contains = list(/obj/item/gun/energy/laser/complianceregulator,
-					/obj/item/gun/energy/laser/complianceregulator,
-					/obj/item/gun/energy/laser/complianceregulator)
-	crate_name = "taser crate"
 
 /datum/supply_pack/security/wall_flash
 	name = "Wall-Mounted Flash Crate"

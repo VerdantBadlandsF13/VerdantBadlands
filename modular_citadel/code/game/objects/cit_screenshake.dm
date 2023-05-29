@@ -23,9 +23,6 @@
 /obj/item/gun/energy
 	recoil = 0.1
 
-/obj/item/gun/energy/kinetic_accelerator
-	recoil = 0.5
-
 /obj/item/gun/ballistic
 	recoil = 0.25
 

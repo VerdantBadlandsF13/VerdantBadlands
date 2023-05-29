@@ -514,7 +514,6 @@
 		ADD_TRAIT(I, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
 
 /datum/outfit/ctf/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill
 	shoes = /obj/item/clothing/shoes/jackboots/fast
 
 /datum/outfit/ctf/red
@@ -524,7 +523,6 @@
 	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/red
 
 /datum/outfit/ctf/red/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill/red
 	shoes = /obj/item/clothing/shoes/jackboots/fast
 
 /datum/outfit/ctf/blue
@@ -534,7 +532,6 @@
 	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/blue
 
 /datum/outfit/ctf/blue/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill/blue
 	shoes = /obj/item/clothing/shoes/jackboots/fast
 
 /datum/outfit/ctf/red/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)

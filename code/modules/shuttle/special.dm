@@ -6,7 +6,7 @@
 /obj/machinery/power/emitter/energycannon/magical
 	name = "wabbajack statue"
 	desc = "Who am I? What is my purpose in life? What do I mean by who am I?"
-	projectile_type = /obj/item/projectile/magic/change
+	projectile_type = /obj/item/projectile/bullet
 	icon = 'icons/obj/machines/magic_emitter.dmi'
 	icon_state = "wabbajack_statue"
 	icon_state_on = "wabbajack_statue_on"
@@ -179,7 +179,7 @@
 
 /obj/structure/table/wood/bar/Initialize()
 	. = ..()
-	
+
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = .proc/on_entered,
 	)

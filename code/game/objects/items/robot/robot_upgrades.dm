@@ -185,35 +185,6 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 		R.module.basic_modules += S
 		R.module.add_module(S, FALSE, TRUE)
 
-
-/obj/item/borg/upgrade/advcutter
-	name = "mining cyborg advanced plasma cutter"
-	desc = "An upgrade for the mining cyborgs plasma cutter, bringing it to advanced operation."
-	icon_state = "cyborg_upgrade3"
-	require_module = 1
-	module_type = list(/obj/item/robot_module/miner)
-	module_flags = BORG_MODULE_MINER
-
-/obj/item/borg/upgrade/advcutter/action(mob/living/silicon/robot/R, user = usr)
-	. = ..()
-	if(.)
-		for(var/obj/item/gun/energy/plasmacutter/cyborg/C in R.module)
-			C.name = "advanced cyborg plasma cutter"
-			C.desc = "An improved version of the cyborg plasma cutter. Baring functionality identical to the standard hand held version."
-			C.icon_state = "adv_plasmacutter"
-			for(var/obj/item/ammo_casing/energy/plasma/weak/L in C.ammo_type)
-				L.projectile_type = /obj/item/projectile/plasma/adv
-
-/obj/item/borg/upgrade/advcutter/deactivate(mob/living/silicon/robot/R, user = usr)
-	. = ..()
-	if (.)
-		for(var/obj/item/gun/energy/plasmacutter/cyborg/C in R.module)
-			C.name = initial(name)
-			C.desc = initial(desc)
-			C.icon_state = initial(icon_state)
-			for(var/obj/item/ammo_casing/energy/plasma/weak/L in C.ammo_type)
-				L.projectile_type = initial(L.projectile_type)
-
 /obj/item/borg/upgrade/tboh
 	name = "janitor cyborg trash bag of holding"
 	desc = "A trash bag of holding replacement for the janiborg's standard trash bag."
@@ -461,7 +432,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 	desc = "An upgrade to a cyborg's hypospray, allowing it to \
 		pierce armor and thick material."
 	icon_state = "cyborg_upgrade3"
-	module_flags = BORG_MODULE_MEDICAL //added line so it appears correctly in the Exo fab 
+	module_flags = BORG_MODULE_MEDICAL //added line so it appears correctly in the Exo fab
 
 /obj/item/borg/upgrade/piercing_hypospray/action(mob/living/silicon/robot/R, user = usr)
 	. = ..()
@@ -751,7 +722,7 @@ as performing this in action() will cause the upgrade to end up in the borg inst
 
 		if(added_channels.len)
 			to_chat(R, span_info("New radio decryptions installed."))
-				
+
 
 /obj/item/borg/upgrade/radio_transceiver/deactivate(mob/living/silicon/robot/R, user = usr)
 	. = ..()

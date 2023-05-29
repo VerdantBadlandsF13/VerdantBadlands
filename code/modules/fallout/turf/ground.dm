@@ -156,9 +156,7 @@
 	var/static/list/loots = list(
 						/obj/item/stack/crafting/metalparts/five = 30,
 						/obj/item/stack/crafting/goodparts/five = 30,
-						/obj/item/stack/ore/blackpowder/twenty = 10,
-						/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid = 3,
-						/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low = 3
+						/obj/item/stack/ore/blackpowder/twenty = 10
 						)
 
 /turf/open/indestructible/ground/outside/desert/harsh

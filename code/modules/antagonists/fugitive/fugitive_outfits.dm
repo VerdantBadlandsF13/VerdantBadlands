@@ -128,10 +128,6 @@
 	r_pocket = /obj/item/restraints/handcuffs/cable
 	id = /obj/item/card/id
 
-	backpack_contents = list(
-		/obj/item/ammo_casing/shotgun/incapacitate = 6
-		)
-
 /datum/outfit/bountygrapple/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return

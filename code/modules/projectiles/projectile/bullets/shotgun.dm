@@ -30,6 +30,10 @@
 		M.adjust_fire_stacks(3)
 		M.IgniteMob()
 
+/obj/item/projectile/bullet/pellet
+	var/tile_dropoff = 0
+	var/tile_dropoff_s = 0
+
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
 	damage = 11.5
@@ -37,6 +41,9 @@
 	bare_wound_bonus = 90
 	wound_falloff_tile = -15.5
 	supereffective_damage = 9.5
+	tile_dropoff = 3.5
+	tile_dropoff_s = 2
+
 	supereffective_faction = list("hostile", "ant", "supermutant", "cazador", "raider", "gecko", "radscorpion")
 
 /obj/item/projectile/bullet/pellet/Range()

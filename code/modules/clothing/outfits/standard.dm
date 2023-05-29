@@ -15,7 +15,6 @@
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	suit = /obj/item/clothing/suit/armor/vest
 	head = /obj/item/clothing/head/helmet/thunderdome
-	r_hand = /obj/item/gun/energy/pulse/destroyer
 	l_hand = /obj/item/kitchen/knife
 	r_pocket = /obj/item/grenade/smokebomb
 
@@ -54,28 +53,6 @@
 
 	var/obj/item/reagent_containers/glass/bucket/bucket = H.get_item_for_held_index(1)
 	bucket.reagents.add_reagent(/datum/reagent/water,70)
-
-/datum/outfit/laser_tag
-	name = "Laser Tag Red"
-
-	uniform = /obj/item/clothing/under/color/red
-	shoes = /obj/item/clothing/shoes/sneakers/red
-	head = /obj/item/clothing/head/helmet/redtaghelm
-	gloves = /obj/item/clothing/gloves/color/red
-	ears = /obj/item/radio/headset
-	suit = /obj/item/clothing/suit/redtag
-	back = /obj/item/storage/backpack
-	suit_store = /obj/item/gun/energy/laser/redtag
-	backpack_contents = list(/obj/item/storage/box=1)
-
-/datum/outfit/laser_tag/blue
-	name = "Laser Tag Blue"
-	uniform = /obj/item/clothing/under/color/blue
-	shoes = /obj/item/clothing/shoes/sneakers/blue
-	head = /obj/item/clothing/head/helmet/bluetaghelm
-	gloves = /obj/item/clothing/gloves/color/blue
-	suit = /obj/item/clothing/suit/bluetag
-	suit_store = /obj/item/gun/energy/laser/bluetag
 
 /datum/outfit/pirate
 	name = "Space Pirate"
@@ -158,8 +135,6 @@
 		qdel(briefcase_item)
 	for(var/i = 3 to 0 step -1)
 		SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/stack/spacecash/c1000, null, TRUE, TRUE)
-	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/gun/energy/kinetic_accelerator/crossbow, null, TRUE, TRUE)
-	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/gun/ballistic/revolver/m29/snub, null, TRUE, TRUE)
 	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/ammo_box/a357, null, TRUE, TRUE)
 	SEND_SIGNAL(sec_briefcase, COMSIG_TRY_STORAGE_INSERT, new /obj/item/grenade/plastic/x4, null, TRUE, TRUE)
 
@@ -185,7 +160,6 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	head = /obj/item/clothing/head/centhat
-	belt = /obj/item/gun/ballistic/revolver/m29/snub
 	r_pocket = /obj/item/lighter
 	l_pocket = /obj/item/ammo_box/a357
 	back = /obj/item/storage/backpack/satchel/leather
@@ -214,7 +188,6 @@
 	ears = /obj/item/radio/headset/headset_cent/commander
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	head = /obj/item/clothing/head/helmet/space/beret
-	belt = /obj/item/gun/energy/pulse/pistol/m1911
 	r_pocket = /obj/item/lighter
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id
@@ -296,7 +269,6 @@
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	suit = /obj/item/clothing/suit/pirate/captain
 	back = /obj/item/storage/backpack/satchel/leather
-	belt = /obj/item/gun/ballistic/revolver/m29/snub
 
 	id = /obj/item/card/id
 
@@ -353,8 +325,6 @@
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber
 	r_pocket = /obj/item/shield/energy
 	suit_store = /obj/item/tank/internals/emergency_oxygen
-	belt = /obj/item/gun/ballistic/revolver/m29/snub
-	r_hand = /obj/item/gun/energy/pulse/loyalpin
 	id = /obj/item/card/id
 	ears = /obj/item/radio/headset/headset_cent/alt
 

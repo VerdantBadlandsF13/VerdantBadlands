@@ -62,7 +62,7 @@
 	ranged = 1
 	retreat_distance = 3
 	minimum_distance = 0 //Between shots they can and will close in to nash
-	projectiletype = /obj/item/projectile/beam/laser/heavylaser
+	projectiletype = /obj/item/projectile/beam
 	projectilesound = 'sound/weapons/lasercannonfire.ogg'
 	maxHealth = 50
 	health = 50

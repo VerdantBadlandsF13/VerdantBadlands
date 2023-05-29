@@ -32,7 +32,7 @@
 /obj/effect/proc_holder/spell/targeted/touch/mansus_grasp
 	name = "Mansus Grasp"
 	desc = "Touch spell that allows you to channel the power of the Old Gods through you."
-	hand_path = /obj/item/melee/touch_attack/mansus_fist
+//	hand_path = /obj/item/melee/touch_attack/mansus_fist
 	school = "evocation"
 	charge_max = 150
 	clothes_req = FALSE
@@ -107,7 +107,7 @@
 /obj/effect/proc_holder/spell/targeted/touch/blood_siphon
 	name = "Blood Siphon"
 	desc = "Touch spell that heals you while damaging the enemy, has a chance to transfer wounds between you and your enemy."
-	hand_path = /obj/item/melee/touch_attack/blood_siphon
+//	hand_path = /obj/item/melee/touch_attack/blood_siphon
 	school = "evocation"
 	charge_max = 150
 	clothes_req = FALSE
@@ -265,7 +265,7 @@
 /obj/effect/proc_holder/spell/targeted/touch/mad_touch
 	name = "Touch of Madness"
 	desc = "Touch spell that allows you to force the knowledge of the mansus upon your foes."
-	hand_path = /obj/item/melee/touch_attack/mad_touch
+//	hand_path = /obj/item/melee/touch_attack/mad_touch
 	school = "evocation"
 	charge_max = 1800
 	clothes_req = FALSE
@@ -304,7 +304,7 @@
 /obj/effect/proc_holder/spell/targeted/touch/grasp_of_decay
 	name = "Grasp of Decay"
 	desc = "A sinister looking touch that rots your foes from the inside out for twenty seconds."
-	hand_path = /obj/item/melee/touch_attack/grasp_of_decay
+//	hand_path = /obj/item/melee/touch_attack/grasp_of_decay
 	school = "evocation"
 	charge_max = 1200
 	clothes_req = FALSE

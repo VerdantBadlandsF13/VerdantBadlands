@@ -71,7 +71,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_LIGHT //Can dual wield, which makes up for the meh damage. Especially so with the Magneto.
 	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
@@ -87,7 +87,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/recharger/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
@@ -100,7 +100,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	fire_delay = 0
 	can_scope = FALSE
@@ -125,7 +125,7 @@
 	icon_state = "wattz2k"
 	item_state = "sniper_rifle"
 	fire_delay = 1
-	ammo_type = list(/obj/item/ammo_casing/energy/wattz2k/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/wattz2k)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	zoomable = TRUE
 	zoom_amt = 10
@@ -138,7 +138,7 @@
 	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets, cutting through both armor and flesh with ease."
 	icon_state = "laser"
 	item_state = "laser-rifle9"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	fire_delay = 1
 	scope_state = "AEP7_scope"
@@ -154,7 +154,7 @@
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "rechargerrifle"
 	item_state = "laser-rifle9"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/recharger)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/recharger)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
 	fire_delay = 1
 	can_scope = 1

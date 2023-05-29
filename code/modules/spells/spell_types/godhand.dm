@@ -36,8 +36,8 @@
 		qdel(src)
 
 /obj/item/melee/touch_attack/Destroy()
-	if(attached_spell)
-		attached_spell.on_hand_destroy(src)
+//	if(attached_spell)
+//		attached_spell.on_hand_destroy(src)
 	return ..()
 
 /obj/item/melee/touch_attack/disintegrate
@@ -106,7 +106,7 @@
 	on_use_sound = 'sound/weapons/nuclear_fist.ogg'
 	icon_state = "disintegrate"
 	item_state = "disintegrate"
-
+/*
 /obj/item/melee/touch_attack/nuclearfist/afterattack(atom/movable/target, mob/living/carbon/user, proximity)
 	if(!proximity || target == user || !ismob(target) || !iscarbon(user) || user.lying || user.handcuffed) //exploding after touching yourself would be bad
 		return
@@ -132,4 +132,4 @@
 	P.original = user
 	P.firer = user
 	P.fire()
-	return ..()
+	return ..()*/

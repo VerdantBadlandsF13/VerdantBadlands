@@ -1,9 +1,3 @@
-/obj/item/ammo_box/magazine/internal/speargun
-	name = "speargun internal magazine"
-	ammo_type = /obj/item/ammo_casing/caseless/magspear
-	caliber = "speargun"
-	max_ammo = 1
-
 /obj/item/ammo_box/magazine/internal/minigun
 	name = "gatling gun fusion core"
 	ammo_type = /obj/item/ammo_casing/caseless/laser/gatling
@@ -22,7 +16,7 @@
 	caliber = "m5mm"
 	max_ammo = 480
 
-/obj/item/ammo_box/magazine/internal/encminigunbal4mm
+/obj/item/ammo_box/magazine/internal/minigunbal4mm
 	name = "minigun ammo pack"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/minigun
 	caliber = "473mm"
@@ -33,9 +27,3 @@
 	ammo_type = /obj/item/ammo_casing/caseless/flamethrower
 	caliber = "fuel"
 	max_ammo = 12 //6 bursts, iirc its about the same ammount as the IRL M2
-
-
-// BETA STUFF // Obsolete
-/obj/item/ammo_box/magazine/internal/shot/lethal/test
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/test
-	max_ammo = 30

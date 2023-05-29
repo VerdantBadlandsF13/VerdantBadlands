@@ -362,9 +362,7 @@
 					/obj/item/clothing/under/rank/civilian/chef = 2,
 					/obj/item/clothing/under/rank/civilian/chef/skirt = 2,
 					/obj/item/clothing/head/chefhat = 2,
-					/obj/item/reagent_containers/rag = 3,
-					/obj/item/book/granter/crafting_recipe/cooking_sweets_101 = 2,
-					/obj/item/book/granter/crafting_recipe/coldcooking = 2)
+					/obj/item/reagent_containers/rag = 3)
 	refill_canister = /obj/item/vending_refill/wardrobe/chef_wardrobe
 	payment_department = ACCOUNT_SRV
 	cost_multiplier_per_dept = list(ACCOUNT_SRV = 0)

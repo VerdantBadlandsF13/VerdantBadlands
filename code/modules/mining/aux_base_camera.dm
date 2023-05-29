@@ -47,8 +47,6 @@
 	var/datum/action/innate/aux_base/window_type/window_action = new //Action for setting the window type
 	var/datum/action/innate/aux_base/place_fan/fan_action = new //Action for spawning fans
 	var/fans_remaining = 0 //Number of fans in stock.
-	var/datum/action/innate/aux_base/install_turret/turret_action = new //Action for spawning turrets
-	var/turret_stock = 0 //Turrets in stock
 	var/obj/machinery/computer/auxillary_base/found_aux_console //Tracker for the Aux base console, so the eye can always find it.
 
 	icon_screen = "mining"
@@ -63,7 +61,6 @@
 	if(mapload) //Map spawned consoles have a filled RCD and stocked special structures
 		RCD.matter = RCD.max_matter
 		fans_remaining = 4
-		turret_stock = 4
 
 /obj/machinery/computer/camera_advanced/base_construction/CreateEye()
 
@@ -120,11 +117,6 @@
 		fan_action.target = src
 		fan_action.Grant(user)
 		actions += fan_action
-
-	if(turret_action)
-		turret_action.target = src
-		turret_action.Grant(user)
-		actions += turret_action
 
 	eyeobj.invisibility = 0 //When the eye is in use, make it visible to players so they know when someone is building.
 
@@ -250,32 +242,3 @@
 	B.fans_remaining--
 	to_chat(owner, "<span class='notice'>Tiny fan placed. [B.fans_remaining] remaining.</span>")
 	playsound(fan_turf, 'sound/machines/click.ogg', 50, 1)
-
-/datum/action/innate/aux_base/install_turret
-	name = "Install Plasma Anti-Wildlife Turret"
-	button_icon_state = "build_turret"
-
-/datum/action/innate/aux_base/install_turret/Activate()
-	if(..())
-		return
-
-	if(!check_spot())
-		return
-
-	if(!B.turret_stock)
-		to_chat(owner, "<span class='warning'>Unable to construct additional turrets.</span>")
-		return
-
-	var/turf/turret_turf = get_turf(remote_eye)
-
-	if(is_blocked_turf(turret_turf))
-		to_chat(owner, "<span class='warning'>Location is obstructed by something. Please clear the location and try again.</span>")
-		return
-
-	var/obj/machinery/porta_turret/aux_base/T = new /obj/machinery/porta_turret/aux_base(turret_turf)
-	if(B.found_aux_console)
-		B.found_aux_console.turrets += T //Add new turret to the console's control
-
-	B.turret_stock--
-	to_chat(owner, "<span class='notice'>Turret installation complete!</span>")
-	playsound(turret_turf, 'sound/items/drill_use.ogg', 65, 1)

@@ -71,25 +71,6 @@
 	chassis.use_power(energy_drain*get_shot_amount())
 	addtimer(CALLBACK(src, .proc/set_ready_state, 1), equip_cooldown)
 
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
-	equip_cooldown = 7
-	name = "\improper CH-PS \"Immolator\" laser"
-	desc = "A weapon for combat exosuits. Shoots basic lasers."
-	icon_state = "mecha_laser"
-	energy_drain = 50
-	projectile = /obj/item/projectile/beam/laser/mech/light
-	fire_sound = 'sound/weapons/laser.ogg'
-	harmful = TRUE
-
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
-	equip_cooldown = 14
-	name = "\improper CH-LC \"Solaris\" laser cannon"
-	desc = "A weapon for combat exosuits. Shoots heavy lasers."
-	icon_state = "mecha_laser"
-	energy_drain = 100
-	projectile = /obj/item/projectile/beam/laser/mech/heavy
-	fire_sound = 'sound/weapons/lasercannonfire.ogg'
-
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/ion
 	equip_cooldown = 16
 	name = "\improper MKIV ion heavy cannon"
@@ -105,39 +86,9 @@
 	desc = "A weapon for combat exosuits. Fires bolts of electricity similar to the experimental tesla engine."
 	icon_state = "mecha_ion"
 	energy_drain = 500
-	projectile = /obj/item/projectile/energy/tesla/cannon
+	projectile = /obj/item/projectile/energy/tesla
 	fire_sound = 'sound/magic/lightningbolt.ogg'
 	harmful = TRUE
-
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	equip_cooldown = 40
-	name = "\improper MKII heavy pulse cannon"
-	desc = "A weapon for combat exosuits. Shoots powerful destructive blasts."
-	icon_state = "mecha_pulse"
-	energy_drain = 500
-	projectile = /obj/item/projectile/beam/laser/mech/pulse
-	fire_sound = 'sound/weapons/marauder.ogg'
-	harmful = TRUE
-
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
-	equip_cooldown = 6
-	name = "217-D Heavy Plasma Cutter"
-	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
-	icon_state = "mecha_plasmacutter"
-	item_state = "plasmacutter"
-	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
-	energy_drain = 50
-	projectile = /obj/item/projectile/plasma/adv/mech
-	fire_sound = 'sound/weapons/plasma_cutter.ogg'
-	harmful = TRUE
-
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma/can_attach(obj/mecha/working/M)
-	if(..()) //combat mech
-		return 1
-	else if(M.equipment.len < M.max_equip && istype(M))
-		return 1
-	return 0
 
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/taser
 	name = "\improper PBT \"Pacifier\" mounted taser"
@@ -213,65 +164,6 @@
 		projectiles -= get_shot_amount()
 		send_byjax(chassis.occupant,"exosuit.browser","[REF(src)]",src.get_equip_info())
 		return 1
-
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine
-	name = "\improper FNX-99 \"Hades\" Carbine"
-	desc = "A weapon for combat exosuits. Shoots incendiary bullets."
-	icon_state = "mecha_carbine"
-	equip_cooldown = 10
-	projectile = /obj/item/projectile/bullet/incendiary/fnx99
-	projectiles = 24
-	projectiles_cache = 24
-	projectiles_cache_max = 96
-	harmful = TRUE
-	ammo_type = "incendiary"
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
-	name = "\improper LBX AC 10 \"Scattershot\""
-	desc = "A weapon for combat exosuits. Shoots a spread of pellets."
-	icon_state = "mecha_scatter"
-	fire_sound = 'sound/weapons/sound_weapons_mech_shotgun.ogg'
-	equip_cooldown = 20
-	projectile = /obj/item/projectile/bullet/scattershot
-	projectiles = 40
-	projectiles_cache = 40
-	projectiles_cache_max = 160
-	projectiles_per_shot = 4
-	variance = 25
-	harmful = TRUE
-	ammo_type = "scattershot"
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/seedscatter
-	name = "\improper Melon Seed \"Scattershot\""
-	desc = "A weapon for combat exosuits. Shoots a spread of pellets, shaped as seed."
-	icon_state = "mecha_scatter"
-	equip_cooldown = 20
-	projectile = /obj/item/projectile/bullet/seed
-	projectiles = 20
-	projectiles_cache = 20
-	projectiles_cache_max = 160
-	projectiles_per_shot = 10
-	variance = 25
-	harmful = TRUE
-	ammo_type = "scattershot"
-
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
-	name = "\improper Ultra AC 2"
-	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
-	icon_state = "mecha_uac2"
-	fire_sound = 'sound/weapons/sound_weapons_mech_autocannon.ogg'
-	equip_cooldown = 10
-	projectile = /obj/item/projectile/bullet/lmg
-	projectiles = 300
-	projectiles_cache = 300
-	projectiles_cache_max = 1200
-	projectiles_per_shot = 3
-	variance = 6
-	randomspread = 1
-	projectile_delay = 2
-	harmful = TRUE
-	ammo_type = "lmg"
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack
 	name = "\improper SRM-8 missile rack"

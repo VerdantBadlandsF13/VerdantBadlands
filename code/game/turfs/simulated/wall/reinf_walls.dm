@@ -91,7 +91,7 @@
 				return 1
 
 		if(COVER)
-			if(istype(W, /obj/item/weldingtool) || istype(W, /obj/item/gun/energy/plasmacutter))
+			if(istype(W, /obj/item/weldingtool))
 				if(!W.tool_start_check(user, amount=0))
 					return
 				to_chat(user, "<span class='notice'>You begin slicing through the metal cover...</span>")
@@ -158,7 +158,7 @@
 				return 1
 
 		if(SUPPORT_RODS)
-			if(istype(W, /obj/item/weldingtool) || istype(W, /obj/item/gun/energy/plasmacutter))
+			if(istype(W, /obj/item/weldingtool))
 				if(!W.tool_start_check(user, amount=0))
 					return
 				to_chat(user, "<span class='notice'>You begin slicing through the support rods...</span>")

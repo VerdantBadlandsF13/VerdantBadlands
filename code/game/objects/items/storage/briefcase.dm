@@ -66,7 +66,6 @@
 
 /obj/item/storage/briefcase/secretary/PopulateContents()
 	new /obj/item/suppressor(src)
-	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
 	new /obj/item/paper_bin/bundlenatural(src)
 	new /obj/item/clothing/under/suit/black/skirt(src)
 	new /obj/item/pen(src)

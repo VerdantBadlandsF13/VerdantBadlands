@@ -27,12 +27,12 @@
 	else if(istype(O, /obj/item/storage/bag/tray/))
 		SEND_SIGNAL(O, COMSIG_TRY_STORAGE_QUICK_EMPTY)
 	//CITADEL EDIT reee proc, Dogborg modules
-	if(istype(O,/obj/item/gun/energy/laser/cyborg))
+	if(istype(O,/obj/item/gun/energy/laser))
 		laser = FALSE
 		update_icons()
-	else if(istype(O,/obj/item/gun/energy/disabler/cyborg))
+	else if(istype(O,/obj/item/gun/energy))
 		disabler = FALSE
-		update_icons() //PUT THE GUN AWAY
+		update_icons()//PUT THE GUN AWAY
 	//END CITADEL EDIT
 	if(client)
 		client.screen -= O
@@ -69,7 +69,7 @@
 	if(istype(O,/obj/item/gun/energy/laser/cyborg) || istype(O,/obj/item/gun/energy/laser/pistol/cyborg))
 		laser = TRUE
 		update_icons() //REEEEEEACH FOR THE SKY
-	if(istype(O,/obj/item/gun/energy/disabler/cyborg))
+	if(istype(O,/obj/item/gun/energy/*/disabler/cyborg*/))
 		disabler = TRUE
 		update_icons()
 	//END CITADEL EDIT

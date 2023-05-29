@@ -278,12 +278,10 @@ Fence
 								/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain = 75,
 								/obj/item/clothing/accessory/bos/headscribe = 60,
 								/obj/item/clothing/suit/armor/f13/headscribe = 75,
-								/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 75,
 								/obj/item/clothing/under/f13/recon = 30,
 								/obj/item/clothing/accessory/bos/sentinel = 30,
 								/obj/item/clothing/suit/f13/elder = 300,
 								/obj/item/clothing/accessory/bos/elder = 300,
-								/obj/item/gun/energy/laser/laer = 600,
 								/obj/item/clothing/neck/mantle/bos/right = 300
 
 								)
@@ -308,18 +306,12 @@ Fence
 /obj/machinery/mineral/wasteland_trader/gunbuyer
 	name = "Gun Repository"
 	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Recieve compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
-	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 5,
-						/obj/item/gun/ballistic/revolver/detective = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 8,
+	goods_list = list(/obj/item/gun/ballistic/revolver/hobo = 8,
 						/obj/item/gun/ballistic/revolver/hobo/piperifle = 8,
-						/obj/item/gun/ballistic/revolver/hobo/knifegun = 8,
-						/obj/item/gun/ballistic/revolver/hobo/pepperbox = 8,
 						/obj/item/gun/ballistic/revolver/single_shotgun = 8,
 						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
-						/obj/item/gun/ballistic/automatic/pistol/sig = 8,
 						/obj/item/gun/ballistic/automatic/pistol/beretta = 8,
 						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
 						/obj/item/gun/ballistic/rifle/hunting = 10,
@@ -327,8 +319,6 @@ Fence
 						/obj/item/gun/ballistic/rifle/mosin = 10,
 						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
 						/obj/item/gun/ballistic/revolver/widowmaker = 10,
-						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,
-						/obj/item/gun/ballistic/automatic/autopipe = 15,
 						/obj/item/gun/ballistic/rifle/hobo/lasmusket = 15,
 						/obj/item/stack/crafting/armor_plate = 20,
 						)

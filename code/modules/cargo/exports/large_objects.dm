@@ -1,91 +1,15 @@
 /datum/export/large
 	k_elasticity = 0
-/*
-/datum/export/large/crate
-	cost = 500
-	k_elasticity = 0
-	unit_name = "crate"
-	export_types = list(/obj/structure/closet/crate)
-	exclude_types = list(/obj/structure/closet/crate/large, /obj/structure/closet/crate/wooden, /obj/structure/closet/crate/bin)
-
-/datum/export/large/crate/total_printout(datum/export_report/ex, notes = TRUE) // That's why a goddamn metal crate costs that much.
-	. = ..()
-	if(. && notes)
-		. += " Thanks for participating in the brotherhood Crates Recycling Program."
-
-
-/datum/export/large/crate/wooden
-	cost = 100
-	unit_name = "large wooden crate"
-	export_types = list(/obj/structure/closet/crate/large)
-	exclude_types = list()
-
-/datum/export/large/crate/wooden/ore
-	unit_name = "ore box"
-	export_types = list(/obj/structure/ore_box)
-
-/datum/export/large/crate/wood
-	cost = 140
-	unit_name = "wooden crate"
-	export_types = list(/obj/structure/closet/crate/wooden)
-	exclude_types = list()
-*/
-//fallout changes
 
 /datum/export/large/laser/wattz2k
 	cost = 2000
 	unit_name = "Wattz 2000 Laser Rifle"
 	export_types = list(/obj/item/gun/energy/laser/wattz2k)
 
-/datum/export/large/laser/wattz2kextended
-	cost = 4000
-	unit_name = "Wattz 2000 extended Laser Rifle"
-	export_types = list(/obj/item/gun/energy/laser/wattz2k/extended)
-
 /datum/export/large/laser/aer9
 	cost = 850
 	unit_name = "AER9 laser rifle"
 	export_types = list(/obj/item/gun/energy/laser/aer9)
-
-/datum/export/large/laser/aer9focused
-	cost = 1000
-	unit_name = "AER9 focused laser rifle"
-	export_types = list(/obj/item/gun/energy/laser/aer9/focused)
-
-/datum/export/large/laser/ultra_rifle
-	cost = 4000
-	unit_name = "Ultracite laser rifle"
-	export_types = list(/obj/item/gun/energy/laser/ultra_rifle)
-
-/datum/export/large/laser/scatter
-	cost = 3000
-	unit_name = "tribeam laser rifle"
-	export_types = list(/obj/item/gun/energy/laser/scatter)
-
-/datum/export/large/laser/aer12
-	cost = 2000
-	unit_name = "AER12 laser rifle"
-	export_types = list(/obj/item/gun/energy/laser/aer12)
-
-/datum/export/large/laser/aer14
-	cost = 3000
-	unit_name = "AER14 laser rifle"
-	export_types = list(/obj/item/gun/energy/laser/aer14)
-
-/datum/export/large/laser/laer
-	cost = 6000
-	unit_name = "LAER"
-	export_types = list(/obj/item/gun/energy/laser/laer)
-
-/datum/export/large/laser/rcw
-	cost = 3000
-	unit_name = "laser RCW"
-	export_types = list(/obj/item/gun/energy/laser/rcw)
-
-/datum/export/large/laser/gatlinglaser
-	cost = 3000
-	unit_name = "laser gatling gun"
-	export_types = list(/obj/item/gun/energy/minigun)
 
 /datum/export/large/fev/FEV_solution_one
 	cost = 9000

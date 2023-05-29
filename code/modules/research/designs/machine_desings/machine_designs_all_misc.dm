@@ -51,14 +51,6 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
-/datum/design/board/donksofttoyvendor
-	name = "Machine Design (Donksoft Toy Vendor Board)"
-	desc = "The circuit board for a Donksoft Toy Vendor."
-	id = "donksofttoyvendor"
-	build_path = /obj/item/circuitboard/machine/vending/donksofttoyvendor
-	category = list ("Misc. Machinery")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
-
 /datum/design/board/space_heater
 	name = "Machine Design (Space Heater Board)"
 	desc = "The circuit board for a space heater."

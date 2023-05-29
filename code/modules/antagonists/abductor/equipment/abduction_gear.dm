@@ -380,7 +380,7 @@
 /obj/item/gun/energy/alien
 	name = "alien pistol"
 	desc = "A complicated gun that fires bursts of high-intensity radiation."
-	ammo_type = list(/obj/item/ammo_casing/energy/declone)
+	ammo_type = list(/obj/item/ammo_casing/energy)
 	pin = /obj/item/firing_pin/abductor
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
@@ -390,7 +390,7 @@
 	name = "shrink ray blaster"
 	desc = "This is a piece of frightening alien tech that enhances the magnetic pull of atoms in a localized space to temporarily make an object shrink. \
 			That or it's just space magic. Either way, it shrinks stuff."
-	ammo_type = list(/obj/item/ammo_casing/energy/shrink)
+	ammo_type = list(/obj/item/ammo_casing/energy)
 	item_state = "shrink_ray"
 	icon_state = "shrink_ray"
 	fire_delay = 30

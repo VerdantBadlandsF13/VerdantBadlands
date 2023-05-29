@@ -2,31 +2,6 @@
 // SMG MAGAZINES //
 ///////////////////
 
-
-/obj/item/ammo_box/magazine/cg45
-	name = "Carl Gustaf magazine (10mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "cg45"
-	ammo_type = /obj/item/ammo_casing/c10mm
-	caliber = "10mm"
-	max_ammo = 36
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/cg45/empty
-	start_empty = TRUE
-
-/obj/item/ammo_box/magazine/cg45_two
-	name = "Carl Gustaf magazine (.45 ACP)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "cg45"
-	ammo_type = /obj/item/ammo_casing/c45
-	caliber = ".45"
-	max_ammo = 36
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/cg45_two/empty
-	start_empty = TRUE
-
 /obj/item/ammo_box/magazine/greasegun
 	name = "Grease gun magazine (9mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -64,18 +39,6 @@
 /obj/item/ammo_box/magazine/uzim9mm/empty
 	start_empty = 1
 
-/obj/item/ammo_box/magazine/pps9mm
-	name = "PPSh magazine (9mm)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "ppshDrum"
-	ammo_type = /obj/item/ammo_casing/c9mm
-	caliber = "9mm"
-	max_ammo = 71
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/pps9mm/empty
-	start_empty = 1
-
 /obj/item/ammo_box/magazine/m22smg
 	name = "toploader magazine (.22lr)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -109,29 +72,6 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/tommygunm45/stick/empty
-	start_empty = 1
-
-/obj/item/ammo_box/magazine/smg14
-	name = "14mm smg magazine"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "14smg"
-	ammo_type = /obj/item/ammo_casing/p14mm
-	caliber = "14"
-	max_ammo = 21
-
-/obj/item/ammo_box/magazine/smg14/empty
-	start_empty = 1
-
-/obj/item/ammo_box/magazine/smg14/stacked
-	name = "14mm smg stacked magazine"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "14smge"
-	ammo_type = /obj/item/ammo_casing/p14mm
-	caliber = "14"
-	max_ammo = 27
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/smg14/stacked/empty
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/m10mm_p90

@@ -144,7 +144,7 @@
 	if(!isnum(set_angle) && (!marker || marker == loc))
 		return
 	var/turf/startloc = get_turf(src)
-	var/obj/item/projectile/P = new /obj/item/projectile/f13plasma/plasmacaster/arlem(startloc)
+	var/obj/item/projectile/P = new /obj/item/projectile/plasma(startloc)
 	P.preparePixelProjectile(marker, startloc)
 	P.firer = src
 	if(target)

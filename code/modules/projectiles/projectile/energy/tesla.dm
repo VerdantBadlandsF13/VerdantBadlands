@@ -22,7 +22,7 @@
 	QDEL_NULL(chain)
 	return ..()
 
-/obj/item/projectile/energy/teslacannon
+/obj/item/projectile/energy/tesla/teslacannon
 	name = "tesla beam"
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser

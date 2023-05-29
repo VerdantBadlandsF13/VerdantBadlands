@@ -163,12 +163,6 @@
 			if("12g BKS")
 				to_chat(user, "You chose buckshot.")
 				new /obj/item/ammo_box/shotgun/buck(drop_location)
-			if("Rubber")
-				to_chat(user, "You chose rubbershot.")
-				new /obj/item/ammo_box/shotgun/rubber(drop_location)
-			if("Beanbag")
-				to_chat(user, "You chose beanbags.")
-				new /obj/item/ammo_box/shotgun/bean(drop_location)
 			if("5mm")
 				to_chat(user, "You chose 5mm.")
 				new /obj/item/ammo_box/m5mmbox(drop_location)
@@ -178,9 +172,6 @@
 			if("4.73mm")
 				to_chat(user, "You chose 4.73mm.")
 				new /obj/item/ammo_box/m473(drop_location)
-			if("Rubber 4.73mm")
-				to_chat(user, "You chose rubber 4.73mm.")
-				new /obj/item/ammo_box/m473/rubber(drop_location)
 			else
 				return
 		flick("research_key_off", src)

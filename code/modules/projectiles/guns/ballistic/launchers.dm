@@ -32,51 +32,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher_nl
 	pin = /obj/item/firing_pin
 
-/obj/item/gun/ballistic/automatic/gyropistol
-	name = "gyrojet pistol"
-	desc = "A prototype pistol designed to fire self propelled rockets."
-	icon_state = "gyropistol"
-	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	mag_type = /obj/item/ammo_box/magazine/m75
-	burst_size = 1
-	fire_delay = 0
-	actions_types = list()
-	casing_ejector = FALSE
-
-/obj/item/gun/ballistic/automatic/gyropistol/update_icon_state()
-	icon_state = "[initial(icon_state)][magazine ? "loaded" : ""]"
-
-/obj/item/gun/ballistic/automatic/speargun
-	name = "kinetic speargun"
-	desc = "A weapon favored by carp hunters. Fires specialized spears using kinetic energy."
-	icon_state = "speargun"
-	item_state = "speargun"
-	w_class = WEIGHT_CLASS_BULKY
-	force = 10
-	can_suppress = FALSE
-	automatic_burst_overlay = FALSE
-	mag_type = /obj/item/ammo_box/magazine/internal/speargun
-	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	burst_size = 1
-	fire_delay = 0
-	select = 0
-	actions_types = list()
-	casing_ejector = FALSE
-
-/obj/item/gun/ballistic/automatic/speargun/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_blocker)
-
-/obj/item/gun/ballistic/automatic/speargun/attack_self()
-	return
-
-/obj/item/gun/ballistic/automatic/speargun/attackby(obj/item/A, mob/user, params)
-	var/num_loaded = magazine.attackby(A, user, params, 1)
-	if(num_loaded)
-		to_chat(user, "<span class='notice'>You load [num_loaded] spear\s into \the [src].</span>")
-		update_icon()
-		chamber_round()
-
 /obj/item/gun/ballistic/rocketlauncher
 	name = "\improper Rockwell BigBazooka"
 	desc = "A Rockwell BigBazooka rocket launcher, with the deluxe 3 lb. trigger."

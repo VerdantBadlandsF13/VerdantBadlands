@@ -44,23 +44,12 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/weapon/switchblade,
 		/datum/gang_item/weapon/slugger,
 		/datum/gang_item/weapon/type17,
-		/datum/gang_item/weapon/ninemil,
-		/datum/gang_item/weapon/caravan,
-		/datum/gang_item/weapon/varmint,
-		/datum/gang_item/weapon/uzi,
 		/datum/gang_item/weapon/type93,
 
 		/datum/gang_item/equipment/molotov,
 		/datum/gang_item/equipment/stinger,
 		/datum/gang_item/equipment/he,
 		/datum/gang_item/equipment/dynamite,
-
-		/datum/gang_item/weapon/energylow,
-		/datum/gang_item/weapon/gunsuperlow,
-		/datum/gang_item/weapon/gunlow,
-		/datum/gang_item/weapon/gunmid,
-		/datum/gang_item/weapon/gunawesome,
-		/datum/gang_item/weapon/melekit,
 
 		/datum/gang_item/equipment/stimpak,
 		/datum/gang_item/equipment/healingpowder,
@@ -91,8 +80,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 	round_start = TRUE
 	boss_items = list(
 		/datum/gang_item/weapon/spikedbaseball,
-		/datum/gang_item/weapon/greasegun,
-		/datum/gang_item/weapon/uzi,
 		/datum/gang_item/weapon/brass,
 
 		/datum/gang_item/equipment/emp,
@@ -118,7 +105,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 
 		/datum/gang_item/weapon/shuriken,
 		/datum/gang_item/weapon/switchblade,
-		/datum/gang_item/weapon/greasegun,
 		/datum/gang_item/clothing/glasses/sunglasses,
 		/datum/gang_item/weapon/type17,
 		/datum/gang_item/weapon/type93

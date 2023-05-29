@@ -541,16 +541,6 @@
 	for(var/i in 1 to 5)
 		new /obj/item/firing_pin(src)
 
-/obj/item/storage/box/lasertagpins
-	name = "box of laser tag firing pins"
-	desc = "A box full of laser tag firing pins, to allow newly-developed firearms to require wearing brightly coloured plastic armor before being able to be used."
-	illustration = "firing_pins"
-
-/obj/item/storage/box/lasertagpins/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/firing_pin/tag/red(src)
-		new /obj/item/firing_pin/tag/blue(src)
-
 /obj/item/storage/box/handcuffs
 	name = "box of spare handcuffs"
 	desc = "A box full of handcuffs."
@@ -757,16 +747,6 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun(src)
 
-/obj/item/storage/box/stunslug
-	name = "box of stun slugs"
-	desc = "A box full of stun 12g slugs."
-	icon_state = "stunslug_box"
-	illustration = null
-
-/obj/item/storage/box/stunslug/PopulateContents()
-	for(var/i in 1 to 7)
-		new /obj/item/ammo_casing/shotgun/stunslug(src)
-
 /obj/item/storage/box/techsslug
 	name = "box of tech shotgun shells"
 	desc = "A box full of tech shotgun shells."
@@ -776,16 +756,6 @@
 /obj/item/storage/box/techsslug/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/techshell(src)
-
-/obj/item/storage/box/fireshot
-	name = "box of incendiary ammo"
-	desc = "A box full of incendiary ammo."
-	icon_state = "fireshot_box"
-	illustration = null
-
-/obj/item/storage/box/fireshot/PopulateContents()
-	for(var/i in 1 to 7)
-		new /obj/item/ammo_casing/shotgun/incendiary(src)
 
 /obj/item/storage/box/actionfigure
 	name = "box of action figures"

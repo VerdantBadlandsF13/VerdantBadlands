@@ -153,58 +153,6 @@
 /////////// Mecha Equpment /////////////
 ////////////////////////////////////////
 
-/datum/design/mech_scattershot
-	name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
-	desc = "Allows for the construction of LBX AC 10."
-	id = "mech_scattershot"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_seedscatter
-	name = "Exosuit Weapon (Melon Seed \"Scattershot\")"
-	desc = "Allows for the construction of Melon Seed Scattershot."
-	id = "mech_seedscatter"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/seedscatter
-	materials = list(/datum/material/iron=10000, /datum/material/glass = 10000)
-	construction_time = 70
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_scattershot_ammo
-	name = "Scattershot Ammunition"
-	desc = "Ammunition for the LBX AC 10 and Melon Seed exosuit weapon."
-	id = "mech_scattershot_ammo"
-	build_type = PROTOLATHE | MECHFAB
-	build_path = /obj/item/mecha_ammo/scattershot
-	materials = list(/datum/material/iron=6000)
-	construction_time = 20
-	category = list("Exosuit Ammunition", "Ammo")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/mech_carbine
-	name = "Exosuit Weapon (FNX-99 \"Hades\" Carbine)"
-	desc = "Allows for the construction of FNX-99 \"Hades\" Carbine."
-	id = "mech_carbine"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_carbine_ammo
-	name = "FNX-99 Carbine Ammunition"
-	desc = "Ammunition for the FNX-99 \"Hades\" Carbine."
-	id = "mech_carbine_ammo"
-	build_type = PROTOLATHE | MECHFAB
-	build_path = /obj/item/mecha_ammo/incendiary
-	materials = list(/datum/material/iron=6000)
-	construction_time = 20
-	category = list("Exosuit Ammunition", "Ammo")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
 /datum/design/mech_ion
 	name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
 	desc = "Allows for the construction of MKIV Ion Heavy Cannon."
@@ -222,36 +170,6 @@
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/tesla
 	materials = list(/datum/material/iron=20000,/datum/material/silver=8000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_pulse_rifle
-	name = "eZ-13 MK2 heavy pulse rifle"
-	desc = "Allows for the construction of the eZ-13 MK2 heavy pulse rifle"
-	id = "mech_pulse_rifle"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse
-	materials = list(/datum/material/iron=15000,/datum/material/plasma=4000,/datum/material/uranium=4000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_laser
-	name = "Exosuit Weapon (CH-PS \"Immolator\" Laser)"
-	desc = "Allows for the construction of CH-PS Laser."
-	id = "mech_laser"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_laser_heavy
-	name = "Exosuit Weapon (CH-LC \"Solaris\" Laser Cannon)"
-	desc = "Allows for the construction of CH-LC Laser Cannon."
-	id = "mech_laser_heavy"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
-	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
@@ -339,26 +257,6 @@
 	category = list("Exosuit Ammunition", "Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/mech_wormhole_gen
-	name = "Exosuit Module (Localized Wormhole Generator)"
-	desc = "An exosuit module that allows generating of small quasi-stable wormholes."
-	id = "mech_wormhole_gen"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/wormhole_generator
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_teleporter
-	name = "Exosuit Module (Teleporter Module)"
-	desc = "An exosuit module that allows exosuits to teleport to any position in view."
-	id = "mech_teleporter"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/teleporter
-	materials = list(/datum/material/iron=10000,/datum/material/diamond=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
 /datum/design/mech_rcd
 	name = "Exosuit Module (RCD Module)"
 	desc = "An exosuit-mounted Rapid Construction Device."
@@ -367,16 +265,6 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/rcd
 	materials = list(/datum/material/iron=30000,/datum/material/gold=20000,/datum/material/plasma=25000,/datum/material/silver=20000)
 	construction_time = 1200
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_gravcatapult
-	name = "Exosuit Module (Gravitational Catapult Module)"
-	desc = "An exosuit mounted Gravitational Catapult."
-	id = "mech_gravcatapult"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/gravcatapult
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
 	category = list("Exosuit Equipment")
 
 /datum/design/mech_repair_droid
@@ -439,16 +327,6 @@
 	construction_time = 100
 	category = list("Exosuit Equipment")
 
-/datum/design/mech_plasma_cutter
-	name = "Exosuit Module Design (217-D Heavy Plasma Cutter)"
-	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
-	id = "mech_plasma_cutter"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/energy/plasma
-	materials = list(/datum/material/iron = 8000, /datum/material/glass = 1000, /datum/material/plasma = 2000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
 /datum/design/mech_taser
 	name = "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
 	desc = "A weapon for combat exosuits. Shoots non-lethal stunning electrodes."
@@ -458,27 +336,6 @@
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
-/datum/design/mech_lmg
-	name = "Exosuit Weapon (\"Ultra AC 2\" LMG)"
-	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
-	id = "mech_lmg"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
-	materials = list(/datum/material/iron=10000)
-	construction_time = 100
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_lmg_ammo
-	name = "Ultra AC 2 Ammunition"
-	desc = "Ammunition for the Ultra AC 2 LMG"
-	id = "mech_lmg_ammo"
-	build_type = PROTOLATHE | MECHFAB
-	build_path = /obj/item/mecha_ammo/lmg
-	materials = list(/datum/material/iron=4000)
-	construction_time = 20
-	category = list("Exosuit Ammunition", "Ammo")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
 /datum/design/mech_sleeper
 	name = "Exosuit Medical Equipment (Mounted Sleeper)"
@@ -498,14 +355,4 @@
 	build_path = /obj/item/mecha_parts/mecha_equipment/medical/syringe_gun
 	materials = list(/datum/material/iron=3000,/datum/material/glass=2000)
 	construction_time = 200
-	category = list("Exosuit Equipment")
-
-/datum/design/mech_medical_beamgun
-	name = "Exosuit Medical Equipment (Medical Beamgun)"
-	desc = "Equipment for medical exosuits. A mounted medical nanite projector which will treat patients with a focused beam."
-	id = "mech_medi_beam"
-	build_type = MECHFAB
-	materials = list(/datum/material/iron = 15000, /datum/material/glass = 8000, /datum/material/plasma = 3000, /datum/material/gold = 8000, /datum/material/diamond = 2000)
-	construction_time = 250
-	build_path = /obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam
 	category = list("Exosuit Equipment")

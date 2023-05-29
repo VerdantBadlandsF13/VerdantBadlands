@@ -158,11 +158,6 @@
 	else
 		Retract()
 
-/obj/item/organ/cyberimp/arm/medibeam
-	name = "integrated medical beamgun"
-	desc = "A cybernetic implant that allows the user to project a healing beam from their hand."
-	contents = newlist(/obj/item/gun/medbeam)
-
 ///////////////
 //Tools  Arms//
 ///////////////
@@ -229,18 +224,6 @@
 //Combat Arms//
 ///////////////
 
-/obj/item/organ/cyberimp/arm/gun/laser
-	name = "arm-mounted laser implant"
-	desc = "A variant of the arm cannon implant that fires lethal laser beams. The cannon emerges from the subject's arm and remains inside when not in use."
-	icon_state = "arm_laser"
-	contents = newlist(/obj/item/gun/energy/laser/mounted)
-
-/obj/item/organ/cyberimp/arm/gun/taser
-	name = "arm-mounted taser implant"
-	desc = "A variant of the arm cannon implant that fires electrodes and disabler shots. The cannon emerges from the subject's arm and remains inside when not in use."
-	icon_state = "arm_taser"
-	contents = newlist(/obj/item/gun/energy/e_gun/advtaser/mounted)
-
 /obj/item/organ/cyberimp/arm/flash
 	name = "integrated high-intensity photon projector" //Why not
 	desc = "An integrated projector mounted onto a user's arm that is able to be used as a powerful flash."
@@ -260,7 +243,7 @@
 /obj/item/organ/cyberimp/arm/combat
 	name = "combat cybernetics implant"
 	desc = "A powerful cybernetic implant that contains combat modules built into the user's arm."
-	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight, /obj/item/gun/medbeam, /obj/item/borg/stun, /obj/item/assembly/flash/armimplant)
+	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight, /obj/item/borg/stun, /obj/item/assembly/flash/armimplant)
 
 /obj/item/organ/cyberimp/arm/combat/Initialize()
 	. = ..()
@@ -272,45 +255,6 @@
 	name = "arm-mounted energy blade"
 	desc = "An illegal and highly dangerous cybernetic implant that can project a deadly blade of concentrated energy."
 	contents = newlist(/obj/item/melee/transforming/energy/blade/hardlight)
-
-//removed
-/obj/item/organ/cyberimp/arm/shield
-	name = "arm-mounted riot shield"
-	desc = "A deployable riot shield to help deal with civil unrest."
-	contents = newlist(/obj/item/gun/energy/e_gun/advtaser/mounted)
-
-/obj/item/organ/cyberimp/arm/shield/Extend(obj/item/I, silent = FALSE)
-	if(I.obj_integrity == 0)				//that's how the shield recharge works
-		if(!silent)
-			to_chat(owner, "<span class='warning'>[I] is still too unstable to extend. Give it some time!</span>")
-		return FALSE
-	return ..()
-
-/obj/item/organ/cyberimp/arm/shield/Insert(mob/living/carbon/M, special = FALSE, drop_if_replaced = TRUE)
-	. = ..()
-	if(.)
-		RegisterSignal(M, COMSIG_LIVING_ACTIVE_BLOCK_START, .proc/on_signal)
-
-/obj/item/organ/cyberimp/arm/shield/Remove(special = FALSE)
-	UnregisterSignal(owner, COMSIG_LIVING_ACTIVE_BLOCK_START)
-	return ..()
-
-/obj/item/organ/cyberimp/arm/shield/proc/on_signal(datum/source, obj/item/blocking_item, list/other_items)
-	if(!blocking_item)		//if they don't have something
-		var/obj/item/shield/S = locate() in contents
-		if(!Extend(S, TRUE))
-			return
-		other_items += S
-
-/obj/item/organ/cyberimp/arm/shield/emag_act()
-	. = ..()
-	if(obj_flags & EMAGGED)
-		return
-	obj_flags |= EMAGGED
-	to_chat(usr, "<span class='notice'>You unlock [src]'s high-power flash!</span>")
-	var/obj/item/assembly/flash/armimplant/our_flash = new(src)
-	items_list += our_flash
-	our_flash.our_implant = src
 
 /////////////////
 

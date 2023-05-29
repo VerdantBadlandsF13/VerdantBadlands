@@ -33,7 +33,7 @@
 
 	melee_damage_lower = 48
 	melee_damage_upper = 72
-	projectiletype = /obj/item/projectile/beam/laser/lasgun/hitscan/sentrybot
+	projectiletype = /obj/item/projectile/beam/laser/lasgun/sentrybot
 	projectilesound = 'sound/f13npc/sentry/gl_fire.ogg'
 	extra_projectiles = 24// Around 360 damage if all connect.
 	ranged_cooldown_time = 120// Should be about 12 seconds.

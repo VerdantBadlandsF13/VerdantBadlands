@@ -46,24 +46,6 @@
 		return TRUE
 	return ..()
 
-/datum/species/pod/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
-	switch(P.type)
-		if(/obj/item/projectile/energy/floramut)
-			if(prob(15))
-				H.rad_act(rand(30,80))
-				H.DefaultCombatKnockdown(100)
-				H.visible_message("<span class='warning'>[H] writhes in pain as [H.p_their()] vacuoles boil.</span>", "<span class='userdanger'>You writhe in pain as your vacuoles boil!</span>", "<span class='italics'>You hear the crunching of leaves.</span>")
-				if(prob(80))
-					H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
-				else
-					H.easy_randmut(POSITIVE)
-				H.domutcheck()
-			else
-				H.adjustFireLoss(rand(5,15))
-				H.show_message("<span class='userdanger'>The radiation beam singes you!</span>")
-		if(/obj/item/projectile/energy/florayield)
-			H.adjust_nutrition(30, NUTRITION_LEVEL_FULL)
-
 /datum/species/pod/pseudo_weak
 	name = "Anthropomorphic Plant"
 	id = "podweak"

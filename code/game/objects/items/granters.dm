@@ -247,7 +247,7 @@
 	qdel(src)
 
 /obj/item/book/granter/spell/nuclearfist
-	spell = /obj/effect/proc_holder/spell/targeted/touch/nuclear_fist
+//	spell = /obj/effect/proc_holder/spell/targeted/touch/nuclear_fist
 	spellname = "nuclear fist"
 	icon_state ="booknuclearfist"
 	desc = "This book radiates confidence."
@@ -565,99 +565,37 @@
 		blind_message = "<span class='notice'>You hear something crumble.</span>")
 		qdel(src)
 
-
-/obj/item/book/granter/crafting_recipe/threads //Durathread crafting book
-	name = "Credible Threads"
-	desc = "A simple book about sewing and usefull clothing crafting with cloth and durathreads."
-//	crafting_recipe_types = list(/datum/crafting_recipe/durathread_duffelbag, /datum/crafting_recipe/durathread_toolbelt, /datum/crafting_recipe/durathread_bandolier, /datum/crafting_recipe/durathread_helmet, /datum/crafting_recipe/durathread_vest)
-	icon_state = "tailers_art1"
-	oneuse = FALSE
-	remarks = list("Durathread is cloth thats also fire-resistant?", "Strong threads that can be used with leather for some light weight storage!", "The cloth can withstand a beating it said but not that much...")
-
-/obj/item/book/granter/crafting_recipe/cooking_sweets_101 //We start at 101 for 103 and 105
-	name = "Cooking Desserts 101"
-	desc = "A cook book that teaches you about desserts."
-	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm)
-	icon_state = "cooking_learing_sweets"
-	oneuse = FALSE
-	remarks = list("So that is how icing is made!", "Placing fruit on top? How simple...", "Huh layering cake seems harder then this...", "This book smells like candy", "A clown must have made this page, or they forgot to spell check it before printing...", "Wait, a way to cook slime to be safe?")
-
-/obj/item/book/granter/crafting_recipe/coldcooking //Icecream
-	name = "Cooking with Ice"
-	desc = "A cook book that teaches you many old icecream treats."
-	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm)
-	icon_state = "cooking_learing_ice"
-	oneuse = FALSE
-	remarks = list("Looks like these would sell much better in a plasma fire...", "Using glass bowls rather then cones?", "Mixing soda and ice-cream?", "Tall glasses with of liquids and solids...", "Just add a bit of icecream and cherry on top?")
-
-/obj/item/book/granter/crafting_recipe/bone_bow //Bow crafting for non-ashwalkers
-	name = "bowyery sandstone slab" // this is an actual word
-	desc = "A sandstone slab with inscriptions describing the Ash Walkers of Lavaland's bowyery."
-//	crafting_recipe_types = list(/datum/crafting_recipe/bone_arrow, /datum/crafting_recipe/bone_bow, /datum/crafting_recipe/ashen_arrow, /datum/crafting_recipe/quiver, /datum/crafting_recipe/bow_tablet)
-	icon_state = "stone_tablet"
-	oneuse = FALSE
-	remarks = list("Sticking burning arrows into the sand makes them stronger...", "Breaking the bone apart to get shards, not sharpening the bone...", "Sinew is just like rope...")
-
-/obj/item/book/granter/crafting_recipe/under_the_oven //Illegal cook book
-	name = "Under The Oven"
-	desc = "A cook book that teaches you many illegal and fun candys. MALF AI approved, and a best seller on the blackmarket."
-	crafting_recipe_types = list()
-	icon_state = "cooking_learing_illegal"
-	oneuse = FALSE
-	remarks = list()
-
 /obj/item/book/granter/crafting_recipe/gunsmith_one
-	name = "Guns and Bullets, Part 1"
-	desc = "A rare issue of Guns and Bullets detailing the basic manufacture of firearms, allowing the reader to craft firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
-	icon_state = "gab1"
-	oneuse = TRUE
-	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/ninemil, /datum/crafting_recipe/huntingrifle)
-
-/obj/item/book/granter/crafting_recipe/gunsmith_two
-	name = "Guns and Bullets, Part 2"
-	desc = "A rare issue of Guns and Bullets following up Part 1, going further indepth into weapon mechanics, allowing the reader to craft certain firearms. It's barely holding up, and looks like only one person can study the knowledge from it."
-	icon_state = "gab2"
-	oneuse = TRUE
-	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/m1911, /datum/crafting_recipe/varmintrifle)
-
-/obj/item/book/granter/crafting_recipe/gunsmith_three
-	name = "Guns and Bullets, Part 3"
+	name = "Guns and Bullets, Part One"
 	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft weapon attachments. It's barely holding up, and looks like only one person can study the knowledge from it."
-	icon_state = "gab3"
+	icon_state = "gab1"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/burst_improvement, /datum/crafting_recipe/recoil_decrease)
 
-/obj/item/book/granter/crafting_recipe/gunsmith_four
-	name = "Guns and Bullets, Part 4"
+/obj/item/book/granter/crafting_recipe/gunsmith_two
+	name = "Guns and Bullets, Part Two"
 	desc = "An extremely rare issue of Guns and Bullets, showing some design flaws of weapons and how to rectify them. It's barely holding up, and looks like only one person can study the knowledge from it."
-	icon_state = "gab4"
+	icon_state = "gab2"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
 	crafting_recipe_types = list(/datum/crafting_recipe/flux, /datum/crafting_recipe/lenses, /datum/crafting_recipe/conductors, /datum/crafting_recipe/receiver, /datum/crafting_recipe/assembly, /datum/crafting_recipe/alloys)
 
-/obj/item/book/granter/crafting_recipe/scav_one
-	name = "SCAV! Issue 1"
-	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
+/obj/item/book/granter/crafting_recipe/gunsmith_three
+	name = "Guns and Bullets, Part Three"
+	desc = "..."
+	icon_state = "gab3"
 	oneuse = TRUE
-	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
-	crafting_recipe_types = list(/datum/crafting_recipe/chainsaw, /datum/crafting_recipe/tools/forged/entrenching_tool, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/steeltower)
+	remarks = list("...")
+	crafting_recipe_types = list()
 
-/obj/item/book/granter/crafting_recipe/scav_two
-	name = "SCAV! Issue 2"
-	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
+/obj/item/book/granter/crafting_recipe/gunsmith_four
+	name = "Guns and Bullets, Part Four"
+	desc = "..."
+	icon_state = "gab4"
 	oneuse = TRUE
-	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
-	crafting_recipe_types = list(/datum/crafting_recipe/steelsaw)
-
-/obj/item/book/granter/crafting_recipe/scav_three
-	name = "SCAV! Issue 3"
-	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
-	oneuse = TRUE
-	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
-	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
+	remarks = list("...")
+	crafting_recipe_types = list()
 
 // New Blueprints, yay! -Superballs
 /obj/item/book/granter/crafting_recipe/blueprint
@@ -669,216 +607,10 @@
 	oneuse = TRUE
 	remarks = list()
 
-/obj/item/book/granter/crafting_recipe/blueprint/r82
-	name = "r82 heavy service rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/R82)
-
-/obj/item/book/granter/crafting_recipe/blueprint/marksman
-	name = "marksman carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/marksmancarbine)
-
-/obj/item/book/granter/crafting_recipe/blueprint/combatrifle
-	name = "combat rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/combatrifle)
-
-/obj/item/book/granter/crafting_recipe/blueprint/r84
-	name = "r84 lmg blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/lmg)
-
-/obj/item/book/granter/crafting_recipe/blueprint/service
-	name = "service rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/servicerifle)
-
-/obj/item/book/granter/crafting_recipe/blueprint/aep7
-	name = "aep7 blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/AEP7)
-
-/obj/item/book/granter/crafting_recipe/blueprint/leveraction
-	name = "lever action shotgun blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/lever_action)
-
-/obj/item/book/granter/crafting_recipe/blueprint/trailcarbine
-	name = "trail carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/trail_carbine)
-
-/obj/item/book/granter/crafting_recipe/blueprint/thatgun
-	name = ".223 pistol blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/thatgun)
-
-/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol
-	name = "plasma pistol blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/plasmapistol)
-
-/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol
-	name = "light plasma pistol blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/lightplasmapistol)
-
-/obj/item/book/granter/crafting_recipe/blueprint/uzi
-	name = "mini uzi blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/uzi)
-
-/obj/item/book/granter/crafting_recipe/blueprint/smg10mm
-	name = "10mm smg blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/smg10mm)
-
-/obj/item/book/granter/crafting_recipe/blueprint/greasegun
-	name = "m3a1 grease gun blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/grease_gun)
-
-/obj/item/book/granter/crafting_recipe/blueprint/brushgun
-	name = "brush gun blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/brush)
-
-/obj/item/book/granter/crafting_recipe/blueprint/r91
-	name = "r91 assault rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/r91)
-
-/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun
-	name = "riot shotgun blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/riotshotgun)
-
-/obj/item/book/granter/crafting_recipe/blueprint/sniper
-	name = "sniper rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/sniper)
-
-/obj/item/book/granter/crafting_recipe/blueprint/deagle
-	name = "desert eagle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/deagle)
-
-/obj/item/book/granter/crafting_recipe/blueprint/aer9
-	name = "aer9 blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/AER9)
-
-/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle
-	name = "plasma rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/plasmarifle)
-
-/obj/item/book/granter/crafting_recipe/blueprint/tribeam
-	name = "tribeam laser rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribeam)
-
-/obj/item/book/granter/crafting_recipe/blueprint/am_rifle
-	name = "anti-materiel rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/am_rifle)
-
-/obj/item/book/granter/crafting_recipe/blueprint/citykiller
-	name = "citykiller blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/city_killer)
-
-/obj/item/book/granter/crafting_recipe/blueprint/rangemaster
-	name = "colt rangemaster blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/rangemaster)
-
-/obj/item/book/granter/crafting_recipe/blueprint/bozar
-	name = "bozar blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/bozar)
-
-/obj/item/book/granter/crafting_recipe/blueprint/m1garand
-	name = "battle rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/m1garand)
-
-/obj/item/book/granter/crafting_recipe/blueprint/infiltrator
-	name = "infiltrator blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/infiltrator)
-
-/obj/item/book/granter/crafting_recipe/blueprint/lsw
-	name = "lsw blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/gun/lsw)
-
-/obj/item/book/granter/crafting_recipe/blueprint/m1carbine
-	name = "m1 carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/m1carbine)
-
-/obj/item/book/granter/crafting_recipe/blueprint/pps
-	name = "ppsh-41 blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/pps)
-
-/obj/item/book/granter/crafting_recipe/blueprint/commando
-	name = "commando carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/commando)
-
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "guide to minelaying"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/explosive/shrapnelmine, /datum/crafting_recipe/explosive/explomine, /datum/crafting_recipe/explosive/stingmine, /datum/crafting_recipe/explosive/pulsemine, /datum/crafting_recipe/explosive/stunmine)
-
-/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol_rem
-	name = "plasma pistol field blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/plasmapistol_rem)
-
-/*
-/obj/item/book/granter/crafting_recipe/blueprint/fnfal
-	name = "fn fal blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/fnfal)
-
-/obj/item/book/granter/crafting_recipe/blueprint/caws
-	name = "h&k caws blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/caws)
-*/
-
-/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine
-	name = "scout carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/scoutcarbine)
-
-/obj/item/book/granter/crafting_recipe/blueprint/neostead
-	name = "neostead 2000 blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/neostead)
-
-/obj/item/book/granter/crafting_recipe/blueprint/gauss
-	name = "gauss rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/gaussrifle)
-
-/obj/item/book/granter/crafting_recipe/manual/denvr
-	name = "den vr configuration"
-	icon_state = "book"
-	remarks = list("Never make dreams...", "Don't pick from an empty list...", "Runtimes are not good for cardio...", "Report an issue to a nearby technician, and expect to be told to post it to their terminal...", "Probably don't adjust the default safety settings.", "Clean up any messes left in the pod before the next use.")
-	crafting_recipe_types = list(/datum/crafting_recipe/set_vrboard/den)
-
-/obj/item/book/granter/crafting_recipe/ODF
-	name = "Weapons of the Brattleboro Defense Force"
-	desc = "a book detailing weapons used in the region and by the local town, it has lithiographed pictures of hand-drawn schematics for each weapon type"
-	oneuse = TRUE
-	crafting_recipe_types = list(/datum/crafting_recipe/policepistol, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/policerifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
-	remarks = list("Looks like Brattleboro hand-crafts replicas from a pre-war police armory", "Some of these weapons are more than 200 years old....", "Duct tape really can hold it together!", "So that is how you laminate armor sheets together", "Looks like you can beat metal into just the right shape to replace the bits")
-
 
 /obj/item/book/granter/trait/tagger
 	name = "Picket Fences"
@@ -896,15 +628,6 @@
 	traitname = "chemistry"
 	remarks = list("Always ensure a safe working environment, promptly clean any chemical mess.", "Improperly stored chemicals can quickly lead to safety hazards.", "Do not abuse chemicals for recreational use in the laboratory!", "Labcoats and goggles not only protect you from burns, but give an aura of authority.", "Keep your laboratory clean and organized, utilize cabinets and shelves.", "Potassium and water should not be mixed, or they will react violently.")
 	crafting_recipe_types = list(/datum/crafting_recipe/jet, /datum/crafting_recipe/turbo, /datum/crafting_recipe/psycho, /datum/crafting_recipe/medx, /datum/crafting_recipe/buffout)
-
-/obj/item/book/granter/trait/legionalchemy
-	name = "Teachings of Mars"
-	desc = "A crude, handmade book containing the essentials on how to work alchemy tables. The cover is stamped with a brass bull."
-	oneuse = TRUE
-	granted_trait = TRAIT_MARS_TEACH
-	traitname = "legion medicine"
-	remarks = list("Sapere aude.", "Ad astra per aspera.", "Mars favors the bold.", "Ars longa, vita brevis.", "Vivamus, moriendum est.", "Sic gorgiamus allos subjectatos nunc.", "Aere perennius.", "Bis dat qui cito dat.", "Finis coronat opus.", "Nullum magnum ingenium sine mixture dementia fuit.", "Nemo mortalium omnibus horis sapit.")
-
 
 /obj/item/book/granter/trait/bigleagues
 	name = "Grognak the Barbarian"
@@ -958,8 +681,6 @@
 	granted_trait = TRAIT_WIREVISION
 	traitname = "wirevision"
 	remarks = list("Troubleshooting is a systematic approach to problem solving, do not skip any steps in the process.", "Ensure you have all the required parts before you begin.", "Don't lose track of your tools, or you have a new problem to deal with.", "Make sure you check the colouring of wires extremely carefully- you don't want to be mixing up yellow and lime, or purple and indigo!")
-
-
 
 /obj/item/book/granter/trait/pa_wear
 	name = "US Army: Mechanized Infantry Handbook"

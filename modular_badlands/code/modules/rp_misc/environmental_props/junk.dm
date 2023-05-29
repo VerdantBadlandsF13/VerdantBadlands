@@ -103,7 +103,7 @@
 	name ="camonet"
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/structures.dmi'
 	icon_state ="camonet"
-	layer = MOB_LAYER + 8
+	layer = ABOVE_FLY_LAYER
 	alpha = 175
 	density = FALSE
 	anchored = TRUE

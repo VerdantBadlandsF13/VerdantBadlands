@@ -40,13 +40,6 @@
 /obj/item/storage/box/vendingmachine
 	name = "Vending Machine Kit"
 	desc = "A box containing all the necessary items to construct a vending machine."
-/*
-list(/obj/item/stack/sheet/metal = 20,
-				/obj/item/stack/crafting/metalparts = 10,
-				/obj/item/stack/crafting/electronicparts = 5,
-				/obj/item/stack/crafting/goodparts = 10,
-				/obj/item/stack/cable_coil = 10)
-*/
 
 /obj/item/storage/box/vendingmachine/PopulateContents()
 	. = ..()
@@ -61,31 +54,3 @@ list(/obj/item/stack/sheet/metal = 20,
 	new /obj/item/weldingtool(src)
 	new /obj/item/stack/f13Cash/random/med(src)
 	new /obj/item/stack/f13Cash/random/med(src)
-
-/obj/item/storage/box/shopkeeper
-	name = "Shopkeeper's blueprints"
-	desc = "a box of the shopkeeper's blueprints"
-
-
-/obj/item/storage/box/shopkeeper/PopulateContents()
-	var/randomgun = pick(
-						/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
-						/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
-						)
-	var/randomgun2 = pick(
-						/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
-						/obj/item/book/granter/crafting_recipe/blueprint/neostead,
-						)
-	var/randomgun3 = pick(
-						/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-						/obj/item/book/granter/crafting_recipe/blueprint/aer9,
-						)
-	var/randomgun4 = pick(
-						/obj/item/book/granter/crafting_recipe/blueprint/r91,
-						/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
-						/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
-						)
-	new randomgun(src)
-	new randomgun2(src)
-	new randomgun3(src)
-	new randomgun4(src)

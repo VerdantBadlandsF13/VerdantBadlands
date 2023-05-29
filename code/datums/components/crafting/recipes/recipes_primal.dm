@@ -57,15 +57,6 @@
 	result = /obj/structure/headpike/bone
 	category = CAT_PRIMAL
 
-/datum/crafting_recipe/bow_tablet
-	name = "Sandstone Bow Making Manual"
-	result = /obj/item/book/granter/crafting_recipe/bone_bow
-	time = 200 //Scribing // don't care
-	always_available = FALSE
-	reqs = list(/obj/item/stack/rods = 1,
-				/obj/item/stack/sheet/mineral/sandstone = 4)
-	category = CAT_PRIMAL
-
 /datum/crafting_recipe/rib
 	name = "Collosal Rib"
 	always_available = FALSE
@@ -180,60 +171,6 @@
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/tribal
 	category = CAT_TRIBAL
 	always_available = FALSE
-
-
-/datum/crafting_recipe/tribalwar/sturdybow
-	name = "Sturdy Bow"
-	result = /obj/item/gun/ballistic/bow/sturdy
-	time = 80
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/cloth = 5)
-	category = CAT_TRIBAL
-	tools = list(TOOL_WORKBENCH)
-	always_available = FALSE
-
-/datum/crafting_recipe/tribalwar/silverbow
-	name = "Silver Bow"
-	result = /obj/item/gun/ballistic/bow/silver
-	time = 80
-	reqs = list(/obj/item/stack/sheet/mineral/silver = 10,
-				/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/crafting/metalparts = 5)
-	category = CAT_TRIBAL
-	tools = list(TOOL_WORKBENCH)
-	always_available = FALSE
-
-/datum/crafting_recipe/tribalwar/bonebow
-	name = "Deathclaw Bow"
-	result = /obj/item/gun/ballistic/bow/claw
-	time = 80
-	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw = 6,
-				/obj/item/stack/sheet/bone = 10,
-				/obj/item/stack/sheet/sinew = 5)
-	category = CAT_TRIBAL
-	tools = list(TOOL_WORKBENCH)
-	always_available = FALSE
-
-/datum/crafting_recipe/tribalwar/tribe_bow
-	name = "Short Bow"
-	result = /obj/item/gun/ballistic/bow/tribal
-	time = 50
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 10,
-				/obj/item/stack/sheet/sinew = 3)
-	category = CAT_TRIBAL
-	always_available = FALSE
-
-/datum/crafting_recipe/tribalwar/crossbow
-	name = "CrossBow"
-	result = /obj/item/gun/ballistic/bow/crossbow
-	time = 180
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/crafting/metalparts = 3,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/advanced_crafting_components/alloys = 1,
-				/obj/item/stack/sheet/glass = 4)
-	category = CAT_TRIBAL
 
 //ARROWS
 

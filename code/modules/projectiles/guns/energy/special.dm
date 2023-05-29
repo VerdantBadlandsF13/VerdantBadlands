@@ -84,7 +84,7 @@
 	can_charge = FALSE
 	desc = "An energy-based laser gun that draws power from the robot's internal energy cell directly. So this is what freedom looks like?"
 	fire_delay = 1
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun)
 	icon_state = "laser"
 	item_state = "laser-rifle9"
 	selfcharge = EGUN_SELFCHARGE_BORG

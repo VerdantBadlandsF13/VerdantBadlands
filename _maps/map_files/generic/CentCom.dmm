@@ -1227,11 +1227,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1253,11 +1253,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1268,11 +1268,11 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders" = 3, "Interstellar Flux" = 1, "Illness" = 3, "Breakdown" = 2, "Malfunction" = 2, "Collision" = 1, "Spaceport" = 2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
-	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma=1);
+	prizes = list(/obj/item/paper/fluff/holodeck/trek_diploma = 1);
 	settlers = list("Kirk","Worf","Gene")
 	},
 /turf/open/floor/holofloor/plating,
@@ -1421,7 +1421,6 @@
 /area/holodeck/rec_center/kobayashi)
 "el" = (
 /obj/structure/table/glass,
-/obj/item/gun/energy/e_gun/mini/practice_phaser,
 /turf/open/floor/holofloor/plating,
 /area/holodeck/rec_center/kobayashi)
 "em" = (
@@ -1876,7 +1875,6 @@
 /area/holodeck/rec_center/firingrange)
 "fw" = (
 /obj/structure/rack,
-/obj/item/gun/energy/laser/practice,
 /obj/item/clothing/ears/earmuffs,
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/firingrange)
@@ -2829,7 +2827,6 @@
 /area/centcom/evac)
 "jH" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/ballistic/automatic/autopipe,
 /obj/item/flashlight/seclite,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -4851,9 +4848,6 @@
 	pixel_y = 28
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/item/gun/energy/laser/wattz/magneto,
-/obj/item/gun/energy/laser/wattz/magneto,
-/obj/item/gun/energy/laser/wattz/magneto,
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
 "qv" = (
@@ -5323,7 +5317,6 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/gun/energy/pulse/pistol/m1911,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/evac)
 "sd" = (
@@ -5425,7 +5418,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/gun/energy/e_gun/stun,
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
 "sD" = (
@@ -6079,7 +6071,6 @@
 "uI" = (
 /obj/structure/closet/secure_closet/security,
 /obj/item/storage/belt/security/full,
-/obj/item/gun/ballistic/automatic/autopipe,
 /obj/item/clothing/head/helmet/swat/nanotrasen,
 /obj/item/crowbar/red,
 /obj/effect/turf_decal/stripes/line{
@@ -6158,7 +6149,6 @@
 "uT" = (
 /obj/structure/closet/secure_closet/security,
 /obj/item/storage/belt/security/full,
-/obj/item/gun/ballistic/automatic/autopipe,
 /obj/item/clothing/head/helmet/swat/nanotrasen,
 /obj/item/crowbar/red,
 /obj/effect/turf_decal/stripes/line{
@@ -6168,7 +6158,6 @@
 /area/centcom/evac)
 "uU" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/ballistic/automatic/autopipe,
 /obj/item/flashlight/seclite,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -9043,11 +9032,6 @@
 /obj/item/mine/stun,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)
-"QE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/toyliberationstation,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/centcom/evac)
 "QS" = (
 /turf/closed/indestructible/f13/matrix,
 /area/centcom/evac)
@@ -9557,11 +9541,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/four)
-"WF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/donksofttoyvendor,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/centcom/evac)
 "WK" = (
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
 	dir = 1
@@ -30775,7 +30754,7 @@ EF
 EF
 EF
 Yw
-QE
+Yy
 Yy
 td
 DB
@@ -31803,7 +31782,7 @@ JZ
 Yy
 Ge
 Yw
-WF
+Yy
 Yy
 qk
 DB

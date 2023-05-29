@@ -408,24 +408,6 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	to_chat(world, "<B>The AI cleansed the station of life with the doomsday device!</B>")
 	SSticker.force_ending = 1
 
-
-//AI Turret Upgrade: Increases the health and damage of all turrets.
-/datum/AI_Module/large/upgrade_turrets
-	module_name = "AI Turret Upgrade"
-	mod_pick_name = "turret"
-	description = "Improves the power and health of all AI turrets. This effect is permanent."
-	cost = 30
-	upgrade = TRUE
-	unlock_text = "<span class='notice'>You establish a power diversion to your turrets, upgrading their health and damage.</span>"
-	unlock_sound = 'sound/items/rped.ogg'
-
-/datum/AI_Module/large/upgrade_turrets/upgrade(mob/living/silicon/ai/AI)
-	for(var/obj/machinery/porta_turret/ai/turret in GLOB.machines)
-		turret.obj_integrity += 30
-		turret.lethal_projectile = /obj/item/projectile/beam/laser/heavylaser //Once you see it, you will know what it means to FEAR.
-		turret.lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
-
-
 //Hostile Station Lockdown: Locks, bolts, and electrifies every airlock on the station. After 90 seconds, the doors reset.
 /datum/AI_Module/large/lockdown
 	module_name = "Hostile Station Lockdown"

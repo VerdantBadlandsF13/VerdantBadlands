@@ -82,9 +82,8 @@
 	health = 115
 	retreat_distance = 4
 	minimum_distance = 6
-	projectiletype = /obj/item/projectile/bullet/c9mm/op
+	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
-	loot = list(/obj/effect/spawner/lootdrop/f13/npc_raider)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 // LEGENDARY MELEE RAIDER
@@ -126,7 +125,7 @@
 	maxHealth = 170
 	health = 170
 	extra_projectiles = 3
-	projectiletype = /obj/item/projectile/bullet/c45/op
+	projectiletype = /obj/item/projectile/bullet/c45
 	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/f13/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -142,9 +141,9 @@
 	icon_dead = "metal_raider_dead"
 	maxHealth = 180
 	health = 180
-	projectiletype = /obj/item/projectile/bullet/c45/op
+	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/f13/metalarmor/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/suit/armor/f13/metalarmor/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 // FIREFIGHTER RAIDER
@@ -164,10 +163,9 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	projectiletype = /obj/item/projectile/bullet/a556/match
+	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	casingtype = /obj/item/ammo_casing/a556
-	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /obj/effect/mob_spawn/human/corpse/raider/ranged/biker
@@ -236,7 +234,6 @@
 	health = 220
 	melee_damage_lower = 40
 	melee_damage_upper = 55
-	loot = list(/obj/item/locked_box/misc/money/all/low)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /////////////
@@ -282,7 +279,7 @@
 	ranged = TRUE
 	retreat_distance = 6
 	minimum_distance = 8
-	projectiletype = /obj/item/projectile/bullet/c45/op
+	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
 	footstep_type = FOOTSTEP_MOB_SHOE/*
 	var/max_mobs = 2
@@ -334,7 +331,7 @@
 	maxHealth = 620
 	health = 620
 	extra_projectiles = 5
-	projectiletype = /obj/item/projectile/bullet/c45/rubber/basketball
+	projectiletype = /obj/item/projectile/bullet/c45/basketball
 	projectilesound = 'sound/block_parry/block_wood1.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/f13/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness)
 	footstep_type = FOOTSTEP_MOB_SHOE

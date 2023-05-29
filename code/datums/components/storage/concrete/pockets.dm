@@ -259,7 +259,6 @@ GLOBAL_LIST_INIT(storage_treasurer_can_hold, typecacheof(list(
 	)))
 
 GLOBAL_LIST_INIT(storage_holdout_can_hold, typecacheof(list(
-	/obj/item/gun/ballistic/automatic/hobo/zipgun,
 	/obj/item/gun/ballistic/revolver/needler,
 	/obj/item/gun/energy/laser/wattz,
 )))

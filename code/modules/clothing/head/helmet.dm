@@ -243,24 +243,6 @@
 	flags_cover = HEADCOVERSEYES
 	dog_fashion = null
 
-/obj/item/clothing/head/helmet/redtaghelm
-	name = "red laser tag helmet"
-	desc = "They have chosen their own end."
-	icon_state = "redtaghelm"
-	flags_cover = HEADCOVERSEYES
-	item_state = "redtaghelm"
-	// Offer about the same protection as a hardhat.
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/bluetaghelm
-	name = "blue laser tag helmet"
-	desc = "They'll need more men."
-	icon_state = "bluetaghelm"
-	flags_cover = HEADCOVERSEYES
-	item_state = "bluetaghelm"
-	// Offer about the same protection as a hardhat.
-	dog_fashion = null
-
 /obj/item/clothing/head/helmet/knight
 	name = "medieval helmet"
 	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era."

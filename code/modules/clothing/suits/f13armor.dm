@@ -442,7 +442,7 @@
 					return
 			if(3)
 				// Salvage
-				if(istype(I, /obj/item/weldingtool) || istype(I, /obj/item/gun/energy/plasmacutter))
+				if(istype(I, /obj/item/weldingtool))
 					if(ishuman(user) && user.wear_suit == src)
 						to_chat(user, "<span class='warning'>You have to take off the suit before salvaging it.</span>")
 						return
@@ -475,7 +475,7 @@
 						qdel(src)
 					return
 				// Fix
-				if(istype(I, /obj/item/weldingtool) || istype(I, /obj/item/gun/energy/plasmacutter))
+				if(istype(I, /obj/item/weldingtool))
 					if(ishuman(user) && user.wear_suit == src)
 						to_chat(user, "<span class='warning'>You have to take off the suit before fixing it.</span>")
 						return

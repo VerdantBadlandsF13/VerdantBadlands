@@ -170,18 +170,6 @@
 	cost = 35
 	item_path = /obj/item/melee/unarmed/sappers
 
-/datum/gang_item/weapon/greasegun
-	name = "Grease Gun"
-	id = "greasegun"
-	cost = 120
-	item_path = /obj/effect/spawner/bundle/f13/greasegun
-
-/datum/gang_item/weapon/uzi
-	name = "Uzi"
-	id = "uzi"
-	cost = 300
-	item_path = /obj/effect/spawner/bundle/f13/miniuzi
-
 /datum/gang_item/weapon/type17
 	name = "Type 17 Pistol"
 	id = "type17"
@@ -196,24 +184,6 @@
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
 
-/datum/gang_item/weapon/ninemil
-	name = "9mm Pistol"
-	id = "gangninemil"
-	cost = 80
-	item_path = /obj/effect/spawner/bundle/f13/ninemil
-
-/datum/gang_item/weapon/caravan
-	name = "Caravan Shotgun"
-	id = "caravanshotgun"
-	cost = 110
-	item_path = /obj/effect/spawner/bundle/f13/caravan_shotgun
-
-/datum/gang_item/weapon/varmint
-	name = "Varmint"
-	id = "varmints"
-	cost = 110
-	item_path = /obj/effect/spawner/bundle/f13/varmint
-
 /datum/gang_item/weapon/type93
 	name = "Worn Type 93"
 	id = "worntype93"
@@ -225,44 +195,8 @@
 	desc = "Rule the wasteland, one bullet at a time."
 
 /obj/item/storage/box/bundletype93kit/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/type93(src)
 	new /obj/item/ammo_box/magazine/m556/rifle(src)
-
-/datum/gang_item/weapon/energylow
-	name = "Unknown Energy Gun"
-	id = "gangenergygun"
-	cost = 200
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
-
-/datum/gang_item/weapon/gunsuperlow
-	name = "Unknown Ballistic Gun"
-	id = "gangshitbalisticgun"
-	cost = 90
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow
-
-/datum/gang_item/weapon/gunlow
-	name = "Unknown Good Ballistic Gun"
-	id = "ganggoodbalisticgun"
-	cost = 140
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/low
-
-/datum/gang_item/weapon/gunmid
-	name = "Unknown AWESOME Ballistic Gun"
-	id = "gangawesomebalisticgun"
-	cost = 180
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/lowmid
-
-/datum/gang_item/weapon/gunawesome
-	name = "Unknown EXTREMELY AWESOME Ballistic Gun"
-	id = "gangextremeawesomebalisticgun"
-	cost = 280
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/mid
-
-/datum/gang_item/weapon/melekit
-	name = "Unknown Melee Weapon"
-	id = "gangmelee"
-	cost = 140
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3
 
 ///////////////////
 //EQUIPMENT
@@ -378,7 +312,7 @@
 	desc = "Rule the underworld like the Den Mob of old."
 
 /obj/item/storage/box/bundledenboss/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/type93(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
@@ -455,32 +389,7 @@
 
 /obj/item/storage/box/bundleelguapo/PopulateContents()
 	new /obj/item/gun/ballistic/rifle/repeater/cowboy(src)
-	new /obj/item/ammo_box/a357box/ricochet(src)
+	new /obj/item/ammo_box/a357box(src)
 	new /obj/item/gun/ballistic/revolver/colt357(src)
 	new /obj/item/clothing/head/f13/ranger_hat(src)
 	new /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat(src)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/low
-	name = "low tier gang ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/thatgun,
-				/obj/effect/spawner/bundle/f13/huntingshotgun,
-				/obj/effect/spawner/bundle/f13/m1carbine,
-				)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/lowmid
-	name = "low-mid gang tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/cowboy,
-				/obj/effect/spawner/bundle/f13/trenchshotgun,
-				/obj/effect/spawner/bundle/f13/m1carbine,
-				/obj/effect/spawner/bundle/f13/huntingshotgun,
-		)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/mid
-	name = "mid tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/trail,
-				/obj/effect/spawner/bundle/f13/service,
-				/obj/effect/spawner/bundle/f13/miniuzi,
-				/obj/effect/spawner/bundle/f13/auto5,
-				/obj/effect/spawner/bundle/f13/marksman,
-				/obj/effect/spawner/bundle/f13/m1garand,
-				)

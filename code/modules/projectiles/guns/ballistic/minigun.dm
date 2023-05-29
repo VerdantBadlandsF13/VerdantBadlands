@@ -293,7 +293,7 @@ GL below.
 	fire_delay = 1
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/WattzRifleFire.ogg'
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/gatling/betterhitscan)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/gatling)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
 	var/obj/item/minigunlaspack/ammo_pack
@@ -467,7 +467,7 @@ Vindicator.
 	spread = 18
 	weapon_weight = WEAPON_HEAVY
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
-	mag_type = /obj/item/ammo_box/magazine/internal/minigun4mm
+	mag_type = /obj/item/ammo_box/magazine/internal/minigunbal4mm
 	casing_ejector = FALSE//For now.
 	item_flags = SLOWS_WHILE_IN_HAND
 	var/obj/item/minigun4mm/ammo_pack

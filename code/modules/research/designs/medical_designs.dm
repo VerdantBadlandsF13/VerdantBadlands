@@ -423,17 +423,6 @@
 	category = list("Misc", "Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
-/datum/design/cyberimp_shield
-	name = "Riot Shield Arm Implant"
-	desc = "An implanted riot shield, designed to be installed on subject's arm."
-	id = "ci-shield"
-	build_type = PROTOLATHE
-	materials = list (/datum/material/iron = 8500, /datum/material/glass = 8500, /datum/material/silver = 1800, /datum/material/titanium = 600)
-	construction_time = 200
-	build_path = /obj/item/organ/cyberimp/arm/shield
-	category = list("Misc", "Medical Designs")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
 /datum/design/cyberimp_janitor
 	name = "Janitor Arm Implant"
 	desc = "A set of janitor tools fitted into an arm implant, designed to be installed on subject's arm."

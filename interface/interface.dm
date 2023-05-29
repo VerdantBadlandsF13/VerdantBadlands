@@ -63,7 +63,7 @@
 	else
 		to_chat(src, "<span class='danger'>The Github URL is not set in the server configuration.</span>")
 	return
-
+/*
 /client/verb/changelog()
 	set name = "Changelog"
 	set category = "OOC"
@@ -74,4 +74,4 @@
 	if(prefs.lastchangelog != GLOB.changelog_hash)
 		prefs.lastchangelog = GLOB.changelog_hash
 		prefs.save_preferences()
-		winset(src, "infowindow.changelog", "font-style=;")
+		winset(src, "infowindow.changelog", "font-style=;")*/

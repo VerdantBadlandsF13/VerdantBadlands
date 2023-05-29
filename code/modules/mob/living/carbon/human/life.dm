@@ -65,6 +65,7 @@
 
 /mob/living/carbon/human/breathe()
 	handle_gas_mask_sound()
+	update_oxy_hud()
 	if(!dna.species.breathe(src))
 		..()
 
@@ -83,7 +84,7 @@
 		var/datum/species/S = dna.species
 
 		if(S.breathid == "o2")
-			throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
+//			throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
 		else if(S.breathid == "tox")
 			throw_alert("not_enough_tox", /obj/screen/alert/not_enough_tox)
 		else if(S.breathid == "co2")

@@ -12,6 +12,7 @@
 	icon_dead = "feralghoul_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	robust_searching = 1
+	stat_attack = UNCONSCIOUS
 	turns_per_move = 5
 	speak_emote = list("growls")
 	emote_see = list("screeches")

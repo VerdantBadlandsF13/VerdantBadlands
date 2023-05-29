@@ -79,7 +79,7 @@
 	icon_state = "corner"
 
 /turf/closed/indestructible/splashscreen
-	name = "Space Station 13"
+	name = "Verdant Badlands"
 	icon = 'icons/blank_title.png'
 	icon_state = ""
 	layer = FLY_LAYER

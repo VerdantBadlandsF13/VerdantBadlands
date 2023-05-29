@@ -148,7 +148,7 @@
 		adjustOxyLoss(1)
 
 		failed_last_breath = 1
-		throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
+//		throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
 		return 0
 
 	var/safe_oxy_min = 16
@@ -176,7 +176,7 @@
 				adjustOxyLoss(8)
 		if(prob(20))
 			emote("cough")
-		throw_alert("too_much_oxy", /obj/screen/alert/too_much_oxy)
+//		throw_alert("too_much_oxy", /obj/screen/alert/too_much_oxy)
 		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "suffocation", /datum/mood_event/suffocation)
 
 	if(O2_partialpressure < safe_oxy_min) //Not enough oxygen
@@ -190,7 +190,7 @@
 		else
 			adjustOxyLoss(3)
 			failed_last_breath = 1
-		throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
+//		throw_alert("not_enough_oxy", /obj/screen/alert/not_enough_oxy)
 		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "suffocation", /datum/mood_event/suffocation)
 
 	else //Enough oxygen
@@ -199,7 +199,7 @@
 		if(health >= crit_threshold)
 			adjustOxyLoss(-5)
 		oxygen_used = breath.get_moles(GAS_O2)
-		clear_alert("not_enough_oxy")
+//		clear_alert("not_enough_oxy")
 		SEND_SIGNAL(src, COMSIG_CLEAR_MOOD_EVENT, "suffocation")
 
 	breath.adjust_moles(GAS_O2, -oxygen_used)

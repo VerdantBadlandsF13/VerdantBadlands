@@ -16,6 +16,8 @@
 	The size of the user's screen is defined by client.view (indirectly by world.view), in our case "15x15".
 	Therefore, the top right corner (except during admin shenanigans) is at "15,15"
 */
+// Hud container.
+#define ui_container "WEST,SOUTH to EAST,NORTH"
 
 //Lower left, persistent menu
 #define ui_inventory "WEST:6,SOUTH:5"
@@ -84,8 +86,8 @@
 #define ui_zonesel "EAST-1:28,SOUTH:5"
 #define ui_acti_alt "EAST-1:28,SOUTH:5"	//alternative intent switcher for when the interface is hidden (F12)
 #define ui_crafting	"EAST-1:27,SOUTH+2:7"
-#define ui_building "EAST-1:27,SOUTH+3:5"
-#define ui_language_menu "EAST-1:27,SOUTH+2:22"
+#define ui_building "EAST-1:27,SOUTH+3:9"
+#define ui_language_menu "EAST-1:27,SOUTH+2:26"
 
 #define ui_borg_pull "EAST-2:26,SOUTH+1:7"
 #define ui_borg_radio "EAST-1:28,SOUTH+1:7"
@@ -99,12 +101,16 @@
 #define ui_alert4 "EAST-1:28,CENTER+2:21"
 #define ui_alert5 "EAST-1:28,CENTER+1:19"
 
+//Bottom Right. Status for hunger and hydration.
+#define ui_hydration	"EAST-0.8,CENTER-5"
+#define ui_hunger		"EAST-0.8,CENTER-4.2"
+#define ui_oxy			"EAST+0.1,CENTER-3.1"
 
 //Middle right (status indicators)
-#define ui_healthdoll "EAST-1:28,CENTER-2:13"
-#define ui_health "EAST-1:28,CENTER-1:15"
-#define ui_internal "EAST-1:28,CENTER+1:19"//CIT CHANGE - moves internal icon up a little bit to accommodate for the stamina meter
-#define ui_mood "EAST-1:28,CENTER-3:10"
+#define ui_healthdoll "EAST-1:28,CENTER-2.3"
+#define ui_health "EAST-1:30,CENTER-1.42"
+#define ui_internal "EAST-1.15,CENTER-4.75"
+#define ui_mood "EAST-2.3,CENTER-5.2"
 
 //living
 #define ui_living_pull "EAST-1:28,CENTER-2:15"
@@ -165,7 +171,7 @@
 
 
 //UI position overrides for 1:1 screen layout. (default is 7:5)
-#define ui_stamina "EAST-1:28,CENTER:17" // replacing internals button
+#define ui_stamina "EAST-1:25,CENTER:-18"
 #define ui_overridden_resist "EAST-3:24,SOUTH+1:7"
 #define ui_clickdelay "CENTER,SOUTH+1:-31"
 #define ui_resistdelay "EAST-3:24,SOUTH+1:4"

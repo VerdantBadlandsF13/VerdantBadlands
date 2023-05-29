@@ -156,6 +156,9 @@
 #define BLIND_LAYER 20.3
 #define CRIT_LAYER 20.4
 #define CURSE_LAYER 20.5
+// Hud Container
+#define HUCON_LAYER 20.6
+#define HUCONC_LAYER 20.7
 
 
 //-------------------- HUD ---------------------

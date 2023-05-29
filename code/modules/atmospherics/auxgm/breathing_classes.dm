@@ -9,10 +9,10 @@
 	var/list/gases = null
 	var/list/products = null
 	var/danger_reagent = null
-	var/low_alert_category = "not_enough_oxy"
-	var/low_alert_datum =  /obj/screen/alert/not_enough_oxy
-	var/high_alert_category = "too_much_oxy"
-	var/high_alert_datum =  /obj/screen/alert/too_much_oxy
+	var/low_alert_category = ""
+	var/low_alert_datum =  null
+	var/high_alert_category = ""
+	var/high_alert_datum =  null
 
 /datum/breathing_class/oxygen
 	gases = list(

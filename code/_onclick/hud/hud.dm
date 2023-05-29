@@ -52,6 +52,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/obj/screen/healthdoll
 	var/obj/screen/internals
 
+	var/obj/screen/oxy
+	var/obj/screen/water
+	var/obj/screen/food
+
 	// subtypes can override this to force a specific UI style
 	var/ui_style
 
@@ -101,6 +105,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	blobpwrdisplay = null
 	alien_plasma_display = null
 	alien_queen_finder = null
+
+	oxy		= null
+	water	= null
+	food	= null
 
 	QDEL_LIST_ASSOC_VAL(plane_masters)
 	QDEL_LIST(screenoverlays)

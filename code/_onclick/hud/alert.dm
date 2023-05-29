@@ -110,6 +110,7 @@
 
 
 //Gas alerts
+/*
 /obj/screen/alert/not_enough_oxy
 	name = "Choking (No O2)"
 	desc = "You're not getting enough oxygen. Find some good air before you pass out!"
@@ -119,7 +120,7 @@
 	name = "Choking (O2)"
 	desc = "There's too much oxygen in the air, and you're breathing it in! Find some good air before you pass out!"
 	icon_state = "too_much_oxy"
-
+*/
 /obj/screen/alert/not_enough_nitro
 	name = "Choking (No N2)"
 	desc = "You're not getting enough nitrogen. Find some good air before you pass out!"
@@ -659,6 +660,7 @@ so as to remain in compliance with the most up-to-date laws."
 		for(var/i = 1, i <= alerts.len, i++)
 			mymob.client.screen -= alerts[alerts[i]]
 		return 1
+
 	for(var/i = 1, i <= alerts.len, i++)
 		var/obj/screen/alert/alert = alerts[alerts[i]]
 		if(alert.icon_state == "template")
@@ -697,61 +699,63 @@ so as to remain in compliance with the most up-to-date laws."
 	mob_viewer = null
 	screen_loc = ""
 
+/*
 /////////
 // Food/Water
+// OLD. Refer to screen_objs.dm for the new way of handling this.
 /////////
-/obj/screen/alert/thirst1
+/obj/screen/alert/water
+	screen_loc = ui_alert_water
+
+/obj/screen/alert/water/toxic
+	name = "Thirst"
+	desc = "You've killed yourself."
+	icon_state = "water_toxic"
+
+/obj/screen/alert/water/thirst1
 	name = "Thirst"
 	desc = "Your mouth is dry."
 	icon_state = "water1"
 
-/obj/screen/alert/thirst2
+/obj/screen/alert/water/thirst2
 	name = "Thirst"
 	desc = "You're starting to feel the effects of slight fatigue. Find something to drink."
 	icon_state = "water2"
 
-/obj/screen/alert/thirst3
+/obj/screen/alert/water/thirst3
 	name = "Thirst"
 	desc = "You're starting to feel the effects of extreme fatigue. Find something to drink."
 	icon_state = "water3"
 
-/obj/screen/alert/thirst4
+/obj/screen/alert/water/thirst4
 	name = "Thirst"
 	desc = "Drink something, or you're soon going to waste away."
 	icon_state = "water4"
 
+/obj/screen/alert/food
+	screen_loc = ui_alert_food
 
-/obj/screen/alert/hunger1
+/obj/screen/alert/food/hunger1
 	name = "Hunger"
 	desc = "You could do with something to eat."
 	icon_state = "starv1"
 
-/obj/screen/alert/hunger2
+/obj/screen/alert/food/hunger2
 	name = "Hunger"
 	desc = "You're more than peckish. Get something to snack on."
 	icon_state = "starv2"
 
-/obj/screen/alert/hunger3
+/obj/screen/alert/food/hunger3
 	name = "Hunger"
 	desc = "You feel as if your stomach is in freefall. Find something to eat."
 	icon_state = "starv3"
 
-/obj/screen/alert/hunger4
+/obj/screen/alert/food/hunger4
 	name = "Hunger"
 	desc = "Your body is slowly starting to waste away. Find food. Soon."
 	icon_state = "starv4"
 
-/obj/screen/alert/fat
+/obj/screen/alert/food/fat
 	name = "Fat"
 	desc = "You ate too much food, lardass. Run around the station and lose some weight."
-	icon_state = "fat"
-
-/obj/screen/alert/hungry
-	name = "Hungry"
-	desc = "Some food would be good right about now."
-	icon_state = "hungry"
-
-/obj/screen/alert/starving
-	name = "Starving"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
-	icon_state = "starving"
+	icon_state = "fat"*/

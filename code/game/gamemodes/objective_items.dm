@@ -43,12 +43,6 @@
 	difficulty = 5
 	excludefromjob = list("Chief Engineer", "Station Engineer", "Atmospheric Technician")
 
-/datum/objective_item/steal/capmedal
-	name = "the medal of captaincy."
-	targetitem = /obj/item/clothing/accessory/medal/gold/captain
-	difficulty = 5
-	excludefromjob = list("Captain")
-
 /datum/objective_item/steal/hypo
 	name = "the Chief Medical Officer's MKII hypospray."
 	targetitem = /obj/item/hypospray/mkii/CMO //CITADEL EDIT, changing theft objective for the Hypo MK II
@@ -64,15 +58,9 @@
 /datum/objective_item/steal/nukedisc/check_special_completion(obj/item/disk/nuclear/N)
 	return !N.fake
 
-/datum/objective_item/steal/reflector
-	name = "a reflector vest."
-	targetitem = /obj/item/clothing/suit/armor/laserproof
-	difficulty = 3
-	excludefromjob = list("Head of Security", "Warden")
-
 /datum/objective_item/steal/reactive
 	name = "a reactive teleport armor."
-	targetitem = /obj/item/clothing/suit/armor/reactive
+	targetitem = /obj/item/clothing/suit/armored/reactive
 	difficulty = 5
 	excludefromjob = list("Research Director","Scientist", "Roboticist")
 

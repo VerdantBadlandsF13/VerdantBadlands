@@ -18,7 +18,6 @@
 /datum/outfit/syndicatesoldiercorpse
 	name = "Syndicate Operative Corpse"
 	uniform = /obj/item/clothing/under/syndicate
-	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset
@@ -75,7 +74,7 @@
 /datum/outfit/piratecorpse
 	name = "Pirate Corpse"
 	uniform = /obj/item/clothing/under/costume/pirate
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	glasses = /obj/item/clothing/glasses/eyepatch
 	head = /obj/item/clothing/head/bandana
 
@@ -99,8 +98,7 @@
 /datum/outfit/russiancorpse
 	name = "Russian Corpse"
 	uniform = /obj/item/clothing/under/costume/soviet
-	shoes = /obj/item/clothing/shoes/jackboots
-	head = /obj/item/clothing/head/bearpelt
+	shoes = /obj/item/clothing/shoes/f13/rag
 	gloves = /obj/item/clothing/gloves/color/black
 	mask = /obj/item/clothing/mask/gas
 
@@ -111,7 +109,6 @@
 
 /datum/outfit/russiancorpse/ranged
 	name = "Ranged Russian Corpse"
-	head = /obj/item/clothing/head/ushanka
 
 
 /obj/effect/mob_spawn/human/corpse/russian/ranged/trooper
@@ -120,7 +117,6 @@
 /datum/outfit/russiancorpse/ranged/trooper
 	name = "Ranged Russian Trooper Corpse"
 	uniform = /obj/item/clothing/under/syndicate/camo
-	suit = /obj/item/clothing/suit/armor/bulletproof
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
@@ -135,10 +131,8 @@
 /datum/outfit/russiancorpse/officer
 	name = "Russian Officer Corpse"
 	uniform = /obj/item/clothing/under/costume/russian_officer
-	suit = /obj/item/clothing/suit/armor/navyblue/russian
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset
-	head = /obj/item/clothing/head/ushanka
 
 
 /obj/effect/mob_spawn/human/corpse/wizard
@@ -167,7 +161,6 @@
 /datum/outfit/nanotrasensoldiercorpse2
 	name = "NT Private Security Officer Corpse"
 	uniform = /obj/item/clothing/under/rank/security/officer
-	suit = /obj/item/clothing/suit/armor/vest
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
@@ -211,17 +204,14 @@
 
 /obj/effect/mob_spawn/human/corpse/raider
 	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor
-	shoes = /obj/item/clothing/shoes/jackboots
-	head = /obj/item/clothing/head/helmet/f13/metalmask
+	shoes = /obj/item/clothing/shoes/f13/military
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raidermelee
 	name = "Raider Melee Corpse"
 	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/f13/leather_jacket
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/helmet/skull
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -229,8 +219,7 @@
 /obj/effect/mob_spawn/human/corpse/raiderranged
 	name = "Raider Ranged Corpse"
 	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/f13/leather_jacket
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	head = /obj/item/clothing/head/helmet/skull
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
@@ -238,16 +227,13 @@
 /obj/effect/mob_spawn/human/corpse/raiderrangedsulphite
 	name = "Sulphite Raider Ranged Corpse"
 	uniform = /obj/item/clothing/under/f13/raiderharness
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
-	shoes = /obj/item/clothing/shoes/f13/explorer
-	head = /obj/item/clothing/head/helmet/f13/metalmask/mk2
+	shoes = /obj/item/clothing/shoes/f13/military
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/raiderboss
 	name = "Raider Boss"
-	uniform = /obj/item/clothing/under/f13/ravenharness
-	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/raider
+	uniform = /obj/item/clothing/under/f13/raiderharness
 	shoes = /obj/item/clothing/shoes/combat
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
 	hair_style = "Bald"
@@ -256,18 +242,15 @@
 /obj/effect/mob_spawn/human/corpse/raiderbossalt
 	name = "Raider Boss Corpse"
 	uniform = /obj/item/clothing/under/f13/mercc
-	suit = /obj/item/clothing/suit/armor/f13/metalarmor/reinforced
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/helmet/knight/f13/metal/reinforced
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
 /obj/effect/mob_spawn/human/corpse/chineseremnant
 	name = "Chinese Remnant Corpse"
 	uniform = /obj/item/clothing/under/f13/chinese
-	shoes = /obj/item/clothing/shoes/jackboots
-	head = /obj/item/clothing/head/ushanka
+	shoes = /obj/item/clothing/shoes/f13/military
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 	mob_species = /datum/species/ghoul
@@ -278,5 +261,4 @@
 
 /obj/effect/mob_spawn/human/corpse/chineseremnant/assault
 	name = "Chinese Remnant Assault Corpse"
-	suit = /obj/item/clothing/suit/armor/f13/combat/chinese
 	belt = /obj/item/storage/belt/military/alt

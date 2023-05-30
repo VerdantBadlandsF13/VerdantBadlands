@@ -32,7 +32,7 @@
 
 /datum/gear/donator/kits/abeltwo
 	name ="campaign coat"
-	path = /obj/item/clothing/suit/armor/f13/ncrarmor/bellacoat
+	path = /obj/item/clothing/suit/armored/f13/ncrarmor/bellacoat
 	ckeywhitelist = list ("abelshift")
 
 /obj/item/storage/box/large/custom_kit/campcoatabel/PopulateContents()

@@ -20,18 +20,24 @@
 	var/obj/item/flashlight/seclite/attached_light
 	var/datum/action/item_action/toggle_helmet_flashlight/alight
 
+	var/durability_threshold = 0
+	repair_kit = /obj/item/repair_kit/arm_repair_kit
 
 /obj/item/clothing/head/helmet/Initialize()
 	. = ..()
 	if(attached_light)
 		alight = new(src)
+	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
+	if((durability_threshold <= 0) && round_armor > 30) // Weak armor, meh.
+		var/tier_ar = round(round_armor / 10) // Tier 7 would be 200/100 = 20, Tier 11 = 40
+		durability_threshold = tier_ar
+
 
 /obj/item/clothing/head/helmet/Destroy()
 	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
 	if(old_light)
 		qdel(old_light)
 	return ..()
-
 
 /obj/item/clothing/head/helmet/examine(mob/user)
 	. = ..()
@@ -41,6 +47,40 @@
 			. += "<span class='info'>[attached_light] looks like it can be <b>unscrewed</b> from [src].</span>"
 	else if(can_flashlight)
 		. += "It has a mounting point for a <b>seclite</b>."
+	. += "The helmet is at [armor_durability] durability and is providing [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	if(durability_threshold > 0)
+		. += "Additionally, any attack below [durability_threshold] force will not damage its durability."
+
+/obj/item/clothing/head/helmet/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
+	if((damage + AP_mod) < durability_threshold)
+		return ..()
+	if(def_zone in protected_zones)
+		damage_armor()
+	. = ..()
+
+/obj/item/clothing/head/helmet/proc/use_kit(obj/item/I, mob/user)
+	var/obj/item/repair_kit/kit = I
+	while(armor_durability<100)
+		if(do_after(user, 10))
+			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability+1] durability.")
+			if(kit.uses_left>1)
+				kit.uses_left -= 1
+				fix_armor()
+			else
+				fix_armor()
+				qdel(kit)
+				break
+
+/obj/item/clothing/head/helmet/proc/damage_armor()
+	if(armor.linebullet>0 && armor.linelaser>0 && armor.linemelee>0 && armor_durability>0)
+		armor_durability -= 1
+		armor = armor.modifyRating(linemelee = -1, linebullet = -1, linelaser = -1)
+
+/obj/item/clothing/head/helmet/proc/fix_armor()
+	if(armor_durability<100)
+		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
+		armor_durability += 1
 
 /obj/item/clothing/head/helmet/handle_atom_del(atom/A)
 	if(A == attached_light)
@@ -76,6 +116,10 @@
 	can_flashlight = TRUE
 
 /obj/item/clothing/head/helmet/sec/attackby(obj/item/I, mob/user, params)
+	if(istype(I, repair_kit))
+		use_kit(I, user)
+		return
+
 	if(issignaler(I))
 		var/obj/item/assembly/signaler/S = I
 		if(attached_light) //Has a flashlight. Player must remove it, else it will be lost forever.
@@ -108,13 +152,6 @@
 	name = "degrading helmet"
 	desc = "Standard issue security helmet. Due to degradation the helmet's visor obstructs the users ability to see long distances."
 	tint = 2
-
-/obj/item/clothing/head/helmet/blueshirt
-	name = "light security helmet"
-	desc = "A reliable, blue tinted helmet reminding you that you <i>still</i> owe that engineer a beer."
-	icon_state = "blueshift"
-	item_state = "blueshift"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 25, "bomb" = 50, "bio" = 40, "rad" = 40, "fire" = 70, "acid" = 40, "wound" = 50)
 
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
@@ -151,32 +188,6 @@
 				var/mob/living/carbon/C = user
 				C.head_update(src, forced = 1)
 
-// TODO: CONVERT TO USE LOOPING SOUNDS
-/*
-			if(active_sound)
-				while(up) // <-- NEVER DO THIS
-					playsound(src.loc, "[active_sound]", 100, 0, 4)
-					sleep(15) // <-- ESPECIALLY NOT WITH THIS
-*/
-
-/obj/item/clothing/head/helmet/justice
-	name = "helmet of justice"
-	desc = "WEEEEOOO. WEEEEEOOO. WEEEEOOOO."
-	icon_state = "justice"
-	toggle_message = "You turn off the light of"
-	alt_toggle_message = "You turn on the light of"
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	can_toggle = 1
-	toggle_cooldown = 20
-	// TODO: CONVERT TO USE LOOPING SOUNDS
-	//active_sound = 'sound/items/weeoo1.ogg'
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/justice/escape
-	name = "alarm helmet"
-	desc = "WEEEEOOO. WEEEEEOOO. STOP THAT MONKEY. WEEEOOOO."
-	icon_state = "justice2"
-
 /obj/item/clothing/head/helmet/swat
 	name = "\improper SWAT helmet"
 	desc = "An extremely robust, space-worthy helmet in a nefarious red and black stripe pattern."
@@ -196,102 +207,6 @@
 	icon_state = "swat"
 	item_state = "swat"
 
-/obj/item/clothing/head/helmet/thunderdome
-	name = "\improper Thunderdome helmet"
-	desc = "<i>'Let the battle commence!'</i>"
-	flags_inv = HIDEEARS|HIDEHAIR
-	icon_state = "thunderdome"
-	item_state = "thunderdome"
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
-	heat_protection = HEAD
-	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
-	strip_delay = 80
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/roman
-	name = "\improper Roman helmet"
-	desc = "An ancient helmet made of bronze and leather."
-	flags_inv = HIDEEARS|HIDEHAIR
-	flags_cover = HEADCOVERSEYES
-	resistance_flags = FIRE_PROOF
-	icon_state = "roman"
-	item_state = "roman"
-	strip_delay = 100
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/roman/fake
-	desc = "An ancient helmet made of plastic and leather."
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/head/helmet/roman/legionnaire
-	name = "\improper Roman legionnaire helmet"
-	desc = "An ancient helmet made of bronze and leather. Has a red crest on top of it."
-	icon_state = "roman_c"
-	item_state = "roman_c"
-
-/obj/item/clothing/head/helmet/roman/legionnaire/fake
-	desc = "An ancient helmet made of plastic and leather. Has a red crest on top of it."
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/head/helmet/gladiator
-	name = "gladiator helmet"
-	desc = "Ave, Imperator, morituri te salutant."
-	icon_state = "gladiator"
-	item_state = "gladiator"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR
-	flags_cover = HEADCOVERSEYES
-	dog_fashion = null
-
-/obj/item/clothing/head/helmet/knight
-	name = "medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era."
-	icon_state = "knight_green"
-	item_state = "knight_green"
-	armor = list("melee" = 55, "bullet" = 30, "laser" = 30, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDESNOUT
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	strip_delay = 80
-	dog_fashion = null
-	mutantrace_variation = STYLE_MUZZLE
-
-
-/obj/item/clothing/head/helmet/knight/Initialize(mapload)
-	. = ..()
-	var/datum/component = GetComponent(/datum/component/wearertargeting/earprotection)
-	qdel(component)
-
-/obj/item/clothing/head/helmet/knight/blue
-	name = "blue medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted blue."
-	icon_state = "knight_blue"
-	item_state = "knight_blue"
-
-/obj/item/clothing/head/helmet/knight/yellow
-	name = "yellow medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted yellow."
-	icon_state = "knight_yellow"
-	item_state = "knight_yellow"
-
-/obj/item/clothing/head/helmet/knight/red
-	name = "red medieval helmet"
-	desc = "A classic metal helmet worn by all ranks of knights and horsemen of the Old Era.<br>This one is painted red."
-	icon_state = "knight_red"
-	item_state = "knight_red"
-
-/obj/item/clothing/head/helmet/knight/templar
-	name = "crusader helmet"
-	desc = "Deus Vult."
-	icon_state = "knight_templar"
-	item_state = "knight_templar"
-
-/obj/item/clothing/head/helmet/knight/greyscale
-	name = "knight helmet"
-	desc = "A classic medieval helmet, if you hold it upside down you could see that it's actually a bucket."
-	icon_state = "knight_greyscale"
-	item_state = "knight_greyscale"
-	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS //Can change color and add prefix
-
 /obj/item/clothing/head/helmet/skull
 	name = "skull helmet"
 	desc = "An intimidating tribal helmet, it doesn't look very comfortable."
@@ -303,20 +218,111 @@
 	strip_delay = 100
 	mutantrace_variation = STYLE_MUZZLE
 
-/obj/item/clothing/head/helmet/infiltrator
-	name = "insidious helmet"
-	desc = "An insidious armored combat helmet signed with Syndicate insignia. The visor is coated with a resistant paste guaranteed to withstand bright flashes perfectly."
-	icon_state = "infiltrator"
-	item_state = "infiltrator"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 45,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	flash_protect = 2
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+/obj/item/clothing/head/helmet/armyhelmet
+	name = "steel helmet"
+	desc = "A steel helmet, inspired by several pre-war designs. It provides some protection against impacts, cuts, and medium-velocity bullets."
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
+	icon_state = "armyhelmet"
+	item_state = "armyhelmet"
+
+/obj/item/clothing/head/helmet/armyhelmet/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/armyhelmet/heavy
+	name = "heavy steel helmet"
+	desc = "a steel helmet, inspired by several pre-war designs. This one has been modified by Brattleboro citizens to provide more protection to the face and neck."
+	icon_state = "armyhelmetheavy"
+	item_state = "armyhelmetheavy"
+	armor = list("melee" = 30, "bullet" = 50, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	slowdown = 0.025
+	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
+
+/obj/item/clothing/head/helmet/armyhelmet/heavy/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
+/obj/item/clothing/head/helmet/flakhelm	//Actually the M1 Helmet
+	name = "flak helmet"
+	desc = "A dilapidated helmet, obsolete even by pre-war standards. An ace of spades is tucked into the band around the outer shell."
+	icon_state = "m1helm"
+	item_state = "helmet"
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 0, "bomb" = 5, "bio" = 0, "rad" = 0, "acid" = -15)
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/tiny/spacenam	//So you can stuff other things in the elastic band instead of it simply being a fluff thing.
+
+//The "pocket" for the M1 helmet so you can tuck things into the elastic band
+
+/datum/component/storage/concrete/pockets/tiny/spacenam
+	attack_hand_interact = TRUE		//So you can actually see what you stuff in there
+
+/obj/item/clothing/head/helmet/f13/combat
+	name = "combat helmet"
+	desc = "An old military grade pre-war combat helmet."
+	icon_state = "combat_helmet"
+	item_state = "combat_helmet"
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 45, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	strip_delay = 50
+	flags_inv = HIDEEARS|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-	strip_delay = 80
-	mutantrace_variation = STYLE_MUZZLE
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+
+/obj/item/clothing/head/helmet/f13/combat/dark
+	color = "#302E2E" // Dark Grey
+
+/obj/item/clothing/head/helmet/f13/combat/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spraycan_paintable)
+	START_PROCESSING(SSobj, src)
+
+/obj/item/clothing/head/helmet/f13/combat/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
+
+/obj/item/clothing/head/helmet/f13/combat/mk2
+	name = "reinforced combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
+	icon_state = "combat_helmet_mk2"
+	item_state = "combat_helmet_mk2"
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 40, "energy" = 22, "bomb" = 55, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+
+/obj/item/clothing/head/helmet/f13/combat/riotbroken
+	name = "broken riot helmet"
+	icon_state = "ranger_broken"
+	desc = "An old riot police helmet, out of use around the time of the war."
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 30, "bomb" = 45, "bio" = 55, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	flash_protect = 1
+
+/obj/item/clothing/head/helmet/f13/combat/swat
+	name = "SWAT combat helmet"
+	desc = "A prewar combat helmet issued to S.W.A.T. personnel."
+	icon_state = "swatsyndie"
+	item_state = "swatsyndie"
+	armor = list("melee" = 35, "bullet" = 50, "laser" = 40, "energy" = 25, "bomb" = 55, "bio" = 60, "rad" = 15, "fire" = 60, "acid" = 30)
+
+/obj/item/clothing/head/helmet/f13/combat/environmental
+	name = "environmental armor helmet"
+	desc = "A full head helmet and gas mask, developed for use in heavily contaminated environments."
+	icon_state = "env_helmet"
+	item_state = "env_helmet"
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 40,"energy" = 20, "bomb" = 55, "bio" = 70, "rad" = 100, "fire" = 60, "acid" = 50)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+
+/obj/item/clothing/head/helmet/f13/combat/environmental/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
 
 //LightToggle
 
@@ -357,7 +363,6 @@
 		return
 	return ..()
 
-
 /obj/item/clothing/head/helmet/screwdriver_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(can_flashlight && attached_light) //if it has a light but can_flashlight is false, the light is permanently attached.
@@ -374,7 +379,6 @@
 		user.update_inv_head()
 		QDEL_NULL(alight)
 		return TRUE
-
 
 /obj/item/clothing/head/helmet/proc/toggle_helmlight()
 	set name = "Toggle Helmetlight"
@@ -394,7 +398,6 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_helmlight()
 
-
 /obj/item/clothing/head/helmet/proc/update_helmlight()
 	if(attached_light)
 		update_icon()
@@ -402,59 +405,3 @@
 	for(var/X in actions)
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
-
-
-/obj/item/clothing/head/helmet/durathread
-	name = "makeshift helmet"
-	desc = "A hardhat with strips of leather and durathread for additional blunt protection."
-	icon_state = "durathread"
-	item_state = "durathread"
-
-
-/obj/item/clothing/head/helmet/rus_helmet
-	name = "russian helmet"
-	desc = "It can hold a bottle of vodka."
-	icon_state = "rus_helmet"
-	item_state = "rus_helmet"
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
-
-/obj/item/clothing/head/helmet/rus_ushanka
-	name = "battle ushanka"
-	desc = "100% bear."
-	icon_state = "rus_ushanka"
-	item_state = "rus_ushanka"
-	clothing_flags = THICKMATERIAL
-	body_parts_covered = HEAD
-	cold_protection = HEAD
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
-
-/obj/item/clothing/head/helmet/police
-	name = "police officer's hat"
-	desc = "A police officer's Hat. This hat emphasizes that you are THE LAW."
-	icon_state = "policehelm"
-	dynamic_hair_suffix = ""
-
-/obj/item/clothing/head/helmet/armyhelmet
-	name = "steel helmet"
-	desc = "A steel helmet, inspired by several pre-war designs. It provides some protection against impacts, cuts, and medium-velocity bullets."
-	icon = 'icons/fallout/clothing/helmets.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
-	icon_state = "armyhelmet"
-	item_state = "armyhelmet"
-
-/obj/item/clothing/head/helmet/armyhelmet/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
-
-/obj/item/clothing/head/helmet/armyhelmet/heavy
-	name = "heavy steel helmet"
-	desc = "a steel helmet, inspired by several pre-war designs. This one has been modified by Brattleboro citizens to provide more protection to the face and neck."
-	icon_state = "armyhelmetheavy"
-	item_state = "armyhelmetheavy"
-	armor = list("melee" = 30, "bullet" = 50, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
-	slowdown = 0.025
-	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
-
-/obj/item/clothing/head/helmet/armyhelmet/heavy/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)

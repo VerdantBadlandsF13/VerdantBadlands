@@ -67,6 +67,9 @@
 	///These are armor values that protect the clothing, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/durability_list = list()
 
+	var/armor_durability = 100
+	var/repair_kit = /obj/item/repair_kit/sewingkit
+
 	/// Required tool behavior to salvage the item
 	var/salvage_tool_behavior = TOOL_SAW
 	/// Items that are dropped on salvage; If it's empty - item can't salvaged
@@ -107,7 +110,26 @@
 	else
 		return ..()
 
+/obj/item/clothing/proc/use_sewkit(obj/item/I, mob/user)
+	var/obj/item/repair_kit/kit = I
+	while(armor_durability<100)
+		if(do_after(user, 10))
+			to_chat(user,"You fix some of the damage on \the [src], it is now at [armor_durability+1] durability.")
+			if(kit.uses_left>1)
+				kit.uses_left -= 1
+				repair(user)
+			else
+				repair(user,)
+				qdel(kit)
+				break
+
 /obj/item/clothing/attackby(obj/item/W, mob/user, params)
+	if(istype(W, repair_kit))
+		if(do_after(user, 6 SECONDS, TRUE, src))
+			repair(user, params)
+			use_sewkit(W, user)
+		return
+
 	if(damaged_clothes && istype(W, repairable_by))
 		var/obj/item/stack/S = W
 		switch(damaged_clothes)

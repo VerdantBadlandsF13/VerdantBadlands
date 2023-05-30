@@ -36,7 +36,7 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 24
+	damage = 12
 	wound_bonus = 35
 	bare_wound_bonus = 90
 	wound_falloff_tile = -15.5
@@ -56,11 +56,11 @@
 		qdel(src)
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised
-	wound_bonus = 8
+	wound_bonus = 4
 	bare_wound_bonus = 90
 	wound_falloff_tile = -15.5
-	tile_dropoff = 2
-	tile_dropoff_s = 2
+	tile_dropoff = 1
+	tile_dropoff_s = 1
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()

@@ -90,7 +90,7 @@ Station Engineer
 	l_pocket = /obj/item/pda/engineering
 	ears = /obj/item/radio/headset/headset_eng
 //	uniform = /obj/item/clothing/under/rank/engineer
-	shoes = /obj/item/clothing/shoes/workboots
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = /obj/item/clothing/head/hardhat
 	r_pocket = /obj/item/t_scanner
 

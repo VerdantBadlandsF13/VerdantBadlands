@@ -141,7 +141,8 @@
 
 /obj/item/gun/ballistic/rifle/hunting
 	name = "hunting rifle"
-	desc = "A sturdy hunting rifle, chambered in .308."
+	desc = "A sturdy hunting rifle, chambered in .308. <br>\
+	Made some point after the Great War, it's a well crafted firearm."
 	icon_state = "308"
 	item_state = "308"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting

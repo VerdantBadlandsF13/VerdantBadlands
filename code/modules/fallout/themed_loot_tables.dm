@@ -86,17 +86,5 @@
 		/obj/item/handsaw,
 		/obj/item/weldingtool/crude,
 		/obj/item/weldingtool/basic,
-		)
-
-/obj/effect/spawner/lootdrop/f13/toolsgood
-	name = "toolspawner good"
-	loot = list(
-		/obj/item/screwdriver,
-		/obj/item/crowbar,
-		/obj/item/extinguisher,
-		/obj/item/pickaxe/mini,
-		/obj/item/wrench,
-		/obj/item/weldingtool,
-		/obj/item/weldingtool/mini,
-		/obj/item/multitool,
+		/obj/item/multitool/basic,
 		)

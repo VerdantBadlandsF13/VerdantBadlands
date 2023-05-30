@@ -107,14 +107,6 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
-/datum/design/board/autoylathe
-	name = "Machine Design (Autoylathe)"
-	desc = "The circuit board for an autoylathe."
-	id = "autoylathe"
-	build_path = /obj/item/circuitboard/machine/autolathe/toy
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
-	category = list("Misc. Machinery")
-
 /datum/design/board/hypnochair
 	name = "Machine Design (Enhanced Interrogation Chamber)"
 	desc = "Allows for the construction of circuit boards used to build an Enhanced Interrogation Chamber."

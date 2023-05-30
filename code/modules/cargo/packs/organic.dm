@@ -194,8 +194,7 @@
 	name = "Fiesta Crate"
 	desc = "Spice up the kitchen with this fiesta themed food order! Contains 8 tortilla based food items, as well as a sombrero, moustache, and cloak!"
 	cost = 2750
-	contains = list(/obj/item/clothing/head/sombrero,
-					/obj/item/clothing/suit/hooded/cloak/david,
+	contains = list(/obj/item/clothing/suit/hooded/cloak/david,
 					/obj/item/clothing/mask/fakemoustache,
 					/obj/item/reagent_containers/food/snacks/taco,
 					/obj/item/reagent_containers/food/snacks/taco,

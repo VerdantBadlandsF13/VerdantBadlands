@@ -77,9 +77,6 @@
 
 // Secretary spawns with all 3 types of money for negotatiating with any side. ~325 caps worth
 /obj/item/storage/box/funds/PopulateContents()
-		new /obj/item/stack/f13Cash/random/ncr/med(src)
-		new /obj/item/stack/f13Cash/random/denarius/med(src)
-		new /obj/item/stack/f13Cash/random/ncr/med(src)
 		new /obj/item/stack/f13Cash/random/high(src)
 
 /obj/item/storage/box/lawyer
@@ -117,7 +114,6 @@
 	new /obj/item/suppressor(src)
 	new /obj/item/clothing/under/suit/black(src)
 	new /obj/item/clothing/accessory/waistcoat(src)
-	new /obj/item/clothing/suit/toggle/lawyer/black/syndie(src)
 
 /obj/item/storage/briefcase/medical
 	name = "medical briefcase"

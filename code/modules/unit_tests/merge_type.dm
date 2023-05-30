@@ -13,7 +13,7 @@
 							  /obj/item/stack/f13Cash/random/low,
 							  /obj/item/stack/f13Cash/random/med,
 							  /obj/item/stack/f13Cash/random/high,
-							  /obj/item/stack/f13Cash/random/banker,
+							  /obj/item/stack/f13Cash/random/vault,
 							  /obj/item/stack/f13Cash/random)
 
 	var/list/paths = subtypesof(/obj/item/stack) - blacklist

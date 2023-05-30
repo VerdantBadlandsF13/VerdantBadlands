@@ -39,7 +39,6 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 
 GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	new/datum/stack_recipe("gondola mask", /obj/item/clothing/mask/gondola, 1), \
-	new/datum/stack_recipe("gondola suit", /obj/item/clothing/under/costume/gondola, 2), \
 	new/datum/stack_recipe("gondola bedsheet", /obj/item/bedsheet/gondola, 1), \
 	))
 
@@ -80,7 +79,6 @@ GLOBAL_LIST_INIT(corgi_recipes, list ( \
 
 GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	new/datum/stack_recipe("monkey mask", /obj/item/clothing/mask/gas/monkeymask, 1), \
-	new/datum/stack_recipe("monkey suit", /obj/item/clothing/suit/monkeysuit, 2), \
 	))
 
 /obj/item/stack/sheet/animalhide/monkey/get_main_recipes()
@@ -102,15 +100,6 @@ GLOBAL_LIST_INIT(monkey_recipes, list ( \
 	icon_state = "sheet-xeno"
 	item_state = "sheet-xeno"
 	merge_type = /obj/item/stack/sheet/animalhide/xeno
-
-GLOBAL_LIST_INIT(xeno_recipes, list ( \
-	new/datum/stack_recipe("alien helmet", /obj/item/clothing/head/xenos, 1), \
-	new/datum/stack_recipe("alien suit", /obj/item/clothing/suit/xenos, 2), \
-	))
-
-/obj/item/stack/sheet/animalhide/xeno/get_main_recipes()
-	. = ..()
-	. += GLOB.xeno_recipes
 
 //don't see anywhere else to put these, maybe together they could be used to make the xenos suit?
 /obj/item/stack/sheet/xenochitin
@@ -171,7 +160,6 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	new/datum/stack_recipe("leather satchel", /obj/item/storage/backpack/satchel/leather, 5), \
 	new/datum/stack_recipe("wallet", /obj/item/storage/wallet, 1), \
 	new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/jacket/leather, 7), \
-	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2), \
 	new/datum/stack_recipe("leather overcoat", /obj/item/clothing/suit/jacket/leather/overcoat, 10), \
 ))
 

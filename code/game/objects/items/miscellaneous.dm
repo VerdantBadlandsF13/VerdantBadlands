@@ -97,10 +97,8 @@
 	name = "Courageous Tomb Raider - 1940's."
 
 /obj/item/storage/box/hero/PopulateContents()
-	new /obj/item/clothing/head/fedora/curator(src)
-	new /obj/item/clothing/suit/curator(src)
-	new /obj/item/clothing/under/rank/civilian/curator/treasure_hunter(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/head/fedora(src)
+	new /obj/item/clothing/shoes/f13/military(src)
 
 /obj/item/storage/box/hero/astronaut
 	name = "First Man on the Moon - 1960's."

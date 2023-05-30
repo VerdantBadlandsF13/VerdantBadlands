@@ -445,31 +445,3 @@
 	circuit = /obj/item/circuitboard/machine/autolathe/secure
 	stored_research = /datum/techweb/specialized/autounlocking/autolathe/public
 	base_print_speed = 20
-
-/obj/machinery/autolathe/toy
-	name = "autoylathe"
-	desc = "It produces toys using plastic, metal and glass."
-	circuit = /obj/item/circuitboard/machine/autolathe/toy
-
-	stored_research = /datum/techweb/specialized/autounlocking/autolathe/toy
-	categories = list(
-					"Toys",
-					"Figurines",
-					"Pistols",
-					"Rifles",
-					"Heavy",
-					"Melee",
-					"Armor",
-					"Adult",
-					"Misc",
-					"Imported"
-					)
-	allowed_materials = list(
-		/datum/material/iron,
-		/datum/material/glass,
-		/datum/material/plastic
-		)
-
-/obj/machinery/autolathe/toy/hacked/Initialize()
-	. = ..()
-	adjust_hacked(TRUE)

@@ -67,6 +67,17 @@
 	wound_bonus = 24
 	bare_wound_bonus = -20
 
+////////////////
+//   .50 AE   //
+////////////////
+
+/obj/item/projectile/bullet/m50
+	name = ".50 AE bullet"
+	damage = 32
+	wound_bonus = 24
+	bare_wound_bonus = 24
+	armour_penetration = 0.8
+
 ////////////
 // .45-70 //
 ////////////

@@ -30,9 +30,8 @@
 
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
-	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/f13/raider/iconoclast
-	shoes = /obj/item/clothing/shoes/f13/explorer
+	uniform = /obj/item/clothing/under/pants/f13/rag
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/leather
 	head = /obj/item/clothing/head/helmet/f13/firefighter
 
@@ -126,7 +125,7 @@
 	health = 170
 	extra_projectiles = 3
 	projectiletype = /obj/item/projectile/bullet/c45
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/f13/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/under/f13/raiderharness)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/Aggro()
@@ -143,7 +142,7 @@
 	health = 180
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/suit/armor/f13/metalarmor/reinforced, /obj/item/clothing/head/helmet/f13/metalmask/mk2)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 // FIREFIGHTER RAIDER
@@ -165,13 +164,12 @@
 	health = 200
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /obj/effect/mob_spawn/human/corpse/raider/ranged/biker
-	uniform = /obj/item/clothing/under/f13/ncrcf
-	suit = /obj/item/clothing/suit/armor/f13/combatrusted
-	shoes = /obj/item/clothing/shoes/f13/explorer
+	uniform = /obj/item/clothing/under/f13/raiderharness
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	head = /obj/item/clothing/head/helmet/f13/raidercombathelmet
 	neck = /obj/item/clothing/neck/mantle/brown
@@ -195,8 +193,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
 	uniform = /obj/item/clothing/under/f13/mechanic
-	suit = /obj/item/clothing/suit/armor/f13/raider/yankee
-	shoes = /obj/item/clothing/shoes/f13/explorer
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
 
@@ -214,10 +211,8 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
 	uniform = /obj/item/clothing/under/f13/raiderrags
-	suit = /obj/item/clothing/suit/armor/f13/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
 	mask = /obj/item/clothing/mask/facewrap
-	head = /obj/item/clothing/head/helmet/f13/fiend
 
 
 //////////////
@@ -333,7 +328,7 @@
 	extra_projectiles = 5
 	projectiletype = /obj/item/projectile/bullet/c45/basketball
 	projectilesound = 'sound/block_parry/block_wood1.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/f13/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/under/f13/raiderharness)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/ranged/hooperboss/Aggro()

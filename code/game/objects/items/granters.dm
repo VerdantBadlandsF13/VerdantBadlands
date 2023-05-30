@@ -567,7 +567,7 @@
 
 /obj/item/book/granter/crafting_recipe/gunsmith_one
 	name = "Guns and Bullets, Part One"
-	desc = "A rare issue of Guns and Bullets following up Part 2, explaining difficult ballistics theory and weapon mechanics, allowing the reader to craft weapon attachments. It's barely holding up, and looks like only one person can study the knowledge from it."
+	desc = "..."
 	icon_state = "gab1"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
@@ -575,7 +575,7 @@
 
 /obj/item/book/granter/crafting_recipe/gunsmith_two
 	name = "Guns and Bullets, Part Two"
-	desc = "An extremely rare issue of Guns and Bullets, showing some design flaws of weapons and how to rectify them. It's barely holding up, and looks like only one person can study the knowledge from it."
+	desc = "..."
 	icon_state = "gab2"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
@@ -671,7 +671,7 @@
 	oneuse = TRUE
 	granted_trait = TRAIT_TECHNOPHREAK
 	traitname = "craftsmanship"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalradio, /datum/crafting_recipe/durathread_vest)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalradio)
 	remarks = list("Troubleshooting is a systematic approach to problem solving, do not skip any steps in the process.", "Ensure you have all the required parts before you begin.", "Always wear personal protective equipment, electric shock can be fatal.", "Combustibles and sparks do not mix, store welding fuel in a safe location.", "Don't lose track of your tools, or you have a new problem to deal with.")
 
 /obj/item/book/granter/trait/wirevision
@@ -807,105 +807,3 @@
 /obj/item/book/granter/trait/selection/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-//TRIBAL BOOKS
-
-/obj/item/book/granter/trait/selection/tribal
-		name = "Book of Ancient Knowledge"
-		desc = "A compendium of knowledge passed down from the elders. It looks to be in poor condition."
-
-/obj/item/book/granter/trait/selection/tribal/attack_self(mob/user)
-	var/list/choices = list("Hit Them With Sticks","Pugilist","Padded Feet","Veteran Table Climber","Desert Affinity","Spiritual Mending")
-	if(granted_trait == null)
-		var/choice = input("Choose a trait:") in choices
-		switch(choice)
-			if(null)
-				return 0
-			if("Hit Them With Sticks")
-				granted_trait = TRAIT_BIG_LEAGUES
-				traitname = "fighting with melee weapons"
-			if("Pugilist")
-				granted_trait = TRAIT_IRONFIST
-				traitname = "using your fists"
-			if("Padded Feet")
-				granted_trait = TRAIT_LIGHT_STEP
-				traitname = "treading carefully"
-			if("Veteran Table Climber")
-				granted_trait = TRAIT_FREERUNNING
-				traitname = "....climbing tables"
-			if("Spiritual Mending")
-				granted_trait = TRAIT_SURGERY_LOW
-				traitname = "minor surgery"
-		return ..()
-
-/obj/item/book/granter/trait/selection/tribal/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-
-/obj/item/book/granter/crafting_recipe/tribal
-	name = "Tribal traditions"
-	desc = "A book of traditions passed down through generations within the tribe."
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
-
-/obj/item/book/granter/crafting_recipe/tribal/whitelegs
-	name = "White Legs traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb,
-								/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
-
-/obj/item/book/granter/crafting_recipe/tribal/deadhorses
-	name = "Dead Horses traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/deadhorses/lightarmour, /datum/crafting_recipe/tribalwar/deadhorses/armour, /datum/crafting_recipe/tribalwar/deadhorses/garb,
-								/datum/crafting_recipe/tribalwar/deadhorses/femalegarb, /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour)
-
-/obj/item/book/granter/crafting_recipe/tribal/rustwalkers
-	name = "Rustwalkers traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/garb,
-								/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb, /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour)
-
-/obj/item/book/granter/crafting_recipe/tribal/eighties
-	name = "Eighties traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/eighties/armour, /datum/crafting_recipe/tribalwar/eighties/garb,
-								/datum/crafting_recipe/tribalwar/eighties/femalegarb, /datum/crafting_recipe/tribalwar/eighties/heavyarmour)
-
-/obj/item/book/granter/crafting_recipe/tribal/sorrows
-	name = "Sorrows traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/armour, /datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb,
-								/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
-
-/obj/item/book/granter/crafting_recipe/tribal/wayfarer
-	name = "Wayfarer traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
-
-/obj/item/book/granter/crafting_recipe/tribal/bone
-	name = "Bone Dancer traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/bone/lightarmour,/datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour,
-								/datum/crafting_recipe/tribalwar/bone/garb,/datum/crafting_recipe/tribalwar/bone/helmet)
-
-/obj/item/book/granter/crafting_recipe/tribal/all
-	name = "Lost traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/lighttribe, /datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace,
-	/datum/crafting_recipe/tribalwar/bone/lightarmour,/datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour,
-								/datum/crafting_recipe/tribalwar/bone/garb,/datum/crafting_recipe/tribalwar/bone/helmet,
-								/datum/crafting_recipe/tribalwar/sorrows/armour, /datum/crafting_recipe/tribalwar/sorrows/garb,
-								/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
-								/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet,
-								/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/eighties/armour,
-								/datum/crafting_recipe/tribalwar/eighties/garb,
-								/datum/crafting_recipe/tribalwar/eighties/femalegarb, /datum/crafting_recipe/tribalwar/eighties/heavyarmour,
-								/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/garb,
-								/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb, /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour,
-								/datum/crafting_recipe/tribalwar/deadhorses/lightarmour, /datum/crafting_recipe/tribalwar/deadhorses/armour,
-								/datum/crafting_recipe/tribalwar/deadhorses/garb,
-								/datum/crafting_recipe/tribalwar/deadhorses/femalegarb, /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour,
-								/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour,
-								/datum/crafting_recipe/tribalwar/whitelegs/garb,
-								/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour
-								)
-
-/obj/item/book/granter/trait/bibledog
-	name = "Burned book"
-	desc = "This book doesn't seem very useful."
-	oneuse = TRUE
-	granted_trait = TRAIT_HOLY
-	traitname = "holy"
-	remarks = list("You already know everything")

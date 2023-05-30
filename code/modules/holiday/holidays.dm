@@ -324,22 +324,10 @@
 /datum/holiday/animal/getStationPrefix()
 	return pick("Parrot","Corgi","Cat","Pug","Goat","Fox")
 
-/datum/holiday/smile
-	name = "Smiling Day"
-	begin_day = 7
-	begin_month = OCTOBER
-	drone_hat = /obj/item/clothing/head/papersack/smiley
-
 /datum/holiday/comingoutday
 	name = "Coming Out Day"
 	begin_day = 11
 	begin_month = OCTOBER
-
-/datum/holiday/boss
-	name = "Boss' Day"
-	begin_day = 16
-	begin_month = OCTOBER
-	drone_hat = /obj/item/clothing/head/that
 
 /datum/holiday/intersexawareness
 	name = "Intersex Awareness Day"
@@ -423,13 +411,6 @@
 	begin_day = 14
 	begin_month = DECEMBER
 	drone_hat = /obj/item/clothing/mask/gas/monkeymask
-
-/datum/holiday/thanksgiving
-	name = "Thanksgiving in the United States"
-	begin_week = 4
-	begin_month = NOVEMBER
-	begin_weekday = THURSDAY
-	drone_hat = /obj/item/clothing/head/that //This is the closest we can get to a pilgrim's hat
 
 /datum/holiday/thanksgiving/canada
 	name = "Thanksgiving in Canada"

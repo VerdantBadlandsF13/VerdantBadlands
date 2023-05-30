@@ -302,7 +302,7 @@
 /datum/outfit/butler
 	name = "Butler"
 	uniform = /obj/item/clothing/under/suit/black_really
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = /obj/item/clothing/head/bowler
 	glasses = /obj/item/clothing/glasses/monocle
 	gloves = /obj/item/clothing/gloves/color/white

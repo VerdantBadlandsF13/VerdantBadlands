@@ -26,6 +26,13 @@
 	caliber = ".45"
 	projectile_type = /obj/item/projectile/bullet/c45
 
+// .50 AE
+/obj/item/ammo_casing/m50
+	name = ".50 AE bullet casing"
+	desc = "A .50 AE bullet casing."
+	caliber = "50ae"
+	projectile_type = /obj/item/projectile/bullet/m50
+
 // 14mm
 /obj/item/ammo_casing/p14mm
 	name = "14mm FMJ bullet casing"

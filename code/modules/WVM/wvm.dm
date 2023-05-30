@@ -539,52 +539,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("RadAway",						/obj/item/reagent_containers/blood/radaway,							30),
 		)
 
-/obj/machinery/mineral/wasteland_vendor/khanchem
-	name = "P.A.P.A"
-	icon_state = "khan_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Jet",							/obj/item/reagent_containers/pill/patch/jet,						30),
-		new /datum/data/wasteland_equipment("Psycho",						/obj/item/reagent_containers/hypospray/medipen/psycho,				30),
-		new /datum/data/wasteland_equipment("Turbo",						/obj/item/reagent_containers/pill/patch/turbo,						30),
-		new /datum/data/wasteland_equipment("Mentats",						/obj/item/storage/pill_bottle/chem_tin/mentats,						30),
-		new /datum/data/wasteland_equipment("Buffout",						/obj/item/storage/pill_bottle/chem_tin/buffout,						30),
-		new /datum/data/wasteland_equipment("Med-X",						/obj/item/reagent_containers/hypospray/medipen/medx,				80),
-		new /datum/data/wasteland_equipment("Fixer",						/obj/item/storage/pill_bottle/chem_tin/fixer,						90),
-		new /datum/data/wasteland_equipment("Great Khan helmet",			/obj/item/clothing/head/helmet/f13/khan,							20),
-		new /datum/data/wasteland_equipment("Great Khan bandana",			/obj/item/clothing/head/helmet/f13/khan/bandana,					20),
-		new /datum/data/wasteland_equipment("Great Khan fur-trimmed helmet",	/obj/item/clothing/head/helmet/f13/khan/pelt,					20),
-		new /datum/data/wasteland_equipment("Great Khan full helmet",		/obj/item/clothing/head/helmet/f13/khan/fullhelm,					100),
-		new /datum/data/wasteland_equipment("Great Khan battlecoat",		/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat,		300),
-		new /datum/data/wasteland_equipment("Great Khan armored jacket",	/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored,		100),
-		new /datum/data/wasteland_equipment("Great Khan jacket",			/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket,				50),
-		new /datum/data/wasteland_equipment("Great Khan uniform",			/obj/item/clothing/under/f13/khan,									10),
-		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
-		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
-		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
-		)
-	highpop_list = list(
-		new /datum/data/wasteland_equipment("Jet",							/obj/item/reagent_containers/pill/patch/jet,						30),
-		new /datum/data/wasteland_equipment("Psycho",						/obj/item/reagent_containers/hypospray/medipen/psycho,				30),
-		new /datum/data/wasteland_equipment("Turbo",						/obj/item/reagent_containers/pill/patch/turbo,						30),
-		new /datum/data/wasteland_equipment("Mentats",						/obj/item/storage/pill_bottle/chem_tin/mentats,						30),
-		new /datum/data/wasteland_equipment("Buffout",						/obj/item/storage/pill_bottle/chem_tin/buffout,						30),
-		new /datum/data/wasteland_equipment("Med-X",						/obj/item/reagent_containers/hypospray/medipen/medx,				80),
-		new /datum/data/wasteland_equipment("Fixer",						/obj/item/storage/pill_bottle/chem_tin/fixer,						90),
-		new /datum/data/wasteland_equipment("Great Khan helmet",			/obj/item/clothing/head/helmet/f13/khan,							20),
-		new /datum/data/wasteland_equipment("Great Khan bandana",			/obj/item/clothing/head/helmet/f13/khan/bandana,					20),
-		new /datum/data/wasteland_equipment("Great Khan fur-trimmed helmet",	/obj/item/clothing/head/helmet/f13/khan/pelt,					20),
-		new /datum/data/wasteland_equipment("Great Khan full helmet",		/obj/item/clothing/head/helmet/f13/khan/fullhelm,					100),
-		new /datum/data/wasteland_equipment("Great Khan battlecoat",		/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/coat,		300),
-		new /datum/data/wasteland_equipment("Great Khan armored jacket",	/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket/armored,		100),
-		new /datum/data/wasteland_equipment("Great Khan jacket",			/obj/item/clothing/suit/toggle/labcoat/f13/khan_jacket,				50),
-		new /datum/data/wasteland_equipment("Great Khan uniform",			/obj/item/clothing/under/f13/khan,									10),
-		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
-		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
-		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
-		)
-
 /obj/machinery/mineral/wasteland_vendor/denchem
 	name = "Chem Dispenser"
 	icon_state = "med_idle"
@@ -702,26 +656,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Explosives Crafting Guide",	/obj/item/book/granter/trait/explosives,							600),
 		new /datum/data/wasteland_equipment("Advanced Explosives Crafting Guide",	/obj/item/book/granter/trait/explosives_advanced,			2000),
 	)
-
-/obj/machinery/mineral/wasteland_vendor/clothing
-	name = "Wasteland Vending Machine - Clothing"
-	icon_state = "armor_idle"
-	prize_list = list(
-		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								15),
-		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							30),
-		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							40),
-		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							80),
-		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							250),
-		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							600)
-		)
-	highpop_list = list(
-		new /datum/data/wasteland_equipment("Worn outft",						/obj/item/clothing/under/f13/worn,								15),
-		new /datum/data/wasteland_equipment("Settler outfit",					/obj/item/clothing/under/f13/settler,							30),
-		new /datum/data/wasteland_equipment("Merchant outfit",					/obj/item/clothing/under/f13/merchant,							40),
-		new /datum/data/wasteland_equipment("Followers outfit",					/obj/item/clothing/under/f13/followers,							80),
-		new /datum/data/wasteland_equipment("Combat uniform",					/obj/item/clothing/under/f13/combat,							250),
-		new /datum/data/wasteland_equipment("Ranger's Guide to the Wasteland",	/obj/item/book/granter/trait/trekking,							600)
-		)
 
 /obj/machinery/mineral/wasteland_vendor/general
 	name = "Wasteland Vending Machine - General"
@@ -990,24 +924,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
 		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
 		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/f13Cash/ncr))
-		var/obj/item/stack/f13Cash/ncr/currency = I
-		var/inserted_value = FLOOR(currency.amount * 0.4, 1)
-		stored_caps += inserted_value
-		I.use(currency.amount)
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/f13Cash/denarius))
-		var/obj/item/stack/f13Cash/denarius/currency = I
-		var/inserted_value = FLOOR(currency.amount * 4, 1)
-		stored_caps += inserted_value
-		I.use(currency.amount)
-		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You put [inserted_value] bottle caps value to a vending machine.")
-		src.ui_interact(usr)
-	else if(istype(I, /obj/item/stack/f13Cash/aureus))
-		var/obj/item/stack/f13Cash/aureus/currency = I
+	else if(istype(I, /obj/item/stack/f13Cash/vault))
+		var/obj/item/stack/f13Cash/vault/currency = I
 		var/inserted_value = FLOOR(currency.amount * 100, 1)
 		stored_caps += inserted_value
 		I.use(currency.amount)

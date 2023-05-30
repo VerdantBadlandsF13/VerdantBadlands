@@ -407,15 +407,9 @@
 
 /datum/techweb/specialized/autounlocking/autolathe
 	design_autounlock_buildtypes = AUTOLATHE
-	allowed_buildtypes = AUTOLATHE|TOYLATHE|AMMOLATHE
+	allowed_buildtypes = AUTOLATHE|AMMOLATHE
 
 /datum/techweb/specialized/autounlocking/autolathe/public
-	design_autounlock_skip_types = NO_PUBLIC_LATHE
-
-/datum/techweb/specialized/autounlocking/autolathe/toy
-	design_autounlock_buildtypes = TOYLATHE
-
-/datum/techweb/specialized/autounlocking/autolathe/toy/public
 	design_autounlock_skip_types = NO_PUBLIC_LATHE
 
 /datum/techweb/specialized/autounlocking/limbgrower

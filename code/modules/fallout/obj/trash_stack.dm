@@ -42,7 +42,7 @@
 				var/obj/item/item = new itemtype(ST)
 				//if (prob(10+(user.special_l*3.5)))//SPECIAL Integration
 				//	to_chat(user, "<span class='notice'>You get lucky and find even more loot!</span>")
-				//	var/obj/item/bonusitem = new itemtypebonus(ST)				
+				//	var/obj/item/bonusitem = new itemtypebonus(ST)
 				//	if(istype(bonusitem))
 				//		bonusitem.from_trash = TRUE
 				if(istype(item))
@@ -63,11 +63,8 @@
 	var/list/paid_players = list()
 	var/list/pay = list(/obj/item/stack/f13Cash/random/med)
 
-/obj/item/storage/money_stack/ncr
-	pay = list(/obj/item/stack/f13Cash/random/ncr/med)
-
-/obj/item/storage/money_stack/legion
-	pay = list(/obj/item/stack/f13Cash/random/denarius/med)
+/obj/item/storage/money_stack/vault
+	pay = list(/obj/item/stack/f13Cash/random/vault)
 
 /obj/item/storage/money_stack/Initialize()
 	. = ..()

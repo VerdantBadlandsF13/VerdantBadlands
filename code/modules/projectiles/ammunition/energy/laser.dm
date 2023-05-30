@@ -25,7 +25,7 @@
 	fire_sound = 'sound/f13weapons/aep7fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/lasgun/recharger/pistol
-	projectile_type = /obj/item/projectile/beam/laser/lasgun/recharger/pistol
+	projectile_type = /obj/item/projectile/beam/laser/recharger/pistol
 	e_cost = 100 //20 shots
 	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
 
@@ -35,17 +35,17 @@
 	fire_sound = 'sound/f13weapons/WattzPistolFire.ogg'
 
 /obj/item/ammo_casing/energy/laser/lasgun
-	projectile_type = /obj/item/projectile/beam/laser/lasgun
+	projectile_type = /obj/item/projectile/beam/laser
 	e_cost = 80 //25 shots
 
 /obj/item/ammo_casing/energy/laser/lasgun/recharger
-	projectile_type = /obj/item/projectile/beam/laser/lasgun/recharger
+	projectile_type = /obj/item/projectile/beam/laser/recharger
 	e_cost = 200 //10 shots
 	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
 
 /obj/item/ammo_casing/energy/laser/gatling
 	projectile_type = /obj/item/projectile/beam/laser/gatling
-	e_cost = 10
+	e_cost = 20
 	variance = 0.5
 	click_cooldown_override = 1
 
@@ -57,6 +57,6 @@
 //musket
 
 /obj/item/ammo_casing/energy/laser/musket
-	projectile_type = /obj/item/projectile/beam/laser/musket
+	projectile_type = /obj/item/projectile/beam/laser/wattz2k/musket
 	e_cost = 250
 	fire_sound = 'sound/weapons/laser3.ogg'

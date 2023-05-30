@@ -185,18 +185,6 @@
 
 // Minor lootdrops follow
 
-/obj/effect/spawner/lootdrop/minor/beret_or_rabbitears
-	name = "beret or rabbit ears spawner"
-	loot = list(
-		/obj/item/clothing/head/beret = 1,
-		/obj/item/clothing/head/rabbitears = 1)
-
-/obj/effect/spawner/lootdrop/minor/bowler_or_that
-	name = "bowler or top hat spawner"
-	loot = list(
-		/obj/item/clothing/head/bowler = 1,
-		/obj/item/clothing/head/that = 1)
-
 /obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears
 	name = "kitty ears or rabbit ears spawner"
 	loot = list(
@@ -507,7 +495,7 @@
 		/obj/item/firing_pin = 5,
 		/obj/item/grenade/empgrenade = 15,
 		/obj/item/clothing/gloves/tackler/combat/insulated = 10,
-		/obj/item/clothing/shoes/sneakers/noslip = 10
+		/obj/item/clothing/shoes/f13/rag = 10
 		)
 
 /obj/effect/spawner/lootdrop/low_tools

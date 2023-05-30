@@ -35,7 +35,6 @@
 /obj/structure/table,
 /obj/item/pen/fountain,
 /obj/item/pda/lawyer,
-/obj/item/clothing/accessory/lawyers_badge,
 /obj/item/storage/briefcase/lawyer,
 /obj/item/radio/intercom{
 	frequency = 1361;
@@ -58,7 +57,6 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
 /obj/item/storage/belt/military/assault,
-/obj/item/clothing/suit/armor/f13/combat/swat,
 /obj/item/clothing/mask/gas/sechailer/swat,
 /obj/item/clothing/head/helmet/f13/combat/swat,
 /obj/item/clothing/glasses/legiongoggles,
@@ -679,10 +677,6 @@
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/soda_cans,
 /turf/open/floor/f13/wood,
-/area/f13/vault)
-"aQm" = (
-/obj/machinery/vending/wardrobe/sec_wardrobe,
-/turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "aQG" = (
 /obj/effect/decal/remains/human,
@@ -2648,7 +2642,6 @@
 /obj/structure/closet,
 /obj/item/storage/box/gloves,
 /obj/item/storage/box/masks,
-/obj/item/clothing/suit/toggle/labcoat/f13/followers,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -3504,7 +3497,6 @@
 /area/f13/vault)
 "eoV" = (
 /obj/structure/closet,
-/obj/item/clothing/gloves/combat,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/military/army,
 /turf/open/floor/plasteel/barber{
@@ -3778,7 +3770,6 @@
 	},
 /area/f13/ahs)
 "eIF" = (
-/obj/structure/closet/wardrobe/cargotech,
 /obj/item/pda/quartermaster,
 /turf/open/floor/plasteel/yellow/side{
 	dir = 10
@@ -4486,12 +4477,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/vault)
-"fFi" = (
-/obj/machinery/vending/wardrobe/medi_wardrobe,
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault)
 "fFC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
@@ -4767,16 +4752,6 @@
 /obj/item/gun/ballistic/shotgun/trench,
 /turf/open/floor/carpet/black,
 /area/f13/vault)
-"fWU" = (
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/structure/rack,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/f13/ahs)
 "fXa" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/attachments,
@@ -4961,10 +4936,6 @@
 /obj/item/lighter/greyscale,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/tunnel)
-"geZ" = (
-/obj/item/flag/ncr,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "gfl" = (
 /obj/structure/destructible/tribal_torch/wall/lit,
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -5070,10 +5041,6 @@
 /obj/structure/bookcase,
 /turf/open/floor/f13/wood,
 /area/f13/vault)
-"gmu" = (
-/obj/item/clothing/suit/chaplain/holidaypriest,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "goX" = (
 /obj/structure/nest/protectron{
 	max_mobs = 1
@@ -5607,7 +5574,6 @@
 /area/f13/vault_elevator)
 "hca" = (
 /obj/structure/table,
-/obj/item/clothing/accessory/armband/med,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
 /turf/open/floor/plasteel/barber{
@@ -5675,8 +5641,6 @@
 /area/f13/ahs)
 "heQ" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/f13/power_armor/excavator,
-/obj/item/clothing/head/helmet/f13/power_armor/excavator,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault)
 "hgk" = (
@@ -6571,10 +6535,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
-"imZ" = (
-/obj/item/flag/legion,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
 "ini" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/neck/apron/chef,
@@ -6655,26 +6615,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/vault)
-"irL" = (
-/obj/structure/closet/cabinet{
-	name = "Vault 223 cabinet"
-	},
-/obj/item/clothing/under/f13/vault{
-	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
-	name = "vault 223 jumpsuit"
-	},
-/obj/item/clothing/under/f13/vault{
-	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
-	name = "vault 223 jumpsuit"
-	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
-/turf/open/floor/plasteel/f13{
-	icon_state = "floorgrime"
-	},
-/area/f13/ahs)
 "isz" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "NCR No Mans Land Entrance";
@@ -7040,7 +6980,6 @@
 "iOb" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/gloves/combat,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"
@@ -7695,12 +7634,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
-"jDP" = (
-/obj/machinery/vending/autodrobe,
-/turf/open/floor/plasteel/f13{
-	icon_state = "plating"
-	},
-/area/f13/ahs)
 "jDS" = (
 /turf/open/floor/plasteel/darkpurple/corner{
 	dir = 1
@@ -7835,10 +7768,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/vault)
-"jMQ" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/bunker)
 "jNS" = (
 /obj/structure/timeddoor,
 /turf/closed/indestructible/f13vaultrusted,
@@ -7957,10 +7886,6 @@
 	icon_state = "plating"
 	},
 /area/f13/ahs)
-"jTv" = (
-/obj/machinery/vending/wardrobe/science_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/vault)
 "jTJ" = (
 /obj/structure/curtain,
 /obj/structure/decoration/vent,
@@ -8222,10 +8147,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"knn" = (
-/obj/machinery/vending/wardrobe/hydro_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/green,
-/area/f13/vault)
 "knG" = (
 /obj/item/twohanded/required/kirbyplants/random,
 /obj/machinery/light{
@@ -8255,10 +8176,6 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/bunker)
-"koO" = (
-/obj/item/clothing/under/f13/rag,
-/turf/open/floor/plating,
 /area/f13/bunker)
 "kpc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8527,10 +8444,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
-"kEJ" = (
-/obj/item/flag/bos,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "kFI" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
@@ -9085,10 +8998,6 @@
 	icon_state = "plating"
 	},
 /area/f13/bunker)
-"llB" = (
-/obj/item/flag/ncr,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/ncr)
 "llI" = (
 /obj/structure/chair/stool/retro/tan,
 /obj/machinery/light/small/broken{
@@ -9325,8 +9234,6 @@
 /area/f13/caves)
 "lBB" = (
 /obj/structure/rack,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
 /turf/open/floor/plasteel/f13{
 	icon_state = "plating"
 	},
@@ -10590,15 +10497,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
-"ngX" = (
-/obj/structure/closet,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/shoes/combat,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "nha" = (
 /obj/structure/chair/right,
 /obj/item/reagent_containers/food/snacks/burger/superbite,
@@ -10644,7 +10542,6 @@
 	},
 /area/f13/wasteland)
 "nik" = (
-/obj/item/clothing/suit/toggle/lawyer,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -11368,10 +11265,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/f13/city)
-"nZK" = (
-/obj/effect/spawner/lootdrop/minor/bowler_or_that,
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/vault)
 "oaj" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/tunnel)
@@ -11524,8 +11417,6 @@
 /obj/structure/closet/cabinet{
 	name = "Vault 223 cabinet"
 	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
 /obj/item/clothing/under/f13/vault{
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
@@ -11534,8 +11425,6 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
 	},
@@ -11543,7 +11432,6 @@
 "oky" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/vault,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
 /obj/item/storage/belt/security,
 /obj/item/assembly/flash/handheld,
@@ -11551,7 +11439,6 @@
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/flashlight/seclite,
@@ -11568,7 +11455,6 @@
 /area/f13/ahs)
 "okG" = (
 /obj/item/flashlight/seclite,
-/obj/item/clothing/head/ushanka,
 /obj/structure/closet{
 	desc = "This stores guns for russian security,da ?";
 	icon_state = "syndicate";
@@ -11580,7 +11466,6 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /turf/open/floor/plasteel/f13{
 	icon_state = "redrustyfull"
@@ -11960,11 +11845,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/vault)
-"oGK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/emcloset,
-/turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2,
-/area/f13/bunker)
 "oGO" = (
 /obj/structure/rack,
 /obj/item/clothing/gloves/color/fyellow,
@@ -12297,7 +12177,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2,
 /area/f13/bunker)
 "oZp" = (
-/obj/machinery/vending/wardrobe/cargo_wardrobe,
 /obj/machinery/status_display/supply{
 	pixel_y = 32
 	},
@@ -13306,10 +13185,6 @@
 /obj/item/paper_bin,
 /turf/open/floor/f13/wood,
 /area/f13/city)
-"qfT" = (
-/obj/machinery/vending/wardrobe/chem_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault)
 "qfY" = (
 /obj/item/clothing/head/helmet/f13/raidermetal,
 /turf/open/floor/plating/tunnel{
@@ -13597,7 +13472,6 @@
 "qyz" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/shoes/combat,
-/obj/item/clothing/gloves/combat,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "qyB" = (
@@ -13677,10 +13551,6 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault)
-"qCH" = (
-/obj/machinery/vending/wardrobe/jani_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/vault)
 "qCS" = (
 /mob/living/simple_animal/hostile/raider/firefighter,
@@ -13845,7 +13715,6 @@
 /obj/structure/table,
 /obj/item/clothing/head/soft/black,
 /obj/item/clothing/under/color/black,
-/obj/item/clothing/shoes/wheelys,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault)
 "qPi" = (
@@ -13922,15 +13791,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
-"qSS" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/clothing/under/f13/rag,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "qTv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
@@ -14012,12 +13872,6 @@
 /obj/structure/closet/secure_closet/goodies,
 /turf/open/floor/plasteel/f13/vault_floor/green/white/whitegreenchess,
 /area/f13/bunker)
-"qXZ" = (
-/obj/machinery/vending/wardrobe/science_wardrobe,
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault)
 "qYP" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain1"
@@ -14154,13 +14008,9 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
 /obj/structure/closet/cabinet{
 	name = "Vault 223 cabinet"
 	},
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
 	},
@@ -14425,10 +14275,6 @@
 	dir = 1
 	},
 /area/f13/vault)
-"rDW" = (
-/obj/machinery/vending/wardrobe/engi_wardrobe,
-/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
-/area/f13/vault)
 "rEh" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor{
@@ -14495,7 +14341,6 @@
 	},
 /obj/structure/rack,
 /obj/item/clothing/under/f13/vault,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
 /obj/item/storage/belt/security,
 /obj/item/assembly/flash/handheld,
@@ -14503,7 +14348,6 @@
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/flashlight/seclite,
@@ -15176,7 +15020,6 @@
 	},
 /area/f13/wasteland)
 "sBJ" = (
-/obj/structure/closet/radiation,
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowrustyfull"
@@ -15475,13 +15318,6 @@
 	icon_state = "yellowrustyfull"
 	},
 /area/f13/ahs)
-"sZx" = (
-/obj/item/clothing/under/f13/rag,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "tad" = (
 /obj/structure/wreck/bus/rusted,
 /turf/open/indestructible/ground/outside/desert,
@@ -15596,7 +15432,6 @@
 /area/f13/bunker)
 "tgh" = (
 /obj/structure/table,
-/obj/item/clothing/head/hardhat/cakehat,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/vault)
 "tgX" = (
@@ -16529,7 +16364,6 @@
 /obj/machinery/camera/autoname,
 /obj/structure/rack,
 /obj/item/clothing/under/f13/vault,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
 /obj/item/storage/belt/security,
 /obj/item/assembly/flash/handheld,
@@ -16537,7 +16371,6 @@
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/flashlight/seclite,
@@ -16583,10 +16416,6 @@
 	icon_state = "tunnelchess"
 	},
 /area/f13/bunker)
-"usv" = (
-/obj/machinery/vending/wardrobe/law_wardrobe,
-/turf/open/floor/f13/wood,
-/area/f13/vault)
 "utD" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/sheet/mineral/uranium{
@@ -16744,7 +16573,6 @@
 "uBQ" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/vault,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
 /obj/item/storage/belt/security,
 /obj/item/assembly/flash/handheld,
@@ -16752,7 +16580,6 @@
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
 /obj/item/ammo_box/magazine/m10mm_adv/simple,
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /obj/item/clothing/glasses/sunglasses,
 /obj/effect/spawner/lootdrop/armory_contraband,
@@ -18568,12 +18395,6 @@
 /obj/structure/window/reinforced/spawner,
 /turf/open/floor/plasteel/freezer,
 /area/f13/ahs)
-"wLd" = (
-/obj/structure/closet/radiation,
-/turf/open/floor/plasteel/f13{
-	icon_state = "yellowrustyfull"
-	},
-/area/f13/ahs)
 "wLo" = (
 /obj/machinery/door/airlock/maintenance/abandoned,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
@@ -18818,10 +18639,6 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
 	},
@@ -19125,10 +18942,6 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/head/ushanka,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
 /turf/open/floor/plasteel/f13{
 	icon_state = "floorgrime"
 	},
@@ -19303,14 +19116,6 @@
 	icon_state = "showroomfloor"
 	},
 /area/f13/ahs)
-"xFU" = (
-/obj/structure/table,
-/obj/item/clothing/suit/toggle/labcoat/f13/followers,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "xGJ" = (
 /obj/structure/table,
 /obj/item/paper,
@@ -19558,7 +19363,6 @@
 /area/f13/tunnel)
 "ydW" = (
 /obj/item/flashlight/seclite,
-/obj/item/clothing/head/ushanka,
 /obj/structure/closet{
 	desc = "This stores guns for russian security,da ?";
 	icon_state = "syndicate";
@@ -19569,7 +19373,6 @@
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 223 printed on it.";
 	name = "vault 223 jumpsuit"
 	},
-/obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/head/helmet/riot/vaultsec,
 /turf/open/floor/plasteel/f13{
 	icon_state = "redrustyfull"
@@ -19622,10 +19425,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/bunker)
-"yhW" = (
-/obj/effect/spawner/lootdrop/minor/beret_or_rabbitears,
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/vault)
 "yia" = (
 /obj/structure/spider/stickyweb,
 /turf/closed/mineral/random/low_chance,
@@ -19669,7 +19468,6 @@
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
 	},
-/obj/machinery/vending/wardrobe/chef_wardrobe,
 /turf/open/floor/plasteel/showroomfloor,
 /area/f13/vault)
 "ylK" = (
@@ -22664,12 +22462,12 @@ dhw
 dhw
 dhw
 lQY
-llB
+lQY
 oUE
 isz
 isz
 oUE
-geZ
+akh
 akh
 akh
 akh
@@ -22929,7 +22727,7 @@ pUB
 kMR
 kMR
 pUB
-geZ
+akh
 akh
 akh
 nph
@@ -23828,7 +23626,7 @@ shC
 shC
 oqm
 jCj
-koO
+twi
 bRw
 twi
 oqm
@@ -25242,7 +25040,7 @@ pUB
 kMR
 kMR
 pUB
-geZ
+akh
 akh
 akh
 nph
@@ -25491,7 +25289,7 @@ dhw
 dhw
 dhw
 lQY
-llB
+lQY
 oUE
 isz
 isz
@@ -25626,7 +25424,7 @@ kVk
 aBb
 oqm
 kVk
-qSS
+anv
 oqm
 kVk
 cdE
@@ -25940,7 +25738,7 @@ cgT
 bVS
 uQS
 uQS
-nZK
+sCn
 sCn
 sCn
 wEI
@@ -26205,7 +26003,7 @@ uQS
 uQS
 uQS
 djN
-yhW
+sCn
 uQS
 uQS
 uQS
@@ -26642,9 +26440,9 @@ smS
 gKm
 sor
 oqm
-ngX
+iOb
 kVk
-ngX
+iOb
 oqm
 ukL
 kVk
@@ -26723,7 +26521,7 @@ nbm
 uQS
 vMI
 lcN
-qXZ
+uQS
 uQS
 vaD
 hrZ
@@ -27749,7 +27547,7 @@ nDB
 uQS
 djN
 uQS
-jTv
+lcN
 xJQ
 wpc
 uDM
@@ -28437,7 +28235,7 @@ shC
 oqm
 kVk
 uuZ
-sZx
+kVk
 smS
 rxL
 oqm
@@ -28445,7 +28243,7 @@ aBy
 gDP
 kVk
 oqm
-sZx
+kVk
 kVk
 hyK
 oqm
@@ -30295,7 +30093,7 @@ tit
 tit
 eQG
 uQS
-usv
+jfd
 nik
 agO
 uQS
@@ -34387,7 +34185,7 @@ hrZ
 vaD
 uQS
 uQS
-knn
+wCF
 wNk
 wCF
 vrF
@@ -34686,7 +34484,7 @@ uQS
 sCn
 sCn
 uQS
-fFi
+uQS
 hAL
 bks
 uQS
@@ -36207,7 +36005,7 @@ kCP
 olN
 uQS
 uQS
-qCH
+hIC
 hIC
 mlU
 uQS
@@ -36745,7 +36543,7 @@ hAL
 bks
 uCF
 aWX
-qfT
+xIt
 uQS
 uQS
 uQS
@@ -37507,7 +37305,7 @@ uTA
 nPG
 xnX
 uQS
-aQm
+czW
 fRd
 uQS
 sCn
@@ -39034,7 +38832,7 @@ uQS
 uQS
 uQS
 uQS
-rDW
+emn
 fFW
 xvb
 uQS
@@ -40997,12 +40795,12 @@ lyn
 akh
 akh
 akh
-imZ
+akh
 tCu
 orZ
 orZ
 tCu
-imZ
+akh
 akh
 wWG
 wWG
@@ -41251,7 +41049,7 @@ uRL
 akh
 akh
 lyn
-imZ
+akh
 vXs
 uUC
 uUC
@@ -43564,7 +43362,7 @@ uRL
 akh
 akh
 lyn
-imZ
+akh
 vXs
 uUC
 uUC
@@ -43824,12 +43622,12 @@ lyn
 akh
 akh
 akh
-imZ
+akh
 tCu
 orZ
 orZ
 tCu
-imZ
+akh
 akh
 wWG
 wWG
@@ -44314,9 +44112,9 @@ aTA
 aTA
 aTA
 opi
-kEJ
 wgF
-kEJ
+wgF
+wgF
 opi
 bVH
 bVH
@@ -56221,7 +56019,7 @@ igE
 mys
 gbj
 wyQ
-jMQ
+jZk
 oqm
 qEi
 sor
@@ -59286,8 +59084,8 @@ mfQ
 vqM
 jZk
 jZk
-jMQ
-jMQ
+jZk
+jZk
 oqm
 xmP
 aOJ
@@ -61616,7 +61414,7 @@ oqm
 nNn
 xlW
 sXN
-oGK
+pcV
 oqm
 shC
 shC
@@ -67062,7 +66860,7 @@ uLV
 uLV
 uLV
 kMb
-wLd
+uLV
 jgr
 shC
 shC
@@ -69112,13 +68910,13 @@ jgr
 kWo
 kWo
 jgr
-wLd
+uLV
 brn
 hkR
 uLV
 xqG
 vAT
-wLd
+uLV
 jgr
 jgr
 jgr
@@ -73745,7 +73543,7 @@ yew
 jbp
 wfk
 jbp
-fWU
+dlh
 fkR
 jgr
 jbp
@@ -74259,7 +74057,7 @@ dlh
 jbp
 icE
 jbp
-fWU
+dlh
 fkR
 jgr
 jbp
@@ -74831,7 +74629,7 @@ iba
 nlT
 nlT
 nlT
-gmu
+nlT
 nlT
 dGP
 iba
@@ -76555,7 +76353,7 @@ jgr
 wbO
 dSy
 gKN
-jDP
+kWo
 jgr
 xzT
 wqJ
@@ -78362,7 +78160,7 @@ kTC
 aUi
 xzT
 wnj
-irL
+okr
 xzT
 xzT
 xzT
@@ -84476,7 +84274,7 @@ icD
 leF
 jaI
 nrb
-xFU
+oGx
 mRq
 shC
 shC

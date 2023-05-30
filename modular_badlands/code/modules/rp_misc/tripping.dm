@@ -2,16 +2,19 @@
 // Basic requirements below. Probably doesn't work.
 /turf/proc/is_plating()
 	return FALSE
-
+/*
 /turf/open/indestructible/is_plating()
 	return TRUE// If it becomes an issue, set to false.
 
 /turf/open/floor/is_plating()
 	return TRUE// If it becomes an issue, set to false.
+*/
+/turf/open/is_plating()
+	return TRUE// If it becomes an issue, set to false.
 
 // Actual tripping related stuff.
 /obj
-	var/trip_chance = 15
+	var/trip_chance = 90
 
 /obj/Crossed(mob/living/carbon/human/H as mob)
 	. = ..()

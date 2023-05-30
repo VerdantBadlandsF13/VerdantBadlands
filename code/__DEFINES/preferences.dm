@@ -73,25 +73,11 @@
 #define EXP_TYPE_ADMIN			"Admin"
 //f13 stuff
 #define EXP_TYPE_FALLOUT		"Fallout"
-#define EXP_TYPE_VAULT			"Vault"
-#define EXP_TYPE_BROTHERHOOD	"Bos"
-#define EXP_TYPE_NCR			"Ncr"
-#define EXP_TYPE_BIGHORN		"Bighorn"
-#define EXP_TYPE_LEGION			"Legion"
 #define EXP_TYPE_WASTELAND		"Wasteland"
-#define EXP_TYPE_ENCLAVE		"Enclave"
-#define EXP_TYPE_NCRCOMMAND     "NCRCommand"
-#define EXP_TYPE_RANGER         "Ranger"
-#define EXP_TYPE_SCRIBE         "Scribe"
-#define EXP_TYPE_DECANUS        "Decanus"
-#define EXP_TYPE_TRIBAL			"Tribal"
-#define EXP_TYPE_FOLLOWERS		"FoA"
-#define EXP_TYPE_OUTLAW			"Outlaw"
-#define EXP_TYPE_KHAN			"Great Khans"
-
 #define EXP_TYPE_DFS			"Dry Fields Security"
 #define EXP_TYPE_GMB			"Green Mountain Boys"
 #define EXP_TYPE_LBJ			"Lumberjack Camp"
+#define EXP_TYPE_VLT			"Vault Fifty-Eight"
 
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)

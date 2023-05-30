@@ -54,7 +54,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/equipment/stimpak,
 		/datum/gang_item/equipment/healingpowder,
 
-		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
 		/datum/gang_item/clothing/glasses/sunglasses,
 
@@ -66,7 +65,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 
 		/datum/gang_item/equipment/chemmakingkit,
 
-		/datum/gang_item/equipment/bundleelguapo,
 		/datum/gang_item/equipment/bundleanarchist,
 		/datum/gang_item/equipment/bundlegunner,
 		/datum/gang_item/equipment/bundledenboss,
@@ -88,7 +86,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 
 		/datum/gang_item/weapon/shuriken,
 		/datum/gang_item/equipment/necklace,
-		/datum/gang_item/clothing/prostitute_dress,
 		/datum/gang_item/clothing/hat,
 		/datum/gang_item/clothing/glasses/sunglasses
 	)

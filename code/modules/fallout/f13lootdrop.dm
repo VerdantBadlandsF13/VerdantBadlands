@@ -29,17 +29,12 @@
 				/obj/item/clothing/under/redeveninggown,
 				/obj/item/clothing/under/janimaid,
 				/obj/effect/spawner/bundle/f13/badass,
-				/obj/effect/spawner/bundle/f13/puffer,
-				/obj/effect/spawner/bundle/f13/that,
-				/obj/effect/spawner/bundle/f13/benny,
 				/obj/effect/spawner/bundle/f13/burgundysuit,
-				/obj/effect/spawner/bundle/f13/scratch,
 				/obj/effect/spawner/bundle/f13/hoodie,
 				/obj/item/clothing/under/pants/camo,
 				/obj/effect/spawner/bundle/f13/bartender_purple,
 				/obj/effect/spawner/bundle/f13/plaidskirt/bluered,
 				/obj/effect/spawner/bundle/f13/navysuit,
-				/obj/effect/spawner/bundle/f13/femsuit,
 	)
 
 /obj/effect/spawner/bundle/f13/worker
@@ -63,42 +58,13 @@
 				/obj/item/clothing/gloves/fingerless
 				)
 
-/obj/effect/spawner/bundle/f13/puffer
-	name = "puffer vest, jeans, and grey cloak"
-	items = list(
-		/obj/item/clothing/suit/jacket/puffer/vest,
-		/obj/item/clothing/under/pants/jeans,
-		/obj/item/clothing/neck/mantle/gray,
-	)
-
-/obj/effect/spawner/bundle/f13/that
-	name = "charcoal suit and hat"
-	items = list(
-				/obj/item/clothing/under/suit_jacket/charcoal,
-				/obj/item/clothing/head/that
-				)
-
-/obj/effect/spawner/bundle/f13/benny
-	name = "checkered suit and shoes"
-	items = list(
-				/obj/item/clothing/under/suit_jacket/checkered, // It's Benny time!
-				/obj/item/clothing/shoes/laceup
-				)
-
 /obj/effect/spawner/bundle/f13/burgundysuit
 	name = "burgundy suit, shoes, and cloak"
 	items = list(
 		/obj/item/clothing/under/suit_jacket/burgundy,
-		/obj/item/clothing/shoes/laceup,
+		/obj/item/clothing/shoes/f13/fancy,
 		/obj/item/clothing/neck/mantle/brown,
 	)
-
-/obj/effect/spawner/bundle/f13/scratch
-	name = "white suit and shoes"
-	items = list(
-				/obj/item/clothing/under/scratch,
-				/obj/item/clothing/shoes/sneakers/white
-				)
 
 /obj/effect/spawner/bundle/f13/hoodie
 	name = "hoodie"
@@ -125,26 +91,13 @@
 	name = "navy suit and shoes"
 	items = list(
 				/obj/item/clothing/under/suit_jacket/navy,
-				/obj/item/clothing/shoes/laceup
+				/obj/item/clothing/shoes/f13/fancy
 				)
-
-/obj/effect/spawner/bundle/f13/femsuit
-	name = "female executive suit and shoes"
-	items = list(
-				/obj/item/clothing/under/suit_jacket/female,
-				/obj/item/clothing/shoes/laceup
-				)
-
-
 
 /obj/effect/spawner/lootdrop/f13/armor/costumes
 	name = "pre-war costumes spawner"
-	loot = list(
-				/obj/effect/spawner/bundle/f13/soviet,
-				/obj/effect/spawner/bundle/f13/geisha,
-				/obj/item/clothing/under/blacktango,
+	loot = list(/obj/item/clothing/under/blacktango,
 				/obj/item/clothing/under/redeveninggown,
-				/obj/effect/spawner/bundle/f13/mexican,
 				/obj/item/clothing/under/sailor,
 				/obj/effect/spawner/lootdrop/f13/schoolgirl,
 				/obj/effect/spawner/bundle/f13/hats,
@@ -155,28 +108,6 @@
 				/obj/item/clothing/under/kilt,
 				/obj/effect/spawner/bundle/f13/pirate
 	)
-
-/obj/effect/spawner/bundle/f13/soviet
-	name = "soviet costume"
-	items = list(
-		/obj/item/clothing/head/ushanka,
-		/obj/item/clothing/under/soviet,
-		/obj/item/clothing/neck/mantle/gray,
-	)
-
-/obj/effect/spawner/bundle/f13/geisha
-	name = "geisha costume"
-	items = list(
-				/obj/item/clothing/under/geisha,
-				/obj/item/clothing/shoes/sandal
-				)
-
-/obj/effect/spawner/bundle/f13/mexican
-	name = "sombrero and poncho"
-	items = list(
-				/obj/item/clothing/head/sombrero,
-				/obj/item/clothing/neck/mantle/poncho
-				)
 
 /obj/effect/spawner/lootdrop/f13/schoolgirl
 	name = "schoolgirl outfit spawner"
@@ -203,7 +134,7 @@
 	name = "roman gladiator outfit spawner"
 	items = list(
 				/obj/item/clothing/under/gladiator,
-				/obj/item/clothing/shoes/roman
+				/obj/item/clothing/shoes/sandal
 				)
 
 /obj/effect/spawner/bundle/f13/vampire

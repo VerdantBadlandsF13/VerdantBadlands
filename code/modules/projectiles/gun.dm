@@ -662,7 +662,7 @@ ATTACHMENTS
 			return
 
 	if(condition == 1)
-		if(istype(I, /obj/item/crafting/weapon_repair_kit))
+		if(istype(I, /obj/item/repair_kit/weapon_repair_kit))
 			if(condition_lvl < 90)
 				if(do_after(user, 20, target = src))
 					to_chat(user, "<span class='notice'>You repaired your weapon.</span>")

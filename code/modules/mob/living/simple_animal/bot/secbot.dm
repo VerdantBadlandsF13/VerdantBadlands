@@ -596,7 +596,7 @@ Auto Patrol: []"},
 			if(prob(50))
 				new /obj/item/clothing/head/helmet(Tsec)
 			else
-				new /obj/item/clothing/suit/armor/vest(Tsec)
+				new /obj/item/clothing/suit/armored(Tsec)
 	else
 		var/obj/item/bot_assembly/secbot/Sa = new (Tsec)
 		Sa.build_step = ASSEMBLY_SECOND_STEP

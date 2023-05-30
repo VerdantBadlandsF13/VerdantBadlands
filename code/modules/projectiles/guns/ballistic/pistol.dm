@@ -99,7 +99,6 @@
 	fire_sound = 'sound/f13weapons/ninemil.ogg'
 	extra_damage = 5
 
-//Hi-Power+						Keywords: 9mm, Semi-auto. Special modifiers: spread -1
 /obj/item/gun/ballistic/automatic/pistol/beretta
 	name = "\improper P-Sec Browning Hi-Power"
 	desc = "A combat modification of the standard Browning Hi-Power, made for private security firms. It features a longer barrel and a heavier trigger pull."
@@ -185,43 +184,38 @@
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 	extra_damage = 3
 
-
-
 /////////////////
 //HEAVY PISTOLS//
 /////////////////
-
 /obj/item/gun/ballistic/automatic/pistol/deagle
 	name = "\improper MK. XIX Desert Eagle"
-	desc = "A MK. XIX Desert Eagle, manufactured by Magnum Research and chambered in .44 caliber. \
+	desc = "A MK. XIX Desert Eagle, manufactured by Magnum Research and chambered in .50 AE. \
 	It's expensive, too heavy, and almost entirely impractical. Unrestrained exhibition - terrifying potency."
 	icon_state = "deagle"
 	item_state = "deagle"
-	mag_type = /obj/item/ammo_box/magazine/m44
+	mag_type = /obj/item/ammo_box/magazine/m50
 	fire_delay = 3
 	force = 15
 	extra_speed = 300
 	recoil = 3.5 //Debilitating
 	spread = 6
-	extra_damage = 12
-	extra_penetration = 0.12
 	can_suppress = FALSE
 	automatic_burst_overlay = FALSE
-	fire_sound = 'sound/f13weapons/44mag.ogg'
+	fire_sound = 'sound/f13weapons/deagle.ogg'
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/automag
-	name = "AMT AutoMag V"
+	name = ".44 AMP"
 	desc = "An expertly made pre-war handgun. \
-	Chambered for .50 AE, the AMT AutoMag V is not to be scoffed at."
+	Chambered for .44, the AMP is not to be scoffed at."
 	icon_state = "automag"
 	mag_type = /obj/item/ammo_box/magazine/automag
 	fire_delay = 4
 	extra_speed = 600
-	recoil = 0.2
+	recoil = 2.4
 	can_suppress = FALSE
 	automatic_burst_overlay = FALSE
+	fire_sound = 'sound/f13weapons/44mag.ogg'
 
-//14mm Pistol		Keywords: 14mm, Semi-auto, 7 rounds, Heavy
 /obj/item/gun/ballistic/automatic/pistol/pistol14
 	name = "\improper Sig-Sauer 14mm Auto Pistol"
 	desc = "A Sig-Sauer 14mm Auto Pistol. Large, singleshot handgun. Excellent craftsmanship."

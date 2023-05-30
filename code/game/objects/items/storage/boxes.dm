@@ -576,10 +576,6 @@
 	desc = "A sleek, sturdy box used to hold replica spacesuits."
 	icon_state = "syndiebox"
 
-/obj/item/storage/box/fakesyndiesuit/PopulateContents()
-	new /obj/item/clothing/head/syndicatefake(src)
-	new /obj/item/clothing/suit/syndicatefake(src)
-
 /obj/item/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
 	desc = "<span class='alert'>Keep out of reach of children.</span>"
@@ -682,7 +678,7 @@
 
 /obj/item/storage/box/deputy/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/clothing/accessory/armband/deputy(src)
+		new /obj/item/clothing/accessory/armband(src)
 
 /obj/item/storage/box/metalfoam
 	name = "box of metal foam grenades"

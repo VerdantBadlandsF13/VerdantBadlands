@@ -75,7 +75,6 @@
 	recharge_newshot(TRUE)
 	if(selfcharge)
 		START_PROCESSING(SSobj, src)
-	condition_lvl = 80
 	update_icon()
 
 /obj/item/gun/energy/ComponentInitialize()

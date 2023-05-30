@@ -7,12 +7,14 @@
 	access = list(ACCESS_GMB)
 	minimal_access = list(ACCESS_GMB)
 
-	forbids = "The Green Mountain Boys forbid: Marauding of any kind, unless it is a designated enemy stronghold. <br> \
+	forbids = "The Green Mountain Boys forbid: <br> \
+				- Marauding of any kind, unless it is a designated enemy stronghold. <br> \
 				- Slavery of any kind. <br> \
 				- Extortion. <br> \
 				- Kidnapping anyone but persons of interest."
 
-	enforces = "The Green Mountain Boys expect: Maintain relative peace and order within the outpost's area. <br> \
+	enforces = "The Green Mountain Boys expect: <br> \
+				- Maintain relative peace and order within the outpost's area. <br> \
 				- Protect the citizenry to the best of your ability. <br> \
 				- Ensure a consistent food supply for your militia company and citizens. <br> \
 				- Make contact and build rapport with existing powers in the area."
@@ -24,7 +26,7 @@
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = null
-	uniform	= /obj/item/clothing/under/f13/ranger/modif_ranger/gmb
+	uniform	= /obj/item/clothing/under/f13/gmb
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio

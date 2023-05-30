@@ -526,6 +526,7 @@
 	var/turf/T = get_turf(src)
 	if(!blood)
 		adjust_nutrition(-lost_nutrition)
+		adjust_thirst(-lost_nutrition)// Just use nutrition.
 		adjustToxLoss(-3)
 	for(var/i=0 to distance)
 		if(blood)

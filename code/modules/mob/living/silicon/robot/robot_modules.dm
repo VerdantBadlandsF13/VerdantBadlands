@@ -653,7 +653,7 @@
 		/obj/item/borg/cyborghug,
 		/obj/item/megaphone,
 		/obj/item/melee/classic_baton/police,
-		/obj/item/gun/energy/laser/pistol/cyborg/gutsy,
+		/obj/item/gun/energy/laser/plasma/glock/gutsy,
 		/obj/item/gun/energy/gutsy_flamethrower,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/pinpointer/crew)

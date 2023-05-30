@@ -155,6 +155,23 @@
 	icon_state = "improvshotbag"
 	multiple_sprites = 1
 
+//.50 AE - PLAYERS SHOULD NEVER BE ABLE TO SEE THIS OUTSIDE OF ADMIN INTERVENTION.
+/obj/item/ammo_box/m50box
+	name = "ammo box (.50 AE)"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "ammobox"
+	multiple_sprites = 2
+	caliber = "50ae"
+	ammo_type = /obj/item/ammo_casing/m50
+	max_ammo = 30
+	w_class = WEIGHT_CLASS_NORMAL
+	custom_materials = list(/datum/material/iron = 15000, /datum/material/blackpowder = 1200)
+
+/obj/item/ammo_box/m50box/improvised
+	name = "bag with reloaded .50 AE"
+	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
+	icon_state = "improvshotbag"
+	multiple_sprites = 1
 
 //.45-70 Gov't
 /obj/item/ammo_box/c4570box
@@ -169,7 +186,6 @@
 	custom_materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1500)
 
 //5mm
-
 /obj/item/ammo_box/m5mmbox
 	name = "ammo box (5mm FMJ)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'

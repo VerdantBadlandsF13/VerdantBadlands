@@ -181,7 +181,7 @@
 	buttontooltipstyle = "clockcult"
 	var/cooldown = 0
 	var/static/list/ratvarian_armor_typecache = typecacheof(list(
-	/obj/item/clothing/suit/armor/clockwork,
+	/obj/item/clothing/suit/armored/clockwork,
 	/obj/item/clothing/head/helmet/clockwork,
 	/obj/item/clothing/gloves/clockwork,
 	/obj/item/clothing/shoes/clockwork)) //don't replace this ever
@@ -202,7 +202,7 @@
 	var/do_message = 0
 	var/obj/item/I = owner.get_item_by_slot(SLOT_WEAR_SUIT)
 	if(remove_item_if_better(I, owner))
-		do_message += owner.equip_to_slot_or_del(new/obj/item/clothing/suit/armor/clockwork(null), SLOT_WEAR_SUIT)
+		do_message += owner.equip_to_slot_or_del(new/obj/item/clothing/suit/armored/clockwork(null), SLOT_WEAR_SUIT)
 	I = owner.get_item_by_slot(SLOT_HEAD)
 	if(remove_item_if_better(I, owner))
 		do_message += owner.equip_to_slot_or_del(new/obj/item/clothing/head/helmet/clockwork(null), SLOT_HEAD)
@@ -264,7 +264,7 @@
 	/obj/structure/window/reinforced/clockwork,
 	/obj/structure/table/reinforced/brass))
 	var/static/list/ratvarian_armor_typecache = typecacheof(list(
-	/obj/item/clothing/suit/armor/clockwork,
+	/obj/item/clothing/suit/armored/clockwork,
 	/obj/item/clothing/head/helmet/clockwork,
 	/obj/item/clothing/gloves/clockwork,
 	/obj/item/clothing/shoes/clockwork))

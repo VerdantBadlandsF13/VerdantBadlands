@@ -694,10 +694,10 @@
 				counter = 0
 		dat += "</tr></table>"
 
-	//BoS (Steel Blue)
+	//DFS (Steel Blue)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='8eb7e3'><th colspan='[length(GLOB.bighorn_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=brotherhooddept;jobban4=[REF(M)]'>Brotherhood Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.brotherhood_positions)
+		dat += "<tr align='center' bgcolor='8eb7e3'><th colspan='[length(GLOB.dfs_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=dfsdept;jobban4=[REF(M)]'>DFS Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.dfs_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))
@@ -712,10 +712,10 @@
 				counter = 0
 		dat += "</tr></table>"
 
-	//Oasis (Green)
+	//GMB (Green)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='8ee3a4'><th colspan='[length(GLOB.bighorn_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=bighorndept;jobban4=[REF(M)]'>Oasis Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.bighorn_positions)
+		dat += "<tr align='center' bgcolor='8ee3a4'><th colspan='[length(GLOB.gmb_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=gmbdept;jobban4=[REF(M)]'>GMB Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.gmb_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))
@@ -730,28 +730,10 @@
 				counter = 0
 		dat += "</tr></table>"
 
-	//Legion (Red)
+	//LBJ (Red)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='e3a28e'><th colspan='[length(GLOB.legion_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=legiondept;jobban4=[REF(M)]'>Legion Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.legion_positions)
-			if(!jobPos)
-				continue
-			if(jobban_isbanned(M, jobPos))
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
-				counter++
-			else
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
-				counter++
-
-			if(counter >= 6) //So things dont get squiiiiished!
-				dat += "</tr><tr>"
-				counter = 0
-		dat += "</tr></table>"
-
-	//NCR (Yellow)
-		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='e3e28e'><th colspan='[length(GLOB.ncr_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=ncrdept;jobban4=[REF(M)]'>NCR Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.ncr_positions)
+		dat += "<tr align='center' bgcolor='e3a28e'><th colspan='[length(GLOB.lbj_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=lbjdept;jobban4=[REF(M)]'>LBJ Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.lbj_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))
@@ -801,43 +783,6 @@
 				dat += "</tr><tr>"
 				counter = 0
 		dat += "</tr></table>"
-
-	//Enclave (Red)
-		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='ffa2a2'><th colspan='[length(GLOB.enclave_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=enclavedept;jobban4=[REF(M)]'>Enclave Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.enclave_positions)
-			if(!jobPos)
-				continue
-			if(jobban_isbanned(M, jobPos))
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
-				counter++
-			else
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
-				counter++
-
-			if(counter >= 6) //So things dont get squiiiiished!
-				dat += "</tr><tr>"
-				counter = 0
-		dat += "</tr></table>"
-
-	//Followers (Light Blue)
-		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='abfffd'><th colspan='[length(GLOB.followers_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=followersdept;jobban4=[REF(M)]'>Followers Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.followers_positions)
-			if(!jobPos)
-				continue
-			if(jobban_isbanned(M, jobPos))
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'><font color=red>[jobPos]</font></a></td>"
-				counter++
-			else
-				dat += "<td width='15%'><a href='?src=[REF(src)];[HrefToken()];jobban3=[jobPos];jobban4=[REF(M)]'>[jobPos]</a></td>"
-				counter++
-
-			if(counter >= 6) //So things dont get squiiiiished!
-				dat += "</tr><tr>"
-				counter = 0
-		dat += "</tr></table>"
-
 
 	//Non-Human (Green)
 		counter = 0
@@ -1009,23 +954,18 @@
 					if(!jobPos)
 						continue
 					joblist += jobPos
-			if("brotherhooddept")
-				for(var/jobPos in GLOB.brotherhood_positions)
+			if("dfsdept")
+				for(var/jobPos in GLOB.dfs_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos
-			if("bighorndept")
-				for(var/jobPos in GLOB.bighorn_positions)
+			if("gmbdept")
+				for(var/jobPos in GLOB.gmb_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos
-			if("legiondept")
-				for(var/jobPos in GLOB.legion_positions)
-					if(!jobPos)
-						continue
-					joblist += jobPos
-			if("ncrdept")
-				for(var/jobPos in GLOB.ncr_positions)
+			if("lbjdept")
+				for(var/jobPos in GLOB.lbj_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos
@@ -1036,16 +976,6 @@
 					joblist += jobPos
 			if("wastelanddept")
 				for(var/jobPos in GLOB.wasteland_positions)
-					if(!jobPos)
-						continue
-					joblist += jobPos
-			if("enclavedept")
-				for(var/jobPos in GLOB.enclave_positions)
-					if(!jobPos)
-						continue
-					joblist += jobPos
-			if("followersdept")
-				for(var/jobPos in GLOB.followers_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos

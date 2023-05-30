@@ -279,10 +279,27 @@
 				playsound(loc, hitsound, volume, 1, -1)
 			L.visible_message("<span class='danger'>[L] is hit by \a [src][organ_hit_text]!</span>", \
 					"<span class='userdanger'>[L] is hit by \a [src][organ_hit_text]!</span>", null, COMBAT_MESSAGE_RANGE)
-		if(candink && def_zone == BODY_ZONE_HEAD) //fortuna edit
-			var/playdink = rand(1, 10)
-			if(playdink <= 3)
-				playsound(src, 'sound/weapons/dink.ogg', 30, 1)
+
+		if(def_zone == BODY_ZONE_HEAD)
+			if(blocked != 100)
+				if(prob(blocked))
+					var/mob/living/carbon/C = L
+					L.adjustOrganLoss(ORGAN_SLOT_BRAIN, 20)
+					if(L.stat == CONSCIOUS)
+						L.confused = max(L.confused, 20)
+						L.adjust_blurriness(10)
+					if(prob(10))
+						SEND_SOUND(L, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+						C.gain_trauma(/datum/brain_trauma/mild/concussion)
+					else if(prob(5))
+						L.visible_message("<span class='danger'>[L] starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
+						SEND_SOUND(L, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+						C.gain_trauma(/datum/brain_trauma/mild/concussion)
+						L.Unconscious(100)
+						L.Jitter(350)
+				else
+					L.adjustOrganLoss(ORGAN_SLOT_BRAIN, blocked * 0.2)
+
 		L.on_hit(src)
 
 	var/reagent_note

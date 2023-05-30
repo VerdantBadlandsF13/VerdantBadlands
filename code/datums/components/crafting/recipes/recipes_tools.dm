@@ -55,7 +55,6 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_TOOL
 
-/*
 /datum/crafting_recipe/basicvolt
 	name = "Crude Voltage Scanner"
 	result = /obj/item/multitool/basic
@@ -63,9 +62,8 @@
 	reqs = list(/obj/item/stack/sheet/metal = 2,
 				/obj/item/stack/sheet/glass = 1)
 	tools = list(TOOL_WORKBENCH)
-	category = CAT_ASSEM
-	subcategory = CAT_TOOLS
-*/
+	category = CAT_CRAFTING
+	subcategory = CAT_TOOL
 
 /datum/crafting_recipe/basicwire
 	name = "Basic Cutters"

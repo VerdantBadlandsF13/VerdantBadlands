@@ -32,7 +32,7 @@
 
 	melee_damage_lower = 48
 	melee_damage_upper = 72
-	projectiletype = /obj/item/projectile/beam/laser/lasgun/sentrybot
+	projectiletype = /obj/item/projectile/beam/laser/gatling/sentrybot
 	projectilesound = 'sound/f13npc/sentry/gl_fire.ogg'
 	extra_projectiles = 24// Around 360 damage if all connect.
 	ranged_cooldown_time = 120// Should be about 12 seconds.
@@ -47,6 +47,9 @@
 	emote_hear = list("Beeps.")
 	speak = list("...")
 	var/warned = FALSE
+
+	var/datum/action/innate/sb/missile/M
+	var/missile_cooldown = FALSE
 
 	footstep_type = FOOTSTEP_GENERIC_HEAVY// Needs a proper sound, but otherwise handled below.
 
@@ -79,6 +82,8 @@
 	. = ..()
 	resize = 1.2
 	update_transform()
+	M = new
+	M.Grant(src)
 
 /mob/living/simple_animal/hostile/sentrybot/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
@@ -161,36 +166,54 @@
 
 /*
 Below is their missile setup.
-Unused, as of current. For obvious reasons.
-Staff can, however, call for it to utilise such.
+Staff can call for it to utilise such.
+Otherwise, it's automated.
 */
-/*
-/mob/living/simple_animal/hostile/sentrybot/OpenFire()
-	if(prob(1) && health > 1)
-		ranged_cooldown = world.time + ranged_cooldown_time
-		var/mob/living/M = target
-		if(get_dist(src, M) > 1)
-			prep_missile()
-*/
+
+/mob/living/simple_animal/hostile/sentrybot/BiologicalLife(seconds, times_fired)
+	if(!(. = ..()))
+		return
+	if(target && AIStatus == AI_ON)
+		M.Activate()
+
+/datum/action/innate/sb/missile
+	name = "Launch Missile"
+	desc = "Fires your missile, if you've a lock for it!"
+	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
+	button_icon_state = "mech_thrusters_off"
+
+/datum/action/innate/sb/missile/Activate()
+	var/mob/living/simple_animal/hostile/sentrybot/F = owner
+
+	if(F.missile_cooldown == TRUE)
+		to_chat(F, "<span class='notice'>Your targeting matrix has not yet found another target.</span>")
+		return
+
+	F.prep_missile()
+	F.missile_cooldown = TRUE
+	playsound(src, 'sound/f13npc/sentry/ml_post_launch.ogg', 75, FALSE)
+	addtimer(CALLBACK(F, /mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown), 150)
+
+/mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown()
+	missile_cooldown = FALSE
+	playsound(src, 'sound/f13npc/sentry/missile_prepared.ogg', 75, FALSE)
+
 /mob/living/simple_animal/hostile/sentrybot/proc/fire_missile(turf/marker, set_angle)
+	if(missile_cooldown == TRUE)
+		return
 	playsound(src, attack_windup, 75, TRUE)
-	spawn(10)// Allow players to prepare.
+	spawn(20)// Allow players to prepare.
 		var/turf/startloc = get_turf(src)
+		playsound(src, 'sound/f13npc/sentry/ml_launch.ogg', 200, 1, 2)
 		var/obj/item/projectile/P = new /obj/item/projectile/bullet/rocket/a84mm_he/sb_missile(startloc)
 		P.preparePixelProjectile(marker, startloc)
 		P.firer = src
 		if(target)
 			P.original = target
 		P.fire()
-		spawn(10)
-			src.AIStatus = AI_OFF
-			playsound(src, 'sound/f13npc/sentry/ml_post_launch.ogg', 75, FALSE)
-			spawn(10)// Let the audio play.
-				src.AIStatus = AI_ON
 
 /mob/living/simple_animal/hostile/sentrybot/proc/prep_missile()
 	var/turf/target_turf = get_turf(target)
-	playsound(src, 'sound/f13npc/sentry/ml_launch.ogg', 200, 1, 2)
 	visible_message("<span class='colossus'>\"<b>Target lock acquired.</b>\"</span>")
+	playsound(src, 'sound/magic/repulse.ogg', 75, TRUE)
 	fire_missile(target_turf)
-

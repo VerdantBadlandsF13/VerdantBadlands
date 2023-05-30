@@ -27,3 +27,10 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
+
+/obj/item/gun/energy/laser/plasma/glock/gutsy
+	name ="\improper integrated plasma pistol"
+	desc = "A pistol-sized miniaturized plasma caster. It fires a bolt of superhot ionized gas."
+	item_state = "plasma-pistol"
+	icon_state = "plasma-pistol"
+	selfcharge = EGUN_SELFCHARGE_BORG

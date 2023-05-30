@@ -189,8 +189,7 @@
 					/obj/item/clothing/shoes/wraps/red,
 					/obj/item/clothing/shoes/wraps/red,
 					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/kindleKicks)
+					/obj/item/clothing/shoes/wraps/blue)
 	crate_name = "footie crate"
 
 /datum/supply_pack/misc/funeral

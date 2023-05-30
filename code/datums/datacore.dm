@@ -97,6 +97,7 @@
 	var/list/gmb = list()
 	var/list/dfs = list()
 	var/list/lbj = list()
+	var/list/vlt = list()
 	var/list/waster = list()
 	var/list/other = list()
 	var/dat = {"
@@ -129,6 +130,9 @@
 		if(rank in GLOB.lbj_positions)
 			lbj[name] = rank
 			department = 1
+		if(rank in GLOB.vault_positions)
+			vlt[name] = rank
+			department = 1
 		if(rank in GLOB.wasteland_positions)
 			waster[name] = rank
 			department = 1
@@ -154,12 +158,16 @@
 		for(var/name in lbj)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[lbj[name]]</td></tr>"
 			even = !even
+	if(length(vlt))
+		dat += "<tr><th colspan=3>Vault Fifty-Eight</th></tr>"
+		for(var/name in vlt)
+			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[waster[name]]</td></tr>"
+			even = !even
 	if(length(waster))
 		dat += "<tr><th colspan=3>Wasteland</th></tr>"
 		for(var/name in waster)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[waster[name]]</td></tr>"
 			even = !even
-	// misc guys
 	if(length(other))
 		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
 		for(var/name in other)
@@ -170,291 +178,6 @@
 	dat = replacetext(dat, "\n", "")
 	dat = replacetext(dat, "\t", "")
 	return dat
-
-/datum/datacore/proc/get_manifest_dr(monochrome, OOC)
-	var/list/command = list()
-	var/list/bos = list()
-	var/list/enclave = list()
-	var/list/bighorn = list()
-	var/list/khan = list()
-	var/list/leg = list()
-	var/list/ncr = list()
-	var/list/vault = list()
-	var/list/flw = list()
-	var/list/tribe = list()
-	var/list/was = list()
-	var/list/misc = list()
-	var/list/tri = list()
-	var/list/out = list()
-	var/dat = {"
-	<head><style>
-		.manifest {border-collapse:collapse;}
-		.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color:white; color:black"]; padding:.25em}
-		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: #48C; color:white"]}
-		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: #488;"] }
-		.manifest td:first-child {text-align:right}
-		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: #DEF"]}
-	</style></head>
-	<table class="manifest" width='350px'>
-	<tr class='head'><th>Name</th><th>Occupation</th></tr>
-	"}
-	var/even = 0
-	// sort mobs
-	for(var/datum/data/record/t in GLOB.data_core.general)
-		var/name = t.fields["name"]
-		var/rank = t.fields["rank"]
-		var/department = 0
-		if(rank in GLOB.command_positions)
-			command[name] = rank
-			department = 1
-		if(rank in GLOB.ncr_rangervet_positions)
-			command[name] = rank
-			department = 1
-		if(rank in GLOB.brotherhood_positions)
-			bos[name] = rank
-			department = 1
-		if(rank in GLOB.enclave_positions)
-			enclave[name] = rank
-			department = 1
-		if(rank in GLOB.bighorn_positions)
-			bighorn[name] = rank
-			department = 1
-		if(rank in GLOB.khan_positions)
-			khan[name] = rank
-			department = 1
-		if(rank in GLOB.legion_positions)
-			leg[name] = rank
-			department = 1
-		if(rank in GLOB.ncr_positions)
-			ncr[name] = rank
-			department = 1
-		if(rank in GLOB.followers_positions)
-			flw[name] = rank
-			department = 1
-		if(rank in GLOB.vault_positions)
-			vault[name] = rank
-			department = 1
-		if(rank in GLOB.wasteland_positions)
-			was[name] = rank
-			department = 1
-		if(rank in GLOB.tribal_positions)
-			tri[name] = rank
-			department = 1
-		if(rank in GLOB.outlaw_positions)
-			out[name] = rank
-			department = 1
-		if(!department && !(name in command))
-			misc[name] = rank
-	if(length(command))
-		dat += "<tr><th colspan=3>Leaders</th></tr>"
-		for(var/name in command)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[command[name]]</td></tr>"
-			even = !even
-	if(length(bos))
-		dat += "<tr><th colspan=3>Brotherhood of Steel</th></tr>"
-		for(var/name in bos)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bos[name]]</td></tr>"
-			even = !even
-	if(length(enclave))
-		dat += "<tr><th colspan=3>Enclave</th></tr>"
-		for(var/name in enclave)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
-			even = !even
-	if(length(bighorn))
-		dat += "<tr><th colspan=3>Bighorn</th></tr>"
-		for(var/name in bighorn)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bighorn[name]]</td></tr>"
-			even = !even
-	if(length(khan))
-		dat += "<tr><th colspan=3>Great Khans</th></tr>"
-		for(var/name in khan)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[khan[name]]</td></tr>"
-			even = !even
-	if(length(leg))
-		dat += "<tr><th colspan=3>Caesar's Legion</th></tr>"
-		for(var/name in leg)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[leg[name]]</td></tr>"
-			even = !even
-	if(length(ncr))
-		dat += "<tr><th colspan=3>New California Republic</th></tr>"
-		for(var/name in ncr)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
-			even = !even
-	if(length(flw))
-		dat += "<tr><th colspan=3>Followers of the Apocalypse</th></tr>"
-		for(var/name in flw)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[flw[name]]</td></tr>"
-			even = !even
-	if(length(tribe))
-		dat += "<tr><th colspan=3>Wayfarer Tribe</th></tr>"
-		for(var/name in tribe)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[tribe[name]]</td></tr>"
-			even = !even
-	if(length(vault))
-		dat += "<tr><th colspan=3>Vault</th></tr>"
-		for(var/name in vault)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[vault[name]]</td></tr>"
-			even = !even
-	if(length(was))
-		dat += "<tr><th colspan=3>Wasteland</th></tr>"
-		for(var/name in was)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[was[name]]</td></tr>"
-			even = !even
-	// misc guys
-	if(length(misc))
-		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
-		for(var/name in misc)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[misc[name]]</td></tr>"
-			even = !even
-
-	dat += "</table>"
-	dat = replacetext(dat, "\n", "")
-	dat = replacetext(dat, "\t", "")
-	return dat
-
-/datum/datacore/proc/get_manifest_tg() //copypasted from tg, renamed to avoid namespace conflicts
-	var/list/manifest_out = list()
-	var/list/departments = list(
-		"Command" = GLOB.command_positions,
-		"Security" = GLOB.security_positions,
-		"Engineering" = GLOB.engineering_positions,
-		"Medical" = GLOB.medical_positions,
-		"Science" = GLOB.science_positions,
-		"Supply" = GLOB.supply_positions,
-		"Service" = GLOB.civilian_positions,
-		"Silicon" = GLOB.nonhuman_positions
-	)
-	for(var/datum/data/record/t in GLOB.data_core.general)
-		var/name = t.fields["name"]
-		var/rank = t.fields["rank"]
-		var/has_department = FALSE
-		for(var/department in departments)
-			var/list/jobs = departments[department]
-			if(rank in jobs)
-				if(!manifest_out[department])
-					manifest_out[department] = list()
-				manifest_out[department] += list(list(
-					"name" = name,
-					"rank" = rank
-				))
-				has_department = TRUE
-				break
-		if(!has_department)
-			if(!manifest_out["Misc"])
-				manifest_out["Misc"] = list()
-			manifest_out["Misc"] += list(list(
-				"name" = name,
-				"rank" = rank
-			))
-	return manifest_out
-
-/datum/datacore/proc/get_manifest(monochrome, OOC)
-	var/list/heads = list()
-	var/list/sec = list()
-	var/list/eng = list()
-	var/list/med = list()
-	var/list/sci = list()
-	var/list/sup = list()
-	var/list/civ = list()
-	var/list/bot = list()
-	var/list/misc = list()
-	var/dat = {"
-	<head><style>
-		.manifest {border-collapse:collapse;}
-		.manifest td, th {border:1px solid [monochrome?"black":"#DEF; background-color:white; color:black"]; padding:.25em}
-		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: #48C; color:white"]}
-		.manifest tr.head th { [monochrome?"border-top-width: 1px":"background-color: #488;"] }
-		.manifest td:first-child {text-align:right}
-		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: #DEF"]}
-	</style></head>
-	<table class="manifest" width='350px'>
-	<tr class='head'><th>Name</th><th>Rank</th></tr>
-	"}
-	var/even = 0
-	// sort mobs
-	for(var/datum/data/record/t in GLOB.data_core.general)
-		var/name = t.fields["name"]
-		var/rank = t.fields["rank"]
-		var/department = 0
-		if(rank in GLOB.command_positions)
-			heads[name] = rank
-			department = 1
-		if(rank in GLOB.security_positions)
-			sec[name] = rank
-			department = 1
-		if(rank in GLOB.engineering_positions)
-			eng[name] = rank
-			department = 1
-		if(rank in GLOB.medical_positions)
-			med[name] = rank
-			department = 1
-		if(rank in GLOB.science_positions)
-			sci[name] = rank
-			department = 1
-		if(rank in GLOB.supply_positions)
-			sup[name] = rank
-			department = 1
-		if(rank in GLOB.civilian_positions)
-			civ[name] = rank
-			department = 1
-		if(rank in GLOB.nonhuman_positions)
-			bot[name] = rank
-			department = 1
-		if(!department && !(name in heads))
-			misc[name] = rank
-	if(heads.len > 0)
-		dat += "<tr><th colspan=3>Heads</th></tr>"
-		for(var/name in heads)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[heads[name]]</td></tr>"
-			even = !even
-	if(sec.len > 0)
-		dat += "<tr><th colspan=3>Security</th></tr>"
-		for(var/name in sec)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sec[name]]</td></tr>"
-			even = !even
-	if(eng.len > 0)
-		dat += "<tr><th colspan=3>Engineering</th></tr>"
-		for(var/name in eng)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[eng[name]]</td></tr>"
-			even = !even
-	if(med.len > 0)
-		dat += "<tr><th colspan=3>Medical</th></tr>"
-		for(var/name in med)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[med[name]]</td></tr>"
-			even = !even
-	if(sci.len > 0)
-		dat += "<tr><th colspan=3>Science</th></tr>"
-		for(var/name in sci)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sci[name]]</td></tr>"
-			even = !even
-	if(sup.len > 0)
-		dat += "<tr><th colspan=3>Supply</th></tr>"
-		for(var/name in sup)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sup[name]]</td></tr>"
-			even = !even
-	if(civ.len > 0)
-		dat += "<tr><th colspan=3>Civilian</th></tr>"
-		for(var/name in civ)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[civ[name]]</td></tr>"
-			even = !even
-	// in case somebody is insane and added them to the manifest, why not
-	if(bot.len > 0)
-		dat += "<tr><th colspan=3>Silicon</th></tr>"
-		for(var/name in bot)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bot[name]]</td></tr>"
-			even = !even
-	// misc guys
-	if(misc.len > 0)
-		dat += "<tr><th colspan=3>Miscellaneous</th></tr>"
-		for(var/name in misc)
-			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[misc[name]]</td></tr>"
-			even = !even
-
-	dat += "</table>"
-	dat = replacetext(dat, "\n", "")
-	dat = replacetext(dat, "\t", "")
-	return dat
-
 
 /datum/datacore/proc/manifest_inject(mob/living/carbon/human/H, client/C, datum/preferences/prefs)
 	set waitfor = FALSE

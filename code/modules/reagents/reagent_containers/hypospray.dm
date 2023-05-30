@@ -74,14 +74,6 @@
 	volume = 100
 	list_reagents = list(/datum/reagent/medicine/adminordrazine/quantum_heal = 80, /datum/reagent/medicine/synaptizine = 20)
 
-/obj/item/reagent_containers/hypospray/magillitis
-	name = "experimental autoinjector"
-	desc = "A modified air-needle autoinjector with a small single-use reservoir. It contains an experimental serum."
-	icon_state = "combat_hypo"
-	volume = 5
-	reagent_flags = NONE
-	list_reagents = list(/datum/reagent/magillitis = 5)
-
 //MediPens
 
 /obj/item/reagent_containers/hypospray/medipen

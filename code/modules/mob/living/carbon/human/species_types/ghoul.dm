@@ -62,8 +62,6 @@
 		b.wound_resistance = initial(b.wound_resistance)
 
 /datum/species/ghoul/qualifies_for_rank(rank, list/features)
-	if(rank in GLOB.legion_positions) /* legion HATES these ghoul */
-		return 0
 	if(rank in GLOB.vault_positions) //purest humans left in america. supposedly.
 		return 0
 	return ..()

@@ -2,7 +2,7 @@
 	name = "ERT Common"
 
 	uniform = /obj/item/clothing/under/rank/centcom/officer
-	shoes = /obj/item/clothing/shoes/combat/swat
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/headset_cent/alt
 
@@ -195,7 +195,6 @@
 	id = /obj/item/card/id
 
 /datum/outfit/ert/greybois/greygod
-	suit = /obj/item/clothing/suit/hazardvest
 	l_hand = /obj/item/storage/toolbox/plastitanium
 	gloves = /obj/item/clothing/gloves/color/yellow
 

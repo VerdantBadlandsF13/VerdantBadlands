@@ -2348,19 +2348,6 @@
 		ZI.Insert(H)
 	..()
 
-/datum/reagent/magillitis
-	name = "Magillitis"
-	description = "An experimental serum which causes rapid muscular growth in Hominidae. Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas."
-	reagent_state = LIQUID
-	color = "#00f041"
-	value = REAGENT_VALUE_EXCEPTIONAL
-	ghoulfriendly = TRUE
-
-/datum/reagent/magillitis/on_mob_life(mob/living/carbon/M)
-	..()
-	if((ismonkey(M) || ishuman(M)) && current_cycle >= 10)
-		M.gorillize()
-
 /*
 /datum/reagent/growthserum
 	name = "Growth Serum"

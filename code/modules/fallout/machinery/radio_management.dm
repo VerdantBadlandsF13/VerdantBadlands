@@ -2,10 +2,7 @@
 
 //Global list of radios
 GLOBAL_LIST_EMPTY(faction_radios)
-GLOBAL_LIST_EMPTY(ncr_radios)
-GLOBAL_LIST_EMPTY(legion_radios)
-GLOBAL_LIST_EMPTY(bos_radios)
-GLOBAL_LIST_EMPTY(enc_radios)
+GLOBAL_LIST_EMPTY(vlt_radios)
 
 /obj/machinery/radioterminal
 	name = "radio control"
@@ -36,20 +33,8 @@ GLOBAL_LIST_EMPTY(enc_radios)
 	dat += "<center><b>ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM v.85</b><br>"
 	dat += "<b>COPYRIGHT 2075-2077 ROBCO INDUSTRIES</b><br><br><br><br>"
 	switch(assigned_faction)
-		if(FACTION_NCR)
-			for(var/obj/item/radio/radio in GLOB.ncr_radios)
-				if(radio.linked_mob)
-					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
-		if(FACTION_LEGION)
-			for(var/obj/item/radio/radio in GLOB.legion_radios)
-				if(radio.linked_mob)
-					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
-		if(FACTION_BROTHERHOOD)
-			for(var/obj/item/radio/radio in GLOB.bos_radios)
-				if(radio.linked_mob)
-					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
-		if(FACTION_ENCLAVE)
-			for(var/obj/item/radio/radio in GLOB.enc_radios)
+		if(FACTION_VLT)
+			for(var/obj/item/radio/radio in GLOB.vlt_radios)
 				if(radio.linked_mob)
 					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
 	var/datum/browser/popup = new(user, "radio_console", "Radio Terminal")
@@ -69,14 +54,8 @@ GLOBAL_LIST_EMPTY(enc_radios)
 		if(terminate.factionized && terminate.linked_mob && terminate.linked_faction == assigned_faction)
 			terminate.kill_switch()
 			switch(assigned_faction)
-				if(FACTION_NCR)
-					LAZYREMOVE(GLOB.ncr_radios, terminate)
-				if(FACTION_LEGION)
-					LAZYREMOVE(GLOB.legion_radios, terminate)
-				if(FACTION_BROTHERHOOD)
-					LAZYREMOVE(GLOB.bos_radios, terminate)
-				if(FACTION_ENCLAVE)
-					LAZYREMOVE(GLOB.enc_radios, terminate)
+				if(FACTION_VLT)
+					LAZYREMOVE(GLOB.vlt_radios, terminate)
 	updateUsrDialog()
 	return
 
@@ -108,22 +87,7 @@ GLOBAL_LIST_EMPTY(enc_radios)
 			new_radio.Factionize()
 		return
 
-/obj/machinery/radioterminal/ncr
-	name = "NCR radio control"
-	assigned_faction = FACTION_NCR
+/obj/machinery/radioterminal/vault
+	name = "Vault radio control"
+	assigned_faction = FACTION_VLT
 	req_one_access = list(ACCESS_NCR_COMMAND)
-
-/obj/machinery/radioterminal/legion
-	name = "Legion radio control"
-	assigned_faction = FACTION_LEGION
-	req_one_access = list(ACCESS_LEGION_COMMAND)
-
-/obj/machinery/radioterminal/bos
-	name = "Brotherhood radio control"
-	assigned_faction = FACTION_BROTHERHOOD
-	req_one_access = list(ACCESS_BROTHERHOOD_COMMAND)
-
-/obj/machinery/radioterminal/enclave
-	name = "Enclave radio control"
-	assigned_faction = FACTION_ENCLAVE
-	req_one_access = list(ACCESS_ENCLAVE_COMMAND)

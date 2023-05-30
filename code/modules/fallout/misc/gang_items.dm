@@ -60,12 +60,6 @@
 
 //Raider gangs
 
-/datum/gang_item/clothing/prostitute_dress
-	name = "Prostitute dress"
-	id = "prostitute_dress"
-	cost = 10
-	item_path = /obj/item/clothing/under/f13/female/flapper
-
 /datum/gang_item/clothing/hat
 	name = "Pimp Hat"
 	id = "hat"
@@ -318,7 +312,6 @@
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
-	new /obj/item/clothing/under/f13/densuit(src)
 
 /datum/gang_item/equipment/bundleanarchist
 	name = "Mad Bomber Bundle"
@@ -352,11 +345,8 @@
 /obj/item/storage/box/bundleboss/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
-	new /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/raider(src)
 	new /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller(src)
-	new /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
-
 
 /datum/gang_item/equipment/bundlegunner
 	name = "Old Soldier Bundle"
@@ -376,20 +366,3 @@
 	new /obj/item/clothing/under/f13/army(src)
 	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
 	new /obj/item/grenade/frag(src)
-
-/datum/gang_item/equipment/bundleelguapo
-	name = "Bandito Bundle"
-	id = "bundleelguapo"
-	cost = 350
-	item_path = /obj/item/storage/box/bundleelguapo
-
-/obj/item/storage/box/bundleelguapo
-	name = "Bandito Bundle"
-	desc = "You burned the Village, raped the horses, and rode off on their women. It was a long time ago, so the details got mixed up, but you get the point. "
-
-/obj/item/storage/box/bundleelguapo/PopulateContents()
-	new /obj/item/gun/ballistic/rifle/repeater/cowboy(src)
-	new /obj/item/ammo_box/a357box(src)
-	new /obj/item/gun/ballistic/revolver/colt357(src)
-	new /obj/item/clothing/head/f13/ranger_hat(src)
-	new /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat(src)

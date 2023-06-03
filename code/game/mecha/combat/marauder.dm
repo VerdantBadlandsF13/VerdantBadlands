@@ -31,14 +31,6 @@
 
 /obj/mecha/combat/marauder/loaded/Initialize()
 	. = ..()
-	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/energy/pulse(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster(src)
-	ME.attach(src)
 	max_ammo()
 
 /obj/mecha/combat/marauder/seraph // Very OP adminbus mech.
@@ -56,17 +48,6 @@
 
 /obj/mecha/combat/marauder/seraph/Initialize()
 	. = ..()
-	var/obj/item/mecha_parts/mecha_equipment/ME
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/teleporter(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster(src)
-	ME.attach(src)
 	max_ammo()
 
 /obj/mecha/combat/marauder/mauler // Evil adminbus variant of the marauder.
@@ -78,16 +59,4 @@
 
 /obj/mecha/combat/marauder/mauler/loaded/Initialize()
 	. = ..()
-	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/tesla_energy_relay(src)
-	ME.attach(src)
-	ME = new /obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster(src)
-	ME.attach(src)
 	max_ammo()
-
-

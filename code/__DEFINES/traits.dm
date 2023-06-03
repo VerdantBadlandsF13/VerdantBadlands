@@ -119,6 +119,7 @@
 #define TRAIT_NOFIRE			"nonflammable"
 #define TRAIT_NOGUNS			"no_guns"
 #define TRAIT_NOHUNGER			"no_hunger"
+#define TRAIT_NOTHIRST			"no_thirst"
 #define TRAIT_EASYDISMEMBER		"easy_dismember"
 #define TRAIT_LIMBATTACHMENT 	"limb_attach"
 #define TRAIT_NOLIMBDISABLE		"no_limb_disable"
@@ -228,6 +229,7 @@
 #define TRAIT_BUFFOUT_BUFF		"buffout_buff"
 #define TRAIT_UNARMED_WEAPON	"unarmed_weapon"
 #define TRAIT_ENCLAVE_CODES		"old_world_codes" //Permits players to open the Vault.
+#define TRAIT_FORCED_STANDING 	"forced_standing"
 /// Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 #define TRAIT_HANDS_BLOCKED "handsblocked"
 
@@ -377,3 +379,4 @@
 #define ACTIVE_PARRY_TRAIT				"active_parry"
 #define STICKY_NODROP "sticky-nodrop" //sticky nodrop sounds like a bad soundcloud rapper's name
 #define TRAIT_SPACEWALK "spacewalk"
+#define PA_TRAIT "power_armor"

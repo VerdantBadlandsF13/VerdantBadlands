@@ -2,6 +2,7 @@
 /obj/structure/badlands_props/open_manhole
 	name = "open manhole"
 	desc = "You can see no ladder. Is this safe?"
+	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/structures.dmi'
 	icon_state = "manhole_open_fall"
 	density = TRUE //This will prevent hostile mobs from pathing into chasms, while the canpass override will still let it function like an open turf
 

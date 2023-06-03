@@ -112,7 +112,7 @@ GLOBAL_LIST_INIT(ore_probability, list(/obj/item/stack/ore/uranium = 50,
 	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, FALSE, 50, TRUE, TRUE)
 	visible_message("<span class='boldannounce'>[src] begins to collapse, cutting it off from this world!</span>")
 	animate(src, transform = matrix().Scale(0, 1), alpha = 50, time = 5 SECONDS)
-	addtimer(CALLBACK(src, .proc/collapse), 5 SECONDS)
+/*	addtimer(CALLBACK(src, .proc/collapse), 5 SECONDS)
 
 /obj/effect/collapsing_demonic_portal/proc/collapse()
 	visible_message("<span class='warning'>Something slips out of [src]!</span>")
@@ -174,4 +174,4 @@ GLOBAL_LIST_INIT(ore_probability, list(/obj/item/stack/ore/uranium = 50,
 			new /obj/item/book/granter/spell/sacredflame(loc)
 		if(28)
 			new /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/doom(loc)
-	qdel(src)
+	qdel(src)*/

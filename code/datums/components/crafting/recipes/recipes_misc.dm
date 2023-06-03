@@ -126,6 +126,50 @@
 //Scavenging and Tinkering//
 ///////////////////////////
 
+/datum/crafting_recipe/weapon_repair_kit
+	name = "Weapon repair kit"
+	result = /obj/item/repair_kit/weapon_repair_kit
+	time = 100
+	reqs = list(/obj/item/crafting/small_gear = 1,
+				/obj/item/crafting/large_gear = 1 ,
+				/obj/item/crafting/duct_tape =1,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+
+/datum/crafting_recipe/pa_repair_kit
+	name = "PA repair kit"
+	result = /obj/item/repair_kit/pa_repair_kit
+	time = 100
+	reqs = list(/obj/item/crafting/small_gear = 2,
+				/obj/item/crafting/large_gear = 4 ,
+				/obj/item/crafting/duct_tape =2,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+
+/datum/crafting_recipe/arm_repair_kit
+	name = "Armor repair kit"
+	result = /obj/item/repair_kit/arm_repair_kit
+	time = 100
+	reqs = list(/obj/item/crafting/large_gear = 2,
+				/obj/item/crafting/duct_tape =1,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+
+/datum/crafting_recipe/cloth_repair_kit
+	name = "Sewing kit"
+	result = /obj/item/repair_kit/sewingkit
+	time = 100
+	reqs = list(/obj/item/crafting/duct_tape =2,
+				/obj/item/crafting/wonderglue = 1)
+	tools = list(TOOL_WIRECUTTER)
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
 
 /datum/crafting_recipe/pin_removal
 	name = "Render gun unusable"
@@ -408,7 +452,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	
+
 
 /datum/crafting_recipe/plunger
 	name = "Plunger"

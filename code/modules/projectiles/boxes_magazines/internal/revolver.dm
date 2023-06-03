@@ -29,12 +29,6 @@
 	caliber = "4570"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev4570/death
-	name = "4570 cylinder"
-	ammo_type = /obj/item/ammo_casing/c4570/explosive
-	caliber = "4570"
-	max_ammo = 6
-
 /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	name = "needler internal mag"
 	ammo_type = /obj/item/ammo_casing/caseless/needle
@@ -47,7 +41,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvisedpipe
 	name = "improvised internal magazine piperifle"
-	ammo_type = /obj/item/ammo_casing/a556/sport
+	ammo_type = /obj/item/ammo_casing/a556/a223
 	caliber = "a556"
 	max_ammo = 1
 
@@ -77,7 +71,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/improvised762
 	name = "improvised internal magazine .308"
-	ammo_type = /obj/item/ammo_casing/a762/sport
+	ammo_type = /obj/item/ammo_casing/a762/a308
 	caliber = "a762"
 	max_ammo = 2
 
@@ -105,8 +99,3 @@
 	caliber = ".45"
 	max_ammo = 7
 
-/obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-	name = ".45 LC revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/a45lc
-	caliber = "a45lc"
-	max_ammo = 6

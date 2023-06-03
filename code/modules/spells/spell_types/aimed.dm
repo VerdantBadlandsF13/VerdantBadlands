@@ -1,7 +1,7 @@
 
 /obj/effect/proc_holder/spell/aimed
 	name = "aimed projectile spell"
-	var/projectile_type = /obj/item/projectile/magic/teleport
+	var/projectile_type = /obj/item/projectile/bullet
 	var/deactive_msg = "You discharge your projectile..."
 	var/active_msg = "You charge your projectile!"
 	var/base_icon_state = "projectile"
@@ -104,7 +104,7 @@
 	projectile_var_overrides = list("zap_range" = 15, "zap_power" = 20000, "zap_flags" = ZAP_MOB_DAMAGE)
 	active_msg = "You energize your hand with arcane lightning!"
 	deactive_msg = "You let the energy flow out of your hands back into yourself..."
-	projectile_type = /obj/item/projectile/magic/aoe/lightning
+	projectile_type = /obj/item/projectile/bullet
 
 /obj/effect/proc_holder/spell/aimed/fireball
 	name = "Fireball"
@@ -116,7 +116,7 @@
 	invocation_type = "shout"
 	range = 20
 	cooldown_min = 20 //20 deciseconds reduction per rank
-	projectile_type = /obj/item/projectile/magic/aoe/fireball
+	projectile_type = /obj/item/projectile/bullet
 	base_icon_state = "fireball"
 	action_icon_state = "fireball0"
 	sound = 'sound/magic/fireball.ogg'

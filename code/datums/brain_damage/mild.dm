@@ -63,6 +63,8 @@
 
 /datum/brain_trauma/mild/concussion/on_life()
 	if(prob(5))
+		SEND_SOUND(owner, sound('modular_badlands/code/modules/rp_misc/sound/gore/concussion.ogg',0,1,0,250))
+		owner.blur_eyes(15)
 		switch(rand(1,11))
 			if(1)
 				owner.vomit()

@@ -257,7 +257,7 @@
 						new /obj/item/coin/gold(M)
 		if(14)
 			//Free Gun
-			new /obj/item/gun/ballistic/revolver/m29/snub(drop_location())
+			new /obj/item/gun/ballistic/revolver/m29(drop_location())
 		if(15)
 			//Random One-use spellbook
 			new /obj/item/book/granter/spell/random(drop_location())
@@ -302,7 +302,7 @@
 /datum/outfit/butler
 	name = "Butler"
 	uniform = /obj/item/clothing/under/suit/black_really
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	head = /obj/item/clothing/head/bowler
 	glasses = /obj/item/clothing/glasses/monocle
 	gloves = /obj/item/clothing/gloves/color/white

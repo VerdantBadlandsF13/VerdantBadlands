@@ -58,7 +58,7 @@
 		return 0
 	return ..()
 
-/obj/item/clothing/suit/armor/clockwork
+/obj/item/clothing/suit/armored/clockwork
 	name = "clockwork cuirass"
 	desc = "A bulky cuirass made of brass."
 	icon = 'icons/obj/clothing/clockwork_garb.dmi'
@@ -72,16 +72,16 @@
 	allowed = list(/obj/item/clockwork, /obj/item/clothing/glasses/wraith_spectacles, /obj/item/clothing/glasses/judicial_visor, /obj/item/mmi/posibrain/soul_vessel, /obj/item/reagent_containers/food/drinks/bottle/holyoil)
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC
 
-/obj/item/clothing/suit/armor/clockwork/Initialize()
+/obj/item/clothing/suit/armored/clockwork/Initialize()
 	. = ..()
 	ratvar_act()
 	GLOB.all_clockwork_objects += src
 
-/obj/item/clothing/suit/armor/clockwork/Destroy()
+/obj/item/clothing/suit/armored/clockwork/Destroy()
 	GLOB.all_clockwork_objects -= src
 	return ..()
 
-/obj/item/clothing/suit/armor/clockwork/ratvar_act()
+/obj/item/clothing/suit/armored/clockwork/ratvar_act()
 	if(GLOB.ratvar_awakens)
 		armor = getArmor(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 100, bio = 100, rad = 100, fire = 100, acid = 100, magic = 100, wound = 100)
 		clothing_flags |= STOPSPRESSUREDAMAGE
@@ -98,12 +98,12 @@
 		max_heat_protection_temperature = initial(max_heat_protection_temperature)
 		min_cold_protection_temperature = initial(min_cold_protection_temperature)
 
-/obj/item/clothing/suit/armor/clockwork/mob_can_equip(mob/M, mob/equipper, slot, disable_warning = 0)
+/obj/item/clothing/suit/armored/clockwork/mob_can_equip(mob/M, mob/equipper, slot, disable_warning = 0)
 	if(equipper && !is_servant_of_ratvar(equipper))
 		return 0
 	return ..()
 
-/obj/item/clothing/suit/armor/clockwork/equipped(mob/living/user, slot)
+/obj/item/clothing/suit/armored/clockwork/equipped(mob/living/user, slot)
 	..()
 	if(slot == SLOT_WEAR_SUIT && !is_servant_of_ratvar(user))
 		if(!iscultist(user))

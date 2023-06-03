@@ -165,51 +165,6 @@
 	for(var/i in 1 to 9)
 		new /obj/item/coin/silver(.)
 
-/datum/supply_pack/misc/dueling_stam
-	name = "Dueling Pistols"
-	desc = "Resolve all your quarrels with some nonlethal fun."
-	cost = 2000
-	contains = list(/obj/item/storage/lockbox/dueling/hugbox/stamina)
-	crate_name = "dueling pistols"
-
-/datum/supply_pack/misc/dueling_stam/generate()
-	. = ..()
-	for(var/i in 1 to 3)
-		new /obj/item/storage/lockbox/dueling/hugbox/stamina(.)
-/*
-/datum/supply_pack/misc/dueling_lethal
-	name = "Lethal Dueling Pistols"
-	desc = "Settle your differences the true spaceman way."
-	cost = 3000
-	contraband = TRUE
-	contains = list(/obj/item/storage/lockbox/dueling/hugbox,
-	/obj/item/storage/lockbox/dueling/hugbox,
-	/obj/item/storage/lockbox/dueling/hugbox)
-	crate_name = "dueling pistols (lethal)"
-
-/datum/supply_pack/misc/dueling_death
-	name = "Elimination Dueling Pistols"
-	desc = "It's high noon."
-	cost = 5000
-	hidden = TRUE
-	contains = list(/obj/item/storage/lockbox/dueling)
-	crate_name = "dueling pistols (elimination)"
-
-/datum/supply_pack/misc/dirtymags
-	name = "Dirty Magazines"
-	desc = "Get your mind out of the gutter operative, you have work to do. Three items per order. Possible Results: .357 Speedloaders, Kitchen Gun patented magazines, or Stetchkin magazines."
-	hidden = TRUE
-	cost = 4000
-	var/num_contained = 3
-	contains = list(/obj/item/ammo_box/a357)
-	crate_name = "crate"
-
-/datum/supply_pack/misc/dirtymags/fill(obj/structure/closet/crate/C)
-	var/list/L = contains.Copy()
-	for(var/i in 1 to num_contained)
-		var/item = pick_n_take(L)
-		new item(C)
-*/
 //////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////// Misc Supplies //////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -234,8 +189,7 @@
 					/obj/item/clothing/shoes/wraps/red,
 					/obj/item/clothing/shoes/wraps/red,
 					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/wraps/blue,
-					/obj/item/clothing/shoes/kindleKicks)
+					/obj/item/clothing/shoes/wraps/blue)
 	crate_name = "footie crate"
 
 /datum/supply_pack/misc/funeral

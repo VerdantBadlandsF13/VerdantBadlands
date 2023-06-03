@@ -46,7 +46,6 @@
 	name = "ice blast"
 	damage = 5
 	nodamage = FALSE
-	temperature = -75
 
 /mob/living/simple_animal/hostile/asteroid/ice_demon/OpenFire()
 	if(teleport_distance <= 0)

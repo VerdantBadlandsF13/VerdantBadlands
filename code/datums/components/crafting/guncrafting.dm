@@ -31,7 +31,6 @@
 	icon_state = "receiver_rifle"
 	w_class = WEIGHT_CLASS_SMALL
 
-
 /obj/item/weaponcrafting/improvised_parts/shotgun_receiver
 	name = "shotgun reciever"
 	desc = "An improvised receiver to create a break-action breechloaded shotgun."  // removed some text implying that the item had more uses than it does

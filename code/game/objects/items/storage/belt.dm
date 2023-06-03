@@ -637,7 +637,6 @@
 	STR.max_items = 4
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	CANHOLD_STATIC(STR, typecacheof(list(
-		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/gun/ballistic/revolver,
 		/obj/item/ammo_box/magazine,
 		/obj/item/ammo_box/tube,
@@ -654,23 +653,13 @@
 		/obj/item/ammo_box/c4570,
 		/obj/item/ammo_box/a50MG,
 		/obj/item/ammo_box/c45rev,
-		/obj/item/ammo_box/a45lcrev,
-		/obj/item/gun/energy/laser/solar,
 		/obj/item/gun/energy/laser/pistol,
-		/obj/item/gun/energy/laser/auto,
-		/obj/item/gun/energy/laser/complianceregulator,
-		/obj/item/gun/energy/laser/plasma/pistol,
-		/obj/item/gun/energy/laser/plasma/glock,
-		/obj/item/gun/energy/laser/plasma/glock/extended,
 		/obj/item/gun/energy/laser/wattz,
-		/obj/item/gun/energy/laser/wattz/magneto,
-		/obj/item/gun/energy/laser/plasma/pistol/alien,
 		/obj/item/stock_parts/cell/ammo/ec,
 		/obj/item/stock_parts/cell/ammo/ecp,
 		)))
 
 /obj/item/storage/belt/holster/full/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/detective(src)
 	new /obj/item/ammo_box/c38(src)
 	new /obj/item/ammo_box/c38(src)
 

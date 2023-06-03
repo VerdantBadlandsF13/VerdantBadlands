@@ -94,15 +94,6 @@
 	surplus = 20
 	restricted_roles = list("Janitor")
 
-/datum/uplink_item/role_restricted/pressure_mod
-	name = "Kinetic Accelerator Pressure Mod"
-	desc = "A modification kit which allows Kinetic Accelerators to do greatly increased damage while indoors. \
-			Occupies 35% mod capacity."
-	item = /obj/item/borg/upgrade/modkit/indoors
-	cost = 5 //you need two for full damage, so total of 10 for maximum damage
-	limited_stock = 2 //you can't use more than two!
-	restricted_roles = list("Shaft Miner")
-
 /datum/uplink_item/role_restricted/kitchen_gun
 	name = "Kitchen Gun (TM)"
 	desc = "A revolutionary .45 caliber cleaning solution! Say goodbye to daily stains and dirty surfaces with Kitchen Gun (TM)! \
@@ -117,14 +108,6 @@
 	desc = "An extra eight bullets for an extra eight uses of Kitchen Gun (TM)!"
 	cost = 1
 	restricted_roles = list("Cook", "Janitor")
-
-/datum/uplink_item/role_restricted/magillitis_serum
-	name = "Magillitis Serum Autoinjector"
-	desc = "A single-use autoinjector which contains an experimental serum that causes rapid muscular growth in Hominidae. \
-			Side-affects may include hypertrichosis, violent outbursts, and an unending affinity for bananas."
-	item = /obj/item/reagent_containers/hypospray/magillitis
-	cost = 8
-	restricted_roles = list("Geneticist", "Chief Medical Officer")
 
 /datum/uplink_item/role_restricted/modified_syringe_gun
 	name = "Modified Syringe Gun"
@@ -156,13 +139,6 @@
 	cost = 14
 	item = /obj/item/storage/box/hug/reverse_revolver
 	restricted_roles = list("Clown")
-
-/datum/uplink_item/role_restricted/emitter_cannon
-	name = "Emitter Cannon"
-	desc = "A small emitter fitted into a gun case, do to size constraints and safety it can only shoot about ten times when fully charged."
-	cost = 5 //Low ammo, and deals same as 10mm but emp-able
-	item = /obj/item/gun/energy/emitter
-	restricted_roles = list("Chief Engineer", "Station Engineer", "Atmospheric Technician")
 
 /datum/uplink_item/role_restricted/crushmagboots
 	name = "Crushing Magboots"

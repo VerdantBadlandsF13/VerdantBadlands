@@ -16,9 +16,9 @@
 				- Cowardice: The facility will bring you back, week after week. You have no reason to fear death."
 
 	enforces = "Directives, Required: <br> \
-				- Defence. Protect the sanctuary from outside incursion at all costs. <br> \
-				- Trading. Provide lumber, food and other material to those that require it in trade. <br> \
-				- Secrecy. You are not to speak of your origin, if you even remember such."
+				- Defence: Protect the sanctuary from outside incursion at all costs. <br> \
+				- Trading: Provide lumber, food and other material to those that require it in trade. <br> \
+				- Secrecy: You are not to speak of your origin, if you even remember such."
 
 /datum/outfit/job/lbj
 	name = "LBJdatums"

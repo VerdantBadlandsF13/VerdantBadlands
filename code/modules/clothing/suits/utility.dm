@@ -160,3 +160,33 @@
 	resistance_flags = NONE
 	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_ALL_TAURIC
+
+//Special Biosuit
+
+/obj/item/clothing/suit/bio_suit/f13/hazmat
+	name = "hazmat suit"
+	desc = "(Yellow Level A , hazmat protective suit.<br>You can see some numbers on the tag: 35 56."
+	icon = 'icons/fallout/clothing/suits_utility.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/suit_utility.dmi'
+	icon_state = "hazmat"
+	item_state = "hazmat"
+	w_class = WEIGHT_CLASS_NORMAL
+	slowdown = 0
+	resistance_flags = ACID_PROOF
+	armor = list("melee" = 30, "bullet" = 10, "laser" = 30, "energy" = 25, "bomb" = 16, "bio" = 100, "rad" = 100, "fire" = 35, "acid" = 100)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+	var/obj/item/clothing/head/bio_hood/f13/hazmat
+	actions_types = list(/datum/action/item_action/toggle_helmet)
+	var/helmettype = /obj/item/clothing/head/bio_hood/f13/hazmat
+	mutantrace_variation = NONE
+
+/obj/item/clothing/head/bio_hood/f13/hazmat
+	name = "hazmat hood"
+	desc = "My star, my perfect silence."
+	icon = 'icons/fallout/clothing/hats.dmi'
+	icon_state = "hazmat"
+	item_state = "hazmat_helmet"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
+	resistance_flags = ACID_PROOF
+	armor = list("melee" = 30, "bullet" = 10, "laser" = 30, "energy" = 25, "bomb" = 16, "bio" = 100, "rad" = 100, "fire" = 35, "acid" = 100)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE

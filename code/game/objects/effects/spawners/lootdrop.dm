@@ -49,21 +49,18 @@
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol = 8,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
-				/obj/item/gun/ballistic/revolver/m29/snub,
 				/obj/item/gun/ballistic/automatic/pistol/deagle
 				)
 
 /obj/effect/spawner/lootdrop/armory_contraband/metastation
 	loot = list(/obj/item/gun/ballistic/automatic/pistol = 5,
 				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
-				/obj/item/gun/ballistic/revolver/m29/snub,
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
 				/obj/item/storage/box/syndie_kit/throwing_weapons = 3)
 
 /obj/effect/spawner/lootdrop/gambling
 	name = "gambling valuables spawner"
 	loot = list(
-				/obj/item/gun/ballistic/revolver/russian = 5,
 				/obj/item/storage/box/syndie_kit/throwing_weapons = 1,
 				/obj/item/toy/cards/deck/syndicate = 2
 				)
@@ -187,18 +184,6 @@
 	. = ..()
 
 // Minor lootdrops follow
-
-/obj/effect/spawner/lootdrop/minor/beret_or_rabbitears
-	name = "beret or rabbit ears spawner"
-	loot = list(
-		/obj/item/clothing/head/beret = 1,
-		/obj/item/clothing/head/rabbitears = 1)
-
-/obj/effect/spawner/lootdrop/minor/bowler_or_that
-	name = "bowler or top hat spawner"
-	loot = list(
-		/obj/item/clothing/head/bowler = 1,
-		/obj/item/clothing/head/that = 1)
 
 /obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears
 	name = "kitty ears or rabbit ears spawner"
@@ -507,11 +492,10 @@
 		/obj/item/clothing/under/syndicate = 5,
 		/obj/item/clothing/mask/gas/syndicate = 5,
 		/obj/item/grenade/smokebomb = 10,
-		/obj/item/gun/ballistic/automatic/toy/pistol = 5,
 		/obj/item/firing_pin = 5,
 		/obj/item/grenade/empgrenade = 15,
 		/obj/item/clothing/gloves/tackler/combat/insulated = 10,
-		/obj/item/clothing/shoes/sneakers/noslip = 10
+		/obj/item/clothing/shoes/f13/rag = 10
 		)
 
 /obj/effect/spawner/lootdrop/low_tools
@@ -672,9 +656,7 @@
 	lootcount = 1
 	spawn_on_turf = FALSE
 	loot = list("" = 25,
-		/obj/item/ammo_box/magazine/wt550m9 = 1,
 		/obj/item/ammo_casing/shotgun/buckshot = 7,
-		/obj/item/ammo_casing/shotgun/rubbershot = 7,
 		/obj/item/ammo_casing/a762 = 15,
 		/obj/item/ammo_box/a762 = 15,
 		)
@@ -686,7 +668,6 @@
 	loot = list("" = 50,
 		/obj/item/ammo_box/magazine/wt550m9 = 2,
 		/obj/item/ammo_casing/shotgun/buckshot = 10,
-		/obj/item/ammo_casing/shotgun/rubbershot = 10,
 		/obj/item/ammo_casing/a762 = 7,
 		/obj/item/ammo_box/a762 = 7,
 		)
@@ -697,10 +678,6 @@
 	spawn_on_turf = FALSE
 	loot = list("" = 50,
 		/obj/item/ammo_box/clip/shotgun/loaded/buckshot = 5,
-		/obj/item/ammo_box/clip/shotgun/loaded/beanbag = 5,
-		/obj/item/ammo_box/clip/shotgun/loaded/incendiary = 5,
 		/obj/item/ammo_casing/shotgun/buckshot = 8,
-		/obj/item/ammo_casing/shotgun/rubbershot = 9,
 		/obj/item/ammo_casing/shotgun = 8,
-		/obj/item/ammo_casing/shotgun/incendiary = 10,
 		)

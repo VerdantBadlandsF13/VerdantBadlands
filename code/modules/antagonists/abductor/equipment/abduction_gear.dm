@@ -6,7 +6,7 @@
 #define MIND_DEVICE_CONTROL 2
 
 //AGENT VEST
-/obj/item/clothing/suit/armor/abductor/vest
+/obj/item/clothing/suit/armored/abductor/vest
 	name = "agent vest"
 	desc = "A vest outfitted with advanced stealth technology. It has two modes - combat and stealth."
 	icon = 'icons/obj/abductor.dmi'
@@ -30,12 +30,12 @@
 	var/stealth_armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 15, "rad" = 15, "fire" = 70, "acid" = 70)
 	var/combat_armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 90, "acid" = 90)
 
-/obj/item/clothing/suit/armor/abductor/vest/Initialize()
+/obj/item/clothing/suit/armored/abductor/vest/Initialize()
 	. = ..()
 	stealth_armor = getArmor(arglist(stealth_armor))
 	combat_armor = getArmor(arglist(combat_armor))
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/toggle_nodrop()
+/obj/item/clothing/suit/armored/abductor/vest/proc/toggle_nodrop()
 	if(HAS_TRAIT_FROM(src, TRAIT_NODROP, ABDUCTOR_VEST_TRAIT))
 		REMOVE_TRAIT(src, TRAIT_NODROP, ABDUCTOR_VEST_TRAIT)
 	else
@@ -43,7 +43,7 @@
 	if(ismob(loc))
 		to_chat(loc, "<span class='notice'>Your vest is now [HAS_TRAIT_FROM(src, TRAIT_NODROP, ABDUCTOR_VEST_TRAIT) ? "locked" : "unlocked"].</span>")
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/flip_mode()
+/obj/item/clothing/suit/armored/abductor/vest/proc/flip_mode()
 	switch(mode)
 		if(VEST_STEALTH)
 			mode = VEST_COMBAT
@@ -61,14 +61,14 @@
 		var/datum/action/A = X
 		A.UpdateButtonIcon()
 
-/obj/item/clothing/suit/armor/abductor/vest/item_action_slot_check(slot, mob/user, datum/action/A)
+/obj/item/clothing/suit/armored/abductor/vest/item_action_slot_check(slot, mob/user, datum/action/A)
 	if(slot == SLOT_WEAR_SUIT) //we only give the mob the ability to activate the vest if he's actually wearing it.
 		return TRUE
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/SetDisguise(datum/icon_snapshot/entry)
+/obj/item/clothing/suit/armored/abductor/vest/proc/SetDisguise(datum/icon_snapshot/entry)
 	disguise = entry
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/ActivateStealth()
+/obj/item/clothing/suit/armored/abductor/vest/proc/ActivateStealth()
 	if(disguise == null)
 		return
 	stealth_active = 1
@@ -82,7 +82,7 @@
 		M.add_overlay(disguise.overlays)
 		M.update_inv_hands()
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/DeactivateStealth()
+/obj/item/clothing/suit/armored/abductor/vest/proc/DeactivateStealth()
 	if(!stealth_active)
 		return
 	stealth_active = 0
@@ -93,11 +93,11 @@
 		M.cut_overlays()
 		M.regenerate_icons()
 
-/obj/item/clothing/suit/armor/abductor/vest/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/abductor/vest/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	. = ..()
 	DeactivateStealth()
 
-/obj/item/clothing/suit/armor/abductor/vest/ui_action_click()
+/obj/item/clothing/suit/armored/abductor/vest/ui_action_click()
 	switch(mode)
 		if(VEST_COMBAT)
 			Adrenaline()
@@ -107,7 +107,7 @@
 			else
 				ActivateStealth()
 
-/obj/item/clothing/suit/armor/abductor/vest/proc/Adrenaline()
+/obj/item/clothing/suit/armored/abductor/vest/proc/Adrenaline()
 	if(ishuman(loc))
 		if(combat_cooldown != initial(combat_cooldown))
 			to_chat(loc, "<span class='warning'>Combat injection is still recharging.</span>")
@@ -119,12 +119,12 @@
 		combat_cooldown = 0
 		START_PROCESSING(SSobj, src)
 
-/obj/item/clothing/suit/armor/abductor/vest/process()
+/obj/item/clothing/suit/armored/abductor/vest/process()
 	combat_cooldown++
 	if(combat_cooldown == initial(combat_cooldown))
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/clothing/suit/armor/abductor/Destroy()
+/obj/item/clothing/suit/armored/abductor/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	for(var/obj/machinery/abductor/console/C in GLOB.machines)
 		if(C.vest == src)
@@ -380,7 +380,7 @@
 /obj/item/gun/energy/alien
 	name = "alien pistol"
 	desc = "A complicated gun that fires bursts of high-intensity radiation."
-	ammo_type = list(/obj/item/ammo_casing/energy/declone)
+	ammo_type = list(/obj/item/ammo_casing/energy)
 	pin = /obj/item/firing_pin/abductor
 	icon_state = "alienpistol"
 	item_state = "alienpistol"
@@ -390,7 +390,7 @@
 	name = "shrink ray blaster"
 	desc = "This is a piece of frightening alien tech that enhances the magnetic pull of atoms in a localized space to temporarily make an object shrink. \
 			That or it's just space magic. Either way, it shrinks stuff."
-	ammo_type = list(/obj/item/ammo_casing/energy/shrink)
+	ammo_type = list(/obj/item/ammo_casing/energy)
 	item_state = "shrink_ray"
 	icon_state = "shrink_ray"
 	fire_delay = 30

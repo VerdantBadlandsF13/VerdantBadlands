@@ -25,7 +25,7 @@
 */
 
 /obj/item/ammo_box/magazine/autopipe
-	name = "pipe rifle ammo belt (.357)"
+	name = "ammo belt (.357)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "autopipe_belt"
 	caliber = "357"
@@ -103,23 +103,6 @@
 /obj/item/ammo_box/magazine/garand308/empty
 	start_empty = 1
 
-/obj/item/ammo_box/magazine/sks
-	name = "7.62mm clip (SKS)"
-	icon_state = "enbloc-10"
-	ammo_type = /obj/item/ammo_casing/a762
-	caliber = "a762"
-	max_ammo = 10
-
-/obj/item/ammo_box/magazine/sks/update_icon()
-	..()
-	if (ammo_count() >= 10)
-		icon_state = "enbloc-10"
-	else
-		icon_state = "enbloc-[ammo_count()]"
-
-/obj/item/ammo_box/magazine/sks/empty
-	start_empty = 1
-
 /obj/item/ammo_box/magazine/m762
 	name = "rifle magazine (7.62x51)"
 	icon_state = "mag308"
@@ -141,28 +124,15 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/m473
-	name = "g11 magazine (4.73mm)"
+	name = "G11 magazine (4.73mm)"
 	icon_state = "473mm"
 	caliber = "473mm"
 	ammo_type = /obj/item/ammo_casing/caseless/g11
 	max_ammo = 50
 	multiple_sprites = 2
 
-/obj/item/ammo_box/magazine/m473/explosive
-	name = "g11 magazine (4.73mm explosive)"
-	icon_state = "473mm"
-	caliber = "473mm"
-	ammo_type = /obj/item/ammo_casing/caseless/g11/explosive
-	max_ammo = 50
-	multiple_sprites = 2
-
 /obj/item/ammo_box/magazine/m473/empty
 	start_empty = 1
-
-/obj/item/ammo_box/magazine/m473/small
-	name = "4.7mm carbine magazine"
-	icon_state = "46x30mmt"
-	max_ammo = 20
 
 /obj/item/ammo_box/magazine/m473/small/empty
 	start_empty = 1
@@ -172,11 +142,5 @@
 	icon_state = "2mm"
 	ammo_type = /obj/item/ammo_casing/c2mm
 	caliber = "2mm"
-	max_ammo = 10
-	multiple_sprites = 2
-
-/obj/item/ammo_box/magazine/m2mm/blender
-	name = "2mm \"Blender\" electromagnetic magazine"
-	ammo_type = /obj/item/ammo_casing/c2mm/blender
 	max_ammo = 10
 	multiple_sprites = 2

@@ -19,8 +19,7 @@
 #define TOOL_GLASS_CUT		"glasskit"
 #define TOOL_BONESET		"bonesetter"
 //Fallout 13 Tools//
-#define TOOL_NCR			"NCR ammo bench"
-#define TOOL_LEGION			"Legion ammo bench"
+#define TOOL_AMMO			"ammo bench"
 #define TOOL_FORGE			"forge"
 #define TOOL_RELOADER		"pre-war reloading press"
 #define TOOL_MSRELOADER     "makeshift reloading tool"

@@ -58,8 +58,7 @@
 
 		if("baseball") // 42~ tc
 			new /obj/item/clothing/glasses/sunglasses/garb(src) //Lets say 2 tc
-			new /obj/item/card/emag(src) //6 tc
-			new /obj/item/clothing/shoes/sneakers/noslip(src) //2tc
+			new /obj/item/card/emag(src) //8 tc
 			new /obj/item/encryptionkey/syndicate(src) //1tc
 			new /obj/item/autosurgeon/anti_drop(src) //Lets just say 7~
 			new /obj/item/clothing/under/syndicate/baseball(src) //3tc

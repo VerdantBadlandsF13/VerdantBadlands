@@ -382,7 +382,7 @@
 /obj/item/gun/ballistic/automatic/pistol/deagle/ctf
 	desc = "This looks like it could really hurt in melee."
 	force = 75
-	mag_type = /obj/item/ammo_box/magazine/m44
+	mag_type = /obj/item/ammo_box/magazine/m50
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/ctf/dropped(mob/user)
 	. = ..()
@@ -514,8 +514,7 @@
 		ADD_TRAIT(I, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
 
 /datum/outfit/ctf/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill
-	shoes = /obj/item/clothing/shoes/jackboots/fast
+	shoes = /obj/item/clothing/shoes/f13/military
 
 /datum/outfit/ctf/red
 	suit = /obj/item/clothing/suit/space/hardsuit/shielded/ctf/red
@@ -524,8 +523,7 @@
 	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/red
 
 /datum/outfit/ctf/red/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill/red
-	shoes = /obj/item/clothing/shoes/jackboots/fast
+	shoes = /obj/item/clothing/shoes/f13/military
 
 /datum/outfit/ctf/blue
 	suit = /obj/item/clothing/suit/space/hardsuit/shielded/ctf/blue
@@ -534,8 +532,7 @@
 	r_pocket = /obj/item/ammo_box/magazine/recharge/ctf/blue
 
 /datum/outfit/ctf/blue/instagib
-	r_hand = /obj/item/gun/energy/laser/instakill/blue
-	shoes = /obj/item/clothing/shoes/jackboots/fast
+	shoes = /obj/item/clothing/shoes/f13/military
 
 /datum/outfit/ctf/red/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()

@@ -119,8 +119,6 @@
 //Not getting the below outside admin abuse./
 /////////////////////////////////////////////
 
-
-
 /obj/item/projectile/bullet/rocket/a84mm_br
 	name ="\improper APHE missile"
 	desc = "Boom."

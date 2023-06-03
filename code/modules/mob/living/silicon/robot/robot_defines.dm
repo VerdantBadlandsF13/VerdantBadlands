@@ -89,17 +89,11 @@
 	var/hat_offset = -3
 	var/list/equippable_hats = list(/obj/item/clothing/head/caphat,
 	/obj/item/clothing/head/hardhat,
-	/obj/item/clothing/head/centhat,
-	/obj/item/clothing/head/HoS,
-	/obj/item/clothing/head/beret,
 	/obj/item/clothing/head/kitty,
-	/obj/item/clothing/head/hopcap,
 	/obj/item/clothing/head/wizard,
 	/obj/item/clothing/head/nursehat,
-	/obj/item/clothing/head/sombrero,
 	/obj/item/clothing/head/helmet/chaplain/witchunter_hat,
 	/obj/item/clothing/head/soft/, //All baseball caps
-	/obj/item/clothing/head/that, //top hat
 	/obj/item/clothing/head/collectable/tophat, //Not sure where this one is found, but it looks the same so might as well include
 	/obj/item/clothing/mask/bandana/, //All bandanas (which only work in hat mode)
 	/obj/item/clothing/head/fedora,

@@ -49,7 +49,6 @@
 	ears = /obj/item/radio/headset/heads/captain/alt
 	gloves = /obj/item/clothing/gloves/color/captain
 	uniform =  /obj/item/clothing/under/rank/captain
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	head = /obj/item/clothing/head/caphat
 
@@ -58,7 +57,7 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/captain
 
 	implants = list(/obj/item/implant/mindshield)
-	accessory = /obj/item/clothing/accessory/medal/gold/captain
+	accessory = /obj/item/clothing/accessory/medal/gold
 
 	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/captain)
 

@@ -1069,6 +1069,10 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 /mob/proc/adjust_thirst(change, max = INFINITY)
 	water = clamp(water + change, 0, max)
 
+///Force set the mob water level
+/mob/proc/set_thirst(change)
+	water = max(0, change)
+
 /mob/setMovetype(newval)
 	. = ..()
 	update_movespeed(FALSE)

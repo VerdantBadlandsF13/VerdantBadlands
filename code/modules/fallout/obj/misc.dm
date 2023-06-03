@@ -154,100 +154,20 @@
 	icon = 'icons/obj/flags.dmi'
 	icon_state = "emptyflag"
 	item_state = "emptyflag"
-	var/faction = null
-	var/removing
 
 /obj/item/flag/Initialize()
 	. = ..()
 	AddComponent(/datum/component/largetransparency, y_size = 1)
 
-/obj/item/flag/ncr
-	name = "NCR flag"
-	desc = "A flag with a two headed bear, the symbol of the New California Republic."
-	icon_state = "ncrflag"
-	item_state = "ncrflag"
-	faction = "NCR"
-	anchored = 1
-
-/obj/item/flag/bos
-	name = "Brotherhood of Steel flag"
-	desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
-	icon_state = "bosflag"
-	item_state = "bosflag"
-	faction = FACTION_BROTHERHOOD
-	anchored = 1
-
-/obj/item/flag/legion
-	name = "Legion flag"
-	desc = "A flag with a golden bull, the symbol of Caesar's Legion."
-	icon_state = "legionflag"
-	item_state = "legionflag"
-	faction = FACTION_LEGION
-	anchored = 1
-
-/obj/item/flag/bighorn
-	name = "Bighorn flag"
-	desc = "A flag depicting the head of a bighorner. It's the symbol of the town of Bighorn."
-	icon_state = "bighornflag"
-	item_state = "bighornflag"
-	faction = FACTION_BIGHORN
-	anchored = 1
-
-/obj/item/flag/followers
-	name = "Followers of the Apocalypse flag"
-	desc = "A white flag with the black Follower's of the Apocalpyse cross on it."
-	icon_state = "followersflag"
-	item_state = "followersflag"
-	faction = FACTION_FOLLOWERS
-	anchored = 1
-
-/obj/item/flag/locust
-	name = "Locust flag"
-	desc = "A flag with a skull, the symbol of Locusts."
-	icon_state = "locustflag"
-	item_state = "locustflag"
-	faction = "Locust"
-	anchored = 1
-
-/obj/item/flag/yuma
-	name = "Yuma banner"
-	desc = "A banner depicting three rivers meeting at its center, overlaid with an ear of corn."
-	icon_state = "cornflag"
-	item_state = "cornflag"
-	faction = "Oasis"
-	anchored = 1
-
-/obj/item/flag/vtcc
-	name = "Vault-Tec Cityscape Coalition flag"
-	desc = "A flag reminiscent of that from old America. The symbol of Vault-Tec appropriated in place of the old stars sharing their colour, with 4 stripes in 2 colours."
-	icon_state = "vtccflag"
-	item_state = "vtccflag"
-	faction = "VTCC"
-	anchored = 1
-
-/obj/item/flag/vtcc/highvhills
-	name = "High Valley Hills flag"
-	desc = "A flag with two white stripes, blue border and a red centre with a white Vault-Tec logo, turned on its side and stretched out."
-
-/obj/item/flag/khan
-	name = "Great Khans flag"
-	desc = "A flag worn and weathered from a long cherished history. A decorated smiling skull smiles mockingly upon those who challenge it."
-	icon_state = "khanflag"
-	item_state = "khanflag"
-	faction = "Great Khans"
-	anchored = 1
-
 /obj/item/flag/enclave
-	name = "Enclave flag"
-	desc = "A flag worn and weathered from the Casper's Snow."
+	name = "old flag"
+	desc = "A flag worn and weathered from years of exposure to the elements."
 	icon_state = "enclaveflag"
 	item_state = "enclaveflag"
-	faction = FACTION_ENCLAVE
 	anchored = 1
 
 /obj/item/flag/enclave/alt
-	name = "Enclave flag"
-	desc = "A flag torn and weathered from the Casper's Snow. Marking what was once an Enclave territory"
+	name = "old flag"
 	icon_state = "enclaveflag_alt"
 	item_state = "enclaveflag_alt"
 
@@ -257,55 +177,8 @@
 	icon_state = "enclaveflag_america"
 	item_state = "enclaveflag_america"
 
-/obj/item/flag/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/stack/sheet/leather) && item_state == "emptyflag")
-		visible_message("<span class='notice'>[user] begins to make a flag.</span>")
-		if(do_after(user, 60, target = src))
-			var/obj/item/stack/sheet/leather/H = I
-			if(H.use(1))
-				var/list/choices = list("BOS", "Enclave")
-				var/flag = input("Please choose which faction flag you wish to create.") in choices
-				switch(flag)
-					if(FACTION_BROTHERHOOD)
-						name = "BOS flag"
-						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
-						icon_state = "bosflag"
-						item_state = "bosflag"
-						faction = FACTION_BROTHERHOOD
-						anchored = 1
-					if(FACTION_ENCLAVE)
-						name = "Enclave flag"
-						desc = "A flag worn and weathered from the snow."
-						icon_state = "enclaveflag"
-						item_state = "enclaveflag"
-						faction = FACTION_ENCLAVE
-						anchored = 1
-				update_icon()
-	else
-		attack_hand(user)
-
-/obj/item/flag/attack_hand(mob/user)
-	if(!removing && item_state != "emptyflag")
-		visible_message("<span class='notice'>[user] begins to remove a flag.</span>")
-		removing = TRUE
-		if(do_after(user, 30, target = src))
-			new /obj/item/stack/sheet/leather(loc)
-			name = "empty flag"
-			icon_state = "emptyflag"
-			item_state = "emptyflag"
-			faction = null
-			update_icon()
-			removing = FALSE
-		else
-			return removing = FALSE
-
-/obj/item/flag/dropped(mob/user)
-	..()
-	anchored = 1
-
-/obj/item/flag/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first)
-	dropped(thrower)
 ////////Viper stuff////// subject to change, but this way was simple
+
 /obj/item/viper_venom
 	name = "Viper venom"
 	desc = "A container of special Mojave viper venom, prepared by a skilled Viper shaman." //only used for viper spear recipe

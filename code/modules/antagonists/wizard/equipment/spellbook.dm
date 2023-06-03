@@ -122,11 +122,11 @@
 
 /datum/spellbook_entry/disintegrate
 	name = "Disintegrate"
-	spell_type = /obj/effect/proc_holder/spell/targeted/touch/disintegrate
+//	spell_type = /obj/effect/proc_holder/spell/targeted/touch/disintegrate
 
 /datum/spellbook_entry/nuclearfist
 	name = "Nuclear Fist"
-	spell_type = /obj/effect/proc_holder/spell/targeted/touch/nuclear_fist
+//	spell_type = /obj/effect/proc_holder/spell/targeted/touch/nuclear_fist
 
 /datum/spellbook_entry/disabletech
 	name = "Disable Tech"
@@ -198,7 +198,7 @@
 
 /datum/spellbook_entry/fleshtostone
 	name = "Flesh to Stone"
-	spell_type = /obj/effect/proc_holder/spell/targeted/touch/flesh_to_stone
+//	spell_type = /obj/effect/proc_holder/spell/targeted/touch/flesh_to_stone
 
 /datum/spellbook_entry/summonitem
 	name = "Summon Item"

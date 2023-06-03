@@ -42,7 +42,6 @@
 	damage_type = BURN
 	nodamage = 1
 	flag = "energy"
-	temperature = 50
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/GiveTarget(new_target)
 	if(..()) //we have a target
@@ -155,7 +154,6 @@
 	damage = 5
 	damage_type = BURN
 	nodamage = FALSE
-	temperature = 500 //Heats you up!
 
 /obj/item/projectile/temp/basilisk/magmawing/on_hit(atom/target, blocked = FALSE)
 	. = ..()

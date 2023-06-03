@@ -509,31 +509,6 @@
 	. = new_corgi
 	qdel(src)
 
-/mob/living/carbon/proc/gorillize(mind_transfer = TRUE)
-	if(mob_transforming)
-		return
-
-	SSblackbox.record_feedback("amount", "gorillas_created", 1)
-
-	var/Itemlist = get_equipped_items(TRUE)
-	Itemlist += held_items
-	for(var/obj/item/W in Itemlist)
-		dropItemToGround(W, TRUE)
-
-	regenerate_icons()
-	mob_transforming = TRUE
-	Paralyze(INFINITY)
-	icon = null
-	invisibility = INVISIBILITY_MAXIMUM
-	var/mob/living/simple_animal/hostile/gorilla/new_gorilla = new (get_turf(src))
-	new_gorilla.a_intent = INTENT_HARM
-	if(mind && mind_transfer)
-		mind.transfer_to(new_gorilla)
-	else
-		transfer_ckey(new_gorilla)
-	to_chat(new_gorilla, "<B>You are now a gorilla. Ooga ooga!</B>")
-	. = new_gorilla
-	qdel(src)
 
 /mob/living/carbon/human/Animalize(mind_transfer = TRUE)
 

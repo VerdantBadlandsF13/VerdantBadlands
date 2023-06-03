@@ -75,8 +75,8 @@
 	name = "Brotherhood"
 	ears = 		/obj/item/radio/headset/headset_bos/virt
 	uniform =	/obj/item/clothing/under/syndicate/brotherhood
-	shoes = 	/obj/item/clothing/shoes/combat/swat
-	gloves = 	/obj/item/clothing/gloves/combat
+	shoes = 	/obj/item/clothing/shoes/f13/rag
+	gloves = 	/obj/item/clothing/gloves/f13/military
 	id = 		/obj/item/card/id/dogtag/virt
 	box = 		/obj/item/storage/survivalkit_adv
 	starting_funds = 0
@@ -98,10 +98,6 @@
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, VIRTUAL_REALITY_TRAIT)
 	ADD_TRAIT(H, TRAIT_GENERIC, VIRTUAL_REALITY_TRAIT)
 	ADD_TRAIT(H, TRAIT_PA_WEAR, VIRTUAL_REALITY_TRAIT)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmor)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmet)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmormk2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
 
 /datum/outfit/vr/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	. = ..()

@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(terrorism, FALSE)
 /mob/living/carbon/human/proc/make_terrorism()
 	for(var/obj/item/I in held_items)
 		qdel(I)
-	var/obj/item/gun/energy/laser/LaserAK/AK = new(src)
+	var/obj/item/gun/energy/laser/aer9/AK = new(src)
 	if(!GLOB.terrorism)
 		AK.flags_1 |= ADMIN_SPAWNED_1 //To prevent announcing
 	put_in_hands(AK)

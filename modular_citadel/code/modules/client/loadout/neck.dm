@@ -1,7 +1,7 @@
 /datum/gear/neck
 	category = LOADOUT_CATEGORY_NECK
-	subcategory = LOADOUT_SUBCATEGORY_NECK_GENERAL
 	slot = SLOT_NECK
+	cost = 2
 
 /datum/gear/neck/poncho
 	name = "poncho"
@@ -23,7 +23,6 @@
 	name = "ragged mantle"
 	path = /obj/item/clothing/neck/mantle/ragged
 
-
 /datum/gear/neck/apron
 	name = "simple apron"
 	path = /obj/item/clothing/neck/apron/labor
@@ -34,17 +33,14 @@
 
 /datum/gear/neck/blacktie
 	name = "black tie"
-	subcategory = LOADOUT_SUBCATEGORY_NECK_TIE
 	path = /obj/item/clothing/neck/tie/black
 
 /datum/gear/neck/bluetie
 	name = "blue tie"
-	subcategory = LOADOUT_SUBCATEGORY_NECK_TIE
 	path = /obj/item/clothing/neck/tie/blue
 
 /datum/gear/neck/redtie
 	name = "red tie"
-	subcategory = LOADOUT_SUBCATEGORY_NECK_TIE
 	path = /obj/item/clothing/neck/tie/red
 
 /datum/gear/neck/choker
@@ -61,7 +57,6 @@
 
 /datum/gear/neck/scarf
 	name = "white scarf"
-	subcategory = LOADOUT_SUBCATEGORY_NECK_SCARVES
 	path = /obj/item/clothing/neck/scarf
 
 /datum/gear/neck/scarf/black

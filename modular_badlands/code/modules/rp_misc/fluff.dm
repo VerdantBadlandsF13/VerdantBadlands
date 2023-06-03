@@ -46,12 +46,12 @@ Ignore it, if possible.
 		return
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
 		handle_crit_stamina_sound()
-		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
+//		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
 		last_breath = world.time + 1200
 		return
 	if(getStaminaLoss() > STAMINA_LOW)
 		handle_low_stamina_sound()
-		to_chat(src, span_warning("You're becoming winded. Take a break."))
+//		to_chat(src, span_warning("You're becoming winded. Take a break."))
 		last_breath = world.time + 1200
 		return
 

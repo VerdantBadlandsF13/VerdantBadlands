@@ -17,18 +17,15 @@
 	name = "Mafia Detective"
 
 	uniform = /obj/item/clothing/under/rank/security/detective
-	// neck = /obj/item/clothing/neck/tie/detective
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/det_suit
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/fedora/det_hat
 	mask = /obj/item/clothing/mask/cigarette
 
 /datum/outfit/mafia/psychologist
 	name = "Mafia Psychologist"
 
 	uniform = /obj/item/clothing/under/suit/black
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/rag
 
 /datum/outfit/mafia/md
 	name = "Mafia Medical Doctor"
@@ -46,16 +43,13 @@
 	name = "Mafia Lawyer"
 
 	uniform = /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
-	suit = /obj/item/clothing/suit/toggle/lawyer
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/fancy
 
 /datum/outfit/mafia/hop
 	name = "Mafia Head of Personnel"
 
 	uniform = /obj/item/clothing/under/rank/civilian/head_of_personnel
-	suit = /obj/item/clothing/suit/armor/vest/alt
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	head = /obj/item/clothing/head/hopcap
 	glasses = /obj/item/clothing/glasses/sunglasses
 
 //mafia
@@ -64,7 +58,7 @@
 	name = "Mafia Changeling"
 
 	head = /obj/item/clothing/head/helmet/changeling
-	suit = /obj/item/clothing/suit/armor/changeling
+	suit = /obj/item/clothing/suit/armored/changeling
 
 //solo
 
@@ -91,7 +85,7 @@
 
 	mask = /obj/item/clothing/mask/gas/syndicate
 	uniform = /obj/item/clothing/under/syndicate/tacticool
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 
 /datum/outfit/mafia/nightmare
 	name = "Mafia Nightmare"

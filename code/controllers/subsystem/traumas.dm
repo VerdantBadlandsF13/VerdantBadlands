@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(traumas)
 					"lizards"   = typecacheof(list(/obj/item/toy/plush/lizardplushie, /obj/item/reagent_containers/food/snacks/kebab/tail,
 						/obj/item/organ/tail/lizard, /obj/item/reagent_containers/food/drinks/bottle/lizardwine)),
 
-					"skeletons" = typecacheof(list(/obj/item/organ/tongue/bone, /obj/item/clothing/suit/armor/bone, /obj/item/stack/sheet/bone,
+					"skeletons" = typecacheof(list(/obj/item/organ/tongue/bone, /obj/item/stack/sheet/bone,
 						/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton,
 						/obj/effect/decal/remains/human)),
 					"conspiracies" = typecacheof(list(/obj/item/clothing/under/rank/captain, /obj/item/clothing/under/rank/security/head_of_security,
@@ -84,7 +84,7 @@ SUBSYSTEM_DEF(traumas)
 						/obj/item/clothing/under/rank/security/head_of_security/grey, /obj/item/clothing/under/rank/security/head_of_security/alt,
 						/obj/item/clothing/under/rank/rnd/research_director/alt, /obj/item/clothing/under/rank/rnd/research_director/turtleneck,
 						/obj/item/clothing/under/rank/captain/parade, /obj/item/clothing/under/rank/security/head_of_security/parade, /obj/item/clothing/under/rank/security/head_of_security/parade/female,
-						/obj/item/clothing/head/helmet/abductor, /obj/item/clothing/suit/armor/abductor/vest, /obj/item/abductor/baton,
+						/obj/item/clothing/head/helmet/abductor, /obj/item/clothing/suit/armored/abductor/vest, /obj/item/abductor/baton,
 						/obj/item/storage/belt/military/abductor, /obj/item/gun/energy/alien, /obj/item/abductor/silencer,
 						/obj/item/abductor/gizmo, /obj/item/clothing/under/rank/centcom/officer,
 						/obj/item/clothing/suit/space/hardsuit/ert, /obj/item/clothing/suit/space/hardsuit/ert/sec,
@@ -100,8 +100,7 @@ SUBSYSTEM_DEF(traumas)
 						/obj/item/storage/firstaid, /obj/item/storage/pill_bottle, /obj/item/healthanalyzer,
 						/obj/structure/sign/departments/medbay, /obj/machinery/door/airlock/medical, /obj/machinery/sleeper,
 						/obj/machinery/dna_scannernew, /obj/machinery/atmospherics/components/unary/cryo_cell, /obj/item/surgical_drapes,
-						/obj/item/retractor, /obj/item/hemostat, /obj/item/cautery, /obj/item/surgicaldrill, /obj/item/scalpel, /obj/item/circular_saw,
-						/obj/item/clothing/suit/bio_suit/plaguedoctorsuit, /obj/item/clothing/head/plaguedoctorhat, /obj/item/clothing/mask/gas/plaguedoctor)),
+						/obj/item/retractor, /obj/item/hemostat, /obj/item/cautery, /obj/item/surgicaldrill, /obj/item/scalpel, /obj/item/circular_saw)),
 
 					"authority"   = typecacheof(list(/obj/item/clothing/under/rank/captain,  /obj/item/clothing/under/rank/civilian/head_of_personnel,
 						/obj/item/clothing/under/rank/security/head_of_security, /obj/item/clothing/under/rank/rnd/research_director,
@@ -116,7 +115,7 @@ SUBSYSTEM_DEF(traumas)
 						/obj/item/clothing/suit/hooded/cultrobes, /obj/item/clothing/head/hooded/cult_hoodie, /obj/effect/rune,
 						/obj/item/stack/sheet/runed_metal, /obj/machinery/door/airlock/cult, /obj/singularity/narsie,
 						/obj/item/soulstone,
-						/obj/structure/destructible/clockwork, /obj/item/clockwork, /obj/item/clothing/suit/armor/clockwork,
+						/obj/structure/destructible/clockwork, /obj/item/clockwork, /obj/item/clothing/suit/armored/clockwork,
 						/obj/item/clothing/glasses/judicial_visor, /obj/effect/clockwork/sigil/, /obj/item/stack/tile/brass,
 						/obj/machinery/door/airlock/clockwork,
 						/obj/item/clothing/suit/wizrobe, /obj/item/clothing/head/wizard, /obj/item/spellbook, /obj/item/staff,
@@ -126,7 +125,7 @@ SUBSYSTEM_DEF(traumas)
 
 					"aliens"   = typecacheof(list(/obj/item/clothing/mask/facehugger, /obj/item/organ/body_egg/alien_embryo,
 						/obj/structure/alien, /obj/item/toy/toy_xeno,
-						/obj/item/clothing/suit/armor/abductor, /obj/item/abductor, /obj/item/gun/energy/alien,
+						/obj/item/clothing/suit/armored/abductor, /obj/item/abductor, /obj/item/gun/energy/alien,
 						/obj/item/abductor/baton, /obj/item/radio/headset/abductor, /obj/item/scalpel/alien, /obj/item/hemostat/alien,
 						/obj/item/retractor/alien, /obj/item/circular_saw/alien, /obj/item/surgicaldrill/alien, /obj/item/cautery/alien,
 						/obj/item/clothing/head/helmet/abductor, /obj/structure/bed/abductor, /obj/structure/table_frame/abductor,
@@ -134,10 +133,7 @@ SUBSYSTEM_DEF(traumas)
 						/obj/machinery/abductor, /obj/item/crowbar/abductor, /obj/item/screwdriver/abductor, /obj/item/weldingtool/abductor,
 						/obj/item/wirecutters/abductor, /obj/item/wrench/abductor, /obj/item/stack/sheet/mineral/abductor)),
 
-					"birds" = typecacheof(list(/obj/item/clothing/mask/gas/plaguedoctor, /obj/item/reagent_containers/food/snacks/cracker,
-						/obj/item/clothing/suit/chickensuit, /obj/item/clothing/head/chicken,
-						/obj/item/clothing/suit/toggle/owlwings, /obj/item/clothing/under/costume/owl, /obj/item/clothing/mask/gas/owl_mask,
-						/obj/item/clothing/under/costume/griffin, /obj/item/clothing/shoes/griffin, /obj/item/clothing/head/griffin,
+					"birds" = typecacheof(list(/obj/item/reagent_containers/food/snacks/cracker,
 						/obj/item/clothing/head/helmet/space/freedom, /obj/item/clothing/suit/space/freedom)),
 
 					"anime" = typecacheof(list(/obj/item/clothing/under/costume/schoolgirl, /obj/item/katana, /obj/item/reagent_containers/food/snacks/sashimi, /obj/item/reagent_containers/food/snacks/chawanmushi,

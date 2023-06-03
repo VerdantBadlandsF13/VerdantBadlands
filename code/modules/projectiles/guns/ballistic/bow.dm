@@ -77,17 +77,6 @@
 		draw(user, FALSE)
 		recentdraw = world.time + 2
 
-/obj/item/gun/ballistic/bow/xbow
-	name = "magazine-fed crossbow"
-	desc = "A somewhat primitive projectile weapon. Has a spring-loaded magazine, but still requires drawing back before firing. Fires arrows slightly faster than regular bows, improving damage"
-	icon_state = "xbow"
-	item_state = "xbow"
-	icon_prefix = "xbow"
-	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
-	extra_speed = 400
-
-
-//Regular Bow
 /obj/item/gun/ballistic/bow/tribal
 	name = "short bow"
 	desc = "A simple wooden bow with small pieces of turquiose, cheaply made and small enough to fit most bags, better then nothing I guess."
@@ -96,19 +85,6 @@
 	icon_prefix = "tribalbow"
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 10
-
-
-//Bone Bow
-/obj/item/gun/ballistic/bow/claw
-	name = "deathclaw bow"
-	desc = "A bone bow, made of pieces of sinew and deathclaw skin for extra structure, it is a fierce weapon that all expert hunters and bowmen carry, allowing for ease of firing many arrows."
-	icon_state = "ashenbow"
-	item_state = "ashenbow"
-	icon_prefix = "ashenbow"
-	force = 20
-	mag_type = /obj/item/ammo_box/magazine/internal/bow/claw
-	fire_delay = 2
-	extra_speed = 100
 
 //Sturdy Bow
 /obj/item/gun/ballistic/bow/sturdy
@@ -120,17 +96,6 @@
 	force = 15
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/sturdy
 	extra_speed = 300
-
-//Silver Bow
-/obj/item/gun/ballistic/bow/silver
-	name = "silver bow"
-	desc = "A firm sturdy silver bow created by the earth, its durability and rather strong material allow it to be an excellent option for those looking for the ability to fire more arrows than normally."
-	icon_state = "pipebow"
-	item_state = "pipebow"
-	icon_prefix = "pipebow"
-	force = 15
-	mag_type = /obj/item/ammo_box/magazine/internal/bow/silver
-	fire_delay = 1.5
 
 //Crossbow
 /obj/item/gun/ballistic/bow/crossbow
@@ -147,3 +112,14 @@
 	zoom_amt = 10
 	zoom_out_amt = 13
 	can_scope = FALSE
+
+/obj/item/gun/ballistic/bow/crossbow/xbow
+	name = "magazine-fed crossbow"
+	desc = "A somewhat primitive projectile weapon. Has a spring-loaded magazine, but still requires drawing back before firing. \
+	Fires arrows slightly faster than regular bows, improving damage"
+	icon_state = "xbow"
+	item_state = "xbow"
+	icon_prefix = "xbow"
+	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
+	zoomable = FALSE
+	extra_speed = 400

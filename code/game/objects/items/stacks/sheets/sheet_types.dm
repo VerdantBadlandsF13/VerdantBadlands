@@ -738,9 +738,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 	new/datum/stack_recipe("fulltile bronze window", /obj/structure/window/bronze/fulltile/unanchored, 2, time = 0, on_floor = TRUE, window_checks = TRUE), \
 	new/datum/stack_recipe("pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bronze pinion airlock assembly", /obj/structure/door_assembly/door_assembly_bronze/seethru, 4, time = 50, one_per_turf = TRUE, on_floor = TRUE), \
-	new/datum/stack_recipe("bronze hat", /obj/item/clothing/head/bronze), \
-	new/datum/stack_recipe("bronze suit", /obj/item/clothing/suit/bronze), \
-	new/datum/stack_recipe("bronze boots", /obj/item/clothing/shoes/bronze), \
 	null,
 	new/datum/stack_recipe("bronze chair", /obj/structure/chair/bronze, 1, time = 0, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("bronze bar stool",  /obj/structure/chair/stool/bar/bronze, 1, time = 0, one_per_turf = TRUE, on_floor = TRUE), \
@@ -804,7 +801,6 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 GLOBAL_LIST_INIT(bone_recipes, list(
 	new /datum/stack_recipe("bone dagger", /obj/item/melee/onehanded/knife/bone, 2, time = 20),
 	null, \
-	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/f13/tribal/light/bone, 6, time = 30),
 	new /datum/stack_recipe("skull helmet", /obj/item/clothing/head/helmet/skull, 4, time = 30),
 	null, \
 	new/datum/stack_recipe_list("medicine", list( \

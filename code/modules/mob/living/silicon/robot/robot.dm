@@ -138,23 +138,18 @@
 	if(!CONFIG_GET(flag/disable_secborg) && GLOB.security_level < CONFIG_GET(number/minimum_secborg_alert))
 		to_chat(src, "<span class='notice'>NOTICE: Due to local station regulations, the security cyborg module and its variants are only available during [NUM2SECLEVEL(CONFIG_GET(number/minimum_secborg_alert))] alert and greater.</span>")
 
-	var/list/modulelist = list(/*"Standard" = /obj/item/robot_module/standard, \
-	"Engineering" = /obj/item/robot_module/engineering, \
-	"Medical" = /obj/item/robot_module/medical, \
-	"Miner" = /obj/item/robot_module/miner, \
-	"Service" = /obj/item/robot_module/butler,*/
-	"Gutsy" = /obj/item/robot_module/gutsy,
+	var/list/modulelist = list("Gutsy" = /obj/item/robot_module/gutsy,
 	"Assaultron" = /obj/item/robot_module/assaultron,
-	"Medical" = /obj/item/robot_module/assaultron/medical
+	"Medical Assaultron" = /obj/item/robot_module/assaultron/medical
 	)
 
-	//modulelist += get_cit_modules() //Citadel change - adds Citadel's borg modules.
-
+	modulelist += get_cit_modules() //Citadel change - adds Citadel's borg modules.
+/*
 	if(!CONFIG_GET(flag/disable_peaceborg))
 		modulelist["Peacekeeper"] = /obj/item/robot_module/peacekeeper
 	if(BORG_SEC_AVAILABLE)
 		modulelist["Security"] = /obj/item/robot_module/security
-
+*/
 	var/input_module = input("Please, select a module!", "Robot", null, null) as null|anything in modulelist
 	if(!input_module || module.type != /obj/item/robot_module)
 		return

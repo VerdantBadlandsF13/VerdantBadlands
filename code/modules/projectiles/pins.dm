@@ -164,34 +164,6 @@
 		return TRUE
 	return FALSE
 
-// Laser tag pins
-/obj/item/firing_pin/tag
-	name = "laser tag firing pin"
-	desc = "A recreational firing pin, used in laser tag units to ensure users have their vests on."
-	fail_message = "<span class='warning'>SUIT CHECK FAILED.</span>"
-	var/obj/item/clothing/suit/suit_requirement = null
-	var/tagcolor = ""
-
-/obj/item/firing_pin/tag/pin_auth(mob/living/user)
-	if(ishuman(user))
-		var/mob/living/carbon/human/M = user
-		if(istype(M.wear_suit, suit_requirement))
-			return TRUE
-	to_chat(user, "<span class='warning'>You need to be wearing [tagcolor] laser tag armor!</span>")
-	return FALSE
-
-/obj/item/firing_pin/tag/red
-	name = "red laser tag firing pin"
-	icon_state = "firing_pin_red"
-	suit_requirement = /obj/item/clothing/suit/redtag
-	tagcolor = "red"
-
-/obj/item/firing_pin/tag/blue
-	name = "blue laser tag firing pin"
-	icon_state = "firing_pin_blue"
-	suit_requirement = /obj/item/clothing/suit/bluetag
-	tagcolor = "blue"
-
 /obj/item/firing_pin/security_level
 	name = "security level firing pin"
 	desc = "A sophisticated firing pin that authorizes operation based on its settings and current security level."

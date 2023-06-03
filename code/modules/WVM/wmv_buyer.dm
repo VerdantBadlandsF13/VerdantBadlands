@@ -244,82 +244,15 @@ ORGAN SELLER
 Fence
 
 */
-
-/obj/machinery/mineral/wasteland_trader/brotherhood
-	name = "Brotherhood of Steal"
-
-	goods_list = list( /obj/item/radio/headset/headset_bos = 15,
-								/obj/item/clothing/under/syndicate/brotherhood = 15,
-								/obj/item/card/id/dogtag = 30,
-								/obj/item/clothing/shoes/combat/swat = 5,
-								/obj/item/clothing/gloves/combat = 5,
-								/obj/item/clothing/accessory/bos/initiateS = 5,
-								/obj/item/clothing/accessory/bos/initiateK = 5,
-								/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate = 30,
-								/obj/item/clothing/suit/armor/f13/combat/brotherhood/initiate = 30,
-								/obj/item/clothing/accessory/bos/juniorknight = 5,
-								/obj/item/clothing/accessory/bos/knight = 15,
-								/obj/item/clothing/head/helmet/f13/combat/brotherhood = 45,
-								/obj/item/clothing/suit/armor/f13/combat/brotherhood = 45,
-								/obj/item/clothing/suit/armor/f13/combat/brotherhood/senior = 60,
-								/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior = 60,
-								/obj/item/clothing/glasses/night = 150,
-								/obj/item/clothing/accessory/bos/seniorknight = 30,
-								/obj/item/clothing/accessory/bos/scribe = 15,
-								/obj/item/clothing/accessory/bos/juniorscribe = 5,
-								/obj/item/clothing/suit/f13/scribe = 45,
-								/obj/item/clothing/suit/f13/seniorscribe = 60,
-								/obj/item/clothing/accessory/bos/seniorscribe = 30,
-								/obj/item/clothing/accessory/bos/juniorpaladin = 15,
-								/obj/item/clothing/accessory/bos/paladin = 30,
-								/obj/item/clothing/accessory/bos/seniorpaladin = 45,
-								/obj/item/clothing/suit/armor/f13/combat/brotherhood/captain = 75,
-								/obj/item/clothing/accessory/bos/knightcaptain = 60,
-								/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain = 75,
-								/obj/item/clothing/accessory/bos/headscribe = 60,
-								/obj/item/clothing/suit/armor/f13/headscribe = 75,
-								/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 75,
-								/obj/item/clothing/under/f13/recon = 30,
-								/obj/item/clothing/accessory/bos/sentinel = 30,
-								/obj/item/clothing/suit/f13/elder = 300,
-								/obj/item/clothing/accessory/bos/elder = 300,
-								/obj/item/gun/energy/laser/laer = 600,
-								/obj/item/clothing/neck/mantle/bos/right = 300
-
-								)
-
-/obj/machinery/mineral/wasteland_trader/brotherhood/ui_interact(mob/user)
-	. = ..()
-	var/dat
-	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
-	dat += "</div>"
-	dat += "<br>"
-	dat +="<div class='statusDisplay'>"
-	dat += "<b>Buying a wide variety of Brotherhood gear.</b><br>"
-	dat += ""
-	dat += "</div>"
-
-	var/datum/browser/popup = new(user, "tradingvendor", "Brotherhood of Steal", 400, 500)
-	popup.set_content(dat)
-	popup.open()
-	return
-
 /obj/machinery/mineral/wasteland_trader/gunbuyer
 	name = "Gun Repository"
 	desc = "Place weapon inside slot. Weapon is sent out of the region for post-processing. Recieve compensation. Yuma Wasteland Supply Inc. thanks you for disarming the wasteland."
-	goods_list = list(/obj/item/gun/ballistic/automatic/hobo/zipgun = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 5,
-						/obj/item/gun/ballistic/revolver/detective = 5,
-						/obj/item/gun/ballistic/revolver/hobo = 8,
+	goods_list = list(/obj/item/gun/ballistic/revolver/hobo = 8,
 						/obj/item/gun/ballistic/revolver/hobo/piperifle = 8,
-						/obj/item/gun/ballistic/revolver/hobo/knifegun = 8,
-						/obj/item/gun/ballistic/revolver/hobo/pepperbox = 8,
 						/obj/item/gun/ballistic/revolver/single_shotgun = 8,
 						/obj/item/gun/ballistic/automatic/pistol/n99 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/pistol22 = 8,
 						/obj/item/gun/ballistic/automatic/pistol/ninemil = 8,
-						/obj/item/gun/ballistic/automatic/pistol/sig = 8,
 						/obj/item/gun/ballistic/automatic/pistol/beretta = 8,
 						/obj/item/gun/ballistic/automatic/pistol/m1911 = 8,
 						/obj/item/gun/ballistic/rifle/hunting = 10,
@@ -327,8 +260,6 @@ Fence
 						/obj/item/gun/ballistic/rifle/mosin = 10,
 						/obj/item/gun/ballistic/revolver/caravan_shotgun = 10,
 						/obj/item/gun/ballistic/revolver/widowmaker = 10,
-						/obj/item/gun/ballistic/revolver/winchesterrebored = 10,
-						/obj/item/gun/ballistic/automatic/autopipe = 15,
 						/obj/item/gun/ballistic/rifle/hobo/lasmusket = 15,
 						/obj/item/stack/crafting/armor_plate = 20,
 						)

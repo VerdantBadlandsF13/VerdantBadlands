@@ -99,7 +99,6 @@
 
 /mob/living/simple_animal/drone/derelict
 	name = "derelict drone"
-	default_hatmask = /obj/item/clothing/head/ushanka
 
 /mob/living/simple_animal/drone/cogscarab
 	name = "cogscarab"

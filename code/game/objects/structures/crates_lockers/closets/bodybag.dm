@@ -1,4 +1,3 @@
-
 /obj/structure/closet/body_bag
 	name = "body bag"
 	desc = "A plastic bag designed for the storage and transportation of cadavers."

@@ -25,19 +25,6 @@
 	GLOB.possible_items -= src
 	return ..()
 
-/datum/objective_item/steal/caplaser
-	name = "the captain's antique laser gun."
-	targetitem = /obj/item/gun/energy/laser/captain
-	difficulty = 5
-	excludefromjob = list("Captain")
-
-/datum/objective_item/steal/hoslaser
-	name = "the head of security's personal laser gun."
-	targetitem = /obj/item/gun/energy/e_gun/hos
-	difficulty = 10
-	excludefromjob = list("Head Of Security")
-	altitems = list(/obj/item/gun/ballistic/revolver) //We now look for either the alt verson of the hos gun or the beacon picker.
-
 /datum/objective_item/steal/handtele
 	name = "a hand teleporter."
 	targetitem = /obj/item/hand_tele
@@ -56,12 +43,6 @@
 	difficulty = 5
 	excludefromjob = list("Chief Engineer", "Station Engineer", "Atmospheric Technician")
 
-/datum/objective_item/steal/capmedal
-	name = "the medal of captaincy."
-	targetitem = /obj/item/clothing/accessory/medal/gold/captain
-	difficulty = 5
-	excludefromjob = list("Captain")
-
 /datum/objective_item/steal/hypo
 	name = "the Chief Medical Officer's MKII hypospray."
 	targetitem = /obj/item/hypospray/mkii/CMO //CITADEL EDIT, changing theft objective for the Hypo MK II
@@ -77,15 +58,9 @@
 /datum/objective_item/steal/nukedisc/check_special_completion(obj/item/disk/nuclear/N)
 	return !N.fake
 
-/datum/objective_item/steal/reflector
-	name = "a reflector vest."
-	targetitem = /obj/item/clothing/suit/armor/laserproof
-	difficulty = 3
-	excludefromjob = list("Head of Security", "Warden")
-
 /datum/objective_item/steal/reactive
 	name = "a reactive teleport armor."
-	targetitem = /obj/item/clothing/suit/armor/reactive
+	targetitem = /obj/item/clothing/suit/armored/reactive
 	difficulty = 5
 	excludefromjob = list("Research Director","Scientist", "Roboticist")
 
@@ -198,11 +173,6 @@
 /datum/objective_item/special/pinpointer/nuke
 	name = "the captain's pinpointer."
 	targetitem = /obj/item/pinpointer
-	difficulty = 10
-
-/datum/objective_item/special/aegun
-	name = "an advanced energy gun."
-	targetitem = /obj/item/gun/energy/e_gun/nuclear
 	difficulty = 10
 
 /datum/objective_item/special/ddrill

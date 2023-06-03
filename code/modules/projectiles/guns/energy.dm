@@ -42,6 +42,11 @@
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
 
+	safety_audio = 'modular_badlands/code/modules/rp_misc/sound/eweapon_safety.ogg'
+	can_jam = FALSE
+	cell_discharge = TRUE
+	condition_mul = 1.25// Laser weapons require more maintenance.
+
 /obj/item/gun/energy/emp_act(severity)
 	. = ..()
 	if(!(. & EMP_PROTECT_CONTENTS))
@@ -49,6 +54,11 @@
 		chambered = null //we empty the chamber
 		recharge_newshot() //and try to charge a new shot
 		update_icon()
+
+/obj/item/gun/energy/process_fire(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
+	. = ..()
+	if(cell_discharge == 1)
+		cell.use(round(cell.charge * 1/condition_lvl/100))
 
 /obj/item/gun/energy/get_cell()
 	return cell

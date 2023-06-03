@@ -303,24 +303,20 @@
 				else
 					belt = /obj/item/tank/internals/emergency_oxygen/engi
 			if(mob_species != /datum/species/lizard)
-				shoes = /obj/item/clothing/shoes/workboots/mining
+				shoes = /obj/item/clothing/shoes/f13/rag
 			gloves = /obj/item/clothing/gloves/color/black
 			mask = /obj/item/clothing/mask/gas/explorer
 			if(prob(20))
-				suit = pickweight(list(/obj/item/clothing/suit/hooded/explorer = 6, /obj/item/clothing/suit/hooded/cloak/goliath = 2, /obj/item/clothing/suit/hooded/explorer/exo = 6, /obj/item/clothing/suit/hooded/explorer/seva = 6))
+				suit = pickweight(list(/obj/item/clothing/suit/hooded/explorer/exo = 6, /obj/item/clothing/suit/hooded/explorer/seva = 6))
 			if(prob(30))
-				r_pocket = pickweight(list(/obj/item/stack/marker_beacon = 20, /obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2, /obj/item/borg/upgrade/modkit/damage = 1 ))
+				r_pocket = pickweight(list(/obj/item/stack/marker_beacon = 20, /obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2))
 			if(prob(10))
-				l_pocket = pickweight(list(/obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2, /obj/item/borg/upgrade/modkit/cooldown = 1 ))
+				l_pocket = pickweight(list(/obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2))
 		if("Ashwalker")
 			mob_species = /datum/species/lizard/ashwalker
-			uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
+			uniform = /obj/item/clothing/under/f13/raiderharness
 			if(prob(95))
-				head = /obj/item/clothing/head/helmet/gladiator
-			else
 				head = /obj/item/clothing/head/helmet/skull
-				suit = /obj/item/clothing/suit/armor/bone
-				gloves = /obj/item/clothing/gloves/bracer
 			if(prob(5))
 				back = pickweight(list(/obj/item/twohanded/spear/bonespear = 3, /obj/item/twohanded/fireaxe/boneaxe = 2))
 			if(prob(10))
@@ -343,9 +339,7 @@
 			mob_gender = FEMALE
 			uniform = /obj/item/clothing/under/costume/maid
 			gloves = /obj/item/clothing/gloves/color/white
-			shoes = /obj/item/clothing/shoes/laceup
-			head = /obj/item/clothing/head/helmet/knight
-			suit = /obj/item/clothing/suit/armor/riot/knight
+			shoes = /obj/item/clothing/shoes/f13/rag
 			back = /obj/item/shield/riot/buckler
 			belt = /obj/item/nullrod/claymore
 			r_pocket = /obj/item/tank/internals/emergency_oxygen
@@ -356,7 +350,7 @@
 		if("Shadow")
 			mob_species = /datum/species/shadow
 			// r_pocket = /obj/item/reagent_containers/pill/shadowtoxin //Fortuna edit: shadowtoxin pills disabled due to mutation toxin removal
-			neck = /obj/item/clothing/accessory/medal/plasma/nobel_science
+			neck = /obj/item/clothing/accessory/medal/nobel_science
 			uniform = /obj/item/clothing/under/color/black
 			shoes = /obj/item/clothing/shoes/sneakers/black
 			suit = /obj/item/clothing/suit/toggle/labcoat
@@ -364,7 +358,7 @@
 			back = /obj/item/tank/internals/oxygen
 			mask = /obj/item/clothing/mask/breath
 		if("Cultist")
-			uniform = /obj/item/clothing/under/costume/roman
+			uniform = /obj/item/clothing/under/f13/raiderharness
 			suit = /obj/item/clothing/suit/cultrobes
 			head = /obj/item/clothing/head/culthood
 			suit_store = /obj/item/tome

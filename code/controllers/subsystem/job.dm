@@ -553,7 +553,7 @@ SUBSYSTEM_DEF(job)
 	for(var/i=equip_needed-5, i>0, i--)
 		if(GLOB.secequipment.len)
 			var/spawnloc = GLOB.secequipment[1]
-			new /obj/structure/closet/secure_closet/security/sec(spawnloc)
+			new /obj/structure/closet/secure_closet(spawnloc)
 			GLOB.secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break

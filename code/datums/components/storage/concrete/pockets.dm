@@ -158,8 +158,6 @@
 GLOBAL_LIST_INIT(storage_bartender_can_hold, typecacheof(list(
 	/obj/item/kitchen,
 	/obj/item/reagent_containers/food/drinks/bottle,
-	/obj/item/gun/ballistic/revolver/detective,
-	/obj/item/gun/ballistic/revolver/m29/snub,
 	)))
 
 GLOBAL_LIST_INIT(storage_kitchen_can_hold, typecacheof(list(
@@ -210,8 +208,6 @@ GLOBAL_LIST_INIT(storage_shoes_can_hold, typecacheof(list(
 	/obj/item/screwdriver,
 	/obj/item/weldingtool/mini,
 	/obj/item/pen,
-	/obj/item/gun/ballistic/revolver/detective,
-	/obj/item/gun/ballistic/revolver/hobo/knifegun,
 	/obj/item/melee/onehanded/knife,
 	/obj/item/scalpel,
 	)))
@@ -234,14 +230,8 @@ GLOBAL_LIST_INIT(storage_holster_can_hold, typecacheof(list(
 	/obj/item/ammo_box/c4570,
 	/obj/item/ammo_box/a50MG,
 	/obj/item/ammo_box/c45rev,
-	/obj/item/gun/energy/laser/solar,
 	/obj/item/gun/energy/laser/pistol,
-	/obj/item/gun/energy/laser/plasma/pistol,
-	/obj/item/gun/energy/laser/plasma/glock,
-	/obj/item/gun/energy/laser/plasma/glock/extended,
 	/obj/item/gun/energy/laser/wattz,
-	/obj/item/gun/energy/laser/wattz/magneto,
-	/obj/item/gun/energy/laser/plasma/pistol/alien,
 	/obj/item/stock_parts/cell/ammo/ec,
 	)))
 
@@ -269,13 +259,6 @@ GLOBAL_LIST_INIT(storage_treasurer_can_hold, typecacheof(list(
 	)))
 
 GLOBAL_LIST_INIT(storage_holdout_can_hold, typecacheof(list(
-	/obj/item/gun/ballistic/automatic/pistol/sig,
-	/obj/item/gun/ballistic/revolver/detective,
-	/obj/item/gun/ballistic/automatic/hobo/zipgun,
-	/obj/item/gun/ballistic/automatic/pistol/pistol14/compact,
-	/obj/item/gun/ballistic/revolver/police,
-	/obj/item/gun/ballistic/revolver/colt357/lucky,
-	/obj/item/gun/ballistic/revolver/m29/snub,
 	/obj/item/gun/ballistic/revolver/needler,
 	/obj/item/gun/energy/laser/wattz,
 )))
@@ -295,13 +278,7 @@ GLOBAL_LIST_INIT(storage_bulletbelt_can_hold, typecacheof(list(
 	/obj/item/ammo_box/a308,
 	/obj/item/ammo_box/c4570,
 	/obj/item/ammo_box/a50MG,
-	/obj/item/gun/energy/laser/solar,
 	/obj/item/gun/energy/laser/pistol,
-	/obj/item/gun/energy/laser/plasma/pistol,
-	/obj/item/gun/energy/laser/plasma/glock,
-	/obj/item/gun/energy/laser/plasma/glock/extended,
 	/obj/item/gun/energy/laser/wattz,
-	/obj/item/gun/energy/laser/wattz/magneto,
-	/obj/item/gun/energy/laser/plasma/pistol/alien,
 	/obj/item/stock_parts/cell/ammo/ec,
 )))

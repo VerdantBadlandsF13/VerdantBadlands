@@ -1,9 +1,6 @@
-//KEEP IN MIND: These are different from gun/grenadelauncher. These are designed to shoot premade rocket and grenade projectiles, not flashbangs or chemistry casings etc.
-//Put handheld rocket launchers here if someone ever decides to make something so hilarious ~Paprika
-
 /obj/item/gun/ballistic/revolver/grenadelauncher
-	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	name = "M79 grenade launcher"
+	desc = "A break-operated grenade rifle. Projectiles travel slowly."
 	icon_state = "dshotgun-sawn"
 	item_state = "gun"
 	inaccuracy_modifier = 0.5
@@ -12,6 +9,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin
+	can_jam = 0
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/attackby(obj/item/A, mob/user, params)
 	..()
@@ -29,60 +27,9 @@
 /obj/item/gun/ballistic/revolver/grenadelauncher/cyborg/attack_self()
 	return
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/nonlethal
-	name = "M79-TG grenade launcher"
-	desc = "A break-operated grenade launcher. This one appears modified for riot control."
-	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher_nl
-	pin = /obj/item/firing_pin
-
-/obj/item/gun/ballistic/automatic/gyropistol
-	name = "gyrojet pistol"
-	desc = "A prototype pistol designed to fire self propelled rockets."
-	icon_state = "gyropistol"
-	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	mag_type = /obj/item/ammo_box/magazine/m75
-	burst_size = 1
-	fire_delay = 0
-	actions_types = list()
-	casing_ejector = FALSE
-
-/obj/item/gun/ballistic/automatic/gyropistol/update_icon_state()
-	icon_state = "[initial(icon_state)][magazine ? "loaded" : ""]"
-
-/obj/item/gun/ballistic/automatic/speargun
-	name = "kinetic speargun"
-	desc = "A weapon favored by carp hunters. Fires specialized spears using kinetic energy."
-	icon_state = "speargun"
-	item_state = "speargun"
-	w_class = WEIGHT_CLASS_BULKY
-	force = 10
-	can_suppress = FALSE
-	automatic_burst_overlay = FALSE
-	mag_type = /obj/item/ammo_box/magazine/internal/speargun
-	fire_sound = 'sound/weapons/grenadelaunch.ogg'
-	burst_size = 1
-	fire_delay = 0
-	select = 0
-	actions_types = list()
-	casing_ejector = FALSE
-
-/obj/item/gun/ballistic/automatic/speargun/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_blocker)
-
-/obj/item/gun/ballistic/automatic/speargun/attack_self()
-	return
-
-/obj/item/gun/ballistic/automatic/speargun/attackby(obj/item/A, mob/user, params)
-	var/num_loaded = magazine.attackby(A, user, params, 1)
-	if(num_loaded)
-		to_chat(user, "<span class='notice'>You load [num_loaded] spear\s into \the [src].</span>")
-		update_icon()
-		chamber_round()
-
 /obj/item/gun/ballistic/rocketlauncher
-	name = "\improper rocket launcher"
-	desc = "Technically, this is actually a rocket propelled grenade launcher, rather than a true rocket launcher. The person you shot is unlikely to care much, though."
+	name = "\improper Rockwell BigBazooka"
+	desc = "A Rockwell BigBazooka rocket launcher, with the deluxe 3 lb. trigger."
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher
@@ -96,6 +43,7 @@
 	casing_ejector = FALSE
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "rocket"
+	condition = 0
 
 /obj/item/gun/ballistic/rocketlauncher/handle_atom_del(atom/A)
 	if(A == chambered)

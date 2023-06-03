@@ -8,23 +8,23 @@
 /obj/item/reactive_armour_shell/attackby(obj/item/I, mob/user, params)
 	..()
 	var/static/list/anomaly_armour_types = list(
-		/obj/effect/anomaly/grav	                = /obj/item/clothing/suit/armor/reactive/repulse,
-		/obj/effect/anomaly/flux 	           		= /obj/item/clothing/suit/armor/reactive/tesla,
-		/obj/effect/anomaly/bluespace 	            = /obj/item/clothing/suit/armor/reactive/teleport
+		/obj/effect/anomaly/grav	                = /obj/item/clothing/suit/armored/reactive/repulse,
+		/obj/effect/anomaly/flux 	           		= /obj/item/clothing/suit/armored/reactive/tesla,
+		/obj/effect/anomaly/bluespace 	            = /obj/item/clothing/suit/armored/reactive/teleport
 		)
 
 	if(istype(I, /obj/item/assembly/signaler/anomaly))
 		var/obj/item/assembly/signaler/anomaly/A = I
 		var/armour_path = anomaly_armour_types[A.anomaly_type]
 		if(!armour_path)
-			armour_path = /obj/item/clothing/suit/armor/reactive/stealth //Lets not cheat the player if an anomaly type doesnt have its own armour coded
+			armour_path = /obj/item/clothing/suit/armored/reactive/stealth //Lets not cheat the player if an anomaly type doesnt have its own armour coded
 		to_chat(user, "You insert [A] into the chest plate, and the armour gently hums to life.")
 		new armour_path(get_turf(src))
 		qdel(src)
 		qdel(A)
 
 //Reactive armor
-/obj/item/clothing/suit/armor/reactive
+/obj/item/clothing/suit/armored/reactive
 	name = "reactive armor"
 	desc = "Doesn't seem to do much for some reason."
 	var/active = 0
@@ -40,7 +40,7 @@
 	var/hit_reaction_chance = 50
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/suit/armor/reactive/attack_self(mob/user)
+/obj/item/clothing/suit/armored/reactive/attack_self(mob/user)
 	active = !(active)
 	if(active)
 		to_chat(user, "<span class='notice'>[src] is now active.</span>")
@@ -54,7 +54,7 @@
 	if(user.get_item_by_slot(SLOT_WEAR_SUIT) == src)
 		user.update_inv_wear_suit()
 
-/obj/item/clothing/suit/armor/reactive/emp_act(severity)
+/obj/item/clothing/suit/armored/reactive/emp_act(severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
@@ -63,16 +63,16 @@
 	item_state = "reactiveoff"
 	reactivearmor_cooldown = world.time + 200
 
-/obj/item/clothing/suit/armor/reactive/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(!active)
 		return BLOCK_NONE
 	return block_action(owner, object, damage, attack_text, attack_type, armour_penetration, attacker, def_zone, final_block_chance, block_return)
 
-/obj/item/clothing/suit/armor/reactive/proc/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/proc/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	return BLOCK_NONE
 
 //When the wearer gets hit, this armor will teleport the user a short distance away (to safety or to more danger, no one knows. That's the fun of it!)
-/obj/item/clothing/suit/armor/reactive/teleport
+/obj/item/clothing/suit/armored/reactive/teleport
 	name = "reactive teleport armor"
 	desc = "Someone separated our Research Director from his own head!"
 	var/tele_range = 8
@@ -80,7 +80,7 @@
 	var/rad_amount_before = 120
 	reactivearmor_cooldown_duration = 100
 
-/obj/item/clothing/suit/armor/reactive/teleport/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/teleport/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		var/mob/living/carbon/human/H = owner
 		if(world.time < reactivearmor_cooldown)
@@ -113,11 +113,11 @@
 
 //Fire
 
-/obj/item/clothing/suit/armor/reactive/fire
+/obj/item/clothing/suit/armored/reactive/fire
 	name = "reactive incendiary armor"
 	desc = "An experimental suit of armor with a reactive sensor array rigged to a flame emitter. For the stylish pyromaniac."
 
-/obj/item/clothing/suit/armor/reactive/fire/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/fire/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		if(world.time < reactivearmor_cooldown)
 			owner.visible_message("<span class='danger'>The reactive incendiary armor on [owner] activates, but fails to send out flames as it is still recharging its flame jets!</span>")
@@ -135,12 +135,12 @@
 
 //Stealth
 
-/obj/item/clothing/suit/armor/reactive/stealth
+/obj/item/clothing/suit/armored/reactive/stealth
 	name = "reactive stealth armor"
 	reactivearmor_cooldown_duration = 65
 	desc = "An experimental suit of armor that renders the wearer invisible on detection of imminent harm, and creates a decoy that runs away from the owner. You can't fight what you can't see."
 
-/obj/item/clothing/suit/armor/reactive/stealth/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/stealth/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		if(world.time < reactivearmor_cooldown)
 			owner.visible_message("<span class='danger'>The reactive stealth system on [owner] activates, but is still recharging its holographic emitters!</span>")
@@ -159,7 +159,7 @@
 
 //Tesla
 
-/obj/item/clothing/suit/armor/reactive/tesla
+/obj/item/clothing/suit/armored/reactive/tesla
 	name = "reactive tesla armor"
 	desc = "An experimental suit of armor with sensitive detectors hooked up to a huge capacitor grid, with emitters strutting out of it. Zap."
 	siemens_coefficient = -1
@@ -170,17 +170,17 @@
 	var/legacy = FALSE
 	var/legacy_dmg = 30
 
-/obj/item/clothing/suit/armor/reactive/tesla/dropped(mob/user)
+/obj/item/clothing/suit/armored/reactive/tesla/dropped(mob/user)
 	..()
 	if(istype(user))
 		REMOVE_TRAIT(user, TRAIT_TESLA_SHOCKIMMUNE, "reactive_tesla_armor")
 
-/obj/item/clothing/suit/armor/reactive/tesla/equipped(mob/user, slot)
+/obj/item/clothing/suit/armored/reactive/tesla/equipped(mob/user, slot)
 	..()
 	if(slot_flags & slotdefine2slotbit(slot)) //Was equipped to a valid slot for this item?
 		ADD_TRAIT(user, TRAIT_TESLA_SHOCKIMMUNE, "reactive_tesla_armor")
 
-/obj/item/clothing/suit/armor/reactive/tesla/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/tesla/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		if(world.time < reactivearmor_cooldown)
 			var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
@@ -204,12 +204,12 @@
 
 //Repulse
 
-/obj/item/clothing/suit/armor/reactive/repulse
+/obj/item/clothing/suit/armored/reactive/repulse
 	name = "reactive repulse armor"
 	reactivearmor_cooldown_duration = 20
 	desc = "An experimental suit of armor that violently throws back attackers."
 
-/obj/item/clothing/suit/armor/reactive/repulse/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/repulse/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		if(world.time < reactivearmor_cooldown)
 			owner.visible_message("<span class='danger'>The repulse generator is still recharging!</span>")
@@ -239,13 +239,13 @@
 		return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return BLOCK_NONE
 
-/obj/item/clothing/suit/armor/reactive/table
+/obj/item/clothing/suit/armored/reactive/table
 	name = "reactive table armor"
 	reactivearmor_cooldown_duration = 0
 	desc = "If you can't beat the memes, embrace them."
 	var/tele_range = 10
 
-/obj/item/clothing/suit/armor/reactive/table/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armored/reactive/table/block_action(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(prob(hit_reaction_chance))
 		var/mob/living/carbon/human/H = owner
 		if(world.time < reactivearmor_cooldown)
@@ -274,5 +274,5 @@
 		return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return BLOCK_NONE
 
-/obj/item/clothing/suit/armor/reactive/table/emp_act()
+/obj/item/clothing/suit/armored/reactive/table/emp_act()
 	return

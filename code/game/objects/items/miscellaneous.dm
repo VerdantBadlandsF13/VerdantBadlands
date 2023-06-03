@@ -97,10 +97,8 @@
 	name = "Courageous Tomb Raider - 1940's."
 
 /obj/item/storage/box/hero/PopulateContents()
-	new /obj/item/clothing/head/fedora/curator(src)
-	new /obj/item/clothing/suit/curator(src)
-	new /obj/item/clothing/under/rank/civilian/curator/treasure_hunter(src)
-	new /obj/item/clothing/shoes/workboots/mining(src)
+	new /obj/item/clothing/head/fedora(src)
+	new /obj/item/clothing/shoes/f13/military(src)
 
 /obj/item/storage/box/hero/astronaut
 	name = "First Man on the Moon - 1960's."
@@ -119,20 +117,6 @@
 	new /obj/item/claymore/weak/ceremonial(src)
 	new /obj/item/toy/crayon/spraycan(src)
 	new /obj/item/clothing/shoes/sandal(src)
-
-/obj/item/choice_beacon/hosgun
-	name = "personal weapon beacon"
-	desc = "Use this to summon your personal Head of Security issued firearm!"
-
-/obj/item/choice_beacon/hosgun/generate_display_names()
-	var/static/list/hos_gun_list
-	if(!hos_gun_list)
-		hos_gun_list = list()
-		var/list/templist = subtypesof(/obj/item/storage/secure/briefcase/hos/) //we have to convert type = name to name = type, how lovely!
-		for(var/V in templist)
-			var/atom/A = V
-			hos_gun_list[initial(A.name)] = A
-	return hos_gun_list
 
 /obj/item/choice_beacon/augments
 	name = "augment beacon"
@@ -263,32 +247,3 @@
 	for(var/V in plushies_set_two)
 		plushie_list[V] = V //easiest way to do this which works with how selecting options works, despite being snowflakey to have the key equal the value
 	return plushie_list
-
-/obj/item/choice_beacon/weapon
-	name = "weapon crate"
-	desc = "choose your weapon."
-	icon = 'icons/obj/crates.dmi'
-	icon_state = "weaponcrate"
-	item_state = "syringe_kit"
-
-/obj/item/choice_beacon/weapon/follower
-	name = "Follower of the Apocalpyse standard issue self-defense weapon crate"
-	desc = "Has that weapon you ordered"
-	var/static/list/follower_guns = list("non-lethal" = /obj/item/gun/energy/laser/complianceregulator,
-	"lethal, energy" = /obj/item/gun/energy/laser/wattz,
-	"lethal, ballistics" = /obj/item/gun/ballistic/revolver/colt357,
-	)
-
-/obj/item/choice_beacon/weapon/follower/generate_display_names()
-	return follower_guns
-
-/obj/item/choice_beacon/weapon/wastelander
-	name = "personal weapon stash"
-	desc = "contains your personal weapon, whatever it may be"
-	var/static/list/follower_guns = list("M1911" = /obj/item/gun/ballistic/automatic/pistol/m1911,
-	"M1911" = /obj/item/gun/ballistic/automatic/pistol/m1911,
-	"N99, 10mm" = /obj/item/gun/ballistic/automatic/pistol/n99,
-	".357 Police Pistol" = /obj/item/gun/ballistic/revolver/police,
-	".357 Single Action Revolver" = /obj/item/gun/ballistic/revolver/colt357,
-	"5.56mm Varmint Rifle" = /obj/item/gun/ballistic/automatic/varmint
-	)

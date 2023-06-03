@@ -165,8 +165,8 @@
 /obj/effect/spawner/lootdrop/clothing_low
 /*	color = "#FF0000"
 	loot = list(
-	/obj/item/clothing/suit/armor/f13/leatherarmor = 1,
-	/obj/item/clothing/suit/armor/f13/slam = 1,
+	/obj/item/clothing/suit/armored/f13/leatherarmor = 1,
+	/obj/item/clothing/suit/armored/f13/slam = 1,
 	/obj/item/clothing/glasses/f13/biker = 1,
 	/obj/item/clothing/gloves/f13/leather = 1,
 	/obj/item/clothing/head/f13/police = 1,
@@ -192,9 +192,9 @@
 	/obj/item/clothing/head/helmet/f13/combat_mk1 = 1,
 	/obj/item/clothing/shoes/f13/military = 1,
 	/obj/item/clothing/shoes/f13/military/diesel = 1,
-	/obj/item/clothing/suit/armor/f13/combat_mk1 = 1,
-	/obj/item/clothing/suit/armor/f13/kit = 1,
-	/obj/item/clothing/suit/armor/f13/yankee = 1,
+	/obj/item/clothing/suit/armored/f13/combat_mk1 = 1,
+	/obj/item/clothing/suit/armored/f13/kit = 1,
+	/obj/item/clothing/suit/armored/f13/yankee = 1,
 	/obj/item/clothing/suit/f13/veteran = 1,
 	/obj/item/clothing/under/f13/cyberpunk = 1,
 	/obj/item/clothing/under/f13/combat = 1,
@@ -204,14 +204,14 @@
 /*	color = "#FF0000"
 	loot = list(
 	/obj/item/clothing/head/helmet/f13/combat_mk2 = 1,
-	/obj/item/clothing/suit/armor/f13/bmetalarmor = 1,
-	/obj/item/clothing/suit/armor/f13/combat_mk2 = 1)
+	/obj/item/clothing/suit/armored/f13/bmetalarmor = 1,
+	/obj/item/clothing/suit/armored/f13/combat_mk2 = 1)
 */
 /obj/effect/spawner/lootdrop/clothing_legend
 /*	color = "#FF0000"
 	loot = list(
 	/obj/item/clothing/head/helmet/power_armor/t45d = 1,
 	/obj/item/clothing/head/helmet/power_armor/ncr = 1,
-	/obj/item/clothing/suit/armor/f13/power_armor/t45d = 1,
-	/obj/item/clothing/suit/armor/f13/power_armor/ncr = 1,
+	/obj/item/clothing/suit/armored/f13/power_armor/t45d = 1,
+	/obj/item/clothing/suit/armored/f13/power_armor/ncr = 1,
 	/obj/item/clothing/under/f13/recon = 1)*/

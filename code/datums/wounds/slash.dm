@@ -255,7 +255,7 @@
 	initial_flow = 1.5
 	minimum_flow = 0.375
 	max_per_type = 3
-	clot_rate = 0.12
+	clot_rate = -0.01
 	threshold_minimum = 30
 	threshold_penalty = 10
 	status_effect_type = /datum/status_effect/wound/slash/moderate
@@ -271,7 +271,7 @@
 	severity = WOUND_SEVERITY_SEVERE
 	initial_flow = 2.4375
 	minimum_flow = 2.0625
-	clot_rate = 0.07
+	clot_rate = -0.03
 	max_per_type = 4
 	threshold_minimum = 60
 	threshold_penalty = 25
@@ -289,7 +289,7 @@
 	severity = WOUND_SEVERITY_CRITICAL
 	initial_flow = 3.1875
 	minimum_flow = 3
-	clot_rate = -0.05 // critical cuts actively get worse instead of better
+	clot_rate = -0.05
 	max_per_type = 5
 	threshold_minimum = 90
 	threshold_penalty = 40

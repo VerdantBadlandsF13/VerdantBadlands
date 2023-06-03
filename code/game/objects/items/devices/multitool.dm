@@ -8,11 +8,9 @@
  */
 
 
-
-
 /obj/item/multitool
-	name = "multitool"
-	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors."
+	name = "pre-war voltage scanner"
+	desc = "A pre-war device used for testing and pulsing electrical devices for faults and voltage checks."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "multitool"
 	item_state = "multitool"

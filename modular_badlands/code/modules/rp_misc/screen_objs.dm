@@ -17,14 +17,14 @@ Shhh.
 	if(isliving(usr))
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
-
+/*
 /obj/screen/oxy/MouseEntered(location,control,params)
 	if(!QDELETED(src))
 		openToolTip(usr,src,params,title = name,content = desc)
 
 /obj/screen/oxy/action_button/MouseExited()
 	closeToolTip(usr)
-
+*/
 /obj/screen/oxy/update_icon()
 	. = ..()
 
@@ -77,14 +77,14 @@ Shhh.
 	if(isliving(usr))
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
-
+/*
 /obj/screen/water/MouseEntered(location,control,params)
 	if(!QDELETED(src))
 		openToolTip(usr,src,params,title = name,content = desc)
 
 /obj/screen/water/action_button/MouseExited()
 	closeToolTip(usr)
-
+*/
 /obj/screen/water/update_icon()
 	. = ..()
 
@@ -153,14 +153,14 @@ Shhh.
 	if(isliving(usr))
 		var/mob/living/L = usr
 		to_chat(L, "<span class='notice'>[src.desc]")
-
+/*
 /obj/screen/food/MouseEntered(location,control,params)
 	if(!QDELETED(src))
 		openToolTip(usr,src,params,title = name,content = desc)
 
 /obj/screen/food/action_button/MouseExited()
 	closeToolTip(usr)
-
+*/
 /obj/screen/food/update_icon()
 	. = ..()
 

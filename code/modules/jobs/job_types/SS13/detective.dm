@@ -36,9 +36,7 @@
 	uniform = /obj/item/clothing/under/rank/security/detective
 	neck = /obj/item/clothing/neck/tie/black
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/det_suit
 	gloves = /obj/item/clothing/gloves/color/black
-	head = /obj/item/clothing/head/fedora/det_hat
 	l_pocket = /obj/item/toy/crayon/white
 	r_pocket = /obj/item/lighter
 	backpack_contents = list(/obj/item/storage/box/evidence=1,\
@@ -47,7 +45,7 @@
 
 	implants = list(/obj/item/implant/mindshield)
 
-	chameleon_extras = list(/obj/item/gun/ballistic/revolver/detective, /obj/item/clothing/glasses/sunglasses)
+	chameleon_extras = list(/obj/item/clothing/glasses/sunglasses)
 
 /datum/outfit/job/detective/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE, client/preference_source)
 	..()

@@ -131,19 +131,7 @@
 /datum/fantasy_affix/shrapnel/apply(datum/component/fantasy/comp, newName)
 	. = ..()
 	// higher means more likely
-	var/list/weighted_projectile_types = list(/obj/item/projectile/meteor = 1,
-											  /obj/item/projectile/energy/nuclear_particle = 1,
-											  /obj/item/projectile/beam/pulse = 1,
-											  /obj/item/projectile/temp = 15,
-											  /obj/item/projectile/ion = 15,
-											  /obj/item/projectile/magic/door = 15,
-											  /obj/item/projectile/magic/locker = 15,
-//											  /obj/item/projectile/magic/fetch = 15,
-											  /obj/item/projectile/beam/emitter = 15,
-//											  /obj/item/projectile/magic/flying = 15,
-											  /obj/item/projectile/energy/net = 15,
-											  /obj/item/projectile/temp/hot = 15,
-											  /obj/item/projectile/beam/disabler = 15)
+	var/list/weighted_projectile_types = list(/obj/item/projectile/energy/nuclear_particle = 1)
 
 	var/obj/item/projectile/picked_projectiletype = pickweight(weighted_projectile_types)
 

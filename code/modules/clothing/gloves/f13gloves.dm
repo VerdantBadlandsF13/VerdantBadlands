@@ -1,5 +1,4 @@
 /obj/item/clothing/gloves/f13
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
 /obj/item/clothing/gloves/f13/baseball
 	name = "baseball glove"
@@ -48,19 +47,16 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
-/obj/item/clothing/gloves/f13/doom
-	name = "strange gloves"
-	desc = "These gloves look like a part of some sort of space suit, or maybe exquisite armor, but you can't tell for sure."
-	icon_state = "doom"
-	item_state = "doom"
-	item_color = null
+/obj/item/clothing/gloves/f13/military/rifleman
+	name = "rifleman gloves"
+	desc = "A pair of rifleman's gloves. The thumb and finger have been removed to not impair the wearer's shooting ability."
+	icon_state = "rifleman"
+	item_state = "rifleman"
 	transfer_prints = TRUE
-	strip_delay = 20
+	strip_delay = 40
+	equip_delay_other = 20
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 80, "rad" = 80, "fire" = 80, "acid" = 50)
 
 /obj/item/clothing/gloves/f13/handwraps
 	name = "handwraps"
@@ -109,28 +105,9 @@
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.1
 
-/obj/item/clothing/gloves/f13/mutant
-	name = "mutant bracers"
-	desc = "A pair of metal tubes with rope on the inside."
-	icon_state = "mutie_bracer"
-	item_state = "mutie_bracer"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 35, "energy" = 20, "bomb" = 35, "bio" = 35, "rad" = 35, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/gloves/f13/mutant/mk2
-	name = "mutant bracers"
-	desc = "A pair of giant metal tubes with rope on the inside."
-	icon_state = "mutie_bracer_mk2"
-	item_state = "mutie_bracer_mk2"
-
-/obj/item/clothing/gloves/f13/mutant/sign
-	name = "mutant sign bracers"
-	desc = "See this sign? It's a sign to move on."
-	icon_state = "mutie_bracer_sign"
-	item_state = "mutie_bracer_sign"
-
 /obj/item/clothing/gloves/botanic_leather
 	name = "farmers gloves"
-	desc = "These thick leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin.  They're also quite warm."
+	desc = "These thick leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin. They're also quite warm."
 	icon = 'icons/fallout/clothing/gloves.dmi'
 	icon_state = "farmer"
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
@@ -141,51 +118,4 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 30)
 	strip_mod = 0.9
-
-
-//////////
-//LEGION//
-//////////
-
-/obj/item/clothing/gloves/legion
-	name = "leather gloves"
-	desc = "Fingerless leather gloves to improve grip worn by legionaires."
-	icon = 'icons/fallout/clothing/gloves.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/hand.dmi'
-	icon_state = "legion_fingerless"
-	item_state = "legion_fingerless"
-	item_color = null	//So they don't wash.
-	transfer_prints = TRUE
-	strip_delay = 40
-	equip_delay_other = 20
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-
-/obj/item/clothing/gloves/legion/forgemaster
-	name = "forgemaster gloves"
-	desc = "A pair of heavy duty leather gloves designed to help the Forgemaster do his work."
-	icon_state = "legion_forge"
-	item_state = "legion_forge"
-	item_color = null
-	transfer_prints = FALSE
-	strip_delay = 10
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-
-/obj/item/clothing/gloves/legion/plated
-	name = "plated gloves"
-	desc = "Leather gloves with metal reinforcement."
-	icon_state = "legion_plated"
-	item_state = "legion_plated"
-	transfer_prints = FALSE
-	armor = list("melee" = 20, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 10)
-
-/obj/item/clothing/gloves/legion/legate
-	name = "brass gauntlets"
-	desc = "Heavy finely crafted metal gloves."
-	icon_state = "legion_legate"
-	item_state = "legion_legate"
-	transfer_prints = FALSE
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 35, "energy" = 20, "bomb" = 35, "bio" = 35, "rad" = 35, "fire" = 0, "acid" = 0)

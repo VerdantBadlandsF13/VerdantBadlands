@@ -7,7 +7,6 @@
 	dupe_mode = COMPONENT_DUPE_UNIQUE_PASSARGS
 
 	var/source
-
 	var/hl3_release_date //the half-life measured in ticks
 	var/strength
 	var/can_contaminate
@@ -17,24 +16,23 @@
 	source = _source
 	hl3_release_date = _half_life
 	can_contaminate = _can_contaminate
-
 	if(istype(parent, /atom))
 		RegisterSignal(parent, COMSIG_PARENT_EXAMINE, .proc/rad_examine)
 		if(istype(parent, /obj/item))
 			RegisterSignal(parent, COMSIG_ITEM_ATTACK, .proc/rad_attack)
 			RegisterSignal(parent, COMSIG_ITEM_ATTACK_OBJ, .proc/rad_attack)
 	else
-		CRASH("Something that wasn't an atom was given /datum/component/radioactive")
-
-	if(strength > RAD_MINIMUM_CONTAMINATION)
+		return COMPONENT_INCOMPATIBLE
+	if(strength * (RAD_CONTAMINATION_STR_COEFFICIENT * RAD_CONTAMINATION_BUDGET_SIZE) > RAD_COMPONENT_MINIMUM)
 		SSradiation.warn(src)
 
+/*
 	//Let's make er glow
 	//This relies on parent not being a turf or something. IF YOU CHANGE THAT, CHANGE THIS
 	var/atom/movable/master = parent
 	master.add_filter("rad_glow", 2, list("type" = "outline", "color" = "#39ff1430", "size" = 2))
 	addtimer(CALLBACK(src, .proc/glow_loop, master), rand(1,19))//Things should look uneven
-
+*/
 	START_PROCESSING(SSradiation, src)
 
 /datum/component/radioactive/Destroy()
@@ -44,16 +42,17 @@
 	return ..()
 
 /datum/component/radioactive/process()
-	if(!prob(50))
-		return
-	radiation_pulse(parent, strength, RAD_DISTANCE_COEFFICIENT*2, FALSE, can_contaminate)
+
+	if(strength >= RAD_WAVE_MINIMUM)
+		radiation_pulse(parent, strength, RAD_DISTANCE_COEFFICIENT*RAD_DISTANCE_COEFFICIENT_COMPONENT_MULTIPLIER, FALSE, can_contaminate)
 
 	if(!hl3_release_date)
 		return
-	strength -= strength / hl3_release_date
-	if(strength <= RAD_BACKGROUND_RADIATION)
-		return PROCESS_KILL
 
+	strength -= strength / hl3_release_date
+
+	if(strength < RAD_COMPONENT_MINIMUM)
+		qdel(src)
 
 /datum/component/radioactive/proc/glow_loop(atom/movable/master)
 	var/filter = master.get_filter("rad_glow")
@@ -68,28 +67,31 @@
 		return
 	if(C)
 		var/datum/component/radioactive/other = C
-		strength = max(strength, other.strength)
+		strength += other.strength
 	else
 		strength = max(strength, _strength)
 
-/datum/component/radioactive/proc/rad_examine(datum/source, mob/user, list/examine_list)
+/datum/component/radioactive/proc/rad_examine(datum/source, mob/user, atom/thing)
+	SIGNAL_HANDLER
+
 	var/atom/master = parent
 	var/list/out = list()
 	if(get_dist(master, user) <= 1)
 		out += "The air around [master] feels warm"
 	switch(strength)
 		if(RAD_AMOUNT_LOW to RAD_AMOUNT_MEDIUM)
-			out += "[out ? " and it " : "[master] "]feels weird to look at."
+			out += "[length(out) ? " and it " : "[master] "]feels weird to look at."
 		if(RAD_AMOUNT_MEDIUM to RAD_AMOUNT_HIGH)
-			out += "[out ? " and it " : "[master] "]seems to be glowing a bit."
+			out += "[length(out) ? " and it " : "[master] "]seems to be glowing a bit."
 		if(RAD_AMOUNT_HIGH to INFINITY) //At this level the object can contaminate other objects
-			out += "[out ? " and it " : "[master] "]hurts to look at."
-	if(!LAZYLEN(out))
-		return
-	out += "."
-	examine_list += out.Join()
+			out += "[length(out) ? " and it " : "[master] "]hurts to look at."
+		else
+			out += "."
+	to_chat(user, out.Join())
 
 /datum/component/radioactive/proc/rad_attack(datum/source, atom/movable/target, mob/living/user)
+	SIGNAL_HANDLER
+
 	radiation_pulse(parent, strength/20)
 	target.rad_act(strength/2)
 	if(!hl3_release_date)

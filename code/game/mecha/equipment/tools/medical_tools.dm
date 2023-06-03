@@ -25,9 +25,6 @@
 		STOP_PROCESSING(SSobj, src)
 		return 1
 
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/detach()
-	STOP_PROCESSING(SSobj, src)
-	return ..()
 
 /obj/item/mecha_parts/mecha_equipment/medical/sleeper
 	name = "mounted sleeper"
@@ -512,38 +509,3 @@
 	for(var/reagent in processed_reagents)
 		reagents.add_reagent(reagent,amount)
 		chassis.use_power(energy_drain)
-
-///////////////////////////////// Medical Beam ///////////////////////////////////////////////////////////////
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam
-	name = "exosuit medical beamgun"
-	desc = "Equipment for medical exosuits. Generates a focused beam of medical nanites."
-	icon_state = "mecha_medigun"
-	energy_drain = 10
-	range = MELEE|RANGED
-	equip_cooldown = 0
-	var/obj/item/gun/medbeam/mech/medigun
-	custom_materials = list(/datum/material/iron = 15000, /datum/material/glass = 8000, /datum/material/plasma = 3000, /datum/material/gold = 8000, /datum/material/diamond = 2000)
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/Initialize()
-	. = ..()
-	medigun = new(src)
-
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/Destroy()
-	qdel(medigun)
-	return ..()
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/process()
-	if(..())
-		return
-	medigun.process()
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/action(atom/target)
-	medigun.process_fire(target, loc)
-
-
-/obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam/detach()
-	STOP_PROCESSING(SSobj, src)
-	medigun.LoseTarget()
-	return ..()

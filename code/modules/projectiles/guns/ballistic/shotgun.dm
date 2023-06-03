@@ -1,12 +1,7 @@
 //IN THIS DOCUMENT: Shotgun template, Double barrel shotguns, Pump-action shotguns, Semi-auto shotgun
-// See gun.dm for keywords and the system used for gun balance
-
-
-
 //////////////////////
 // SHOTGUN TEMPLATE //
 //////////////////////
-
 
 /obj/item/gun/ballistic/shotgun
 	slowdown = 0.3 //Bulky gun slowdown with rebate since generally smaller than assault rifles
@@ -88,20 +83,33 @@
 	if (chambered)
 		. += "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
-/obj/item/gun/ballistic/shotgun/lethal
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
+//////////////////////////////////////
+//			SINGLE SHOTGUN			//
+//////////////////////////////////////
 
-
+/obj/item/gun/ballistic/revolver/single_shotgun
+	name = "pipe shotgun"
+	desc = "A homemade pipe shotgun. While it might look crude, it has no issue dropping a grown man."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "winchesterbore"
+	icon_prefix = "pepperbox"
+	w_class = WEIGHT_CLASS_BULKY
+	weapon_weight = WEAPON_MEDIUM
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	fire_delay = 0.5
+	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+	extra_damage = 4
+	extra_penetration = 0.1
 
 ////////////////////////////////////////
 //DOUBLE BARREL & PUMP ACTION SHOTGUNS//
 ////////////////////////////////////////
 
-
-//Caravan shotgun							Keywords: Shotgun, Double barrel, saw-off, extra damage +3, extra pen 5%
 /obj/item/gun/ballistic/revolver/caravan_shotgun
-	name = "caravan shotgun"
-	desc = "A common over-under double barreled shotgun made in the post-war era."
+	name = "over-under shotgun"
+	desc = "A common over-under double barreled shotgun, made in the post-war era."
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -122,7 +130,7 @@
 
 /obj/item/gun/ballistic/revolver/caravan_shotgun/attackby(obj/item/A, mob/user, params)
 	..()
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter) | istype(A, /obj/item/twohanded/chainsaw))
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/twohanded/chainsaw))
 		sawoff(user)
 	if(istype(A, /obj/item/melee/transforming/energy))
 		var/obj/item/melee/transforming/energy/W = A
@@ -137,8 +145,6 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-
-//Widowmaker				Keywords: Shotgun, Double barrel, saw-off, extra damage +2, extra pen 15%
 /obj/item/gun/ballistic/revolver/widowmaker
 	name = "Winchester Widowmaker"
 	desc = "Old-world Winchester Widowmaker double-barreled 12 gauge shotgun, with mahogany furniture"
@@ -162,7 +168,7 @@
 
 /obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
 	..()
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter) | istype(A, /obj/item/twohanded/chainsaw))
+	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/twohanded/chainsaw))
 		sawoff(user)
 	if(istype(A, /obj/item/melee/transforming/energy))
 		var/obj/item/melee/transforming/energy/W = A
@@ -177,11 +183,9 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-
-//Hunting shotgun				Keywords: Shotgun, Pump-action, 4 rounds
 /obj/item/gun/ballistic/shotgun/hunting
-	name = "hunting shotgun"
-	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
+	name = "Winchester Model 1897"
+	desc = "Found everywhere, the 12 gauge pump is a popular means of self-defense due to its wide area of effect and large ammunition capacity."
 	icon_state = "pump"
 	item_state = "shotgunpump"
 	icon_prefix = "shotgunpump"
@@ -196,16 +200,14 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-
-//Police Shotgun				Keywords: Shotgun, Pump-action, 6 rounds, Folding stock, Flashlight rail
 /obj/item/gun/ballistic/shotgun/police
-	name = "police shotgun"
-	desc = "A pre-war shotgun with large magazine and folding stock, made from steel and polymers. Flashlight attachment rail."
+	name = "Ithaca Model 37"
+	desc = "A pre-war shotgun with large magazine and folding stock, made from steel and polymers."
 	icon_state = "shotgunpolice"
 	item_state = "shotgunpolice"
 	icon_prefix = "shotgunpolice"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/police
-	sawn_desc = "Portable but with a poor recoil managment."
+	sawn_desc = "Portable but with poor recoil managment."
 	w_class = WEIGHT_CLASS_NORMAL
 	recoil = 0.5
 	fire_delay = 1
@@ -242,10 +244,8 @@
 /obj/item/gun/ballistic/shotgun/police/update_icon_state()
 	icon_state = "[current_skin ? unique_reskin[current_skin] : "shotgunpolice"][stock ? "" : "fold"]"
 
-
-//Trench shotgun					Keywords: Shotgun, Pump-action, 5 rounds, Bayonet
 /obj/item/gun/ballistic/shotgun/trench
-	name = "trench shotgun"
+	name = "Winchester Model 12"
 	desc = "A military shotgun designed for close-quarters fighting, equipped with a bayonet lug."
 	icon_state = "trench"
 	item_state = "shotguntrench"
@@ -286,7 +286,6 @@
 	else
 		icon_state = "[initial(icon_state)]"
 
-//Browning Auto-5						Keywords: Shotgun, Semi-auto, 4 rounds internal
 /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	name = "Browning Auto-5"
 	desc = "A semi automatic shotgun with a four round tube."
@@ -297,10 +296,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact
 	fire_sound = 'sound/f13weapons/auto5.ogg'
 
-
-//Lever action shotgun					Keywords: Shotgun, Lever-action, 5 round magazine, Pistol grip
 /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
-	name = "lever action shotgun"
+	name = "Winchester Model 1887"
 	desc = "A pistol grip lever action shotgun with a five-shell capacity underneath plus one in chamber."
 	icon_state = "shotgunlever"
 	item_state = "shotgunlever"
@@ -317,8 +314,6 @@
 	knife_x_offset = 23
 	knife_y_offset = 23
 
-
-//Neostead 2000							Keywords: BOS, Shotgun, Semi-auto, 12 rounds internal
 /obj/item/gun/ballistic/shotgun/automatic/combat/neostead
 	name = "Neostead 2000"
 	desc = "An advanced shotgun with two separate magazine tubes, allowing you to quickly toggle between ammo types."
@@ -361,7 +356,6 @@
 		return
 	toggle_tube(user)
 
-//Neostead 2000 NO TUBE SWAP							Keywords: Khan, Shotgun, Semi-auto, 12 rounds internal
 /obj/item/gun/ballistic/shotgun/automatic/combat/neostead_noalt
 	name = "Neostead 2000"
 	desc = "An advanced shotgun with two separate magazine tubes."
@@ -372,14 +366,6 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube_noalt
 	force = 10
 
-/obj/item/gun/ballistic/shotgun/automatic/combat/neostead_noalt/khan
-	name = "Cold Water"
-	desc = "A personalized Neostead shotgun belonging to a Senior Enforce of the Great Khans."
-	fire_delay = 3.5
-	recoil = 1
-	force = 12
-
-//Winchester City-Killer				Keywords: Shotgun, Full-auto, 10 rounds internal
 /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
 	name = "Winchester City-Killer shotgun"
 	desc = "A semi automatic shotgun with black tactical furniture made by Winchester Arms. This particular model uses an internal tube magazine."
@@ -391,33 +377,6 @@
 	automatic = 1
 	recoil = 4.3
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
-
-
-//Riot shotgun							Keywords: Shotgun, Semi-auto, 12 round magazine, Pistol grip
-/obj/item/gun/ballistic/automatic/shotgun/riot
-	name = "Riot shotgun"
-	desc = "A compact riot shotgun with a large ammo drum and semi-automatic fire, designed to fight in close quarters."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "shotgunriot"
-	item_state = "shotgunriot"
-	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/d12g
-	fire_delay = 3
-	burst_size = 1
-	recoil = 1.1
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
-	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
-
-//Boss' unique riot shotgun.
-/obj/item/gun/ballistic/automatic/shotgun/riot/boss
-	name = "Left Hand"
-	desc = "A compact riot shotgun with a large ammo drum and semi-automatic fire, designed to fight in close quarters. \
-	This one has engravings, dedicated to a 'Captain' of some sort. Odd."
-	fire_delay = 2
-	recoil = 1
 
 /obj/item/gun/ballistic/automatic/shotgun/pancor
 	name = "Pancor Jackhammer"
@@ -433,11 +392,3 @@
 	automatic = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-
-// BETA // Obsolete
-/obj/item/gun/ballistic/shotgun/shotttesting
-	name = "shotgun"
-	icon_state = "shotgunpolice"
-	item_state = "shotgunpolice"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal/test
-	extra_damage = 7

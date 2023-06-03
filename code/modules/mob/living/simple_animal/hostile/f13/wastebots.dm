@@ -64,7 +64,7 @@
 	attack_sound = 'sound/items/welder.ogg'
 	attack_verb_simple = "shoots a burst of flame at"
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/f13plasma/scatter
+	projectiletype = /obj/item/projectile/plasma
 	extra_projectiles = 2
 	ranged = TRUE
 	retreat_distance = 2
@@ -209,7 +209,7 @@
 	attack_verb_simple = "slaps"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol/hitscan
+	projectiletype = /obj/item/projectile/beam/laser/pistol
 	faction = list("wastebot")
 	check_friendly_fire = TRUE
 	stat_attack = UNCONSCIOUS

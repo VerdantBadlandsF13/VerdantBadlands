@@ -107,7 +107,7 @@
 		else
 			to_chat(user, "<span class='warning'>You can't reach, close it first!</span>")
 
-	else if(istype(W, /obj/item/weldingtool) || istype(W, /obj/item/gun/energy/plasmacutter))
+	else if(istype(W, /obj/item/weldingtool))
 		if(W.use_tool(src, user, 0, volume=50))
 			dismantle(user, TRUE)
 	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))

@@ -30,7 +30,6 @@
 		/obj/item/soap/tongue,
 		/obj/item/analyzer/nose,
 		/obj/item/holosign_creator/security,
-		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/gun/energy/laser/pistol/cyborg/gutsy)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
 	ratvar_modules = list(/obj/item/clockwork/slab/cyborg/security,

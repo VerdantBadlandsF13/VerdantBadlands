@@ -51,14 +51,6 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
-/datum/design/board/donksofttoyvendor
-	name = "Machine Design (Donksoft Toy Vendor Board)"
-	desc = "The circuit board for a Donksoft Toy Vendor."
-	id = "donksofttoyvendor"
-	build_path = /obj/item/circuitboard/machine/vending/donksofttoyvendor
-	category = list ("Misc. Machinery")
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
-
 /datum/design/board/space_heater
 	name = "Machine Design (Space Heater Board)"
 	desc = "The circuit board for a space heater."
@@ -114,14 +106,6 @@
 	build_path = /obj/item/circuitboard/machine/paystand
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
-
-/datum/design/board/autoylathe
-	name = "Machine Design (Autoylathe)"
-	desc = "The circuit board for an autoylathe."
-	id = "autoylathe"
-	build_path = /obj/item/circuitboard/machine/autolathe/toy
-	departmental_flags = DEPARTMENTAL_FLAG_ALL
-	category = list("Misc. Machinery")
 
 /datum/design/board/hypnochair
 	name = "Machine Design (Enhanced Interrogation Chamber)"

@@ -1,6 +1,6 @@
 /obj/item/ammo_box/magazine/internal/shot
 	name = "shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = "shotgun"
 	max_ammo = 4
 	multiload = 0
@@ -20,7 +20,7 @@
 
 /obj/item/ammo_box/magazine/internal/shot/tube
 	name = "dual feed shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/trainshot
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/shot/tube_noalt
@@ -61,13 +61,8 @@
 
 /obj/item/ammo_box/magazine/internal/shot/police
 	name = "police shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 6
-
-/obj/item/ammo_box/magazine/internal/shot/bounty
-	name = "triple-barrel shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/incapacitate
-	max_ammo = 3
 
 /obj/item/ammo_box/magazine/internal/shot/tube44
 	name = ".44 magnum internal tube magazine" //trail carbine
@@ -89,10 +84,6 @@
 	caliber = "4570"
 	max_ammo = 10
 	multiload = 1
-
-/obj/item/ammo_box/magazine/internal/shot/tube4570/medicine
-	name = "medicine stick tube magazine"
-	max_ammo = 8
 
 /obj/item/ammo_box/magazine/internal/shot/lasmusket
 	name = "lasmusket magazine"

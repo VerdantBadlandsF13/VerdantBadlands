@@ -295,15 +295,6 @@
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/donksoft_refill
-	name = "Donksoft Toy Vendor Refill"
-	desc = "A refill canister for Donksoft Toy Vendors."
-	id = "donksoft_refill"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 25000, /datum/material/glass = 15000, /datum/material/plasma = 20000, /datum/material/gold = 10000, /datum/material/silver = 10000)
-	build_path = /obj/item/vending_refill/donksoft
-	category = list("Equipment")
-
 /datum/design/eng_gloves
 	name = "Tinkers Gloves"
 	desc = "Overdesigned engineering gloves that have automated construction subroutines dialed in, allowing for faster construction while worn."
@@ -559,24 +550,6 @@
 	build_path = /obj/item/reactive_armour_shell
 	category = list("Equipment")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
-
-/datum/design/knight_armour
-	name = "Knight Armour"
-	desc = "A royal knight's favorite garments. Can be trimmed by any friendly person."
-	id = "knight_armour"
-	build_type = AUTOLATHE
-	materials = list(MAT_CATEGORY_RIGID = 10000)
-	build_path = /obj/item/clothing/suit/armor/riot/knight/greyscale
-	category = list("Imported")
-
-/datum/design/knight_helmet
-	name = "Knight Helmet"
-	desc = "A royal knight's favorite hat. If you hold it upside down it's actually a bucket."
-	id = "knight_helmet"
-	build_type = AUTOLATHE
-	materials = list(MAT_CATEGORY_RIGID = 5000)
-	build_path = /obj/item/clothing/head/helmet/knight/greyscale
-	category = list("Imported")
 
 /////////////////////////////////////////
 /////////////Security////////////////////

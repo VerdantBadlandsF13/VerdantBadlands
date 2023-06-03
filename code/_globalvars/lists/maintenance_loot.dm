@@ -31,14 +31,9 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	/obj/item/clothing/gloves/color/fyellow = 1,
 	/obj/item/clothing/head/hardhat = 1,
 	/obj/item/clothing/head/hardhat/red = 1,
-	/obj/item/clothing/head/that = 1,
-	/obj/item/clothing/head/ushanka = 1,
 	/obj/item/clothing/head/welding = 1,
 	/obj/effect/spawner/lootdrop/breathing_masks = 15,
-	/obj/item/clothing/suit/hazardvest = 1,
 	/obj/item/clothing/under/misc/vice_officer = 1,
-	/obj/item/clothing/suit/hooded/flashsuit = 2,
-	/obj/item/clothing/accessory/medal/greytide	=	1,
 	/obj/item/assembly/prox_sensor = 4,
 	/obj/item/assembly/timer = 3,
 	/obj/item/flashlight = 4,
@@ -101,14 +96,12 @@ GLOBAL_LIST_INIT(maintenance_loot, list(
 	/obj/item/assembly/mousetrap = 2,
 	/obj/item/reagent_containers/syringe = 2,
 	/obj/effect/spawner/lootdrop/gloves = 8,
-	/obj/item/clothing/shoes/laceup = 1,
+	/obj/item/clothing/shoes/f13/fancy = 1,
 	/obj/item/storage/secure/briefcase = 3,
 	/obj/item/storage/toolbox/artistic = 2,
 	/obj/item/toy/eightball = 1,
 	/obj/item/reagent_containers/pill/floorpill = 1,
 	/obj/item/reagent_containers/food/snacks/cannedpeaches/maint = 2,
-	/obj/item/clothing/shoes/wheelys = 1,
-	/obj/item/clothing/shoes/kindleKicks = 1,
 	/obj/item/storage/box/marshmallow = 2,
 	/obj/item/clothing/gloves/tackler/offbrand = 1,
 	/obj/item/stack/sticky_tape = 1,
@@ -171,24 +164,16 @@ GLOBAL_LIST_INIT(trash_part, list(
 GLOBAL_LIST_INIT(trash_clothing, list(
 	/obj/item/clothing/glasses/sunglasses/big = 5,
 	/obj/item/clothing/glasses/sunglasses = 5,
-	/obj/item/clothing/suit/armor/f13/plates = 5,
-	/obj/item/clothing/head/helmet/knight/f13/rider = 5,
-	/obj/item/clothing/shoes/f13/cowboy = 5,
-	/obj/item/clothing/shoes/f13/explorer = 5,
-	/obj/item/clothing/shoes/f13/diesel = 5,
-	/obj/item/clothing/shoes/f13/diesel/alt = 5,
+	/obj/item/clothing/shoes/f13/rag = 5,
 	/obj/item/clothing/gloves/f13/leather = 5,
 	/obj/item/clothing/gloves/f13/military = 5,
 	/obj/item/clothing/gloves/f13/leather/fingerless = 5,
 	/obj/item/clothing/shoes/f13/tan = 5,
-	/obj/item/clothing/suit/armor/f13/kit/punk = 5,
-	/obj/item/clothing/suit/armor/f13/kit = 5,
 	/obj/item/clothing/head/welding = 5
 ))
 
 GLOBAL_LIST_INIT(trash_ammo, list(
 	/obj/item/ammo_box/a308box = 3,
-	/obj/item/ammo_box/a556/sport = 3,
 	/obj/item/ammo_box/magazine/m10mm_adv/simple = 1,
 	/obj/item/ammo_box/magazine/zipgun = 3,
 	/obj/item/ammo_casing/shotgun/buckshot = 2,
@@ -213,8 +198,6 @@ GLOBAL_LIST_INIT(trash_craft, list(
 ))
 
 GLOBAL_LIST_INIT(trash_gun, list(
-	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
-	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1
 ))
@@ -236,18 +219,7 @@ GLOBAL_LIST_INIT(trash_tool, list(
 	/obj/item/retractor = 5,
 	/obj/item/cautery = 5,
 	/obj/item/hemostat = 5,
-	/obj/item/crowbar = 5,
-	/obj/item/flashlight = 5,
-	/obj/item/extinguisher = 5,
-	/obj/item/multitool = 5,
-	/obj/item/analyzer = 5,
-	/obj/item/t_scanner = 5,
-	/obj/item/weldingtool = 5,
-	/obj/item/screwdriver = 5,
-	/obj/item/wirecutters = 5,
-	/obj/item/wrench = 5,
-	/obj/item/stack/cable_coil/random = 5,
-	/obj/item/radio/off = 5
+	/obj/item/stack/cable_coil/random = 5
 ))
 
 GLOBAL_LIST_INIT(trash_misc, list(
@@ -279,16 +251,13 @@ GLOBAL_LIST_INIT(loot_prewar_clothing, list(
 	/obj/item/clothing/under/janimaid,
 	/obj/item/clothing/suit/jacket/leather,
 	/obj/item/clothing/gloves/fingerless,
-	/obj/item/clothing/suit/jacket/puffer/vest,
 	/obj/item/clothing/under/pants/jeans,
 	/obj/item/clothing/neck/mantle/gray,
 	/obj/item/clothing/under/suit_jacket/charcoal,
-	/obj/item/clothing/head/that,
 	/obj/item/clothing/under/suit_jacket/checkered,
 	/obj/item/clothing/under/suit_jacket/burgundy,
 	/obj/item/clothing/neck/mantle/brown,
 	/obj/item/clothing/under/scratch,
-	/obj/item/clothing/shoes/sneakers/white,
 	/obj/item/clothing/head/beanie/black,
 	/obj/item/clothing/suit/hooded/chaplain_hoodie,
 	/obj/item/clothing/under/pants/camo,
@@ -298,18 +267,15 @@ GLOBAL_LIST_INIT(loot_prewar_clothing, list(
 	/obj/item/clothing/under/plaid_skirt,
 	/obj/item/clothing/under/suit_jacket/navy,
 	/obj/item/clothing/under/suit_jacket/female,
-	/obj/item/clothing/under/f13/erpdress,
-	/obj/item/clothing/shoes/laceup
+	/obj/item/clothing/under/f13/erpdress
 ))
 
 GLOBAL_LIST_INIT(loot_prewar_costume, list(
-	/obj/item/clothing/head/ushanka,
 	/obj/item/clothing/under/soviet,
 	/obj/item/clothing/under/geisha,
 	/obj/item/clothing/shoes/sandal,
 	/obj/item/clothing/under/blacktango,
 	/obj/item/clothing/under/redeveninggown,
-	/obj/item/clothing/head/sombrero,
 	/obj/item/clothing/neck/mantle/poncho,
 	/obj/item/clothing/under/sailor,
 	/obj/item/clothing/under/schoolgirl/red,
@@ -319,78 +285,11 @@ GLOBAL_LIST_INIT(loot_prewar_costume, list(
 	/obj/item/clothing/under/jabroni,
 	/obj/item/clothing/glasses/sunglasses/blindfold,
 	/obj/item/clothing/under/gladiator,
-	/obj/item/clothing/shoes/roman,
 	/obj/item/clothing/under/maid,
 	/obj/item/clothing/under/draculass,
 	/obj/item/clothing/under/kilt,
 	/obj/item/clothing/under/pirate,
 	/obj/item/clothing/suit/pirate,
-	/obj/item/clothing/under/costume/cheongsam,
-	/obj/item/clothing/under/costume/qipao/red,
-))
-
-GLOBAL_LIST_INIT(loot_t1_armor, list(
-	/obj/item/clothing/suit/armor/f13/leather_jacket,
-	/obj/item/clothing/suit/armor/f13/kit,
-	/obj/item/clothing/suit/armor/f13/raider/supafly,
-	/obj/item/clothing/head/helmet/f13/raider,
-	/obj/item/clothing/suit/armor/f13/raider/sadist,
-	/obj/item/clothing/head/helmet/f13/raider/arclight,
-	/obj/item/clothing/suit/armor/f13/raider/blastmaster,
-	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
-	/obj/item/clothing/suit/armor/f13/raider/yankee,
-	/obj/item/clothing/head/helmet/f13/raider/yankee,
-	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/suit/armor/f13/raider/painspike,
-	/obj/item/clothing/head/helmet/f13/raider/psychotic,
-	/obj/item/clothing/suit/armor/f13/raider/supafly,
-	/obj/item/clothing/head/helmet/f13/raider,
-	/obj/item/clothing/suit/f13/duster,
-	/obj/item/clothing/suit/armor/f13/raider/iconoclast
-))
-
-GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/suit/armor/f13/metalarmor,
-	/obj/item/clothing/head/helmet/knight/f13/metal,
-	/obj/item/clothing/suit/armor/f13/metalarmor,
-	/obj/item/clothing/head/helmet/f13/metalmask,
-	/obj/item/clothing/suit/armor/f13/leatherarmor,
-	/obj/item/clothing/suit/armor/f13/leather_jacket/combat,
-	/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat
-))
-
-GLOBAL_LIST_INIT(loot_t3_armor, list(
-	/obj/item/clothing/suit/armor/f13/metalarmor/reinforced,
-	/obj/item/clothing/head/helmet/f13/metalmask/mk2,
-	/obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat,
-	/obj/item/clothing/head/helmet/f13/combat/swat,
-	/obj/item/clothing/suit/armor/f13/combat/swat,
-	/obj/item/clothing/suit/armor/f13/combat,
-	/obj/item/clothing/head/helmet/f13/combat,
-	/obj/item/clothing/suit/armor/bulletproof,
-	/obj/item/clothing/head/helmet/alt,
-	/obj/item/clothing/suit/armor/f13/combat/dark,
-	/obj/item/clothing/head/helmet/f13/combat/dark,
-	/obj/item/clothing/suit/armor/f13/combat/mk2/dark,
-	/obj/item/clothing/head/helmet/f13/combat/mk2/dark,
-	/obj/item/clothing/suit/armor/f13/sulphitearmor,
-	/obj/item/clothing/head/helmet/f13/sulphitehelm
-))
-
-GLOBAL_LIST_INIT(loot_t4_armor, list(
-	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b,
-	/obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b,
-	/obj/item/clothing/suit/armor/f13/combat/riotpolice,
-	/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
-	/obj/item/clothing/suit/armor/f13/combat/mk2,
-	/obj/item/clothing/head/helmet/f13/combat/mk2
-))
-
-GLOBAL_LIST_INIT(loot_t5_armor, list(
-	/obj/item/clothing/suit/armor/f13/power_armor/t45d,
-	/obj/item/clothing/head/helmet/f13/power_armor/t45d,
-	/obj/item/clothing/suit/armor/f13/power_armor/t51b,
-	/obj/item/clothing/head/helmet/f13/power_armor/t51b
 ))
 
 GLOBAL_LIST_INIT(loot_medical_tool, list(
@@ -489,171 +388,6 @@ GLOBAL_LIST_INIT(loot_t5_melee, list(
 	/obj/item/melee/powerfist/f13/moleminer
 ))
 
-GLOBAL_LIST_INIT(loot_t1_range, list(
-	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/gun/ballistic/revolver/caravan_shotgun,
-	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/gun/ballistic/rifle/mosin,
-	/obj/item/ammo_box/a762,
-	/obj/item/gun/ballistic/revolver/police,
-	/obj/item/ammo_box/c38,
-	/obj/item/gun/ballistic/revolver/hobo/pepperbox,
-	/obj/item/gun/ballistic/rifle/hunting,
-	/obj/item/ammo_box/a308,
-	/obj/item/gun/ballistic/automatic/pistol/n99,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/gun/ballistic/automatic/pistol/m1911,
-	/obj/item/ammo_box/magazine/m45,
-	/obj/item/gun/ballistic/automatic/pistol/ninemil,
-	/obj/item/ammo_box/magazine/m9mm,
-	/obj/item/gun/ballistic/automatic/pistol/n99,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/gun/ballistic/automatic/varmint,
-	/obj/item/ammo_box/magazine/m556/rifle/small
-))
-
-GLOBAL_LIST_INIT(loot_t2_range, list(
-	/obj/item/gun/ballistic/shotgun/hunting,
-	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/gun/ballistic/revolver/m29,
-	/obj/item/ammo_box/m44,
-	/obj/item/ammo_box/a308,
-	/obj/item/ammo_box/m44,
-	/obj/item/gun/ballistic/rifle/repeater/cowboy,
-	/obj/item/ammo_box/a357,
-	/obj/item/ammo_box/a357,
-	/obj/item/gun/ballistic/revolver/colt357,
-	/obj/item/gun/ballistic/revolver/single_shotgun,
-	/obj/item/ammo_box/a357,
-	/obj/item/gun/ballistic/automatic/service,
-	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/gun/energy/laser/pistol,
-	/obj/item/stock_parts/cell/ammo/ec,
-	/obj/item/gun/ballistic/automatic/m1carbine,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/gun/ballistic/automatic/delisle,
-	/obj/item/ammo_box/magazine/m9mmds
-))
-
-GLOBAL_LIST_INIT(loot_t3_range, list(
-	/obj/item/gun/ballistic/automatic/smg/mini_uzi,
-	/obj/item/ammo_box/magazine/uzim9mm,
-	/obj/item/gun/ballistic/automatic/smg/smg10mm,
-	/obj/item/ammo_box/magazine/m10mm_adv/ext,
-	/obj/item/gun/ballistic/automatic/smg/greasegun,
-	/obj/item/ammo_box/magazine/greasegun,
-	/obj/item/gun/ballistic/shotgun/trench,
-	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/gun/energy/laser/wattz,
-	/obj/item/stock_parts/cell/ammo/ec,
-	/obj/item/gun/ballistic/revolver/needler,
-	/obj/item/ammo_box/needle,
-	/obj/item/gun/ballistic/rifle/repeater/trail,
-	/obj/item/ammo_box/tube/m44,
-	/obj/item/ammo_box/tube/m44,
-	/obj/item/gun/energy/laser/aer9,
-	/obj/item/stock_parts/cell/ammo/mfc,
-	/obj/item/gun/energy/gammagun
-))
-
-GLOBAL_LIST_INIT(loot_t4_range, list(
-	/obj/item/gun/ballistic/automatic/assault_rifle,
-	/obj/item/ammo_box/magazine/m556/rifle/assault,
-	/obj/item/gun/ballistic/automatic/marksman,
-	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/gun/ballistic/automatic/combat,
-	/obj/item/gun/ballistic/automatic/pistol/deagle,
-	/obj/item/ammo_box/magazine/m44,
-	/obj/item/gun/energy/laser/rcw,
-	/obj/item/stock_parts/cell/ammo/ecp,
-	/obj/item/stock_parts/cell/ammo/ec,
-	/obj/item/gun/energy/laser/aer9,
-	/obj/item/stock_parts/cell/ammo/mfc,
-	/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
-	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/gun/ballistic/rifle/repeater/brush,
-	/obj/item/ammo_box/tube/c4570,
-	/obj/item/ammo_box/tube/c4570,
-	/obj/item/gun/ballistic/rifle/mag/antimateriel,
-	/obj/item/ammo_box/magazine/amr,
-	/obj/item/gun/ballistic/automatic/rangemaster,
-	/obj/item/ammo_box/magazine/m762,
-	/obj/item/gun/ballistic/automatic/shotgun/riot,
-	/obj/item/ammo_box/magazine/d12g,
-	/obj/item/gun/energy/ionrifle,
-	/obj/item/stock_parts/cell/ammo/mfc,
-	/obj/item/stock_parts/cell/ammo/ec,
-))
-
-GLOBAL_LIST_INIT(loot_t5_range, list(
-	/obj/item/gun/ballistic/automatic/smg/tommygun,
-	/obj/item/gun/ballistic/automatic/shotgun/riot,
-	/obj/item/gun/energy/laser/scatter,
-	/obj/item/gun/ballistic/revolver/hunting,
-	/obj/item/gun/ballistic/automatic/bozar
-))
-
-GLOBAL_LIST_INIT(loot_unique_range, list(
-	/obj/item/gun/ballistic/revolver/colt357/lucky,
-	/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
-	/obj/item/gun/ballistic/rifle/hunting/paciencia,
-	/obj/item/gun/energy/laser/solar,
-	/obj/item/gun/energy/laser/plasma/pistol/alien
-))
-
-GLOBAL_LIST_INIT(loot_t1_ammo, list(
-	/obj/item/ammo_box/magazine/m9mm,
-	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/ammo_box/c38,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/ammo_box/magazine/m556/rifle/small
-))
-
-GLOBAL_LIST_INIT(loot_t2_ammo, list(
-	/obj/item/ammo_box/magazine/m45,
-	/obj/item/ammo_box/a762,
-	/obj/item/ammo_box/a308,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/ammo_box/c38,
-	/obj/item/ammo_box/magazine/m9mm,
-	/obj/item/ammo_box/m44,
-	/obj/item/ammo_box/tube/a357,
-	/obj/item/ammo_box/a357,
-	/obj/item/ammo_box/magazine/m556/rifle/small
-))
-
-GLOBAL_LIST_INIT(loot_t3_ammo, list(
-	/obj/item/ammo_box/shotgun/buck,
-	/obj/item/ammo_box/magazine/uzim9mm,
-	/obj/item/ammo_box/magazine/m10mm_adv/simple,
-	/obj/item/ammo_box/magazine/greasegun,
-	/obj/item/ammo_box/needle,
-	/obj/item/ammo_box/magazine/tommygunm45,
-	/obj/item/ammo_box/tube/m44,
-	/obj/item/ammo_box/magazine/m10mm_adv/ext,
-	/obj/item/stock_parts/cell/ammo/ec
-))
-
-GLOBAL_LIST_INIT(loot_t4_ammo, list(
-	/obj/item/ammo_box/magazine/d12g,
-	/obj/item/ammo_box/magazine/m44,
-	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/ammo_box/c4570,
-	/obj/item/ammo_box/tube/c4570,
-	/obj/item/ammo_box/a50MG,
-	/obj/item/ammo_box/a762/doublestacked,
-	/obj/item/stock_parts/cell/ammo/mfc
-))
-
-GLOBAL_LIST_INIT(loot_t5_ammo, list(
-	/obj/item/ammo_box/a50MG,
-	/obj/item/ammo_box/a50MG/incendiary,
-	/obj/item/ammo_box/magazine/m556/rifle/extended,
-	/obj/item/ammo_box/magazine/m762/ext,
-	/obj/item/ammo_box/magazine/d12g
-))
 
 GLOBAL_LIST_INIT(loot_garbage, list(
 	/obj/item/broken_bottle,
@@ -837,37 +571,6 @@ GLOBAL_LIST_INIT(loot_material, list(
 	/obj/item/stack/crafting/goodparts/three
 ))
 
-GLOBAL_LIST_INIT(loot_t1_money, list(
-	/obj/item/stack/f13Cash/random/low,
-	/obj/item/stack/f13Cash/random/ncr/low,
-	/obj/item/stack/f13Cash/random/denarius/low,
-	/obj/item/stack/f13Cash/random/aureus/low
-))
-
-GLOBAL_LIST_INIT(loot_t2_money, list(
-	/obj/item/stack/f13Cash/random/med,
-	/obj/item/stack/f13Cash/random/ncr/med,
-	/obj/item/stack/f13Cash/random/denarius/med,
-	/obj/item/stack/f13Cash/random/aureus/med
-))
-
-GLOBAL_LIST_INIT(loot_t3_money, list(
-	/obj/item/stack/f13Cash/random/high,
-	/obj/item/stack/f13Cash/random/ncr/high,
-	/obj/item/stack/f13Cash/random/denarius/high,
-	/obj/item/stack/f13Cash/random/aureus/high
-))
-
-GLOBAL_LIST_INIT(loot_skillbook, list(
-//	/obj/item/book/granter/trait/chemistry,
-	/obj/item/book/granter/trait/trekking,
-//	/obj/item/book/granter/trait/pa_wear,
-	/obj/item/book/granter/crafting_recipe/gunsmith_one,
-	/obj/item/book/granter/crafting_recipe/gunsmith_two,
-	/obj/item/book/granter/crafting_recipe/gunsmith_three,
-	/obj/item/book/granter/crafting_recipe/gunsmith_four
-))
-
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
 	/obj/item/advanced_crafting_components/flux,
 	/obj/item/advanced_crafting_components/lenses,
@@ -882,29 +585,4 @@ GLOBAL_LIST_INIT(loot_attachment, list(
 	/obj/item/attachments/burst_improvement,
 	/obj/item/attachments/recoil_decrease,
 	/obj/item/attachments/auto_sear
-))
-
-GLOBAL_LIST_INIT(loot_t1_blueprint, list(
-	/obj/item/book/granter/crafting_recipe/blueprint/marksman,
-	/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
-	/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
-	/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
-	/obj/item/book/granter/crafting_recipe/blueprint/aer9,
-	/obj/item/book/granter/crafting_recipe/blueprint/smg10mm
-))
-
-GLOBAL_LIST_INIT(loot_t2_blueprint, list(
-	/obj/item/book/granter/crafting_recipe/blueprint/r91,
-	/obj/item/book/granter/crafting_recipe/blueprint/sniper,
-	/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun,
-	/obj/item/book/granter/crafting_recipe/blueprint/thatgun,
-	/obj/item/book/granter/crafting_recipe/blueprint/lsw,
-	/obj/item/book/granter/crafting_recipe/blueprint/deagle
-))
-
-GLOBAL_LIST_INIT(loot_t3_blueprint, list(
-	/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
-	/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
-	/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
-	/obj/item/book/granter/crafting_recipe/blueprint/bozar
 ))

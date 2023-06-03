@@ -18,47 +18,6 @@
 	var/move_delay = FALSE
 	var/move_speed_multiplier = 0
 
-/*
-/obj/structure/closet/cardboard/relaymove(mob/living/user, direction)
-	if(opened || move_delay || !CHECK_MOBILITY(user, MOBILITY_MOVE) || !isturf(loc) || !has_gravity(loc))
-		return
-	move_delay = TRUE
-	var/oldloc = loc
-	step(src, direction)
-	user.setDir(direction)
-	if(oldloc != loc)
-		addtimer(CALLBACK(src, .proc/ResetMoveDelay), (use_mob_movespeed ? user.movement_delay() : CONFIG_GET(number/movedelay/walk_delay)) * move_speed_multiplier)
-	else
-		ResetMoveDelay()
-
-/obj/structure/closet/cardboard/proc/ResetMoveDelay()
-	move_delay = FALSE
-
-/obj/structure/closet/cardboard/open()
-	if(opened || !can_open())
-		return 0
-	var/list/alerted = null
-	if(egged < world.time)
-		var/mob/living/Snake = null
-		for(var/mob/living/L in src.contents)
-			Snake = L
-			break
-		if(Snake)
-			alerted = fov_viewers(world.view,src)
-	..()
-	if(LAZYLEN(alerted))
-		egged = world.time + SNAKE_SPAM_TICKS
-		for(var/mob/living/L in alerted)
-			if(!L.stat)
-				if(!L.incapacitated(ignore_restraints = 1))
-					L.face_atom(src)
-				L.do_alert_animation(L)
-		playsound(loc, 'sound/machines/chime.ogg', 50, FALSE, -5)
-
-	move_speed_multiplier = 2
-	mob_storage_capacity = 5
-*/
-
 /mob/living/proc/do_alert_animation(atom/A)
 	var/image/I = image('icons/obj/closet.dmi', A, "cardboard_special", A.layer+1)
 	flick_overlay_view(I, A, 8)

@@ -13,7 +13,7 @@
 	layer = ABOVE_MOB_LAYER
 	var/view_range = 10
 	var/cooldown = 0
-	var/projectile_type = /obj/item/projectile/bullet/manned_turret
+	var/projectile_type = /obj/item/projectile/bullet
 	var/rate_of_fire = 1
 	var/number_of_shots = 40
 	var/cooldown_duration = 90
@@ -167,7 +167,7 @@
 /obj/machinery/manned_turret/ultimate  // Admin-only proof of concept for autoclicker automatics
 	name = "Infinity Gun"
 	view_range = 12
-	projectile_type = /obj/item/projectile/bullet/manned_turret
+	projectile_type = /obj/item/projectile/bullet
 
 /obj/machinery/manned_turret/ultimate/checkfire(atom/targeted_atom, mob/user)
 	target = targeted_atom

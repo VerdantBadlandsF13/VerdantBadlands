@@ -219,10 +219,8 @@
 	for(var/obj/item/I in H)
 		H.dropItemToGround(I)
 
-	var/hat = pick(/obj/item/clothing/head/helmet/f13/legion/recruit, /obj/item/clothing/head/helmet/f13/fiend)
-	H.equip_to_slot_or_del(new hat(H), SLOT_HEAD)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/f13/roving(H), SLOT_W_UNIFORM)
-	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/roman(H), SLOT_SHOES)
+	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H), SLOT_SHOES)
 	H.put_in_hands(new /obj/item/shield/riot(H), TRUE)
 	H.put_in_hands(new /obj/item/claymore(H), TRUE)
 	H.equip_to_slot_or_del(new /obj/item/twohanded/spear(H), SLOT_BACK)

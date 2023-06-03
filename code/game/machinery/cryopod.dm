@@ -192,10 +192,9 @@
 		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/clothing/suit/space,
-		/obj/item/clothing/suit/armor,
+		/obj/item/clothing/suit/armored,
 		/obj/item/defibrillator/compact,
 		/obj/item/reagent_containers/hypospray/CMO,
-		/obj/item/clothing/accessory/medal/gold/captain,
 		/obj/item/clothing/gloves/krav_maga,
 		/obj/item/nullrod,
 		/obj/item/tank/jetpack,
@@ -205,14 +204,6 @@
 	// These items will NOT be preserved
 	var/static/list/do_not_preserve_items = typecacheof(list(
 		/obj/item/mmi/posibrain,
-		/obj/item/gun/energy/laser/mounted,
-		/obj/item/gun/energy/e_gun/advtaser/mounted,
-		/obj/item/gun/ballistic/revolver/grenadelauncher/cyborg,
-		/obj/item/gun/energy/disabler/cyborg,
-		/obj/item/gun/energy/e_gun/advtaser/cyborg,
-		/obj/item/gun/energy/printer,
-		/obj/item/gun/energy/kinetic_accelerator/cyborg,
-		/obj/item/gun/energy/laser/cyborg
 	))
 
 /obj/machinery/cryopod/Initialize(mapload)

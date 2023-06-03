@@ -537,12 +537,12 @@
 	action_icon_state = "ling_armor"
 	action_background_icon_state = "bg_ling"
 
-	suit_type = /obj/item/clothing/suit/armor/changeling
+	suit_type = /obj/item/clothing/suit/armored/changeling
 	helmet_type = /obj/item/clothing/head/helmet/changeling
 	suit_name_simple = "armor"
 	helmet_name_simple = "helmet"
 
-/obj/item/clothing/suit/armor/changeling
+/obj/item/clothing/suit/armored/changeling
 	name = "chitinous mass"
 	desc = "A tough, hard covering of black chitin."
 	icon_state = "lingarmor"
@@ -553,7 +553,7 @@
 	cold_protection = 0
 	heat_protection = 0
 
-/obj/item/clothing/suit/armor/changeling/Initialize()
+/obj/item/clothing/suit/armored/changeling/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CHANGELING_TRAIT)
 	if(ismob(loc))

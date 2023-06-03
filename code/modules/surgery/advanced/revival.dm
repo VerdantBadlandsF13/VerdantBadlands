@@ -28,7 +28,7 @@
 
 /datum/surgery_step/revive
 	name = "electrically stimulate brain"
-	implements = list(/obj/item/shockpaddles = 100, /obj/item/abductor/gizmo = 100, /obj/item/melee/baton = 75, /obj/item/organ/cyberimp/arm/baton = 75, /obj/item/organ/cyberimp/arm/gun/taser = 60, /obj/item/gun/energy/e_gun/advtaser = 60, /obj/item/gun/energy/taser = 60)
+	implements = list(/obj/item/shockpaddles = 100, /obj/item/abductor/gizmo = 100, /obj/item/melee/baton = 75, /obj/item/organ/cyberimp/arm/baton = 75)
 	time = 120
 /datum/surgery_step/revive/tool_check(mob/user, obj/item/tool)
 	. = TRUE

@@ -44,7 +44,7 @@
 
 		add_fingerprint(user)
 
-		if(!istype(W, /obj/item/gun/energy/kinetic_accelerator) && !istype(W, /obj/item/stack/ore/glass ) )
+		if(!istype(W, /obj/item/stack/ore/glass ))
 			if (storedindex>=NUMCONTENT)
 				to_chat(user, "<span class='notice'>The pit is filled with items to the limit!</span>")
 				return

@@ -143,6 +143,43 @@ ATTACHMENTS
 
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
+	var/safety = 1
+	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
+
+	var/condition = 1// Should I use conditions?
+	var/condition_lvl = 100// Automatically shoved to 100 on init, regardless.
+	var/condition_mul = 1// How quickly I decay. 0.25 is easy, 1 is hard.
+	var/can_jam = TRUE// CAN I jam?
+	var/cell_discharge = FALSE// Instead of a traditional jam, it eats additional cell charge.
+	var/jammed = FALSE// Am I jammed?
+	var/jam_fixing = FALSE// Is someone unjamming me?
+	var/jam_fixtime = 100// How long do I take to unjam?
+
+/obj/item/gun/AltClick(mob/user)
+	if(jammed)
+		if(jam_fixing)
+			return
+		usr.visible_message("<span class='warning'>[usr] has begun trying to fix their weapon!<span class='warning'>")
+		jam_fixing = TRUE
+		if(do_mob(usr, usr, jam_fixtime))
+			jammed = FALSE
+			to_chat(usr, "<span class='green'>Good to go!</span>")
+			playsound(src, "sound/weapons/gun_slide_lock_[rand(1,5)].ogg", 30, 1)
+		else
+			to_chat(usr, "<span class='warning'>You must remain still to clear the jam!</span>")
+		jam_fixing = FALSE
+		return
+	return ..()
+
+/obj/item/gun/CtrlClick(mob/living/user)
+	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	if(src == user.get_active_held_item())
+		safety = !safety
+		playsound(user, safety_audio, 100, 1)
+		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+	. = ..()
+
 /obj/item/gun/Initialize()
 	. = ..()
 	if(no_pin_required)
@@ -152,6 +189,7 @@ ATTACHMENTS
 	if(gun_light)
 		alight = new (src)
 	build_zooming()
+	safety = 1// Lock the safety.
 
 /obj/item/gun/Destroy()
 	if(istype(pin)) // could be a typepath if qdel init hint was used before parent
@@ -182,6 +220,10 @@ ATTACHMENTS
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
+	if(safety)
+		. += "<span class='reven'>The safety is on. Ctrl-click to toggle.</span>"
+	else
+		. += "<span class='reven'>The safety is off. Ctrl-click to toggle.</span>"
 	if(!no_pin_required)
 		if(pin)
 			. += "It has \a [pin] installed."
@@ -217,8 +259,13 @@ ATTACHMENTS
 			free_slots--
 		if(free_slots > 0)
 			. += "It has [free_slots] empty mounting point\s for miscellaneous attachments."
-
-
+	if(condition)
+		. += "<span class='notice'>Weapon condition: [round(condition_lvl)]%</span>"
+	else if(!condition)
+		. += "<span class='revenminor'>This weapon does not use the condition system.</span>"
+	if(cell_discharge)
+		. += "<span class='revenminor'>Condition on this weapon heavily changes how much cell charge it consumes. <br>\
+		It does not suffer from traditional jams, as a consequence.</span>"
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/gun/proc/process_chamber(mob/living/user)
@@ -234,6 +281,18 @@ ATTACHMENTS
 
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>[dryfire_text]</span>")
+	playsound(src, dryfire_sound, 30, 1)
+
+/obj/item/gun/proc/shoot_while_jammed(mob/living/user as mob|obj)
+	to_chat(user, "<span class='danger'>The weapon is jammed! Alt-click to clear it!</span>")
+	playsound(src, dryfire_sound, 30, 1)
+
+/obj/item/gun/proc/shoot_while_broken(mob/living/user as mob|obj)
+	to_chat(user, "<span class='danger'>This weapon is broken!</span>")
+	playsound(src, dryfire_sound, 30, 1)
+
+/obj/item/gun/proc/shoot_while_safe(mob/living/user as mob|obj)
+	to_chat(user, "<span class='danger'>The weapon has its safety on! Ctrl-click to toggle.</span>")
 	playsound(src, dryfire_sound, 30, 1)
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
@@ -361,6 +420,8 @@ ATTACHMENTS
 				var/stam_cost = G.getstamcost(user)
 				addtimer(CALLBACK(G, /obj/item/gun.proc/process_fire, target, user, TRUE, params, null, bonus_spread, stam_cost), loop_counter)
 
+	condition_lvl = max(0, condition_lvl - (0.25 * condition_mul))
+
 	var/stam_cost = getstamcost(user)
 
 	process_fire(target, user, TRUE, params, null, bonus_spread, stam_cost)
@@ -413,6 +474,27 @@ ATTACHMENTS
 
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	add_fingerprint(user)
+
+	if(safety)
+		shoot_while_safe(user)
+		return
+
+	if(condition == 1)
+		if(condition_lvl == 0)
+			shoot_while_broken(user)
+			return
+
+	if(condition == 1)
+		if(can_jam)
+			if(jammed)
+				shoot_while_jammed(user)
+				return
+
+	if(condition == 1)
+		if(condition_lvl < 60)
+			if(prob(40 - (condition_lvl * 0.67)))
+				if(can_jam)
+					jammed = TRUE
 
 	if(on_cooldown())
 		return
@@ -578,6 +660,19 @@ ATTACHMENTS
 			to_chat(user, "<span class='notice'>You attach \the [T] to \the [src].</span>")
 			update_icon()
 			return
+
+	if(condition == 1)
+		if(istype(I, /obj/item/repair_kit/weapon_repair_kit))
+			if(condition_lvl < 90)
+				if(do_after(user, 20, target = src))
+					to_chat(user, "<span class='notice'>You repaired your weapon.</span>")
+					condition_lvl = min(100, condition_lvl + 40)
+					qdel(I)
+			else
+				to_chat(user, "<span class='notice'>No need, the weapon is in good condition.</span>")
+	else
+		to_chat(user, "<span class='revenminor'>This weapon does not use the condition system.</span>")
+
 	return ..()
 
 

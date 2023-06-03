@@ -89,8 +89,6 @@
 
 /datum/outfit/ashwalker
 	name ="Ashwalker"
-	head = /obj/item/clothing/head/helmet/gladiator
-	uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
 
 
 //Timeless prisons: Spawns in Wish Granter prisons in lavaland. Ghosts become age-old users of the Wish Granter and are advised to seek repentance for their past.
@@ -350,8 +348,7 @@
 /datum/outfit/hotelstaff
 	name = "Hotel Staff"
 	uniform = /obj/item/clothing/under/suit/telegram
-	shoes = /obj/item/clothing/shoes/laceup
-	head = /obj/item/clothing/head/hotel
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	r_pocket = /obj/item/radio/off
 	back = /obj/item/storage/backpack
 	implants = list(/obj/item/implant/mindshield)
@@ -370,9 +367,7 @@
 /datum/outfit/hotelstaff/security
 	name = "Hotel Secuirty"
 	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt
-	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/vest/blueshirt
-	head = /obj/item/clothing/head/helmet/blueshirt
+	shoes = /obj/item/clothing/shoes/f13/military
 	back = /obj/item/storage/backpack/security
 	belt = /obj/item/storage/belt/security/full
 
@@ -432,7 +427,7 @@
 /datum/outfit/demonic_friend
 	name = "Demonic Friend"
 	uniform = /obj/item/clothing/under/misc/assistantformal
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	r_pocket = /obj/item/radio/off
 	back = /obj/item/storage/backpack
 	implants = list(/obj/item/implant/mindshield) //No revolutionaries, he's MY friend.
@@ -450,7 +445,7 @@
 /datum/outfit/syndicate_empty
 	name = "Syndicate Operative Empty"
 	uniform = /obj/item/clothing/under/syndicate
-	shoes = /obj/item/clothing/shoes/combat
+	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/syndicate/alt
 	back = /obj/item/storage/backpack
@@ -482,7 +477,6 @@
 	name = "Syndicate Battlecruiser Assault Operative"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	belt = /obj/item/storage/belt/military
-	suit = /obj/item/clothing/suit/armor/vest
 	suit_store = /obj/item/gun/ballistic/automatic/pistol
 	back = /obj/item/storage/backpack/security
 	mask = /obj/item/clothing/mask/gas/syndicate
@@ -499,9 +493,7 @@
 	name = "Syndicate Battlecruiser Captain"
 	l_pocket = /obj/item/melee/transforming/energy/sword/saber/red
 	r_pocket = /obj/item/melee/classic_baton/telescopic
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
 	back = /obj/item/storage/backpack/satchel/leather
-	head = /obj/item/clothing/head/HoS/syndicate
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 
@@ -522,7 +514,7 @@
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
 	important_info = "Work as a team with your fellow survivors and do not abandon them."
 	uniform = /obj/item/clothing/under/rank/security/officer
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	id = /obj/item/card/id/away/old/sec
 	r_pocket = /obj/item/restraints/handcuffs
 	l_pocket = /obj/item/assembly/flash/handheld
@@ -550,7 +542,7 @@
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
 	important_info = "Work as a team with your fellow survivors and do not abandon them."
 	uniform = /obj/item/clothing/under/rank/engineering/engineer
-	shoes = /obj/item/clothing/shoes/workboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	id = /obj/item/card/id/away/old/eng
 	gloves = /obj/item/clothing/gloves/color/fyellow/old
 	l_pocket = /obj/item/tank/internals/emergency_oxygen
@@ -576,7 +568,7 @@
 	your eyes, everything seems rusted and broken, a dark feeling swells in your gut as you climb out of your pod."
 	important_info = "Work as a team with your fellow survivors and do not abandon them."
 	uniform = /obj/item/clothing/under/rank/rnd/scientist
-	shoes = /obj/item/clothing/shoes/laceup
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	id = /obj/item/card/id/away/old/sci
 	l_pocket = /obj/item/stack/medical/suture
 	assignedrole = "Ancient Crew"
@@ -709,190 +701,3 @@
 	new /obj/item/clothing/head/chameleon(src)
 	new /obj/item/clothing/mask/chameleon(src)
 	new /obj/item/storage/backpack/chameleon(src)
-/*
-//F13 Ghost Roles
-/obj/effect/mob_spawn/human/fallout13 //Not to actually be used on server
-	mob_species = /datum/species/human
-	roundstart = FALSE
-	death = FALSE
-	icon = 'icons/fallout/turfs/walls.dmi'
-	icon_state = "matrix"
-	uses = 3
-
-/obj/effect/mob_spawn/human/fallout13/ncr
-	name = "NCR Trooper Spawn"
-	desc = "An entry point for troopers of the NCR to join a battle."
-	faction = "NCR"
-	mob_name = "NCR Trooper"
-	job_description = "NCR Trooper"
-	short_desc = "You are a proud fighter of the New California Republic. Do not falter!"
-	flavour_text = "Good troopers follow orders."
-	assignedrole = "NCR Trooper"
-	outfit = /datum/outfit/job/ncr/f13trooper
-	suit_store = /obj/item/gun/ballistic/automatic/service
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle = 2,
-		/obj/item/melee/onehanded/knife/bayonet = 1,
-		/obj/item/storage/box/ration/menu_two = 1,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/ncr/ranger
-	name = "NCR Ranger Spawn"
-	desc = "An entry point for rangers of the NCR to join a battle."
-	mob_name = "NCR Ranger"
-	job_description = "NCR Ranger"
-	flavour_text = "Rangers lead the way!"
-	assignedrole = "NCR Ranger"
-	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/f13/combat/ncr_patrol
-	belt = /obj/item/storage/belt/military/assault/ncr
-	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
-	head = /obj/item/clothing/head/f13/ranger
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
-		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
-		/obj/item/storage/survivalkit_aid = 1,
-		/obj/item/attachments/scope = 1,
-		/obj/item/gun/ballistic/revolver/revolver44 = 1,
-		/obj/item/ammo_box/m44 = 2,
-		/obj/item/clothing/mask/gas/ranger = 1,
-		/obj/item/melee/onehanded/knife/bowie = 1,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/ncr/special(mob/living/new_spawn)
-	new_spawn.real_name = random_unique_name(gender)
-
-/obj/effect/mob_spawn/human/fallout13/legion
-	name = "Prime Legionnaire Spawn"
-	desc = "An entry point for prime legionaries of Caesar's Legion to join a battle."
-	faction = "Legion"
-	mob_name = "Prime Legionnaire"
-	job_description = "Prime Legionnaire"
-	short_desc = "You are a might warrior of Caesar's Legion. Retribution!"
-	flavour_text = "True to Caesar!"
-	assignedrole = "Prime Legionnaire"
-	outfit = /datum/outfit/job/caesarslegion/f13legionary
-	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
-	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 3,
-		/obj/item/melee/onehanded/machete = 1,
-		/obj/item/grenade/homemade/firebomb = 1,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/legion/veteran
-	name = "Veteran Legionnaire Spawn"
-	desc = "An entry point for veteran legionaries of Caesar's Legion to join a battle."
-	mob_name = "Veteran Legionnaire"
-	job_description = "Veteran Legionnaire"
-	assignedrole = "Veteran Legionnaire"
-	outfit = /datum/outfit/job/caesarslegion/vetlegionnaire
-	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
-	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44 = 3,
-		/obj/item/melee/onehanded/machete/gladius = 1,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/bos
-	name = "Knight Spawn"
-	desc = "An entry point for knights of the Brotherhood Of Steel to join a battle."
-	faction = "BOS"
-	mob_name = "Knight"
-	job_description = "Knight"
-	short_desc = "You are a brave soldier of the Brotherhood Of Steel. Onwards!"
-	flavour_text = "Praise Steel!"
-	assignedrole = "Knight"
-	outfit = /datum/outfit/job/bos/f13knight
-	suit_store = /obj/item/gun/energy/laser/aer9
-	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/knight=1,
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/bos/paladin
-	name = "Paladin Spawn"
-	desc = "An entry point for paladins of the Brotherhood Of Steel to join a battle."
-	mob_name = "Paladin"
-	job_description = "Paladin"
-	assignedrole = "Paladin"
-	outfit = /datum/outfit/job/bos/f13paladin
-	suit_store = /obj/item/gun/energy/laser/aer9
-	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/mfc=2,
-		/obj/item/gun/ballistic/automatic/pistol/mk23=1,
-		/obj/item/ammo_box/magazine/m45exp=2,
-		/obj/item/clothing/accessory/bos/paladin=1
-		)
-
-/obj/effect/mob_spawn/human/fallout13/bos/special(mob/living/new_spawn)
-	new_spawn.real_name = random_unique_name(gender)
-
-/obj/effect/mob_spawn/human/fallout13/raider
-	name = "Raider Spawn"
-	desc = "An entry point for raiders to join a battle."
-	faction = "raider"
-	mob_name = "Raider"
-	job_description = "Raider"
-	short_desc = "You are a vicious, bloodthirsty raider hailing from Yuma. Take what you deserve!"
-	flavour_text = "Hurry, hurry, hurry!!"
-	assignedrole = "Raider"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
-	uniform = /obj/item/clothing/under/f13/ravenharness
-	suit = /obj/item/clothing/suit/armor/f13/combat/mk2/raider
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	ears = /obj/item/radio/headset
-	belt = /obj/item/storage/belt/military/assault
-	shoes = /obj/item/clothing/shoes/jackboots
-	back = /obj/item/storage/backpack/satchel/leather
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/greasegun = 2,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		)
-
-/obj/effect/mob_spawn/human/fallout13/raider/special(mob/living/new_spawn)
-	new_spawn.real_name = random_unique_name(gender)
-	to_chat(new_spawn, "<span class='userdanger'>You are a raider, therefore, an antagonist! You must maintain immersion and roleplay according. Remember, you are still beholden to escalation rules!</span>")
-
-/obj/effect/mob_spawn/human/fallout13/raider/Initialize(mapload)
-	. = ..()
-	var/area/A = get_area(src)
-	if(A)
-		notify_ghosts("A small gang of raiders are arriving at \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE, ignore_key = POLL_IGNORE_RAIDER, ignore_dnr_observers = FALSE)
-
-
-/obj/effect/mob_spawn/human/fallout13/tribal
-	name = "Spear Hunter Spawn"
-	desc = "An entry point for spear hunters to join a battle."
-	faction = "Tribe"
-	mob_name = "Spear Hunter"
-	job_description = "Spear Hunter"
-	short_desc = "You are a hunter hailing from the local tribe in the region. Honor your your tribe, and those that came before you!"
-	flavour_text = "For the gods!"
-	assignedrole = "Spear Hunter"
-	outfit = /datum/outfit/job/tribal/f13hunter
-	suit_store = /obj/item/twohanded/spear/bonespear/deathclaw
-	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/healingpowder = 1,
-		/obj/item/melee/onehanded/knife/bone = 1,
-		/obj/item/binoculars = 1,
-		/obj/item/restraints/legcuffs/bola/tactical = 1
-	)
-
-/obj/effect/mob_spawn/human/fallout13/tribal/ranged
-	name = "Bow Hunter Spawn"
-	desc = "An entry point for bow hunters to join a battle."
-	mob_name = "Bow Hunter"
-	job_description = "Bow Hunter"
-	assignedrole = "Bow Hunter"
-	suit_store = /obj/item/gun/ballistic/automatic/tribalbow
-	belt = /obj/item/storage/belt/tribe_quiver/bone
-	backpack_contents = list(
-		/obj/item/melee/onehanded/knife/bone = 1,
-		/obj/item/restraints/legcuffs/bola = 2,
-		/obj/item/binoculars = 1,
-		/obj/item/reagent_containers/pill/patch/healingpowder = 1
-	)
-
-/obj/effect/mob_spawn/human/fallout13/tribal/special(mob/living/new_spawn)
-	new_spawn.real_name = random_unique_name(gender)
-*/
-//We already have new tribals, no need to have duplicates.

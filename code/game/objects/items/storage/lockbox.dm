@@ -122,13 +122,9 @@
 			return TRUE
 
 /obj/item/storage/lockbox/medal/PopulateContents()
-	new /obj/item/clothing/accessory/medal/gold/captain(src)
-	new /obj/item/clothing/accessory/medal/silver/valor(src)
-	new /obj/item/clothing/accessory/medal/silver/valor(src)
-	new /obj/item/clothing/accessory/medal/silver/security(src)
 	new /obj/item/clothing/accessory/medal/bronze_heart(src)
-	new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
-	new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
+	new /obj/item/clothing/accessory/medal/nobel_science(src)
+	new /obj/item/clothing/accessory/medal/nobel_science(src)
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/accessory/medal/conduct(src)
 
@@ -166,44 +162,25 @@
 	desc = "A locked box used to store medals to be given to members of the security department."
 	req_access = list(ACCESS_HOS)
 
-/obj/item/storage/lockbox/medal/sec/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/accessory/medal/silver/security(src)
-
 /obj/item/storage/lockbox/medal/cargo
 	name = "cargo award box"
 	desc = "A locked box used to store awards to be given to members of the cargo department."
 	req_access = list(ACCESS_QM)
-
-/obj/item/storage/lockbox/medal/cargo/PopulateContents()
-		new /obj/item/clothing/accessory/medal/ribbon/cargo(src)
 
 /obj/item/storage/lockbox/medal/sci
 	name = "science medal box"
 	desc = "A locked box used to store medals to be given to members of the science department."
 	req_access = list(ACCESS_RD)
 
-/obj/item/storage/lockbox/medal/sci/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/accessory/medal/plasma/nobel_science(src)
-
 /obj/item/storage/lockbox/medal/engineering
 	name = "engineering medal box"
 	desc = "A locked box used to store medals to be given to the members of the engineering department."
 	req_access = list(ACCESS_CE)
 
-/obj/item/storage/lockbox/medal/engineering/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/accessory/medal/engineer(src)
-
 /obj/item/storage/lockbox/medal/medical
 	name = "medical medal box"
 	desc = "A locked box used to store medals to be given to the members of the medical department."
 	req_access = list(ACCESS_CMO)
-
-/obj/item/storage/lockbox/medal/medical/PopulateContents()
-	for(var/i in 1 to 3)
-		new /obj/item/clothing/accessory/medal/ribbon/medical_doctor(src)
 
 /obj/item/storage/lockbox/order
 	name = "order lockbox"

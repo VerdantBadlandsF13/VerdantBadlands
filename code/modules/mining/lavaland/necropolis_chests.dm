@@ -34,7 +34,7 @@
 
 /obj/structure/closet/crate/necropolis/tendril/all
 	desc = "It's watching you suspiciously."
-
+/*
 /obj/structure/closet/crate/necropolis/tendril/magic/PopulateContents()
 	var/loot = rand(1,10)
 	switch(loot)
@@ -261,7 +261,7 @@
 	materials = list(/datum/material/iron = 4000, /datum/material/silver = 4000, /datum/material/gold = 4000, /datum/material/bluespace = 4000)
 	reagents_list = list(/datum/reagent/blood = 40)
 	build_path = /obj/item/borg/upgrade/modkit/bounty
-
+*/
 //Spooky special loot
 
 //Rod of Asclepius

@@ -12,7 +12,6 @@
 /datum/outfit/yalp_cultist
 	name = "Cultist of Yalp Elor"
 	uniform = /obj/item/clothing/under/rank/civilian/chaplain
-	suit = /obj/item/clothing/suit/chaplain/holidaypriest
 	gloves = /obj/item/clothing/gloves/color/red
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	mask = /obj/item/clothing/mask/gas/tiki_mask/yalp_elor
@@ -20,7 +19,6 @@
 /datum/outfit/waldo
 	name = "Waldo"
 	uniform = /obj/item/clothing/under/pants/jeans
-	suit = /obj/item/clothing/suit/striped_sweater
 	head = /obj/item/clothing/head/beanie/waldo
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	ears = /obj/item/radio/headset
@@ -66,11 +64,9 @@
 /datum/outfit/spacepol
 	name = "Spacepol Officer"
 	uniform = /obj/item/clothing/under/rank/security/officer/spacepol
-	suit = /obj/item/clothing/suit/armor/vest/blueshirt
 	belt = /obj/item/gun/ballistic/automatic/pistol/m1911
-	head = /obj/item/clothing/head/helmet/police
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/rag
 	mask = /obj/item/clothing/mask/gas/sechailer/swat/spacepol
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset
@@ -89,17 +85,13 @@
 /datum/outfit/russiancorpse/hunter
 	ears = /obj/item/radio/headset
 
-/datum/outfit/russiancorpse/hunter/pre_equip(mob/living/carbon/human/H)
-	if(prob(50))
-		head = /obj/item/clothing/head/ushanka
-
 /datum/outfit/bountyarmor
 	name = "Bounty Hunter - Armored"
 	uniform = /obj/item/clothing/under/rank/prisoner
 	head = /obj/item/clothing/head/hunter
 	suit = /obj/item/clothing/suit/space/hunter
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	mask = /obj/item/clothing/mask/gas/hunter
 	glasses = /obj/item/clothing/glasses/sunglasses/garb
 	ears = /obj/item/radio/headset
@@ -120,17 +112,12 @@
 	name = "Bounty Hunter - Hook"
 	uniform = /obj/item/clothing/under/rank/prisoner
 	back = /obj/item/storage/backpack
-	head = /obj/item/clothing/head/scarecrow_hat
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	ears = /obj/item/radio/headset
-	shoes = /obj/item/clothing/shoes/jackboots
+	shoes = /obj/item/clothing/shoes/f13/military
 	mask = /obj/item/clothing/mask/scarecrow
 	r_pocket = /obj/item/restraints/handcuffs/cable
 	id = /obj/item/card/id
-
-	backpack_contents = list(
-		/obj/item/ammo_casing/shotgun/incapacitate = 6
-		)
 
 /datum/outfit/bountygrapple/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
@@ -144,8 +131,8 @@
 	name = "Bounty Hunter - Synth"
 	uniform = /obj/item/clothing/under/rank/prisoner
 	back = /obj/item/storage/backpack
-	suit = /obj/item/clothing/suit/armor/riot
-	shoes = /obj/item/clothing/shoes/jackboots
+	suit = /obj/item/clothing/suit/armored/riot
+	shoes = /obj/item/clothing/shoes/f13/military
 	glasses = /obj/item/clothing/glasses/eyepatch
 	r_pocket = /obj/item/restraints/handcuffs/cable
 	ears = /obj/item/radio/headset

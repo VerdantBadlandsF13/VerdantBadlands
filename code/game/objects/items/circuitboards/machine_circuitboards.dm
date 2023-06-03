@@ -275,7 +275,6 @@
 		/obj/machinery/vending/cola = "Robust Softdrinks",
 		/obj/machinery/vending/cigarette = "ShadyCigs Deluxe",
 		/obj/machinery/vending/games = "\improper Good Clean Fun",
-		/obj/machinery/vending/autodrobe = "AutoDrobe",
 		/obj/machinery/vending/assist = "\improper Vendomat",
 		/obj/machinery/vending/engivend = "\improper Engi-Vend",
 		/obj/machinery/vending/tool = "\improper YouTool",
@@ -284,23 +283,7 @@
 		/obj/machinery/vending/cart = "\improper PTech",
 		/obj/machinery/vending/hydronutrients = "\improper NutriMax",
 		/obj/machinery/vending/hydroseeds = "\improper MegaSeed Servitor",
-		/obj/machinery/vending/wardrobe/sec_wardrobe = "SecDrobe",
-		/obj/machinery/vending/wardrobe/medi_wardrobe = "MediDrobe",
-		/obj/machinery/vending/wardrobe/engi_wardrobe = "EngiDrobe",
-		/obj/machinery/vending/wardrobe/atmos_wardrobe = "AtmosDrobe",
-		/obj/machinery/vending/wardrobe/cargo_wardrobe = "CargoDrobe",
-		/obj/machinery/vending/wardrobe/robo_wardrobe = "RoboDrobe",
-		/obj/machinery/vending/wardrobe/science_wardrobe = "SciDrobe",
-		/obj/machinery/vending/wardrobe/hydro_wardrobe = "HyDrobe",
-		/obj/machinery/vending/wardrobe/curator_wardrobe = "CuraDrobe",
 		/obj/machinery/vending/wardrobe/bar_wardrobe = "BarDrobe",
-		/obj/machinery/vending/wardrobe/chef_wardrobe = "ChefDrobe",
-		/obj/machinery/vending/wardrobe/jani_wardrobe = "JaniDrobe",
-		/obj/machinery/vending/wardrobe/law_wardrobe = "LawDrobe",
-		/obj/machinery/vending/wardrobe/chap_wardrobe = "ChapDrobe",
-		/obj/machinery/vending/wardrobe/chem_wardrobe = "ChemDrobe",
-		/obj/machinery/vending/wardrobe/gene_wardrobe = "GeneDrobe",
-		/obj/machinery/vending/wardrobe/viro_wardrobe = "ViroDrobe",
 		/obj/machinery/vending/clothing = "ClothesMate",
 		/obj/machinery/vending/medical = "NanoMed Plus",
 		/obj/machinery/vending/wallmed = "NanoMed",
@@ -1035,20 +1018,6 @@
 		/obj/item/stack/sheet/glass = 2)
 	needs_anchored = FALSE
 
-/obj/item/circuitboard/machine/vending/donksofttoyvendor
-	name = "Donksoft Toy Vendor (Machine Board)"
-	build_path = /obj/machinery/vending/donksofttoyvendor
-	req_components = list(
-		/obj/item/stack/sheet/glass = 1,
-		/obj/item/vending_refill/donksoft = 1)
-
-/obj/item/circuitboard/machine/vending/syndicatedonksofttoyvendor
-	name = "Syndicate Donksoft Toy Vendor (Machine Board)"
-	build_path = /obj/machinery/vending/toyliberationstation
-	req_components = list(
-		/obj/item/stack/sheet/glass = 1,
-		/obj/item/vending_refill/donksoft = 1)
-
 /obj/item/circuitboard/machine/dish_drive
 	name = "Dish Drive (Machine Board)"
 	build_path = /obj/machinery/dish_drive
@@ -1124,14 +1093,6 @@
 		/obj/item/stock_parts/capacitor = 1,
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/reagent_containers/glass/beaker = 6) //So it can hold lots of chems
-
-/obj/item/circuitboard/machine/autolathe/toy
-	name = "Autolathe (Machine Board)"
-	build_path = /obj/machinery/autolathe/toy
-	req_components = list(
-		/obj/item/stock_parts/matter_bin = 3,
-		/obj/item/stock_parts/manipulator = 1,
-		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/hypnochair
 	name = "Enhanced Interrogation Chamber (Machine Board)"

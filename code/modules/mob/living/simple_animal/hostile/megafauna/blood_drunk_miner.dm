@@ -34,13 +34,13 @@ Difficulty: Medium
 	speak_emote = list("roars")
 	speed = 1
 	move_to_delay = 2
-	projectiletype = /obj/item/projectile/kinetic/miner
+	projectiletype = /obj/item/projectile/plasma
 	projectilesound = 'sound/weapons/kenetic_accel.ogg'
 	ranged = 1
 	ranged_cooldown_time = 16
 	pixel_x = -16
-	crusher_loot = list(/obj/item/melee/transforming/cleaving_saw, /obj/item/gun/energy/kinetic_accelerator/premiumka, /obj/item/crusher_trophy/miner_eye)
-	loot = list(/obj/item/melee/transforming/cleaving_saw, /obj/item/gun/energy/kinetic_accelerator/premiumka)
+	crusher_loot = list(/obj/item/melee/transforming/cleaving_saw, /obj/item/crusher_trophy/miner_eye)
+	loot = list(/obj/item/melee/transforming/cleaving_saw)
 	wander = FALSE
 	del_on_death = TRUE
 	blood_volume = BLOOD_VOLUME_NORMAL

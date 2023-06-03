@@ -75,19 +75,6 @@
 	surplus = 0
 	include_modes = list(/datum/game_mode/traitor/internal_affairs)
 
-/datum/uplink_item/stealthy_weapons/crossbow
-	name = "Miniature Energy Crossbow"
-	desc = "A short bow mounted across a tiller in miniature. Small enough to \
-		fit into a pocket or slip into a bag unnoticed. It will synthesize \
-		and fire bolts tipped with a paralyzing toxin that will briefly stun \
-		targets and cause them to slur as if inebriated. It can produce an \
-		infinite number of bolts, but takes time to automatically recharge \
-		after each shot."
-	item = /obj/item/gun/energy/kinetic_accelerator/crossbow
-	cost = 12
-	surplus = 50
-	exclude_modes = list(/datum/game_mode/nuclear)
-
 /datum/uplink_item/stealthy_weapons/traitor_chem_bottle
 	name = "Poison Kit"
 	desc = "An assortment of deadly chemicals packed into a compact box. Comes with a syringe for more precise application."

@@ -60,12 +60,6 @@
 
 //Raider gangs
 
-/datum/gang_item/clothing/prostitute_dress
-	name = "Prostitute dress"
-	id = "prostitute_dress"
-	cost = 10
-	item_path = /obj/item/clothing/under/f13/female/flapper
-
 /datum/gang_item/clothing/hat
 	name = "Pimp Hat"
 	id = "hat"
@@ -170,18 +164,6 @@
 	cost = 35
 	item_path = /obj/item/melee/unarmed/sappers
 
-/datum/gang_item/weapon/greasegun
-	name = "Grease Gun"
-	id = "greasegun"
-	cost = 120
-	item_path = /obj/effect/spawner/bundle/f13/greasegun
-
-/datum/gang_item/weapon/uzi
-	name = "Uzi"
-	id = "uzi"
-	cost = 300
-	item_path = /obj/effect/spawner/bundle/f13/miniuzi
-
 /datum/gang_item/weapon/type17
 	name = "Type 17 Pistol"
 	id = "type17"
@@ -196,24 +178,6 @@
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
 
-/datum/gang_item/weapon/ninemil
-	name = "9mm Pistol"
-	id = "gangninemil"
-	cost = 80
-	item_path = /obj/effect/spawner/bundle/f13/ninemil
-
-/datum/gang_item/weapon/caravan
-	name = "Caravan Shotgun"
-	id = "caravanshotgun"
-	cost = 110
-	item_path = /obj/effect/spawner/bundle/f13/caravan_shotgun
-
-/datum/gang_item/weapon/varmint
-	name = "Varmint"
-	id = "varmints"
-	cost = 110
-	item_path = /obj/effect/spawner/bundle/f13/varmint
-
 /datum/gang_item/weapon/type93
 	name = "Worn Type 93"
 	id = "worntype93"
@@ -225,44 +189,8 @@
 	desc = "Rule the wasteland, one bullet at a time."
 
 /obj/item/storage/box/bundletype93kit/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/type93(src)
 	new /obj/item/ammo_box/magazine/m556/rifle(src)
-
-/datum/gang_item/weapon/energylow
-	name = "Unknown Energy Gun"
-	id = "gangenergygun"
-	cost = 200
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
-
-/datum/gang_item/weapon/gunsuperlow
-	name = "Unknown Ballistic Gun"
-	id = "gangshitbalisticgun"
-	cost = 90
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow
-
-/datum/gang_item/weapon/gunlow
-	name = "Unknown Good Ballistic Gun"
-	id = "ganggoodbalisticgun"
-	cost = 140
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/low
-
-/datum/gang_item/weapon/gunmid
-	name = "Unknown AWESOME Ballistic Gun"
-	id = "gangawesomebalisticgun"
-	cost = 180
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/lowmid
-
-/datum/gang_item/weapon/gunawesome
-	name = "Unknown EXTREMELY AWESOME Ballistic Gun"
-	id = "gangextremeawesomebalisticgun"
-	cost = 280
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/mid
-
-/datum/gang_item/weapon/melekit
-	name = "Unknown Melee Weapon"
-	id = "gangmelee"
-	cost = 140
-	item_path = /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3
 
 ///////////////////
 //EQUIPMENT
@@ -378,13 +306,12 @@
 	desc = "Rule the underworld like the Den Mob of old."
 
 /obj/item/storage/box/bundledenboss/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/type93/worn(src)
+	new /obj/item/gun/ballistic/automatic/type93(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
-	new /obj/item/clothing/under/f13/densuit(src)
 
 /datum/gang_item/equipment/bundleanarchist
 	name = "Mad Bomber Bundle"
@@ -418,11 +345,8 @@
 /obj/item/storage/box/bundleboss/PopulateContents()
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/psycho(src)
-	new /obj/item/clothing/suit/armored/heavy/salvaged_pa/t45b/raider(src)
 	new /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller(src)
-	new /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider(src)
 	new /obj/item/ammo_box/shotgun/slug(src)
-
 
 /datum/gang_item/equipment/bundlegunner
 	name = "Old Soldier Bundle"
@@ -442,45 +366,3 @@
 	new /obj/item/clothing/under/f13/army(src)
 	new /obj/item/gun/ballistic/automatic/pistol/m1911(src)
 	new /obj/item/grenade/frag(src)
-
-/datum/gang_item/equipment/bundleelguapo
-	name = "Bandito Bundle"
-	id = "bundleelguapo"
-	cost = 350
-	item_path = /obj/item/storage/box/bundleelguapo
-
-/obj/item/storage/box/bundleelguapo
-	name = "Bandito Bundle"
-	desc = "You burned the Village, raped the horses, and rode off on their women. It was a long time ago, so the details got mixed up, but you get the point. "
-
-/obj/item/storage/box/bundleelguapo/PopulateContents()
-	new /obj/item/gun/ballistic/rifle/repeater/cowboy(src)
-	new /obj/item/ammo_box/a357box/ricochet(src)
-	new /obj/item/gun/ballistic/revolver/colt357(src)
-	new /obj/item/clothing/head/f13/ranger_hat(src)
-	new /obj/item/clothing/suit/armor/f13/leather_jacket/combat/coat(src)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/low
-	name = "low tier gang ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/thatgun,
-				/obj/effect/spawner/bundle/f13/huntingshotgun,
-				/obj/effect/spawner/bundle/f13/m1carbine,
-				)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/lowmid
-	name = "low-mid gang tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/cowboy,
-				/obj/effect/spawner/bundle/f13/trenchshotgun,
-				/obj/effect/spawner/bundle/f13/m1carbine,
-				/obj/effect/spawner/bundle/f13/huntingshotgun,
-		)
-
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/gang/mid
-	name = "mid tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/trail,
-				/obj/effect/spawner/bundle/f13/service,
-				/obj/effect/spawner/bundle/f13/miniuzi,
-				/obj/effect/spawner/bundle/f13/auto5,
-				/obj/effect/spawner/bundle/f13/marksman,
-				/obj/effect/spawner/bundle/f13/m1garand,
-				)

@@ -1,4 +1,3 @@
-
 //BeanieStation13 Redux
 
 /obj/item/clothing/head/beanie //Default is white, this is meant to be seen

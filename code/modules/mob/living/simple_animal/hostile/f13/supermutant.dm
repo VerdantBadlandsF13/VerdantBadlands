@@ -134,7 +134,7 @@
 	health = 180
 	retreat_distance = 4
 	minimum_distance = 6
-	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
+	projectiletype = /obj/item/projectile/bullet/a762
 	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
 	loot = list(/obj/item/ammo_box/a308)
 	footstep_type = FOOTSTEP_MOB_HEAVY
@@ -212,7 +212,7 @@
 	extra_projectiles = 1
 	retreat_distance = 4
 	minimum_distance = 6
-	projectiletype = /obj/item/projectile/bullet/a556/simple
+	projectiletype = /obj/item/projectile/bullet/a556
 	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	loot = list(/obj/item/ammo_box/magazine/m556/rifle)
 	footstep_type = FOOTSTEP_MOB_HEAVY
@@ -246,7 +246,7 @@
 	attack_sound = "punch"
 	retreat_distance = 5
 	minimum_distance = 7
-	projectiletype = /obj/item/projectile/f13plasma/repeater
+	projectiletype = /obj/item/projectile/plasma
 	projectilesound = 'sound/f13weapons/plasma_rifle.ogg'
 	loot = list(/obj/item/stock_parts/cell/ammo/mfc)
 	footstep_type = FOOTSTEP_MOB_HEAVY
@@ -472,7 +472,7 @@
 	minimum_distance = 6
 	stop_automated_movement = 1
 	see_in_dark = 6//Semi-avoidable.
-	projectiletype = /obj/item/projectile/bullet/F13/sm_hmg
+	projectiletype = /obj/item/projectile/bullet/sm_hmg
 	projectilesound = 'sound/f13weapons/antimaterielfire.ogg'
 	extra_projectiles = 4 //5 projectiles
 	ranged_cooldown_time = 30//From 120, and then 60, - 'Long cooldown due to damage output.'
@@ -493,6 +493,6 @@
 		visible_message("<span class='danger'>\The [Proj] bounces off \the [src]'s armor plating!</span>")
 		return FALSE
 
-/obj/item/projectile/bullet/F13/sm_hmg
+/obj/item/projectile/bullet/sm_hmg
 	damage = 15//from 35
 	armour_penetration = 0.8//from... 45(?!?!)

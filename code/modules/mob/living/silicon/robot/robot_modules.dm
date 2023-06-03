@@ -406,7 +406,6 @@
 		/obj/item/crowbar/cyborg,
 		/obj/item/restraints/handcuffs/cable/zipties,
 		/obj/item/melee/classic_baton/police,
-		/obj/item/gun/energy/disabler/cyborg,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/pinpointer/crew)
 	emag_modules = list(/obj/item/gun/energy/laser/cyborg)
@@ -436,14 +435,6 @@
 		else
 			return FALSE
 	return ..()
-
-/obj/item/robot_module/security/Initialize()
-	. = ..()
-	if(!CONFIG_GET(flag/weaken_secborg))
-		for(var/obj/item/gun/energy/disabler/cyborg/pewpew in basic_modules)
-			basic_modules -= pewpew
-			basic_modules += new /obj/item/gun/energy/e_gun/advtaser/cyborg(src)
-			qdel(pewpew)
 
 /obj/item/robot_module/peacekeeper
 	name = "Peacekeeper"
@@ -618,8 +609,6 @@
 		/obj/item/weldingtool/mini,
 		/obj/item/storage/bag/sheetsnatcher/borg,
 		/obj/item/t_scanner/adv_mining_scanner,
-		/obj/item/gun/energy/kinetic_accelerator/cyborg,
-		/obj/item/gun/energy/plasmacutter/cyborg,
 		/obj/item/gps/cyborg,
 		/obj/item/weapon/gripper/mining,
 		/obj/item/cyborg_clamp,
@@ -664,7 +653,7 @@
 		/obj/item/borg/cyborghug,
 		/obj/item/megaphone,
 		/obj/item/melee/classic_baton/police,
-		/obj/item/gun/energy/laser/plasma/pistol/worn/gutsy,
+		/obj/item/gun/energy/laser/plasma/glock/gutsy,
 		/obj/item/gun/energy/gutsy_flamethrower,
 		/obj/item/clothing/mask/gas/sechailer/cyborg,
 		/obj/item/pinpointer/crew)
@@ -757,7 +746,6 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/crowbar/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg,
-		/obj/item/gun/energy/printer,
 		/obj/item/gun/ballistic/revolver/grenadelauncher/cyborg,
 		/obj/item/card/emag,
 		/obj/item/crowbar/cyborg,
@@ -802,7 +790,6 @@
 		/obj/item/card/emag,
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/stack/medical/gauze/cyborg,
-		/obj/item/gun/medbeam,
 		/obj/item/organ_storage)
 	ratvar_modules = list(
 		/obj/item/clockwork/slab/cyborg/medical,

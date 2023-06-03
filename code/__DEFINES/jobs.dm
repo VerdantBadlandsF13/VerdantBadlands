@@ -2,20 +2,11 @@
 
 //Defines Factions
 
-#define FACTION_NCR "NCR"
-#define FACTION_LEGION "Legion"
-#define FACTION_BROTHERHOOD "BOS"
-#define FACTION_BIGHORN "Bighorn"
-#define FACTION_ENCLAVE "Enclave"
 #define FACTION_WASTELAND "Wastelander"
-#define FACTION_RAIDERS "Raiders"
-#define FACTION_FOLLOWERS "Followers"
-#define FACTION_KHAN "Great Khans"
-#define FACTION_TRIBAL "Tribals"
-
 #define FACTION_DFS "Dry Fields Security"
 #define FACTION_LBJ "Lumberjack Camp"
 #define FACTION_GMB "Green Mountain Boys"
+#define FACTION_VLT "Vault Fifty-Eight"
 
 
 #define ENGSEC			(1<<0)

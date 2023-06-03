@@ -16,6 +16,9 @@
 			return item
 	return module_active
 
+/obj/item/proc/cyborg_unequip(mob/user)
+	return
+
 /mob/living/silicon/robot/proc/uneq_module(obj/item/O)
 	if(!O)
 		return 0
@@ -27,12 +30,12 @@
 	else if(istype(O, /obj/item/storage/bag/tray/))
 		SEND_SIGNAL(O, COMSIG_TRY_STORAGE_QUICK_EMPTY)
 	//CITADEL EDIT reee proc, Dogborg modules
-	if(istype(O,/obj/item/gun/energy/laser/cyborg))
+	if(istype(O,/obj/item/gun/energy/laser/pistol/cyborg))
 		laser = FALSE
 		update_icons()
 	else if(istype(O,/obj/item/gun/energy/disabler/cyborg))
 		disabler = FALSE
-		update_icons() //PUT THE GUN AWAY
+		update_icons()//PUT THE GUN AWAY
 	//END CITADEL EDIT
 	if(client)
 		client.screen -= O

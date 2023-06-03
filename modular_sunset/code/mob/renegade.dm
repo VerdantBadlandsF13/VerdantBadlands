@@ -28,7 +28,6 @@
 	check_friendly_fire = TRUE
 	status_flags = CANPUSH
 	del_on_death = FALSE
-	loot = list(/obj/item/stack/f13Cash/random/med)
 
 /mob/living/simple_animal/hostile/renegade/Aggro()
 	..()
@@ -52,9 +51,8 @@
 	minimum_distance = 2
 	extra_projectiles = 2
 	ranged_cooldown_time = 10
-	projectiletype = /obj/item/projectile/bullet/c10mm/simple
+	projectiletype = /obj/item/projectile/bullet/c10mm
 	projectilesound = 'sound/f13weapons/10mm_fire_01.ogg'
-	loot = list(/obj/effect/spawner/bundle/f13/m1911)
 	robust_searching = TRUE
 	speak = list("Come get some!", "Fuck off!", "Landon's going to promote me after this!", "Bullets for days!", "Renegades represent!")
 	speak_emote = list("says")
@@ -80,7 +78,6 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	projectilesound = 'sound/f13weapons/shotgun.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun
-	loot = list(/obj/item/stack/f13Cash/random/med, /obj/effect/spawner/lootdrop/f13/bomb/tier1, /obj/effect/spawner/lootdrop/f13/crafting)
 	robust_searching = TRUE
 	speak = list("Come get some!", "Going to blow some shit to kingdom come!", "I got the goods!", "Nades for days!", "Renegades represent!")
 	speak_emote = list("says")
@@ -103,9 +100,8 @@
 	minimum_distance = 3
 	extra_projectiles = 2
 	ranged_cooldown_time = 6
-	projectiletype = /obj/item/projectile/bullet/c10mm/simple
+	projectiletype = /obj/item/projectile/bullet/c10mm
 	projectilesound = 'sound/f13weapons/combatrifle.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/med, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2)
 	robust_searching = TRUE
 	speak = list("Come get some!", "I like my odds, c'mere!", "Gonna get a promotion after this!", "Bullets for days!", "Renegades represent!")
 	speak_emote = list("says")
@@ -129,7 +125,6 @@
 	attack_verb_simple = "bashes"
 	attack_sound = 'sound/weapons/slam.ogg'
 	a_intent = INTENT_HARM
-	loot = list(/obj/effect/spawner/lootdrop/f13/weapon/melee/random, /obj/effect/spawner/lootdrop/f13/alcoholspawner, /obj/effect/spawner/lootdrop/f13/ncr_c_ration)
 	emote_taunt = list("bashes their shield with the mace")
 	robust_searching = TRUE
 	speak = list("COME AND TRY ME, BITCH!", "I AM THE WALL!", "LAYERS ON LAYERS OF PLATES!", "I AM TITANIUM!", "RENEGADES REPRESENT!")
@@ -154,9 +149,8 @@
 	retreat_distance = 10
 	minimum_distance = 6
 	ranged_cooldown_time = 10
-	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
+	projectiletype = /obj/item/projectile/bullet/a762/a308
 	projectilesound = 'sound/f13weapons/bozar_fire.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/high, /obj/effect/spawner/bundle/f13/remington, /obj/effect/spawner/lootdrop/f13/armor/random)
 	robust_searching = TRUE
 	speak = list("Come get some!", "I am the shadow!", "One shot, one kill.", "Adjusting my scope.", "Renegades represent!")
 	speak_emote = list("says")
@@ -180,7 +174,6 @@
 	projectiletype = /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	casingtype = /obj/item/ammo_casing/shotgun
-	loot = list(/obj/effect/spawner/bundle/f13/trenchshotgun, /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1, /obj/item/stack/f13Cash/random/low, /obj/item/clothing/suit/armor/f13/plates)
 	robust_searching = TRUE
 	speak = list("Come get some!", "ON THE GROUND!", "GOING TO SHOVE THIS WHERE THE SUN DON'T SHINE!", "C'MERE, I GOT LEAD!", "RENEGADES REPRESENT!")
 	speak_emote = list("says")
@@ -205,9 +198,8 @@
 	attack_sound = 'sound/weapons/slam.ogg'
 	ranged_cooldown_time = 30
 	extra_projectiles = 5
-	projectiletype = /obj/item/projectile/bullet/m5mm/simple
+	projectiletype = /obj/item/projectile/bullet/m5mm
 	projectilesound = 'sound/f13weapons/automaticrifle_BAR.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/high, /obj/item/advanced_crafting_components/alloys, /obj/item/stack/sheet/plasteel/five)
 	speak = list("POWER TO THE ARMOR!", "I AM GOING TO BREAK YOU IN HALF!", "YEAH I COMPENSATE WITH BIG FUCKIN' GUNS", "DODGE THIS!", "PEAK RENEGADE PERFORMANCE!")
 	speak_emote = list("says")
 	speak_chance = 1
@@ -229,14 +221,13 @@
 	check_friendly_fire = 1
 	retreat_distance = 6
 	minimum_distance = 8
-	projectiletype = /obj/item/projectile/bullet/m44/simple
+	projectiletype = /obj/item/projectile/bullet/m44
 	projectilesound = 'sound/f13weapons/44mag.ogg'
 	casingtype = /obj/item/ammo_casing/m44
 	robust_searching = TRUE
 	speak = list("Running low on meds.", "Could do with extra combat chems.", "Where'd I put the Syringer?", "I GOT THE MED-BAG!", "Renegades represent and all that jazz.")
 	speak_emote = list("says")
 	speak_chance = 1
-	loot = list(/obj/effect/spawner/lootdrop/f13/medical/vault/meds, /obj/effect/spawner/lootdrop/f13/weapon/revolver44variants, /obj/effect/spawner/lootdrop/f13/medical/surgical/blood)
 
 /mob/living/simple_animal/hostile/renegade/doc/Initialize(mapload)
 	. = ..()

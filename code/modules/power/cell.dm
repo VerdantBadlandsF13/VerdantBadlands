@@ -418,7 +418,7 @@
 /obj/item/stock_parts/cell/ammo
 	name = "ammo cell"
 	desc = "You shouldn't be holding this."
-	cancharge = 1
+	cancharge = 0
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/stock_parts/cell/ammo/update_icon()
@@ -435,7 +435,8 @@
 // Microfusion cell - large energy weapons
 /obj/item/stock_parts/cell/ammo/mfc
 	name = "microfusion cell"
-	desc = "A microfusion cell, typically used as ammunition for large energy weapons."
+	desc = "A microfusion cell, typically used as ammunition for large energy weapons. <br>\
+	As an energy weapon cell, you'll need to recycle it. It cannot be recharged normally."
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "mfc-full"
 	maxcharge = 2000
@@ -474,7 +475,8 @@
 // Energy cell - small energy weapons
 /obj/item/stock_parts/cell/ammo/ec
 	name = "energy cell"
-	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
+	desc = "An energy cell, typically used as ammunition for small-arms energy weapons. <br>\
+	As an energy weapon cell, you'll need to recycle it. It cannot be recharged normally."
 	icon = 'icons/fallout/objects/powercells.dmi'
 	icon_state = "ec-full"
 	maxcharge = 1600
@@ -526,4 +528,3 @@
 	icon_state = "aliencell"
 	ratingdesc = FALSE
 	maxcharge = 4000
-	cancharge = 0

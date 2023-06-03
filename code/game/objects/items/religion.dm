@@ -181,7 +181,7 @@
 	icon_state = "bannerpack-blue"
 
 //this is all part of one item set
-/obj/item/clothing/suit/armor/plate/crusader
+/obj/item/clothing/suit/armored/plate/crusader
 	name = "Crusader's Armour"
 	desc = "Armour that's comprised of metal and cloth."
 	icon_state = "crusader"
@@ -191,10 +191,10 @@
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 40, "bomb" = 60, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/suit/armor/plate/crusader/red
+/obj/item/clothing/suit/armored/plate/crusader/red
 	icon_state = "crusader-red"
 
-/obj/item/clothing/suit/armor/plate/crusader/blue
+/obj/item/clothing/suit/armored/plate/crusader/blue
 	icon_state = "crusader-blue"
 
 /obj/item/clothing/head/helmet/plate/crusader
@@ -298,7 +298,7 @@
 	..()
 	contents = list()
 	sleep(1)
-	new /obj/item/clothing/suit/armor/plate/crusader/blue(src)
+	new /obj/item/clothing/suit/armored/plate/crusader/blue(src)
 	new /obj/item/clothing/head/helmet/plate/crusader/blue(src)
 	new /obj/item/clothing/gloves/plate/blue(src)
 	new /obj/item/clothing/shoes/plate/blue(src)
@@ -307,7 +307,7 @@
 	..()
 	contents = list()
 	sleep(1)
-	new /obj/item/clothing/suit/armor/plate/crusader/red(src)
+	new /obj/item/clothing/suit/armored/plate/crusader/red(src)
 	new /obj/item/clothing/head/helmet/plate/crusader/red(src)
 	new /obj/item/clothing/gloves/plate/red(src)
 	new /obj/item/clothing/shoes/plate/red(src)

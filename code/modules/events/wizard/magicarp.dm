@@ -32,14 +32,12 @@
 	ranged = 1
 	retreat_distance = 2
 	minimum_distance = 0 //Between shots they can and will close in to nash
-	projectiletype = /obj/item/projectile/magic
+	projectiletype = /obj/item/projectile
 	projectilesound = 'sound/weapons/emitter.ogg'
 	maxHealth = 50
 	health = 50
 	gold_core_spawnable = NO_SPAWN
-	var/allowed_projectile_types = list(/obj/item/projectile/magic/change, /obj/item/projectile/magic/animate, /obj/item/projectile/magic/resurrection,
-	/obj/item/projectile/magic/death, /obj/item/projectile/magic/teleport, /obj/item/projectile/magic/door, /obj/item/projectile/magic/aoe/fireball,
-	/obj/item/projectile/magic/spellblade, /obj/item/projectile/magic/arcane_barrage)
+	var/allowed_projectile_types = list(/obj/item/projectile)
 
 /mob/living/simple_animal/hostile/carp/ranged/Initialize()
 	projectiletype = pick(allowed_projectile_types)

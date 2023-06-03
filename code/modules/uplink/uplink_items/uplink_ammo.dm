@@ -126,12 +126,6 @@
 	item = /obj/item/ammo_box/a357
 	cost = 3
 
-/datum/uplink_item/ammo/revolver/ap
-	name = ".357 Armor Piercing Speed Loader"
-	desc = "A speed loader that contains seven additional .357 AP Magnum rounds; usable with the Syndicate revolver. \
-			Cuts through like a hot knife through butter."
-	item = /obj/item/ammo_box/a357/ap
-
 /datum/uplink_item/ammo/a40mm
 	name = "40mm Grenade"
 	desc = "A 40mm HE grenade for use with the M-90gl's under-barrel grenade launcher. \

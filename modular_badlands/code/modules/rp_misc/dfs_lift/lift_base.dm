@@ -1,9 +1,12 @@
 /obj/effect/elevator
 	name = "\improper empty space"
-	desc = "There seems to be an awful lot of machinery down below"
+	desc = "The only entrance to and from the lower levels, short of being flown in by a Vertibird. <br>\
+	How have you even found this?"
 	icon = 'modular_badlands/code/modules/rp_misc/dfs_lift/icons/160x160.dmi'
 	icon_state = "supply_elevator_lowered"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
+	bound_width = 160
+	bound_height = 160
 /*
 The gears for the elevator itself.
 */

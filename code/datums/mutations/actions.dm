@@ -153,9 +153,9 @@
 /obj/effect/proc_holder/spell/targeted/touch/shock
 	name = "Shock Touch"
 	desc = "Channel electricity to your hand to shock people with."
-	drawmessage = "You channel electricity into your hand."
-	dropmessage = "You let the electricity from your hand dissipate."
-	hand_path = /obj/item/melee/touch_attack/shock
+//	drawmessage = "You channel electricity into your hand."
+//	dropmessage = "You let the electricity from your hand dissipate."
+//	hand_path = /obj/item/melee/touch_attack/shock
 	charge_max = 400
 	antimagic_allowed = TRUE
 	clothes_req = NONE

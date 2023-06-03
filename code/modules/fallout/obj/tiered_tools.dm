@@ -122,3 +122,11 @@
 	item_state = "crowbaradvance"
 	usesound = 'sound/items/jaws_pry.ogg'
 	toolspeed = 0.1
+
+// CROWBARS
+/obj/item/multitool/basic
+	name = "crude voltage scanner"
+	desc = "A mechanically scrapped together device that barely works, a small wired and broken screen state voltages and pulse-ometer levels."
+	icon_state = "basicvolt"
+	item_state = "basicvolt"
+	toolspeed = 6

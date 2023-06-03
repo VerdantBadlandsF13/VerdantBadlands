@@ -417,26 +417,6 @@
 
 	var/threatcount = 0
 
-	//Lasertag bullshit
-	if(lasercolor)
-		if(lasercolor == "b")//Lasertag turrets target the opposing team, how great is that? -Sieve
-			if(istype(wear_suit, /obj/item/clothing/suit/redtag))
-				threatcount += 4
-			if(is_holding_item_of_type(/obj/item/gun/energy/laser/redtag))
-				threatcount += 4
-			if(istype(belt, /obj/item/gun/energy/laser/redtag))
-				threatcount += 2
-
-		if(lasercolor == "r")
-			if(istype(wear_suit, /obj/item/clothing/suit/bluetag))
-				threatcount += 4
-			if(is_holding_item_of_type(/obj/item/gun/energy/laser/bluetag))
-				threatcount += 4
-			if(istype(belt, /obj/item/gun/energy/laser/bluetag))
-				threatcount += 2
-
-		return threatcount
-
 	//Check for ID
 	var/obj/item/card/id/idcard = get_idcard(FALSE)
 	if( (judgement_criteria & JUDGE_IDCHECK) && !idcard && name=="Unknown")

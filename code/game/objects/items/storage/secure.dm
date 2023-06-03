@@ -147,36 +147,6 @@
 	for(var/i = 0, i < STR.max_items - 2, i++)
 		new /obj/item/stack/spacecash/c1000(src)
 
-/obj/item/storage/secure/briefcase/mws_pack
-	name = "\improper \'MWS\' gun kit"
-	desc = "A storage case for a multi-purpose handgun. Variety hour!"
-
-/obj/item/storage/secure/briefcase/mws_pack/PopulateContents()
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/ammo_box/magazine/mws_mag(src)
-	for(var/path in subtypesof(/obj/item/ammo_casing/mws_batt))
-		new path(src)
-
-/obj/item/storage/secure/briefcase/hos/mws_pack_hos
-	name = "\improper \'MWS\' gun kit"
-	desc = "A storage case for a multi-purpose handgun. Variety hour!"
-
-/obj/item/storage/secure/briefcase/hos/mws_pack_hos/PopulateContents()
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/gun/ballistic/revolver(src)
-	new /obj/item/ammo_casing/mws_batt/lethal(src)
-	new /obj/item/ammo_casing/mws_batt/lethal(src)
-	new /obj/item/ammo_casing/mws_batt/stun(src)
-	new /obj/item/ammo_casing/mws_batt/stun(src)
-	new /obj/item/ammo_casing/mws_batt/ion(src)
-
-/obj/item/storage/secure/briefcase/hos/multiphase_box
-	name = "\improper X-01 Multiphase energy gun box"
-	desc = "A storage case for a high-tech energy firearm."
-
-/obj/item/storage/secure/briefcase/hos/multiphase_box/PopulateContents()
-	new /obj/item/gun/energy/e_gun/hos(src)
-
 // -----------------------------
 //        Secure Safe
 // -----------------------------
@@ -210,11 +180,3 @@
 
 /obj/item/storage/secure/safe/HoS
 	name = "head of security's safe"
-
-/obj/item/storage/secure/safe/ncr_rep
-
-/obj/item/storage/secure/safe/ncr_rep/New()
-	..()
-	new /obj/item/documents/ncr_rep(src)
-	new /obj/item/stack/f13Cash/onezerozerozero(src)
-	new /obj/item/melee/baton/loaded(src)

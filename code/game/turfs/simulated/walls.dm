@@ -239,7 +239,7 @@
 	return FALSE
 
 /turf/closed/wall/proc/try_decon(obj/item/I, mob/user, turf/T)
-	if(istype(I, /obj/item/weldingtool) || istype(I, /obj/item/gun/energy/plasmacutter))
+	if(istype(I, /obj/item/weldingtool))
 		if(!I.tool_start_check(user, amount=0))
 			return FALSE
 

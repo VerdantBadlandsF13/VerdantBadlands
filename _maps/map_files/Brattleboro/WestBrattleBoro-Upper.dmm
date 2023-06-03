@@ -224,9 +224,6 @@
 "bu" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
 /obj/item/storage/fancy/cigarettes/cigpack_midori,
 /obj/item/storage/box/matches,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -308,14 +305,6 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
-"ce" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft0"
-	},
-/area/f13/wasteland)
 "cn" = (
 /obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/outside/road,
@@ -477,10 +466,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
-"cX" = (
-/obj/structure/fluff/railing/corner,
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "cY" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 84;
@@ -498,9 +483,6 @@
 /area/f13/tunnel)
 "db" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 8
-	},
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -666,14 +648,6 @@
 "ed" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/graveldirt,
-/area/f13/wasteland)
-"ee" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalrightborderright1"
-	},
 /area/f13/wasteland)
 "em" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
@@ -1351,15 +1325,6 @@
 /obj/item/storage/box/dice,
 /turf/open/floor/carpet/purple,
 /area/f13/building)
-"ir" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/floor/f13{
-	icon_state = "plating"
-	},
-/area/f13/wasteland)
 "is" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 1;
@@ -1937,12 +1902,6 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
-"lY" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "me" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -2283,12 +2242,6 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/wood/wood_wide/wood_wide_dark,
 /area/f13/building)
-"oq" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "os" = (
 /obj/structure/decoration/rag,
 /turf/open/indestructible/ground/inside/mountain,
@@ -3027,10 +2980,6 @@
 "te" = (
 /obj/structure/wreck/trash/halftire,
 /turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
-"tf" = (
-/obj/structure/fluff/railing/corner,
-/turf/open/transparent/openspace,
 /area/f13/wasteland)
 "th" = (
 /obj/structure/railing{
@@ -3945,12 +3894,6 @@
 	},
 /area/f13/building)
 "yR" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/obj/structure/fluff/railing{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/oil/slippery{
 	alpha = 0
 	},
@@ -4184,12 +4127,6 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
-"Aa" = (
-/obj/structure/fluff/railing/corner{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Ab" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 5;
@@ -4519,14 +4456,6 @@
 	icon_state = "verticalrightborderleft0"
 	},
 /area/f13/wasteland)
-"BZ" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalrightborderright2"
-	},
-/area/f13/wasteland)
 "Ca" = (
 /turf/open/floor/wood/wood_fancy,
 /area/f13/wasteland)
@@ -4599,12 +4528,6 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
-"Cy" = (
-/obj/structure/fluff/railing/corner{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "CA" = (
 /obj/machinery/workbench/advanced,
 /obj/item/stack/sheet/glass/ten,
@@ -4727,14 +4650,6 @@
 /obj/structure/window/fulltile/wood_window,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"Du" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft1"
-	},
-/area/f13/wasteland)
 "Dw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood/junk,
@@ -4859,14 +4774,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
-"Ej" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalrightborderright0"
-	},
-/area/f13/wasteland)
 "El" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -4875,13 +4782,6 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
-"Em" = (
-/obj/structure/reagent_dispensers/barrel/four,
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "Eo" = (
 /obj/machinery/light,
 /turf/open/transparent/openspace,
@@ -5356,9 +5256,6 @@
 /area/f13/building)
 "GQ" = (
 /obj/item/chair,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -8525,9 +8422,6 @@
 /area/f13/building)
 "YI" = (
 /obj/structure/chair{
-	dir = 4
-	},
-/obj/structure/fluff/railing{
 	dir = 4
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -13166,28 +13060,28 @@ Kg
 Kg
 Kg
 Kg
-Ej
-Ej
-Ej
-Ej
+Cs
+Cs
+Cs
+Cs
 cu
 Cs
-Ej
-Ej
-Ej
-Ej
-Ej
-Ej
-Ej
-Ej
-ee
-ee
-BZ
+Cs
+Cs
+Cs
+Cs
+Cs
+Cs
+Cs
+Cs
+fC
+fC
+kJ
 wX
-Ej
-Ej
-Ej
-Ej
+Cs
+Cs
+Cs
+Cs
 Kg
 Kg
 Kg
@@ -14708,28 +14602,28 @@ Kg
 Kg
 Kg
 Kg
-ce
-ce
-Du
-Du
+Fz
+Fz
+PC
+PC
 Ql
 PC
-Du
-Du
-Du
-ce
+PC
+PC
+PC
+Fz
 YI
 bu
 GQ
-ce
-ce
-ce
-ce
+Fz
+Fz
+Fz
+Fz
 Dx
-ce
-ce
-ce
-ce
+Fz
+Fz
+Fz
+Fz
 Kg
 Kg
 Kg
@@ -14970,7 +14864,7 @@ Kg
 Kg
 Kg
 rv
-ir
+db
 Kg
 Kg
 Kg
@@ -14981,7 +14875,7 @@ Kg
 Kg
 Kg
 Kg
-ir
+db
 Kq
 Kg
 Kg
@@ -55247,7 +55141,7 @@ Kg
 Kg
 Kg
 Kg
-tf
+Kg
 Pz
 jq
 jq
@@ -56018,7 +55912,7 @@ jq
 jq
 jq
 jq
-Em
+Qy
 NV
 ln
 EV
@@ -57044,10 +56938,10 @@ jq
 jq
 jq
 jq
-cX
 jq
 jq
-Aa
+jq
+Kg
 NM
 EV
 Cp
@@ -64499,7 +64393,7 @@ Kg
 Kg
 Kg
 Kg
-tf
+Kg
 Pz
 jq
 jq
@@ -65270,9 +65164,9 @@ BR
 BR
 OB
 BR
-lY
+jq
 NV
-Cy
+Kg
 Kg
 Cp
 "}
@@ -65784,7 +65678,7 @@ BR
 BR
 BR
 BR
-cX
+jq
 Pz
 Pz
 Pz
@@ -66298,7 +66192,7 @@ BR
 DT
 Kg
 Kg
-oq
+Kg
 NV
 ln
 gL

@@ -747,12 +747,6 @@
 /obj/machinery/light/floor,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/building)
-"aZU" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
-/area/f13/building)
 "bak" = (
 /obj/structure/dresser,
 /obj/structure/curtain{
@@ -3278,13 +3272,6 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
-"dKW" = (
-/obj/structure/fluff/railing/corner{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
-/area/f13/building)
 "dLu" = (
 /obj/structure/sink{
 	pixel_y = 15
@@ -4700,13 +4687,6 @@
 /obj/structure/debris/v2,
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
-"faM" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
-/area/f13/building)
 "faN" = (
 /obj/machinery/microwave/stove,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4869,12 +4849,6 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
-"fkL" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
-/area/f13/building)
 "fkV" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green,
@@ -5377,13 +5351,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
-"fJL" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/medium/combat/duster,
-/turf/open/floor/f13{
-	icon_state = "whiteyellowchess"
-	},
-/area/f13/building)
 "fKh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/curtain{
@@ -5647,7 +5614,6 @@
 /area/f13/building)
 "fWf" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/light/duster/brahmin,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
@@ -5814,12 +5780,6 @@
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
-/area/f13/building)
-"giF" = (
-/obj/structure/fluff/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "giQ" = (
 /obj/structure/table/wood,
@@ -6656,12 +6616,6 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/red,
-/area/f13/building)
-"hft" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "hgh" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -10794,12 +10748,6 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
-"lLo" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clothing/suit/armored/light/duster/brahmin,
-/turf/open/floor/f13/wood,
-/area/f13/building)
 "lLp" = (
 /obj/machinery/light{
 	dir = 8
@@ -11004,13 +10952,6 @@
 	icon_state = "warnplate";
 	dir = 9
 	},
-/area/f13/building)
-"lZy" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood,
 /area/f13/building)
 "lZA" = (
 /obj/structure/closet/cabinet,
@@ -13518,10 +13459,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
-"oQm" = (
-/obj/structure/fluff/railing,
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
-/area/f13/building)
 "oQn" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/savannah{
@@ -15985,10 +15922,6 @@
 	icon_state = "horizontalbottomborderbottom2"
 	},
 /area/f13/tunnel)
-"rAi" = (
-/obj/structure/fluff/railing/corner,
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
-/area/f13/building)
 "rAw" = (
 /turf/closed/wall/f13/wood,
 /area/f13/wasteland)
@@ -16208,12 +16141,6 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
 	},
-/area/f13/building)
-"rLc" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "rLf" = (
 /turf/closed/wall/mineral/concrete/blastproof{
@@ -17386,12 +17313,6 @@
 "tfN" = (
 /obj/structure/stairs/north{
 	name = "slide"
-	},
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/obj/structure/fluff/railing{
-	dir = 8
 	},
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
@@ -21384,12 +21305,6 @@
 /turf/open/floor/f13{
 	icon_state = "white"
 	},
-/area/f13/building)
-"xMR" = (
-/obj/structure/fluff/railing/corner{
-	dir = 1
-	},
-/turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "xNd" = (
 /obj/machinery/light{
@@ -31678,8 +31593,8 @@ hXl
 tAw
 cwb
 tAw
-lZy
-dKW
+cuE
+cuE
 cuE
 cuE
 hhF
@@ -31936,7 +31851,7 @@ tAw
 cwb
 tAw
 tAY
-faM
+cuE
 cuE
 cuE
 uKm
@@ -32193,7 +32108,7 @@ caj
 cwb
 tAw
 tAY
-faM
+cuE
 wmK
 cuE
 whm
@@ -57154,11 +57069,11 @@ nkN
 nkN
 hMW
 nkN
-rAi
-aZU
-aZU
-aZU
-giF
+nkN
+nkN
+nkN
+nkN
+nkN
 nkN
 exw
 bkG
@@ -57411,11 +57326,11 @@ gnS
 nkN
 exw
 weG
-oQm
+nkN
 xFQ
 sdm
 xFQ
-rLc
+nkN
 ptX
 exw
 bkG
@@ -57668,11 +57583,11 @@ ksE
 gKy
 exw
 qhw
-oQm
+nkN
 jHh
 tXc
 kDU
-rLc
+nkN
 jOF
 exw
 bkG
@@ -57683,7 +57598,7 @@ bkG
 bkG
 bkG
 exw
-fJL
+fWf
 vlK
 dYj
 exw
@@ -57925,11 +57840,11 @@ oFN
 nkN
 exw
 ebk
-oQm
+nkN
 xFQ
 rGS
 xFQ
-rLc
+nkN
 ekO
 exw
 bkG
@@ -58182,11 +58097,11 @@ nkN
 nkN
 hMW
 nkN
-fkL
-hft
-hft
-hft
-xMR
+nkN
+nkN
+nkN
+nkN
+nkN
 nkN
 exw
 bkG
@@ -80330,7 +80245,7 @@ uhu
 tAw
 pCM
 cuE
-lLo
+eSj
 tAw
 bkG
 bkG

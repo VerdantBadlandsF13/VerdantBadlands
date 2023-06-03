@@ -4766,7 +4766,6 @@
 "ws" = (
 /obj/structure/table,
 /obj/item/weldingtool/hugetank,
-/obj/item/clothing/suit/armored/medium/scrapchest,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -5235,7 +5234,6 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "yK" = (
-/obj/machinery/autolathe/toy,
 /obj/item/stack/sheet/plastic/fifty,
 /obj/item/stack/sheet/metal/twenty,
 /obj/item/stack/sheet/glass/ten,

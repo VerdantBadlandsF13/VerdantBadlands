@@ -181,14 +181,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
-"aS" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/floor/f13{
-	icon_state = "vault"
-	},
-/area/f13/vault)
 "aT" = (
 /obj/machinery/shower{
 	pixel_y = 16
@@ -1917,15 +1909,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
-"ib" = (
-/obj/item/kirbyplants/random,
-/obj/structure/fluff/railing{
-	dir = 6
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/vault)
 "id" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/circuitboard/machine/mechfab,
@@ -2668,12 +2651,6 @@
 /obj/structure/debris/v2,
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
-"kO" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "kP" = (
 /obj/machinery/chem_dispenser/drinks{
 	dir = 4
@@ -2912,7 +2889,6 @@
 	light_color = "#e8eaff";
 	dir = 4
 	},
-/obj/item/clothing/suit/armored/light/duster/brahmin,
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "lM" = (
@@ -3775,14 +3751,6 @@
 	icon_state = "redsolid"
 	},
 /area/f13/vault/security)
-"pe" = (
-/obj/structure/fluff/railing{
-	dir = 9
-	},
-/turf/open/floor/f13{
-	icon_state = "vault"
-	},
-/area/f13/vault)
 "pf" = (
 /obj/structure/chair,
 /obj/machinery/light{
@@ -4407,12 +4375,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/f13/tunnel)
-"rw" = (
-/obj/structure/fluff/railing{
-	dir = 5
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "rx" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkblue";
@@ -4643,12 +4605,6 @@
 "sy" = (
 /turf/closed/mineral/random/high_chance/volcanic,
 /area/f13/caves)
-"sA" = (
-/obj/structure/fluff/railing{
-	dir = 6
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "sC" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkpurple"
@@ -4840,9 +4796,6 @@
 	},
 /area/f13/tunnel)
 "tm" = (
-/obj/structure/fluff/railing{
-	dir = 5
-	},
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/f13{
 	icon_state = "white"
@@ -7023,10 +6976,6 @@
 "Dt" = (
 /turf/open/indestructible/sound/pool,
 /area/f13/vault)
-"Du" = (
-/obj/structure/fluff/railing,
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "Dy" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -7062,14 +7011,6 @@
 /obj/structure/closet/fridge/standard,
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault/diner)
-"DE" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/floor/f13{
-	icon_state = "vault"
-	},
-/area/f13/vault)
 "DF" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkpurple";
@@ -8889,12 +8830,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
-"KQ" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/floor/f13,
-/area/f13/vault/atrium)
 "KR" = (
 /turf/open/floor/f13{
 	icon_state = "whitegreen"
@@ -8989,12 +8924,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/security)
-"Ls" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "Lw" = (
 /obj/effect/overlay/poolwater,
 /obj/structure/mirelurkegg,
@@ -9124,12 +9053,6 @@
 	icon_state = "redchess"
 	},
 /area/f13/vault/security/checkpoint)
-"LX" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "LY" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/indestructible/ground/inside/mountain,
@@ -9626,15 +9549,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
-"Oc" = (
-/obj/item/kirbyplants/random,
-/obj/structure/fluff/railing{
-	dir = 10
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/vault)
 "Od" = (
 /obj/structure/bed,
 /turf/open/floor/f13{
@@ -9647,9 +9561,6 @@
 /turf/open/floor/plating,
 /area/f13/vault/vents)
 "Oh" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
 /obj/item/megaphone,
 /turf/open/floor/f13{
 	icon_state = "vault"
@@ -11168,12 +11079,6 @@
 	dir = 5
 	},
 /area/f13/vault/medical)
-"UT" = (
-/obj/structure/fluff/railing{
-	dir = 9
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "UV" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/terminal{
@@ -11301,14 +11206,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/atrium)
-"VD" = (
-/obj/structure/fluff/railing{
-	dir = 5
-	},
-/turf/open/floor/f13{
-	icon_state = "vault"
-	},
-/area/f13/vault)
 "VE" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "public door"
@@ -11576,21 +11473,6 @@
 	icon_state = "white"
 	},
 /area/f13/vault)
-"WU" = (
-/obj/item/kirbyplants/random,
-/obj/structure/fluff/railing{
-	dir = 9
-	},
-/turf/open/floor/f13{
-	icon_state = "white"
-	},
-/area/f13/vault)
-"WV" = (
-/obj/structure/fluff/railing{
-	dir = 10
-	},
-/turf/open/floor/padded,
-/area/f13/vault/atrium)
 "WZ" = (
 /obj/machinery/door/window/brigdoor/security{
 	dir = 1
@@ -60406,10 +60288,10 @@ bZ
 Ga
 Yf
 DA
-KQ
-KQ
-KQ
-KQ
+qr
+qr
+qr
+qr
 vw
 DA
 Yf
@@ -62813,8 +62695,8 @@ DS
 xP
 oA
 XZ
-pe
-aS
+UN
+UN
 UN
 xP
 RB
@@ -63056,7 +62938,7 @@ RB
 xP
 DQ
 DQ
-ib
+SJ
 Dt
 Dt
 Dt
@@ -63327,9 +63209,9 @@ DS
 xP
 et
 XZ
-VD
-DE
-DE
+UN
+UN
+UN
 xP
 RB
 RB
@@ -64341,12 +64223,12 @@ RB
 xP
 gz
 DQ
-Oc
+SJ
 Dt
 Dt
 Dt
 Dt
-WU
+SJ
 gJ
 xP
 DS
@@ -64527,10 +64409,10 @@ DA
 Yf
 DA
 mU
-UT
-kO
-kO
-WV
+eC
+eC
+eC
+eC
 qr
 DA
 KW
@@ -64784,10 +64666,10 @@ DA
 DA
 DA
 qr
-LX
 eC
 eC
-Du
+eC
+eC
 qr
 DA
 DA
@@ -65041,10 +64923,10 @@ DA
 Ll
 DA
 qr
-LX
 eC
 eC
-Du
+eC
+eC
 WB
 DA
 Yf
@@ -65298,10 +65180,10 @@ qr
 qr
 qr
 qr
-rw
-Ls
-Ls
-sA
+eC
+eC
+eC
+eC
 qr
 DA
 Yf

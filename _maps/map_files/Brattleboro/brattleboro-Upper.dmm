@@ -69,7 +69,6 @@
 /area/f13/village)
 "au" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing/corner,
 /obj/structure/chair/stool,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -1262,7 +1261,6 @@
 /area/f13/village)
 "gI" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing,
 /obj/structure/destructible/hobo_barrel,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -1474,12 +1472,6 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
-"hH" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "hI" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -2089,9 +2081,6 @@
 	dir = 4;
 	light_color = "#c1caff"
 	},
-/obj/structure/fluff/railing{
-	dir = 8
-	},
 /turf/open/transparent/openspace,
 /area/f13/village)
 "kP" = (
@@ -2239,12 +2228,6 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/caves)
-"lB" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "lE" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
@@ -2258,12 +2241,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"lN" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "lP" = (
 /obj/machinery/vending/cola/space_up,
 /obj/structure/sign/poster/contraband/space_cola{
@@ -3108,10 +3085,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"pI" = (
-/obj/structure/fluff/railing/corner,
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "pK" = (
 /obj/structure/chair/booth{
 	dir = 4
@@ -3503,9 +3476,6 @@
 	},
 /area/f13/village)
 "rI" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -4183,12 +4153,6 @@
 /obj/item/storage/box/cups,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/village)
-"vu" = (
-/obj/structure/fluff/railing/corner{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "vv" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -5077,12 +5041,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
-"zI" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "zJ" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/outside/roof,
@@ -5187,15 +5145,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"Ai" = (
-/obj/structure/fluff/railing{
-	dir = 1
-	},
-/obj/structure/fluff/railing/corner{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Ak" = (
 /obj/structure/railing{
 	dir = 6
@@ -5233,10 +5182,6 @@
 /obj/structure/barricade/bars,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
-"Ax" = (
-/obj/structure/fluff/railing,
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Az" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /obj/machinery/light/small{
@@ -5253,12 +5198,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
 /area/f13/village)
-"AC" = (
-/obj/structure/fluff/railing{
-	dir = 9
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "AF" = (
 /obj/structure/table/booth,
 /obj/machinery/processor/chopping_block{
@@ -5355,14 +5294,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"AW" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/obj/item/trash/f13/tin_large,
-/turf/open/transparent/openspace,
-/area/f13/village)
 "AY" = (
 /obj/structure/simple_door/metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -5535,17 +5466,6 @@
 /obj/machinery/smartfridge/bottlerack/grownbin,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/caves)
-"BX" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/transparent/openspace,
-/area/f13/village)
 "BY" = (
 /obj/structure/railing{
 	dir = 9
@@ -5861,13 +5781,6 @@
 "DK" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
-/area/f13/village)
-"DL" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
 /area/f13/village)
 "DN" = (
 /obj/structure/table/wood,
@@ -6355,14 +6268,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"Gs" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/obj/structure/chair/stool,
-/turf/open/transparent/openspace,
-/area/f13/village)
 "Gv" = (
 /obj/structure/railing{
 	dir = 10
@@ -6423,13 +6328,6 @@
 "GM" = (
 /turf/open/transparent/openspace,
 /area/f13/building/mall)
-"GS" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/village)
 "GU" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
@@ -6780,13 +6678,6 @@
 "IA" = (
 /obj/structure/window/fulltile/wood/broken,
 /turf/open/floor/f13/wood,
-/area/f13/village)
-"IC" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 10
-	},
-/turf/open/transparent/openspace,
 /area/f13/village)
 "IE" = (
 /obj/structure/lattice/catwalk,
@@ -7920,12 +7811,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"OO" = (
-/obj/structure/fluff/railing/corner{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "OP" = (
 /obj/structure/rack/shelf_metal,
 /obj/machinery/light{
@@ -8143,13 +8028,6 @@
 "PW" = (
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"PY" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 6
-	},
-/turf/open/transparent/openspace,
-/area/f13/village)
 "Qa" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing,
@@ -8222,11 +8100,6 @@
 	},
 /turf/open/floor/plating,
 /area/f13/building/mall)
-"QB" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing,
-/turf/open/transparent/openspace,
-/area/f13/village)
 "QC" = (
 /obj/structure/table/booth,
 /obj/item/storage/box/matches,
@@ -8255,12 +8128,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
-"QM" = (
-/obj/structure/fluff/railing{
-	dir = 10
-	},
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "QN" = (
 /obj/structure/railing{
 	dir = 9
@@ -8660,14 +8527,6 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
-"SQ" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing/corner,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/f13/village)
 "SR" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/f13/wood,
@@ -9415,12 +9274,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/f13/village)
-"Wr" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Ws" = (
 /obj/machinery/light{
 	dir = 1
@@ -9481,7 +9334,6 @@
 "WH" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat,
-/obj/item/clothing/suit/armored/medium/combat/duster,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/village)
 "WO" = (
@@ -9895,9 +9747,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/fluff/railing{
-	dir = 4
-	},
 /turf/open/transparent/openspace,
 /area/f13/village)
 "YL" = (
@@ -10110,9 +9959,6 @@
 /area/f13/building/mall)
 "Zv" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/fluff/railing{
-	dir = 4
-	},
 /obj/structure/chair/stool,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Techfiend Marauder";
@@ -25881,10 +25727,10 @@ PW
 PW
 PW
 PW
-pI
-Wr
-Wr
-vu
+PW
+PW
+PW
+PW
 PW
 PW
 PW
@@ -29084,7 +28930,7 @@ Ls
 MQ
 Ls
 Ls
-vu
+PW
 PW
 PW
 PW
@@ -29541,7 +29387,7 @@ sh
 sh
 ZO
 dm
-lB
+PW
 PW
 PW
 PW
@@ -29998,7 +29844,7 @@ ML
 Tx
 Tx
 Jp
-lB
+PW
 PW
 PW
 PW
@@ -30451,11 +30297,11 @@ oE
 Ls
 sh
 sh
-AC
-lN
-lN
-lN
-OO
+PW
+PW
+PW
+PW
+PW
 PW
 PW
 PW
@@ -30908,7 +30754,7 @@ oE
 Lz
 sh
 ZO
-lB
+PW
 PW
 PW
 PW
@@ -31365,7 +31211,7 @@ IT
 Ls
 sh
 ZO
-lB
+PW
 PW
 PW
 PW
@@ -31812,7 +31658,7 @@ PW
 PW
 PW
 PW
-pI
+PW
 Ls
 Ls
 Ls
@@ -31822,7 +31668,7 @@ Ls
 Ls
 nP
 ZO
-lB
+PW
 PW
 PW
 PW
@@ -32269,7 +32115,7 @@ PW
 PW
 PW
 PW
-Ax
+PW
 IA
 ek
 oE
@@ -32279,7 +32125,7 @@ dR
 Ls
 ZO
 zL
-lB
+PW
 PW
 PW
 PW
@@ -32726,7 +32572,7 @@ PW
 PW
 PW
 PW
-Ax
+PW
 MQ
 DT
 oE
@@ -32736,7 +32582,7 @@ vP
 IA
 gu
 sh
-lB
+PW
 PW
 PW
 PW
@@ -33183,7 +33029,7 @@ PW
 PW
 PW
 PW
-hH
+PW
 Ls
 Ls
 Zc
@@ -33193,7 +33039,7 @@ ZO
 Ls
 sh
 sh
-lB
+PW
 PW
 PW
 PW
@@ -33650,7 +33496,7 @@ ZO
 Lz
 sh
 sh
-lB
+PW
 PW
 PW
 PW
@@ -34107,7 +33953,7 @@ IT
 Ls
 ZO
 ZO
-lB
+PW
 PW
 PW
 PW
@@ -34554,7 +34400,7 @@ PW
 PW
 PW
 PW
-pI
+PW
 Ls
 Ls
 Ls
@@ -34564,7 +34410,7 @@ Ls
 Ls
 NJ
 sh
-lB
+PW
 PW
 PW
 PW
@@ -35011,7 +34857,7 @@ PW
 PW
 PW
 PW
-Ax
+PW
 MQ
 Tn
 oE
@@ -35021,7 +34867,7 @@ mu
 Ls
 sh
 sh
-lB
+PW
 PW
 PW
 PW
@@ -35263,7 +35109,7 @@ PW
 PW
 PW
 rI
-QM
+xF
 PW
 PW
 PW
@@ -35468,7 +35314,7 @@ PW
 PW
 PW
 PW
-Ax
+PW
 MQ
 Yp
 ZO
@@ -35478,7 +35324,7 @@ sa
 MQ
 sh
 KC
-lB
+PW
 PW
 PW
 PW
@@ -35925,7 +35771,7 @@ PW
 PW
 PW
 PW
-hH
+PW
 Ls
 Ls
 XG
@@ -35935,7 +35781,7 @@ ZO
 Ls
 sT
 OK
-lB
+PW
 PW
 PW
 PW
@@ -36392,7 +36238,7 @@ sh
 Lz
 sT
 OK
-lB
+PW
 PW
 PW
 PW
@@ -36847,9 +36693,9 @@ Ls
 aP
 IT
 Ls
-zI
+sh
 Ne
-Ai
+PW
 PW
 PW
 PW
@@ -37306,7 +37152,7 @@ Ls
 Ls
 Nx
 ur
-lB
+PW
 PW
 PW
 PW
@@ -37760,10 +37606,10 @@ PW
 PW
 PW
 PW
-hH
-lN
-lN
-OO
+PW
+PW
+PW
+PW
 PW
 PW
 PW
@@ -57642,7 +57488,7 @@ PW
 PW
 PW
 rI
-QM
+xF
 PW
 PW
 PW
@@ -59365,10 +59211,10 @@ PW
 pP
 XI
 XI
-SQ
-GS
-GS
-AW
+YK
+XI
+XI
+Ex
 Zv
 YK
 pP
@@ -59822,7 +59668,7 @@ PW
 pP
 XI
 Ex
-QB
+XI
 OK
 OK
 OK
@@ -60279,7 +60125,7 @@ PW
 pP
 XI
 au
-PY
+XI
 OK
 OK
 OK
@@ -61192,8 +61038,8 @@ PW
 PW
 pP
 Ex
-Gs
-IC
+au
+XI
 OK
 OK
 OK
@@ -61650,7 +61496,7 @@ PW
 pP
 XI
 XI
-QB
+XI
 OK
 OK
 OK
@@ -62107,11 +61953,11 @@ PW
 pP
 XI
 XI
-BX
-DL
-DL
-DL
-DL
+kO
+XI
+XI
+XI
+XI
 kO
 pP
 PW

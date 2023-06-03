@@ -13516,7 +13516,6 @@
 	},
 /area/f13/wasteland)
 "jtT" = (
-/obj/structure/fluff/railing/corner,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
@@ -14181,12 +14180,6 @@
 "jUO" = (
 /obj/structure/flora/junglebush/large,
 /turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
-"jVv" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
 "jVJ" = (
 /obj/effect/decal/marking{
@@ -22245,15 +22238,6 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"pRG" = (
-/obj/structure/fluff/railing/corner{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/carpet/red,
-/area/f13/village)
 "pRW" = (
 /obj/structure/chair/sofa/corp/right{
 	dir = 8
@@ -25286,7 +25270,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/head/helmet/f13/raider/yankee,
-/obj/item/clothing/suit/armored/light/leather_jacket,
 /obj/item/clothing/under/pants/mustangjeans,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/bl/gmb)
@@ -27885,10 +27868,6 @@
 "tZQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/store,
-/area/f13/wasteland)
-"tZV" = (
-/obj/structure/fluff/railing/corner,
-/turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
 "tZW" = (
 /obj/structure/window/fulltile/wood/broken,
@@ -50720,7 +50699,7 @@ bhZ
 bhZ
 bhZ
 bhZ
-pRG
+bhZ
 cfN
 uiN
 vWs
@@ -55469,7 +55448,7 @@ opX
 bxh
 bxh
 ldO
-tZV
+anP
 ppz
 ppz
 ppz
@@ -56840,7 +56819,7 @@ qqZ
 qqZ
 kZA
 anP
-jVv
+anP
 ppz
 ppz
 kmh
@@ -58211,7 +58190,7 @@ anP
 tom
 tom
 tom
-tZV
+anP
 ppz
 ppz
 ppz
@@ -59582,7 +59561,7 @@ anP
 tom
 tom
 bhD
-jVv
+anP
 ppz
 ppz
 kmh

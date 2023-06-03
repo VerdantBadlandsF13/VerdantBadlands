@@ -2,11 +2,11 @@
 
 /mob/living/carbon/human/handle_shock()
 	..()
-	if(status_flags & GODMODE)
+	if(status_flags & GODMODE || !feels_pain())
 		return 0
 	var/pain_goes_up = TRUE
 
-	if(health < SOFT_CRIT) //Going under the crit threshold makes you immediately collapse
+	if(health < HEALTH_THRESHOLD_CRIT) //Going under the crit threshold makes you immediately collapse
 		pain_shock_stage = max(pain_shock_stage, 61)
 	else if(pain_level >= BASE_CARBON_PAIN_RESIST)//Remaining over the pain threshold causes shock to increase over time
 		pain_shock_stage += 1
@@ -20,7 +20,7 @@
 
 		if(pain_shock_stage >= 30)
 			if(pain_shock_stage == 30)
-				if(!UNCONSCIOUS)
+				if(!IsUnconscious())
 					visible_message("<B>[src]</B> is having trouble keeping their eyes open.","You're having trouble keeping your eyes open.")
 			eye_blurry = max(2, eye_blurry)
 			stuttering = max(stuttering, 5)
@@ -30,7 +30,7 @@
 
 		if(pain_shock_stage >= 60 && pain_shock_stage < 80)
 			if(pain_shock_stage == 60)
-				if(!UNCONSCIOUS)
+				if(!IsUnconscious())
 					visible_message("<B>[src]</B>'s body becomes limp.","Your body becomes limp.")
 			if(prob(2))
 				to_chat(src, "<span class='danger'>[pick("The pain is excruciating!", "Please, just end the pain!", "Your whole body is going numb!")]</span>")
@@ -47,7 +47,7 @@
 				IsParalyzed(5)
 
 		if(pain_shock_stage == 150)
-			if(!UNCONSCIOUS)
+			if(!IsUnconscious())
 				visible_message("<B>[src]</b> can no longer stand, collapsing!","You can no longer stand, you collapse!")
 			Knockdown(10)
 
@@ -57,7 +57,7 @@
 
 	else//pain goes down
 		//treshold messages
-		if(!UNCONSCIOUS)
+		if(!IsUnconscious())
 			if(pain_shock_stage == 29)
 				to_chat(src,"The pain becomes manageable.")
 			if(pain_shock_stage == 49)//movement stops being slowed down

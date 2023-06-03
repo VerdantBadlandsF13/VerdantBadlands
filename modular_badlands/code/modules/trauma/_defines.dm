@@ -8,4 +8,11 @@ Houses the defines required, to keep this modular.
 /mob/living/carbon/human/Life()
 	if(stat != DEAD)
 		handle_shock()
+		handle_pain()
 	. = ..()
+
+/mob/living/proc/feels_pain()
+	return TRUE
+
+/mob/living/silicon/feels_pain()
+	return FALSE

@@ -3697,6 +3697,7 @@
 #include "modular_badlands\code\modules\techno_jacks\obj\structures\defenses\shield_walls.dm"
 #include "modular_badlands\code\modules\trauma\_defines.dm"
 #include "modular_badlands\code\modules\trauma\handle_shock.dm"
+#include "modular_badlands\code\modules\trauma\pain.dm"
 #include "modular_badlands\code\modules\trauma\painkillers.dm"
 #include "modular_badlands\code\modules\trauma\shock.dm"
 #include "modular_badlands\code\modules\unsorted\mob\horrors.dm"

@@ -36,7 +36,7 @@
 	/// Used to track next tool required to salvage the suit
 	var/salvage_step = 0
 
-	var/durability_threshold = 15
+	durability_threshold = 15
 
 	armor_durability = 100
 	repair_kit = /obj/item/repair_kit/pa_repair_kit

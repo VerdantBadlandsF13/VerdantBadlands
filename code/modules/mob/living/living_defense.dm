@@ -79,6 +79,12 @@
 			CRASH("Invalid rediretion mode [redirection_mode]")
 
 /mob/living/bullet_act(obj/item/projectile/P, def_zone)
+
+/*
+	if(P)
+		murder = P.firer
+*/
+
 	var/totaldamage = P.damage
 	var/final_percent = 0
 	if(P.original != src || P.firer != src) //try to block or reflect the bullet, can't do so when shooting oneself

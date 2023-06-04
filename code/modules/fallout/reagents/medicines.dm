@@ -325,6 +325,17 @@
 	..()
 	return TRUE // update health at end of tick
 
+/datum/reagent/medicine/radx/on_mob_add(mob/living/carbon/human/M)
+	..()
+	if(isliving(M))
+		to_chat(M, "<span class='notice'>With Rad-X, you can now soak up more radiation, with less adverse effects.</span>")
+		ADD_TRAIT(M, TRAIT_RADX, TRAIT_GENERIC)
+
+/datum/reagent/medicine/radx/on_mob_delete(mob/living/carbon/human/M)
+	if(isliving(M))
+		to_chat(M, "<span class='notice'>That Rad-X dose has likely gone through your system by now. Time for more.</span>")
+		REMOVE_TRAIT(M, TRAIT_RADX, TRAIT_GENERIC)
+	..()
 
 // ---------------------------
 // RADAWAY REAGENT

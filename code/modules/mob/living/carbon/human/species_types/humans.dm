@@ -14,6 +14,14 @@
 	wagging_type = "waggingtail_human"
 	species_type = "human"
 
+/datum/species/human/after_equip_job(datum/job/J, mob/living/carbon/human/H)
+	if(H.special_i < 3)
+		H.grant_language(/datum/language/aphasia)
+		H.remove_language(/datum/language/common)
+	if(H.special_i > 8)
+		to_chat(H,"You can understand idiots!")
+		H.grant_language(/datum/language/aphasia)
+
 /datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 	if(H)
 		stop_wagging_tail(H)

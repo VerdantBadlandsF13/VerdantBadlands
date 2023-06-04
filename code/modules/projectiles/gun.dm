@@ -398,6 +398,16 @@ ATTACHMENTS
 		to_chat(user, "<span class='userdanger'>You need both hands free to fire \the [src]!</span>")
 		return
 
+	if(user.special_s<2)
+		to_chat(user, "<span class='userdanger'>Try as you might, you can't pull the trigger! <br>\
+		You're too weak!</span>")
+		return
+
+	if(istype(src, /obj/item/gun/energy) && user.special_i <= 3)
+		user.dropItemToGround(src, TRUE)
+		to_chat(user, "<span class='userdanger'>Try as you might, you have no idea how this thing works!</span>")
+		return
+
 	if (automatic == 0)
 		user.DelayNextAction(ranged_attack_speed)
 	if (automatic == 1)
@@ -495,6 +505,14 @@ ATTACHMENTS
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
 					jammed = TRUE
+
+	if(user.special_l < 3)
+		if(prob(2))
+			if(can_jam)
+				jammed = TRUE
+
+	if(user.special_s<4)
+		bonus_spread += 20
 
 	if(on_cooldown())
 		return
@@ -996,7 +1014,7 @@ ATTACHMENTS
 /obj/item/gun/proc/getinaccuracy(mob/living/user, bonus_spread, stamloss)
 	if(inaccuracy_modifier == 0)
 		return bonus_spread
-	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier //+ 50 + (-user.special_p*5)//SPECIAL Integration
+	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier+ 50 + (-user.special_p*5)//SPECIAL Integration
 	var/aiming_delay = 0 //Otherwise aiming would be meaningless for slower guns such as sniper rifles and launchers.
 	if(fire_delay)
 		var/penalty = (last_fire + GUN_AIMING_TIME + fire_delay) - world.time

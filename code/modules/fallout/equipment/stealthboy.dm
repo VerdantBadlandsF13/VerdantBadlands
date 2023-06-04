@@ -1,59 +1,101 @@
 /obj/item/stealthboy
-	name = "Stealth Boy"
-	desc = "The RobCo Stealth Boy 3001 is a personal stealth device worn on one's wrist. It generates a modulating field that transmits the reflected light from one side of an object to the other, making a person much harder to notice (but not completely invisible)."
-	icon = 'icons/obj/clockwork_objects.dmi' //placeholder
-	icon_state = "clockwork_slab" //placeholder
-	item_flags = NOBLUDGEON
+	name = "Stealth Boy MK1"
+	desc = "Pre-war device that generates a modulating field that transmits the reflected light from one side of an object to another"
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "stealth_boy"
 	slot_flags = ITEM_SLOT_BELT
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 5
 	w_class = WEIGHT_CLASS_SMALL
-	var/mob/living/carbon/human/user = null
-	var/charge = 350
-	var/max_charge = 350
-	var/on = FALSE
-	var/old_alpha = 0
+	var/active = FALSE
+	var/mob/living/target
+	var/charge = 100
+	var/charge_use = 1
+	var/brain_loss = 1
+	var/cooldown = 0
+	var/field_unstability = 40 // chance of making sparks on user hit by bullet, more is higher
 	actions_types = list(/datum/action/item_action/stealthboy_cloak)
 
-/obj/item/stealthboy/ui_action_click(mob/user)
-	if(user.get_item_by_slot(SLOT_BELT) == src)
-		if(!on)
-			Activate(usr)
-		else
+/obj/item/stealthboy/makeshift
+	name = "Makeshift Stealth Boy"
+	icon_state = "makeshift_stealth"
+	charge = 80
+	brain_loss = 2
+	field_unstability = 60
+
+/obj/item/stealthboy/mk2
+	name = "Stealth Boy MK2"
+	icon_state = "stealth_woona"
+	charge = 250
+	brain_loss = 0.6
+	field_unstability = 20
+
+/obj/item/stealthboy/examine(mob/user)
+	..()
+	to_chat(user, "The charge meter reads: [charge].")
+
+/obj/item/stealthboy/Destroy()
+	if(active)
+		STOP_PROCESSING(SSobj,src)
+	return ..()
+
+/obj/item/stealthboy/attack_self(mob/user)
+	target = user
+	if (cooldown < world.time)
+		cooldown = world.time + 20 // 3 seconds
+		if(active)
 			Deactivate()
-	return
+		else if (charge != 0)
+			Activate()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
 
-/obj/item/stealthboy/item_action_slot_check(slot, mob/user)
-	if(slot == SLOT_BELT)
-		return 1
+/obj/item/stealthboy/emp_act(severity)
+	if (!(. & EMP_PROTECT_SELF))
+		if(active)
+			Deactivate()
 
-/obj/item/stealthboy/proc/Activate(mob/living/carbon/human/user)
-	if(!user)
-		return
-	to_chat(user, "<span class='notice'>You activate \The [src].</span>")
-	src.user = user
+/obj/item/stealthboy/proc/disrupt()
+	if(prob(field_unstability))
+		do_sparks(2, FALSE, target)
+
+/obj/item/stealthboy/proc/Activate()
+	active = TRUE
+	new /obj/effect/temp_visual/dir_setting/ninja/cloak(get_turf(target), target.dir)
+	target.alpha = 60 - target.special_a * 5
+	do_sparks(2, FALSE, target)
+	charge -= 10 * charge_use
+	playsound(target, 'sound/effects/sparks4.ogg', 20, 1)
 	START_PROCESSING(SSobj, src)
-	old_alpha = user.alpha
-	on = TRUE
+	RegisterSignal(target, COMSIG_PROJECTILE_ON_HIT, .proc/disrupt)
 
 /obj/item/stealthboy/proc/Deactivate()
-	to_chat(user, "<span class='notice'>You deactivate \The [src].</span>")
+	active = FALSE
+	new /obj/effect/temp_visual/dir_setting/ninja(get_turf(target), target.dir)
+	target.alpha = 255
+	do_sparks(2, FALSE, target)
+	playsound(target, 'sound/effects/phasein.ogg', 15, 1)
+	playsound(target, 'sound/effects/sparks2.ogg', 20, 1)
 	STOP_PROCESSING(SSobj, src)
-	if(user)
-		user.alpha = old_alpha
-	on = FALSE
-	user = null
+	UnregisterSignal(target, COMSIG_PROJECTILE_ON_HIT)
+
+/obj/item/stealthboy/equipped(mob/user)
+	. = ..()
+	target = user
+	if (istype(loc, /obj/item/storage))
+		Deactivate()
+		target = null
 
 /obj/item/stealthboy/dropped(mob/user)
-	..()
-	if(user && user.get_item_by_slot(SLOT_BELT) != src)
+	. = ..()
+	if(active && user != loc)
 		Deactivate()
+		target = null
 
 /obj/item/stealthboy/process()
-	if(user.get_item_by_slot(SLOT_BELT) != src)
-		Deactivate()
-		return
-	if(on)
-		animate(user,alpha = CLAMP(255 - charge,0,255),time = 10)
-		charge = max(0,charge - 4)
+	if(active == TRUE)
+		charge -= charge_use
+		target.adjustOrganLoss(ORGAN_SLOT_BRAIN, brain_loss)
+		if(charge <= 0)
+			Deactivate()
+			icon_state = initial(icon_state) + "0"
+			STOP_PROCESSING(SSobj,src)

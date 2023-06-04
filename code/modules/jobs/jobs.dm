@@ -34,8 +34,12 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	))
 
 GLOBAL_LIST_INIT(vault_positions, list(
+	"Overseer",
+	"Chief of Security",
+	"Vault-tec Doctor",
+	"Vault-tec Scientist",
 	"Vault-tec Security",
-	"Officer",
+	"Vault-tec Engineer",
 	"Cyborg",
 	))
 
@@ -45,6 +49,7 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
+	"Chief of Security",
 	))
 
 GLOBAL_LIST_INIT(silicon_positions, list(

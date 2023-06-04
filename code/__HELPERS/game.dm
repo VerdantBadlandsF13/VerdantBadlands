@@ -549,6 +549,17 @@
 	var/message = "<span class='game deadsay'><span class='name'>\
 		[character.real_name]</span> ([rank]) has entered the wasteland at \
 		<span class='name'>[A.name]</span>.</span>"
+
+	if(character.special_s + character.special_p +  character.special_e +  character.special_c +  character.special_i +  character.special_a +  character.special_l > 25)
+		message_admins("[key_name_admin(character.ckey)] has managed to bypass the special cap. They've been smited.")
+		to_chat(world, "<h2><span class='revenminor'>OOC: A sinner has been punished. Rejoice.</span></h2>")
+		character.adjustCloneLoss(80)
+		character.adjustStaminaLoss(100)
+		var/obj/item/bodypart/head/O = character.get_bodypart(BODY_ZONE_HEAD)
+		O.force_wound_upwards(/datum/wound/slash/critical)
+		to_chat(character, "<font color='red'>You've somehow bypassed the special cap. Suffer.</font>")
+		SEND_SOUND(world, sound('sound/f13npc/assaultron/beam.ogg'))
+
 	deadchat_broadcast(message, follow_target = character, message_type=DEADCHAT_ARRIVALRATTLE)
 	if((!GLOB.announcement_systems.len) || (!character.mind))
 		return

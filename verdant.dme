@@ -2397,6 +2397,7 @@
 #include "code\modules\jobs\job_types\bl_lumber.dm"
 #include "code\modules\jobs\job_types\bl_mountain.dm"
 #include "code\modules\jobs\job_types\bl_sillycone.dm"
+#include "code\modules\jobs\job_types\bl_vault.dm"
 #include "code\modules\jobs\job_types\wasteland.dm"
 #include "code\modules\jobs\job_types\SS13\captain.dm"
 #include "code\modules\jobs\job_types\SS13\detective.dm"

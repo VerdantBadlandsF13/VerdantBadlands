@@ -14,7 +14,7 @@ here's a tip, go search DEFINES/access.dm
 
 /datum/outfit/job/vault
 	gloves = /obj/item/pda
-
+/*
 /datum/outfit/job/vault/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -400,4 +400,4 @@ Vault Engineer
 	ADD_TRAIT(R, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	R.apply_pref_name("human", M.client)
 	R.gender = NEUTER
-	R.forceMove(pick(GLOB.special_borg_start))
+	R.forceMove(pick(GLOB.special_borg_start))*/

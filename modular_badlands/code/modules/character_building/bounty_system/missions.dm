@@ -22,7 +22,7 @@
 
 	var/employer_icon = "employer_00.png"
 
-/datum/bounty_quest/proc/ItsATarget(var/target)
+/datum/bounty_quest/proc/ItsATarget(target)
 	for(var/target_type in target_items)
 		if(istype(target, target_type))
 			return 1

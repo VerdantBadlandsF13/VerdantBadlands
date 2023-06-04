@@ -75,7 +75,7 @@
 		active_quests += GetRandomQuest()
 
 /* Destroy all active quests. If create_new = 1, will generate new quests */
-/obj/machinery/bounty_machine/proc/ClearActiveQuests(var/create_new = 0)
+/obj/machinery/bounty_machine/proc/ClearActiveQuests(create_new = 0)
 	for(var/Qst in active_quests)
 		del Qst
 	active_quests.Cut()
@@ -83,7 +83,7 @@
 		UpdateActiveQuests()
 
 /* Check quest objectives and complete it. */
-/obj/machinery/bounty_machine/proc/ProcessQuestComplete(var/quest_index, var/mob/user)
+/obj/machinery/bounty_machine/proc/ProcessQuestComplete(quest_index, mob/user)
 	quest_index = text2num(quest_index)
 	if(quest_index > active_quests.len)
 		return 0
@@ -143,7 +143,7 @@
 */
 
 /* Find and assign firs pod in distance */
-/obj/machinery/bounty_machine/proc/FindPod(var/distance = 1)
+/obj/machinery/bounty_machine/proc/FindPod(distance = 1)
 	for(var/Obj in view(distance, src))
 		if(istype(Obj, /obj/machinery/bounty_pod))
 			connected_pod = Obj

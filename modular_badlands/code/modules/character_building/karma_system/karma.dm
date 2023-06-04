@@ -20,7 +20,7 @@
 	var/db_query/query = dbcon.NewQuery("UPDATE `player` SET `karma` = [karma] WHERE ckey = '[ckey]'")
 	query.Execute()
 */
-/mob/living/carbon/human/proc/karmaAdd(var/value, var/sound = TRUE)
+/mob/living/carbon/human/proc/karmaAdd(value, sound = TRUE)
 	if(!karma)
 		karmaGet()
 

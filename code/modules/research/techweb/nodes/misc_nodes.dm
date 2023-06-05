@@ -24,14 +24,6 @@
 	design_ids = list("mech_generator")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 
-/datum/techweb_node/adv_plasma
-	id = "adv_plasma"
-	display_name = "Advanced Plasma Research"
-	description = "Research on how to fully exploit the power of plasma."
-	prereq_ids = list("basic_plasma")
-	design_ids = list("mech_plasma_cutter")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
-
 /////////////////////////EMP tech/////////////////////////
 /datum/techweb_node/emp_basic //EMP tech for some reason
 	id = "emp_basic"

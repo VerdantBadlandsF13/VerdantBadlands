@@ -107,7 +107,7 @@
 	display_name = "Medical Exosuit Equipment"
 	description = "Tools for high level mech suits"
 	prereq_ids = list("adv_biotech")
-	design_ids = list("mech_sleeper", "mech_syringe_gun", "mech_medi_beam")
+	design_ids = list("mech_sleeper", "mech_syringe_gun")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 
 /datum/techweb_node/mech_modules
@@ -168,30 +168,6 @@
 	design_ids = list("mech_tesla")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/mech_laser
-	id = "mech_laser"
-	display_name = "Exosuit Weapon (CH-PS \"Immolator\" Laser)"
-	description = "A basic piece of mech weaponry"
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("mech_laser")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
-/datum/techweb_node/mech_laser_heavy
-	id = "mech_laser_heavy"
-	display_name = "Exosuit Weapon (CH-LC \"Solaris\" Laser Cannon)"
-	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("mech_laser_heavy")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
-/datum/techweb_node/mech_pulse_rifle
-	id = "mech_pulse_rifle"
-	display_name = "eZ-13 MK2 heavy pulse rifle"
-	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("mech_pulse_rifle")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-
 /datum/techweb_node/mech_grenade_launcher
 	id = "mech_grenade_launcher"
 	display_name = "Exosuit Weapon (SGL-6 Grenade Launcher)"
@@ -225,22 +201,7 @@
 	design_ids = list("clusterbang_launcher", "clusterbang_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
-/datum/techweb_node/mech_teleporter
-	id = "mech_teleporter"
-	display_name = "Exosuit Module (Teleporter Module)"
-	description = "An advanced piece of mech Equipment"
-	prereq_ids = list("adv_bluespace")
-	design_ids = list("mech_teleporter")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-/*
-/datum/techweb_node/mech_wormhole_gen
-	id = "mech_wormhole_gen"
-	display_name = "Exosuit Module (Localized Wormhole Generator)"
-	description = "An advanced piece of mech weaponry"
-	prereq_ids = list("adv_bluespace")
-	design_ids = list("mech_wormhole_gen")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_taser
 	id = "mech_taser"
 	display_name =  "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"

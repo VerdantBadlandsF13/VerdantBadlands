@@ -191,13 +191,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/hide_ckey = FALSE //pref for hiding if your ckey shows round-end or not
 
-	var/special_s = 1
-	var/special_p = 1
-	var/special_e = 1
-	var/special_c = 1
-	var/special_i = 1
-	var/special_a = 1
-	var/special_l = 1
+	var/special_s = 5
+	var/special_p = 5
+	var/special_e = 5
+	var/special_c = 5
+	var/special_i = 5
+	var/special_a = 5
+	var/special_l = 5
 
 	/// Associative list: matchmaking_prefs[/datum/matchmaking_pref subtype] -> number of desired matches
 	var/list/matchmaking_prefs = list()
@@ -1396,7 +1396,7 @@ Records disabled until a use for them is found
 
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>Note: SPECIAL is essential to gameplay.</center><br>"
-	dat += "<center>[total] out of 25 possible</center><br>"
+	dat += "<center>[total] out of 40 possible</center><br>"
 
 	dat += "<BR>"
 	dat += "<BR>"
@@ -1458,8 +1458,8 @@ Records disabled until a use for them is found
 	dat += "<BR>"
 	dat += "<BR>"
 
-	if (total>25)
-		dat += "<center>Maximum exceeded, please change until your total is at or below 25<center>"
+	if (total>40)
+		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
 	else
 		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 

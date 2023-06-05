@@ -3,13 +3,13 @@
 //////////////////////////////////////////////////////
 /mob
 	var/flavor_text = ""
-	var/special_s = 1
-	var/special_p = 1
-	var/special_e = 1
-	var/special_c = 1
-	var/special_i = 1
-	var/special_a = 1
-	var/special_l = 1
+	var/special_s = 5
+	var/special_p = 5
+	var/special_e = 5
+	var/special_c = 5
+	var/special_i = 5
+	var/special_a = 5
+	var/special_l = 5
 
 /mob/proc/get_top_level_mob()
 	if(istype(src.loc,/mob)&&src.loc!=src)

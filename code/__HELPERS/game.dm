@@ -550,7 +550,7 @@
 		[character.real_name]</span> ([rank]) has entered the wasteland at \
 		<span class='name'>[A.name]</span>.</span>"
 
-	if(character.special_s + character.special_p +  character.special_e +  character.special_c +  character.special_i +  character.special_a +  character.special_l > 25)
+	if(character.special_s + character.special_p +  character.special_e +  character.special_c +  character.special_i +  character.special_a +  character.special_l > 40)
 		message_admins("[key_name_admin(character.ckey)] has managed to bypass the special cap. They've been smited.")
 		to_chat(world, "<h2><span class='revenminor'>OOC: A sinner has been punished. Rejoice.</span></h2>")
 		character.adjustCloneLoss(80)

@@ -403,12 +403,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"ch" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "ci" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -1264,12 +1258,6 @@
 /obj/structure/destructible/hobo_barrel,
 /turf/open/transparent/openspace,
 /area/f13/village)
-"gL" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "gO" = (
 /obj/structure/displaycase,
 /obj/item/stack/sheet/mineral/silver{
@@ -2055,7 +2043,6 @@
 /obj/item/crafting/fuse,
 /obj/item/crafting/fuse,
 /obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
@@ -3105,11 +3092,6 @@
 "pP" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/village)
-"pS" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel,
-/area/f13/village)
 "pU" = (
 /obj/structure/table/booth,
 /turf/open/floor/wood/wood_wide{
@@ -3135,7 +3117,6 @@
 "pX" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
@@ -3439,7 +3420,6 @@
 /area/f13/building)
 "rC" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4490,7 +4470,6 @@
 "wZ" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/stack/sticky_tape/surgical,
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13{
@@ -6540,12 +6519,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
-"HW" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red,
-/area/f13/village)
 "HX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood/house,
@@ -9840,7 +9813,6 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/village)
 "YZ" = (
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_wide{
 	icon_state = "wide-broken2"
@@ -57263,7 +57235,7 @@ pP
 RY
 wL
 zd
-ch
+CB
 Si
 tb
 CB
@@ -57272,7 +57244,7 @@ rC
 hw
 BH
 Ri
-pS
+Kg
 Kg
 RF
 pP
@@ -58176,7 +58148,7 @@ hD
 qC
 Ny
 bs
-HW
+gY
 gY
 gY
 hD
@@ -58645,7 +58617,7 @@ XX
 Wq
 Ny
 Wq
-gL
+Wq
 pP
 PW
 PW
@@ -59096,7 +59068,7 @@ Kg
 Kg
 Wq
 gY
-HW
+gY
 Wq
 pP
 Wq
@@ -59556,7 +59528,7 @@ gY
 Ys
 Wq
 BH
-gL
+Wq
 Wq
 Ny
 Wq

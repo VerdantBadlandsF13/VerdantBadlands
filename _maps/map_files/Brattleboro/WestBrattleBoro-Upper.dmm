@@ -272,11 +272,6 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland)
-"bW" = (
-/obj/structure/table/wood/junk,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "bX" = (
 /obj/item/reagent_containers/food/snacks/spaghetti{
 	pixel_y = 3;
@@ -342,7 +337,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
@@ -549,10 +543,6 @@
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
-/area/f13/building)
-"dB" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/carpet/royalblack,
 /area/f13/building)
 "dE" = (
 /obj/structure/railing{
@@ -913,13 +903,6 @@
 /area/f13/building)
 "gd" = (
 /obj/structure/barricade/wooden,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
-	},
-/area/f13/building)
-"ge" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -2071,7 +2054,6 @@
 	},
 /area/f13/wasteland)
 "nj" = (
-/obj/effect/spawner/lootdrop/trash,
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
@@ -2615,13 +2597,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"rh" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
-	},
-/area/f13/wasteland)
 "rj" = (
 /obj/item/cigbutt,
 /obj/structure/obstacle/barbedwire/end{
@@ -2862,20 +2837,12 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
-"sB" = (
-/obj/structure/table/booth,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
-	},
-/area/f13/wasteland)
 "sD" = (
 /obj/machinery/light,
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "sJ" = (
 /obj/structure/closet/cabinet,
-/obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -4074,10 +4041,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"zJ" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/carpet/black,
-/area/f13/building)
 "zK" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -4112,12 +4075,6 @@
 /turf/open/floor/f13{
 	icon_state = "rare";
 	dir = 8
-	},
-/area/f13/building)
-"zV" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
 	},
 /area/f13/building)
 "zW" = (
@@ -4325,14 +4282,6 @@
 "Bh" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/f13/wood,
-/area/f13/building)
-"Bk" = (
-/obj/structure/railing{
-	dir = 4;
-	color = "#A47449"
-	},
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/carpet/black,
 /area/f13/building)
 "Bl" = (
 /obj/structure/chair/sofa/corp/left{
@@ -4823,12 +4772,6 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
-"ED" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
-	},
-/area/f13/wasteland)
 "EF" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
@@ -4845,12 +4788,6 @@
 /obj/structure/decoration/rag,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"EL" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft0"
-	},
-/area/f13/wasteland)
 "EN" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4945,7 +4882,6 @@
 "Fj" = (
 /obj/item/cultivator,
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
 "Fk" = (
@@ -5449,12 +5385,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"HX" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom0"
-	},
-/area/f13/wasteland)
 "HZ" = (
 /obj/structure/railing{
 	dir = 1;
@@ -5528,10 +5458,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
 /area/f13/building)
-"Iq" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
 "Is" = (
 /obj/structure/dresser,
 /turf/open/floor/f13/wood{
@@ -7079,7 +7005,6 @@
 /area/f13/wasteland)
 "QZ" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/food,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -7723,12 +7648,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/building)
-"UL" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaltopbordertop0"
-	},
-/area/f13/wasteland)
 "UM" = (
 /obj/structure/window/fulltile/wood_window,
 /turf/open/floor/f13/wood{
@@ -8103,10 +8022,6 @@
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/roof,
-/area/f13/wasteland)
-"WR" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "WS" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
@@ -18056,7 +17971,7 @@ Oo
 yD
 VE
 VE
-ge
+VE
 wr
 DT
 Kg
@@ -18567,7 +18482,7 @@ Kg
 Kg
 rU
 ih
-ge
+VE
 yD
 yD
 VE
@@ -31894,7 +31809,7 @@ sq
 jq
 sq
 jq
-Iq
+jq
 jq
 jq
 Kg
@@ -32404,7 +32319,7 @@ Kg
 Kg
 Kg
 zQ
-Iq
+jq
 jq
 iW
 jq
@@ -32923,7 +32838,7 @@ jq
 jq
 jq
 pV
-Iq
+jq
 jq
 Kg
 Kg
@@ -33435,7 +33350,7 @@ Kg
 zQ
 jq
 jq
-Iq
+jq
 jq
 jq
 zQ
@@ -34438,7 +34353,7 @@ Kg
 zQ
 zQ
 zQ
-Iq
+jq
 zQ
 Kg
 Kg
@@ -34994,7 +34909,7 @@ MR
 QZ
 vm
 vm
-Iq
+jq
 jq
 jq
 jq
@@ -35206,7 +35121,7 @@ Kg
 Kg
 Kg
 Kg
-Iq
+jq
 jq
 jq
 jq
@@ -35983,7 +35898,7 @@ Dr
 AN
 Uk
 jq
-Iq
+jq
 jq
 Kg
 Kg
@@ -36023,7 +35938,7 @@ tz
 tz
 tz
 jq
-Iq
+jq
 jq
 jq
 jq
@@ -36766,7 +36681,7 @@ jq
 jq
 jq
 zQ
-Iq
+jq
 jq
 Kg
 Kg
@@ -36797,7 +36712,7 @@ jq
 jq
 jq
 jq
-Iq
+jq
 Kg
 Kg
 Kg
@@ -37005,11 +36920,11 @@ Kg
 Kg
 Kg
 Kg
-Iq
 jq
 jq
 jq
-Iq
+jq
+jq
 jq
 jq
 jq
@@ -37018,7 +36933,7 @@ vi
 vi
 jq
 jq
-Iq
+jq
 jq
 jq
 nR
@@ -37290,7 +37205,7 @@ RL
 QG
 jq
 jq
-Iq
+jq
 jq
 jq
 jq
@@ -37790,7 +37705,7 @@ Kg
 zQ
 jq
 jq
-Iq
+jq
 Qz
 Fi
 jq
@@ -38052,7 +37967,7 @@ jq
 jq
 jq
 jq
-Iq
+jq
 Kg
 Kg
 Kg
@@ -38829,7 +38744,7 @@ Kg
 Kg
 Kg
 vi
-ED
+vi
 Kg
 Kg
 Kg
@@ -40359,7 +40274,7 @@ Kg
 zQ
 jq
 jq
-Iq
+jq
 jq
 jq
 jq
@@ -41389,7 +41304,7 @@ jq
 zQ
 zQ
 zQ
-Iq
+jq
 jq
 jq
 jq
@@ -41634,7 +41549,7 @@ Kg
 jq
 jq
 jq
-Iq
+jq
 jq
 jq
 jq
@@ -41749,7 +41664,7 @@ us
 FI
 vi
 vi
-ED
+vi
 vi
 vi
 vi
@@ -42004,7 +41919,7 @@ Kg
 Kg
 us
 oT
-sB
+JM
 pU
 oT
 JM
@@ -42421,7 +42336,7 @@ xj
 jq
 jq
 jq
-Iq
+jq
 jq
 Kg
 Kg
@@ -42664,7 +42579,7 @@ jq
 jq
 jq
 jq
-Iq
+jq
 Kg
 Kg
 Kg
@@ -42779,7 +42694,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 vi
 vi
 vi
@@ -43039,7 +42954,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 vi
 yo
 Kg
@@ -43173,7 +43088,7 @@ Kg
 Kg
 Kg
 Kg
-Iq
+jq
 jq
 jq
 jq
@@ -43285,7 +43200,7 @@ Kg
 Kg
 ER
 go
-UL
+ib
 uX
 us
 hs
@@ -43691,7 +43606,7 @@ zQ
 RL
 jq
 jq
-Iq
+jq
 zQ
 Kg
 Kg
@@ -43810,7 +43725,7 @@ Pb
 Pb
 Pb
 th
-Bk
+th
 Pb
 xf
 Kg
@@ -44063,7 +43978,7 @@ Cs
 Cs
 Ff
 yV
-zJ
+Pb
 Pb
 Gj
 FA
@@ -44314,7 +44229,7 @@ Kg
 ER
 go
 IH
-WR
+IH
 IH
 IH
 IH
@@ -44574,7 +44489,7 @@ KG
 Fz
 Fz
 Fz
-EL
+Fz
 Ff
 yV
 Pb
@@ -45093,7 +45008,7 @@ xf
 xV
 Ap
 qe
-zJ
+Pb
 Pb
 Pb
 ey
@@ -45597,7 +45512,7 @@ Kg
 Kg
 Kg
 ER
-HX
+go
 ib
 uX
 us
@@ -45609,7 +45524,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 lN
 JG
 Kg
@@ -46003,7 +45918,7 @@ Kg
 jq
 jq
 jq
-Iq
+jq
 zQ
 Kg
 Kg
@@ -46118,7 +46033,7 @@ us
 Vl
 vi
 vi
-rh
+AF
 vi
 vi
 vi
@@ -46272,7 +46187,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 vi
 Ts
 Kg
@@ -46634,7 +46549,7 @@ vi
 vi
 AF
 vi
-ED
+vi
 AT
 xd
 vi
@@ -46773,7 +46688,7 @@ Kg
 Kg
 jq
 tA
-bW
+mh
 jq
 jq
 jq
@@ -46783,7 +46698,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 vi
 vi
 vi
@@ -46893,7 +46808,7 @@ vi
 vi
 vi
 JM
-sB
+JM
 vi
 UI
 hH
@@ -47033,7 +46948,7 @@ sw
 mh
 jq
 gF
-Iq
+jq
 jq
 zQ
 Kg
@@ -47558,7 +47473,7 @@ vi
 vi
 vi
 vi
-ED
+vi
 Ts
 Kg
 Kg
@@ -47799,10 +47714,10 @@ Kg
 Kg
 Kg
 Kg
-Iq
 jq
 jq
-Iq
+jq
+jq
 jq
 Kg
 Kg
@@ -61051,7 +60966,7 @@ ld
 vm
 vm
 ld
-zV
+vm
 vm
 gL
 gL
@@ -61305,7 +61220,7 @@ Kg
 fX
 EO
 vm
-zV
+vm
 vm
 vm
 vm
@@ -61818,7 +61733,7 @@ jq
 Kg
 fX
 qB
-dB
+PQ
 PQ
 vm
 DT
@@ -62077,10 +61992,10 @@ fX
 KT
 VL
 Sl
-zV
+vm
 EC
 vm
-zV
+vm
 vm
 DT
 gL

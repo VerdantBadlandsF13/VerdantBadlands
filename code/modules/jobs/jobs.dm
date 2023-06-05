@@ -1,18 +1,18 @@
 GLOBAL_LIST_INIT(nonhuman_positions, list(
 	"AI",
-	"Cyborg",
-	"Followers Robot",
+	"Vault-Tec Robot",
 	ROLE_PAI,
 	))
 
 GLOBAL_LIST_INIT(command_positions, list(
+	"Vault-Tec Overseer",
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
-	"Mr. Handy"))
+	"Vault-Tec Robot"))
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Commander",
@@ -30,17 +30,23 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Foreman",
 	"Lumberjack",
 
-	"Cyborg",
+	"Vault-Tec Overseer",
+	"Vault-Tec Security",
+	"Vault-Tec Doctor",
+	"Vault-Tec Scientist",
+	"Vault-Tec Engineer",
+	"Vault-Tec Robot",
+	"Vault Dweller",
 	))
 
 GLOBAL_LIST_INIT(vault_positions, list(
-	"Overseer",
-	"Chief of Security",
-	"Vault-tec Doctor",
-	"Vault-tec Scientist",
-	"Vault-tec Security",
-	"Vault-tec Engineer",
-	"Cyborg",
+	"Vault-Tec OverseerOverseer",
+	"Vault-Tec Security",
+	"Vault-Tec Doctor",
+	"Vault-Tec Scientist",
+	"Vault-Tec Engineer",
+	"Vault-Tec Robot",
+	"Vault Dweller",
 	))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
@@ -49,11 +55,10 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
-	"Chief of Security",
 	))
 
 GLOBAL_LIST_INIT(silicon_positions, list(
-	"Mr. Handy",
+	"Vault-Tec Robot",
 	))
 
 GLOBAL_LIST_INIT(gmb_positions, list(
@@ -82,7 +87,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
 	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
 	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),
-	EXP_TYPE_VLT = list("jobs" = vault_positions, "color" = "#7398c4"),
+	EXP_TYPE_VLT = list("jobs" = vault_positions, "color" = "#668959"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	))
 

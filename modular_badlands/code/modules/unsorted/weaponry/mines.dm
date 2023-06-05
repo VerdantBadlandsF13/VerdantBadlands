@@ -48,8 +48,6 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 			p.add_fingerprint(user)
 
 /obj/item/grenade/f13/mine/proc/triggermine(mob/victim)
-	if(!armed)
-		return
 	if(triggered)
 		return
 	visible_message("<span class='danger'>[victim] sets off [icon2html(src, viewers(src))] [src]!</span>")
@@ -65,6 +63,8 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 
 /obj/item/grenade/f13/mine/proc/on_entered(datum/source)
 	SIGNAL_HANDLER
+	if(!armed)
+		return
 	if(triggered || !isturf(loc) || !isliving(usr) || isstructure(usr) || isnottriggermine(usr))
 		return
 

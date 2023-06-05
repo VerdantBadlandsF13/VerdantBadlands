@@ -155,6 +155,9 @@ ATTACHMENTS
 	var/jam_fixing = FALSE// Is someone unjamming me?
 	var/jam_fixtime = 100// How long do I take to unjam?
 
+	var/heavy_weapon = FALSE// Does this weapon require high strength to use?
+	var/special_weapon = FALSE// Does this weapon require high intelligence to use?
+
 /obj/item/gun/AltClick(mob/user)
 	if(jammed)
 		if(jam_fixing)
@@ -398,10 +401,15 @@ ATTACHMENTS
 		to_chat(user, "<span class='userdanger'>You need both hands free to fire \the [src]!</span>")
 		return
 
-	if(user.special_s<2)
-		to_chat(user, "<span class='userdanger'>Try as you might, you can't pull the trigger! <br>\
-		You're too weak!</span>")
-		return
+	if(heavy_weapon == TRUE)
+		if(user.special_s <= 5)
+			to_chat(user, "<span class='userdanger'>This weapon is far too unwieldy for someone of your build!</span>")
+			return
+
+	if(special_weapon == TRUE)
+		if(user.special_i <= 5)
+			to_chat(user, "<span class='userdanger'>This weapon is far too advanced for someone like you!</span>")
+			return
 
 	if(istype(src, /obj/item/gun/energy) && user.special_i <= 3)
 		user.dropItemToGround(src, TRUE)
@@ -506,12 +514,12 @@ ATTACHMENTS
 				if(can_jam)
 					jammed = TRUE
 
-	if(user.special_l < 3)
+	if(user.special_l <= 5)
 		if(prob(2))
 			if(can_jam)
 				jammed = TRUE
 
-	if(user.special_s<4)
+	if(user.special_s <= 5)
 		bonus_spread += 20
 
 	if(on_cooldown())

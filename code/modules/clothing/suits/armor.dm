@@ -22,7 +22,7 @@
 	var/melee_block_threshold = null
 	var/dmg_block_threshold = null
 
-	var/durability_threshold = 0
+	var/	durability_threshold = 5
 	repair_kit = /obj/item/repair_kit/arm_repair_kit
 
 /obj/item/clothing/suit/armored/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
@@ -71,7 +71,7 @@
 	. = ..()
 	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
 	if((durability_threshold <= 0) && round_armor > 30)// Weak armor, meh.
-		var/tier_ar = round(round_armor / 10)// Tier 7 would be 200/100 = 20, Tier 11 = 40
+		var/tier_ar = round(round_armor / 10)
 		durability_threshold = tier_ar
 
 // Metal- Melee, Laser Good, Ballistics Moderate, Energy, Explosion bad
@@ -103,7 +103,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	slowdown = 0.05
-	durability_threshold = 5
 	armor = list("tier" = 0.5)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/shield)
 
@@ -113,7 +112,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	slowdown = 0.1
-	durability_threshold = 10
 	armor = list("tier" = 1)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/shield)
 	strip_delay = 40
@@ -124,7 +122,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	slowdown = 0.15
-	durability_threshold = 15
 	armor = list("tier" = 2)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/twohanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
 	strip_delay = 50

@@ -1396,7 +1396,7 @@ Records disabled until a use for them is found
 
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>Note: SPECIAL is essential to gameplay.</center><br>"
-	dat += "<center>[total] out of 24 possible</center><br>"
+	dat += "<center>[total] out of 25 possible</center><br>"
 
 	dat += "<BR>"
 	dat += "<BR>"
@@ -1458,8 +1458,8 @@ Records disabled until a use for them is found
 	dat += "<BR>"
 	dat += "<BR>"
 
-	if (total>24)
-		dat += "<center>Maximum exceeded, please change until your total is at or below 24<center>"
+	if (total>25)
+		dat += "<center>Maximum exceeded, please change until your total is at or below 25<center>"
 	else
 		dat += "<center><a href='?_src_=prefs;preference=special;task=close'>Done</a></center>"
 
@@ -1639,45 +1639,45 @@ Records disabled until a use for them is found
 				ask_for_custom_name(user,href_list["preference"])
 			switch(href_list["preference"])
 				if("special_s")
-					var/new_point = input(user, "Choose Amount(1-9)", "Strength") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Strength") as num|null
 					if(new_point)
-						special_s = max(min(round(text2num(new_point)), 9),1)
+						special_s = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_p")
-					var/new_point = input(user, "Choose Amount(1-9)", "Perception") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Perception") as num|null
 					if(new_point)
-						special_p = max(min(round(text2num(new_point)), 9),1)
+						special_p = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_e")
-					var/new_point = input(user, "Choose Amount(1-9)", "Endurance") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Endurance") as num|null
 					if(new_point)
-						special_e = max(min(round(text2num(new_point)), 9),1)
+						special_e = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_c")
-					var/new_point = input(user, "Choose Amount(1-9)", "Charisma") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Charisma") as num|null
 					if(new_point)
-						special_c = max(min(round(text2num(new_point)), 9),1)
+						special_c = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_i")
-					var/new_point = input(user, "Choose Amount(1-9)", "Intelligence") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Intelligence") as num|null
 					if(new_point)
-						special_i = max(min(round(text2num(new_point)), 9),1)
+						special_i = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_a")
-					var/new_point = input(user, "Choose Amount(1-9)", "Agility") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Agility") as num|null
 					if(new_point)
-						special_a = max(min(round(text2num(new_point)), 9),1)
+						special_a = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_l")
-					var/new_point = input(user, "Choose Amount(1-9)", "Luck") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Luck") as num|null
 					if(new_point)
-						special_l = max(min(round(text2num(new_point)), 9),1)
+						special_l = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("ghostform")

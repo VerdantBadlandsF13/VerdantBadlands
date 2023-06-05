@@ -9,9 +9,7 @@
 #define CASH_CAP_VENDOR 1
 
 /* exchange rates X * CAP*/
-#define CASH_AUR_VENDOR 100 /* 100 caps to 1 AUR */
-#define CASH_DEN_VENDOR 4 /* 4 caps to 1 DEN */
-#define CASH_NCR_VENDOR 0.4 /* $100 to 40 caps */
+#define CASH_TOKEN_VENDOR 100 /* 100 caps to 1 AUR */
 
 // Total number of caps value spent in the Trading Protectrons Vendors
 GLOBAL_VAR_INIT(vendor_cash, 0)
@@ -728,7 +726,6 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("E.N.H.A.N.C.E. Your Pip-boy: Signaler",	/obj/item/cartridge/signal,								50),
 		)
 
-
 /obj/machinery/mineral/wasteland_vendor/special
 	name = "Wasteland Vending Machine - Special"
 	icon_state = "liberationstation_idle"
@@ -853,9 +850,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Currency conversion rates:</b><br>"
 	dat += "1 Bottle cap = [CASH_CAP_VENDOR] bottle caps value <br>"
-	dat += "1 NCR dollar = [CASH_NCR_VENDOR] bottle caps value <br>"
-	dat += "1 Denarius = [CASH_DEN_VENDOR] bottle caps value <br>"
-	dat += "1 Aureus = [CASH_AUR_VENDOR] bottle caps value <br>"
+	dat += "1 Token = [CASH_TOKEN_VENDOR] bottle caps value <br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"

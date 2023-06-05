@@ -899,7 +899,7 @@
 	if((user.perks.have(/datum/perk/thief)))
 		strip_silence = TRUE
 */
-	if(src.special_a > 8)
+	if(src.special_a >= 8)
 		strip_silence = TRUE
 
 	if(!strip_silence)

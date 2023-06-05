@@ -1232,6 +1232,12 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	return
 
 /datum/species/proc/after_equip_job(datum/job/J, mob/living/carbon/human/H)
+	if(H.special_i <= 3)
+		H.grant_language(/datum/language/aphasia)
+		H.remove_language(/datum/language/common)
+	if(H.special_i >= 8)
+		to_chat(H,"You can understand idiots!")
+		H.grant_language(/datum/language/aphasia)
 	H.update_mutant_bodyparts()
 
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)

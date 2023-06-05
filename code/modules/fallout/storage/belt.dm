@@ -208,56 +208,11 @@
 	icon_state = "explorer2"
 	item_state = "explorer2"
 
-/obj/item/storage/belt/military/assault/legion
-	name = "legionnaire marching belt"
-	desc = "Sturdy leather belt with a red decorative sash."
-	icon = 'icons/fallout/clothing/belts.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
-	icon_state = "belt_legion"
-	item_state = "belt_legion"
-
 /obj/item/storage/belt/military/assault/enclave
 	name = "old style army belt"
 	desc = "Prewar army utility belt design."
 	icon_state = "enclave_belt"
 	item_state = "enclave_belt"
-
-/obj/item/storage/belt/military/assault/ncr
-	name = "NCR patrol belt"
-	desc = "A standard issue robust duty belt for the NCR."
-	icon_state = "ncr_belt"
-	item_state = "ncr_belt"
-
-/obj/item/storage/belt/military/assault/ncr/engineer/PopulateContents()
-	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
-	new /obj/item/weldingtool(src)
-	new /obj/item/crowbar(src)
-	new /obj/item/wirecutters(src)
-	new /obj/item/multitool(src)
-	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
-
-/obj/item/storage/belt/military/reconbandolier
-	name = "NCR recon ranger bandolier"
-	desc = "A belt with many pockets, now at an angle."
-	icon_state = "reconbandolier"
-	item_state = "reconbandolier"
-
-/obj/item/storage/belt/military/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/storage/belt/military/NCR_Bandolier
-	name = "NCR bandolier"
-	desc = "A standard issue NCR bandolier."
-	icon_state = "ncr_bandolier"
-	item_state = "ncr_bandolier"
-
-/obj/item/storage/belt/military/NCR_Bandolier/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 7
 
 //Regular Quiver
 /obj/item/storage/belt/tribe_quiver

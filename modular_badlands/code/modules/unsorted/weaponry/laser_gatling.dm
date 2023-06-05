@@ -30,6 +30,7 @@ Proper GL below.
 	var/overheat_max = 80
 	var/heat_stage = 0
 	var/heat_diffusion = 2
+	special_weapon = TRUE
 
 /obj/item/gun/energy/minigunlas_individual/Initialize()
 	. = ..()
@@ -193,6 +194,7 @@ Old GL below.
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/gatling)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	item_flags = NEEDS_PERMIT | SLOWS_WHILE_IN_HAND
+	special_weapon = TRUE
 	var/obj/item/minigunlaspack/ammo_pack
 
 /obj/item/gun/energy/minigunlas/Initialize()

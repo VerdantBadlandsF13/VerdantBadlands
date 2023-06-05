@@ -40,7 +40,7 @@
 
 
 /obj/item/book/granter/attack_self(mob/user)
-	if(user.special_i<5&&!istype(src,/obj/item/book/granter/trait/selection))//SPECIAL Integration
+	if(user.special_i <= 5&&!istype(src,/obj/item/book/granter/trait/selection))//SPECIAL Integration
 		to_chat(user, "<span class='warning'>Try as you might, you're far from being able to understand this.</span>")
 		return
 	if(reading)
@@ -610,7 +610,7 @@
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "guide to minelaying"
 	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/explosive/shrapnelmine, /datum/crafting_recipe/explosive/explomine, /datum/crafting_recipe/explosive/stingmine, /datum/crafting_recipe/explosive/pulsemine, /datum/crafting_recipe/explosive/stunmine)
+	crafting_recipe_types = list(/datum/crafting_recipe/explosive/explomine, /datum/crafting_recipe/explosive/bottlecap_mine)
 
 /obj/item/book/granter/trait/tagger
 	name = "Picket Fences"

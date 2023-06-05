@@ -46,13 +46,6 @@
 	radio_key = /obj/item/encryptionkey/syndicate
 	subspace_transmission = TRUE
 
-/obj/item/implant/radio/slime/ncr
-	name = "super mutant radio"
-	icon = 'icons/obj/surgery.dmi'
-	icon_state = "adamantine_resonator"
-	radio_key = /obj/item/encryptionkey/headset_ncr
-	subspace_transmission = TRUE
-
 /obj/item/implant/radio/slime
 	name = "super mutant radio"
 	icon = 'icons/obj/surgery.dmi'

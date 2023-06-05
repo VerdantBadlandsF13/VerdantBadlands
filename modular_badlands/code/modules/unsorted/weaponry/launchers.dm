@@ -94,6 +94,7 @@ Properly dangerous.
 	scope_name = "rangefinder"
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "mini nuke"
+	heavy_weapon = TRUE
 
 /obj/item/gun/ballistic/fatman/handle_atom_del(atom/A)
 	if(A == chambered)

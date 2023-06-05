@@ -10,6 +10,15 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	armor = list("tier" = 0)
 
+// VFE Kevlar
+/obj/item/clothing/suit/armored/f13/light/vfe_vest
+	name = "Vault Security vest"
+	desc = "A large bulletproof vest with ballistic plates and micro ceramic inserts. <br>\
+	Issued exclusively to Vault Security."
+	icon_state = "vest_large"
+	item_state = "vest_large"
+	armor = list("tier" = 4, "melee" = 35, "bullet" = 45, "laser" = 10, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = -5)
+
 /////////////////////
 // DUSTERS & COATS //
 /////////////////////

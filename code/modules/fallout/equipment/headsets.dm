@@ -8,28 +8,6 @@
 	freerange = TRUE
 	freqlock = TRUE
 
-/obj/item/radio/headset/headset_vault_hos
-	name = "\proper the chief of security's radio headset"
-	desc = "The headset of the man in charge of keeping order and protecting the vault.\nChannels are as follows: :v - vault, :c - command, :s - security."
-	icon_state = "com_headset"
-	keyslot = new /obj/item/encryptionkey/headset_vault_hos
-	frequency = FREQ_VAULT
-	freerange = TRUE
-	freqlock = TRUE
-
-/obj/item/radio/headset/headset_vault_hos/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_EARS))
-
-/obj/item/radio/headset/headset_vault_hos/alt
-	name = "\proper the head of security's bowman headset"
-	desc = "The headset of the man in charge of keeping order and protecting the station. Protects ears from flashbangs.\nTo access the security channel, use :s. For command, use :c. For vault, use :v"
-	icon_state = "com_headset_alt"
-	item_state = "com_headset_alt"
-	frequency = FREQ_VAULT
-	freerange = TRUE
-	freqlock = TRUE
-
 /obj/item/radio/headset/headset_vault
 	name = "\proper vault radio headset"
 	desc = "A vault-tec radio.\nChannels are as follows: :v - vault."
@@ -41,7 +19,7 @@
 /obj/item/radio/headset/headset_vaultsec
 	name = "security radio headset"
 	desc = "This is used by your elite security force.\nTo access the security channel, use :s. To access the vault channel, use :v."
-	icon_state = "sec_headset"
+	icon_state = "sec_headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
 	frequency = FREQ_VAULT
 	freerange = TRUE

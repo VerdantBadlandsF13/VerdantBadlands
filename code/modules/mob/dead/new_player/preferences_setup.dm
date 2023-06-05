@@ -32,7 +32,7 @@
 		if(istype(previewJob,/datum/job/ai))
 			parent.show_character_previews(image('icons/mob/ai.dmi', icon_state = resolve_ai_icon(preferred_ai_core_display), dir = SOUTH))
 			return
-		if(istype(previewJob,/datum/job/cyborg))
+		if(istype(previewJob,/datum/job/vault/f13borg))
 			parent.show_character_previews(image('icons/mob/robots.dmi', icon_state = "robot", dir = SOUTH))
 			return
 

@@ -7,7 +7,7 @@
 	connectable = FALSE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/obj/item/radio/radio
-	var/radio_key = /obj/item/encryptionkey/headset_enclave
+	var/radio_key = /obj/item/encryptionkey
 	var/channel = RADIO_CHANNEL_ENCLAVE
 
 /obj/machinery/computer/vertibird_console/Initialize(mapload, obj/item/circuitboard/C)

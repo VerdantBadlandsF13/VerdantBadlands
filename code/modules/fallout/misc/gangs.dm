@@ -52,7 +52,6 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/equipment/dynamite,
 
 		/datum/gang_item/equipment/stimpak,
-		/datum/gang_item/equipment/healingpowder,
 
 		/datum/gang_item/clothing/hat,
 		/datum/gang_item/clothing/glasses/sunglasses,

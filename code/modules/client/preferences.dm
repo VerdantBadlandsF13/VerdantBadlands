@@ -1395,7 +1395,7 @@ Records disabled until a use for them is found
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
 	dat += "<center><b>Allocate points</b></center>"
-	dat += "<center>Note: SPECIAL is essential to gameplay.</center><br>"
+	dat += "<div class='panel redborder'><center>Note: SPECIAL is essential to gameplay.</center></div><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 
 	dat += "<BR>"

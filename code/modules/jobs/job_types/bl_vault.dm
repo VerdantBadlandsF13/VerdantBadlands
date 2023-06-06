@@ -116,8 +116,8 @@ Medical Doctor
 /datum/job/vault/f13doctor
 	title = "Vault-Tec Doctor"
 	flag = F13VFEDOCTOR
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Overseer. You are tasked with ensuring the medical well-being of everyone in the Vault."
 
 	outfit = /datum/outfit/job/vault/f13doctor
@@ -129,9 +129,10 @@ Medical Doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/vault/f13doctor
 	chemwhiz = TRUE
+
 	id = /obj/item/card/id/vaultiecard
 	uniform = 		/obj/item/clothing/under/f13/vault
-	ears = 			/obj/item/radio/headset/headset_vault
+	ears = 			/obj/item/radio/headset/headset_vault/med
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	suit =			/obj/item/clothing/suit/toggle/labcoat
 	l_hand = 		/obj/item/storage/firstaid/regular
@@ -157,9 +158,10 @@ Scientist
 /datum/job/vault/f13vaultscientist
 	title = "Vault-Tec Scientist"
 	flag = F13VFESCIENTIST
-	total_positions = 0
-	spawn_positions = 0
-	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
+	total_positions = 2
+	spawn_positions = 2
+	description = "You answer directly to the Overseer.\
+	You are tasked with researching new technologies, conducting mining expeditions, and upgrading the machinery of the Vault."
 
 	outfit = /datum/outfit/job/vault/f13vaultscientist
 
@@ -173,7 +175,7 @@ Scientist
 
 	id = /obj/item/card/id/vaultiecard
 	uniform = 		/obj/item/clothing/under/f13/vault
-	ears = 			/obj/item/radio/headset/headset_vault
+	ears = 			/obj/item/radio/headset/headset_vault/sci
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	suit =			/obj/item/clothing/suit/toggle/labcoat
 	backpack = 		/obj/item/storage/backpack/science
@@ -194,8 +196,8 @@ Vault Engineer
 /datum/job/vault/f13vaultengineer
 	title = "Vault-Tec Engineer"
 	flag = F13VFEENGINEER
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
 
 	outfit = /datum/outfit/job/vault/f13vaultengineer
@@ -208,7 +210,7 @@ Vault Engineer
 	jobtype = /datum/job/vault/f13vaultengineer
 
 	id = /obj/item/card/id/vaultiecard
-	ears = 			/obj/item/radio/headset/headset_vault
+	ears = 			/obj/item/radio/headset/headset_vault/eng
 	uniform = 		/obj/item/clothing/under/f13/vault
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	shoes = 		/obj/item/clothing/shoes/sneakers/red

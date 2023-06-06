@@ -16,6 +16,15 @@
 	freerange = TRUE
 	freqlock = TRUE
 
+/obj/item/radio/headset/headset_vault/eng
+	keyslot = new /obj/item/encryptionkey/headset_vault_engineer
+
+/obj/item/radio/headset/headset_vault/med
+	keyslot = new /obj/item/encryptionkey/headset_vault_medical
+
+/obj/item/radio/headset/headset_vault/sci
+	keyslot = new /obj/item/encryptionkey/headset_vault_science
+
 /obj/item/radio/headset/headset_vaultsec
 	name = "security radio headset"
 	desc = "This is used by your elite security force.\nTo access the security channel, use :s. To access the vault channel, use :v."

@@ -124,9 +124,9 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_VFE				149	//general vault 58 access
 #define ACCESS_VFE_RESTRICT		150	//general vault 58 restricted access
 #define ACCESS_VFE_SECURITY		151	//general vault 58 security access
-#define ACCESS_VFE_MEDICAL		152	//general vault 58 security access
-#define ACCESS_VFE_ENGINEERING	153	//general vault 58 security access
-#define ACCESS_VFE_SCIENCE		154	//general vault 58 security access
+#define ACCESS_VFE_MEDICAL		152	//general vault 58 medical access
+#define ACCESS_VFE_ENGINEERING	153	//general vault 58 engineering access
+#define ACCESS_VFE_SCIENCE		154	//general vault 58 science access
 //END BL
 
 	//The Syndicate

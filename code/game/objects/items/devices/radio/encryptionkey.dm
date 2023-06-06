@@ -135,20 +135,38 @@
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_VAULT = 1)
 
+/obj/item/encryptionkey/headset_vault_engineer
+	name = "vault engineering radio encryption key"
+	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :e - engineering."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_ENGINEERING = 1)
+
+/obj/item/encryptionkey/headset_vault_science
+	name = "vault science radio encryption key"
+	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :n - science."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SCIENCE = 1)
+
+/obj/item/encryptionkey/headset_vault_medical
+	name = "vault medical radio encryption key"
+	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :m - medical."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_MEDICAL = 1)
+
 /obj/item/encryptionkey/headset_vault_security
 	name = "\proper the Security encryption key"
 	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :s - security"
 	icon_state = "sec_cypherkey"
-	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1)
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1)
 
 /obj/item/encryptionkey/headset_overseer
 	name = "\proper the Overseer's encryption key"
-	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :c - command, :s - security, :e - engineering, :m - medical, :n - science."
+	desc = "An encryption key for a radio headset.  Channels are as follows: :b - vault, :s - security, :e - engineering, :m - medical, :n - science."
 	icon_state = "cap_cypherkey"
-	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1)
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1)
 
 /obj/item/encryptionkey/zax
-	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_AI_PRIVATE = 1)
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_AI_PRIVATE = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1)
 
 /obj/item/encryptionkey/vfe_bot
-	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_AI_PRIVATE = 1)
+	channels = list(RADIO_CHANNEL_VAULT = 1, RADIO_CHANNEL_SECURITY = 1, RADIO_CHANNEL_AI_PRIVATE = 1, RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1)

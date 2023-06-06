@@ -1526,10 +1526,9 @@
 /area/f13/sewer)
 "hw" = (
 /obj/structure/stairs/north{
-	icon = 'icons/fallout/turfs/asphalt.dmi';
-	icon_state = "innermiddle"
+	alpha = 0
 	},
-/turf/closed/indestructible/rock,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "hx" = (
 /obj/effect/overlay/junk/oldpipes{
@@ -1938,8 +1937,7 @@
 /area/f13/sewer)
 "ju" = (
 /obj/structure/stairs/east{
-	icon = 'icons/fallout/turfs/asphalt.dmi';
-	icon_state = "innermiddle"
+	alpha = 0
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
@@ -7174,6 +7172,14 @@
 /obj/item/key/janitor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Ix" = (
+/obj/structure/stairs/east{
+	alpha = 0
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom0"
+	},
+/area/f13/tunnel)
 "Iz" = (
 /obj/effect/decal/cleanable/blood/gibs{
 	icon_state = "gibtorso"
@@ -7710,8 +7716,10 @@
 /area/f13/village)
 "Lw" = (
 /obj/structure/stairs/north{
-	icon = 'icons/fallout/turfs/asphalt.dmi';
-	icon_state = "innermiddle"
+	alpha = 0
+	},
+/obj/effect/decal/marking{
+	icon_state = "doublevertical"
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
@@ -25512,7 +25520,7 @@ Va
 OA
 Ko
 hw
-Lw
+hw
 DP
 DP
 DP
@@ -25969,7 +25977,7 @@ Va
 OA
 Ko
 hw
-Lw
+hw
 DP
 DP
 DP
@@ -26425,7 +26433,7 @@ Va
 Va
 OA
 Ko
-hw
+Lw
 Lw
 Up
 Up
@@ -26883,7 +26891,7 @@ Va
 OA
 Ko
 hw
-Lw
+hw
 DP
 DP
 DP
@@ -27340,7 +27348,7 @@ Va
 OA
 Ko
 hw
-Lw
+hw
 DP
 DP
 DP
@@ -62082,7 +62090,7 @@ OA
 Ko
 tc
 iK
-Jo
+Ix
 ju
 ju
 ju
@@ -62539,7 +62547,7 @@ OA
 Ko
 Ko
 Ko
-Jo
+Ix
 ju
 ju
 ju

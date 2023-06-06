@@ -5,7 +5,8 @@
 "ac" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_y = 205;
-	destination_x = 252
+	destination_x = 252;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "ad" = (
@@ -118,8 +119,9 @@
 /area/f13/caves)
 "aC" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 075;
-	destination_y = 212
+	destination_x = 228;
+	destination_y = 68;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "aD" = (
@@ -478,7 +480,8 @@
 "ck" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_y = 178;
-	destination_x = 228
+	destination_x = 228;
+	destination_z = 6
 	},
 /area/f13/vault/dormitory)
 "cm" = (
@@ -769,8 +772,9 @@
 /area/f13/vault/vents)
 "dj" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 075;
-	destination_y = 213
+	destination_x = 228;
+	destination_y = 69;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "dk" = (
@@ -1852,7 +1856,8 @@
 "hM" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 252;
-	destination_y = 206
+	destination_y = 206;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "hN" = (
@@ -2493,8 +2498,9 @@
 /area/f13/vault/vents)
 "kg" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 20;
-	destination_y = 194
+	destination_x = 173;
+	destination_y = 50;
+	destination_z = 6
 	},
 /area/f13/vault/science)
 "kh" = (
@@ -2690,8 +2696,9 @@
 /area/f13/building)
 "kY" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_y = 231;
-	destination_x = 014
+	destination_y = 87;
+	destination_x = 167;
+	destination_z = 6
 	},
 /area/f13/vault)
 "kZ" = (
@@ -2776,7 +2783,8 @@
 "lt" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 228;
-	destination_y = 180
+	destination_y = 180;
+	destination_z = 6
 	},
 /area/f13/vault/dormitory)
 "lw" = (
@@ -2944,8 +2952,9 @@
 /area/f13/caves)
 "lY" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 019;
-	destination_y = 194
+	destination_x = 172;
+	destination_y = 50;
+	destination_z = 6
 	},
 /area/f13/vault/science)
 "ma" = (
@@ -3107,7 +3116,8 @@
 "mG" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 228;
-	destination_y = 179
+	destination_y = 179;
+	destination_z = 6
 	},
 /area/f13/vault/dormitory)
 "mH" = (
@@ -3823,6 +3833,13 @@
 	dir = 10
 	},
 /area/f13/vault/garden)
+"pu" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 236;
+	destination_y = 141;
+	destination_z = 6
+	},
+/area/f13/vault/science/biology)
 "pw" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/terminal{
@@ -4268,7 +4285,11 @@
 	},
 /area/f13/tunnel)
 "re" = (
-/turf/closed/indestructible/f13/matrix/transition,
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 237;
+	destination_y = 141;
+	destination_z = 6
+	},
 /area/f13/vault/science/biology)
 "rf" = (
 /obj/structure/cable{
@@ -6036,8 +6057,9 @@
 /area/f13/vault/vents)
 "zb" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 014;
-	destination_y = 232
+	destination_x = 167;
+	destination_y = 88;
+	destination_z = 6
 	},
 /area/f13/vault)
 "zc" = (
@@ -7803,7 +7825,8 @@
 "GM" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_y = 204;
-	destination_x = 252
+	destination_x = 252;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "GN" = (
@@ -10400,8 +10423,9 @@
 /area/f13/tunnel)
 "Se" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 014;
-	destination_y = 233
+	destination_x = 167;
+	destination_y = 89;
+	destination_z = 6
 	},
 /area/f13/vault)
 "Sf" = (
@@ -11432,8 +11456,9 @@
 /area/f13/vault/atrium)
 "WD" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 075;
-	destination_y = 211
+	destination_x = 228;
+	destination_y = 67;
+	destination_z = 6
 	},
 /area/f13/vault/security)
 "WE" = (
@@ -56302,7 +56327,7 @@ RB
 RB
 RB
 ug
-re
+pu
 pC
 pC
 PE

@@ -250,16 +250,16 @@
 	if(density)
 		icon_state = "vault"
 	else
-		icon_state = "vault_open"
+		icon_state = "vaultopen"
 
 /obj/machinery/door/unpowered/securedoor/vfe/do_animate(animation)
 	switch(animation)
 		if("opening")
 			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_open.ogg',40,1)
-			flick("vault_opening", src)
+			flick("vaultopening", src)
 		if("closing")
 			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_close.ogg',40,1)
-			flick("vault_closing", src)
+			flick("vaultclosing", src)
 
 /obj/machinery/door/unpowered/securedoor/vfe/glass
 	name = "vault airlock"

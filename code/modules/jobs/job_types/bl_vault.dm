@@ -32,8 +32,8 @@ Overseer
 	title = "Vault-Tec Overseer"
 	flag = F13VFEOVERSEER
 	head_announce = list("Security")
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the leader of the Vault, and your word is law. \
 	Working with the Security team and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault."
 	supervisors = "Vault-Tec"
@@ -71,8 +71,8 @@ Security Officer
 /datum/job/vault/f13officer
 	title = "Vault-Tec Security"
 	flag = F13VFEOFFICER
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	description = "You answer directly to the Overseer. You are the first line of defense against civil unrest and outside intrusion. \
 	It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
 	exp_requirements = 60
@@ -231,8 +231,8 @@ Vault Dweller
 	flag = F13VFEDWELLER
 	department_flag = VAULT
 	department_head = list("Overseer")
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = -1
+	spawn_positions = -1
 	exp_requirements = 60
 	exp_type = EXP_TYPE_FALLOUT
 
@@ -249,8 +249,8 @@ Vault Dweller
 /datum/job/vault/f13borg
 	title = "Vault-Tec Robot"
 	flag = F13CYBORG
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are a Robotic unit assigned to Vault Fifty-Eight. \
 	As a Robot for Vault-Tec, you're bound to the orders of the assigned Overseer, Security and Dwellers, in that order for priority. \
 	Should the Overseer or Security declare something, you must follow it."

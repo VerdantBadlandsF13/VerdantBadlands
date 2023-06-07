@@ -80,3 +80,17 @@
 
 /obj/item/storage/box/large/custom_kit/transhumanism/proc/implant(player, obj/item/organ/I)
 	I.Insert(player, drop_if_replaced = FALSE)
+
+/datum/gear/donator/kits/appleplastic
+	name = "Slugger's Lootbox"
+	path = /obj/item/storage/box/large/custom_kit/appleplastic
+	ckeywhitelist = list("ApplePlastic")
+
+/obj/item/storage/box/large/custom_kit/appleplastic/PopulateContents()
+	new /obj/item/clothing/gloves/f13/baseball(src)
+	new /obj/item/twohanded/baseball/louisville(src)
+	new /obj/item/toy/tennis/baseball(src)
+	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
+	new /obj/item/gun/ballistic/automatic/pistol/pistol22(src)
+	new /obj/item/ammo_box/magazine/m22(src)
+	new /obj/item/ammo_box/magazine/m22(src)

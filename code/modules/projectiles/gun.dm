@@ -402,12 +402,14 @@ ATTACHMENTS
 		return
 
 	if(heavy_weapon == TRUE)
-		if(user.special_s <= 5)
+		if(user.special_s <= 6)
+			user.dropItemToGround(src, TRUE)
 			to_chat(user, "<span class='userdanger'>This weapon is far too unwieldy for someone of your build!</span>")
 			return
 
 	if(special_weapon == TRUE)
-		if(user.special_i <= 5)
+		if(user.special_i <= 6)
+			user.dropItemToGround(src, TRUE)
 			to_chat(user, "<span class='userdanger'>This weapon is far too advanced for someone like you!</span>")
 			return
 
@@ -514,13 +516,24 @@ ATTACHMENTS
 				if(can_jam)
 					jammed = TRUE
 
-	if(user.special_l <= 5)
-		if(prob(2))
+	if(user.special_l <= 8)
+		if(prob(40 - (user.special_l * 0.67)))
 			if(can_jam)
 				jammed = TRUE
 
-	if(user.special_s <= 5)
+	if(user.special_s <= 6)
+		bonus_spread += 5
+
+	if(user.special_s <= 4)
 		bonus_spread += 20
+
+	if(user.special_s <= 2)
+		bonus_spread += 35
+
+	if(user.special_s <= 2)
+		if(prob(5))
+			to_chat(user, "<span class='userdanger'>You lose control of \the [src]!</span>")
+			bonus_spread += rand(35,125)
 
 	if(on_cooldown())
 		return

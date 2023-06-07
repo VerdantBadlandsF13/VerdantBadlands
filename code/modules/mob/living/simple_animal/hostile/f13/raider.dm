@@ -14,8 +14,8 @@
 	icon_dead = "raider_dead"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	turns_per_move = 5
-	maxHealth = 140
-	health = 140
+	maxHealth = 60
+	health = 60
 	melee_damage_lower = 25
 	melee_damage_upper = 50
 	attack_verb_simple = "punches"
@@ -77,42 +77,10 @@
 	icon_state = "raider_ranged"
 	icon_living = "raider_ranged"
 	ranged = TRUE
-	maxHealth = 115
-	health = 115
 	retreat_distance = 4
 	minimum_distance = 6
 	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/f13weapons/ninemil.ogg'
-	footstep_type = FOOTSTEP_MOB_SHOE
-
-// LEGENDARY MELEE RAIDER
-/mob/living/simple_animal/hostile/raider/legendary
-	name = "Legendary Raider"
-	desc = "Another murderer churned out by the wastes - this one seems a bit faster than the average..."
-	color = "#FFFF00"
-	maxHealth = 450
-	health = 450
-	speed = 1.2
-	obj_damage = 300
-	aggro_vision_range = 15
-	loot = list(/obj/item/melee/onehanded/knife/survival, /obj/item/reagent_containers/food/snacks/kebab/human)
-	footstep_type = FOOTSTEP_MOB_SHOE
-
-// LEGENDARY RANGED RAIDER
-/mob/living/simple_animal/hostile/raider/ranged/legendary
-	name = "Legendary Raider"
-	desc = "Another murderer churned out by the wastes, wielding a decent pistol and looking very strong"
-	color = "#FFFF00"
-	maxHealth = 600
-	health = 600
-	retreat_distance = 1
-	minimum_distance = 2
-	projectiletype = /obj/item/projectile/bullet/m44
-	projectilesound = 'sound/f13weapons/44mag.ogg'
-	extra_projectiles = 1
-	aggro_vision_range = 15
-	obj_damage = 300
-	loot = list(/obj/item/gun/ballistic/revolver/m29)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 // RAIDER BOSS
@@ -138,8 +106,6 @@
 	icon_state = "metal_raider"
 	icon_living = "metal_raider"
 	icon_dead = "metal_raider_dead"
-	maxHealth = 180
-	health = 180
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911)
@@ -160,8 +126,6 @@
 	icon_dead = "biker_raider_dead"
 	melee_damage_lower = 20
 	melee_damage_upper = 20
-	maxHealth = 200
-	health = 200
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911, /obj/item/clothing/head/helmet/f13/raidercombathelmet)
@@ -185,8 +149,6 @@
 	minimum_distance = 1
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	maxHealth = 200
-	health = 200
 	loot = list(/obj/item/twohanded/baseball)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
@@ -225,8 +187,6 @@
 	icon_state = "sulphite"
 	icon_living = "sulphite"
 	icon_dead= "sulphite_dead"
-	maxHealth = 220
-	health = 220
 	melee_damage_lower = 40
 	melee_damage_upper = 55
 	footstep_type = FOOTSTEP_MOB_SHOE
@@ -242,8 +202,6 @@
 	icon_state = "junker_hijacker"
 	icon_living = "junker_hijacker"
 	icon_dead = "junker_dead"
-	maxHealth = 220
-	health = 220
 	melee_damage_lower = 40
 	melee_damage_upper = 55
 	loot = null
@@ -256,8 +214,6 @@
 	icon_living = "junker_scrapper"
 	icon_dead = "junker_dead"
 	faction = list("raider", "wastebot")
-	maxHealth = 245
-	health = 245
 	damage_coeff = list(BRUTE = 1, BURN = 0.75, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	melee_damage_lower = 25
 	melee_damage_upper = 50
@@ -269,8 +225,6 @@
 	icon_state = "junker"
 	icon_living = "junker"
 	icon_dead = "junker_dead"
-	maxHealth = 180
-	health = 180
 	ranged = TRUE
 	retreat_distance = 6
 	minimum_distance = 8

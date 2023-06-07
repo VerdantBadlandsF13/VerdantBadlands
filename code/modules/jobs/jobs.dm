@@ -40,7 +40,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	))
 
 GLOBAL_LIST_INIT(vault_positions, list(
-	"Vault-Tec OverseerOverseer",
+	"Vault-Tec Overseer",
 	"Vault-Tec Security",
 	"Vault-Tec Doctor",
 	"Vault-Tec Scientist",

@@ -2457,10 +2457,6 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
-"cRl" = (
-/obj/structure/table/wood,
-/turf/closed/wall/f13/wood/interior,
-/area/f13/building)
 "cRz" = (
 /obj/structure/simple_door/metal/dirtystore,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14410,10 +14406,6 @@
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
-/area/f13/building)
-"pXA" = (
-/obj/structure/table/wood,
-/turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "pXJ" = (
 /obj/structure/toilet{
@@ -65509,7 +65501,7 @@ cEY
 acR
 umq
 acR
-cRl
+jgV
 mDD
 bIk
 mDD
@@ -65766,7 +65758,7 @@ tAw
 efv
 efv
 efv
-pXA
+tAw
 tAw
 efv
 tAw

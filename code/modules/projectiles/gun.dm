@@ -515,12 +515,12 @@ ATTACHMENTS
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
 					jammed = TRUE
-
+/*
 	if(user.special_l <= 8)
 		if(prob(40 - (user.special_l * 0.67)))
 			if(can_jam)
 				jammed = TRUE
-
+*/
 	if(user.special_s <= 6)
 		bonus_spread += 5
 

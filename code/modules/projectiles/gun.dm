@@ -158,6 +158,8 @@ ATTACHMENTS
 	var/heavy_weapon = FALSE// Does this weapon require high strength to use?
 	var/special_weapon = FALSE// Does this weapon require high intelligence to use?
 
+	var/pb_knockback = 0// Does this weapon toss targets?
+
 /obj/item/gun/AltClick(mob/user)
 	if(jammed)
 		if(jam_fixing)
@@ -313,8 +315,16 @@ ATTACHMENTS
 		if(message)
 			if(pointblank)
 				user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(pb_knockback > 0 && ismob(pbtarget))
+					var/mob/PBT = pbtarget
+					var/atom/throw_target = get_edge_target_turf(PBT, user.dir)
+					PBT.throw_at(throw_target, pb_knockback, 2)
 			else
-				user.visible_message("<span class='danger'>[user] fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_ACTIVE))
+					user.visible_message("<span class='danger'>[user] fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				else
+					user.visible_message("<span class='danger'>[user] hip fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+					shake_camera(user, recoil + 1, recoil)
 
 //Adds logging to the attack log whenever anyone draws a gun, adds a pause after drawing a gun before you can do anything based on it's size
 /obj/item/gun/pickup(mob/living/user)
@@ -515,12 +525,13 @@ ATTACHMENTS
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
 					jammed = TRUE
-/*
-	if(user.special_l <= 8)
-		if(prob(40 - (user.special_l * 0.67)))
-			if(can_jam)
-				jammed = TRUE
-*/
+
+	if(condition == 1)
+		if(user.special_l >= 1)
+			if(prob(15 - (user.special_l * 0.05)))
+				if(can_jam)
+					jammed = TRUE
+
 	if(user.special_s <= 6)
 		bonus_spread += 5
 

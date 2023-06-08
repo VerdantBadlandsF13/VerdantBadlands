@@ -1419,7 +1419,7 @@ Records disabled until a use for them is found
 
 	dat += "<b>Endurance:</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
 	dat += "Endurance is the overall measure of a character's fortitude. It handles matters such as health, <br>\
-	radiation resistance and more. Characters with a low perception stat will take far less damage before perishing, <br>\
+	radiation resistance and more. Characters with a low endurance stat will take far less damage before perishing, <br>\
 	and will be forced to rely heavily on anti-radiation chems."
 
 	dat += "<BR>"

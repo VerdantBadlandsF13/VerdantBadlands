@@ -228,10 +228,11 @@
 		M.maxHealth -= 50
 		M.updatehealth()
 	switch(current_cycle)
-		if(1 to 40)
+		if(1 to INFINITY)// From 1 to 40
 			M.confused += 10
 			M.blur_eyes(20)
-			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")
+			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")// Below removed for the moment, especially as people continue confusing the mechanics.
+/*
 		if(41 to 80)
 			M.confused +=20
 			M.blur_eyes(30)
@@ -239,7 +240,7 @@
 			M.set_disgust(12)
 			M.adjustStaminaLoss(30*REAGENTS_EFFECT_MULTIPLIER)
 			to_chat(M, "<span class='danger'>Your stomach churns, your eyes cloud and you're pretty sure you just popped a lung. You shouldn't take so much med-X at once. </span>")
-		if(81 to INFINITY)// From 81 to 120
+		if(81 to 120)
 			M.confused +=40
 			M.blur_eyes(30)
 			M.losebreath += 10
@@ -251,9 +252,6 @@
 			M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)
 			M.visible_message("<span class='userdanger'>[M] clutches their stomach and vomits violently onto the ground, bloody froth covering their lips!</span>")
 			to_chat(M, "<span class='userdanger'>You throw up everything you've eaten in the past week and some blood to boot. You're pretty sure your heart just stopped for a second, too. </span>")
-
-// Below removed for the moment, especially as people continue confusing the mechanics.
-/*
 		if(121 to INFINITY)
 			M.adjustOrganLoss(ORGAN_SLOT_EYES, 3)
 			M.Unconscious(400)

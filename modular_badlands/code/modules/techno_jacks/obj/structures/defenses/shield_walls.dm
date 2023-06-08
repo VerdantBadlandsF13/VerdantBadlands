@@ -62,7 +62,7 @@
 			to_chat(AM, "<span class='his_grace'><b>Your consciousness cries out in agony as you're dropped to the floor.</b><br>\
 				<i>What just happened? Where are you?</i></span>")
 
-			var/mob/living/carbon/human/M
+			var/mob/living/carbon/human/M = AM
 			M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
 			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 			M.Unconscious(100)
@@ -98,7 +98,7 @@
 		to_chat(AM, "<span class='his_grace'><b>Your consciousness cries out in agony as you're dropped to the floor.</b><br>\
 		<i>This is how you die. Horrifically.</i></span>")
 
-		var/mob/living/carbon/human/M
+		var/mob/living/carbon/human/M = AM
 		M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
 		SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 		M.Unconscious(100)
@@ -118,7 +118,7 @@
 		to_chat(AM, "<span class='his_grace'><b>Your consciousness cries out in agony as you're dropped to the floor.</b><br>\
 		<i>This is how you die. Horrifically.</i></span>")
 
-		var/mob/living/carbon/human/M
+		var/mob/living/carbon/human/M = AM
 		M.dust()
 
 		to_chat(src, Gibberish("Biometric signature not recognised! <br>\

@@ -2004,7 +2004,6 @@
 "aVU" = (
 /obj/structure/table/wood/settler,
 /obj/item/reagent_containers/food/drinks/flask,
-/obj/item/reagent_containers/pill/patch/healingpowder,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "aWg" = (
@@ -6285,8 +6284,6 @@
 "eja" = (
 /obj/structure/closet/crate,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
-/obj/item/reagent_containers/pill/patch/bitterdrink,
-/obj/item/reagent_containers/pill/patch/bitterdrink,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)

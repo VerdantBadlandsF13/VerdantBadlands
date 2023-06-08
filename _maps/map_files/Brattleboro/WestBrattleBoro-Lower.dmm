@@ -3772,9 +3772,7 @@
 	},
 /area/f13/tunnel)
 "ph" = (
-/obj/structure/shieldwall/full{
-	pixel_x = -10
-	},
+/obj/structure/shieldwall/full,
 /turf/open/floor/f13{
 	icon_state = "whitegreen"
 	},
@@ -3851,7 +3849,6 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/effect/landmark/start/f13/vaultheadofsecurity,
 /turf/open/floor/carpet/red,
 /area/f13/vault/chiefoffice)
 "pA" = (

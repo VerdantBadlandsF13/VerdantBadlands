@@ -20,7 +20,7 @@
 	var/obj/item/flashlight/seclite/attached_light
 	var/datum/action/item_action/toggle_helmet_flashlight/alight
 
-	var/durability_threshold = 0
+	var/durability_threshold = 5
 	repair_kit = /obj/item/repair_kit/arm_repair_kit
 
 /obj/item/clothing/head/helmet/Initialize()
@@ -28,8 +28,8 @@
 	if(attached_light)
 		alight = new(src)
 	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
-	if((durability_threshold <= 0) && round_armor > 30) // Weak armor, meh.
-		var/tier_ar = round(round_armor / 10) // Tier 7 would be 200/100 = 20, Tier 11 = 40
+	if((durability_threshold <= 0) && round_armor > 30)
+		var/tier_ar = round(round_armor / 10)
 		durability_threshold = tier_ar
 
 

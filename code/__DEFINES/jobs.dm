@@ -205,6 +205,15 @@
 
 #define	F13LBJFOREMAN			(1<<0)
 #define F13LBJLUMBERJACK		(1<<1)
+
+#define VFE		(1<<17)
+
+#define	F13VFEOVERSEER				(1<<0)
+#define	F13VFEOFFICER				(1<<1)
+#define	F13VFEDOCTOR				(1<<2)
+#define	F13VFESCIENTIST				(1<<2)
+#define	F13VFEENGINEER				(1<<2)
+#define	F13VFEDWELLER				(1<<2)
 //END BADLANDS
 
 #define JOB_AVAILABLE 0

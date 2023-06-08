@@ -439,7 +439,7 @@
 // -----------------------------------
 // STIMPAK BOX
 
-/obj/item/storage/box/medicine/stimpaks/stimpaks5 
+/obj/item/storage/box/medicine/stimpaks/stimpaks5
 	name = "box of stimpaks"
 	desc = "A box full of stimpaks."
 
@@ -466,43 +466,3 @@
 /obj/item/storage/box/medicine/stimpaks/superstimpaks5/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/hypospray/medipen/stimpak/super(src)
-
-// -----------------------------------
-// POWDER BOX
-
-/obj/item/storage/box/medicine/powder5
-	name = "box of five powders"
-	desc = "A box full of powders."
-	icon_state = "medicinebox_simple"
-	illustration = "overlay_powder"
-
-/obj/item/storage/box/medicine/powder5/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/pill/patch/healingpowder(src)
-
-// -----------------------------------
-// POULTICE BOX
-
-/obj/item/storage/box/medicine/poultice5
-	name = "box of five poultices"
-	desc = "A box full of poultices."
-	icon_state = "medicinebox_simple"
-	illustration = "overlay_poultice"
-
-/obj/item/storage/box/medicine/poultice5/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/pill/patch/healpoultice(src)
-
-// -----------------------------------
-// BITTER DRINK BOX
-
-/obj/item/storage/box/medicine/bitterdrink5
-	name = "box of bitter drinks"
-	desc = "A box full of bitter drinks."
-	icon = 'icons/fallout/objects/storage.dmi'
-	icon_state = "medicinebox_simple"
-	illustration = "overlay_bitter"
-
-/obj/item/storage/box/medicine/bitterdrink5/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/reagent_containers/pill/patch/bitterdrink(src)

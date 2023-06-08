@@ -214,8 +214,7 @@
 	name = "wasteland meds spawner"
 	lootcount = 1
 
-	loot = list(/obj/item/reagent_containers/pill/patch/healingpowder,
-				/obj/item/storage/pill_bottle/chem_tin/radx,
+	loot = list(/obj/item/storage/pill_bottle/chem_tin/radx,
 				/obj/item/reagent_containers/blood/radaway,
 				/obj/item/storage/pill_bottle/chem_tin/mentats,
 				/obj/item/reagent_containers/hypospray/medipen/stimpak,
@@ -231,7 +230,6 @@
 	loot = list(
 				/obj/item/reagent_containers/pill/patch/jet,
 				/obj/item/reagent_containers/pill/patch/turbo,
-				/obj/item/reagent_containers/pill/patch/healingpowder,
 				/obj/item/reagent_containers/pill/stimulant,
 				/obj/item/reagent_containers/hypospray/medipen/medx,
 				/obj/item/storage/pill_bottle/chem_tin/buffout
@@ -239,7 +237,7 @@
 
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/mid
-	name = "mid dungeon science loot"	//to replace guns as treasure in slightly protected areas
+	name = "mid dungeon science loot"
 	lootcount = 1
 
 	loot = list(
@@ -254,7 +252,7 @@
 
 
 /obj/effect/spawner/lootdrop/f13/medical/rnd/good
-	name = "good dungeon science loot"	//to replace guns as treasure in heavily guarded areas
+	name = "good dungeon science loot"
 	lootcount = 1
 
 	loot = list( //Now out of 100
@@ -493,6 +491,31 @@
 	lootcount = pick(1, 2)
 	. = ..()
 
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc
+	name = "misc crafting spawner"
+	lootdoubles = TRUE
+	fan_out_items = TRUE
+	loot = list(
+	/obj/item/crafting/diode = 5,
+	/obj/item/crafting/transistor = 5,
+	/obj/item/crafting/capacitor = 5,
+	/obj/item/crafting/fuse = 5,
+	/obj/item/crafting/resistor = 5,
+	/obj/item/crafting/switch_crafting = 5,
+	/obj/item/crafting/bulb = 5,
+	/obj/item/crafting/board = 5,
+	/obj/item/crafting/buzzer = 5,
+	/obj/item/crafting/frame = 5,
+	/obj/item/crafting/small_gear = 5,
+	/obj/item/crafting/large_gear = 5,
+	/obj/item/crafting/duct_tape = 5,
+	/obj/item/crafting/wonderglue = 5,
+	/obj/item/crafting/turpentine = 5,
+	/obj/item/crafting/abraxo = 5,
+	/obj/item/assembly/igniter = 5,
+	/obj/item/crafting/reloader = 5,
+	/obj/item/assembly/timer = 5,
+	/obj/item/assembly/prox_sensor = 5)
 
 /obj/effect/spawner/lootdrop/f13/alcoholspawner //TIER 7 ALCOHOL
 	name = "alcoholspawner"
@@ -614,6 +637,11 @@
 		/obj/item/attachments/auto_sear
 	)
 
+/*
+Weapons below.
+We don't do this by balance, but rather theme.
+:)
+*/
 /obj/effect/spawner/lootdrop/f13/ncr_c_ration
 	name = "c-ration spawner"
 	icon = 'icons/obj/storage.dmi'
@@ -631,15 +659,4 @@
 			/obj/item/storage/box/ration/menu_nine,
 			/obj/item/storage/box/ration/menu_ten,
 			/obj/item/storage/box/ration/menu_eleven,
-			)
-
-/obj/effect/spawner/lootdrop/f13/ncr_k_ration
-	name = "c-ration spawner"
-	icon = 'icons/obj/storage.dmi'
-	icon_state = "k-ration"
-	lootcount = 1
-	loot = list(
-			/obj/item/storage/box/ration/ranger_breakfast,
-			/obj/item/storage/box/ration/ranger_lunch,
-			/obj/item/storage/box/ration/ranger_dinner,
 			)

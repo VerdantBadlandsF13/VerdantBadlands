@@ -10,6 +10,7 @@
 	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin
 	can_jam = 0
+	heavy_weapon = TRUE
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/attackby(obj/item/A, mob/user, params)
 	..()
@@ -44,6 +45,7 @@
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "rocket"
 	condition = 0
+	heavy_weapon = TRUE
 
 /obj/item/gun/ballistic/rocketlauncher/handle_atom_del(atom/A)
 	if(A == chambered)

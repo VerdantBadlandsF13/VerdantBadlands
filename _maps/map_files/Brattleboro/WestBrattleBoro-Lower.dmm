@@ -1903,6 +1903,10 @@
 	dir = 8
 	},
 /area/f13/vault/medical)
+"hU" = (
+/obj/structure/shieldwall/large,
+/turf/open/floor/f13,
+/area/f13/vault)
 "hW" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_y = 4
@@ -3767,6 +3771,13 @@
 	icon_state = "floordirty"
 	},
 /area/f13/tunnel)
+"ph" = (
+/obj/structure/shieldwall/full,
+/turf/open/floor/f13{
+	icon_state = "whitegreen"
+	},
+/turf/open/floor/f13,
+/area/f13/vault)
 "pi" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/f13{
@@ -3838,7 +3849,6 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
-/obj/effect/landmark/start/f13/vaultheadofsecurity,
 /turf/open/floor/carpet/red,
 /area/f13/vault/chiefoffice)
 "pA" = (
@@ -5886,7 +5896,9 @@
 	},
 /area/f13/vault/dormitory)
 "ys" = (
-/obj/structure/vault_door,
+/turf/open/floor/f13{
+	icon_state = "whitegreen"
+	},
 /turf/open/floor/f13,
 /area/f13/vault)
 "yt" = (
@@ -69748,12 +69760,12 @@ UI
 UI
 UI
 UI
-DS
+BV
 LB
 NT
 NT
 Bw
-DS
+BV
 DS
 dJ
 DS
@@ -70005,7 +70017,7 @@ UI
 UI
 UI
 UI
-ys
+ph
 DQ
 Vd
 DQ
@@ -70262,12 +70274,12 @@ UI
 UI
 UI
 UI
-DS
+BV
 LB
 DQ
 DQ
 Bw
-DS
+BV
 DS
 ev
 DS
@@ -73875,7 +73887,7 @@ DS
 DS
 DS
 dJ
-DS
+hU
 DS
 tz
 CV

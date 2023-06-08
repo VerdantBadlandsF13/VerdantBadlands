@@ -56,11 +56,12 @@
 		qdel(src)
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised
-	wound_bonus = 4
+	damage = 4
+	wound_bonus = 62
 	bare_wound_bonus = 90
 	wound_falloff_tile = -15.5
-	tile_dropoff = 1
-	tile_dropoff_s = 1
+	tile_dropoff = 2
+	tile_dropoff_s = 2
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()

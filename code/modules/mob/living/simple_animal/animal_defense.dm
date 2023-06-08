@@ -124,6 +124,10 @@
 /mob/living/simple_animal/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
+/*
+	if(Proj.firer)
+		murder = Proj.firer
+*/
 	apply_damage(Proj.damage, Proj.damage_type)
 	Proj.on_hit(src)
 	return BULLET_ACT_HIT

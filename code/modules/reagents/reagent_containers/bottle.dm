@@ -459,12 +459,6 @@
 					/datum/reagent/medicine/spaceacillin = 10,
 					)
 
-/obj/item/reagent_containers/glass/bottle/gaia
-	name = "gaia bottle"
-	desc = "A large bottle containing gaia."
-	volume = 60
-	list_reagents = list(/datum/reagent/medicine/gaia = 60)
-
 /obj/item/reagent_containers/glass/bottle/primitive
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "bottle_primitive"

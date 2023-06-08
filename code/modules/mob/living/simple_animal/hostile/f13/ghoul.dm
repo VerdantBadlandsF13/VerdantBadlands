@@ -88,28 +88,6 @@
 	..()
 	summon_backup(10)
 
-/mob/living/simple_animal/hostile/ghoul/ncr
-	name = "feral ghoul soldier"
-	desc = "A former NCR combatant, now ghoulified and insane. The armor that failed it in life still packs some good defense."
-	icon_state = "ghoulncr"
-	icon_living = "ghoulncr"
-	icon_dead = "ghoulncr_dead"
-	maxHealth = 80
-
-/mob/living/simple_animal/hostile/ghoul/ncr/helmet
-	icon_state = "ghoulncrh"
-	icon_living = "ghoulncrh"
-	icon_dead = "ghoulncrh_dead"
-	maxHealth = 120
-
-/mob/living/simple_animal/hostile/ghoul/ncr/officer
-	name = "feral ghoul officer"
-	desc = "A former NCR officer, now ghoulified and insane. The armor that failed it in life still packs some good defense."
-	icon_state = "ghoulncrc"
-	icon_living = "ghoulncrc"
-	icon_dead = "ghoulncrc_dead"
-	maxHealth = 160
-
 //Cold Feral Ghoul
 /mob/living/simple_animal/hostile/ghoul/coldferal
 	name = "cold ghoul feral"

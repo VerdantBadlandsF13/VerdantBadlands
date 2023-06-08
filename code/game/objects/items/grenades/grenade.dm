@@ -69,6 +69,13 @@
 		to_chat(user, "<span class='warning'>What the... [src] is stuck to your hand!</span>")
 		ADD_TRAIT(src, TRAIT_NODROP, STICKY_NODROP)
 
+	if(user.special_i <= 3)
+		switch(rand(1,5))
+			if(3)
+				to_chat(user, "<span class='warning'>Huh? How does this thing work?</span>")
+				preprime(user, 5, FALSE)
+				return FALSE
+
 /obj/item/grenade/examine(mob/user)
 	. = ..()
 	if(display_timer)

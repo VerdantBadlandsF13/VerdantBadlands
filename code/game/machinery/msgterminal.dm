@@ -19,15 +19,16 @@ GLOBAL_LIST_EMPTY(allTerminals)
 	name = "communications center"
 	desc = "Where mail is sent and received."
 	icon = 'icons/obj/computer.dmi'
-	icon_state = "computer"
+	icon_state = "terminal"
 	plane = ABOVE_WALL_PLANE
 	var/terminalid = ""
 	var/beepsound = 'sound/effects/printer.ogg'
 	var/terminal = "terminal" //The list of all terminals on the station (Determined from this variable on each unit) Set this to the same thing if you want several consoles in one terminal
 	var/list/messages = list() //List of all messages
 	var/terminalType = 2
-		// 1 = unused for now
-		// 2 = ncr + legion
+		// 1 = unused
+		// 2 = primary set
+		// 2 = command & hidden
 	var/newmessagepriority = NO_NEW_MESSAGE
 	var/screen = 0
 		// 0 = main menu,
@@ -43,7 +44,6 @@ GLOBAL_LIST_EMPTY(allTerminals)
 		// 10 = send announcement
 	var/silent = FALSE // set to 1 for it not to beep all the time
 	var/hackState = FALSE
-	var/announcementConsole = FALSE // FALSE = This console cannot be used to send terminal announcements, TRUE = This console can send terminal announcements
 	var/open = FALSE // TRUE if open
 	var/message = ""
 	var/dpt = "" //the terminal which will be receiving the message
@@ -63,6 +63,8 @@ GLOBAL_LIST_EMPTY(allTerminals)
 
 /obj/machinery/msgterminal/Initialize()
 	. = ..()
+	add_overlay("terminal_key")
+	add_overlay("terminal_on")
 	GLOB.allTerminals += src
 	switch(terminalType)
 		if(1)
@@ -109,14 +111,10 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "</tr>"
 			dat += "<tr>"
 			dat += "<td width='55%'>"
-			if(src.terminalid == "brotherhood")
-				dat += "<br>Circle of Steel"
-			if(src.terminalid == "legion")
-				dat += "<br>Cohort War Council of Southwestern Arizona"
-			if(src.terminalid == "ncr")
-				dat += "<br>Arizona Command Camp Alexander"
-			if(src.terminalid == "enclave")
-				dat += "<br>Rocky Mountain Arsenal"
+			if(src.terminalid == "vault")
+				dat += "<br>Vault Fifty-Eight"
+			if(src.terminalid == "vaultguards")
+				dat += "<br>Vault Fifty-Eight Exterior"
 			dat += "</td>"
 			dat += "<td width='45%'>"
 			dat += "<br><A href='?src=[REF(src)];setScreen=11'>Send Message to Command</A><br>"
@@ -125,8 +123,6 @@ GLOBAL_LIST_EMPTY(allTerminals)
 
 			dat += "</table>"
 			dat += "<br><A href='?src=[REF(src)];setScreen=0'><< Back</A><br>"
-			dat += "<br><div class='panel redborder'><span class='redtext'>(( NOTE: Do not misuse this terminal to send harassing, joke or meme messages to other factions or groups in the terminal list. ))</span></div><br>"
-
 
 		if(3)	//relay information
 			dat += "Who would you like to send a message to?<br><br>"
@@ -178,15 +174,12 @@ GLOBAL_LIST_EMPTY(allTerminals)
 
 		if(10) //unused for now but may be useful later
 			dat += "<b>Message to Command</b> <br><br>"
-			if(src.terminalid == "ncr")
-				dat += "<b>Arizona Command Camp Alexander</b> <br><br>"
-			if(src.terminalid == "legion")
-				dat += "<b>Cohort War Council of Southwestern Arizona</b> <br><br>"
-			if(src.terminalid == "brotherhood")
-				dat += "<b>Circle of Steel</b> <br><br>"
-			if(src.terminalid == "enclave")
-				dat += "<br>Rocky Mountain Arsenal"
+			if(src.terminalid == "vault")
+				dat += "<b>Vault Fifty-Eight</b> <br><br>"
+			if(src.terminalid == "vaultguards")
+				dat += "<b>Vault Fifty-Eight Exterior</b> <br><br>"
 			dat += "<a href='?src=[REF(src)];setScreen=11'>Send Message to Command</a> <br><br>"
+
 		if(11)
 			var/message = input(usr,"Send a message to command staff. Ensure it makes sense IC.","") as message|null
 			if(message)
@@ -202,6 +195,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				updateUsrDialog()
 				playsound(src, 'sound/f13machines/terminalmenucancel.ogg', 20, 1)
 			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+
 		else	//main menu
 			screen = 0
 			if(newmessagepriority == NORMAL_MESSAGE_PRIORITY)
@@ -407,55 +401,20 @@ GLOBAL_LIST_EMPTY(allTerminals)
 #undef HIGH_MESSAGE_PRIORITY
 #undef EXTREME_MESSAGE_PRIORITY
 
-/obj/machinery/msgterminal/ncr
-	terminalid = "ncr"
-	terminal = "NCR Terminal"
+/obj/machinery/msgterminal/vfe
+	terminalid = "vault"
+	terminal = "Vault Fifty-Eight Interior"
 	terminalType = 2
 
-/obj/machinery/msgterminal/legion
-	terminalid = "legion"
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "pigeoncrate"
-	terminal = "Legion Pigeon Carrier"
+/obj/machinery/msgterminal/vfe_guards
+	terminalid = "vaultguards"
+	terminal = "Vault Fifty-Eight Exterior"
 	terminalType = 2
 
-/*
-/obj/machinery/msgterminal/pigeon
-	icon = 'icons/obj/computer.dmi'
-	icon_state = "pigeoncrate"
-	terminal = "PigeonCarrier"
-	terminalType = 2
-	beepsound = 'sound/f13effects/pigeons.ogg'
-
-
-/obj/machinery/msgterminal/machined
-	terminal = "Terminal"
-	terminalType = 2
-*/
-/obj/machinery/msgterminal/bighorn
-	terminalid = "bighorn"
-	terminal = "Bighorn Terminal"
-	terminalType = 2
-
-/obj/machinery/msgterminal/bighorn/followers
-	terminalid = "follower"
-	terminal = "Followers Terminal"
-	terminalType = 2
-
-/obj/machinery/msgterminal/brotherhood
-	terminalid = "brotherhood"
-	terminal = "Brotherhood Terminal"
-	terminalType = 2
 /obj/machinery/msgterminal/command
 	terminalid = "command"
 	terminal = "COMMAND"
 	terminalType = 3
-
-/obj/machinery/msgterminal/enclave
-	terminalid = "enclave"
-	terminal = "Enclave Terminal"
-	terminalType = 2
-
 
 // so admins can easily jump-to-area
 /area/f13/commandconsole

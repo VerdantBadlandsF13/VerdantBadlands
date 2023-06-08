@@ -1117,14 +1117,6 @@
 /obj/structure/closet/crate/necropolis/bubblegum/PopulateContents()
 	new /obj/item/clothing/suit/space/hostile_environment(src)
 	new /obj/item/clothing/head/helmet/space/hostile_environment(src)
-	var/loot = rand(1,3)
-	switch(loot)
-		if(1)
-			new /obj/item/mayhem(src)
-		if(2)
-			new /obj/item/guardiancreator(src)
-		if(3)
-			new /obj/item/guardiancreator(src)
 
 /obj/structure/closet/crate/necropolis/bubblegum/crusher
 	name = "bloody bubblegum chest"
@@ -1132,66 +1124,6 @@
 /obj/structure/closet/crate/necropolis/bubblegum/crusher/PopulateContents()
 	..()
 	new /obj/item/crusher_trophy/demon_claws(src)
-
-/obj/item/mayhem
-	name = "mayhem in a bottle"
-	desc = "A magically infused bottle of blood, the scent of which will drive anyone nearby into a murderous frenzy."
-	icon = 'icons/obj/wizard.dmi'
-	icon_state = "vial"
-
-/obj/item/mayhem/attack_self(mob/user)
-	for(var/mob/living/carbon/human/H in range(7,user))
-		var/obj/effect/mine/pickup/bloodbath/B = new(H)
-		INVOKE_ASYNC(B, /obj/effect/mine/pickup/bloodbath/.proc/mineEffect, H)
-	to_chat(user, "<span class='notice'>You shatter the bottle!</span>")
-	playsound(user.loc, 'sound/effects/glassbr1.ogg', 100, 1)
-	message_admins("<span class='adminnotice'>[ADMIN_LOOKUPFLW(user)] has activated a bottle of mayhem!</span>")
-	log_combat(user, null, "activated a bottle of mayhem", src)
-	qdel(src)
-
-/obj/item/blood_contract
-	name = "blood contract"
-	icon = 'icons/obj/wizard.dmi'
-	icon_state = "scroll2"
-	color = "#FF0000"
-	desc = "Mark your target for death."
-	var/used = FALSE
-
-/obj/item/blood_contract/attack_self(mob/user)
-	if(used)
-		return
-	used = TRUE
-
-	var/list/da_list = list()
-	for(var/I in GLOB.alive_mob_list & GLOB.player_list)
-		var/mob/living/L = I
-		da_list[L.real_name] = L
-
-	var/choice = input(user,"Who do you want dead?","Choose Your Victim") as null|anything in da_list
-
-	choice = da_list[choice]
-
-	if(!choice)
-		used = FALSE
-		return
-	if(!(isliving(choice)))
-		to_chat(user, "[choice] is already dead!")
-		used = FALSE
-		return
-	if(choice == user)
-		to_chat(user, "You feel like writing your own name into a cursed death warrant would be unwise.")
-		used = FALSE
-		return
-
-	var/mob/living/L = choice
-
-	message_admins("<span class='adminnotice'>[ADMIN_LOOKUPFLW(L)] has been marked for death by [ADMIN_LOOKUPFLW(user)]!</span>")
-
-	var/datum/antagonist/blood_contract/A = new
-	L.mind.add_antag_datum(A)
-
-	log_combat(user, L, "took out a blood contract on", src)
-	qdel(src)
 
 //Colossus
 /obj/structure/closet/crate/necropolis/colossus

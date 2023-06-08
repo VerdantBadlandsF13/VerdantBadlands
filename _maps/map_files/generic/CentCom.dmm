@@ -7121,11 +7121,6 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/centcom/evac)
-"AX" = (
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/clothing_legend,
-/turf/open/floor/wood,
-/area/centcom/evac)
 "AY" = (
 /obj/machinery/light,
 /turf/open/floor/wood,
@@ -45224,7 +45219,7 @@ jU
 Ao
 nB
 nB
-AX
+Ao
 jU
 rb
 aa

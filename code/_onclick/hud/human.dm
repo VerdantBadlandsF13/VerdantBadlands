@@ -2,14 +2,17 @@
 	icon = 'icons/fallout/UI/screen_badlands.dmi'
 
 // Badlands Hud Container - Start
-/obj/screen/fullscreen/hud_cont_screen
+/obj/screen/hud_cont_screen
 	name = "interface"
 	icon = 'icons/mob/screen_full_badlands.dmi'
 	icon_state = "hud_collapsed"
 	layer = HUCON_LAYER
+	screen_loc = ui_container
+	plane = FULLSCREEN_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 //	var/mutable_appearance/scanlines
 
-/obj/screen/fullscreen/hud_cont_screen/card
+/obj/screen/hud_cont_screen/card
 	icon_state = "hud_full_card"
 	layer = HUCONC_LAYER
 // Badlands Hud Container - End
@@ -104,12 +107,14 @@
 	var/obj/screen/using
 	var/obj/screen/inventory/inv_box
 
-	using = new /obj/screen/fullscreen/hud_cont_screen
+	using = new /obj/screen/hud_cont_screen
 	using.name = "interface"
+//	screen_loc = "0,0"
 	static_inventory += using
 
-	inv_box = new /obj/screen/fullscreen/hud_cont_screen/card
+	inv_box = new /obj/screen/hud_cont_screen/card
 	inv_box.name = "interface"
+//	screen_loc = "0,0"
 	toggleable_inventory += inv_box
 
 	oxy = new /obj/screen/oxy

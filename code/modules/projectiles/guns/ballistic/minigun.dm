@@ -120,8 +120,9 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/minigunbal5mm
 	casing_ejector = FALSE//For now.
 	item_flags = SLOWS_WHILE_IN_HAND
-	var/obj/item/minigunpackbal5mm/ammo_pack
 	extra_damage = -9
+	heavy_weapon = TRUE
+	var/obj/item/minigunpackbal5mm/ammo_pack
 
 /obj/item/gun/ballistic/minigunbal5mm/Initialize()
 	if(istype(loc, /obj/item/minigunpackbal5mm)) //We should spawn inside an ammo pack so let's use that one.
@@ -295,6 +296,7 @@ Vindicator.
 	mag_type = /obj/item/ammo_box/magazine/internal/minigunbal4mm
 	casing_ejector = FALSE//For now.
 	item_flags = SLOWS_WHILE_IN_HAND
+	heavy_weapon = TRUE
 	var/obj/item/minigun4mm/ammo_pack
 
 /obj/item/gun/ballistic/minigun4mm/Initialize()

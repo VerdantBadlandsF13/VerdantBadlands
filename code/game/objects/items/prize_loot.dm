@@ -41,8 +41,13 @@
 /obj/item/locked_box/Initialize(mapload)
 	. = ..()
 	name = "[easy_naming][initial(name)]"
+
+	if(prob(50))
+		trapped = TRUE
+
 	if(enable_loot_initialize)
 		initialize_prizes()
+
 	if(mapload)
 		if(!locked || prob(prob_open))
 			spawn_prizes()
@@ -82,7 +87,7 @@
 /obj/item/locked_box/proc/spawn_prizes()
 	if(trapped) //gnarly
 		spawn(3 SECONDS)
-			explosion(src, 0,0,1, flame_range = 2)
+			explosion(src, 0,1,1, flame_range = 2)
 			qdel(src)
 		return
 	var/turf/prize_turf = get_turf(src)

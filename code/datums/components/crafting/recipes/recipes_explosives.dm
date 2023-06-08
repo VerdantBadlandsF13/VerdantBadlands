@@ -66,22 +66,10 @@
 			/obj/item/stack/f13Cash/caps = 200)
 	time = 150
 	category = CAT_EXPLOSIVE
-/datum/crafting_recipe/explosive/shrapnelmine
-	name = "Shrapnel Mine"
-	result = /obj/item/mine/shrapnel/random
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-			/obj/item/stack/crafting/metalparts = 2,
-			/obj/item/stack/crafting/electronicparts = 1,
-			/obj/item/stack/ore/blackpowder = 1,
-			/obj/item/assembly/prox_sensor = 1,
-			/obj/item/stack/cable_coil = 5)
-	time = 120
-	category = CAT_EXPLOSIVE
-	always_available = FALSE
 
 /datum/crafting_recipe/explosive/explomine
 	name = "High-Explosive Mine"
-	result = /obj/item/mine/explosive/random
+	result = /obj/item/grenade/f13/mine/explosive
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 			/obj/item/stack/crafting/metalparts = 2,
 			/obj/item/stack/crafting/goodparts = 1,
@@ -93,49 +81,6 @@
 	time = 120
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-
-/datum/crafting_recipe/explosive/stingmine
-	name = "Stingball Mine"
-	result = /obj/item/mine/shrapnel/sting/random
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-			/obj/item/stack/sheet/plastic = 1,
-			/obj/item/stack/crafting/metalparts = 2,
-			/obj/item/stack/crafting/electronicparts = 1,
-			/obj/item/stack/ore/blackpowder = 1,
-			/obj/item/assembly/prox_sensor = 1,
-			/obj/item/stack/cable_coil = 5
-	)
-	time = 120
-	category = CAT_EXPLOSIVE
-	always_available = FALSE
-
-/datum/crafting_recipe/explosive/pulsemine
-	name = "Pulse Mine"
-	result = /obj/item/mine/emp/random
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-			/obj/item/stack/crafting/metalparts = 3,
-			/obj/item/stack/crafting/goodparts = 1,
-			/obj/item/stack/crafting/electronicparts = 5,
-			/obj/item/assembly/prox_sensor = 1,
-			/obj/item/stack/cable_coil = 30
-	)
-	time = 150
-	category = CAT_EXPLOSIVE
-	always_available = FALSE
-
-/datum/crafting_recipe/explosive/stunmine
-	name = "Stun Mine"
-	result = /obj/item/mine/stun/random
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-			/obj/item/stack/crafting/metalparts = 3,
-			/obj/item/stack/crafting/electronicparts = 5,
-			/obj/item/assembly/prox_sensor = 1,
-			/obj/item/stack/cable_coil = 5
-	)
-	time = 80
-	category = CAT_EXPLOSIVE
-	always_available = FALSE
-
 
 /datum/crafting_recipe/lance
 	name = "Explosive Spear (Grenade)"

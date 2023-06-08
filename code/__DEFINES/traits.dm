@@ -230,6 +230,7 @@
 #define TRAIT_UNARMED_WEAPON	"unarmed_weapon"
 #define TRAIT_ENCLAVE_CODES		"old_world_codes" //Permits players to open the Vault.
 #define TRAIT_FORCED_STANDING 	"forced_standing"
+#define TRAIT_RADX				"radx_active"
 /// Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 #define TRAIT_HANDS_BLOCKED "handsblocked"
 

@@ -276,18 +276,17 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	return message
 
 /mob/living/send_speech(message, message_range = 6, obj/source = src, bubble_type = bubble_icon, list/spans, datum/language/message_language=null, message_mode)
-	//var/stutter_chance = max(0, 40-special_c*10)//SPECIAL Integration
-	//if(prob(stutter_chance))
-	//	stuttering += 5
+	var/stutter_chance = max(0, 40-special_c*10)//SPECIAL Integration
+	if(prob(stutter_chance))
+		stuttering += 5
+
 	var/static/list/eavesdropping_modes = list(MODE_WHISPER = TRUE, MODE_WHISPER_CRIT = TRUE)
 	var/eavesdrop_range = 0
 	if(eavesdropping_modes[message_mode])
 		eavesdrop_range = EAVESDROP_EXTRA_RANGE
 	var/list/listening = get_hearers_in_view(message_range+eavesdrop_range, source)
 	var/list/the_dead = list()
-//	var/list/yellareas	//CIT CHANGE - adds the ability for yelling to penetrate walls and echo throughout areas
-//	if(!eavesdrop_range && say_test(message) == "2")	//CIT CHANGE - ditto
-//		yellareas = get_areas_in_range(message_range*0.5, source)	//CIT CHANGE - ditto
+
 	for(var/_M in GLOB.player_list)
 		var/mob/M = _M
 		if(QDELETED(M)) //Some times nulls and deleteds stay in this list. This is a workaround to prevent ic chat breaking for everyone when they do.

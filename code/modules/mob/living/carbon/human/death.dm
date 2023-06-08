@@ -34,7 +34,12 @@
 	var/obj/item/organ/heart/H = getorganslot(ORGAN_SLOT_HEART)
 	if(H)
 		H.beat = BEAT_NONE
-
+/*
+	if(murder)
+		if(murder != src)
+			if(istype(murder, /mob/living/carbon/human))
+				murder:karmaAdd(karma * -0.33)
+*/
 	. = ..()
 
 	dizziness = 0

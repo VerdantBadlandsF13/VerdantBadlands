@@ -14,6 +14,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	special_weapon = TRUE
 
 /obj/item/gun/energy/laser/plasma/glock
 	name = "\improper Glock 86 Plasma Pistol"
@@ -27,6 +28,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	special_weapon = TRUE
 
 /obj/item/gun/energy/laser/plasma/glock/gutsy
 	name ="\improper integrated plasma pistol"
@@ -34,3 +36,4 @@
 	item_state = "plasma-pistol"
 	icon_state = "plasma-pistol"
 	selfcharge = EGUN_SELFCHARGE_BORG
+	special_weapon = FALSE

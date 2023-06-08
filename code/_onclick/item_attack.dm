@@ -89,12 +89,18 @@
 		to_chat(user, "<span class='warning'>You don't want to harm other living beings!</span>")
 		return
 
+/*
+	if(istype(M, /mob/living))
+		var/mob/living/target = M
+		target.murder = user
+*/
+
 	// This code used to modify the force of the weapon directly, which is bad.
 	// It also had a lot of code duplication (many if statements with 'force >= 5' in them).
 	// Let this be a lesson not to do that. When in doubt, remember:
 	// Don't Repeat Yourself!
 
-	//damage_multiplier += (user.special_s/100)//SPECIAL integration
+	damage_multiplier += (user.special_s/100)//SPECIAL integration
 
 	var/bonus_damage = 0
 	if (force >= 5)

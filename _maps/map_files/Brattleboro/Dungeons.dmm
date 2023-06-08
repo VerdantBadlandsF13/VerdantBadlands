@@ -2629,16 +2629,6 @@
 	icon_state = "yellowdirtysolid"
 	},
 /area/f13/ahs)
-"fkT" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/obj/item/reagent_containers/pill/patch/healpoultice,
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
-	},
-/area/f13/tunnel)
 "fmf" = (
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plating/tunnel{
@@ -6639,9 +6629,6 @@
 /area/f13/bunker)
 "mWt" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/pill/patch/healingpowder,
-/obj/item/reagent_containers/pill/patch/healingpowder,
-/obj/item/reagent_containers/pill/patch/healingpowder,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -70367,7 +70354,7 @@ dDC
 dDC
 aLT
 oaj
-fkT
+mWt
 nmA
 aTA
 aTA

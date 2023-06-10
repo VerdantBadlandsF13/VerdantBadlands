@@ -1,7 +1,7 @@
 /obj/item/twohanded/required/pool
-	icon = 'modular_badlands/code/modules/pool/icons/pool.dmi'
-	lefthand_file = 'modular_badlands/code/modules/pool/icons/items_lefthand.dmi'
-	righthand_file = 'modular_badlands/code/modules/pool/icons/items_righthand.dmi'
+	icon = 'modular_badlands/code/modules/fluids/icons/fluids.dmi'
+	lefthand_file = 'modular_badlands/code/modules/fluids/icons/items_lefthand.dmi'
+	righthand_file = 'modular_badlands/code/modules/fluids/icons/items_righthand.dmi'
 	force = 0
 	damtype = STAMINA
 	w_class = WEIGHT_CLASS_BULKY
@@ -37,8 +37,8 @@
 
 /obj/item/twohanded/required/pool/pool_noodle
 	icon_state = "pool_noodle"
-	lefthand_file = 'modular_badlands/code/modules/pool/icons/melee_lefthand.dmi'
-	righthand_file = 'modular_badlands/code/modules/pool/icons/melee_righthand.dmi'
+	lefthand_file = 'modular_badlands/code/modules/fluids/icons/melee_lefthand.dmi'
+	righthand_file = 'modular_badlands/code/modules/fluids/icons/melee_righthand.dmi'
 	name = "pool noodle"
 	desc = "A long noodle made of foam. Helping those with fears of swimming swim since the 1980s."
 	var/suiciding = FALSE

@@ -20,7 +20,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/yk42equip.ogg'
 	special_weapon = TRUE
 
-/obj/item/gun/energy/ionrifle/attackby(obj/item/A, mob/user, params)
+/obj/item/gun/energy/pulse/attackby(obj/item/A, mob/user, params)
 	. = ..()
 	if(.)
 		return
@@ -42,7 +42,7 @@
 			else
 				to_chat(user, "<span class='warning'>You cannot seem to get \the [src] out of your hands!</span>")
 
-/obj/item/gun/energy/ionrifle/emp_act(severity)
+/obj/item/gun/energy/pulse/emp_act(severity)
 	return
 
 /obj/item/gun/energy/gutsy_flamethrower

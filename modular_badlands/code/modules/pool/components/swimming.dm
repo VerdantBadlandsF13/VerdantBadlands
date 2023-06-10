@@ -11,6 +11,7 @@
 	var/bob_height_min = 2
 	var/bob_height_max = 5
 	var/bob_tick = 0
+	var/floating = FALSE
 
 /datum/component/swimming/Initialize()
 	. = ..()
@@ -47,16 +48,19 @@
 
 /datum/component/swimming/proc/try_leave_pool(datum/source, turf/clicked_turf)
 	var/mob/living/L = parent
+	var/turf/T = get_turf(L)
 	if(!L.can_interact_with(clicked_turf))
 		return
 	if(is_blocked_turf(clicked_turf))
 		return
 	if(istype(clicked_turf, /turf/open/indestructible/sound/pool))
 		return
-	to_chat(parent, "<span class='notice'>You start to climb out of \the [src]...</span>")
+	if(istype(clicked_turf, /turf/open/liquid))
+		return
+	to_chat(parent, "<span class='notice'>You start to climb out of \the [T]...</span>")
 	if(do_after(parent, 1 SECONDS, clicked_turf))
 		L.forceMove(clicked_turf)
-		L.visible_message("<span class='notice'>[parent] climbs out of \the [src].</span>")
+		L.visible_message("<span class='notice'>[L] climbs out of \the [T].</span>")
 		RemoveComponent()
 
 /datum/component/swimming/UnregisterFromParent()
@@ -75,7 +79,6 @@
 
 /datum/component/swimming/process()
 	var/mob/living/L = parent
-	var/floating = FALSE
 	var/obj/item/twohanded/required/pool/helditem = L.get_active_held_item()
 	if(istype(helditem) && helditem.wielded)
 		bob_tick ++

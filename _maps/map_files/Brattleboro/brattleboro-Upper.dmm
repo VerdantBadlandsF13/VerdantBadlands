@@ -505,7 +505,7 @@
 	},
 /area/f13/building/mall)
 "cI" = (
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/village)
 "cJ" = (
 /obj/machinery/jukebox,

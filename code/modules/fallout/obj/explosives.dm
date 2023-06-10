@@ -82,9 +82,6 @@
 		if(ACTIVE)
 			. += span_warning("It seems activated!")
 
-
-
-
 /obj/item/grenade/plastic/c4/New()
 	wires = new /datum/wires/explosive/c4(src)
 	..()
@@ -160,7 +157,7 @@
 		return
 	if(triggered || !isturf(loc) || !isliving(arrived) || isstructure(arrived) || isnottriggermine(arrived))
 		return
-	
+
 	if(arrived.movement_type & FLYING)
 		return
 

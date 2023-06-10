@@ -69,7 +69,7 @@
 
 /datum/crafting_recipe/explosive/explomine
 	name = "High-Explosive Mine"
-	result = /obj/item/grenade/f13/mine/explosive
+	result = /obj/item/grenade/f13/mine
 	reqs = list(/obj/item/stack/sheet/metal = 10,
 			/obj/item/stack/crafting/metalparts = 2,
 			/obj/item/stack/crafting/goodparts = 1,

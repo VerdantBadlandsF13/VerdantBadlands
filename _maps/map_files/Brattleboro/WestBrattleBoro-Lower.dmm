@@ -258,11 +258,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
-"bj" = (
-/obj/effect/overlay/poolwater,
-/obj/structure/glowshroom/single,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "bk" = (
 /obj/machinery/smartfridge/bottlerack,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -401,7 +396,6 @@
 /area/f13/vault/science)
 "bT" = (
 /obj/structure/glowshroom/single,
-/obj/effect/overlay/poolwater,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
@@ -1392,13 +1386,6 @@
 	},
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/building)
-"fQ" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "fS" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/traitbooks/low,
@@ -2521,13 +2508,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/atrium)
-"km" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "kn" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2939,13 +2919,6 @@
 /obj/machinery/door/airlock/medical,
 /turf/open/floor/f13,
 /area/f13/vault/medical)
-"lX" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "lY" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 019;
@@ -3398,7 +3371,6 @@
 /turf/open/floor/f13,
 /area/f13/vault)
 "nI" = (
-/obj/item/gun/ballistic/revolver/hobo/piperifle,
 /obj/structure/sign/warning/explosives{
 	pixel_x = 32
 	},
@@ -4504,7 +4476,6 @@
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
 "sa" = (
-/obj/effect/overlay/poolwater,
 /obj/structure/nest/mirelurk,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -4604,7 +4575,7 @@
 	},
 /area/f13/vault)
 "sv" = (
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/vault/overseer)
 "sx" = (
 /obj/machinery/door/airlock/security{
@@ -6019,10 +5990,6 @@
 /area/f13/vault/garden)
 "yT" = (
 /obj/structure/decoration/vent/rusty,
-/turf/open/floor/plating/rust,
-/area/f13/tunnel)
-"yV" = (
-/obj/effect/overlay/poolwater,
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
 "yW" = (
@@ -8615,7 +8582,6 @@
 /area/f13/tunnel)
 "JW" = (
 /obj/structure/glowshroom/single,
-/obj/effect/overlay/poolwater,
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -8936,11 +8902,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/security)
-"Lw" = (
-/obj/effect/overlay/poolwater,
-/obj/structure/mirelurkegg,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Lx" = (
 /obj/item/stack/ore/slag,
 /obj/effect/turf_decal/weather/dirt{
@@ -9384,13 +9345,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault/diner)
-"Nr" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Nt" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -10357,11 +10311,6 @@
 	icon_state = "white"
 	},
 /area/f13/vault/lavatory)
-"RR" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "RV" = (
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/f13{
@@ -10978,7 +10927,6 @@
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
 "Up" = (
-/obj/effect/overlay/poolwater,
 /obj/effect/decal/cleanable/crayon{
 	name = "grafitti";
 	icon_state = "carp";
@@ -11538,10 +11486,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
-"Xl" = (
-/obj/effect/overlay/poolwater,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Xn" = (
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/medical)
@@ -11663,7 +11607,6 @@
 /turf/open/floor/f13,
 /area/f13/vault)
 "XT" = (
-/obj/effect/overlay/poolwater,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
@@ -11811,13 +11754,6 @@
 	icon_state = "white"
 	},
 /area/f13/vault/lavatory)
-"Yv" = (
-/obj/effect/overlay/poolwater,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Yy" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -27585,8 +27521,8 @@ Yf
 (61,1,1) = {"
 Yf
 RB
-fQ
-Nr
+oe
+gt
 UI
 UI
 UI
@@ -27842,9 +27778,9 @@ Yf
 (62,1,1) = {"
 Yf
 RB
-km
-Xl
-Nr
+Dy
+UI
+gt
 Gi
 UI
 UI
@@ -28098,8 +28034,8 @@ Yf
 "}
 (63,1,1) = {"
 Yf
-fQ
-Xl
+oe
+UI
 Up
 JW
 UI
@@ -28355,11 +28291,11 @@ Yf
 "}
 (64,1,1) = {"
 Yf
-km
-Xl
-Xl
-Xl
-Nr
+Dy
+UI
+UI
+UI
+gt
 Gi
 UI
 UI
@@ -28463,9 +28399,9 @@ RB
 RB
 Yf
 Yf
-Lw
-Xl
-bj
+Fx
+UI
+Jl
 Yf
 Yf
 RB
@@ -28614,9 +28550,9 @@ Yf
 Yf
 bT
 Up
-Xl
-Xl
-RR
+UI
+UI
+BI
 UI
 UI
 UI
@@ -28719,11 +28655,11 @@ RB
 RB
 Yf
 Yf
-Xl
-Xl
-Xl
+UI
+UI
+UI
 sa
-Xl
+UI
 Yf
 RB
 RB
@@ -28870,11 +28806,11 @@ Yf
 (66,1,1) = {"
 Yf
 Yf
-Yv
-Xl
-Xl
+qk
+UI
+UI
 Up
-Nr
+gt
 UI
 UI
 UI
@@ -28978,9 +28914,9 @@ Yf
 UI
 UI
 UI
-Xl
-Xl
-Lw
+UI
+UI
+Fx
 Yf
 Yf
 RB
@@ -29129,9 +29065,9 @@ Yf
 Yf
 Yf
 bT
-lX
-lX
-RR
+bp
+bp
+BI
 Gi
 UI
 UI
@@ -29517,7 +29453,7 @@ RB
 Wu
 QP
 QP
-yV
+df
 QP
 QP
 Wu
@@ -29773,8 +29709,8 @@ Wu
 RB
 Wu
 QP
-yV
-yV
+df
+df
 dT
 QP
 Wu

@@ -50,6 +50,9 @@
 				Knockdown(3 SECONDS)
 				to_chat(src, "<span class='danger'>You trip!</span>")
 
+		if(HAS_TRAIT(src, TRAIT_SNEAK))
+			adjustStaminaLoss(5)
+
 /mob/living/carbon/can_move_under_living(mob/living/other)
 	. = ..()
 	if(!.)		//we failed earlier don't need to fail again

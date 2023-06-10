@@ -8736,7 +8736,6 @@
 	},
 /area/f13/wasteland)
 "jHh" = (
-/obj/effect/overlay/poolwater,
 /turf/open/floor/grass,
 /area/f13/building)
 "jIq" = (
@@ -9539,7 +9538,6 @@
 	},
 /area/f13/tunnel)
 "kDU" = (
-/obj/effect/overlay/poolwater,
 /obj/structure/flora/ausbushes,
 /turf/open/floor/grass,
 /area/f13/building)
@@ -15757,7 +15755,6 @@
 	},
 /area/f13/building)
 "rGS" = (
-/obj/effect/overlay/poolwater,
 /obj/structure/flora/ausbushes/reedbush,
 /turf/open/floor/grass,
 /area/f13/building)
@@ -16001,7 +15998,6 @@
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
 "sdm" = (
-/obj/effect/overlay/poolwater,
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/open/floor/grass,
 /area/f13/building)
@@ -17749,7 +17745,6 @@
 /area/f13/building)
 "tXc" = (
 /obj/structure/statue/sandstone/venus,
-/obj/effect/overlay/poolwater,
 /turf/open/floor/grass,
 /area/f13/building)
 "tXu" = (
@@ -20769,7 +20764,6 @@
 /area/f13/building)
 "xFQ" = (
 /obj/machinery/light/floor,
-/obj/effect/overlay/poolwater,
 /turf/open/floor/f13{
 	icon_state = "rarewhite"
 	},

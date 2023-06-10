@@ -102,6 +102,13 @@
 	canSmoothWith = null
 	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
 
+/obj/structure/lattice/catwalk/Initialize(mapload)
+	. = ..()
+	var/turf/T = get_turf(src)
+	if(istype(T, /turf/open))
+		var/turf/open/O = T
+		O.has_catwalk = TRUE
+
 /obj/structure/lattice/catwalk/deconstruction_hints(mob/user)
 	to_chat(user, "<span class='notice'>The supporting rods look like they could be <b>cut</b>.</span>")
 

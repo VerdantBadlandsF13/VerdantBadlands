@@ -107,7 +107,7 @@
 
 	if((direction & (direction - 1)) && mob.loc == n) //moved diagonally successfully
 		add_delay *= SQRT_2
-	
+
 	if(visual_delay)
 		mob.set_glide_size(visual_delay)
 	else
@@ -116,7 +116,7 @@
 	if(.) // If mob is null here, we deserve the runtime
 		if(mob.throwing)
 			mob.throwing.finalize(FALSE)
-		
+
 		SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_MOVED)
 
 	var/atom/movable/AM = L.pulling
@@ -471,7 +471,7 @@
 	layer -= MOB_LAYER_SHIFT_INCREMENT
 	var/layer_priority = (layer - MOB_LAYER) * 100 // Just for text feedback
 	to_chat(src, span_notice("Your layer priority is now [layer_priority]."))
-	
+
 /mob/verb/up()
 	set name = "Move Upwards"
 	set category = "IC"

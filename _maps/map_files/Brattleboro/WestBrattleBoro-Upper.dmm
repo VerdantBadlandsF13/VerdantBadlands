@@ -473,7 +473,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "db" = (
 /obj/structure/lattice/catwalk,
@@ -3033,7 +3033,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "tK" = (
 /obj/structure/table/wood,
@@ -3049,7 +3049,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 5
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "tP" = (
 /obj/structure/curtain{
@@ -3986,7 +3986,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 10
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "zA" = (
 /obj/structure/bed/wooden,
@@ -4972,7 +4972,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "FS" = (
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "FT" = (
 /obj/structure/lattice/catwalk,
@@ -6090,7 +6090,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "LW" = (
 /obj/structure/chair/sofa,
@@ -7607,7 +7607,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "UB" = (
 /obj/structure/lattice/catwalk,
@@ -7739,7 +7739,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
 	},
-/turf/open/water,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "Vk" = (
 /obj/structure/curtain{

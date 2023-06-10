@@ -168,11 +168,6 @@
 	infinite = FALSE
 	mob_types = list(/mob/living/simple_animal/hostile/raider/ranged/boss = 5)
 
-/obj/structure/nest/raider/legendary
-	max_mobs = 1
-	infinite = FALSE
-	mob_types = list(/mob/living/simple_animal/hostile/raider/legendary = 1)
-
 /obj/structure/nest/protectron
 	name = "protectron pod"
 	desc = "An old robot storage system. This one looks like it is connected to a storage system underground."

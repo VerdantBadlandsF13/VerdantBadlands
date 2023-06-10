@@ -155,6 +155,11 @@ ATTACHMENTS
 	var/jam_fixing = FALSE// Is someone unjamming me?
 	var/jam_fixtime = 100// How long do I take to unjam?
 
+	var/heavy_weapon = FALSE// Does this weapon require high strength to use?
+	var/special_weapon = FALSE// Does this weapon require high intelligence to use?
+
+	var/pb_knockback = 0// Does this weapon toss targets?
+
 /obj/item/gun/AltClick(mob/user)
 	if(jammed)
 		if(jam_fixing)
@@ -310,8 +315,16 @@ ATTACHMENTS
 		if(message)
 			if(pointblank)
 				user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(pb_knockback > 0 && ismob(pbtarget))
+					var/mob/PBT = pbtarget
+					var/atom/throw_target = get_edge_target_turf(PBT, user.dir)
+					PBT.throw_at(throw_target, pb_knockback, 2)
 			else
-				user.visible_message("<span class='danger'>[user] fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_ACTIVE))
+					user.visible_message("<span class='danger'>[user] fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+				else
+					user.visible_message("<span class='danger'>[user] hip fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
+					shake_camera(user, recoil + 1, recoil)
 
 //Adds logging to the attack log whenever anyone draws a gun, adds a pause after drawing a gun before you can do anything based on it's size
 /obj/item/gun/pickup(mob/living/user)
@@ -396,6 +409,23 @@ ATTACHMENTS
 
 	if(weapon_weight == WEAPON_HEAVY && user.get_inactive_held_item())
 		to_chat(user, "<span class='userdanger'>You need both hands free to fire \the [src]!</span>")
+		return
+
+	if(heavy_weapon == TRUE)
+		if(user.special_s <= 6)
+			user.dropItemToGround(src, TRUE)
+			to_chat(user, "<span class='userdanger'>This weapon is far too unwieldy for someone of your build!</span>")
+			return
+
+	if(special_weapon == TRUE)
+		if(user.special_i <= 6)
+			user.dropItemToGround(src, TRUE)
+			to_chat(user, "<span class='userdanger'>This weapon is far too advanced for someone like you!</span>")
+			return
+
+	if(istype(src, /obj/item/gun/energy) && user.special_i <= 3)
+		user.dropItemToGround(src, TRUE)
+		to_chat(user, "<span class='userdanger'>Try as you might, you have no idea how this thing works!</span>")
 		return
 
 	if (automatic == 0)
@@ -495,6 +525,26 @@ ATTACHMENTS
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
 					jammed = TRUE
+
+	if(condition == 1)
+		if(user.special_l >= 1)
+			if(prob(15 - (user.special_l * 0.05)))
+				if(can_jam)
+					jammed = TRUE
+
+	if(user.special_s <= 6)
+		bonus_spread += 5
+
+	if(user.special_s <= 4)
+		bonus_spread += 20
+
+	if(user.special_s <= 2)
+		bonus_spread += 35
+
+	if(user.special_s <= 2)
+		if(prob(5))
+			to_chat(user, "<span class='userdanger'>You lose control of \the [src]!</span>")
+			bonus_spread += rand(35,125)
 
 	if(on_cooldown())
 		return
@@ -996,7 +1046,7 @@ ATTACHMENTS
 /obj/item/gun/proc/getinaccuracy(mob/living/user, bonus_spread, stamloss)
 	if(inaccuracy_modifier == 0)
 		return bonus_spread
-	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier //+ 50 + (-user.special_p*5)//SPECIAL Integration
+	var/base_inaccuracy = weapon_weight * 25 * inaccuracy_modifier+ 50 + (-user.special_p*5)//SPECIAL Integration
 	var/aiming_delay = 0 //Otherwise aiming would be meaningless for slower guns such as sniper rifles and launchers.
 	if(fire_delay)
 		var/penalty = (last_fire + GUN_AIMING_TIME + fire_delay) - world.time

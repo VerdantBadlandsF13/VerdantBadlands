@@ -1,17 +1,11 @@
-// DM Environment file for tgstation.dme.
-// All manual changes should be made outside the BEGIN_ and END_ blocks.
-// New source code should be placed in .dm files: choose File/New --> Code File.
 // BEGIN_INTERNALS
 // END_INTERNALS
-
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 // END_FILE_DIR
-
 // BEGIN_PREFERENCES
 #define DEBUG
 // END_PREFERENCES
-
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
 #include "code\_compile_options.dm"
@@ -988,7 +982,6 @@
 #include "code\game\objects\effects\forcefields.dm"
 #include "code\game\objects\effects\glowshroom.dm"
 #include "code\game\objects\effects\landmarks.dm"
-#include "code\game\objects\effects\mines.dm"
 #include "code\game\objects\effects\misc.dm"
 #include "code\game\objects\effects\overlays.dm"
 #include "code\game\objects\effects\portals.dm"
@@ -1384,7 +1377,6 @@
 #include "code\modules\admin\create_object.dm"
 #include "code\modules\admin\create_poll.dm"
 #include "code\modules\admin\create_turf.dm"
-#include "code\modules\admin\fun_balloon.dm"
 #include "code\modules\admin\holder2.dm"
 #include "code\modules\admin\ipintel.dm"
 #include "code\modules\admin\IsBanned.dm"
@@ -1508,7 +1500,6 @@
 #include "code\modules\antagonists\blob\blob\blobstrains\shifting_fragments.dm"
 #include "code\modules\antagonists\blob\blob\blobstrains\synchronous_mesh.dm"
 #include "code\modules\antagonists\blob\blob\blobstrains\zombifying_pods.dm"
-#include "code\modules\antagonists\blood_contract\blood_contract.dm"
 #include "code\modules\antagonists\bloodsucker\bloodsucker_flaws.dm"
 #include "code\modules\antagonists\bloodsucker\bloodsucker_integration.dm"
 #include "code\modules\antagonists\bloodsucker\bloodsucker_life.dm"
@@ -2110,7 +2101,6 @@
 #include "code\modules\fallout\obj\manual\bos\bos_chain.dm"
 #include "code\modules\fallout\obj\manual\bos\bos_codex.dm"
 #include "code\modules\fallout\obj\manual\ncr\ncr_job_guide.dm"
-#include "code\modules\fallout\obj\spawners\lootdrops.dm"
 #include "code\modules\fallout\obj\spawners\mob_spawner.dm"
 #include "code\modules\fallout\obj\stack\f13Cash.dm"
 #include "code\modules\fallout\obj\stack\hide.dm"
@@ -2406,6 +2396,7 @@
 #include "code\modules\jobs\job_types\bl_lumber.dm"
 #include "code\modules\jobs\job_types\bl_mountain.dm"
 #include "code\modules\jobs\job_types\bl_sillycone.dm"
+#include "code\modules\jobs\job_types\bl_vault.dm"
 #include "code\modules\jobs\job_types\wasteland.dm"
 #include "code\modules\jobs\job_types\SS13\captain.dm"
 #include "code\modules\jobs\job_types\SS13\detective.dm"
@@ -3675,7 +3666,6 @@
 #include "modular_badlands\code\modules\pool\pool_items.dm"
 #include "modular_badlands\code\modules\pool\turf_danger.dm"
 #include "modular_badlands\code\modules\pool\components\swimming.dm"
-#include "modular_badlands\code\modules\power_armor\_readme.dm"
 #include "modular_badlands\code\modules\power_armor\helmets.dm"
 #include "modular_badlands\code\modules\power_armor\power_armor_base.dm"
 #include "modular_badlands\code\modules\power_armor\repair_kits.dm"
@@ -3714,6 +3704,7 @@
 #include "modular_badlands\code\modules\unsorted\weaponry\bb_gun.dm"
 #include "modular_badlands\code\modules\unsorted\weaponry\laser_gatling.dm"
 #include "modular_badlands\code\modules\unsorted\weaponry\launchers.dm"
+#include "modular_badlands\code\modules\unsorted\weaponry\mines.dm"
 #include "modular_badlands\code\modules\unsorted\weaponry\muskets.dm"
 #include "modular_citadel\code\datums\components\souldeath.dm"
 #include "modular_citadel\code\datums\status_effects\chems.dm"

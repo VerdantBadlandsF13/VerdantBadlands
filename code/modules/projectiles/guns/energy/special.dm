@@ -18,6 +18,7 @@
 	flight_x_offset = 17
 	flight_y_offset = 9
 	equipsound = 'sound/f13weapons/equipsounds/yk42equip.ogg'
+	special_weapon = TRUE
 
 /obj/item/gun/energy/ionrifle/attackby(obj/item/A, mob/user, params)
 	. = ..()
@@ -70,6 +71,7 @@
 	slowdown = 1
 	weapon_weight = WEAPON_HEAVY
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
+	special_weapon = TRUE
 
 /obj/item/gun/energy/taser
 	name = "taser gun"

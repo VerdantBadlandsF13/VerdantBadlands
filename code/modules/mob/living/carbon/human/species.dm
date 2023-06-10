@@ -1232,6 +1232,12 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	return
 
 /datum/species/proc/after_equip_job(datum/job/J, mob/living/carbon/human/H)
+	if(H.special_i <= 3)
+		H.grant_language(/datum/language/aphasia)
+		H.remove_language(/datum/language/common)
+	if(H.special_i >= 8)
+		to_chat(H,"You can understand idiots!")
+		H.grant_language(/datum/language/aphasia)
 	H.update_mutant_bodyparts()
 
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
@@ -2011,7 +2017,17 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	if(damage == 0)
 		return 0
+/*
+	if(H.murder)
+		var/mob/living/carbon/murder = H.murder
+		if((murder.social_faction != "none") && (murder.social_faction != "neutral"))
+			if(murder.social_faction == H.social_faction)
+				if(H.perks.have(/datum/perk/spraypray))
+					hit_percent *= 0.01
 
+	if(H.perks.have(/datum/perk/toughness))
+		hit_percent *= 0.9
+*/
 	var/sharp_mod = 1 //this line of code here is meant for species to have various damage modifiers to their brute intake based on the flag of the weapon.
 	switch(sharpness)
 		if(SHARP_NONE)

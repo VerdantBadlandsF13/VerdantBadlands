@@ -198,12 +198,6 @@
 	},
 /turf/closed/wall/rust,
 /area/f13/sewer)
-"aY" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottom0"
-	},
-/area/f13/tunnel)
 "aZ" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal,
@@ -424,12 +418,6 @@
 /obj/structure/junk/small/disco,
 /turf/open/floor/plating,
 /area/f13/sewer)
-"cb" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/sewer)
 "cd" = (
 /obj/structure/table/wood/settler,
 /obj/item/sharpener/cult,
@@ -512,11 +500,6 @@
 /mob/living/simple_animal/hostile/faithless,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"cw" = (
-/obj/structure/lattice/catwalk,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plating/rust,
-/area/f13/sewer)
 "cy" = (
 /obj/effect/overlay/junk/oldpipes{
 	dir = 8;
@@ -548,7 +531,6 @@
 /area/f13/caves)
 "cE" = (
 /obj/item/kirbyplants/dead,
-/obj/effect/spawner/lootdrop/trash,
 /obj/effect/overlay/junk/oldpipes{
 	pixel_y = 1;
 	dir = 5
@@ -575,12 +557,6 @@
 "cN" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
-"cO" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaltopbordertop0"
-	},
 /area/f13/tunnel)
 "cP" = (
 /obj/structure/obstacle/barbedwire/end{
@@ -923,12 +899,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/village)
-"es" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontaltopborderbottom0"
-	},
-/area/f13/tunnel)
 "et" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/wood/wood_fancy,
@@ -1258,13 +1228,6 @@
 	pixel_x = -4
 	},
 /turf/open/floor/plating,
-/area/f13/sewer)
-"gd" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
 /area/f13/sewer)
 "ge" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1712,10 +1675,6 @@
 /obj/item/storage/box/syringes,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
-"ij" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plating/rust,
-/area/f13/sewer)
 "ik" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/oil,
@@ -1817,12 +1776,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
-"iQ" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/wood/wood_common{
-	icon_state = "common-broken1"
-	},
-/area/f13/sewer)
 "iR" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibdown1"
@@ -2100,17 +2053,6 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
-"ko" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "red";
-	pixel_x = -15
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/sewer)
 "kr" = (
 /turf/closed/indestructible/riveted/boss,
 /area/f13/tunnel)
@@ -2595,10 +2537,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
-"mY" = (
-/obj/effect/spawner/lootdrop/wmelee_low,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "mZ" = (
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
@@ -2708,14 +2646,6 @@
 /obj/structure/reagent_dispensers/compostbin,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
-"nv" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/overlay/junk/oldpipes{
-	pixel_y = 2;
-	pixel_x = -1
-	},
-/turf/open/floor/plating/rust,
-/area/f13/sewer)
 "nx" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "vaultfinale5";
@@ -3017,11 +2947,6 @@
 /obj/item/book/granter/crafting_recipe/gunsmith_four,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
-"oL" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plating,
-/area/f13/sewer)
 "oN" = (
 /obj/structure/decoration/warning{
 	pixel_x = 32
@@ -6020,13 +5945,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"CG" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/sewer)
 "CI" = (
 /obj/structure/flora/wasteplant/wild_punga,
 /turf/open/indestructible/ground/inside/mountain,
@@ -6436,10 +6354,6 @@
 "Fj" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/plating/rust,
-/area/f13/sewer)
-"Fk" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/wood/wood_common,
 /area/f13/sewer)
 "Fm" = (
 /obj/structure/chair/sofa/left,
@@ -7337,10 +7251,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"Jn" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/sewer)
 "Jo" = (
 /obj/structure/stairs/east{
 	icon = 'icons/fallout/turfs/asphalt.dmi';
@@ -8288,21 +8198,6 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
-"NT" = (
-/obj/effect/spawner/lootdrop/trash,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/sewer)
-"NU" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 1;
-	icon_state = "verticalrightborderright0"
-	},
-/area/f13/tunnel)
 "NV" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/welder_tools,
@@ -8820,10 +8715,6 @@
 /obj/structure/glowshroom/glowcap,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"QB" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
 "QC" = (
 /obj/effect/decal/cleanable/blood/footprints{
 	icon_state = "blood2"
@@ -9245,10 +9136,6 @@
 "Sy" = (
 /turf/closed/wall/f13/store,
 /area/f13/caves)
-"SA" = (
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/plating,
-/area/f13/sewer)
 "SF" = (
 /obj/structure/chair/sofa/corner{
 	dir = 1
@@ -24614,7 +24501,7 @@ Dp
 Dc
 Dc
 Dc
-NU
+Dc
 Dc
 Dc
 Dc
@@ -26910,7 +26797,7 @@ DP
 DP
 DP
 DP
-QB
+DP
 DP
 DP
 fg
@@ -27808,7 +27695,7 @@ Ko
 OJ
 Dc
 Dc
-NU
+Dc
 Dc
 Dc
 Dc
@@ -29740,7 +29627,7 @@ vV
 EY
 zx
 vV
-Jn
+EY
 ix
 ix
 ix
@@ -30693,7 +30580,7 @@ Va
 ix
 px
 PV
-SA
+RE
 ni
 ix
 ix
@@ -31022,7 +30909,7 @@ Ko
 fg
 It
 Jo
-QB
+DP
 qM
 DP
 DP
@@ -31114,7 +31001,7 @@ vV
 lL
 ix
 eS
-cb
+vV
 Dn
 ix
 Va
@@ -31153,7 +31040,7 @@ uf
 Fz
 jq
 wm
-nv
+Ja
 Ja
 Ja
 Ja
@@ -31606,9 +31493,9 @@ Va
 Va
 ix
 cE
-SA
-ij
-ij
+RE
+HF
+HF
 ix
 ix
 ix
@@ -32521,7 +32408,7 @@ Va
 Va
 Va
 ix
-oL
+Uh
 XO
 ix
 Va
@@ -34756,7 +34643,7 @@ Va
 ix
 Nh
 EY
-Jn
+EY
 vV
 vV
 EY
@@ -35230,7 +35117,7 @@ Va
 ix
 KL
 EY
-cb
+vV
 Ac
 ix
 Va
@@ -35674,7 +35561,7 @@ ix
 ix
 vV
 vV
-Jn
+EY
 ix
 Va
 Va
@@ -36116,7 +36003,7 @@ Va
 ft
 EY
 EY
-Jn
+EY
 EY
 Ly
 ft
@@ -36571,7 +36458,7 @@ Va
 ft
 ft
 ft
-Jn
+EY
 EY
 EY
 EY
@@ -36595,7 +36482,7 @@ Va
 Va
 ix
 vV
-Jn
+EY
 vV
 EY
 EY
@@ -37045,7 +36932,7 @@ Va
 ix
 uc
 Ym
-cb
+vV
 so
 ix
 ix
@@ -37514,7 +37401,7 @@ EY
 Va
 ix
 Yw
-Jn
+EY
 lv
 EY
 ix
@@ -37944,11 +37831,11 @@ ft
 ft
 ft
 Ly
-Jn
 EY
 EY
 EY
-Jn
+EY
+EY
 EY
 fb
 ft
@@ -38417,12 +38304,12 @@ ix
 KL
 vV
 EY
-cb
+vV
 ix
 Va
 Va
 ix
-ko
+Jk
 EY
 ix
 Va
@@ -39709,7 +39596,7 @@ DP
 qM
 DP
 DP
-aY
+fg
 It
 Ko
 Va
@@ -40688,7 +40575,7 @@ Va
 Va
 ft
 EY
-Jn
+EY
 ft
 ft
 Va
@@ -44273,7 +44160,7 @@ Va
 OA
 Ko
 fg
-cO
+It
 Jo
 DP
 DP
@@ -44344,7 +44231,7 @@ Va
 ix
 Ul
 EY
-cb
+vV
 ix
 Va
 ix
@@ -44799,7 +44686,7 @@ Va
 Va
 Va
 ix
-CG
+oV
 vV
 EY
 ix
@@ -46105,7 +45992,7 @@ It
 Jo
 DP
 DP
-QB
+DP
 DP
 fg
 It
@@ -46169,7 +46056,7 @@ Va
 Va
 ix
 Cm
-Jn
+EY
 vV
 Xh
 vV
@@ -47543,7 +47430,7 @@ Va
 Va
 ix
 vV
-cb
+vV
 ix
 Va
 ix
@@ -48461,7 +48348,7 @@ vV
 vV
 vV
 vV
-cb
+vV
 vV
 vV
 vV
@@ -48925,7 +48812,7 @@ vV
 vV
 KL
 vV
-cb
+vV
 vV
 OT
 PJ
@@ -50298,7 +50185,7 @@ VM
 Md
 ix
 rc
-NT
+yv
 Rm
 ix
 ix
@@ -50669,7 +50556,7 @@ dU
 DP
 DP
 DP
-QB
+DP
 Yj
 Dc
 Dc
@@ -51215,7 +51102,7 @@ PQ
 pX
 yv
 yv
-gd
+DU
 Rm
 ix
 Va
@@ -51670,7 +51557,7 @@ Md
 ix
 Eh
 Zb
-NT
+yv
 XA
 DT
 XA
@@ -56605,7 +56492,7 @@ Va
 OA
 Ko
 fg
-cO
+It
 dU
 DP
 qM
@@ -57069,7 +56956,7 @@ qM
 DP
 DP
 fg
-cO
+It
 Ko
 OA
 Va
@@ -61176,7 +61063,7 @@ OA
 Ko
 fg
 It
-es
+dU
 DP
 DP
 DP
@@ -63524,7 +63411,7 @@ zw
 zw
 EY
 SI
-cb
+vV
 GT
 GT
 GT
@@ -63970,7 +63857,7 @@ Va
 Va
 ft
 ft
-iQ
+jf
 jf
 wD
 np
@@ -63978,7 +63865,7 @@ jf
 zw
 SI
 jf
-Jn
+EY
 ft
 Md
 vV
@@ -65811,7 +65698,7 @@ vV
 vV
 vV
 Ga
-cw
+Ga
 Ga
 vV
 vV
@@ -68550,7 +68437,7 @@ Va
 Va
 ft
 ft
-Fk
+zw
 EY
 ft
 ft
@@ -70377,12 +70264,12 @@ Va
 Va
 ft
 ft
-Jn
+EY
 EY
 zw
 SI
 zw
-Jn
+EY
 ft
 Va
 Va
@@ -71001,7 +70888,7 @@ Xb
 Xb
 qt
 CI
-mY
+CS
 CS
 Va
 Va

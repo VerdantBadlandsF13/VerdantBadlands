@@ -27,3 +27,4 @@ TODO: Add the sound loop, when equipped.
 	slowdown = 1
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
+	special_weapon = TRUE

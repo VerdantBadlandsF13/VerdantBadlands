@@ -315,7 +315,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Refresh once the game has finished setting up...</b><br>"
 			dat += "</td>"
 
-/*
 			dat += "<b>Special Names:</b><BR>"
 			var/old_group
 			for(var/custom_name_id in GLOB.preferences_custom_names)
@@ -328,6 +327,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href ='?_src_=prefs;preference=[custom_name_id];task=input'><b>[namedata["pref_name"]]:</b> [custom_names[custom_name_id]]</a> "
 			dat += "<br><br>"
 
+/*
 Records disabled until a use for them is found
 			dat += "<b>Custom job preferences:</b><BR>"
 			dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Preferred AI Core Display:</b> [preferred_ai_core_display]</a><br>"
@@ -1395,15 +1395,69 @@ Records disabled until a use for them is found
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
 	dat += "<center><b>Allocate points</b></center>"
-	dat += "<center>Note: SPECIAL is purely cosmetic. These points have no effect on gameplay.</center><br>"
+	dat += "<div class='panel redborder'><center>Note: SPECIAL is essential to gameplay.</center></div><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
-	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
-	dat += "<b>Perception  :</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
-	dat += "<b>Endurance   :</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
-	dat += "<b>Charisma    :</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Strength:</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
+	dat += "Strength is the overall measure of a character's fitness. It handles matters such as recoil, <br>\
+	melee damage and more. Characters with a low strength stat will be unable to use firearms effectively, <br>\
+	alongside suffering heavily in melee combat."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Perception:</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
+	dat += "Perception is the overall measure of a character's cognition. It handles matters such as trap detection, <br>\
+	firearm accuracy and more. Characters with a high perception stat will be able to see what's in someone's pockets, <br>\
+	can spot buried traps and have significantly increased firearm accuracy."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Endurance:</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
+	dat += "Endurance is the overall measure of a character's fortitude. It handles matters such as health, <br>\
+	radiation resistance and more. Characters with a low endurance stat will take far less damage before perishing, <br>\
+	and will be forced to rely heavily on anti-radiation chems."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Charisma:</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
+	dat += "Charisma is the overall measure of a character's charm. It handles matters such as speech, <br>\
+	lies and more. Currently, a character with charisma as their dump stat will have issues communicating. <br>\
+	They will stutter, speak gibberish and overall find themselves a stump when it comes to social interactions."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
 	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
-	dat += "<b>Agility     :</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
-	dat += "<b>Luck        :</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
+	dat += "Intelligence is the overall measure of a character's intellect. It handles matters such as reading, <br>\
+	using advanced weaponry and more. Currently, a character with low intelligence will have be incapable of <br>\
+	using energy weapons. Extremely low values will prevent speaking English, while the inverse will allow you to <br>\
+	communicate with the lowest of intelligence characters."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Agility:</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
+	dat += "Agility is the overall measure of a character's gracefulness. It handles matters such as theft, <br>\
+	stealth and more. Currently, a character with high agility will have much more success with stealthboys, provide <br>\
+	no warning to those they pickpocket, move much faster and overall outpace most characters athletically."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
+	dat += "<b>Luck:</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
+	dat += "Luck is the overall measure of a character's fortune. It handles a large number of outcomes, <br>\
+	from looting, weapon jamming and more. Currently, a character with low luck will find their ballistic weapons failing frequently, <br>\
+	and find far less when scavenging."
+
+	dat += "<BR>"
+	dat += "<BR>"
+
 	if (total>40)
 		dat += "<center>Maximum exceeded, please change until your total is at or below 40<center>"
 	else
@@ -1585,45 +1639,45 @@ Records disabled until a use for them is found
 				ask_for_custom_name(user,href_list["preference"])
 			switch(href_list["preference"])
 				if("special_s")
-					var/new_point = input(user, "Choose Amount(1-9)", "Strength") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Strength") as num|null
 					if(new_point)
-						special_s = max(min(round(text2num(new_point)), 9),1)
+						special_s = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_p")
-					var/new_point = input(user, "Choose Amount(1-9)", "Perception") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Perception") as num|null
 					if(new_point)
-						special_p = max(min(round(text2num(new_point)), 9),1)
+						special_p = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_e")
-					var/new_point = input(user, "Choose Amount(1-9)", "Endurance") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Endurance") as num|null
 					if(new_point)
-						special_e = max(min(round(text2num(new_point)), 9),1)
+						special_e = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_c")
-					var/new_point = input(user, "Choose Amount(1-9)", "Charisma") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Charisma") as num|null
 					if(new_point)
-						special_c = max(min(round(text2num(new_point)), 9),1)
+						special_c = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_i")
-					var/new_point = input(user, "Choose Amount(1-9)", "Intelligence") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Intelligence") as num|null
 					if(new_point)
-						special_i = max(min(round(text2num(new_point)), 9),1)
+						special_i = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_a")
-					var/new_point = input(user, "Choose Amount(1-9)", "Agility") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Agility") as num|null
 					if(new_point)
-						special_a = max(min(round(text2num(new_point)), 9),1)
+						special_a = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("special_l")
-					var/new_point = input(user, "Choose Amount(1-9)", "Luck") as num|null
+					var/new_point = input(user, "Choose Amount(1-10)", "Luck") as num|null
 					if(new_point)
-						special_l = max(min(round(text2num(new_point)), 9),1)
+						special_l = max(min(round(text2num(new_point)), 10),1)
 					SetSpecial(user)
 					return 1
 				if("ghostform")

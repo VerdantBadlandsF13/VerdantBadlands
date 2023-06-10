@@ -31,67 +31,6 @@
 				/datum/reagent/medicine/silver_sulfadiazine = 10)
 	category = CAT_MEDICAL
 
-/datum/crafting_recipe/healpowder
-	name = "Healing powder"
-	result = /obj/item/reagent_containers/pill/patch/healingpowder
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 3,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 3)
-	time = 15
-	category = CAT_MEDICAL
-
-/datum/crafting_recipe/healpowder5
-	name = "Batch of healing powders (x5)"
-	result = /obj/item/storage/box/medicine/powder5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 15,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 15)
-	time = 20
-	category = CAT_MEDICAL
-
-/datum/crafting_recipe/bitterdrink
-	name = "Bottle bitterdrink"
-	result = /obj/item/reagent_containers/pill/patch/bitterdrink
-	reqs = list(/datum/reagent/medicine/bitter_drink = 30)
-	time = 20
-	category = CAT_MEDICAL
-
-/datum/crafting_recipe/bitterdrink5
-	name = "Batch of bitterdrink (x5)"
-	result = /obj/item/storage/box/medicine/bitterdrink5
-	reqs = list(/datum/reagent/medicine/bitter_drink = 150)
-	time = 30
-	category = CAT_MEDICAL
-
-/datum/crafting_recipe/berserker_powder
-	name = "Berserker powder"
-	result = /obj/item/reagent_containers/pill/patch/healingpowder/berserker
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/mushroom/angel = 2,
-				/obj/item/reagent_containers/food/snacks/grown/agave = 2,
-				/datum/reagent/blood = 30)
-	time = 40
-	category = CAT_MEDICAL
-	always_available = FALSE
-
-/datum/crafting_recipe/healpoultice
-	name = "Healing poultice"
-	result = /obj/item/reagent_containers/pill/patch/healpoultice
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 2)
-	time = 15
-	category = CAT_MEDICAL
-
-/datum/crafting_recipe/healpoultice5
-	name = "Batch of healing poultice (x5)"
-	result = /obj/item/storage/box/medicine/poultice5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 10,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 10,
-				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 10)
-	time = 20
-	category = CAT_MEDICAL
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -102,24 +41,6 @@
 				/obj/item/reagent_containers/food/snacks/grown/bee_balm = 2) //Beebalm was a smelling salt utilized in the victorian era for vaporous herbal remedies to things like sore throats.
 	time = 50
 	category = CAT_MEDICAL
-
-/datum/crafting_recipe/hydra
-	name = "Hydra"
-	result = /obj/item/reagent_containers/pill/patch/hydra
-	reqs = list(/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 2,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 2)
-	time = 15
-	category = CAT_MEDICAL
-	always_available = FALSE
-
-/datum/crafting_recipe/legionmedx
-	name = "Natural Painkiller"
-	result = /obj/item/reagent_containers/pill/patch/healingpowder/legionmedx
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/fungus = 2)
-	time = 15
-	category = CAT_MEDICAL
-	always_available = FALSE
 
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
@@ -168,7 +89,6 @@
 	time = 20
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
-
 
 /datum/crafting_recipe/jet
 	name = "Jet"
@@ -229,15 +149,6 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
-
-/datum/crafting_recipe/extract_gaia
-	name = "Extract gaia"
-	result = /obj/item/reagent_containers/glass/bottle/gaia
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/ambrosia/gaia  = 6,
-	/datum/reagent/water = 50)
-	time = 20
-	tools = list(TOOL_WORKBENCH)
-	category = CAT_MEDICAL
 
 /datum/crafting_recipe/primitive_defib
 	name = "Improvised Defibrillator"

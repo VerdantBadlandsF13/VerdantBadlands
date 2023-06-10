@@ -223,12 +223,6 @@
 	cost = 95
 	item_path = /obj/item/reagent_containers/hypospray/medipen/stimpak
 
-/datum/gang_item/equipment/healingpowder
-	name = "Healing Powder"
-	id = "healingpowder"
-	cost = 55
-	item_path = /obj/item/reagent_containers/pill/patch/healingpowder
-
 /datum/gang_item/equipment/emp
 	name = "EMP Grenade"
 	id = "EMP"

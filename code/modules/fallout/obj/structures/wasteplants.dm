@@ -161,13 +161,11 @@
 	desc = "This irradiated sapling offers a fruit that is highly nutritious and hydrating."
 	produce = /obj/item/reagent_containers/food/snacks/grown/mutfruit
 
-
 /obj/structure/flora/wasteplant/wild_fungus
 	name = "cave fungi"
 	icon_state = "wild_fungus"
 	desc = "This edible strain of fungus grows in dark places and is said to have anti-toxic properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/fungus
-
 
 /obj/structure/flora/wasteplant/wild_agave
 	name = "wild agave"
@@ -195,3 +193,76 @@
 	icon = 'icons/obj/flora/deadtrees.dmi'
 	icon_state = "cactus"
 	log_amount = 2
+
+//////
+// Reused jungle sprites, for Vermont.
+//////
+
+/obj/structure/flora/grass/vermont
+	name = "thick grass"
+	desc = "Thick flora, birthed from the Vermont wilderness."
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "grassa"
+
+/obj/structure/flora/grass/vermont/Initialize()
+	. = ..()
+	icon_state = "[icon_state][rand(1, 5)]"
+
+/obj/structure/flora/grass/vermont/b
+	icon_state = "grassb"
+
+// Rocks
+
+/obj/structure/flora/rock/vermont
+	icon_state = "pile of rocks"
+	desc = "A pile of rocks."
+	icon_state = "rock"
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	density = FALSE
+
+/obj/structure/flora/rock/vermont/Initialize()
+	. = ..()
+	icon_state = "[initial(icon_state)][rand(1,5)]"
+
+
+// Bushes
+
+/obj/structure/flora/vermontbush
+	name = "bush"
+	desc = "A wild plant, birthed from the Vermont wilderness."
+	icon = 'icons/obj/flora/jungleflora.dmi'
+	icon_state = "busha"
+
+/obj/structure/flora/vermontbush/Initialize()
+	. = ..()
+	icon_state = "[icon_state][rand(1, 3)]"
+
+/obj/structure/flora/vermontbush/b
+	icon_state = "bushb"
+
+/obj/structure/flora/vermontbush/c
+	icon_state = "bushc"
+
+/obj/structure/flora/vermontbush/large
+	icon_state = "bush"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	pixel_x = -16
+	pixel_y = -12
+	plane = MOB_PLANE
+	layer = ABOVE_ALL_MOB_LAYER
+
+/obj/structure/flora/vermontbush/large/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency, 1, 1)
+
+/obj/structure/flora/rock/pile/largevermont
+	name = "rocks"
+	icon_state = "rocks"
+	icon = 'icons/obj/flora/largejungleflora.dmi'
+	density = FALSE
+	pixel_x = -16
+	pixel_y = -16
+
+/obj/structure/flora/rock/pile/largevermont/Initialize()
+	. = ..()
+	icon_state = "[initial(icon_state)][rand(1,3)]"

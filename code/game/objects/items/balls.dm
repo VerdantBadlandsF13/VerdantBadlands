@@ -86,3 +86,32 @@
 
 /datum/action/item_action/squeeze
 	name = "Squeak!"
+
+/*
+We probably shouldn't have this here, but it's a ball.
+I guess.
+I 'unno.
+*/
+/obj/item/toy/tennis/baseball
+	name = "baseball"
+	desc = "A classic baseball."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "ball"
+	item_state = "tennis_classic"
+	force = 1
+	damtype = STAMINA
+	throwforce = 64
+	throw_speed = 4// Probably TWO TOO HIGH! :)
+	throw_range = 14
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/toy/tennis/baseball/alt_pre_attack()
+	return
+
+/obj/item/toy/tennis/baseball/altafterattack()
+	return
+
+/obj/item/toy/tennis/baseball/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback)
+	if(!..())
+		return
+	playsound(src.loc,'sound/weapons/bolathrow.ogg', 75, 1)

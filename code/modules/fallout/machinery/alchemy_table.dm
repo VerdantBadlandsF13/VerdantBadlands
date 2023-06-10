@@ -17,7 +17,7 @@
 /obj/machinery/chem_master/primitive/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_crowbar(I, ignore_panel = TRUE)) // we have no panel
 		return TRUE // no afterattack
-	
+
 	return ..() // do base stuff
 
 /obj/machinery/chem_master/primitive/on_deconstruction()
@@ -93,7 +93,7 @@
 		if(item_type == "bag")
 			var/obj/item/reagent_containers/pill/patch/P
 			for(var/i = 0; i < amount; i++)
-				P = new/obj/item/reagent_containers/pill/patch/healingpowder/custom(drop_location())
+				P = new/obj/item/reagent_containers/pill/patch/custom(drop_location())
 				P.name = trim("[name] powder")
 				adjust_item_drop_location(P)
 				reagents.trans_to(P, vol_each)//, transfered_by = usr)

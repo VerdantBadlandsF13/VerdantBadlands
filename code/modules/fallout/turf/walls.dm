@@ -274,9 +274,9 @@
 	icon = 'icons/fallout/turfs/walls/subway.dmi'
 	icon_state = "subwaytop"
 
-/turf/closed/indestructible/f13/matrix //The Chosen One from Arroyo!
+/turf/closed/indestructible/f13/matrix
 	name = "matrix"
-	desc = "<font color='#6eaa2c'>You suddenly realize the truth - there is no spoon.<br>Digital simulation ends here.</font>"
+	desc = "<font color='#6eaa2c'>Digital simulation ends here.</font>"
 	icon_state = "matrix"
 	var/in_use = FALSE
 
@@ -325,7 +325,7 @@
 	if(departing_mob.stat == DEAD)
 		departing_mob.visible_message("<span class='notice'>[user] pushes the body of [departing_mob] over the border. They're someone else's problem now.</span>")
 	else
-		departing_mob.visible_message("<span class='notice'>[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] crosses the border and departs the Sonora.</span>")
+		departing_mob.visible_message("<span class='notice'>[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] crosses the border and departs.</span>")
 	departing_mob.despawn()
 
 // Author: GremlingSS

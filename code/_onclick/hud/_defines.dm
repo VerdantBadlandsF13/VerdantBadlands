@@ -17,7 +17,7 @@
 	Therefore, the top right corner (except during admin shenanigans) is at "15,15"
 */
 // Hud container.
-#define ui_container "WEST,SOUTH to EAST,NORTH"
+#define ui_container "CENTER-7,CENTER-7"
 
 //Lower left, persistent menu
 #define ui_inventory "WEST:6,SOUTH:5"

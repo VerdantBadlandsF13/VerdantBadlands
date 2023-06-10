@@ -120,11 +120,18 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_DFS_BOSS		147 //Hail to the king.
 
 #define ACCESS_LBJ			148 //The lights aren't real. Remain calm. The lights aren't real. Remain calm.
+
+#define ACCESS_VFE				149	//general vault 58 access
+#define ACCESS_VFE_RESTRICT		150	//general vault 58 restricted access
+#define ACCESS_VFE_SECURITY		151	//general vault 58 security access
+#define ACCESS_VFE_MEDICAL		152	//general vault 58 medical access
+#define ACCESS_VFE_ENGINEERING	153	//general vault 58 engineering access
+#define ACCESS_VFE_SCIENCE		154	//general vault 58 science access
 //END BL
 
 	//The Syndicate
-#define ACCESS_SYNDICATE 150//General Syndicate Access. Includes Syndicate mechs and ruins.
-#define ACCESS_SYNDICATE_LEADER 151//Nuke Op Leader Access
+#define ACCESS_SYNDICATE 155//General Syndicate Access. Includes Syndicate mechs and ruins.
+#define ACCESS_SYNDICATE_LEADER 156//Nuke Op Leader Access
 
 	//Away Missions or Ruins
 	/*For generic away-mission/ruin access. Why would normal crew have access to a long-abandoned derelict

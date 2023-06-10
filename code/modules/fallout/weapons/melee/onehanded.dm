@@ -386,18 +386,6 @@
 	force = 30
 	custom_materials = list(/datum/material/iron = 4000)
 
-// NCR Flag			Keywords: NCR, Damage 26, Stamina damage, Block
-/obj/item/melee/onehanded/club/ncrflag
-	name = "NCR flagpole"
-	desc = "The proud standard of the New California Republic. Used as a tool by patriots, used as a weapon by legends."
-	icon_state = "flag-ncr"
-	item_state = "flag-ncr"
-	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = null
-	force = 26
-	block_chance = 30
-	attack_verb = list("smacked", "thwacked", "democratized", "freedomed")
-
 // Classic Baton
 /obj/item/melee/classic_baton
 	name = "wooden baton"

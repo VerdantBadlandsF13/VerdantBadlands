@@ -30,9 +30,6 @@
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio
-	backpack_contents = list(
-		/obj/item/storage/survivalkit_aid = 1,
-		)
 
 /datum/outfit/job/gmb/commander
 	name = "GMB Commander"

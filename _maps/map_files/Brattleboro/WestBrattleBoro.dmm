@@ -2436,10 +2436,6 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
-"cRl" = (
-/obj/structure/table/wood,
-/turf/closed/wall/f13/wood/interior,
-/area/f13/building)
 "cRz" = (
 /obj/structure/simple_door/metal/dirtystore,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14123,10 +14119,6 @@
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
-/area/f13/building)
-"pXA" = (
-/obj/structure/table/wood,
-/turf/closed/wall/f13/wood/house,
 /area/f13/building)
 "pXJ" = (
 /obj/structure/toilet{
@@ -30826,7 +30818,7 @@ cqw
 uiJ
 "}
 (38,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -31083,7 +31075,7 @@ cqw
 uiJ
 "}
 (39,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -31340,7 +31332,7 @@ cqw
 uiJ
 "}
 (40,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -31597,7 +31589,7 @@ cqw
 uiJ
 "}
 (41,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -31854,7 +31846,7 @@ cqw
 uiJ
 "}
 (42,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -32111,7 +32103,7 @@ cqw
 uiJ
 "}
 (43,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -32368,7 +32360,7 @@ cqw
 uiJ
 "}
 (44,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -32625,7 +32617,7 @@ cqw
 uiJ
 "}
 (45,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -32882,7 +32874,7 @@ cqw
 uiJ
 "}
 (46,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -35966,7 +35958,7 @@ cqw
 uiJ
 "}
 (58,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 qJW
@@ -36223,7 +36215,7 @@ cqw
 uiJ
 "}
 (59,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 qJW
@@ -36480,7 +36472,7 @@ cqw
 uiJ
 "}
 (60,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 qJW
@@ -36737,7 +36729,7 @@ cqw
 uiJ
 "}
 (61,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 qJW
@@ -63208,7 +63200,7 @@ onK
 uiJ
 "}
 (164,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -63465,7 +63457,7 @@ onK
 uiJ
 "}
 (165,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -63722,7 +63714,7 @@ cqw
 uiJ
 "}
 (166,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -63979,7 +63971,7 @@ cqw
 uiJ
 "}
 (167,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -64236,7 +64228,7 @@ cqw
 uiJ
 "}
 (168,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -64493,7 +64485,7 @@ cqw
 uiJ
 "}
 (169,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -64750,7 +64742,7 @@ cqw
 uiJ
 "}
 (170,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -65116,7 +65108,7 @@ cEY
 acR
 umq
 acR
-cRl
+jgV
 mDD
 bIk
 mDD
@@ -65373,7 +65365,7 @@ tAw
 efv
 efv
 efv
-pXA
+tAw
 tAw
 efv
 tAw
@@ -68348,7 +68340,7 @@ fun
 fun
 "}
 (184,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -68605,7 +68597,7 @@ cqw
 uiJ
 "}
 (185,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -68862,7 +68854,7 @@ cqw
 uiJ
 "}
 (186,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -69119,7 +69111,7 @@ cqw
 uiJ
 "}
 (187,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -69376,7 +69368,7 @@ cqw
 uiJ
 "}
 (188,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -69633,7 +69625,7 @@ cqw
 uiJ
 "}
 (189,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG
@@ -69890,7 +69882,7 @@ cqw
 uiJ
 "}
 (190,1,1) = {"
-bkG
+uiJ
 bkG
 bkG
 bkG

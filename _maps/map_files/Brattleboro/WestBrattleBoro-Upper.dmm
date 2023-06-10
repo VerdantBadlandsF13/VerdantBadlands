@@ -199,8 +199,9 @@
 /area/f13/building)
 "bl" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 2;
-	destination_y = 95
+	destination_x = 3;
+	destination_y = 95;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "bn" = (
@@ -232,8 +233,9 @@
 /area/f13/wasteland)
 "bE" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 2;
-	destination_y = 17
+	destination_x = 3;
+	destination_y = 17;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "bF" = (
@@ -463,7 +465,8 @@
 "cY" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 84;
-	destination_y = 254
+	destination_y = 253;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "da" = (
@@ -1310,8 +1313,9 @@
 /area/f13/building)
 "is" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 1;
-	destination_y = 206
+	destination_x = 2;
+	destination_y = 206;
+	destination_z = 8
 	},
 /area/f13/caves)
 "iw" = (
@@ -3624,8 +3628,9 @@
 /area/f13/building)
 "xq" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 2;
-	destination_y = 18
+	destination_x = 3;
+	destination_y = 18;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "xu" = (
@@ -5428,7 +5433,8 @@
 "Ii" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 85;
-	destination_y = 254
+	destination_y = 253;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "Ik" = (
@@ -7865,8 +7871,9 @@
 /area/f13/building)
 "VY" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 1;
-	destination_y = 205
+	destination_x = 2;
+	destination_y = 205;
+	destination_z = 8
 	},
 /area/f13/caves)
 "VZ" = (
@@ -8097,8 +8104,9 @@
 /area/f13/caves)
 "Xt" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 2;
-	destination_y = 94
+	destination_x = 3;
+	destination_y = 94;
+	destination_z = 8
 	},
 /area/f13/wasteland)
 "Xu" = (

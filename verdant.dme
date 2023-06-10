@@ -3700,6 +3700,7 @@
 #include "modular_badlands\code\modules\unsorted\obj\structures\overlay.dm"
 #include "modular_badlands\code\modules\unsorted\status_effects\eldritch.dm"
 #include "modular_badlands\code\modules\unsorted\turf\elevator_shafts.dm"
+#include "modular_badlands\code\modules\unsorted\turf\grass.dm"
 #include "modular_badlands\code\modules\unsorted\turf\water.dm"
 #include "modular_badlands\code\modules\unsorted\weaponry\arc_welder.dm"
 #include "modular_badlands\code\modules\unsorted\weaponry\bb_gun.dm"

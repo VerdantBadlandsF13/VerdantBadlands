@@ -11,7 +11,7 @@
 	var/list/hidden_atoms = list()
 	var/list/hidden_mobs = list()
 
-/mob/proc/is_invisible_to(var/mob/viewer)
+/mob/proc/is_invisible_to(mob/viewer)
 	return (!alpha || !mouse_opacity || viewer.see_invisible < invisibility || (viewer.client && (src in viewer.client.hidden_mobs)))
 
 /mob/living/Move(atom/newloc, direct, glide_size_override)
@@ -41,7 +41,7 @@
 								M.client.images -= I
 								QDEL_IN(I, 1 SECONDS)
 
-/turf/proc/show_footsteps(var/mob/viewer, var/turf/Tviewer, var/mob/M)
+/turf/proc/show_footsteps(mob/viewer, turf/Tviewer, mob/M)
 	var/dist = get_dist(src, Tviewer)
 
 	if(src == Tviewer)

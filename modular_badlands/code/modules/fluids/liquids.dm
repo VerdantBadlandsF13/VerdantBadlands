@@ -1,9 +1,6 @@
 /*
-Fluid tile stuff, pulled from TGMC.
-Repurposed for our use.
-
-This is a temp replacement for pool tiles until I can combine both.
-Or someone else does it for me. Either works. - Carl
+The base is fluid tile stuff, pulled from TGMC.
+Heavily repurposed for our use, with a smidge of pool code and jank. - Carl
 */
 ///The alpha mask used on mobs submerged in liquid turfs
 #define MOB_LIQUID_TURF_MASK "mob_liquid_turf_mask"
@@ -12,7 +9,7 @@ Or someone else does it for me. Either works. - Carl
 
 /turf/open/liquid //Basic liquid turf parent
 	name = "seashallow"
-	icon = 'modular_badlands/code/modules/pool/icons/pool.dmi'
+	icon = 'modular_badlands/code/modules/fluids/icons/fluids.dmi'
 	///Multiplier on any slowdown applied to a mob moving through this turf
 	var/slowdown_multiplier = 1
 	///How high up on the mob water overlays sit
@@ -55,7 +52,7 @@ Or someone else does it for me. Either works. - Carl
 		return
 
 	//The mask is spawned below the mob, then the animate() raises it up, giving the illusion of dropping into water, combining with the animate to actual drop the pixel_y into the water
-	arrived_mob.add_filter(MOB_LIQUID_TURF_MASK, 1, alpha_mask_filter(0, height_to_use - MOB_LIQUID_TURF_MASK_HEIGHT, icon('modular_badlands/code/modules/pool/icons/pool_64.dmi', "liquid_alpha"), null, MASK_INVERSE))
+	arrived_mob.add_filter(MOB_LIQUID_TURF_MASK, 1, alpha_mask_filter(0, height_to_use - MOB_LIQUID_TURF_MASK_HEIGHT, icon('modular_badlands/code/modules/fluids/icons/pool_64.dmi', "liquid_alpha"), null, MASK_INVERSE))
 
 	animate(arrived_mob.get_filter(MOB_LIQUID_TURF_MASK), y = height_to_use - (MOB_LIQUID_TURF_MASK_HEIGHT - mob_liquid_height), time = arrived_mob.cached_multiplicative_slowdown)
 	animate(arrived_mob, pixel_y = arrived_mob.pixel_y + mob_liquid_depth, time = arrived_mob.cached_multiplicative_slowdown, flags = ANIMATION_PARALLEL)
@@ -181,7 +178,7 @@ Or someone else does it for me. Either works. - Carl
 
 /turf/open/liquid/proc/splash(mob/user)
 	user.forceMove(src)
-	playsound(src, 'modular_badlands/code/modules/pool/sound/sound_effects_splosh.ogg', 100, 1) //Credit to hippiestation for this sound file!
+	playsound(src, 'modular_badlands/code/modules/fluids/sound/sound_effects_splosh.ogg', 100, 1) //Credit to hippiestation for this sound file!
 	user.visible_message("<span class='boldwarning'>SPLASH!</span>")
 	var/zap = calculate_zap(user)
 	if(zap > 0)
@@ -238,3 +235,14 @@ Or someone else does it for me. Either works. - Carl
 		to_chat(user, "<span class='notice'>You start climbing down into \the [T]...")
 	if(do_after(user, 4 SECONDS, src))
 		splash(dropping)
+
+// General Water Diagonal
+/obj/effect/overlay/liquid_diag
+	name = "water"
+	icon = 'modular_badlands/code/modules/fluids/icons/fluids.dmi'
+	icon_state = "diagonalwater"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	layer = BELOW_MOB_LAYER
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE

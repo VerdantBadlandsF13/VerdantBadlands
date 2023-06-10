@@ -231,8 +231,8 @@
 #define TRAIT_ENCLAVE_CODES		"old_world_codes" //Permits players to open the Vault.
 #define TRAIT_FORCED_STANDING 	"forced_standing"
 #define TRAIT_RADX				"radx_active"
-/// Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
-#define TRAIT_HANDS_BLOCKED "handsblocked"
+#define TRAIT_SNEAK				"in_stealth" // Whether we're sneaking.
+#define TRAIT_HANDS_BLOCKED		"handsblocked" // Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 
 // mobility flag traits
 // IN THE FUTURE, IT WOULD BE NICE TO DO SOMETHING SIMILAR TO https://github.com/tgstation/tgstation/pull/48923/files (ofcourse not nearly the same because I have my.. thoughts on it)

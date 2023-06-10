@@ -134,11 +134,8 @@
 // DESERT
 
 /turf/open/indestructible/ground/outside/desert
-	name = "desert"
+	name = "wasteland"
 	icon_state = "wasteland"
-//	step_sounds = list("human" = "dirtfootsteps")
-//	allowed_plants = list(/obj/item/seeds/poppy/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit,
-//	/obj/item/seeds/feracactus, /obj/item/seeds/corn,/obj/item/seeds/shroom, /obj/item/seeds/agave)
 	slowdown = 0.4
 	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 	footstep = FOOTSTEP_SAND
@@ -160,10 +157,6 @@
 						/obj/item/stack/ore/blackpowder/twenty = 10
 						)
 
-/turf/open/indestructible/ground/outside/desert/harsh
-	icon_state = "wasteland"
-	icon = 'icons/fallout/turfs/ground_harsh.dmi'
-
 /turf/open/indestructible/ground/outside/desert/Initialize()
 	. = ..()
 	if(prob(2))
@@ -173,6 +166,9 @@
 	if(icon_state != "wasteland")
 		icon_state = "wasteland[rand(1,31)]"
 
+/turf/open/indestructible/ground/outside/desert/harsh
+	icon_state = "wasteland"
+	icon = 'icons/fallout/turfs/ground_harsh.dmi'
 
 /obj/effect/overlay/desert_side
 	name = "desert"

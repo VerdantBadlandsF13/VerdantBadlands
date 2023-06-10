@@ -130,6 +130,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	//the type of eyes this species has
 	var/eye_type = "normal"
 
+	var/datum/action/innate/sneak/stealth
+
 ///////////
 // PROCS //
 ///////////
@@ -1232,12 +1234,21 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	return
 
 /datum/species/proc/after_equip_job(datum/job/J, mob/living/carbon/human/H)
-	if(H.special_i <= 3)
+
+	if(H.special_i <= 2)
+		to_chat(H,"You're an idiot!")
 		H.grant_language(/datum/language/aphasia)
 		H.remove_language(/datum/language/common)
+
 	if(H.special_i >= 8)
 		to_chat(H,"You can understand idiots!")
 		H.grant_language(/datum/language/aphasia)
+
+	if(H.special_a >= 2)
+		to_chat(H,"As you have enough agility points, you know how to sneak. Higher points increases effectiveness.")
+		stealth = new
+		stealth.Grant(H)
+
 	H.update_mutant_bodyparts()
 
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)

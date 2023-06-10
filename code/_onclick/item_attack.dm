@@ -100,7 +100,7 @@
 	// Let this be a lesson not to do that. When in doubt, remember:
 	// Don't Repeat Yourself!
 
-	damage_multiplier += (user.special_s/100)//SPECIAL integration
+	damage_multiplier += (user.special_s/1.2)
 
 	var/bonus_damage = 0
 	if (force >= 5)

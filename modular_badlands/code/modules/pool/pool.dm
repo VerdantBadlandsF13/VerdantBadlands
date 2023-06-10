@@ -19,8 +19,11 @@ For our purposes, it's effectively just for rivers / standing water. Potentially
 	icon = 'modular_badlands/code/modules/pool/icons/pool.dmi'
 	icon_state = "water"
 	anchored = TRUE
-	layer = ABOVE_ALL_MOB_LAYER
+	layer = BELOW_MOB_LAYER
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/overlay/poolwater/top
+	icon_state = "mob_submerged"
 
 /turf/open/indestructible/sound/pool
 	name = "swimming pool"
@@ -51,12 +54,6 @@ For our purposes, it's effectively just for rivers / standing water. Potentially
 /turf/open/indestructible/sound/pool/proc/set_colour(colour)
 	water_overlay.color = colour
 
-/turf/open/CanPass(atom/movable/mover, turf/target)
-	var/datum/component/swimming/S = mover.GetComponent(/datum/component/swimming) //If you're swimming around, you don't really want to stop swimming just like that do you?
-	if(S)
-		return FALSE //If you're swimming, you can't swim into a regular turf, y'dig?
-	. = ..()
-
 /turf/open/indestructible/sound/pool/CanPass(atom/movable/mover, turf/target)
 	if(mover.throwing)
 		return TRUE
@@ -81,19 +78,6 @@ For our purposes, it's effectively just for rivers / standing water. Potentially
 		var/datum/component/swimming/S = Obj.GetComponent(/datum/component/swimming) //Handling admin TPs here.
 		S?.RemoveComponent()
 
-/turf/open/MouseDrop_T(atom/dropping, mob/user)
-	if(!isliving(user) || !isliving(dropping)) //No I don't want ghosts to be able to dunk people into the pool.
-		return
-	var/atom/movable/AM = dropping
-	var/datum/component/swimming/S = dropping.GetComponent(/datum/component/swimming)
-	if(S)
-		if(do_after(user, 1 SECONDS, src))
-			S.RemoveComponent()
-			visible_message("<span class='notice'>[dropping] climbs out of \the [src].</span>")
-			AM.forceMove(src)
-	else
-		. = ..()
-
 /turf/open/indestructible/sound/pool/MouseDrop_T(atom/dropping, mob/user)
 	if(!isliving(user) || !isliving(dropping)) //No I don't want ghosts to be able to dunk people into the pool.
 		return
@@ -108,21 +92,6 @@ For our purposes, it's effectively just for rivers / standing water. Potentially
 		to_chat(user, "<span class='notice'>You start climbing down into [src]...")
 	if(do_after(user, 4 SECONDS, src))
 		splash(dropping)
-
-/datum/mood_event/poolparty
-	description = "<span class='nicegreen'>I love swimming!</span>\n"
-	mood_change = 2
-	timeout = 2 MINUTES
-
-/datum/mood_event/robotpool
-	description = "<span class='warning'>I really wasn't built with water resistance in mind...</span>\n"
-	mood_change = -3
-	timeout = 2 MINUTES
-
-/datum/mood_event/poolwet
-	description = "<span class='warning'>Eugh! My clothes are soaking wet from that swim.</span>\n"
-	mood_change = -4
-	timeout = 4 MINUTES
 
 //Used to determine how zappy to be to a perhaps-electronic user entering this pool.
 /turf/open/indestructible/sound/pool/proc/calculate_zap(mob/user)

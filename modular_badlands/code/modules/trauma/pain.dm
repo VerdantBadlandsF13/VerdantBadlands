@@ -1,26 +1,26 @@
 /mob/proc/flash_pain()
 	overlay_fullscreen("pain", /obj/screen/fullscreen/pain, 2)
-	clear_fullscreen("pain")
+	spawn(50)
+		clear_fullscreen("pain")
 
 /obj/screen/fullscreen/pain
 	icon_state = "painoverlay2"
-	alpha = 0
 
 /mob/proc/flash_weak_pain()
 	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/weak, 2)
-	clear_fullscreen("pain")
+	spawn(50)
+		clear_fullscreen("pain")
 
 /obj/screen/fullscreen/pain/weak
 	icon_state = "painoverlay1"
-	alpha = 0
 
 /mob/proc/flash_agony()
 	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/agony, 2)
-	clear_fullscreen("pain")
+	spawn(50)
+		clear_fullscreen("pain")
 
 /obj/screen/fullscreen/pain/agony
 	icon_state = "bloodlust"
-	alpha = 0
 
 /mob/var/list/pain_stored = list()
 /mob/var/last_pain_message = ""

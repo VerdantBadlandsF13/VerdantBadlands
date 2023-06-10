@@ -13,8 +13,8 @@
 	0.7	* src.getToxLoss() + 		\
 	1.5	* src.getFireLoss(TRUE) + 		\
 	1.2	* src.getBruteLoss(TRUE) + 		\
-	1.7	* src.getCloneLoss() + 		\
-	0.1	* src.getStaminaLoss()
+	1.7	* src.getCloneLoss()
+//	0.1	* src.getStaminaLoss()
 
 	for(var/datum/reagent/R in reagents.reagent_list)
 		pain_level -= R.pain_resistance

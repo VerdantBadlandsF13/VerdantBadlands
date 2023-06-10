@@ -51,7 +51,7 @@
 
 /obj/item/fusion_fuel/examine(mob/user)
 	. = ..()
-	. += "The power meter shows [round((fuel)*100, 0.1)]% core power remaining."
+	. += "The power meter shows [fuel] core power remaining."
 
 /obj/item/clothing/suit/armored/f13/power_armor/proc/processPower()
 	if(powerLevel>0)//drain charge
@@ -326,7 +326,7 @@
 /obj/item/clothing/suit/armored/f13/power_armor/examine(mob/user)
 	. = ..()
 	. += "If armor durability falls below 60%, the suit will no longer fully protect you."
-	. += "The power meter shows [round((powerLevel)*100, 0.1)]% core power remaining."
+	. += "The power meter shows [powerLevel] core power remaining."
 	if(ispath(salvaged_type))
 		. += salvage_hint()
 

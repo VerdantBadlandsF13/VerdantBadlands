@@ -1,5 +1,5 @@
 /*
-USE turf_danger.dm INSTEAD! THIS IS HERE FOR REPLACEMENT PURPOSES!
+USE turf_danger.dm INSTEAD! OR LIQUIDS.DM! THIS IS HERE FOR REPLACEMENT PURPOSES!
 */
 
 /turf/open/indestructible/ground/outside/water

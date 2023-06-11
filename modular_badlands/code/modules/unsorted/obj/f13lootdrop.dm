@@ -26,8 +26,8 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee
-    name = "handmade melee"
-    loot = list(
+	name = "handmade melee"
+	loot = list(
 		/obj/item/melee/onehanded/machete,
 		/obj/item/melee/onehanded/knife/bone,
 		/obj/item/melee/onehanded/club,

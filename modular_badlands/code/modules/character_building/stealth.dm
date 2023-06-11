@@ -26,7 +26,7 @@ TG's system for stealth, repurposed for our special stats.
 		REMOVE_TRAIT(owner, TRAIT_SNEAK, name)
 
 	else
-		owner.alpha = 100 - owner.special_a * 25
+		owner.alpha = 100 - owner.special_a * 5
 		to_chat(owner, span_noticealien("You blend into the enviorment..."))
 		ADD_TRAIT(owner, TRAIT_SNEAK, name)
 

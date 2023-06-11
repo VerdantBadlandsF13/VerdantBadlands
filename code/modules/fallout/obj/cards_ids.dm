@@ -11,6 +11,7 @@ VAULT STUFF BELOW
 	icon_state = "id"
 	item_state = "card-doctor"
 	assignment = "citizenship permit"
+	uses_overlays = FALSE
 
 /obj/item/card/id/dendoctor
 	name = "doctor's name badge"
@@ -42,6 +43,7 @@ VAULT STUFF BELOW
 	icon_state = "silver"
 	item_state = "silver_id"
 	desc = "A rewritable card that allows you to put your name and assignment on it."
+	uses_overlays = FALSE
 
 /obj/item/card/id/fadedvaultid
 	name = "faded id card"
@@ -58,6 +60,7 @@ OTHER BELOW
 	name = "faded medical license"
 	desc = "a revoked medical license. This is why we do not remove people's skeletons "
 	access = list()
+	uses_overlays = FALSE
 
 /obj/item/card/id/brand
 	name = "slave brand"

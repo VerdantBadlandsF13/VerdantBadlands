@@ -6,17 +6,15 @@
 	access = list(ACCESS_VFE)
 	minimal_access = list(ACCESS_VFE)
 
-	forbids = "Dry Fields Security forbids: <br> \
-				- Provoking wars. You're tough, but not undefeatable. Know what battles you can and can't afford. <br> \
-				- Farming. While not forbidden by any rule or technicality, it is much more cost effective to coerce the locals into giving you what you want. <br> \
-				- Overextend. Never isolate yourself unless you're undercover. A team works better together."
+	forbids = "Vault-Tec forbids: <br> \
+				- Endangering your fellow dwellers, without explicit order from the Overseer. <br> \
+				- Ignoring Security's orders, only capable of being overriden by the Overseer. <br> \
+				- Revealing anything about the Vault, beyond surface level details, without permisson from the Overseer."
 
-	enforces = "Dry Fields Security expects: <br> \
-				- Strongarming. Appearing tough and responding to diplomacy with a show of force can work miracles. <br> \
-				- Extortion. You want money and people may not want protection. Give them a reason to. <br> \
-				- Scavenging. You do not have a stable supply of food, water or components. <br> \
-				- Kidnapping. Someone have something you want? Try taking one of their friends, or them. People are usually worth a lot more than their share of cram alive. <br> \
-				- Negotiation. Violence has its place, but diplomacy goes a long way when it's backed up by your guns."
+	enforces = "Vault-Tec expects: <br> \
+				- Trading with the outside world. You've a secure depot up above, giving plenty of reason to leave the Vault. <br> \
+				- Maintaining security and cohesion between your fellow dwellers. <br> \
+				- Obeying the words of Security and the Overseer."
 
 /datum/outfit/job/vault/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

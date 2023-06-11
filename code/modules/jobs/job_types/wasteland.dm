@@ -81,7 +81,6 @@
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
 	r_hand = /obj/item/weldingtool/largetank
-	backpack_contents = list(/obj/item/gun/ballistic/automatic/pistol/m1911=1)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -91,15 +90,13 @@
 	belt = /obj/item/storage/belt
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
-							/obj/item/shovel=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+							/obj/item/shovel=1)
 
 /datum/outfit/loadout/settler
 	name = "Settler"
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_hand = /obj/item/hatchet
-	l_hand = /obj/item/gun/ballistic/automatic/pistol/n99
 	belt = /obj/item/storage/belt
 	backpack_contents = list(
 		/obj/item/stack/sheet/metal/fifty = 1,
@@ -137,6 +134,4 @@
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
-	l_hand = /obj/item/gun/ballistic/revolver/caravan_shotgun
-	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
-							/obj/item/gun/ballistic/automatic/pistol/m1911=1)
+	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1)

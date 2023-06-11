@@ -2056,7 +2056,6 @@
 #include "code\modules\fallout\f13lootdrop.dm"
 #include "code\modules\fallout\lock.dm"
 #include "code\modules\fallout\start_landmarks.dm"
-#include "code\modules\fallout\themed_loot_tables.dm"
 #include "code\modules\fallout\areas\area.dm"
 #include "code\modules\fallout\equipment\headsets.dm"
 #include "code\modules\fallout\equipment\stealthboy.dm"

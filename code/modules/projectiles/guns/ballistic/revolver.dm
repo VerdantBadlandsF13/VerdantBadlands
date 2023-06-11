@@ -135,16 +135,6 @@
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 	extra_damage = 5
 
-/obj/item/gun/ballistic/revolver/revolver44
-	name = "\improper .44 magnum single-action revolver"
-	desc = "I hadn't noticed, but there on his hip, was a moderately sized iron..."
-	item_state = "44colt"
-	icon_state = "44colt"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_delay = 4.5
-	spread = 0
-	fire_sound = 'sound/f13weapons/44revolver.ogg'
-
 //////////////////////
 // .45-70 REVOLVERS //
 //////////////////////

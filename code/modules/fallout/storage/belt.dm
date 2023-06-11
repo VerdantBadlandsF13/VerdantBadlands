@@ -143,12 +143,6 @@
 	/obj/item/melee/powered/ripper)
 	starting_sword = null
 
-/obj/item/storage/belt/holster/ranger44/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/revolver44(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/ammo_box/m44(src)
-
 /obj/item/storage/belt/holster/ranger357/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357(src)
 	new /obj/item/ammo_box/a357(src)

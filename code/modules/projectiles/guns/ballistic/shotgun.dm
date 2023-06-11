@@ -105,6 +105,12 @@
 	extra_damage = 4
 	extra_penetration = 0.1
 
+/obj/item/gun/ballistic/revolver/single_shotgun/update_icon_state()
+	if(!magazine || !magazine.ammo_count(0))
+		icon_state = "[initial(icon_state)]-e"
+	else
+		icon_state = "[initial(icon_state)]"
+
 ////////////////////////////////////////
 //DOUBLE BARREL & PUMP ACTION SHOTGUNS//
 ////////////////////////////////////////

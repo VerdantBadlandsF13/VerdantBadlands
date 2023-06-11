@@ -3,22 +3,22 @@
 ///////////////////////
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons
-    name = "PARENT OF WEAPON SPAWNERS"
-    lootcount = 1            //how many items will be spawned
-    lootdoubles = TRUE        //if the same item can be spawned twice
-    fan_out_items = TRUE    //Whether the items should be distributed to offsets 0,1,-1,2,-2,3,-3.. This overrides pixel_x/y on the spawner itself
-    loot = list()
+	name = "PARENT OF WEAPON SPAWNERS"
+	lootcount = 1	//how many items will be spawned
+	lootdoubles = TRUE	//if the same item can be spawned twice
+	fan_out_items = TRUE	//Whether the items should be distributed to offsets 0,1,-1,2,-2,3,-3.. This overrides pixel_x/y on the spawner itself
+	loot = list()
 
 // Explosive Pipes retrofitted into technical firearms & beating implements
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns
-    name = "handmade gun"
-    loot = list(
+	name = "handmade gun"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/zipgun,
 		/obj/item/gun/ballistic/revolver/piperifle,
 	)
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows
-    name = "crossbows and bows"
-    loot = list(
+	name = "crossbows and bows"
+	loot = list(
 		/obj/item/gun/ballistic/bow/tribal,
 		/obj/item/gun/ballistic/bow/sturdy,
 		/obj/item/gun/ballistic/bow/crossbow,
@@ -40,8 +40,8 @@
 
 // Civilian Class Weapons - "Anything that is something Grandpa would use to commit a hatecrime"
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol
-    name = "civ pistol"
-    loot = list(
+	name = "civ pistol"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/pistol/type17,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil,
@@ -51,8 +51,8 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_rifle
-    name = "civ rifle"
-    loot = list(
+	name = "civ rifle"
+	loot = list(
 		/obj/item/gun/ballistic/rifle/hunting,
 		/obj/item/gun/ballistic/rifle/mosin, // Yes. The shitstick is civilian class.
 		/obj/item/gun/ballistic/automatic/m1garand,
@@ -61,26 +61,24 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_shotgun
-    name = "civ shotgun"
-    loot = list(
+	name = "civ shotgun"
+	loot = list(
 		/obj/item/gun/ballistic/revolver/caravan_shotgun,
 		/obj/item/gun/ballistic/revolver/widowmaker,
 		/obj/item/gun/ballistic/shotgun/hunting,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_smg // Police are civilian.
-    name = "civ submachinegun"
-    loot = list(
+	name = "civ submachinegun"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/smg/tommygun,
 		/obj/item/gun/ballistic/automatic/smg/american180,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_all
-    name = "civ allguns"
-    loot = list(
+	name = "civ allguns"
+	loot = list(
 		/obj/item/gun/ballistic/revolver/caravan_shotgun,
 		/obj/item/gun/ballistic/revolver/widowmaker,
 		/obj/item/gun/ballistic/rifle/hunting,
@@ -96,8 +94,8 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms
-    name = "civ longarms"
-    loot = list(
+	name = "civ longarms"
+	loot = list(
 		/obj/item/gun/ballistic/revolver/caravan_shotgun,
 		/obj/item/gun/ballistic/revolver/widowmaker,
 		/obj/item/gun/ballistic/rifle/hunting,
@@ -109,8 +107,8 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee
-    name = "civ melee"
-    loot = list(
+	name = "civ melee"
+	loot = list(
 		/obj/item/melee/onehanded/knife/hunting,
 		/obj/item/melee/onehanded/knife/survival,
 		/obj/item/melee/onehanded/knife/switchblade,
@@ -125,8 +123,8 @@
 // Military Weapons - "IT'S GOT MILITARY IN THE NAME IT'S DANGEROUS!" - Literally anything not civilian-issue
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_pistol
-    name = "mil pistol"
-    loot = list(
+	name = "mil pistol"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/pistol/beretta,
 		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic,
 		/obj/item/gun/ballistic/automatic/pistol/n99,
@@ -139,16 +137,16 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_smg
-    name = "mil submachineguns"
-    loot = list(
+	name = "mil submachineguns"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/smg/greasegun,
 		/obj/item/gun/ballistic/automatic/smg/p90,
 		/obj/item/gun/ballistic/automatic/smg/mp5,
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_rifle
-    name = "mil rifle"
-    loot = list(
+	name = "mil rifle"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/marksman/sniper,
 		/obj/item/gun/ballistic/automatic/assault_rifle,
 		/obj/item/gun/ballistic/automatic/type93,
@@ -157,42 +155,40 @@
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advrifle
-    name = "mil advrifle"
-    loot = list(
+	name = "mil advrifle"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/g11,
 		/obj/item/gun/ballistic/automatic/bozar,
 		/obj/item/gun/ballistic/automatic/m72,
 		/obj/item/gun/ballistic/rifle/mag/antimateriel,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_shotgun
-    name = "mil shotgun"
-    loot = list(
+	name = "mil shotgun"
+	loot = list(
 		/obj/item/gun/ballistic/shotgun/police,
 		/obj/item/gun/ballistic/shotgun/trench,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/auto5,
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advshotgun
-    name = "mil advshotgun"
-    loot = list(
+	name = "mil advshotgun"
+	loot = list(
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_machinegun
-    name = "mil machinegun"
-    loot = list(
+	name = "mil machinegun"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/lsw,
 		/obj/item/gun/ballistic/automatic/m1919,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms
-    name = "mil longarms"
-    loot = list(
+	name = "mil longarms"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/marksman/sniper,
 		/obj/item/gun/ballistic/automatic/assault_rifle,
 		/obj/item/gun/ballistic/automatic/type93,
@@ -201,12 +197,11 @@
 		/obj/item/gun/ballistic/shotgun/police,
 		/obj/item/gun/ballistic/shotgun/trench,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/auto5,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advlongarms
-    name = "mil advlongarms"
-    loot = list(
+	name = "mil advlongarms"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/g11,
 		/obj/item/gun/ballistic/automatic/bozar,
 		/obj/item/gun/ballistic/automatic/m72,
@@ -214,12 +209,11 @@
 		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_smallarms // Pistols + SMG's
-    name = "mil smallarms"
-    loot = list(
+	name = "mil smallarms"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/pistol/beretta,
 		/obj/item/gun/ballistic/automatic/pistol/beretta/automatic,
 		/obj/item/gun/ballistic/automatic/pistol/n99,
@@ -232,12 +226,11 @@
 		/obj/item/gun/ballistic/automatic/smg/greasegun,
 		/obj/item/gun/ballistic/automatic/smg/p90,
 		/obj/item/gun/ballistic/automatic/smg/mp5,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_assaultarms // Rifles + SMG's + Shotguns
-    name = "mil longarms"
-    loot = list(
+	name = "mil longarms"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/marksman/sniper,
 		/obj/item/gun/ballistic/automatic/assault_rifle,
 		/obj/item/gun/ballistic/automatic/type93,
@@ -249,12 +242,11 @@
 		/obj/item/gun/ballistic/automatic/smg/greasegun,
 		/obj/item/gun/ballistic/automatic/smg/p90,
 		/obj/item/gun/ballistic/automatic/smg/mp5,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_allguns // Please have extreme restraint with this one. It can spawn everything in the military list! INCLUDING advanced!
-    name = "mil allguns"
-    loot = list(
+	name = "mil allguns"
+	loot = list(
 		/obj/item/gun/ballistic/automatic/marksman/sniper,
 		/obj/item/gun/ballistic/automatic/assault_rifle,
 		/obj/item/gun/ballistic/automatic/type93,
@@ -284,12 +276,11 @@
 		/obj/item/gun/ballistic/automatic/pistol/pistol14,
 		/obj/item/gun/ballistic/revolver/hunting,
 		/obj/item/gun/ballistic/revolver/needler,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee
-    name = "mil melee"
-    loot = list(
+	name = "mil melee"
+	loot = list(
 		/obj/item/shovel/trench,
 		/obj/item/melee/onehanded/machete/forgedmachete,
 		/obj/item/melee/onehanded/machete/scrapsabre,

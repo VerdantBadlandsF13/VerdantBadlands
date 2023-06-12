@@ -154,6 +154,12 @@ Heavily repurposed for our use, with a smidge of pool code and jank. - Carl
 		var/datum/component/swimming/S = Obj.GetComponent(/datum/component/swimming) //Handling admin TPs here.
 		S?.RemoveComponent()
 
+/turf/open/liquid/CanPass(atom/movable/mover, turf/target)
+	if(mover.throwing)
+		return TRUE
+	var/datum/component/swimming/S = mover.GetComponent(/datum/component/swimming) //You can't get in the pool unless you're swimming.
+	return (isliving(mover)) ? S : ..() //So you can do stuff like throw beach balls around the pool!
+
 //Used to determine how zappy to be to a perhaps-electronic user entering this body of water.
 /turf/open/liquid/proc/calculate_zap(mob/user)
 	var/zap = 0
@@ -210,15 +216,6 @@ Heavily repurposed for our use, with a smidge of pool code and jank. - Carl
 		return TRUE
 	if(H.head && !(CS.clothing_flags & THICKMATERIAL))
 		return TRUE
-
-/turf/open/liquid/CanPass(atom/movable/mover, turf/target)
-	var/turf/open/T = get_turf(target)
-	var/datum/component/swimming/S = mover.GetComponent(/datum/component/swimming)
-	if(T.has_catwalk || !S)
-		return TRUE
-	if(mover.throwing)
-		return TRUE
-	return (isliving(mover)) ? S : ..()
 
 /turf/open/liquid/MouseDrop_T(atom/dropping, mob/user)
 	var/turf/open/T = get_turf(src)

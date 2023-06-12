@@ -199,7 +199,7 @@
 	icon = 'icons/mob/wastemobsdrops.dmi'
 	icon_state = "stalker-egg"
 	density = 1
-	anchored = 0
+	anchored = 1
 
 
 /////////////

@@ -57,8 +57,6 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	footstep_type = FOOTSTEP_MOB_CLAW
 
-
-
 /mob/living/simple_animal/hostile/mirelurk/baby/Initialize()
 	. = ..()
 
@@ -66,11 +64,10 @@
 	..()
 	summon_backup(10)
 
-// OBSOLETE MARKED FOR DEATH, YOU HAVE 3 DAYS
 /obj/structure/mirelurkegg
 	name = "mirelurk eggs"
 	desc = "A fresh clutch of mirelurk eggs."
 	icon = 'icons/mob/wastemobsdrops.dmi'
 	icon_state = "mirelurkeggs"
 	density = 1
-	anchored = 0
+	anchored = 1

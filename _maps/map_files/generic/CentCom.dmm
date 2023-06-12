@@ -6597,13 +6597,6 @@
 /obj/structure/sign/departments/security,
 /turf/closed/wall/f13/vault,
 /area/centcom/evac)
-"wB" = (
-/obj/structure/vault_door/old{
-	max_integrity = 1000;
-	obj_integrity = 1000
-	},
-/turf/open/floor/plasteel,
-/area/centcom/evac)
 "wC" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/delivery,
@@ -35716,7 +35709,7 @@ vK
 MX
 vK
 MX
-wB
+MX
 Co
 tV
 Co

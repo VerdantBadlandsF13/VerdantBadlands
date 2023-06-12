@@ -552,7 +552,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "aQT" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 5
 	},
@@ -1256,6 +1256,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"bDA" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop1"
+	},
+/area/f13/tunnel)
 "bDB" = (
 /obj/machinery/light{
 	dir = 1
@@ -1500,6 +1506,10 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/building)
+"bPm" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/tunnel)
 "bPJ" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -1860,7 +1870,7 @@
 	},
 /area/f13/building)
 "chM" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 8
 	},
@@ -2872,7 +2882,7 @@
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "drV" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -3563,7 +3573,7 @@
 	},
 /area/f13/tunnel)
 "dXt" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 4
 	},
@@ -3887,6 +3897,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
 /area/f13/building)
+"emt" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/tunnel)
 "enA" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/f13{
@@ -3971,6 +3987,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"erj" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft1"
+	},
+/area/f13/tunnel)
 "esq" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -4387,6 +4409,12 @@
 	icon_state = "horizontaltopbordertop1"
 	},
 /area/f13/wasteland)
+"ePR" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/tunnel)
 "ePY" = (
 /obj/structure/fence/door,
 /turf/open/indestructible/ground/outside/desert/harsh{
@@ -4517,6 +4545,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/blue,
 /area/f13/building)
+"eYn" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright1"
+	},
+/area/f13/tunnel)
 "eYP" = (
 /obj/structure/railing/wood{
 	pixel_y = 32
@@ -4627,7 +4661,7 @@
 	},
 /area/f13/wasteland)
 "fdJ" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -4804,7 +4838,7 @@
 	},
 /area/f13/building)
 "fmT" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/stairs/south,
 /obj/structure/railing{
 	dir = 6
@@ -5096,7 +5130,7 @@
 	},
 /area/f13/wasteland)
 "fBF" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -5414,7 +5448,7 @@
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "fRI" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -5850,7 +5884,7 @@
 	},
 /area/f13/building)
 "gtp" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
@@ -6199,7 +6233,7 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/building)
 "gLF" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 6
 	},
@@ -6563,7 +6597,7 @@
 	},
 /area/f13/wasteland)
 "hkj" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -6571,7 +6605,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "hkQ" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -7165,7 +7199,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "hVW" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/stairs/north,
 /obj/structure/railing{
 	dir = 9
@@ -7592,6 +7626,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/green,
 /area/f13/building)
+"ivX" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/tunnel)
 "ixa" = (
 /obj/effect/overlay/junk/mirror{
 	pixel_y = 32
@@ -8161,7 +8201,7 @@
 	},
 /area/f13/building)
 "iYe" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -9050,7 +9090,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "kbD" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "kbT" = (
@@ -9353,6 +9393,12 @@
 	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/wasteland)
+"ksA" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright1"
+	},
+/area/f13/tunnel)
 "ksE" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner{
@@ -9617,6 +9663,12 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"kHR" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom1"
+	},
+/area/f13/tunnel)
 "kHU" = (
 /obj/structure/fence/corner,
 /obj/structure/fence,
@@ -9942,6 +9994,12 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/carpet/cyan,
 /area/f13/building)
+"ldK" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/tunnel)
 "ldV" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
@@ -10521,7 +10579,7 @@
 /obj/structure/railing{
 	dir = 6
 	},
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "lLb" = (
@@ -10619,6 +10677,12 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
+"lQQ" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/tunnel)
 "lRj" = (
 /obj/structure/sink{
 	pixel_y = -1;
@@ -10989,7 +11053,7 @@
 	},
 /area/f13/building)
 "mpy" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 9
 	},
@@ -12097,7 +12161,7 @@
 	},
 /area/f13/wasteland)
 "nzH" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 9
 	},
@@ -13162,7 +13226,7 @@
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/building)
 "oNB" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/stairs/south,
 /obj/structure/railing{
 	dir = 10
@@ -15203,7 +15267,7 @@
 	},
 /area/f13/building)
 "rcz" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 1
 	},
@@ -15857,7 +15921,7 @@
 	},
 /area/f13/building)
 "rRc" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/stairs/north,
 /obj/structure/railing{
 	dir = 5
@@ -16072,7 +16136,7 @@
 /turf/open/floor/f13,
 /area/f13/building)
 "sga" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 10
 	},
@@ -16151,7 +16215,7 @@
 	},
 /area/f13/building)
 "snc" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
@@ -18540,7 +18604,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "uZR" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -19920,6 +19984,12 @@
 	name = "grass"
 	},
 /area/f13/wasteland)
+"wCN" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/tunnel)
 "wCT" = (
 /obj/structure/bookshelf,
 /obj/item/storage/book/bible,
@@ -20716,6 +20786,12 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/f13/wasteland)
+"xDt" = (
+/obj/effect/landmark/start/f13/wastelander,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom0"
+	},
+/area/f13/tunnel)
 "xDx" = (
 /turf/open/floor/plating/rust,
 /area/f13/building)
@@ -21247,6 +21323,12 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"yiz" = (
+/obj/effect/landmark/latejoin,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft1"
+	},
+/area/f13/tunnel)
 "yiJ" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/twohanded/sledgehammer/simple,
@@ -21655,15 +21737,15 @@ bkG
 bkG
 fun
 qsP
-rsb
-gmr
-hCO
-uIa
-uIa
-uIa
-uIa
-fMk
-suP
+kHR
+bDA
+xDt
+bPm
+bPm
+bPm
+bPm
+ldK
+wCN
 qsP
 fun
 cqw
@@ -33640,7 +33722,7 @@ uiJ
 "}
 (49,1,1) = {"
 qBf
-oUr
+eYn
 oUr
 bYZ
 ntD
@@ -33897,7 +33979,7 @@ uiJ
 "}
 (50,1,1) = {"
 qBf
-tkw
+erj
 tkw
 gmv
 aeQ
@@ -34154,7 +34236,7 @@ uiJ
 "}
 (51,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -34411,7 +34493,7 @@ uiJ
 "}
 (52,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -34668,7 +34750,7 @@ uiJ
 "}
 (53,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -34925,7 +35007,7 @@ uiJ
 "}
 (54,1,1) = {"
 qBf
-hEg
+ivX
 hEg
 fSs
 fSs
@@ -35182,7 +35264,7 @@ uiJ
 "}
 (55,1,1) = {"
 qBf
-kkl
+ePR
 kkl
 aeQ
 aeQ
@@ -65508,7 +65590,7 @@ qsP
 "}
 (173,1,1) = {"
 qBf
-oUr
+eYn
 oUr
 fSs
 fSs
@@ -65760,12 +65842,12 @@ fSs
 fSs
 fSs
 hEg
-hEg
+emt
 qBf
 "}
 (174,1,1) = {"
 qBf
-tkw
+erj
 tkw
 gmv
 gmv
@@ -66017,12 +66099,12 @@ aeQ
 aeQ
 aeQ
 kkl
-kkl
+lQQ
 qBf
 "}
 (175,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -66274,12 +66356,12 @@ nvk
 nvk
 nvk
 uIa
-uIa
+bPm
 qBf
 "}
 (176,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -66531,12 +66613,12 @@ nvk
 nvk
 nvk
 uIa
-uIa
+bPm
 qBf
 "}
 (177,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -66788,12 +66870,12 @@ mrg
 rom
 ofs
 uIa
-uIa
+bPm
 qBf
 "}
 (178,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -67045,12 +67127,12 @@ nvk
 nvk
 nvk
 uIa
-uIa
+bPm
 qBf
 "}
 (179,1,1) = {"
 qBf
-uIa
+bPm
 uIa
 nvk
 nvk
@@ -67302,12 +67384,12 @@ nvk
 nvk
 nvk
 uIa
-uIa
+bPm
 qBf
 "}
 (180,1,1) = {"
 qBf
-oUr
+ksA
 oUr
 bYZ
 bYZ
@@ -67559,12 +67641,12 @@ bYZ
 bYZ
 bYZ
 hEg
-hEg
+ivX
 qBf
 "}
 (181,1,1) = {"
 qBf
-tkw
+yiz
 tkw
 gmv
 gmv
@@ -67816,7 +67898,7 @@ dEZ
 dEZ
 gmv
 tkw
-kkl
+ePR
 qBf
 "}
 (182,1,1) = {"
@@ -75526,7 +75608,7 @@ fSs
 fSs
 fSs
 fSs
-hEg
+emt
 qBf
 "}
 (212,1,1) = {"
@@ -75783,7 +75865,7 @@ aeQ
 aeQ
 aeQ
 aeQ
-kkl
+lQQ
 qBf
 "}
 (213,1,1) = {"
@@ -76040,7 +76122,7 @@ nvk
 nvk
 nvk
 nvk
-uIa
+bPm
 qBf
 "}
 (214,1,1) = {"
@@ -76297,7 +76379,7 @@ nvk
 nvk
 nvk
 nvk
-uIa
+bPm
 qBf
 "}
 (215,1,1) = {"
@@ -76554,7 +76636,7 @@ nvk
 nvk
 nvk
 nvk
-uIa
+bPm
 qBf
 "}
 (216,1,1) = {"
@@ -76811,7 +76893,7 @@ bYZ
 fSs
 fSs
 fSs
-hEg
+ivX
 qBf
 "}
 (217,1,1) = {"
@@ -77068,7 +77150,7 @@ gmv
 aeQ
 aeQ
 aeQ
-kkl
+ePR
 qBf
 "}
 (218,1,1) = {"

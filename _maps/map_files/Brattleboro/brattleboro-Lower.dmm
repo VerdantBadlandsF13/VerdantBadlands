@@ -1197,11 +1197,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"fP" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/ladder/unbreakable_normal,
-/turf/open/liquid/water/scum/south,
-/area/f13/sewer)
 "fQ" = (
 /obj/machinery/light{
 	dir = 4;
@@ -1818,8 +1813,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jc" = (
-/obj/structure/lattice/catwalk,
-/turf/open/liquid/water/safe,
+/obj/structure/catwalk,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/bl/gmb)
 "jd" = (
 /obj/structure/chair/sofa,
@@ -1933,10 +1930,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"jH" = (
-/obj/structure/lattice/catwalk,
-/turf/open/liquid/water/scum/south,
-/area/f13/sewer)
 "jJ" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Raider"
@@ -2382,10 +2375,12 @@
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
 "lX" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden,
-/turf/open/liquid/water/scum/east,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "lY" = (
 /obj/machinery/light,
@@ -2768,11 +2763,13 @@
 /turf/closed/wall/rust,
 /area/f13/building)
 "nT" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_3"
 	},
-/turf/open/liquid/water/scum/east,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "nU" = (
 /obj/structure/reagent_dispensers/barrel,
@@ -2966,10 +2963,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
-"oR" = (
-/obj/structure/lattice/catwalk,
-/turf/open/liquid/water/scum/east,
-/area/f13/sewer)
 "oV" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -3465,8 +3458,6 @@
 /obj/structure/sign/poster/prewar/poster73{
 	pixel_y = 32
 	},
-/obj/machinery/cryostasis,
-/obj/effect/landmark/start/f13/lbj_lumberjack,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
@@ -4385,10 +4376,6 @@
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
-"uX" = (
-/obj/structure/lattice/catwalk,
-/turf/open/liquid/water/scum/north,
-/area/f13/sewer)
 "uY" = (
 /obj/structure/nest/fireant,
 /turf/open/indestructible/ground/inside/mountain,
@@ -4584,7 +4571,7 @@
 /turf/closed/indestructible/vaultdoor,
 /area/f13/tunnel)
 "vY" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -5149,9 +5136,11 @@
 /turf/open/liquid/water/scum/west,
 /area/f13/sewer)
 "yE" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/liquid/water/scum/east,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "yF" = (
 /obj/structure/destructible/tribal_torch/lit,
@@ -6551,8 +6540,10 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Ga" = (
-/obj/structure/lattice/catwalk,
-/turf/open/liquid/water/scum/west,
+/obj/structure/catwalk,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "Gc" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -6735,12 +6726,6 @@
 "GS" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"GT" = (
-/turf/open/indestructible/ground/outside/water/running{
-	desc = "Putrid, stagnant water. You can almost see something moving in it.";
-	name = "filthy water"
-	},
-/area/f13/sewer)
 "GV" = (
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_6"
@@ -8081,6 +8066,10 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
+"Nk" = (
+/obj/structure/vaultdoor,
+/turf/closed/wall/rust,
+/area/f13/bl/gmb)
 "Nl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/smartfridge/bottlerack/grownbin,
@@ -8518,9 +8507,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "Pv" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/barricade/wooden,
-/turf/open/liquid/water/scum/east,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "Pw" = (
 /mob/living/simple_animal/hostile/ghoul/reaver,
@@ -9072,10 +9063,7 @@
 	brightness = 3;
 	pixel_x = -15
 	},
-/turf/open/indestructible/ground/outside/water/running{
-	desc = "Putrid, stagnant water. You can almost see something moving in it.";
-	name = "filthy water"
-	},
+/turf/open/liquid/water/scum/north,
 /area/f13/sewer)
 "Sg" = (
 /obj/effect/decal/remains/human,
@@ -9207,9 +9195,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "SP" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/ladder/unbreakable_normal,
-/turf/open/liquid/water/scum/north,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "SR" = (
 /obj/structure/chair/office{
@@ -10324,14 +10314,6 @@
 /obj/item/storage/box/cups,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
-"Yy" = (
-/obj/machinery/cryostasis,
-/obj/effect/landmark/start/f13/lbj_lumberjack,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/tunnel)
 "YA" = (
 /obj/structure/nest/gecko,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10427,8 +10409,10 @@
 /area/f13/bl/gmb)
 "YX" = (
 /obj/structure/vaultdoor{
-	icon_state = "open";
-	name = "demo vault door"
+	icon_state = "oldopen";
+	name = "demo vault door";
+	opacity = 0;
+	density = 0
 	},
 /turf/open/liquid/water/scum/south,
 /area/f13/tunnel)
@@ -17921,7 +17905,7 @@ Va
 Va
 Va
 OA
-Gs
+Nk
 ex
 Bu
 Sb
@@ -19125,16 +19109,16 @@ Va
 Md
 wF
 wF
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
@@ -19144,8 +19128,8 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 Cr
 vV
 Md
@@ -21878,9 +21862,9 @@ vV
 vV
 vV
 vV
-GT
-GT
-GT
+uD
+uD
+uD
 ix
 vV
 vV
@@ -22335,9 +22319,9 @@ GB
 vV
 EY
 vV
-GT
-GT
-GT
+uD
+uD
+uD
 ix
 vV
 vV
@@ -22792,8 +22776,8 @@ ls
 vV
 EY
 vV
-GT
-GT
+uD
+uD
 Sf
 ix
 vV
@@ -23249,9 +23233,9 @@ we
 vV
 vV
 vV
-GT
-GT
-GT
+uD
+uD
+uD
 ix
 vV
 vV
@@ -25064,8 +25048,8 @@ Md
 Md
 Md
 Md
-oR
-oR
+Ga
+Ga
 vV
 vV
 Md
@@ -25521,8 +25505,8 @@ vV
 vV
 tF
 vV
-oR
-oR
+Ga
+Ga
 KL
 vV
 vV
@@ -25952,8 +25936,8 @@ zE
 vV
 wF
 wF
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -25976,12 +25960,12 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26016,11 +26000,11 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26042,8 +26026,8 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 Cr
 Cr
 Cr
@@ -26409,8 +26393,8 @@ vV
 wF
 wF
 wF
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26433,15 +26417,12 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
-uX
-uX
-uD
-uD
-uD
+Ga
+Ga
 uD
 uD
 uD
@@ -26473,11 +26454,14 @@ uD
 uD
 uD
 uD
-uX
-uX
 uD
-uX
-uX
+uD
+uD
+Ga
+Ga
+uD
+Ga
+Ga
 uD
 uD
 uD
@@ -26500,7 +26484,7 @@ uD
 uD
 uD
 SP
-uX
+Ga
 Cr
 Cr
 Cr
@@ -26866,8 +26850,8 @@ vV
 wF
 wF
 wF
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26890,12 +26874,12 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26930,11 +26914,11 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 uD
-uX
-uX
+Ga
+Ga
 uD
 uD
 uD
@@ -26956,8 +26940,8 @@ uD
 uD
 uD
 uD
-uX
-uX
+Ga
+Ga
 Cr
 Cr
 Cr
@@ -27320,9 +27304,9 @@ Va
 Va
 Md
 vV
-oR
-oR
-oR
+Ga
+Ga
+Ga
 vV
 vV
 vV
@@ -27777,9 +27761,9 @@ Va
 Va
 Md
 vV
-oR
+Ga
 nT
-oR
+Ga
 vV
 vV
 Md
@@ -65252,8 +65236,8 @@ Md
 zp
 vV
 yE
-oR
-oR
+Ga
+Ga
 vV
 vV
 Md
@@ -65688,8 +65672,8 @@ Va
 Va
 Md
 rr
-jH
-jH
+Ga
+Ga
 vV
 tR
 Py
@@ -65708,9 +65692,9 @@ vV
 vV
 vV
 vV
-oR
-oR
-oR
+Ga
+Ga
+Ga
 vV
 vV
 vV
@@ -66148,8 +66132,8 @@ vV
 zw
 jf
 SI
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
@@ -66163,13 +66147,13 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 wD
 jf
 hV
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
@@ -66258,8 +66242,8 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 Cr
 Cr
 Cr
@@ -66605,8 +66589,8 @@ ZT
 hV
 zw
 zw
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
@@ -66620,13 +66604,13 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 jJ
 zi
 zw
-jH
-jH
+Ga
+Ga
 tN
 tN
 jl
@@ -66715,8 +66699,8 @@ tN
 tN
 tN
 tN
-fP
-jH
+SP
+Ga
 Cr
 Cr
 Cr
@@ -67062,8 +67046,8 @@ uc
 oc
 SI
 wD
-jH
-jH
+Ga
+Ga
 tN
 tN
 tN
@@ -67077,13 +67061,13 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 wD
 zw
 jf
-jH
-jH
+Ga
+Ga
 tN
 jl
 jl
@@ -67172,8 +67156,8 @@ tN
 tN
 tN
 tN
-jH
-jH
+Ga
+Ga
 Cr
 Cr
 vV
@@ -111955,12 +111939,12 @@ fQ
 PI
 wz
 Ee
-Yy
+wz
 fQ
 AU
 AU
 fQ
-Yy
+wz
 Ee
 Ji
 GS

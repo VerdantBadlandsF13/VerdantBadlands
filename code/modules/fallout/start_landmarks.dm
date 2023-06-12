@@ -37,11 +37,11 @@
 	name = "Vault Dweller"
 	icon_state = "Vault Dweller"
 
-/obj/effect/landmark/start/f13/followersrobot
-	name = "Followers Robot"
+/obj/effect/landmark/start/f13/vaultrobot
+	name = "Vault-Tec Robot"
 	icon_state = "Cyborg"
 
-/obj/effect/landmark/start/f13/followersrobot/Initialize()
+/obj/effect/landmark/start/f13/vaultrobot/Initialize()
 	..()
 	GLOB.special_borg_start += loc
 	return INITIALIZE_HINT_QDEL

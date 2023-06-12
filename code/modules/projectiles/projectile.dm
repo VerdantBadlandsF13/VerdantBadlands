@@ -26,7 +26,6 @@
 	var/atom/movable/firer = null//Who shot it
 	var/atom/fired_from = null // the atom that the projectile was fired from (gun, turret)	var/suppressed = FALSE	//Attack message
 	var/suppressed = FALSE	//Attack message
-	var/candink = FALSE //Can this projectile play the dink sound when hitting the head?
 	var/yo = null
 	var/xo = null
 	var/atom/original = null // the original target clicked

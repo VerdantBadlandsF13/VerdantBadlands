@@ -1356,6 +1356,7 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_x = 32
 	},
+/obj/effect/landmark/start/f13/vaultscientist,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkpurple";
 	dir = 4
@@ -1403,11 +1404,6 @@
 /obj/structure/closet/crate/footlocker,
 /turf/open/floor/f13,
 /area/f13/vault/security)
-"fM" = (
-/turf/open/floor/f13{
-	icon_state = "redchess"
-	},
-/area/f13/vault/security/checkpoint)
 "fN" = (
 /obj/structure/chair/sofa/corp/corner,
 /turf/open/floor/f13,
@@ -1927,10 +1923,6 @@
 	dir = 8
 	},
 /area/f13/vault/medical)
-"hU" = (
-/obj/structure/shieldwall/large,
-/turf/open/floor/f13,
-/area/f13/vault)
 "hW" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_y = 4
@@ -2326,6 +2318,14 @@
 	},
 /turf/open/floor/plating,
 /area/f13/vault/vents)
+"ju" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "redsolid"
+	},
+/area/f13/vault)
 "jv" = (
 /obj/structure/simple_door/metal/ventilation,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2501,6 +2501,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/landmark/start/f13/vaultdoctor,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkblue";
 	dir = 9
@@ -3086,7 +3087,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "mv" = (
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_6"
@@ -3889,7 +3890,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "pz" = (
 /obj/structure/chair/office/dark{
 	dir = 4
@@ -3936,6 +3937,15 @@
 /obj/item/reagent_containers/pill/patch/jet,
 /turf/open/floor/plating,
 /area/f13/vault/vents)
+"pG" = (
+/obj/structure/vaultdoor/worn{
+	pixel_x = -32;
+	pixel_y = -64
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirty"
+	},
+/area/f13/tunnel)
 "pI" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkpurplecorners"
@@ -4488,7 +4498,7 @@
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/medical/morgue)
 "rN" = (
-/obj/machinery/mech_bay_recharge_port,
+/obj/machinery/recharge_station/fullupgrade,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -4989,17 +4999,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
-"tI" = (
-/obj/structure/vault_door/old,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/tunnel)
 "tJ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5890,7 +5889,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "yc" = (
 /obj/item/ammo_casing/spent{
 	pixel_x = -9;
@@ -5977,6 +5976,7 @@
 	},
 /area/f13/vault/dormitory)
 "ys" = (
+/obj/structure/shieldwall/full/active_stun,
 /turf/open/floor/f13{
 	icon_state = "whitegreen"
 	},
@@ -7260,6 +7260,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/landmark/start/f13/vaultdoctor,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkblue";
 	dir = 10
@@ -9220,12 +9221,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/atrium)
-"LV" = (
-/obj/effect/spawner/structure/window/plastitanium,
-/turf/open/floor/f13{
-	icon_state = "redchess"
-	},
-/area/f13/vault/security/checkpoint)
 "LY" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10257,6 +10252,10 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/reactor)
+"Qv" = (
+/obj/effect/landmark/start/f13/overseer,
+/turf/open/floor/carpet/blue,
+/area/f13/vault/overseer)
 "Qw" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/belt,
@@ -10339,7 +10338,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "QO" = (
 /obj/machinery/shower{
 	dir = 1
@@ -10559,7 +10558,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "Sc" = (
 /obj/effect/decal/waste{
 	icon_state = "goo9"
@@ -10743,6 +10742,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/effect/landmark/start/f13/vaultrobot,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -10900,6 +10900,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
+"Tk" = (
+/obj/effect/landmark/start/f13/vaultscientist,
+/turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
+	icon_state = "darkpurple";
+	dir = 4
+	},
+/area/f13/vault/science)
 "Tl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -12015,6 +12022,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/start/f13/vaultengineer,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
@@ -12044,16 +12052,6 @@
 	dir = 4
 	},
 /area/f13/vault/science)
-"YG" = (
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/vault/security/checkpoint)
 "YH" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -12081,7 +12079,7 @@
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
-/area/f13/vault/security/checkpoint)
+/area/f13/vault)
 "YP" = (
 /obj/item/trash/cheesie,
 /turf/open/floor/plating/rust,
@@ -44294,8 +44292,8 @@ Mh
 iY
 gG
 kz
-kz
-tI
+pG
+Rr
 RB
 Yf
 RB
@@ -66610,7 +66608,7 @@ hH
 ws
 eQ
 gh
-dp
+Qv
 WZ
 dp
 dp
@@ -70198,7 +70196,7 @@ UI
 UI
 UI
 UI
-ph
+ju
 DQ
 Vd
 DQ
@@ -70713,11 +70711,11 @@ UI
 UI
 BV
 BV
-YG
-LV
-LV
-LV
-YG
+BV
+Vv
+Vv
+Vv
+BV
 xP
 xP
 xP
@@ -70970,11 +70968,11 @@ UI
 UI
 BV
 vH
-YG
+BV
 QM
 pw
 QM
-YG
+BV
 Yf
 Yf
 Yf
@@ -71227,11 +71225,11 @@ UI
 UI
 BV
 vH
-YG
-fM
+BV
+Uv
 Sb
-fM
-YG
+Uv
+BV
 xP
 xP
 xP
@@ -71484,11 +71482,11 @@ UI
 UI
 BV
 vH
-YG
+BV
 mu
-fM
-fM
-fM
+Uv
+Uv
+Uv
 DS
 DS
 dJ
@@ -71741,11 +71739,11 @@ UI
 Yf
 BV
 vH
-YG
-fM
+BV
+Uv
 xZ
 YN
-fM
+Uv
 DS
 DS
 ev
@@ -71998,11 +71996,11 @@ Yf
 Yf
 BV
 vH
-YG
-YG
-YG
-YG
-YG
+BV
+BV
+BV
+BV
+BV
 xP
 xP
 xP
@@ -72326,8 +72324,8 @@ MN
 qp
 Xn
 qW
-YF
-YF
+Tk
+Tk
 fz
 Nh
 dL
@@ -72776,7 +72774,7 @@ Yf
 Yf
 Yf
 Yf
-sF
+xP
 xP
 DS
 DS
@@ -73033,7 +73031,7 @@ Yf
 Yf
 Yf
 Yf
-sF
+xP
 wi
 DS
 DS
@@ -73290,7 +73288,7 @@ Yf
 Yf
 Yf
 Yf
-sF
+xP
 Tr
 DS
 DS
@@ -73547,7 +73545,7 @@ Yf
 Yf
 Yf
 Yf
-sF
+xP
 xP
 DS
 DS
@@ -74068,7 +74066,7 @@ DS
 DS
 DS
 dJ
-hU
+DS
 DS
 tz
 CV

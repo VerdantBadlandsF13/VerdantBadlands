@@ -284,6 +284,11 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/vault/reactor)
+"bn" = (
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/caves)
 "bo" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -2319,11 +2324,9 @@
 /turf/open/floor/plating,
 /area/f13/vault/vents)
 "ju" = (
-/obj/machinery/light{
-	dir = 4
-	},
+/obj/structure/vaultdoor,
 /turf/open/floor/f13{
-	icon_state = "redsolid"
+	icon_state = "vault"
 	},
 /area/f13/vault)
 "jv" = (
@@ -2693,6 +2696,12 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/vault/diner)
+"kQ" = (
+/obj/machinery/light/floor,
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/caves)
 "kU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/ruins,
@@ -3085,7 +3094,7 @@
 	pixel_x = -17
 	},
 /turf/open/floor/f13{
-	icon_state = "redchess"
+	icon_state = "vault"
 	},
 /area/f13/vault)
 "mv" = (
@@ -3102,6 +3111,25 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/vault/security)
+"mA" = (
+/obj/structure/railing{
+	dir = 9;
+	color = "#A47449"
+	},
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/caves)
+"mB" = (
+/obj/machinery/doorButtons/vaultButton,
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/caves)
 "mC" = (
 /obj/structure/sign/warning/electricshock{
 	pixel_y = 32
@@ -3782,6 +3810,17 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/dormitory)
+"pb" = (
+/obj/structure/vaultdoor/worn,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/tunnel)
 "pd" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/ammo_box/c10mm,
@@ -3937,15 +3976,6 @@
 /obj/item/reagent_containers/pill/patch/jet,
 /turf/open/floor/plating,
 /area/f13/vault/vents)
-"pG" = (
-/obj/structure/vaultdoor/worn{
-	pixel_x = -32;
-	pixel_y = -64
-	},
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/tunnel)
 "pI" = (
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull{
 	icon_state = "darkpurplecorners"
@@ -4133,6 +4163,12 @@
 "qr" = (
 /turf/open/floor/f13,
 /area/f13/vault/atrium)
+"qt" = (
+/obj/machinery/doorButtons/vaultButton,
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/vault)
 "qu" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/wrench/medical,
@@ -5887,7 +5923,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/f13{
-	icon_state = "redchess"
+	icon_state = "vault"
 	},
 /area/f13/vault)
 "yc" = (
@@ -6213,6 +6249,12 @@
 	},
 /turf/open/floor/plating,
 /area/f13/vault/vents)
+"zC" = (
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "rampdowntop"
+	},
+/area/f13/caves)
 "zE" = (
 /obj/machinery/light{
 	dir = 4
@@ -10391,6 +10433,15 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/f13/vault/dormitory)
+"Rf" = (
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 5
+	},
+/turf/open/floor/f13{
+	icon_state = "vault"
+	},
+/area/f13/caves)
 "Rg" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -12289,6 +12340,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
+"ZL" = (
+/turf/open/floor/f13{
+	icon_state = "rampdowntop";
+	dir = 8
+	},
+/area/f13/caves)
 "ZM" = (
 /obj/machinery/camera{
 	dir = 8
@@ -44292,8 +44349,8 @@ Mh
 iY
 gG
 kz
-pG
-Rr
+kz
+pb
 RB
 Yf
 RB
@@ -69680,7 +69737,7 @@ UI
 UI
 UI
 UI
-UI
+ZL
 BV
 BV
 BV
@@ -69936,9 +69993,9 @@ UI
 UI
 UI
 UI
-UI
-UI
-UI
+mA
+bn
+bn
 BV
 LB
 NT
@@ -70193,9 +70250,9 @@ UI
 UI
 UI
 UI
-UI
-UI
-UI
+mB
+kQ
+bn
 ju
 DQ
 Vd
@@ -70450,9 +70507,9 @@ UI
 UI
 UI
 UI
-UI
-UI
-UI
+Rf
+bn
+bn
 BV
 LB
 DQ
@@ -70708,7 +70765,7 @@ UI
 UI
 UI
 UI
-UI
+zC
 BV
 BV
 BV
@@ -71484,7 +71541,7 @@ BV
 vH
 BV
 mu
-Uv
+UN
 Uv
 Uv
 DS
@@ -71740,7 +71797,7 @@ Yf
 BV
 vH
 BV
-Uv
+qt
 xZ
 YN
 Uv

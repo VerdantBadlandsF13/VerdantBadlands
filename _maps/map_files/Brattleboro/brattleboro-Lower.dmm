@@ -8066,10 +8066,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"Nk" = (
-/obj/structure/vaultdoor,
-/turf/closed/wall/rust,
-/area/f13/bl/gmb)
 "Nl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/smartfridge/bottlerack/grownbin,
@@ -17905,7 +17901,7 @@ Va
 Va
 Va
 OA
-Nk
+Gs
 ex
 Bu
 Sb

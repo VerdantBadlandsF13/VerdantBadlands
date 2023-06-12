@@ -58,6 +58,8 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/pill/radx,
+		/obj/item/radio,
+		/obj/item/gun/ballistic/automatic/pistol/pistol22,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -73,6 +75,10 @@
 		/obj/item/clothing/suit/f13/cowboygvest,
 		/obj/item/clothing/suit/f13/westender,
 		/obj/item/clothing/suit/overalls)
+	l_hand = pick(
+		/obj/item/gun/ballistic/automatic/autopipe,
+		/obj/item/gun/ballistic/revolver/caravan_shotgun,
+		/obj/item/gun/ballistic/rifle/hunting)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"

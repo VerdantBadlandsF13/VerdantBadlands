@@ -2,6 +2,9 @@ GLOBAL_LIST_EMPTY(vault_doors)
 
 /obj/structure/vaultdoor
 	name = "vault door 113"
+	desc = "A conventional Vault blast door of \"Nine cog\" model. <br>\
+	A blast door design incorporates proper sealants against radiation and other hazardous elements that may be created in the event of a nuclear war, \
+	to properly protect its inhabitants."
 	icon = 'icons/fallout/machines/gear.dmi'
 	icon_state = "113closed"
 	density = TRUE

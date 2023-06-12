@@ -60,6 +60,7 @@
 		/obj/item/reagent_containers/pill/radx,
 		/obj/item/radio,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
+		/obj/item/storage/survivalkit,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)

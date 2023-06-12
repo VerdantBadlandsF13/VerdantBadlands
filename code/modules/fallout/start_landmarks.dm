@@ -14,7 +14,7 @@
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
-	name = "Overseer"
+	name = "Vault-Tec Overseer"
 	icon_state = "Overseer"
 
 /obj/effect/landmark/start/f13/vaultdoctor

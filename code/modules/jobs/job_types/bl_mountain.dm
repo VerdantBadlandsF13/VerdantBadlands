@@ -31,21 +31,6 @@
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio
 
-/datum/outfit/job/gmb/commander
-	name = "GMB Commander"
-	jobtype = /datum/job/gmb/commander
-	id = /obj/item/card/id/gmb_commander_keys
-
-/datum/outfit/job/gmb/watchman
-	name = "GMB Watchman"
-	jobtype = /datum/job/gmb/watchman
-	id = /obj/item/card/id/gmb_commander_keys
-
-/datum/outfit/job/gmb/walker
-	name = "GMB Walker"
-	jobtype = /datum/job/gmb/walker
-	id = /obj/item/card/id/gmb_commander_keys
-
 // Commander
 /datum/job/gmb/commander
 	title = "Commander"
@@ -59,6 +44,11 @@
 	exp_requirements = 960
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
+
+/datum/outfit/job/gmb/commander
+	name = "Commander"
+	jobtype = /datum/job/gmb/commander
+	id = /obj/item/card/id/gmb_commander_keys
 
 // Watchman
 /datum/job/gmb/watchman
@@ -74,6 +64,11 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
+/datum/outfit/job/gmb/watchman
+	name = "Watchman"
+	jobtype = /datum/job/gmb/watchman
+	id = /obj/item/card/id/gmb_commander_keys
+
 // Walker
 /datum/job/gmb/walker
 	title = "Walker"
@@ -88,6 +83,11 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 
+/datum/outfit/job/gmb/walker
+	name = "Walker"
+	jobtype = /datum/job/gmb/walker
+	id = /obj/item/card/id/gmb_commander_keys
+
 // Militia
 /datum/job/gmb/militia
 	title = "Militia"
@@ -96,8 +96,12 @@
 	spawn_positions = 4
 	description = "A more well trained Volunteer. The main working force of the GMB."
 	supervisors = "Commander."
-	outfit = /datum/outfit/job/gmb
+	outfit = /datum/outfit/job/gmb/militia
 	exp_requirements = 120
+
+/datum/outfit/job/gmb/militia
+	name = "Militia"
+	jobtype = /datum/job/gmb/militia
 
 // Volunteer
 /datum/job/gmb/volunteer
@@ -107,6 +111,10 @@
 	spawn_positions = -1
 	description = "You're essentially just a wastelander with a uniform and a gun."
 	supervisors = "Commander."
-	outfit = /datum/outfit/job/gmb
+	outfit = /datum/outfit/job/gmb/volunteer
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
+
+/datum/outfit/job/gmb/volunteer
+	name = "Volunteer"
+	jobtype = /datum/job/gmb/volunteer

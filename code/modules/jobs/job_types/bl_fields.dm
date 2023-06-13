@@ -32,18 +32,6 @@
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio
 
-/datum/outfit/job/dfs/advisor
-	name = "DFS Advisor"
-	jobtype = /datum/job/dfs/advisor
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
-	id = /obj/item/card/id/dfs_boss_raider_tags
-
-/datum/outfit/job/dfs/enforcer
-	name = "DFS Enforcer"
-	jobtype = /datum/job/dfs/enforcer
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
-	id = /obj/item/card/id/dfs_boss_raider_tags
-
 // DFS Advisor
 /datum/job/dfs/advisor
 	title = "DFS Advisor"
@@ -58,6 +46,12 @@
 	exp_requirements = 960
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
+
+/datum/outfit/job/dfs/advisor
+	name = "DFS Advisor"
+	jobtype = /datum/job/dfs/advisor
+	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	id = /obj/item/card/id/dfs_boss_raider_tags
 
 // DFS Enforcer
 /datum/job/dfs/enforcer
@@ -74,6 +68,12 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
+/datum/outfit/job/dfs/enforcer
+	name = "DFS Enforcer"
+	jobtype = /datum/job/dfs/enforcer
+	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	id = /obj/item/card/id/dfs_boss_raider_tags
+
 // DFS Agent
 /datum/job/dfs/agent
 	title = "DFS Agent"
@@ -82,8 +82,12 @@
 	spawn_positions = 2
 	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
 	supervisors = "Enforcer."
-	outfit = /datum/outfit/job/dfs
+	outfit = /datum/outfit/job/dfs/agent
 	exp_requirements = 240
+
+/datum/outfit/job/dfs/agent
+	name = "DFS Agent"
+	jobtype = /datum/job/dfs/agent
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -93,8 +97,12 @@
 	spawn_positions = 4
 	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
 	supervisors = "Agent."
-	outfit = /datum/outfit/job/dfs
+	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
+
+/datum/outfit/job/dfs/regular
+	name = "DFS Regular"
+	jobtype = /datum/job/dfs/regular
 
 //DFS Grunt
 /datum/job/dfs/grunt
@@ -104,6 +112,10 @@
 	spawn_positions = -1
 	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
 	supervisors = "Regular."
-	outfit = /datum/outfit/job/dfs
+	outfit = /datum/outfit/job/dfs/grunt
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
+
+/datum/outfit/job/dfs/grunt
+	name = "DFS Grunt"
+	jobtype = /datum/job/dfs/grunt

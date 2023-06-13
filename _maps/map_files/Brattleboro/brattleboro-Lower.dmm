@@ -3922,9 +3922,7 @@
 	},
 /area/f13/village)
 "rV" = (
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice{
-	color = #364a21
-	},
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "rW" = (
@@ -112209,7 +112207,7 @@ JV
 JV
 kr
 Oi
-mf
+rV
 kr
 kr
 kr
@@ -112666,7 +112664,7 @@ JV
 JV
 kr
 Ze
-rV
+mf
 kr
 JV
 JV

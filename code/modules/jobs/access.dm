@@ -442,18 +442,11 @@
 			return "Security"
 
 /proc/get_all_jobs()
-	return list("Wastelander", "Raider", "Outsider", "Raider Captain", "Tribal", "Tribal Hunter", "Tribal Gatherer", "Tribal Shaman",
-				"Mayor", "Sheriff", "Deputy", "Banker", "Barkeep", "Shopkeeper", "Citizen", "Preacher", "Secretary",
-				"Baron", "Castellan","Keeper", "Knight-Commander", "Paladin Marshal", "Paladin", "Librarian", "Scribe", "Knight-Captain", "Knight", "Initiate", "BoS Off-Duty", "Inquisitorial Acolyte",
-				"Enclave Internal Security", "Enclave Lieutenant", "Enclave Platoon Sergeant", "Enclave Sergeant", "Enclave Specialist", ,"Enclave Private", "Enclave Scientist", "Enclave Pilot Officer", "Enclave Bunker Duty",
-				"Followers Administrator", "Followers Doctor", "Followers Volunteer", "Followers Guard", "Followers Robot",
-				"Khan Senior Enforcer", "Khan Enforcer", "Khan Chemist", "Khan Smith", "Khan Courtesan",
-				"NCR Captain", "NCR Lieutenant", "NCR Logistics Officer", "NCR Representative", "NCR Medical Officer", "NCR Heavy Trooper", "NCR Sergeant", "NCR Senior Enlisted Advisor",
-				"NCR Corporal", "NCR Combat Medic", "NCR Combat Engineer", "NCR Military Police", "NCR Trooper", "NCR Conscript", "NCR Rear Echelon", "NCR Veteran Ranger", "NCR Ranger",
-				"Legion Centurion", "Legion Orator", "Legion Recruit Decanus", "Legion Prime Decanus", "Legion Veteran Decanus", "Legion Vexillarius", "Legion Slavemaster", "Legion Explorer", "Legion Venator",
-				"Veteran Legionnaire", "Prime Legionnaire", "Recruit Legionnaire", "Legion Forgemaster", "Legion Immune", "Legion Auxilia", "Legion Slave",
+	return list("Wastelander",
 				"Commander", "Watchman", "Walker", "Militia", "Volunteer",
 				"DFS Advisor", "DFS Enforcer", "DFS Agent", "DFS Regular", "DFS Grunt",
+				"Vault-Tec Overseer", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
+				"Vault-Tec Engineer", "Vault-Tec Robot", "Vault Dweller",
 				"Foreman", "Lumberjack")
 
 /proc/get_all_job_icons() //For all existing HUD icons

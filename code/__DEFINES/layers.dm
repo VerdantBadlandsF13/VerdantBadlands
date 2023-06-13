@@ -54,10 +54,12 @@
 #define GAS_PUMP_LAYER 2.49
 
 #define LOW_OBJ_LAYER 2.5
+// Catwalk overlay of /obj/structure/catwalk
+#define CATWALK_LAYER 2.51
 #define LOW_SIGIL_LAYER 2.52
 #define SIGIL_LAYER 2.54
 #define HIGH_SIGIL_LAYER 2.56
-///Layers most often used by atoms of plane equal or higher than GAME_PLANE
+// Layers most often used by atoms of plane equal or higher than GAME_PLANE
 #define BELOW_OPEN_DOOR_LAYER 2.6
 #define BLASTDOOR_LAYER 2.65
 #define OPEN_DOOR_LAYER 2.7

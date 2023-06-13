@@ -46,6 +46,7 @@
 /obj/item/projectile/bullet/c45/basketball
 	name = "miniaturised dunk'em brand basketball"
 	damage = 1
+	stamina = 5
 
 /////////////////
 // .357 MAGNUM //

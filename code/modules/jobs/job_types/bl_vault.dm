@@ -21,6 +21,7 @@
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*
 Overseer
@@ -148,6 +149,7 @@ Medical Doctor
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*
 Scientist
@@ -186,6 +188,7 @@ Scientist
 		return
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*
 Vault Engineer
@@ -263,6 +266,7 @@ Vault Dweller
 /datum/job/followers/f13folborg/after_spawn(mob/living/silicon/robot/R, mob/M)
 	. = ..()
 	ADD_TRAIT(R, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
-	R.apply_pref_name("human", M.client)
+	ADD_TRAIT(R, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
+	R.apply_pref_name("cyborg", M.client)
 	R.gender = NEUTER
 	R.forceMove(pick(GLOB.special_borg_start))

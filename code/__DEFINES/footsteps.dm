@@ -1,17 +1,18 @@
-#define FOOTSTEP_WOOD "wood"
-#define FOOTSTEP_FLOOR "floor"
-#define FOOTSTEP_PLATING "plating"
-#define FOOTSTEP_CARPET "carpet"
-#define FOOTSTEP_SAND "dirt"
-#define FOOTSTEP_GRASS "grass"
-#define FOOTSTEP_WATER "water"
-#define FOOTSTEP_LAVA "lava"
-#define FOOTSTEP_MEAT "meat"
-#define FOOTSTEP_RUST "rust"
-#define FOOTSTEP_LOOSE_SAND "sand"
-#define FOOTSTEP_SNOW "snow"
-#define FOOTSTEP_GRAVEL "gravel"
-#define FOOTSTEP_ROAD	"road"
+#define FOOTSTEP_WOOD		"wood"
+#define FOOTSTEP_FLOOR		"floor"
+#define FOOTSTEP_PLATING	"plating"
+#define FOOTSTEP_CARPET		"carpet"
+#define FOOTSTEP_SAND		"dirt"
+#define FOOTSTEP_GRASS		"grass"
+#define FOOTSTEP_WATER		"water"
+#define FOOTSTEP_LAVA		"lava"
+#define FOOTSTEP_MEAT		"meat"
+#define FOOTSTEP_RUST		"rust"
+#define FOOTSTEP_LOOSE_SAND	"sand"
+#define FOOTSTEP_SNOW		"snow"
+#define FOOTSTEP_GRAVEL		"gravel"
+#define FOOTSTEP_ROAD		"road"
+#define FOOTSTEP_CATWALK	"catwalk"
 
 //barefoot sounds
 #define FOOTSTEP_WOOD_BAREFOOT "woodbarefoot"
@@ -127,6 +128,12 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/f13effects/footstep/Road/road_walk4.ogg',
 		'sound/f13effects/footstep/Road/road_walk5.ogg',
 		'sound/f13effects/footstep/Road/road_walk6.ogg'), 50, 1),
+	FOOTSTEP_CATWALK = list(list(
+		'sound/effects/footstep/catwalk1.ogg',
+		'sound/effects/footstep/catwalk2.ogg',
+		'sound/effects/footstep/catwalk3.ogg',
+		'sound/effects/footstep/catwalk4.ogg',
+		'sound/effects/footstep/catwalk5.ogg'), 100, 1),
 ))
 
 //bare footsteps lists

@@ -48,7 +48,6 @@
 
 	id = null
 	ears = null
-	r_hand = /obj/item/book/granter/trait/selection
 	l_pocket = /obj/item/storage/bag/money/small/wastelander
 	r_pocket = /obj/item/flashlight/flare
 	belt = /obj/item/melee/onehanded/knife/survival
@@ -58,6 +57,9 @@
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak,
 		/obj/item/reagent_containers/pill/radx,
+		/obj/item/radio,
+		/obj/item/gun/ballistic/automatic/pistol/pistol22,
+		/obj/item/storage/survivalkit,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -73,6 +75,10 @@
 		/obj/item/clothing/suit/f13/cowboygvest,
 		/obj/item/clothing/suit/f13/westender,
 		/obj/item/clothing/suit/overalls)
+	l_hand = pick(
+		/obj/item/gun/ballistic/automatic/autopipe,
+		/obj/item/gun/ballistic/revolver/caravan_shotgun,
+		/obj/item/gun/ballistic/rifle/hunting)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
@@ -81,6 +87,7 @@
 	gloves = /obj/item/clothing/gloves/f13/blacksmith
 	head = /obj/item/clothing/head/welding
 	r_hand = /obj/item/weldingtool/largetank
+	backpack_contents = list(/obj/item/book/granter/trait/selection =1)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -90,7 +97,8 @@
 	belt = /obj/item/storage/belt
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
-							/obj/item/shovel=1)
+							/obj/item/shovel=1,
+							/obj/item/book/granter/trait/selection =1,)
 
 /datum/outfit/loadout/settler
 	name = "Settler"
@@ -106,6 +114,7 @@
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket = 1,
 		/obj/item/storage/bag/plants/portaseeder = 1,
+		/obj/item/book/granter/trait/selection =1,
 		)
 
 /datum/outfit/loadout/medic
@@ -124,6 +133,7 @@
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
 							/obj/item/storage/firstaid/ancient=1,
+							/obj/item/book/granter/trait/selection =1,
 		)
 
 /datum/outfit/loadout/merchant
@@ -134,4 +144,5 @@
 	head = /obj/item/clothing/head/f13/stormchaser
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
-	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1)
+	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
+							/obj/item/book/granter/trait/selection =1,)

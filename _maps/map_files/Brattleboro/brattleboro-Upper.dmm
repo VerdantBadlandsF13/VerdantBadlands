@@ -68,7 +68,7 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/village)
 "au" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/chair/stool,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -324,7 +324,7 @@
 	},
 /area/f13/village)
 "bN" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -334,7 +334,7 @@
 /turf/open/transparent/openspace,
 /area/f13/bl/gmb)
 "bQ" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 9
 	},
@@ -778,7 +778,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/mall)
 "ea" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -1254,7 +1254,7 @@
 	},
 /area/f13/village)
 "gI" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/destructible/hobo_barrel,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -1345,7 +1345,7 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "hi" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 1
 	},
@@ -2063,7 +2063,7 @@
 /turf/closed/wall/f13/wood,
 /area/f13/building)
 "kO" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#c1caff"
@@ -2258,7 +2258,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "lU" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -2643,7 +2643,7 @@
 	},
 /area/f13/building/mall)
 "nD" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -3150,7 +3150,7 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/village)
 "qk" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -4396,7 +4396,7 @@
 /turf/open/floor/plasteel,
 /area/f13/village)
 "wM" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 1
 	},
@@ -5236,7 +5236,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "AN" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 5
 	},
@@ -5267,7 +5267,7 @@
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/caves)
 "AV" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -5605,7 +5605,7 @@
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/caves)
 "CZ" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#c1caff"
@@ -5893,7 +5893,7 @@
 	},
 /area/f13/village)
 "Ex" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/item/trash/f13/tin_large,
 /turf/open/transparent/openspace,
 /area/f13/village)
@@ -5946,7 +5946,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "EK" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -6122,6 +6122,12 @@
 	color = "#845f58";
 	pixel_y = 32
 	},
+/obj/item/gun/ballistic/rifle/repeater/brush{
+	name = "Allen's Own";
+	desc = "A lever action rifle, chambered in .45-70. This one appears to be in excellent condition, and bears the letters 'E.A.' engraved into the stock.";
+	fire_delay = 1;
+	recoil = 0.06
+	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
 "FR" = (
@@ -6227,7 +6233,7 @@
 	},
 /area/f13/village)
 "Gp" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
@@ -6260,7 +6266,7 @@
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "Gy" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing/corner{
 	dir = 4
 	},
@@ -6653,7 +6659,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "IE" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 10
 	},
@@ -8002,7 +8008,7 @@
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "Qa" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing,
 /obj/machinery/light{
 	dir = 1
@@ -8662,7 +8668,7 @@
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
 "TC" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 9
 	},
@@ -8696,7 +8702,7 @@
 	},
 /area/f13/building/mall)
 "TJ" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -8857,7 +8863,7 @@
 	},
 /area/f13/building/mall)
 "Uu" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 8
 	},
@@ -9474,7 +9480,7 @@
 	},
 /area/f13/village)
 "Xw" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/sign/poster/prewar/poster79{
 	pixel_y = 32
 	},
@@ -9531,7 +9537,7 @@
 	},
 /area/f13/building/mall)
 "XI" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /turf/open/transparent/openspace,
 /area/f13/village)
 "XK" = (
@@ -9716,7 +9722,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "YK" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -9896,7 +9902,7 @@
 	},
 /area/f13/building/mall)
 "Zn" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
 "Zp" = (
@@ -9914,7 +9920,7 @@
 	},
 /area/f13/village)
 "Zs" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -9930,7 +9936,7 @@
 	},
 /area/f13/building/mall)
 "Zv" = (
-/obj/structure/lattice/catwalk,
+/obj/structure/catwalk,
 /obj/structure/chair/stool,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Techfiend Marauder";

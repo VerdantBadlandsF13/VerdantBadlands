@@ -9357,11 +9357,9 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down,
 /obj/item/clothing/mask/gas/sechailer/swat,
-/obj/item/clothing/head/helmet/riot{
-	color = #364a21
-	},
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom,
 /obj/structure/glowshroom/glowcap,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "QC" = (

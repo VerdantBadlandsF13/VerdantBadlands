@@ -36,11 +36,11 @@
 		),
 	)
 	loadout_options = list(
-	/datum/outfit/loadout/salvager,
-	/datum/outfit/loadout/scavenger,
+	/datum/outfit/loadout/wanderer,
+	/datum/outfit/loadout/prospector,
 	/datum/outfit/loadout/settler,
-	/datum/outfit/loadout/medic,
-	/datum/outfit/loadout/merchant)
+	/datum/outfit/loadout/bonecutter,
+	/datum/outfit/loadout/chemrunner)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -80,17 +80,19 @@
 		/obj/item/gun/ballistic/revolver/caravan_shotgun,
 		/obj/item/gun/ballistic/rifle/hunting)
 
-/datum/outfit/loadout/salvager
-	name = "Salvager"
-	uniform = /obj/item/clothing/under/f13/machinist
+// Wanderer - Wanderer don't tend to stay in one spot. They generally move along the Wasteland looking for their next paycheck. Starts with a shoulder pad and a shitpipe.
+/datum/outfit/loadout/wanderer
+	name = "Wanderer"
+	uniform = /obj/item/clothing/under/f13/merca
+	suit = /obj/item/clothing/suit/armored/f13/light/kit/shoulder
 	shoes = /obj/item/clothing/shoes/f13/military
-	gloves = /obj/item/clothing/gloves/f13/blacksmith
-	head = /obj/item/clothing/head/welding
-	r_hand = /obj/item/weldingtool/largetank
-	backpack_contents = list(/obj/item/book/granter/trait/selection =1)
-
-/datum/outfit/loadout/scavenger
-	name = "Scavenger"
+	r_hand = /obj/item/gun/ballistic/revolver/piperifle
+	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
+	backpack_contents = list()
+							
+// Prospector - Prospectors are scavengers. They dig through the ruins of the old world for supplies. Starts with mining equipment and technofreak.
+/datum/outfit/loadout/prospector
+	name = "Prospector"
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_hand = /obj/item/storage/backpack/duffelbag/scavengers
 	l_hand = /obj/item/pickaxe/drill
@@ -98,8 +100,10 @@
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
 							/obj/item/shovel=1,
-							/obj/item/book/granter/trait/selection =1,)
+							/obj/item/book/granter/trait/techno =1,
+							/obj/item/storage/box/vendingmachine=1,)
 
+// Settler - Settlers look to rebuild society rather than just survive off its remenants. Comes with everything someone would need to settle an area!
 /datum/outfit/loadout/settler
 	name = "Settler"
 	uniform = /obj/item/clothing/under/f13/settler
@@ -109,16 +113,13 @@
 	backpack_contents = list(
 		/obj/item/stack/sheet/metal/fifty = 1,
 		/obj/item/stack/sheet/mineral/wood/fifty = 1,
-		/obj/item/pickaxe/mini = 1,
 		/obj/item/toy/crayon/spraycan = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket = 1,
-		/obj/item/storage/bag/plants/portaseeder = 1,
-		/obj/item/book/granter/trait/selection =1,
-		)
-
-/datum/outfit/loadout/medic
-	name = "Wasteland Doctor"
+		/obj/item/storage/bag/plants/portaseeder = 1,)
+// Bonecutter - Bonecutter don't exactly have the best medical skills in the wasteland. But they're still invaluable compared to most! For medically focused players.
+/datum/outfit/loadout/bonecutter
+	name = "Bonecutter"
 	uniform = /obj/item/clothing/under/f13/merchant
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/f13/tan
@@ -133,9 +134,15 @@
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
 							/obj/item/storage/firstaid/ancient=1,
-							/obj/item/book/granter/trait/selection =1,
-		)
-
+							/obj/item/book/granter/trait/lowsurgery =1,)
+// Chemrunner - Chemrunners aren't exactly the most reliable folks in the wasteland, but they can find a strong niche.
+/datum/outfit/loadout/chemrunner
+	name = "Chem-Runner"
+	uniform = /obj/item/clothing/under/f13/settler
+	shoes = /obj/item/clothing/shoes/f13/tan
+	gloves = /obj/item/clothing/gloves/f13/handwraps
+	backpack_contents =  list(/obj/item/book/granter/trait/chemistry)
+/*
 /datum/outfit/loadout/merchant
 	name = "Roving Trader"
 	uniform = /obj/item/clothing/under/f13/roving
@@ -145,4 +152,5 @@
 	gloves = /obj/item/clothing/gloves/color/brown
 	glasses = /obj/item/clothing/glasses/f13/biker
 	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
-							/obj/item/book/granter/trait/selection =1,)
+							/obj/item/book/granter/trait/selection =1,) */
+							// Disabled for now. Not exactly useful until the update is done.

@@ -255,6 +255,20 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/village)
+"bt" = (
+/obj/effect/overlay/junk/sink{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/effect/overlay/junk/mirror{
+	pixel_x = 28
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armored/f13/light/leather_jacketmk2,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/village)
 "bu" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -490,6 +504,14 @@
 /obj/item/stack/sheet/mineral/sandbags,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"cy" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/gibs/down{
+	icon_state = "gibdown1"
+	},
+/obj/item/clothing/suit/armored/f13/light/leathercoat,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "cz" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -898,6 +920,16 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
 	},
+/area/f13/village)
+"ew" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/booth,
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = -32
+	},
+/obj/item/clothing/suit/armored/f13/medium/combat/duster,
+/turf/open/floor/f13/wood,
 /area/f13/village)
 "ex" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1788,6 +1820,12 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"jf" = (
+/obj/structure/table/booth,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
 "jg" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/wood/wood_common,
@@ -2168,6 +2206,7 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
 /turf/open/floor/carpet/red,
 /area/f13/village)
 "kU" = (
@@ -2818,6 +2857,12 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/bl/gmb)
+"nR" = (
+/obj/structure/table/booth,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
 "nS" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -3206,6 +3251,7 @@
 /area/f13/village)
 "pU" = (
 /obj/structure/table/booth,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_wide{
 	icon_state = "wide-broken1"
 	},
@@ -4551,6 +4597,7 @@
 "wL" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/snacks/f13/cram,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
 /turf/open/floor/plasteel,
 /area/f13/village)
 "wM" = (
@@ -4680,6 +4727,7 @@
 /area/f13/village)
 "xi" = (
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_wide{
 	icon_state = "wide-broken6"
 	},
@@ -5217,6 +5265,7 @@
 /area/f13/building/mall)
 "zE" = (
 /obj/structure/nest/radroach,
+/obj/item/clothing/suit/armored/f13/light/kit,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "zF" = (
@@ -5234,6 +5283,11 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
+"zI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "zJ" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/outside/roof,
@@ -5611,6 +5665,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
+"BL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/firefighter,
+/turf/open/floor/wood/wood_common,
+/area/f13/village)
 "BM" = (
 /obj/machinery/vending/hydroseeds,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5661,6 +5721,7 @@
 /area/f13/village)
 "BU" = (
 /obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/light/duster/brahmin,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "BW" = (
@@ -5701,6 +5762,14 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"Ch" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/gibs/down{
+	icon_state = "gibtorso"
+	},
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Ci" = (
 /obj/structure/railing{
 	dir = 4;
@@ -5728,6 +5797,7 @@
 "Cn" = (
 /obj/structure/table/wood/poker,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
 "Co" = (
@@ -5873,6 +5943,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
 	},
+/obj/item/clothing/suit/armored/f13/light/leathercoat,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Dg" = (
@@ -6106,6 +6177,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"El" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/village)
 "En" = (
 /obj/structure/chair/sofa{
 	dir = 8
@@ -6179,6 +6257,8 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
 /turf/open/floor/carpet/red,
 /area/f13/village)
 "EH" = (
@@ -7331,6 +7411,14 @@
 /obj/structure/chair/sofa,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
+"Kp" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
+/turf/open/floor/f13/wood,
+/area/f13/village)
+"Kr" = (
+/obj/item/clothing/head/helmet/f13/combat/mk2,
+/turf/open/floor/f13/wood,
+/area/f13/village)
 "Kt" = (
 /obj/item/trash/f13/c_ration_1,
 /obj/item/storage/trash_stack{
@@ -7457,6 +7545,13 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"La" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armored/f13/medium/yankee,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood4-broken"
+	},
+/area/f13/village)
 "Lb" = (
 /obj/machinery/light/floor,
 /obj/structure/railing/corner{
@@ -7851,6 +7946,7 @@
 "Nd" = (
 /obj/structure/table/booth,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armored/f13/medium/blastmaster,
 /turf/open/floor/wood/wood_common{
 	icon_state = "common-broken3"
 	},
@@ -7913,6 +8009,10 @@
 /obj/effect/spawner/lootdrop/f13/seedspawner,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
+"NA" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/duster,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "NB" = (
 /obj/structure/chair/sofa/corner{
 	dir = 4
@@ -8093,6 +8193,8 @@
 	},
 /obj/structure/table/booth,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/head/helmet/f13/raider/yankee,
+/obj/item/clothing/suit/armored/f13/medium/yankee,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
 	},
@@ -8313,6 +8415,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibup1"
 	},
+/obj/item/clothing/suit/armored/f13/light/kit/plates,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "PN" = (
@@ -8412,6 +8515,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibmid3"
 	},
+/obj/item/clothing/suit/armored/f13/heavy/sulphite,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Qw" = (
@@ -8437,6 +8541,7 @@
 /obj/structure/table/booth,
 /obj/item/storage/box/matches,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/suit/armored/f13/medium/combat/duster,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "QE" = (
@@ -8868,6 +8973,11 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"SN" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "SO" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/chair/left{
@@ -9067,6 +9177,12 @@
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
+/area/f13/village)
+"TG" = (
+/obj/structure/table/booth,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/head/helmet/f13/raider/blastmaster,
+/turf/open/floor/wood/wood_common,
 /area/f13/village)
 "TH" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9625,6 +9741,7 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/fancy/cigarettes/cigpack_pyramid,
 /obj/item/lighter,
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
 "Wo" = (
@@ -29049,7 +29166,7 @@ ZO
 ZO
 Xb
 ye
-ye
+ew
 Pa
 oi
 ZO
@@ -29948,7 +30065,7 @@ PW
 uG
 EI
 ZO
-uj
+La
 aw
 Sc
 sh
@@ -32963,7 +33080,7 @@ MQ
 DT
 oE
 SY
-ZO
+zI
 vP
 IA
 gu
@@ -34064,7 +34181,7 @@ ZO
 wm
 Cb
 sh
-sh
+Kp
 hP
 bU
 sh
@@ -34979,7 +35096,7 @@ wE
 Cb
 sh
 sh
-sh
+Kr
 sh
 Ad
 rL
@@ -37074,7 +37191,7 @@ PW
 PW
 Ls
 RB
-NK
+bt
 Ls
 aP
 IT
@@ -55618,7 +55735,7 @@ xF
 xF
 rL
 wR
-RN
+nR
 dD
 eK
 iA
@@ -56533,7 +56650,7 @@ xF
 rL
 wR
 MN
-wz
+BL
 wz
 is
 rL
@@ -56989,7 +57106,7 @@ xF
 xF
 rL
 iP
-RN
+TG
 Nd
 wz
 wz
@@ -57447,7 +57564,7 @@ xF
 rL
 eq
 RN
-RN
+jf
 wz
 MN
 py
@@ -59903,7 +60020,7 @@ mt
 Tt
 Qf
 Tt
-Tt
+El
 Tt
 Tt
 Tt
@@ -121305,7 +121422,7 @@ Bv
 Bv
 Bv
 WE
-Dd
+Ch
 Sq
 Sq
 Bv
@@ -121317,7 +121434,7 @@ Sq
 Bv
 Bv
 Sq
-JW
+cy
 WE
 Bv
 Bv
@@ -122089,7 +122206,7 @@ ui
 Bv
 yM
 Sq
-Sq
+NA
 mR
 sX
 Sq
@@ -122998,7 +123115,7 @@ Sq
 Sq
 Sq
 IV
-Sq
+SN
 ui
 Bv
 Sq

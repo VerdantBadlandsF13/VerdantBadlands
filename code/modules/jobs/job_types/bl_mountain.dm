@@ -83,8 +83,8 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 
-		loadout_options = list(
-	/datum/outfit/loadout/walker/veteran,
+	loadout_options = list(
+	//datum/outfit/loadout/walker/veteran,
 	/datum/outfit/loadout/walker/marksmen,
 	/datum/outfit/loadout/walker/heavy,)
 
@@ -93,26 +93,23 @@
 	jobtype = /datum/job/gmb/walker
 	id = /obj/item/card/id/gmb_commander_keys
 
-/datum/outfit/loadout/walker/veteran
+/*/datum/outfit/loadout/walker/veteran
 	name = "Veteran"
-	r_hand = /obj/item/gun/energy/laser/wattz
-	l_hand = /obj/item/ammo_casing/energy/laser/pistol/wattz
-	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
-	backpack_contents = list()
+	backpack_contents = list()*/ // WAITING FOR THE CARL TO GIVE IDEA
 
 /datum/outfit/loadout/walker/marksmen
 	name = "Marksmen"
 	r_hand = /obj/item/gun/ballistic/rifle/enfield
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
-	backpack_contents = list(/obj/item/ammo_box/magazine/m9mmds) // Please add .308 when able, KOARL
+	backpack_contents = list(/obj/item/ammo_box/magazine/m9mmds,) // Please add .308 when able, KOARL
 
 /datum/outfit/loadout/walker/heavy
 	name = "Heavy"
 	r_hand = /obj/item/gun/ballistic/automatic/lsw
 	l_hand = /obj/item/ammo_box/magazine/m556/rifle
 	suit = /obj/item/clothing/suit/armored/f13/heavy/metal
-	helmet = /obj/item/clothing/head/helmet/armyhelmet/heavy
+	head = /obj/item/clothing/head/helmet/armyhelmet/heavy
 	backpack_contents = list()
 
 // Militia
@@ -126,7 +123,7 @@
 	outfit = /datum/outfit/job/gmb/militia
 	exp_requirements = 120
 
-		loadout_options = list(
+	loadout_options = list(
 	/datum/outfit/loadout/militia/hunter,
 	/datum/outfit/loadout/militia/musketeer,
 	/datum/outfit/loadout/militia/rifleman,)
@@ -169,7 +166,7 @@
 	outfit = /datum/outfit/job/gmb/volunteer
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
-		loadout_options = list(
+	loadout_options = list(
 	/datum/outfit/loadout/volunteer/conscript,
 	/datum/outfit/loadout/volunteer/watchmen,)
 

@@ -182,4 +182,4 @@
 /datum/outfit/loadout/volunteer/watchmen
 	name = "Watchmen"
 	r_hand = /obj/item/gun/ballistic/revolver/piperifle // YOU'RE A CONSCRIPT. BE HAPPY YOU EVEN GET A GUN.
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet,)
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)

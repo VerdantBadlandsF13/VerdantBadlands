@@ -157,6 +157,7 @@
 	suit = /obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat
 	head = /obj/item/clothing/head/helmet/f13/combat
 	backpack_contents = list()
+	
 // Punishers use heavy armor and shotguns to become bulwarks on the defence.
 /datum/outfit/loadout/grunt/punisher
 	name = "Punisher"

@@ -116,7 +116,8 @@
 		/obj/item/toy/crayon/spraycan = 1,
 		/obj/item/cultivator = 1,
 		/obj/item/reagent_containers/glass/bucket = 1,
-		/obj/item/storage/bag/plants/portaseeder = 1,)
+		/obj/item/storage/bag/plants/portaseeder = 1)
+		
 // Bonecutter - Bonecutter don't exactly have the best medical skills in the wasteland. But they're still invaluable compared to most! For medically focused players.
 /datum/outfit/loadout/bonecutter
 	name = "Bonecutter"

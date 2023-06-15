@@ -26,6 +26,7 @@
 "ag" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "ah" = (
@@ -171,6 +172,10 @@
 /obj/machinery/vending/cola/red,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
+"aT" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "aU" = (
 /obj/effect/decal/cleanable/blood/old{
 	icon_state = "gibmid1"
@@ -239,12 +244,10 @@
 	},
 /area/f13/village)
 "bh" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier1,
-/obj/effect/decal/remains/human,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/sewer)
+/obj/item/clothing/suit/armored/f13/heavy/metal,
+/obj/item/clothing/head/helmet/f13/raidermetal,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "bi" = (
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/f13{
@@ -291,6 +294,12 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"bq" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "br" = (
 /obj/effect/overlay/junk/toilet{
 	pixel_y = 1;
@@ -323,6 +332,11 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"bz" = (
+/obj/structure/glowshroom/single,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "bA" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -364,6 +378,7 @@
 "bM" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "bN" = (
@@ -411,6 +426,7 @@
 "bX" = (
 /obj/machinery/light/small,
 /obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "bY" = (
@@ -425,6 +441,10 @@
 /obj/structure/table/wood/settler,
 /obj/item/sharpener/cult,
 /turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
+"cg" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "ch" = (
 /obj/effect/decal/cleanable/dirt,
@@ -483,6 +503,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
 	},
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -577,6 +598,8 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "cS" = (
@@ -707,10 +730,19 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"du" = (
+/obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d,
+/obj/item/clothing/head/helmet/f13/salvaged_pa/t45d,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "dv" = (
 /obj/structure/chair/sofa/right,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"dw" = (
+/obj/item/clothing/suit/armored/f13/light/leathercoat,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "dx" = (
 /obj/machinery/mineral/ore_redemption,
 /turf/open/indestructible/ground/inside/mountain,
@@ -730,6 +762,8 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/item/clothing/suit/armored/f13/light/leathercoat,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "dB" = (
@@ -748,6 +782,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
+"dG" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/light/leather_jacketmk2,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "dI" = (
 /obj/structure/table,
 /obj/item/book/granter/crafting_recipe/gunsmith_four,
@@ -839,6 +878,10 @@
 /obj/structure/debris/v3,
 /turf/open/floor/wood/wood_common,
 /area/f13/tunnel)
+"ec" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "ed" = (
 /obj/machinery/microwave/stove,
 /turf/open/floor/f13{
@@ -882,6 +925,13 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/tunnel)
+"eo" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "ep" = (
 /obj/structure/debris/v1,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -904,6 +954,7 @@
 /area/f13/village)
 "et" = (
 /obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
 "ew" = (
@@ -935,6 +986,10 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"eC" = (
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
+/turf/open/floor/plasteel/f13/vault_floor,
+/area/f13/tunnel)
 "eD" = (
 /obj/structure/barricade/bars,
 /obj/structure/table/reinforced,
@@ -959,6 +1014,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
+"eI" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/medium/scrapchest,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "eK" = (
 /obj/item/kirbyplants/dead,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -1057,6 +1117,11 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"fi" = (
+/obj/structure/chair/stool,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "fk" = (
 /obj/structure/table,
 /obj/item/book/granter/crafting_recipe/gunsmith_four,
@@ -1072,8 +1137,13 @@
 /obj/structure/barricade/bars,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"fq" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "fr" = (
 /obj/item/mmi,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "fs" = (
@@ -1098,6 +1168,14 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
+"fx" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "fy" = (
 /obj/structure/closet/crate/bin/trashbin,
 /turf/open/floor/plasteel/f13/vault_floor,
@@ -1265,6 +1343,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
+"gl" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plating,
+/area/f13/sewer)
 "gm" = (
 /mob/living/simple_animal/hostile/handy,
 /turf/open/floor/plating,
@@ -1275,6 +1357,8 @@
 /area/f13/sewer)
 "gq" = (
 /obj/structure/table/wood/poker,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_rifle,
 /turf/open/floor/plating,
 /area/f13/sewer)
 "gs" = (
@@ -1384,6 +1468,7 @@
 /area/f13/tunnel)
 "gQ" = (
 /obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -1410,7 +1495,13 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"gX" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "gY" = (
+/obj/structure/glowshroom/single,
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
 	icon_state = "outerbordercorner"
@@ -1487,6 +1578,16 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"hr" = (
+/obj/item/clothing/suit/armored/f13/light/leather_jacket,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
+"hs" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "hw" = (
 /obj/structure/stairs/north{
 	alpha = 0
@@ -1541,6 +1642,12 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"hD" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "hE" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin";
@@ -1550,6 +1657,8 @@
 /area/f13/sewer)
 "hF" = (
 /obj/structure/junk/drawer,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_common{
 	icon_state = "common-broken3"
 	},
@@ -1746,8 +1855,14 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"iF" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "iH" = (
 /obj/item/trash/chips,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "iI" = (
@@ -1757,6 +1872,11 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"iJ" = (
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "iK" = (
 /obj/structure/stairs/east,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -1776,6 +1896,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
+"iP" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "iR" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibdown1"
@@ -1899,6 +2028,30 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"jx" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/low_tools,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_rifle,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/village)
+"jz" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/tool_box,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/village)
 "jA" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -1982,6 +2135,13 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/village)
+"jR" = (
+/obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "jT" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -2074,6 +2234,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -2190,6 +2351,10 @@
 /obj/machinery/chem_master,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
+"le" = (
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "lh" = (
 /obj/effect/decal/waste{
 	icon_state = "goo10"
@@ -2434,6 +2599,8 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/glass/bottle/frostoil,
 /obj/item/reagent_containers/glass/bottle/zeolites,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "mo" = (
@@ -2504,8 +2671,19 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating,
 /area/f13/sewer)
+"mK" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/medium/rebel,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "mL" = (
 /turf/open/floor/wood/wood_common,
+/area/f13/tunnel)
+"mN" = (
+/obj/effect/mob_spawn/human/corpse/raidermelee,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "mO" = (
 /obj/structure/rack/shelf_metal,
@@ -2530,6 +2708,12 @@
 /obj/structure/junk/locker,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
+	},
+/area/f13/sewer)
+"mV" = (
+/obj/item/grenade/homemade/coffeepotbomb,
+/turf/open/floor/wood/wood_common{
+	icon_state = "common-broken2"
 	},
 /area/f13/sewer)
 "mW" = (
@@ -2561,6 +2745,14 @@
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"nd" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
+"ne" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plating,
+/area/f13/sewer)
 "nf" = (
 /obj/effect/decal/cleanable/blood/footprints{
 	icon_state = "blood2";
@@ -2647,6 +2839,12 @@
 /obj/structure/reagent_dispensers/compostbin,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"nw" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/wood/wood_common{
+	icon_state = "common-broken1"
+	},
+/area/f13/sewer)
 "nx" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "vaultfinale5";
@@ -2662,6 +2860,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -2753,6 +2952,7 @@
 	brightness = 3;
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -2762,6 +2962,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/rust,
 /area/f13/building)
+"nS" = (
+/obj/item/clothing/suit/armored/f13/light/leather_jacketmk2,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "nT" = (
 /obj/structure/catwalk,
 /obj/item/storage/trash_stack{
@@ -2796,6 +3000,7 @@
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Raider"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -2844,6 +3049,10 @@
 /area/f13/building)
 "oj" = (
 /mob/living/simple_animal/hostile/handy/assaultron,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "ol" = (
@@ -2944,12 +3153,23 @@
 /obj/structure/debris/v4,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"oJ" = (
+/obj/effect/mob_spawn/human/corpse/raider/ranged/biker,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "oK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
 /obj/item/book/granter/crafting_recipe/gunsmith_four,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"oL" = (
+/obj/structure/chair/bench{
+	dir = 8
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/tunnel)
 "oN" = (
 /obj/structure/decoration/warning{
 	pixel_x = 32
@@ -2976,7 +3196,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "oZ" = (
-/obj/item/melee/cultblade/dagger,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "pa" = (
@@ -2997,6 +3217,7 @@
 /area/f13/bl/gmb)
 "pe" = (
 /obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "pf" = (
@@ -3159,6 +3380,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"pN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/building)
 "pO" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -3189,6 +3416,7 @@
 "pT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/workbench/forge,
+/obj/item/twohanded/sledgehammer/simple,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "pU" = (
@@ -3200,6 +3428,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
+/area/f13/sewer)
+"pV" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating/rust,
 /area/f13/sewer)
 "pW" = (
 /obj/effect/overlay/junk/oldpipes{
@@ -3237,8 +3470,14 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
 	},
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
+"qb" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plating,
+/area/f13/sewer)
 "qc" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_x = 14
@@ -3301,6 +3540,22 @@
 	icon_state = "verticalrightborderright0"
 	},
 /area/f13/tunnel)
+"qj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
+"qk" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_rifle,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "qn" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/brews,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3311,6 +3566,7 @@
 /area/f13/building)
 "qp" = (
 /obj/structure/anvil,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advrifle,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "qq" = (
@@ -3339,6 +3595,12 @@
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitegreenrustychess"
 	},
+/area/f13/tunnel)
+"qy" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "qA" = (
 /obj/item/storage/trash_stack{
@@ -3543,6 +3805,8 @@
 /area/f13/sewer)
 "rl" = (
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "rp" = (
@@ -3571,6 +3835,10 @@
 	icon_state = "common-broken4"
 	},
 /area/f13/sewer)
+"rt" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "rv" = (
 /obj/item/ammo_casing/spent,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -3583,6 +3851,13 @@
 "rw" = (
 /turf/closed/indestructible/rock,
 /area/f13/village)
+"rz" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "rA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
@@ -3596,6 +3871,9 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/book/granter/trait/pa_wear,
 /obj/item/clothing/head/helmet/f13/power_armor/t51b,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_all,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advrifle,
+/obj/item/clothing/suit/armored/f13/power_armor/t51b,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -3684,6 +3962,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
+"rV" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "rW" = (
 /obj/effect/decal/waste{
 	icon_state = "goo12"
@@ -3713,8 +3995,15 @@
 /area/f13/tunnel)
 "se" = (
 /obj/machinery/workbench,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"sf" = (
+/obj/structure/flora/wasteplant/wild_fungus,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "sg" = (
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontaldegraded"
@@ -3778,6 +4067,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"sw" = (
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "sx" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/cans,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3785,6 +4079,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"sz" = (
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "sA" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/stock_parts,
@@ -3837,6 +4135,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibtorso"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "sJ" = (
@@ -3888,6 +4187,10 @@
 "sQ" = (
 /obj/structure/sign/poster/contraband/pinup_claw2{
 	pixel_y = 32
+	},
+/mob/living/simple_animal/hostile/megafauna/wendigo{
+	faction = list("neutral");
+	name = "Steven"
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
@@ -3958,6 +4261,10 @@
 	icon_state = "goo12"
 	},
 /turf/open/floor/plating/rust,
+/area/f13/tunnel)
+"tf" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "tg" = (
 /obj/structure/simple_door/interior,
@@ -4044,6 +4351,10 @@
 /area/f13/building)
 "tB" = (
 /obj/structure/closet/locker,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating,
 /area/f13/sewer)
 "tC" = (
@@ -4190,6 +4501,8 @@
 	name = "flimsy crown";
 	desc = "A crown made out of cardboard, spray painted yellow. The paint is uneven and you can vaguely see some company logo on the cardboard beneath."
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_shotgun,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "ug" = (
@@ -4233,8 +4546,13 @@
 /area/f13/sewer)
 "ut" = (
 /obj/item/reagent_containers/glass/bucket,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating,
 /area/f13/sewer)
+"uu" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
+/turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/tunnel)
 "uv" = (
 /obj/structure/barricade/bars,
 /turf/open/indestructible/ground/inside/mountain,
@@ -4376,6 +4694,12 @@
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"uW" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/tunnel)
 "uY" = (
 /obj/structure/nest/fireant,
 /turf/open/indestructible/ground/inside/mountain,
@@ -4721,6 +5045,12 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"wA" = (
+/obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/turf/open/floor/wood/wood_fancy,
+/area/f13/tunnel)
 "wB" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin"
@@ -4759,6 +5089,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"wJ" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/tunnel)
 "wK" = (
 /obj/structure/table,
 /obj/item/paper_bin,
@@ -4768,6 +5104,7 @@
 "wN" = (
 /obj/structure/table/wood/poker,
 /obj/item/storage/box/dice,
+/obj/item/clothing/head/helmet/f13/combat,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "wP" = (
@@ -4916,6 +5253,15 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/tunnel)
+"xs" = (
+/obj/structure/nest/ghoul{
+	layer = 2.07;
+	max_mobs = 2
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/tunnel)
 "xt" = (
 /turf/open/liquid/water/scum/south,
 /area/f13/tunnel)
@@ -5047,6 +5393,16 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"yi" = (
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
+"yk" = (
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "yn" = (
 /obj/structure/dresser,
 /turf/open/floor/wood/wood_fancy{
@@ -5187,6 +5543,7 @@
 "yQ" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "yR" = (
@@ -5243,6 +5600,11 @@
 	},
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
+"zg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/building)
 "zh" = (
 /obj/effect/decal/waste{
 	icon_state = "goo10"
@@ -5274,6 +5636,8 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/floor/f13{
 	icon_state = "floorrustysolid"
 	},
@@ -5450,6 +5814,7 @@
 /area/f13/sewer)
 "Ac" = (
 /obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "Ad" = (
@@ -5488,6 +5853,23 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Ak" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
+"Aq" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "Au" = (
 /obj/structure/table/wood,
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
@@ -5528,6 +5910,13 @@
 /obj/machinery/light/small,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"AA" = (
+/obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "AE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/booth,
@@ -5537,6 +5926,13 @@
 "AG" = (
 /obj/structure/bed/mattress/pregame,
 /mob/living/simple_animal/hostile/ghoul/reaver,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
+"AH" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/medium/combat/brokencombat,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -5568,6 +5964,11 @@
 /obj/structure/mirelurkegg,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"AM" = (
+/obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/light/kit/shoulder,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "AN" = (
 /obj/item/ammo_casing/spent,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -5646,6 +6047,12 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Bi" = (
+/obj/structure/table,
+/obj/structure/barricade/bars,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "Bk" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /obj/effect/decal/cleanable/oil,
@@ -5677,6 +6084,13 @@
 	name = "metal plating"
 	},
 /area/f13/tunnel)
+"Bs" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Bt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/contraband/pinup_assaultron{
@@ -5724,6 +6138,14 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"BD" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "BF" = (
 /obj/structure/table,
 /obj/item/storage/box/cups,
@@ -5762,6 +6184,8 @@
 	pixel_x = -10;
 	pixel_y = -2
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/obj/item/clothing/suit/armored/f13/medium/scrapchest,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "BK" = (
@@ -5792,6 +6216,7 @@
 /obj/structure/junk/drawer{
 	layer = 4
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "BN" = (
@@ -5813,6 +6238,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/rust,
 /area/f13/building)
+"BW" = (
+/obj/structure/table/wood,
+/obj/machinery/light/floor,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "BX" = (
 /obj/machinery/light{
 	dir = 4;
@@ -5832,6 +6263,12 @@
 /obj/machinery/light,
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
+"Ca" = (
+/obj/structure/closet/locker,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "Cb" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_y = 1
@@ -5847,6 +6284,12 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
+	},
+/area/f13/sewer)
+"Ce" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/wood/wood_common{
+	icon_state = "common-broken1"
 	},
 /area/f13/sewer)
 "Cf" = (
@@ -5866,6 +6309,8 @@
 /obj/item/grenade/empgrenade,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
 /mob/living/simple_animal/hostile/handy/assaultron,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "Cm" = (
@@ -5943,6 +6388,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibmid3"
 	},
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -6035,11 +6481,15 @@
 /area/f13/sewer)
 "De" = (
 /obj/structure/table/wood/settler,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advshotgun,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Df" = (
 /obj/structure/table,
 /obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/carpet,
 /area/f13/sewer)
 "Dg" = (
@@ -6060,6 +6510,7 @@
 "Do" = (
 /obj/structure/bed/mattress/pregame,
 /obj/effect/decal/cleanable/blood/old,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "Dp" = (
@@ -6171,6 +6622,7 @@
 /area/f13/sewer)
 "DW" = (
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "DZ" = (
@@ -6216,12 +6668,24 @@
 /obj/structure/junk/small/tv,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"En" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/tunnel)
 "Eo" = (
 /obj/structure/junk/locker,
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
+/area/f13/sewer)
+"Ep" = (
+/obj/item/storage/trash_stack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plating/rust,
 /area/f13/sewer)
 "Er" = (
 /obj/structure/reagent_dispensers/barrel/four,
@@ -6360,10 +6824,28 @@
 /obj/machinery/light/floor,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Fg" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/book/granter/trait/pa_wear,
+/obj/item/clothing/head/helmet/f13/power_armor/t51b,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_all,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advshotgun,
+/obj/item/clothing/suit/armored/f13/power_armor/t51b,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/tunnel)
 "Fj" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"Fk" = (
+/obj/item/clothing/suit/armored/f13/light/kit/plates,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid"
+	},
+/area/f13/tunnel)
 "Fm" = (
 /obj/structure/chair/sofa/left,
 /turf/open/floor/f13{
@@ -6388,6 +6870,12 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"Fr" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood/poker,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/building)
 "Ft" = (
 /obj/structure/weightlifter,
 /turf/open/floor/f13{
@@ -6453,6 +6941,7 @@
 	light_color = "#FF0000";
 	color = "#FF0000"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "FF" = (
@@ -6465,6 +6954,14 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"FG" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "FH" = (
 /obj/structure/stairs/north,
 /turf/open/floor/f13{
@@ -6494,6 +6991,10 @@
 /mob/living/simple_animal/hostile/ghoul/legendary,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"FQ" = (
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "FR" = (
 /obj/structure/wreck/trash/machinepile{
 	layer = 3
@@ -6550,6 +7051,7 @@
 	icon_state = "gibdown1"
 	},
 /obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Gd" = (
@@ -6590,6 +7092,7 @@
 "Go" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "Gp" = (
@@ -6603,6 +7106,7 @@
 	dir = 1
 	},
 /obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -6670,6 +7174,21 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"GJ" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
+"GK" = (
+/obj/structure/nest/radroach,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/tunnel)
 "GL" = (
 /obj/structure/table,
 /turf/open/floor/carpet/red,
@@ -6766,10 +7285,11 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "Hb" = (
-/obj/effect/decal/remains/human,
-/obj/effect/spawner/lootdrop/f13/armor/tier1,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/sewer)
+/obj/item/clothing/suit/armored/f13/light/leathercoat,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/tunnel)
 "Hc" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -6805,6 +7325,12 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"Hi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/building)
 "Hj" = (
 /obj/machinery/light/small{
 	brightness = 3;
@@ -6937,6 +7463,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"HE" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "HF" = (
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
@@ -6963,6 +7493,11 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"HM" = (
+/obj/structure/nest/mirelurk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/liquid/water/safe,
+/area/f13/tunnel)
 "HN" = (
 /obj/structure/junk/locker,
 /turf/open/floor/wood/wood_common,
@@ -7008,6 +7543,7 @@
 /obj/machinery/button/door{
 	id = "vaultfinale2"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -7015,6 +7551,8 @@
 "HZ" = (
 /obj/structure/rack,
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "Ia" = (
@@ -7027,6 +7565,12 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/sewer)
+"Ig" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/tunnel)
 "Ih" = (
 /obj/item/flashlight/lamp,
 /obj/structure/table,
@@ -7036,6 +7580,8 @@
 /area/f13/sewer)
 "Ij" = (
 /obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/floor/wood/wood_fancy{
 	icon_state = "fancy-broken1"
 	},
@@ -7096,6 +7642,13 @@
 	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/tunnel)
+"Iy" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Iz" = (
 /obj/effect/decal/cleanable/blood/gibs{
 	icon_state = "gibtorso"
@@ -7137,6 +7690,7 @@
 /obj/item/reagent_containers/glass/bottle/cryoxadone,
 /obj/item/reagent_containers/glass/bottle/cryoxadone,
 /obj/item/reagent_containers/glass/bottle/zeolites,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "IK" = (
@@ -7201,6 +7755,17 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"Jb" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/low_tools,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_rifle,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/village)
 "Je" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -7354,6 +7919,10 @@
 "JO" = (
 /turf/closed/wall/f13/ruins,
 /area/f13/village)
+"JP" = (
+/obj/item/clothing/suit/armored/f13/medium/sadist,
+/turf/open/floor/plating,
+/area/f13/sewer)
 "JS" = (
 /obj/machinery/light{
 	dir = 1
@@ -7365,6 +7934,14 @@
 /obj/item/defibrillator,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"JU" = (
+/obj/machinery/smartfridge/bottlerack/lootshelf/cans,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/building)
 "JV" = (
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
@@ -7441,11 +8018,26 @@
 /obj/structure/barricade/wooden,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
+"Kq" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plating,
+/area/f13/tunnel)
+"Kr" = (
+/obj/item/clothing/suit/armored/f13/medium/combat,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
+"Kt" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "Ky" = (
 /obj/structure/table,
 /obj/item/tank/internals/anesthetic,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /obj/machinery/light/floor,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
 "Kz" = (
@@ -7507,6 +8099,13 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"KO" = (
+/obj/machinery/smartfridge/bottlerack/lootshelf/cans,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plasteel/f13{
+	icon_state = "whitegreenrustychess"
+	},
+/area/f13/tunnel)
 "KP" = (
 /obj/structure/dresser,
 /turf/open/floor/f13{
@@ -7593,6 +8192,10 @@
 	},
 /turf/open/floor/plating,
 /area/f13/sewer)
+"Li" = (
+/obj/structure/nest/molerat,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "Lj" = (
 /obj/item/ammo_casing/spent,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -7604,6 +8207,13 @@
 /obj/structure/junk/locker,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"Lq" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/tunnel)
 "Lr" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_y = 4;
@@ -7697,6 +8307,7 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /obj/machinery/light/small,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "LK" = (
@@ -7706,6 +8317,17 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
+"LM" = (
+/obj/structure/car/rubbish2{
+	pixel_x = -19;
+	icon_state = "car_rubish3"
+	},
+/obj/structure/nest/ghoul{
+	layer = 2.07;
+	max_mobs = 2
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/tunnel)
 "LP" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/tunnel)
@@ -7726,6 +8348,16 @@
 "LU" = (
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
+"LV" = (
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
+"LW" = (
+/obj/item/clothing/head/helmet/f13/combat/mk2,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid"
+	},
 /area/f13/tunnel)
 "LX" = (
 /obj/effect/decal/remains/human,
@@ -7762,6 +8394,7 @@
 "Ma" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/workbench,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "Mc" = (
@@ -7869,6 +8502,10 @@
 /obj/structure/mirelurkegg,
 /turf/open/liquid/water/safe,
 /area/f13/tunnel)
+"Mx" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "My" = (
 /mob/living/simple_animal/hostile/faithless,
 /turf/open/indestructible/ground/inside/mountain,
@@ -7927,6 +8564,11 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building)
+"MI" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "MM" = (
 /obj/effect/overlay/junk/oldpipes{
 	dir = 8;
@@ -7938,6 +8580,11 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"MO" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/wood/wood_fancy,
+/area/f13/tunnel)
 "MP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/reagent_dispensers/barrel/three,
@@ -7965,6 +8612,7 @@
 "MT" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -7998,6 +8646,14 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"MZ" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/tunnel)
 "Na" = (
 /obj/structure/mirelurkegg,
 /mob/living/simple_animal/hostile/mirelurk/baby,
@@ -8043,6 +8699,7 @@
 /area/f13/tunnel)
 "Ng" = (
 /obj/structure/table/wood/poker,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "Nh" = (
@@ -8066,11 +8723,27 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
+"Nj" = (
+/mob/living/simple_animal/hostile/handy/gutsy,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "Nl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/smartfridge/bottlerack/grownbin,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Nm" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
+/area/f13/tunnel)
 "Nn" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/construction,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8123,6 +8796,7 @@
 /area/f13/tunnel)
 "Ny" = (
 /obj/structure/debris/v1,
+/obj/structure/glowshroom/single,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerborder"
 	},
@@ -8168,6 +8842,15 @@
 "NN" = (
 /obj/structure/chair/stool,
 /turf/open/floor/plating/rust,
+/area/f13/sewer)
+"NO" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
+"NP" = (
+/mob/living/simple_animal/hostile/ghoul,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "NQ" = (
 /obj/structure/debris/v2,
@@ -8249,6 +8932,7 @@
 /obj/item/ingot/adamantine,
 /obj/item/stack/f13Cash/caps/fivezero,
 /obj/item/book/granter/trait/chemistry,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -8331,6 +9015,7 @@
 	pixel_y = 34
 	},
 /obj/effect/decal/remains/human,
+/obj/item/clothing/suit/armored/f13/light/kit/plates,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "OF" = (
@@ -8383,6 +9068,10 @@
 /mob/living/simple_animal/hostile/giantantqueen,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"OO" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "OP" = (
 /obj/effect/overlay/junk/oldpipes{
 	dir = 8;
@@ -8393,6 +9082,22 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"OQ" = (
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
+/obj/machinery/door/window{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_longarms,
+/obj/effect/spawner/lootdrop/f13/ammo_military,
+/turf/open/floor/f13{
+	icon_state = "floorrustysolid"
+	},
+/area/f13/village)
 "OT" = (
 /mob/living/simple_animal/hostile/ghoul/rotting,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -8405,6 +9110,17 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"OY" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting,
+/obj/effect/spawner/lootdrop/f13/foodspawner,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "OZ" = (
 /obj/structure/stairs/south{
 	color = "#4b3a26"
@@ -8485,6 +9201,10 @@
 /turf/open/floor/wood/wood_fancy{
 	icon_state = "fancy-broken4"
 	},
+/area/f13/tunnel)
+"Ps" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Pt" = (
 /obj/structure/rack,
@@ -8654,11 +9374,19 @@
 /obj/structure/wreck/trash/two_tire,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Qm" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Qq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibdown1"
 	},
+/obj/item/clothing/suit/armored/f13/light/duster/brahmin,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -8711,9 +9439,9 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down,
 /obj/item/clothing/mask/gas/sechailer/swat,
-/obj/item/clothing/head/helmet/riot,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super/custom,
 /obj/structure/glowshroom/glowcap,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "QC" = (
@@ -8794,6 +9522,8 @@
 "QR" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "QS" = (
@@ -8831,6 +9561,7 @@
 /obj/item/pickaxe,
 /obj/structure/table/wood,
 /obj/item/clothing/head/hardhat,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/caves)
 "Rf" = (
@@ -8886,6 +9617,11 @@
 /obj/structure/bed,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Rs" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
 "Ru" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/f13/store,
@@ -8904,6 +9640,12 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
+"Rx" = (
+/obj/structure/nest/radroach,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/tunnel)
 "Ry" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalcorroded"
@@ -8931,6 +9673,7 @@
 "RC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "RD" = (
@@ -9078,6 +9821,7 @@
 /area/f13/tunnel)
 "Si" = (
 /obj/structure/closet/locker,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "Sj" = (
@@ -9099,12 +9843,19 @@
 /obj/structure/table,
 /obj/item/storage/fancy/cigarettes/cigpack_carp,
 /obj/item/storage/fancy/cigarettes/cigpack_bigboss,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/carpet,
 /area/f13/sewer)
 "Sm" = (
 /obj/structure/fermenting_barrel,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
+"So" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Sp" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "vaultext"
@@ -9125,6 +9876,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
+	},
+/area/f13/tunnel)
+"Sw" = (
+/obj/structure/nest/ghoul{
+	layer = 2.07;
+	max_mobs = 2
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "verticalrightborderright0"
 	},
 /area/f13/tunnel)
 "Sx" = (
@@ -9197,6 +9958,21 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"SQ" = (
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
+/obj/machinery/door/window{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
+/turf/open/floor/f13{
+	icon_state = "floorrustysolid"
+	},
+/area/f13/village)
 "SR" = (
 /obj/structure/chair/office{
 	dir = 4
@@ -9226,6 +10002,10 @@
 /area/f13/sewer)
 "SV" = (
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "SX" = (
@@ -9241,13 +10021,26 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"SY" = (
+/obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "SZ" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
+/area/f13/sewer)
+"Tb" = (
+/obj/structure/nest/mirelurk,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "Td" = (
 /obj/machinery/door/poddoor/shutters{
@@ -9273,6 +10066,8 @@
 "Tj" = (
 /obj/structure/table,
 /obj/item/reagent_containers/pill/happiness,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "Tk" = (
@@ -9296,8 +10091,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
+"Tp" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/village)
 "Tq" = (
 /obj/structure/debris/v3,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -9318,6 +10118,13 @@
 	light_color = "#c1caff"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
+"Tw" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/mk2,
+/obj/item/clothing/head/helmet/f13/combat/mk2,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
+	},
 /area/f13/tunnel)
 "Tz" = (
 /obj/structure/stairs/south,
@@ -9379,6 +10186,8 @@
 /obj/item/storage/box/stockparts/deluxe,
 /obj/item/storage/box/stockparts/deluxe,
 /obj/effect/spawner/lootdrop/f13/traitbooks,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_all,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advlongarms,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -9409,9 +10218,20 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"TV" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/village)
 "TY" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/reagent_containers/glass/bottle/facid,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "TZ" = (
@@ -9419,6 +10239,13 @@
 /area/f13/bl/gmb)
 "Ua" = (
 /mob/living/simple_animal/hostile/handy/protectron,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
+"Ub" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9437,6 +10264,13 @@
 "Uh" = (
 /obj/structure/table,
 /turf/open/floor/plating,
+/area/f13/sewer)
+"Uj" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
 /area/f13/sewer)
 "Ul" = (
 /obj/structure/table,
@@ -9568,6 +10402,7 @@
 "UO" = (
 /obj/item/grenade/frag,
 /mob/living/simple_animal/hostile/handy/gutsy,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "UQ" = (
@@ -9611,8 +10446,18 @@
 /area/f13/bl/gmb)
 "UV" = (
 /obj/structure/junk/locker,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_common{
 	icon_state = "common-broken1"
+	},
+/area/f13/sewer)
+"UW" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
 	},
 /area/f13/sewer)
 "UY" = (
@@ -9656,6 +10501,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9712,6 +10558,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
+"Vs" = (
+/obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Vu" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating/rust,
@@ -9794,6 +10646,13 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"VN" = (
+/obj/effect/decal/cleanable/blood/gibs/down{
+	icon_state = "gibdown1"
+	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "VO" = (
 /obj/structure/table,
 /obj/item/storage/box/cups,
@@ -9819,6 +10678,10 @@
 	pixel_y = 5;
 	pixel_x = -5
 	},
+/turf/open/floor/plating/rust,
+/area/f13/sewer)
+"VV" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "VX" = (
@@ -9882,6 +10745,8 @@
 /area/f13/village)
 "Wr" = (
 /obj/structure/table/wood/junk,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -9896,6 +10761,13 @@
 /obj/structure/debris/v2,
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
+"Wz" = (
+/obj/structure/catwalk,
+/obj/item/grenade/homemade/coffeepotbomb,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "WA" = (
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibmid3";
@@ -9934,6 +10806,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"WL" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_shotgun,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/wood/wood_fancy,
+/area/f13/tunnel)
 "WM" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -9959,6 +10837,8 @@
 /area/f13/sewer)
 "WW" = (
 /obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/wood/wood_fancy{
 	icon_state = "fancy-broken4"
 	},
@@ -10042,6 +10922,11 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Xo" = (
+/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
+/obj/item/ammo_box/shotgun/buck,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "Xq" = (
 /obj/structure/mopbucket,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -10079,6 +10964,7 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -10142,6 +11028,7 @@
 	brightness = 3;
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "XO" = (
@@ -10161,6 +11048,7 @@
 /obj/effect/decal/cleanable/blood/gibs/down{
 	icon_state = "gibdown1"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "XS" = (
@@ -10197,6 +11085,13 @@
 /obj/machinery/chem_dispenser/fullupgrade,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Ya" = (
+/obj/structure/nest/ghoul{
+	layer = 2.07;
+	max_mobs = 2
+	},
+/turf/open/indestructible/ground/outside/road,
+/area/f13/tunnel)
 "Yb" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticaldegraded"
@@ -10225,6 +11120,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
+/area/f13/tunnel)
+"Yi" = (
+/obj/structure/debris/v3,
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Yj" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -10317,6 +11217,10 @@
 "YD" = (
 /turf/open/liquid/water/safe,
 /area/f13/tunnel)
+"YF" = (
+/obj/effect/mob_spawn/human/corpse/raiderrangedsulphite,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "YG" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /obj/machinery/light/small{
@@ -10333,6 +11237,10 @@
 /obj/machinery/light/small,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"YK" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/tunnel)
 "YM" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -10411,6 +11319,12 @@
 	density = 0
 	},
 /turf/open/liquid/water/scum/south,
+/area/f13/tunnel)
+"YY" = (
+/obj/structure/table,
+/obj/machinery/computer/terminal,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/turf/open/floor/carpet/green,
 /area/f13/tunnel)
 "YZ" = (
 /obj/structure/glowshroom/single,
@@ -10498,6 +11412,14 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Zq" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	name = "metal plating"
+	},
+/area/f13/sewer)
 "Zr" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -10549,6 +11471,12 @@
 	icon_state = "whitedirtysolid"
 	},
 /area/f13/tunnel)
+"ZB" = (
+/obj/structure/glowshroom/single,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/tunnel)
 "ZD" = (
 /obj/structure/debris/v1,
 /turf/open/indestructible/ground/inside/mountain,
@@ -10566,6 +11494,12 @@
 /obj/structure/table/wood/poker,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"ZI" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
+/obj/effect/spawner/lootdrop/f13/ammo_civilian,
+/turf/open/floor/plating,
+/area/f13/sewer)
 "ZK" = (
 /obj/machinery/smartfridge/bottlerack,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -10590,6 +11524,7 @@
 "ZS" = (
 /obj/structure/table/wood/settler,
 /obj/item/book/granter/trait/bigleagues,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "ZT" = (
@@ -11625,7 +12560,7 @@ zB
 vo
 HA
 rA
-UZ
+zg
 zB
 Di
 Di
@@ -12696,7 +13631,7 @@ Va
 ix
 HF
 AR
-HF
+iF
 pg
 ix
 Va
@@ -12757,11 +13692,11 @@ Va
 Va
 Va
 ix
-XO
-XO
+pV
+Kt
 bT
 HF
-HF
+Ns
 HF
 ix
 Va
@@ -13585,7 +14520,7 @@ Va
 ft
 ft
 qD
-fu
+Tb
 ft
 Va
 Va
@@ -13631,7 +14566,7 @@ vV
 vV
 vV
 vV
-vV
+Vs
 vV
 vV
 vV
@@ -13908,7 +14843,7 @@ UZ
 XT
 UZ
 Cf
-XT
+Hi
 XT
 XT
 Vc
@@ -14135,7 +15070,7 @@ ix
 ix
 HF
 va
-HF
+Ns
 ix
 Va
 Va
@@ -14496,7 +15431,7 @@ Va
 Va
 ft
 ft
-QS
+eI
 EY
 EY
 EY
@@ -14522,7 +15457,7 @@ ix
 ix
 ix
 ix
-RE
+ne
 HF
 HF
 AX
@@ -15864,7 +16799,7 @@ Va
 Va
 ft
 EY
-EY
+ec
 QS
 Cr
 Cr
@@ -17271,7 +18206,7 @@ ix
 Va
 Va
 ix
-RE
+ne
 ix
 Va
 Md
@@ -17301,7 +18236,7 @@ vV
 Cr
 vV
 XS
-va
+Ep
 Xy
 HF
 HF
@@ -17784,7 +18719,7 @@ Va
 Va
 Va
 ix
-HF
+Ns
 ix
 ix
 ix
@@ -18965,7 +19900,7 @@ Va
 Va
 OA
 Xk
-vb
+qj
 MH
 Mt
 XQ
@@ -19882,7 +20817,7 @@ Xk
 vb
 bL
 vb
-sx
+JU
 RZ
 PH
 Xk
@@ -20595,7 +21530,7 @@ Va
 Va
 Va
 Va
-jk
+dG
 Va
 Va
 Va
@@ -21251,7 +22186,7 @@ Va
 OA
 Xk
 hf
-vb
+qj
 Mt
 vb
 vb
@@ -21512,7 +22447,7 @@ CS
 CS
 Va
 zA
-jk
+AM
 Va
 Va
 Va
@@ -21853,7 +22788,7 @@ Va
 Va
 ix
 OI
-vV
+bq
 vV
 vV
 vV
@@ -22332,7 +23267,7 @@ Va
 Va
 ix
 rk
-vV
+So
 vV
 vV
 QS
@@ -23173,6 +24108,7 @@ Md
 Va
 Va
 ft
+ec
 EY
 EY
 EY
@@ -23181,8 +24117,7 @@ EY
 EY
 EY
 EY
-EY
-EY
+ec
 ft
 Va
 Va
@@ -23228,13 +24163,13 @@ uy
 we
 vV
 vV
-vV
+So
 uD
 uD
 uD
 ix
 vV
-vV
+So
 ix
 Va
 Va
@@ -24204,7 +25139,7 @@ Md
 Va
 EY
 EY
-EY
+OO
 Va
 Va
 OA
@@ -24492,7 +25427,7 @@ Dp
 Dc
 Dc
 Dc
-Dc
+En
 Dc
 Dc
 Dc
@@ -24661,8 +25596,8 @@ EY
 EY
 EY
 EY
-EY
-EY
+Li
+ec
 Va
 OA
 OA
@@ -24728,7 +25663,7 @@ Va
 Va
 CS
 fd
-CS
+hr
 CS
 CS
 CS
@@ -24960,7 +25895,7 @@ Zv
 Zv
 Zv
 Zv
-Zv
+Rx
 Zv
 Zv
 gY
@@ -25573,7 +26508,7 @@ Ga
 vV
 Md
 Va
-EY
+OO
 EY
 Va
 Va
@@ -26363,7 +27298,7 @@ Va
 Va
 Va
 Va
-EY
+OO
 AL
 wF
 wF
@@ -27694,7 +28629,7 @@ Dc
 Dc
 Dc
 Dc
-Dc
+GK
 qi
 Dc
 Dc
@@ -27989,7 +28924,7 @@ OA
 (39,1,1) = {"
 OA
 qq
-qq
+Tp
 rw
 Va
 Va
@@ -28147,7 +29082,7 @@ Zv
 Zv
 Zv
 Zv
-Zv
+ZB
 Zv
 Zv
 Zv
@@ -28204,8 +29139,8 @@ ix
 HF
 HF
 NF
-Uh
-Uh
+qb
+ZI
 ca
 ix
 Va
@@ -28618,7 +29553,7 @@ Jo
 DP
 DP
 DP
-DP
+tf
 fg
 It
 Ko
@@ -28772,7 +29707,7 @@ Cr
 zE
 EY
 EY
-EY
+Li
 Va
 Va
 Va
@@ -29228,7 +30163,7 @@ Cr
 Cr
 vV
 EY
-EY
+OO
 EY
 Va
 Va
@@ -29618,7 +30553,7 @@ vV
 EY
 zx
 vV
-EY
+ec
 ix
 ix
 ix
@@ -29684,7 +30619,7 @@ Cr
 Cr
 Cr
 vV
-EY
+ec
 EY
 Va
 Va
@@ -30474,9 +31409,9 @@ Va
 Va
 EY
 ZU
-EY
+aT
 Va
-EY
+ec
 EY
 wF
 wF
@@ -30986,7 +31921,7 @@ ix
 Va
 Va
 ix
-uc
+jR
 uc
 vV
 lL
@@ -31437,7 +32372,7 @@ hU
 pS
 vV
 QS
-vV
+So
 Dn
 ix
 Va
@@ -31925,7 +32860,7 @@ Va
 Va
 Va
 ix
-HF
+VV
 ix
 Va
 Va
@@ -32278,7 +33213,7 @@ DP
 Us
 ps
 og
-Qe
+oL
 uQ
 rE
 rE
@@ -32302,7 +33237,7 @@ Va
 Va
 EY
 EY
-EY
+OO
 Va
 Va
 Md
@@ -32372,7 +33307,7 @@ Va
 Va
 ix
 EY
-EY
+ec
 ix
 Va
 ix
@@ -32400,7 +33335,7 @@ Va
 Va
 ix
 Uh
-XO
+MI
 ix
 Va
 Va
@@ -32759,7 +33694,7 @@ Va
 Va
 EY
 EY
-Hb
+QS
 Va
 Va
 Md
@@ -33182,7 +34117,7 @@ Va
 Va
 OA
 Ko
-fg
+Ig
 It
 Jo
 DP
@@ -33609,7 +34544,7 @@ pA
 Bx
 Bx
 Bx
-ZH
+Fr
 Tl
 NB
 Xk
@@ -33669,8 +34604,8 @@ Va
 Va
 Va
 Va
-Hb
-EY
+QS
+ec
 EY
 EY
 Va
@@ -34122,8 +35057,8 @@ Va
 OA
 Va
 Va
-EY
-EY
+ec
+OO
 EY
 Va
 EY
@@ -35027,7 +35962,7 @@ rE
 EO
 rE
 nm
-rE
+wJ
 Ee
 Va
 Va
@@ -35437,7 +36372,7 @@ UZ
 oq
 UZ
 qd
-UZ
+pN
 zJ
 UZ
 Xk
@@ -35946,7 +36881,7 @@ Ee
 Va
 Va
 OA
-mf
+We
 mf
 mf
 mf
@@ -36404,16 +37339,16 @@ rS
 RM
 dO
 mf
+nd
 mf
 mf
 mf
-mf
+OO
 EY
 EY
 EY
 EY
-EY
-Hb
+QS
 EY
 EY
 Va
@@ -36846,7 +37781,7 @@ sg
 DP
 DP
 Us
-ps
+uu
 Qw
 Qe
 uQ
@@ -36921,7 +37856,7 @@ Va
 Va
 Va
 ix
-uc
+SY
 Ym
 vV
 so
@@ -36934,7 +37869,7 @@ ix
 ix
 ix
 ix
-uc
+AA
 vV
 vV
 KL
@@ -36948,7 +37883,7 @@ Va
 Va
 Va
 ix
-vV
+bq
 Cr
 Cr
 Cr
@@ -37296,7 +38231,7 @@ Va
 OA
 Ko
 fg
-It
+xs
 Jo
 DP
 sg
@@ -37328,7 +38263,7 @@ Va
 EY
 EY
 EY
-EY
+aT
 Va
 Va
 Va
@@ -37345,7 +38280,7 @@ Va
 ix
 HF
 HZ
-rl
+gX
 ix
 RE
 eL
@@ -37379,7 +38314,7 @@ Va
 Va
 ix
 bY
-Zp
+mK
 vV
 EY
 vV
@@ -37844,7 +38779,7 @@ ix
 ix
 ix
 vV
-vV
+yi
 EY
 Va
 ix
@@ -38223,7 +39158,7 @@ Ra
 rE
 rE
 rE
-ER
+KO
 vh
 mf
 mf
@@ -38681,7 +39616,7 @@ rE
 oE
 rE
 ER
-sd
+Yi
 mf
 Va
 Va
@@ -39240,7 +40175,7 @@ Cr
 Cr
 Cr
 Cr
-vV
+So
 ix
 Va
 Va
@@ -39635,7 +40570,7 @@ ix
 RE
 HF
 HF
-rl
+Aq
 ix
 Md
 vV
@@ -40092,7 +41027,7 @@ ix
 RE
 eL
 wh
-rl
+fx
 ix
 Md
 vV
@@ -40959,7 +41894,7 @@ qM
 DP
 DP
 fg
-It
+uW
 Ko
 Va
 Va
@@ -41096,7 +42031,7 @@ Va
 Va
 Va
 ix
-HF
+HE
 va
 HF
 ix
@@ -42011,7 +42946,7 @@ Va
 Va
 ix
 ix
-PV
+Rs
 va
 ix
 Va
@@ -42412,7 +43347,7 @@ vV
 EY
 EY
 vV
-vV
+yi
 EY
 vV
 ix
@@ -42784,7 +43719,7 @@ It
 Jo
 DP
 Gw
-DP
+Ya
 DP
 dp
 It
@@ -43808,7 +44743,7 @@ AL
 vV
 Cr
 Cr
-vV
+bq
 vV
 ix
 ix
@@ -43956,7 +44891,7 @@ Va
 AP
 CS
 jk
-CS
+dw
 KW
 Xb
 Va
@@ -44658,7 +45593,7 @@ Ai
 vV
 vV
 vV
-bh
+Zp
 vV
 vV
 vV
@@ -44683,7 +45618,7 @@ EY
 ix
 Va
 ix
-RE
+JP
 ix
 Va
 Va
@@ -44692,7 +45627,7 @@ ix
 hp
 EY
 EY
-EY
+ec
 EY
 Va
 Va
@@ -45110,7 +46045,7 @@ EY
 EY
 Va
 ft
-oV
+FG
 vV
 zp
 vV
@@ -45189,7 +46124,7 @@ ix
 vV
 vV
 EY
-EY
+aT
 EY
 Va
 Va
@@ -45207,7 +46142,7 @@ Va
 ft
 ft
 OE
-zx
+NP
 EY
 ft
 ix
@@ -45607,7 +46542,7 @@ vV
 vV
 EY
 EY
-EY
+aT
 Va
 Va
 Va
@@ -45665,7 +46600,7 @@ Va
 ft
 Do
 EY
-EY
+OO
 ft
 zP
 vV
@@ -46026,8 +46961,8 @@ Va
 ft
 ft
 vV
-oV
-oV
+Qm
+Bs
 ix
 tV
 vV
@@ -46063,7 +46998,7 @@ ix
 zx
 EY
 EY
-EY
+le
 EY
 Va
 Va
@@ -46436,7 +47371,7 @@ OA
 OA
 Ko
 fg
-It
+uW
 Jo
 DP
 DP
@@ -47348,7 +48283,7 @@ Dc
 Dc
 Dc
 Dc
-Dc
+Sw
 vj
 It
 Jo
@@ -48408,8 +49343,8 @@ Va
 Va
 Va
 aX
-vV
-EY
+hD
+OO
 vV
 JH
 JH
@@ -49171,7 +50106,7 @@ Va
 OA
 Ko
 fg
-It
+uW
 dU
 DP
 DP
@@ -49231,7 +50166,7 @@ Va
 ix
 RE
 HF
-HF
+VV
 HF
 RE
 qU
@@ -50229,7 +51164,7 @@ Va
 Va
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -50257,7 +51192,7 @@ HF
 HF
 HF
 HF
-RE
+gl
 wx
 HF
 HF
@@ -50636,7 +51571,7 @@ DU
 yv
 DU
 kw
-kw
+OY
 SZ
 ix
 Va
@@ -51143,7 +52078,7 @@ Va
 Va
 EY
 EY
-EY
+ec
 EY
 Va
 Va
@@ -51551,7 +52486,7 @@ Zb
 yv
 XA
 DT
-XA
+Ak
 ix
 Va
 Va
@@ -51598,7 +52533,7 @@ Va
 Va
 Va
 Va
-EY
+OO
 EY
 EY
 Va
@@ -51917,7 +52852,7 @@ It
 dU
 DP
 DP
-DP
+Ya
 Gw
 fg
 It
@@ -52525,7 +53460,7 @@ Va
 Va
 Va
 EY
-EY
+OO
 Va
 Va
 Md
@@ -52883,7 +53818,7 @@ Va
 Va
 Va
 ix
-HF
+VV
 ix
 Va
 Va
@@ -52965,7 +53900,7 @@ Va
 Va
 Va
 Va
-VM
+Iy
 ix
 Va
 Va
@@ -53291,7 +54226,7 @@ qM
 DP
 DP
 fg
-It
+uW
 Ko
 OA
 Va
@@ -54252,7 +55187,7 @@ Va
 Va
 ix
 YQ
-RE
+gl
 HF
 HF
 zT
@@ -54405,11 +55340,11 @@ Va
 CS
 CS
 CS
-CS
+AP
 KW
 CS
 rW
-CS
+fq
 Cp
 Va
 Va
@@ -54446,7 +55381,7 @@ Os
 Cg
 Cg
 iW
-ai
+BW
 iW
 Cg
 Os
@@ -55251,7 +56186,7 @@ Gv
 vV
 EY
 vV
-EY
+OO
 EY
 EY
 EY
@@ -55625,7 +56560,7 @@ ix
 pf
 gq
 zK
-HF
+Kr
 HF
 HF
 RE
@@ -55672,7 +56607,7 @@ Va
 Va
 Va
 ix
-oV
+Uj
 vV
 vV
 vV
@@ -55742,7 +56677,7 @@ HF
 ix
 Va
 ix
-Si
+Ca
 HF
 RE
 HF
@@ -56582,9 +57517,9 @@ ix
 ix
 ix
 ix
-VM
-VM
-oV
+BD
+Ub
+iP
 ix
 vV
 Cq
@@ -56822,7 +57757,7 @@ Nq
 JO
 Sk
 Sk
-sM
+Jb
 rT
 rT
 fw
@@ -57078,7 +58013,7 @@ Va
 Va
 Va
 Va
-EY
+OO
 EY
 EY
 EY
@@ -57282,7 +58217,7 @@ Sk
 sM
 rT
 Hu
-WM
+jx
 gA
 JO
 rT
@@ -57457,7 +58392,7 @@ RE
 HF
 fo
 HF
-HF
+HE
 ix
 Va
 Md
@@ -57496,9 +58431,9 @@ ix
 ix
 ix
 ix
-VM
-VM
-oV
+UW
+rz
+eo
 ix
 Gv
 HJ
@@ -57737,7 +58672,7 @@ JO
 JO
 Sk
 sM
-Sk
+TV
 Sk
 WM
 gA
@@ -57745,7 +58680,7 @@ JO
 mZ
 rT
 nP
-zm
+OQ
 JO
 Va
 Va
@@ -57853,7 +58788,7 @@ Va
 Va
 OA
 Ko
-fg
+Ig
 It
 dU
 DP
@@ -57964,7 +58899,7 @@ ix
 Va
 ix
 vV
-Zp
+AH
 ix
 Va
 Va
@@ -58002,7 +58937,7 @@ EY
 EY
 Va
 EY
-EY
+OO
 Va
 Va
 Va
@@ -58029,7 +58964,7 @@ ix
 ix
 ix
 ix
-XO
+hs
 iI
 ix
 Va
@@ -58067,7 +59002,7 @@ Va
 Va
 KW
 CS
-CS
+AP
 Va
 Va
 Va
@@ -58318,7 +59253,7 @@ DP
 DP
 DP
 fg
-It
+uW
 Ko
 OA
 Va
@@ -58659,7 +59594,7 @@ JO
 BG
 Sk
 nP
-zm
+SQ
 JO
 Va
 Va
@@ -58827,7 +59762,7 @@ HF
 GF
 RE
 mb
-HF
+FQ
 HF
 ix
 Va
@@ -58847,7 +59782,7 @@ HF
 RE
 RE
 HF
-NN
+fi
 ix
 Va
 Va
@@ -58910,7 +59845,7 @@ Va
 Va
 Va
 Va
-EY
+OO
 EY
 Va
 EY
@@ -58982,7 +59917,7 @@ CS
 CS
 CS
 zA
-CS
+fq
 Va
 Va
 Va
@@ -59107,7 +60042,7 @@ Sk
 JO
 NW
 Sk
-bg
+jz
 Sk
 Hu
 sM
@@ -59116,7 +60051,7 @@ JO
 Sk
 rT
 nP
-zm
+SQ
 JO
 Va
 Va
@@ -59373,7 +60308,7 @@ Va
 Va
 EY
 EY
-EY
+ec
 EY
 Va
 Va
@@ -59685,7 +60620,7 @@ fg
 It
 dU
 DP
-nY
+LM
 DP
 DP
 fg
@@ -60216,7 +61151,7 @@ Va
 Va
 ix
 sk
-RE
+gl
 RE
 pP
 ix
@@ -60791,7 +61726,7 @@ Va
 Va
 Va
 Va
-CS
+AP
 CS
 CS
 CS
@@ -61145,7 +62080,7 @@ vV
 vV
 vV
 vV
-HK
+GJ
 ix
 Va
 Va
@@ -61191,7 +62126,7 @@ Va
 Va
 EY
 EY
-EY
+aT
 EY
 Va
 Va
@@ -61597,7 +62532,7 @@ Va
 Va
 ix
 Bz
-vV
+hD
 vV
 vV
 mo
@@ -61646,10 +62581,10 @@ Va
 Va
 Va
 EY
+OO
 EY
 EY
 EY
-EY
 Va
 Va
 Va
@@ -61661,7 +62596,7 @@ Va
 Va
 Va
 EY
-EY
+OO
 Va
 Va
 Va
@@ -61714,7 +62649,7 @@ iL
 Hy
 sN
 CS
-CS
+AP
 Va
 Va
 Va
@@ -61727,7 +62662,7 @@ CS
 Va
 Va
 Va
-CS
+AP
 Va
 Va
 Va
@@ -62027,7 +62962,7 @@ Va
 ft
 ft
 sH
-jf
+Ce
 ft
 ft
 Md
@@ -62059,7 +62994,7 @@ vV
 vV
 vV
 vV
-VM
+qk
 ix
 Va
 Va
@@ -62117,8 +63052,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+EY
+EY
 Va
 Va
 Va
@@ -62516,7 +63451,7 @@ vV
 vV
 vV
 vV
-VM
+Zq
 ix
 Va
 Va
@@ -62574,8 +63509,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+EY
+EY
 Va
 Va
 Va
@@ -62641,7 +63576,7 @@ Va
 Va
 AT
 CS
-zA
+CS
 CS
 CS
 Va
@@ -62649,7 +63584,7 @@ Va
 CS
 CS
 CS
-CS
+bz
 CS
 Cp
 Va
@@ -63032,7 +63967,7 @@ Va
 Va
 Va
 Va
-Va
+EY
 Va
 Va
 Va
@@ -63078,7 +64013,7 @@ CS
 CS
 Va
 Va
-CS
+AP
 CS
 CS
 sN
@@ -63489,7 +64424,7 @@ Va
 Va
 Va
 Va
-EY
+OO
 EY
 Va
 Va
@@ -64341,7 +65276,7 @@ Va
 Va
 Va
 ix
-vV
+hD
 ix
 Va
 Va
@@ -64761,7 +65696,7 @@ Md
 Va
 Va
 ft
-jf
+nw
 zw
 ft
 ft
@@ -64769,7 +65704,7 @@ PR
 ft
 ft
 EY
-SI
+mV
 ft
 Md
 Md
@@ -65315,7 +66250,7 @@ Md
 Md
 Md
 Md
-EY
+OO
 EY
 EY
 EY
@@ -65668,7 +66603,7 @@ Va
 Va
 Md
 rr
-Ga
+Wz
 Ga
 vV
 tR
@@ -67038,7 +67973,7 @@ Va
 Va
 Va
 Md
-uc
+SY
 oc
 SI
 wD
@@ -67495,9 +68430,9 @@ Va
 Va
 Va
 Md
+AA
 uc
-uc
-uc
+jR
 vV
 vV
 Rl
@@ -67663,7 +68598,7 @@ CS
 CS
 CS
 CS
-CS
+AP
 Cp
 Cp
 Cp
@@ -68026,7 +68961,7 @@ Md
 Md
 Md
 EY
-EY
+ec
 EY
 EY
 EY
@@ -68104,7 +69039,7 @@ Va
 Va
 Va
 Va
-CS
+fq
 CS
 Va
 Va
@@ -68949,7 +69884,7 @@ EY
 Va
 Va
 Va
-EY
+ec
 EY
 EY
 Va
@@ -69018,7 +69953,7 @@ CS
 Va
 Va
 gG
-CS
+AP
 CS
 CS
 CS
@@ -69035,7 +69970,7 @@ Va
 CS
 CS
 CS
-KW
+sf
 Va
 Va
 Va
@@ -69966,7 +70901,7 @@ Va
 Xb
 Va
 Va
-CS
+AP
 Va
 Va
 Va
@@ -70260,7 +71195,7 @@ EY
 zw
 SI
 zw
-EY
+aT
 ft
 Va
 Va
@@ -71789,7 +72724,7 @@ KV
 kl
 CS
 kl
-et
+wA
 LT
 yn
 kl
@@ -72201,7 +73136,7 @@ Va
 Va
 Va
 CS
-CS
+Mx
 CS
 Va
 Va
@@ -72664,7 +73599,7 @@ CS
 Va
 Va
 CS
-CS
+fq
 CS
 CS
 CS
@@ -73152,7 +74087,7 @@ kl
 JK
 dQ
 LT
-ub
+MO
 LT
 kl
 LT
@@ -73621,7 +74556,7 @@ pv
 zu
 kl
 JK
-ub
+MO
 JK
 kl
 Va
@@ -74051,7 +74986,7 @@ Va
 Va
 CS
 CS
-YA
+CS
 Va
 Va
 Va
@@ -74502,7 +75437,7 @@ Va
 Va
 CS
 CS
-zA
+CS
 CS
 Va
 CS
@@ -74972,7 +75907,7 @@ Va
 kl
 ZK
 LT
-ub
+WL
 JK
 LT
 FK
@@ -75418,7 +76353,7 @@ CS
 CS
 CS
 Va
-CS
+fq
 CS
 CS
 CS
@@ -78596,7 +79531,7 @@ Va
 Va
 sD
 aC
-mf
+Ps
 xi
 mf
 sD
@@ -79551,7 +80486,7 @@ Va
 Va
 wE
 JA
-CS
+Mx
 wE
 Va
 Va
@@ -82760,7 +83695,7 @@ Va
 Va
 Va
 CS
-CS
+fq
 CS
 CS
 CS
@@ -85920,7 +86855,7 @@ Sd
 Sd
 Sd
 mf
-Sd
+Hb
 Sd
 sD
 CS
@@ -90525,7 +91460,7 @@ Va
 Va
 Va
 zA
-CS
+fq
 Va
 Va
 Va
@@ -108132,7 +109067,7 @@ Cp
 JV
 JV
 Dw
-YD
+YZ
 YD
 Dw
 Dw
@@ -108590,7 +109525,7 @@ JV
 Dw
 YD
 YD
-YD
+YZ
 YD
 Dw
 Dw
@@ -109550,10 +110485,10 @@ JV
 kr
 kr
 bM
-mf
+du
 mf
 sI
-mf
+bh
 kr
 kr
 JV
@@ -109958,11 +110893,11 @@ OA
 OA
 OA
 JV
-YD
+YZ
 Dw
 Dw
 mf
-mf
+sz
 mf
 Dw
 Dw
@@ -110005,7 +110940,7 @@ JV
 JV
 JV
 kr
-mf
+LV
 Oi
 mf
 mf
@@ -110420,7 +111355,7 @@ Dw
 OM
 mf
 mf
-mf
+oJ
 Dw
 Dw
 mf
@@ -110913,7 +111848,7 @@ JV
 JV
 kr
 kr
-mf
+Xo
 QA
 jL
 mf
@@ -111330,8 +112265,8 @@ Va
 Va
 JV
 Dw
-mf
-mf
+rt
+YF
 mf
 mf
 mf
@@ -111370,14 +112305,14 @@ JV
 JV
 kr
 Oi
-mf
+rV
 kr
 kr
 kr
 kr
 kr
 mf
-mf
+bh
 mf
 eP
 mf
@@ -112277,7 +113212,7 @@ JV
 JV
 kr
 VF
-mf
+oZ
 jL
 kr
 kr
@@ -112292,7 +113227,7 @@ JV
 kr
 kr
 mf
-mf
+sw
 mf
 mf
 BJ
@@ -113801,7 +114736,7 @@ GS
 GS
 GS
 hX
-eh
+Nj
 Ji
 JV
 JV
@@ -114696,7 +115631,7 @@ Ji
 Ji
 Ji
 Ji
-Gr
+Bi
 Me
 Gr
 Gr
@@ -114995,7 +115930,7 @@ JV
 JV
 JV
 We
-YD
+cg
 JV
 Dw
 mf
@@ -115156,7 +116091,7 @@ Ji
 yA
 Mh
 kX
-GS
+yk
 Rn
 iO
 Ji
@@ -115442,7 +116377,7 @@ Va
 Va
 Va
 JV
-rK
+HM
 YD
 JV
 JV
@@ -115468,7 +116403,7 @@ kr
 kr
 kr
 kr
-mf
+mN
 VA
 kr
 JV
@@ -115907,7 +116842,7 @@ Dw
 JV
 JV
 YD
-mf
+nd
 JV
 mf
 mf
@@ -116054,7 +116989,7 @@ Ms
 HY
 Ji
 qf
-qf
+Tw
 qf
 Ji
 Mw
@@ -116364,11 +117299,11 @@ kr
 kr
 JV
 YD
-mf
+mN
 JV
 mf
 mf
-mf
+Ps
 tH
 JV
 Dw
@@ -116531,7 +117466,7 @@ GS
 dT
 vN
 cR
-LU
+qy
 Ji
 GS
 GS
@@ -116803,7 +117738,7 @@ Va
 Va
 kr
 uY
-mf
+Ps
 mf
 Mz
 mf
@@ -116825,7 +117760,7 @@ mf
 We
 mf
 JV
-mf
+mN
 JV
 JV
 Dw
@@ -116840,7 +117775,7 @@ mf
 mf
 mf
 mf
-mf
+mN
 mf
 BY
 kr
@@ -117272,7 +118207,7 @@ mf
 mf
 mf
 mf
-mf
+sz
 jL
 mf
 kr
@@ -117867,7 +118802,7 @@ JV
 JV
 JV
 Ji
-wW
+Lq
 qf
 qf
 qf
@@ -118343,7 +119278,7 @@ gP
 gP
 Ji
 VB
-Xu
+Kq
 Zm
 Ji
 Xu
@@ -119696,7 +120631,7 @@ JV
 JV
 Ji
 rB
-rB
+Fg
 Ji
 MC
 SX
@@ -119729,7 +120664,7 @@ Ph
 kX
 kX
 Ji
-GS
+nS
 Mo
 kX
 GS
@@ -120019,7 +120954,7 @@ JV
 Dw
 Dw
 mf
-kW
+iJ
 mf
 mf
 SM
@@ -120189,7 +121124,7 @@ Ji
 GS
 kX
 Zg
-kX
+eC
 Ji
 GS
 GS
@@ -120643,7 +121578,7 @@ kX
 Qv
 kX
 Ji
-iR
+VN
 Qv
 ts
 Sg
@@ -121983,7 +122918,7 @@ mf
 qf
 gP
 AN
-gP
+Fk
 at
 Ji
 qf
@@ -122742,7 +123677,7 @@ Va
 Va
 JV
 gJ
-mf
+nd
 mf
 YD
 YD
@@ -123833,12 +124768,12 @@ BZ
 Ji
 Nf
 ha
-dS
+YY
 zf
 BZ
 Ji
 sh
-GS
+YK
 ei
 Gl
 Ji
@@ -124268,7 +125203,7 @@ mf
 qf
 gP
 gP
-gP
+LW
 qf
 Ji
 os
@@ -124283,7 +125218,7 @@ Ox
 qf
 Ji
 nq
-GS
+NO
 Ud
 Cz
 Cz
@@ -125180,10 +126115,10 @@ mf
 Ww
 Ji
 qK
-wW
+MZ
 Ms
 sY
-wW
+Nm
 Ji
 Ji
 Ji

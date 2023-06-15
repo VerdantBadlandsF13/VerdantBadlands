@@ -148,6 +148,7 @@
 	backpack_contents = list(/obj/item/ammo_box/magazine/m762/empty,
 							/obj/item/ammo_box/magazine/m762/empty,
 							/obj/item/melee/onehanded/knife/bayonet)
+							
 // Sadists rush into combat with strong medium armor, but no firearm. Likely conscripted Raiders that proved their worth.
 /datum/outfit/loadout/grunt/sadist
 	name = "Sadist"

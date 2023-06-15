@@ -135,7 +135,8 @@
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
 							/obj/item/storage/firstaid/ancient=1,
-							/obj/item/book/granter/trait/lowsurgery =1,)
+							/obj/item/book/granter/trait/lowsurgery =1)
+							
 // Chemrunner - Chemrunners aren't exactly the most reliable folks in the wasteland, but they can find a strong niche.
 /datum/outfit/loadout/chemrunner
 	name = "Chem-Runner"

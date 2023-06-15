@@ -126,7 +126,7 @@
 	loadout_options = list(
 	/datum/outfit/loadout/militia/hunter,
 	/datum/outfit/loadout/militia/musketeer,
-	/datum/outfit/loadout/militia/rifleman,)
+	/datum/outfit/loadout/militia/rifleman)
 
 
 /datum/outfit/job/gmb/militia

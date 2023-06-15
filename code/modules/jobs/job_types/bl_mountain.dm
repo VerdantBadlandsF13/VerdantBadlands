@@ -152,7 +152,7 @@
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
 	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
-	r_hand = /obj/item/ammo_box/magazine/internal/shot/lasmusket // Yup. Nothing else. Fuck you. It's a laser rifle.
+	// Yup. Nothing else. Fuck you. It's a laser rifle. Be happy you even got that one cell.
 	backpack_contents = list()
 
 // Volunteer

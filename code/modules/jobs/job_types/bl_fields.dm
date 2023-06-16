@@ -71,7 +71,7 @@
 	loadout_options = list(
 	/datum/outfit/loadout/enforcer/taskmaster,
 	/datum/outfit/loadout/enforcer/peacemaker,
-	/datum/outfit/loadout/enforcer/enforcer,)
+	/datum/outfit/loadout/enforcer/enforcer)
 
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
@@ -87,7 +87,7 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	suit = /obj/item/clothing/suit/armored/f13/medium/armoredcoat
 	backpack_contents = list(/obj/item/ammo_box/magazine/tommygunm45/stick/empty,
-							/obj/item/ammo_box/magazine/tommygunm45/stick/empty,)
+							/obj/item/ammo_box/magazine/tommygunm45/stick/empty)
 
 // To be fair: nobody fucks with a dude who uses a flamethrower. Heavy armor and VERY clearly a background of Raider. What a peacemaker!
 /datum/outfit/loadout/enforcer/peacemaker
@@ -102,7 +102,7 @@
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	suit = /obj/item/clothing/suit/armored/f13/medium/combat/mk2
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2
-	backpack_contents = list(/obj/item/ammo_box/shotgun/buck,)
+	backpack_contents = list(/obj/item/ammo_box/shotgun/buck)
 
 // DFS Agent
 /datum/job/dfs/agent

@@ -86,7 +86,7 @@
 	loadout_options = list(
 	//datum/outfit/loadout/walker/veteran,
 	/datum/outfit/loadout/walker/marksmen,
-	/datum/outfit/loadout/walker/heavy,)
+	/datum/outfit/loadout/walker/heavy)
 
 /datum/outfit/job/gmb/walker
 	name = "Walker"
@@ -102,7 +102,7 @@
 	r_hand = /obj/item/gun/ballistic/rifle/enfield
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
-	backpack_contents = list(/obj/item/ammo_box/magazine/m9mmds,) // Please add .308 when able, KOARL
+	backpack_contents = list(/obj/item/ammo_box/magazine/m9mmds) // Please add .308 when able, KOARL
 
 /datum/outfit/loadout/walker/heavy
 	name = "Heavy"
@@ -147,7 +147,7 @@
 	backpack_contents = list(/obj/item/ammo_box/magazine/internal/shot/tube357,
 							/obj/item/ammo_box/magazine/internal/shot/tube357,
 							/obj/item/ammo_box/magazine/internal/shot/tube357,
-							/obj/item/melee/onehanded/knife/hunting,)
+							/obj/item/melee/onehanded/knife/hunting)
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
@@ -168,7 +168,7 @@
 	exp_type = EXP_TYPE_WASTELAND
 	loadout_options = list(
 	/datum/outfit/loadout/volunteer/conscript,
-	/datum/outfit/loadout/volunteer/watchmen,)
+	/datum/outfit/loadout/volunteer/watchmen)
 
 /datum/outfit/job/gmb/volunteer
 	name = "Volunteer"

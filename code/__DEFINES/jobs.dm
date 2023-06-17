@@ -196,7 +196,7 @@
 #define GMB		(1<<15)
 
 #define	F13GMBCOMMANDER			(1<<0)
-#define	F13GMBWATCHMAN			(1<<1)
+#define	F13GMBPRACTITIONER		(1<<1)
 #define F13GMBWALKER			(1<<2)
 #define F13GMBMILITIA			(1<<3)
 #define F13GMBVOLUNTEER			(1<<4)

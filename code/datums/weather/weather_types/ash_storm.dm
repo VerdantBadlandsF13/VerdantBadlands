@@ -19,6 +19,7 @@
 	area_types = list(/area/f13/wasteland)
 	protect_indoors = TRUE
 	target_trait = ZTRAIT_SURFACE
+	carbon_exclusive = TRUE
 
 	immunity_type = "ash"
 

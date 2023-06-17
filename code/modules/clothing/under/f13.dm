@@ -520,7 +520,7 @@
 // GMB
 /obj/item/clothing/under/f13/gmb
 	name = "surplus militia outfit"
-	desc = "A surplus outfit with a green cotton longshirt and dark grey jeans along with a black bandana around the neck. It has been fitted with the militia's patch."
+	desc = "A surplus outfit, pulled from some old army depot and of a pattern long since obsolete. It has been fitted with the militia's patch."
 	icon_state = "merc_camo"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)

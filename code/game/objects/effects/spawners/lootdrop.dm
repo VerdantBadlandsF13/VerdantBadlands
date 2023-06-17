@@ -630,27 +630,7 @@
 				/obj/item/stock_parts/cell
 				)
 
-// Random Weapon Parts
-
-/obj/effect/spawner/lootdrop/weapon_parts
-	name = "random weapon parts spawner 50%"
-	lootcount = 1
-	spawn_on_turf = FALSE
-	loot = list("" = 50,
-		/obj/item/weaponcrafting/improvised_parts/rifle_receiver = 13,
-		/obj/item/weaponcrafting/improvised_parts/shotgun_receiver = 13,
-		/obj/item/weaponcrafting/improvised_parts/trigger_assembly = 12,
-		)
-
-/obj/effect/spawner/lootdrop/weapon_parts
-	name = "random weapon parts spawner 20%"
-	lootcount = 1
-	spawn_on_turf = FALSE
-	loot = list("" = 80,
-		/obj/item/weaponcrafting/improvised_parts/rifle_receiver = 5,
-		/obj/item/weaponcrafting/improvised_parts/trigger_assembly = 5,
-		)
-
+// Random Ammo
 /obj/effect/spawner/lootdrop/ammo
 	name = "random ammo 75%"
 	lootcount = 1

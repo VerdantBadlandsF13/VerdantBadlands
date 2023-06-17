@@ -51,8 +51,8 @@
 	name = "Commander"
 	icon_state = "Raider"
 
-/obj/effect/landmark/start/f13/gmb_watchman
-	name = "Watchman"
+/obj/effect/landmark/start/f13/gmb_practitioner
+	name = "Practitioner"
 	icon_state = "Pusher"
 
 /obj/effect/landmark/start/f13/gmb_walker

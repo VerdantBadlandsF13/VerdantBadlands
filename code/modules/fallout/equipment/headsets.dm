@@ -8,6 +8,9 @@
 	freerange = TRUE
 	freqlock = TRUE
 
+	factionized = TRUE
+	linked_faction = FACTION_VLT
+
 /obj/item/radio/headset/headset_vault
 	name = "\proper vault radio headset"
 	desc = "A vault-tec radio.\nChannels are as follows: :v - vault."
@@ -15,6 +18,9 @@
 	frequency = FREQ_VAULT
 	freerange = TRUE
 	freqlock = TRUE
+
+	factionized = TRUE
+	linked_faction = FACTION_VLT
 
 /obj/item/radio/headset/headset_vault/eng
 	keyslot = new /obj/item/encryptionkey/headset_vault_engineer
@@ -33,6 +39,9 @@
 	frequency = FREQ_VAULT
 	freerange = TRUE
 	freqlock = TRUE
+
+	factionized = TRUE
+	linked_faction = FACTION_VLT
 
 /obj/item/radio/headset/headset_vaultsec/ComponentInitialize()
 	. = ..()

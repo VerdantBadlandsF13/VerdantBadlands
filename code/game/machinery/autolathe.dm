@@ -3,8 +3,8 @@
 #define AUTOLATHE_SEARCH_MENU     3
 
 /obj/machinery/autolathe
-	name = "autolathe"
-	desc = "It produces items using metal and glass."
+	name = "PARENT OBJECT fabricator"
+	desc = "How are you seeing this? Report it to Carl."
 	icon_state = "autolathe"
 	density = TRUE
 	use_power = IDLE_POWER_USE
@@ -51,7 +51,7 @@
 	var/list/allowed_materials
 
 	/// Base print speed
-	var/base_print_speed = 10
+	var/base_print_speed = 120
 
 /obj/machinery/autolathe/Initialize()
 	var/list/mats = allowed_materials
@@ -440,8 +440,8 @@
 	adjust_hacked(TRUE)
 
 /obj/machinery/autolathe/secure
-	name = "secured autolathe"
+	name = "secured fabricator"
 	desc = "It produces items using metal and glass. This model was reprogrammed without some of the more hazardous designs."
 	circuit = /obj/item/circuitboard/machine/autolathe/secure
 	stored_research = /datum/techweb/specialized/autounlocking/autolathe/public
-	base_print_speed = 20
+	base_print_speed = 240

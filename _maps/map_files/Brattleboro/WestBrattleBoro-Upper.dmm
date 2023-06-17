@@ -461,7 +461,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -1790,6 +1790,9 @@
 /obj/structure/table/wood/junk,
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
+"kY" = (
+/turf/closed/indestructible/riveted,
+/area/admin)
 "la" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -2031,6 +2034,9 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/royalblue,
 /area/f13/building)
+"mk" = (
+/turf/open/indestructible,
+/area/admin)
 "mt" = (
 /obj/structure/chair/comfy/plywood{
 	dir = 4
@@ -2566,7 +2572,7 @@
 /turf/closed/wall/f13/wood/interior,
 /area/f13/building)
 "pR" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -3266,7 +3272,7 @@
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
 "tX" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
@@ -6428,7 +6434,7 @@
 	},
 /area/f13/wasteland)
 "LG" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/item/stack/sheet/metal/twenty,
 /obj/item/stack/sheet/metal/five,
 /turf/open/floor/f13/wood,
@@ -7696,7 +7702,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
 "Sn" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/wood/wood_wide/wood_wide_dark,
 /area/f13/building)
 "Sq" = (
@@ -8212,6 +8218,10 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/building)
+"Vt" = (
+/obj/machinery/telecomms/relay/preset/telecomms,
+/turf/open/indestructible,
+/area/admin)
 "Vv" = (
 /obj/structure/chair/sofa/right{
 	dir = 1
@@ -8246,7 +8256,7 @@
 	},
 /area/f13/wasteland)
 "VC" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
@@ -73272,12 +73282,12 @@ jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-Cp
+bi
+bi
+bi
+bi
+bi
+bi
 "}
 (251,1,1) = {"
 Cp
@@ -73529,12 +73539,12 @@ jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-Cp
+bi
+kY
+kY
+kY
+kY
+kY
 "}
 (252,1,1) = {"
 Cp
@@ -73786,12 +73796,12 @@ jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-Cp
+bi
+kY
+mk
+mk
+mk
+kY
 "}
 (253,1,1) = {"
 Cp
@@ -74043,12 +74053,12 @@ jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-Cp
+bi
+kY
+mk
+Vt
+mk
+kY
 "}
 (254,1,1) = {"
 Cp
@@ -74300,12 +74310,12 @@ jG
 jG
 jG
 jG
-jG
-jG
-jG
-jG
-jG
-Cp
+bi
+kY
+mk
+mk
+mk
+kY
 "}
 (255,1,1) = {"
 Cp
@@ -74557,10 +74567,10 @@ Cp
 Cp
 Cp
 Cp
-Cp
-Cp
-Cp
-Cp
-Cp
-Cp
+bi
+kY
+kY
+kY
+kY
+kY
 "}

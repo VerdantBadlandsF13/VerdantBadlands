@@ -5,7 +5,6 @@ AI
 	title = "AI"
 	flag = AI_JF
 	department_flag = VAULT
-	//
 	total_positions = 1
 	spawn_positions = 1
 	selection_color = "#ccffcc"

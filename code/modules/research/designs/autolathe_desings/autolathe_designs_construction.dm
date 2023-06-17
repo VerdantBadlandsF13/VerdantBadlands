@@ -87,7 +87,7 @@
 /datum/design/turret_control_frame
 	name = "Turret Control Frame"
 	id = "turret_control"
-	build_type = AUTOLATHE
+	build_type = AUTOLATHE | NO_PUBLIC_LATHE
 	materials = list(/datum/material/iron = 12000)
 	build_path = /obj/item/wallframe/turret_control
 	category = list("initial", "Construction")

@@ -443,7 +443,7 @@
 
 /proc/get_all_jobs()
 	return list("Wastelander",
-				"Commander", "Watchman", "Walker", "Militia", "Volunteer",
+				"Commander", "Practitioner", "Walker", "Militia", "Volunteer",
 				"DFS Advisor", "DFS Enforcer", "DFS Agent", "DFS Regular", "DFS Grunt",
 				"Vault-Tec Overseer", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
 				"Vault-Tec Engineer", "Vault-Tec Robot", "Vault Dweller",

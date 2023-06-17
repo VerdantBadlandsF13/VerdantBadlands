@@ -538,9 +538,6 @@
 		name = "empty scroll"
 		icon_state = "blankscroll"
 
-// I did not include mushpunch's grant, it is not a book and the item does it just fine.
-
-
 //Crafting Recipe books
 
 /obj/item/book/granter/crafting_recipe
@@ -597,7 +594,6 @@
 	remarks = list("...")
 	crafting_recipe_types = list()
 
-// New Blueprints, yay! -Superballs
 /obj/item/book/granter/crafting_recipe/blueprint
 	name = "blueprint"
 	icon = 'icons/fallout/objects/items.dmi'

@@ -185,7 +185,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 
 
 /datum/atom_hud/alternate_appearance/basic/landmines/ordinary/mobShouldSee(mob/M)
-	if (M.special_p > 3 && M.special_p < 7)
+	if (M.special_p >= 6 && M.special_p <= 8)
 		return TRUE
 	return FALSE
 
@@ -196,7 +196,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 			add_hud_to(mob)
 
 /datum/atom_hud/alternate_appearance/basic/landmines/large/mobShouldSee(mob/M)
-	if (M.special_p >= 7)
+	if (M.special_p >= 9)
 		return TRUE
 	return FALSE
 
@@ -207,7 +207,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 			add_hud_to(mob)
 
 /datum/atom_hud/alternate_appearance/basic/landmines/small/mobShouldSee(mob/M)
-	if (M.special_p <= 3)
+	if (M.special_p <= 5)
 		return TRUE
 	return FALSE
 

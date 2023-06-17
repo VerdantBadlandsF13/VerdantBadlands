@@ -127,6 +127,16 @@
 
 		return FALSE
 
+//Disables bioscan.
+/obj/structure/shieldwall/attack_hand(mob/living/user)
+	if(HAS_TRAIT(user, TRAIT_ENCLAVE_CODES))
+		if(disabled == TRUE)
+			disabled = FALSE
+			to_chat(user, "<span class='warning'>You enable the scanners built into the shieldwall, returning it to its usual state.</span>")
+		else
+			disabled = TRUE
+			to_chat(user, "<span class='warning'>You disable the scanners built into the shieldwall, allowing anyone to pass.</span>")
+
 /*
 Below are all the shields. The above is the parent.
 Keep that in mind when making edits. I beg you.
@@ -164,10 +174,18 @@ Keep that in mind when making edits. I beg you.
 	icon_state = "gate_OWB_on"
 	light_range = 2
 	light_color = "#75fcfc"
+	req_one_access = list(ACCESS_LBJ)
+
+/obj/structure/shieldwall/standard_owb/active/Initialize(mapload)
+	. = ..()
+	radio = null// Not needed, as this is for the Lumber Camp.
+	soundloop = new(src, TRUE)
+	soundloop.start()
 
 // 52x32 base.
 /obj/structure/shieldwall/full
 	name = "Full Parent Shield - DO NOT USE"
+	desc = "A field of light, preventing access and likely killing those not meant to cross."
 	icon = 'modular_badlands/code/modules/techno_jacks/icons/Fields52x32.dmi'
 	icon_state = "gate_full_off"
 	pixel_x = -10
@@ -177,6 +195,7 @@ Keep that in mind when making edits. I beg you.
 
 /obj/structure/shieldwall/full/active_stun
 	name = "shieldwall"
+	desc = "A field of bright light, preventing access. This one is configured to be less-lethal, or has otherwise resorted to backup power."
 	icon_state = "gate_full_yellow"
 	lethal = FALSE
 	light_range = 3
@@ -203,6 +222,7 @@ Keep that in mind when making edits. I beg you.
 // 64x32 base.
 /obj/structure/shieldwall/large
 	name = "Large Parent Shield - DO NOT USE"
+	desc = "A field of light, preventing access and likely killing those not meant to cross."
 	icon = 'modular_badlands/code/modules/techno_jacks/icons/Fields64x32.dmi'
 	icon_state = "large_gate_off"
 	bound_width = 64
@@ -210,6 +230,7 @@ Keep that in mind when making edits. I beg you.
 
 /obj/structure/shieldwall/large/active
 	name = "shieldwall"
+	desc = "A field of bright light, preventing access. This one is configured to be less-lethal, or has otherwise resorted to backup power."
 	icon_state = "large_gate_on"
 	light_range = 6
 	light_color = "#75fcfc"

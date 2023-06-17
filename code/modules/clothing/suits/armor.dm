@@ -103,7 +103,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	slowdown = 0.05
-	armor = list("tier" = 0.5)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/shield)
 
 // Medium armor. 35-45 in its primary value, slowdown 0.1
@@ -112,7 +111,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	slowdown = 0.1
-	armor = list("tier" = 1)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/shield)
 	strip_delay = 40
 
@@ -122,7 +120,6 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	slowdown = 0.15
-	armor = list("tier" = 2)
 	allowed = list(/obj/item/gun, /obj/item/melee/onehanded, /obj/item/twohanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
 	strip_delay = 50
 

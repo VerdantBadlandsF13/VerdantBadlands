@@ -100,7 +100,7 @@
 	// Let this be a lesson not to do that. When in doubt, remember:
 	// Don't Repeat Yourself!
 
-	damage_multiplier += (user.special_s * 0.5)
+	damage_multiplier += (user.special_s + 0.5)
 
 	var/bonus_damage = 0
 	if (force >= 5)

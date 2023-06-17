@@ -2027,7 +2027,10 @@
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
 "ia" = (
-/obj/machinery/door/unpowered/securedoor/vfe,
+/obj/machinery/door/unpowered/securedoor/vfe/glass{
+	name = "secure vault airlock";
+	req_access_txt = "151"
+	},
 /turf/open/floor/f13,
 /area/f13/vault)
 "ic" = (
@@ -3637,6 +3640,11 @@
 	},
 /turf/open/floor/engine,
 /area/f13/vault/science/biology)
+"nM" = (
+/obj/structure/table,
+/obj/item/reagent_containers/glass/bucket/plastic,
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "nO" = (
 /obj/effect/decal/cleanable/generic{
 	icon_state = "big_ash";
@@ -4651,6 +4659,12 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
+"rq" = (
+/obj/machinery/radioterminal/vault,
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
+/area/f13/vault/security)
 "rr" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4928,9 +4942,6 @@
 	icon_state = "plating"
 	},
 /area/f13/tunnel)
-"sF" = (
-/turf/closed/indestructible/vaultdoor,
-/area/f13/caves)
 "sG" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -5311,6 +5322,10 @@
 	icon_state = "neutralchess"
 	},
 /area/f13/vault/diner)
+"tZ" = (
+/obj/machinery/portable_atmospherics/canister/water_vapor,
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "ua" = (
 /obj/structure/table,
 /obj/item/storage/box/cups{
@@ -9537,6 +9552,14 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/security)
+"Lu" = (
+/obj/structure/table,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "*Smells of ammonia";
+	name = "abraxo solution"
+	},
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "Lv" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
@@ -12037,6 +12060,12 @@
 	},
 /turf/open/floor/f13,
 /area/f13/vault/atrium)
+"VB" = (
+/obj/structure/sign/departments/custodian{
+	pixel_y = -32
+	},
+/turf/open/floor/f13,
+/area/f13/vault)
 "VE" = (
 /obj/machinery/door/unpowered/securedoor/vfe/glass,
 /obj/structure/cable{
@@ -12300,6 +12329,11 @@
 	dir = 5
 	},
 /area/f13/vault/science)
+"WK" = (
+/obj/structure/janitorialcart,
+/obj/item/mop,
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "WM" = (
 /obj/machinery/light{
 	dir = 8
@@ -12482,6 +12516,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/vault/vents)
+"XF" = (
+/obj/structure/reagent_dispensers/rainwater_tank{
+	name = "sewage outflow tank"
+	},
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "XH" = (
 /obj/effect/decal/cleanable/crayon{
 	name = "grafitti";
@@ -12838,6 +12878,11 @@
 	},
 /turf/open/floor/plating,
 /area/f13/vault/vents)
+"YZ" = (
+/obj/structure/table,
+/obj/item/watertank/janitor,
+/turf/open/floor/f13,
+/area/f13/vault/custodial)
 "Zc" = (
 /obj/effect/overlay/junk/oldpipes{
 	pixel_x = -2;
@@ -67097,7 +67142,7 @@ sR
 vz
 xP
 Yf
-sF
+DA
 DA
 DA
 qr
@@ -67608,7 +67653,7 @@ DS
 bN
 DS
 sR
-DS
+VB
 ko
 ko
 ko
@@ -67868,8 +67913,8 @@ FM
 CV
 vf
 gD
-Ln
-Ln
+Lu
+YZ
 ko
 DA
 DA
@@ -68126,7 +68171,7 @@ DS
 ko
 pm
 Ln
-Ln
+nM
 ko
 Yf
 DA
@@ -68383,7 +68428,7 @@ vz
 ko
 iS
 Ln
-Ln
+XF
 ko
 Yf
 Yf
@@ -68639,8 +68684,8 @@ sR
 DS
 ko
 ko
-Ln
-Ln
+WK
+tZ
 ko
 Yf
 Yf
@@ -76571,7 +76616,7 @@ Yf
 Yf
 Yf
 sK
-Ym
+rq
 Ym
 MK
 IL

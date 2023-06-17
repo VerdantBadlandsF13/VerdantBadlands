@@ -21889,6 +21889,10 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"oMk" = (
+/obj/structure/badlands_props/open_manhole,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
 "oMJ" = (
 /turf/closed/indestructible/rock,
 /area/f13/caves)
@@ -28023,10 +28027,6 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
-"tdS" = (
-/obj/effect/landmark/start/f13/gmb_watchman,
-/turf/open/floor/wood/wood_common,
-/area/f13/bl/gmb)
 "tdT" = (
 /obj/structure/destructible/hobo_barrel{
 	pixel_x = -9
@@ -43044,7 +43044,7 @@ oeM
 oeM
 oeM
 oeM
-oeM
+oMk
 oeM
 oeM
 oeM
@@ -50576,7 +50576,7 @@ dZi
 oHo
 eWz
 kvC
-tdS
+kvC
 kvC
 kvC
 kvC
@@ -51347,7 +51347,7 @@ hku
 hku
 vdk
 oeM
-oeM
+oMk
 oeM
 oeM
 oeM

@@ -129,7 +129,9 @@
 
 //Disables bioscan.
 /obj/structure/shieldwall/attack_hand(mob/living/user)
-	if(HAS_TRAIT(user, TRAIT_ENCLAVE_CODES))
+	var/mob/living/carbon/human/M = AM
+	var/allowed = allowed(AM)// Can pull people through it safely, to bypass restrictions.
+	if(allowed)
 		if(disabled == TRUE)
 			disabled = FALSE
 			to_chat(user, "<span class='warning'>You enable the scanners built into the shieldwall, returning it to its usual state.</span>")

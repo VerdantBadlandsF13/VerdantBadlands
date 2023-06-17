@@ -11613,15 +11613,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legion)
-"vQu" = (
-/obj/machinery/water_purifier{
-	density = 0;
-	pixel_x = 32
-	},
-/turf/open/floor/f13{
-	icon_state = "darkdirtysolid"
-	},
-/area/f13/caves)
 "vRa" = (
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-21"
@@ -12794,12 +12785,6 @@
 /obj/structure/cross,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"ymd" = (
-/obj/machinery/autolathe/ammobench,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	name = "metal plating"
-	},
-/area/f13/bunker)
 
 (1,1,1) = {"
 shC
@@ -46231,7 +46216,7 @@ shC
 shC
 shC
 oqm
-ymd
+sLB
 rgx
 cvV
 jma
@@ -77995,7 +77980,7 @@ uIK
 fcq
 fcq
 oBe
-vQu
+aya
 qTW
 bFW
 qyU

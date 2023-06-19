@@ -21,9 +21,9 @@
 /obj/machinery/autolathe/constructionlathe/proc/upgrade_hint()
 	switch(upgrade_step)
 		if(0)
-			return "<span class='warning'>Perhaps you can feed <i>munition schematics</i> to into \the [src]?</span>"
+			return "<span class='warning'>Perhaps you can feed <i>munition schematics</i> into \the [src]?</span>"
 		if(1)
-			return "<span class='warning'>A lot of the internals are worn out. <i>High-quality parts</i> would work to refurbish \the [src].</span>"
+			return "<span class='warning'>A lot of the internals are worn out. <i>A new fuse</i> would work to refurbish \the [src].</span>"
 		if(2)
 			return "<span class='warning'>Some kind of <i>makeshift reloading device</i> could be integrated into \the [src].</span>"
 		if(3)
@@ -34,20 +34,16 @@
 	if(DRM && panel_open)
 		if(constage == 0)
 			if(istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
-				to_chat(user, "<span class='notice'>You feet \the [src] with ammunition schematics. You'll still need to provide it with some high-quality metal parts.</span>")
+				to_chat(user, "<span class='notice'>You feed \the [src] with ammunition schematics. You'll still need to provide it with some high-quality metal parts.</span>")
 				constage = 1
 				upgrade_step = 1
 				qdel(O)
 		if(constage == 1)
-			if(istype(O, /obj/item/stack/crafting/goodparts))
-				var/obj/item/stack/crafting/goodparts/S = O
-				if(S.get_amount() < 5)
-					to_chat(user, "<span class='warning'>You need at least 5 high-quality metal parts to upgrade \the [src].</span>")
-					return
-				S.use(5)
-				to_chat(user, "<span class='notice'>You upgrade \the [src] with quality parts. You'll still need to install a makeshift reloader to finish the process.</span>")
+			if(istype(O, /obj/item/crafting/fuse))
+				to_chat(user, "<span class='notice'>You upgrade \the [src] with a new fuse. You'll still need to install a makeshift reloader to finish the process.</span>")
 				constage = 2
 				upgrade_step = 2
+				qdel(O)
 		if(constage == 2)
 			if(istype(O, /obj/item/crafting/reloader))
 				to_chat(user, "<span class='notice'>You upgrade [src] with a makeshift reloader, allowing it to finally produce ammunition again.</span>")

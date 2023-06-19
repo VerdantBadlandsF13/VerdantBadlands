@@ -23,20 +23,19 @@ Lightswitch 2.0
 	var/mob/living/carbon/human/M
 	var/allowed = allowed(M)
 	if(allowed)
-		for(/obj/structure/shieldwall in area)
-			if(shieldwall.disabled == FALSE)
-				shieldwall.disabled = TRUE
+		for(var/obj/structure/shieldwall/S in area)
+			if(S.disabled == FALSE)
+				S.disabled = TRUE
 				icon_state = "shieldtoggle_off"
 				to_chat(user, "<span class='warning'>The panel indicates that bioscanners have been disabled!</span>")
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg" ,50,0,3)
 			else
-				shieldwall.disabled = FALSE
+				S.disabled = FALSE
 				icon_state = "shieldtoggle_on"
 				to_chat(user, "<span class='danger'>The panel indicates that bioscanners have been enabled!</span>")
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg" ,50,0,3)
 	else
 		to_chat(user, "<span class='warning'>The panel rejects your authorization codes!</span>")
-		playsound(src, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg" ,50,0,3)
 
 /obj/machinery/shield_switch/emp_act(severity)
 	return

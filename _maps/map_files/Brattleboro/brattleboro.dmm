@@ -2372,7 +2372,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "bhD" = (
-/turf/open/liquid/water/scum,
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "bhO" = (
 /turf/open/indestructible/ground/outside/desert,
@@ -2491,10 +2491,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/turf/open/indestructible/ground/outside/river{
-	desc = "Water that has been sitting for a long time, doesn't look very healthy for consumption.";
-	name = "dirty water"
-	},
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "bkq" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5695,6 +5692,15 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bl/gmb)
+"dxU" = (
+/obj/structure/closet/crate,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "dxY" = (
 /mob/living/simple_animal/hostile/raider/sulphite{
 	name = "Gymbro"
@@ -6374,17 +6380,13 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/village)
 "eau" = (
-/obj/item/gun/ballistic/automatic/pistol/deagle{
-	name = "Devil's Right Hand";
-	desc = "A desert eagle, chambered in .44. This one has a skull design on the grip and a couple dozen tally marks on the barrel."
-	},
 /obj/structure/dresser,
 /obj/effect/spawner/lootdrop/f13/traitbooks,
-/obj/item/stack/f13Cash/caps{
-	amount = 31
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/gun/ballistic/automatic/pistol/deagle{
+	name = "Devil's Right Hand"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/bl/dfs)
 "eay" = (
@@ -7522,6 +7524,16 @@
 /obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"eLI" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "eLJ" = (
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -8430,6 +8442,13 @@
 	icon_state = "cafeteria"
 	},
 /area/f13/building)
+"fuo" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain1"
+	},
+/area/f13/wasteland/bl/dfs)
 "fuC" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticaldegraded"
@@ -9377,7 +9396,7 @@
 /area/f13/wasteland)
 "gcx" = (
 /mob/living/simple_animal/hostile/ghoul,
-/turf/open/liquid/water/scum,
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "gcF" = (
 /obj/structure/table/wood,
@@ -10635,6 +10654,10 @@
 	},
 /turf/open/liquid/water/deep,
 /area/f13/wasteland)
+"gTB" = (
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/bl/dfs)
 "gTI" = (
 /obj/structure/chair/sofa,
 /turf/open/floor/f13/wood,
@@ -11710,6 +11733,14 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/village)
+"hII" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "hIW" = (
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
 	dir = 10
@@ -12235,6 +12266,10 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
 	},
+/area/f13/wasteland)
+"ibB" = (
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "ibG" = (
 /obj/structure/mirelurkegg,
@@ -17052,6 +17087,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
+"lqY" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/radioterminal/dfs{
+	dir = 1
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "lrq" = (
 /obj/machinery/light/broken{
 	dir = 8
@@ -21889,10 +21932,6 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
-"oMk" = (
-/obj/structure/badlands_props/open_manhole,
-/turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
 "oMJ" = (
 /turf/closed/indestructible/rock,
 /area/f13/caves)
@@ -24376,6 +24415,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"qxK" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small,
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "qxU" = (
 /obj/effect/overlay/junk/sink{
 	dir = 8;
@@ -24588,10 +24633,7 @@
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/turf/open/indestructible/ground/outside/river{
-	desc = "Water that has been sitting for a long time, doesn't look very healthy for consumption.";
-	name = "dirty water"
-	},
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "qDv" = (
 /turf/closed/wall/f13/sunset/brick_small_dark,
@@ -25385,6 +25427,13 @@
 /obj/structure/railing/handrail/rusty,
 /turf/open/liquid/water/deep,
 /area/f13/wasteland)
+"rhP" = (
+/obj/machinery/radioterminal/gmb{
+	dir = 4;
+	pixel_x = -4
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "rhW" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/low_tools,
@@ -28999,6 +29048,7 @@
 /area/f13/caves)
 "tQx" = (
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/destructible/hobo_barrel/lit,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
 	},
@@ -29236,7 +29286,7 @@
 /obj/structure/flora/tree/jungle{
 	desc = "The vibrant green of this tree sticks out against the dry and cracked wasteland."
 	},
-/turf/open/liquid/water/scum,
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "tYJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -29611,10 +29661,7 @@
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/turf/open/indestructible/ground/outside/river{
-	desc = "Water that has been sitting for a long time, doesn't look very healthy for consumption.";
-	name = "dirty water"
-	},
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "ulp" = (
 /obj/structure/chair/f13chair2{
@@ -31010,10 +31057,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/turf/open/indestructible/ground/outside/river{
-	desc = "Water that has been sitting for a long time, doesn't look very healthy for consumption.";
-	name = "dirty water"
-	},
+/turf/open/liquid/water/scum_aboveground,
 /area/f13/wasteland)
 "vjI" = (
 /obj/effect/overlay/junk/curtain,
@@ -34119,6 +34163,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"xrT" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "xrY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -34489,6 +34541,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"xEp" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/bl/dfs)
 "xEw" = (
 /obj/structure/junk/arcade,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -43044,7 +43104,7 @@ oeM
 oeM
 oeM
 oeM
-oMk
+oeM
 oeM
 oeM
 oeM
@@ -50120,7 +50180,7 @@ uZi
 nCZ
 gXi
 hdK
-kvC
+rhP
 kvC
 dno
 nCZ
@@ -51347,7 +51407,7 @@ hku
 hku
 vdk
 oeM
-oMk
+oeM
 oeM
 oeM
 oeM
@@ -61729,6 +61789,7 @@ xKH
 ddQ
 xsS
 ktL
+gTB
 ktL
 ktL
 ktL
@@ -61736,8 +61797,7 @@ ktL
 ktL
 ktL
 ktL
-ktL
-ktL
+gTB
 ktL
 xsS
 ddQ
@@ -64923,7 +64983,7 @@ eau
 qAr
 oBN
 uZe
-qAr
+xrT
 lkv
 jbd
 qrd
@@ -64932,7 +64992,7 @@ ktL
 ktL
 ktL
 ktL
-ktL
+gTB
 rAS
 sev
 ktL
@@ -65377,7 +65437,7 @@ ktL
 liG
 grV
 bUz
-qAr
+qxK
 cUt
 tlb
 qAr
@@ -66748,7 +66808,7 @@ keY
 rAS
 iJr
 uEr
-qAr
+hII
 qAr
 qAr
 uEr
@@ -68108,7 +68168,7 @@ cDu
 aTh
 cDu
 oeM
-oeM
+ibB
 cDu
 cDu
 cDu
@@ -68121,7 +68181,7 @@ vje
 vje
 nWY
 nWY
-nWY
+fuo
 nWY
 nWY
 nWY
@@ -69049,7 +69109,7 @@ djx
 iJr
 qrd
 ktL
-ktL
+gTB
 liG
 xsS
 ddQ
@@ -72227,7 +72287,7 @@ bJi
 ddQ
 fgr
 liG
-jLo
+gTB
 wnr
 ktL
 qrd
@@ -73619,7 +73679,7 @@ oOp
 kLx
 qrd
 ktL
-jfu
+gTB
 liG
 xsS
 ddQ
@@ -76349,7 +76409,7 @@ iJr
 xgU
 hGe
 hGe
-nWY
+fuo
 xgU
 vje
 hGe
@@ -76800,7 +76860,7 @@ qrd
 iJr
 uEr
 qAr
-cSV
+eLI
 cSV
 iJr
 xgU
@@ -78181,7 +78241,7 @@ iJr
 gOh
 qAr
 qAr
-srt
+dxU
 uZe
 srt
 qdv
@@ -79098,7 +79158,7 @@ uZe
 gOt
 qAr
 uZe
-qAr
+lqY
 iJr
 qrd
 qrd
@@ -79999,7 +80059,7 @@ qrd
 iJr
 wRB
 uZe
-wmk
+xEp
 cSV
 kLx
 xgU
@@ -80009,7 +80069,7 @@ iJr
 gOh
 srt
 qAr
-qAr
+hII
 srt
 qdv
 qdv

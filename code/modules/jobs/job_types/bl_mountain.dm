@@ -25,8 +25,9 @@
 	id = /obj/item/card/id/gmb_keys
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
-	ears = null
+	ears = /obj/item/radio/headset/headset_gmb
 	uniform = /obj/item/clothing/under/f13/gmb
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio
@@ -48,6 +49,7 @@
 /datum/outfit/job/gmb/commander
 	name = "Commander"
 	jobtype = /datum/job/gmb/commander
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/job/gmb/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -74,6 +76,7 @@
 /datum/outfit/job/gmb/practitioner
 	name = "Practitioner"
 	jobtype = /datum/job/gmb/practitioner
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/job/gmb/practitioner/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -104,20 +107,18 @@
 /datum/outfit/job/gmb/walker
 	name = "Walker"
 	jobtype = /datum/job/gmb/walker
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/walker
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/loadout/walker/marksmen
 	name = "Marksmen"
 	r_hand = /obj/item/gun/ballistic/rifle/enfield
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
-	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
 
 /datum/outfit/loadout/walker/heavy
 	name = "Heavy"
 	r_hand = /obj/item/gun/ballistic/automatic/lsw
 	l_hand = /obj/item/ammo_box/magazine/m556/rifle
-	suit = /obj/item/clothing/suit/armored/f13/heavy/metal
-	head = /obj/item/clothing/head/helmet/armyhelmet/heavy
 
 // Militia
 /datum/job/gmb/militia
@@ -138,18 +139,23 @@
 /datum/outfit/job/gmb/militia
 	name = "Militia"
 	jobtype = /datum/job/gmb/militia
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/militia
 
 /datum/outfit/loadout/militia/rifleman
 	name = "Rifleman"
 	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 /datum/outfit/loadout/militia/hunter
 	name = "Hunter"
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
 	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
+	r_hand = /obj/item/ammo_box/lasmusket
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 // Volunteer
 /datum/job/gmb/volunteer

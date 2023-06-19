@@ -2511,6 +2511,10 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"lN" = (
+/obj/effect/landmark/start/f13/gmb_practitioner,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "lR" = (
 /obj/item/melee/cultblade/dagger,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -17929,7 +17933,7 @@ Va
 OA
 Gs
 Cg
-Cg
+lN
 Cg
 tE
 Cg

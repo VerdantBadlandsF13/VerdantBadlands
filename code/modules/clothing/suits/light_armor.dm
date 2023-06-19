@@ -243,3 +243,41 @@
 	item_state = "mutie_armorkit"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
+
+// GMB
+
+/obj/item/clothing/suit/armored/f13/light/gmb
+	name = "surplus volunteer coat"
+	desc = "A surplus outfit, pulled from some old army depot and of a pattern long since obsolete. It has been fitted with the militia's patch."
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	icon_state = "volunteer"
+	item_state = "volunteer_obj"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/militia
+	name = "militia overcoat"
+	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "militia"
+	item_state = "militia_obj"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/practitioner
+	name = "practitioner outfit"
+	desc = "A handmade labcoat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "practitioner"
+	item_state = "practitioner_obj"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/walker
+	name = "walker outfit"
+	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "walker"
+	item_state = "walker_obj"
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/commander
+	name = "commander outfit"
+	desc = "A handmade coat. It has been fitted with the militia's patch."
+	icon_state = "commander"
+	item_state = "commander_obj"

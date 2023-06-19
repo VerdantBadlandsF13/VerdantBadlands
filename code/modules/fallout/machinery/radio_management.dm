@@ -90,4 +90,14 @@ GLOBAL_LIST_EMPTY(vlt_radios)
 /obj/machinery/radioterminal/vault
 	name = "Vault radio control"
 	assigned_faction = FACTION_VLT
-	req_one_access = list(ACCESS_NCR_COMMAND)
+	req_one_access = list(ACCESS_VFE)
+
+/obj/machinery/radioterminal/gmb
+	name = "local radio control"
+	assigned_faction = FACTION_GMB
+	req_one_access = list(ACCESS_GMB)
+
+/obj/machinery/radioterminal/dfs
+	name = "local radio control"
+	assigned_faction = FACTION_DFS
+	req_one_access = list(ACCESS_DFS)

@@ -184,7 +184,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 		if(11)
 			var/message = input(usr,"Send a message to command staff. Ensure it makes sense IC.","") as message|null
 			if(message)
-				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>COMMAND MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:[ADMIN_JMP_MSGTERMINAL(src)]")
+				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>COMMAND MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:N/A")
 				log_terminal("[key_name(usr)] sent a COMMAND message, '[message]' from the terminal at [AREACOORD(usr)].")
 				screen = 6
 				dat += "<span class='good'>Message to Command delivered.</span><br><br>"

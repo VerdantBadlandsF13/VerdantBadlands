@@ -14,7 +14,8 @@
 
 	var/flags = NONE
 	var/obj/structure/flora/turfPlant = null
-	var/turfHazard = null
+	var/obj/effect/landmark/turfHazard = null
+	var/obj/item/grenade/f13/mine/turfMines = null
 
 /turf/open/indestructible/ground/New()
 	..()
@@ -61,11 +62,13 @@
 #define GRASS_SPONTANEOUS			2
 #define GRASS_WEIGHT				4
 #define HAZARD_WEIGHT				1
+#define MINES_WEIGHT				1
 #define LUSH_PLANT_SPAWN_LIST		list(/obj/structure/flora/grass/wasteland = 10, /obj/structure/flora/wasteplant/wild_broc = 7, /obj/structure/flora/wasteplant/wild_mesquite = 4, /obj/structure/flora/wasteplant/wild_feracactus = 5, /obj/structure/flora/wasteplant/wild_punga = 5, /obj/structure/flora/wasteplant/wild_coyote = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_yucca = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_prickly = 5, /obj/structure/flora/wasteplant/wild_datura = 5, /obj/structure/flora/wasteplant/wild_buffalogourd = 5, /obj/structure/flora/wasteplant/wild_pinyon = 3, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_agave = 5, /obj/structure/flora/tree/joshua = 3, /obj/structure/flora/tree/cactus = 2, /obj/structure/flora/tree/wasteland = 2)
-#define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 1, /obj/structure/flora/stump = 2)
+#define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 5, /obj/structure/flora/stump = 1)
 #define SNOW_PLANT_SPAWN_LIST		list(/obj/structure/flora/tree/tall = 12, /obj/structure/flora/grass = 10, /obj/structure/flora/grass/brown = 9, /obj/structure/flora/grass/green = 8, /obj/structure/flora/grass/both = 7, /obj/structure/flora/bush = 6, /obj/structure/flora/wasteplant/wild_broc = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5)
-#define VERMONT_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/vermont = 10, /obj/structure/flora/grass/vermont = 10, /obj/structure/flora/rock/vermont = 10, /obj/structure/flora/vermontbush = 10, /obj/structure/flora/vermontbush/b = 10, /obj/structure/flora/vermontbush/c = 10, /obj/structure/flora/vermontbush/large = 5, /obj/structure/flora/rock/pile/largevermont = 5, /obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/stump = 2)
-#define HAZARD_SPAWN_LIST			list(/obj/item/grenade/f13/mine/planted = 4, /obj/item/grenade/f13/mine/planted/heavy = 2, /obj/effect/landmark/nuclear_waste_spawner/weak = 4, /obj/effect/landmark/nuclear_waste_spawner = 2, /obj/effect/landmark/nuclear_waste_spawner/strong = 1)
+#define VERMONT_PLANT_SPAWN_LIST	list(/obj/structure/flora/wasteplant/wild_tato = 5, /obj/structure/flora/wasteplant/wild_mutfruit = 5, /obj/structure/flora/wasteplant/wild_xander = 5, /obj/structure/flora/wasteplant/wild_punga = 2)
+#define HAZARD_SPAWN_LIST			list(/obj/effect/landmark/nuclear_waste_spawner/weak = 4, /obj/effect/landmark/nuclear_waste_spawner = 2, /obj/effect/landmark/nuclear_waste_spawner/strong = 1)
+#define MINES_SPAWN_LIST			list(/obj/item/grenade/f13/mine/planted = 2, /obj/item/grenade/f13/mine/planted/heavy = 1)
 
 /turf/open/indestructible/ground/outside/dirthole
 	name = "Dirt hole"
@@ -88,6 +91,14 @@
 /turf/open/indestructible/ground/outside/proc/clear_turfhazard()
 	UnregisterSignal(turfHazard, COMSIG_PARENT_QDELETING)
 	turfHazard = null
+
+/turf/open/indestructible/ground/outside/proc/setTurfMines(newTurfMines)
+	turfMines = newTurfMines
+	RegisterSignal(turfMines, COMSIG_PARENT_QDELETING, .proc/clear_turfmines)
+
+/turf/open/indestructible/ground/outside/proc/clear_turfmines()
+	UnregisterSignal(turfMines, COMSIG_PARENT_QDELETING)
+	turfMines = null
 
 //////////////
 // SAVANNAH //
@@ -150,7 +161,9 @@
 /turf/open/indestructible/ground/outside/savannah/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
 	var/HWeight = 0
+	var/MWeight = 0
 	var/randHazard = null
+	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -191,6 +204,21 @@
 		setTurfHazard(new randHazard(src))
 		return TRUE
 
+	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
+	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
+		if(T.turfMines)
+			MWeight += MINES_WEIGHT
+
+	//use weight to try to spawn a hazard
+	if(prob(MWeight))
+
+		//If surrounded on 5+ sides, pick from the same pool. :(
+		if(MWeight == (5 * MINES_WEIGHT))
+			randMines = pickweight(MINES_SPAWN_LIST)
+		else
+			randMines = pickweight(MINES_SPAWN_LIST)
+		setTurfMines(new randMines(src))
+		return TRUE
 
 
 // DESERT
@@ -263,7 +291,9 @@
 /turf/open/indestructible/ground/outside/desert/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
 	var/HWeight = 0
+	var/MWeight = 0
 	var/randHazard = null
+	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -302,6 +332,22 @@
 		else
 			randHazard = pickweight(HAZARD_SPAWN_LIST)
 		setTurfHazard(new randHazard(src))
+		return TRUE
+
+	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
+	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(3, src))
+		if(T.turfMines)
+			MWeight += MINES_WEIGHT
+
+	//use weight to try to spawn a hazard
+	if(prob(MWeight))
+
+		//If surrounded on 5+ sides, pick from the same pool. :(
+		if(MWeight == (5 * MINES_WEIGHT))
+			randMines = pickweight(MINES_SPAWN_LIST)
+		else
+			randMines = pickweight(MINES_SPAWN_LIST)
+		setTurfMines(new randMines(src))
 		return TRUE
 
 /turf/open/indestructible/ground/outside/desert/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
@@ -462,7 +508,9 @@
 /turf/open/indestructible/ground/outside/snow/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
 	var/HWeight = 0
+	var/MWeight = 0
 	var/randHazard = null
+	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -501,6 +549,22 @@
 		else
 			randHazard = pickweight(HAZARD_SPAWN_LIST)
 		setTurfHazard(new randHazard(src))
+		return TRUE
+
+	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
+	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(3, src))
+		if(T.turfMines)
+			MWeight += MINES_WEIGHT
+
+	//use weight to try to spawn a hazard
+	if(prob(MWeight))
+
+		//If surrounded on 5+ sides, pick from the same pool. :(
+		if(MWeight == (5 * MINES_WEIGHT))
+			randMines = pickweight(MINES_SPAWN_LIST)
+		else
+			randMines = pickweight(MINES_SPAWN_LIST)
+		setTurfMines(new randMines(src))
 		return TRUE
 
 /////////////////////////////////////////////////////////

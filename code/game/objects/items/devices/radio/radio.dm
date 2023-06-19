@@ -228,6 +228,14 @@
 	if(!language)
 		language = M.get_selected_language()
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
+
+// See fluff.dm
+	if (ranged_static)
+		if (ranged_static == FALSE)
+			return FALSE
+		if (ranged_static > 0)
+			message = Gibberish(message, ranged_static)
+
 	return ITALICS | REDUCE_RANGE
 
 /obj/item/radio/proc/talk_into_impl(atom/movable/M, message, channel, list/spans, datum/language/language)

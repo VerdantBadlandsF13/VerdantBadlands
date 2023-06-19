@@ -30,8 +30,8 @@
 #define RADIO_TOKEN_SUPPLY ":u"
 
 #define RADIO_CHANNEL_SERVICE "Service"
-#define RADIO_KEY_SERVICE "v"
-#define RADIO_TOKEN_SERVICE ":v"
+#define RADIO_KEY_SERVICE "b"
+#define RADIO_TOKEN_SERVICE ":b"
 
 #define RADIO_CHANNEL_AI_PRIVATE "AI Private"
 #define RADIO_KEY_AI_PRIVATE "o"
@@ -45,41 +45,17 @@
 #define RADIO_KEY_CENTCOM "y"
 #define RADIO_TOKEN_CENTCOM ":y"
 
-#define RADIO_CHANNEL_VAULT "Vault"
-#define RADIO_KEY_VAULT "b"
-#define RADIO_TOKEN_VAULT ":b"
+#define RADIO_CHANNEL_VAULT "VFE"
+#define RADIO_KEY_VAULT "v"
+#define RADIO_TOKEN_VAULT ":v"
 
-#define RADIO_CHANNEL_NCR "NCR"
-#define RADIO_KEY_NCR "w"
-#define RADIO_TOKEN_NCR ":w"
+#define RADIO_CHANNEL_GMB "GMB"
+#define RADIO_KEY_GMB "g"
+#define RADIO_TOKEN_GMB ":g"
 
-#define RADIO_CHANNEL_RANGER "Ranger"
-#define RADIO_KEY_RANGER "r"
-#define RADIO_TOKEN_RANGER ":r"
-
-#define RADIO_CHANNEL_BOS "BOS"
-#define RADIO_KEY_BOS "q"
-#define RADIO_TOKEN_BOS ":q"
-
-#define RADIO_CHANNEL_ENCLAVE "Enclave"
-#define RADIO_KEY_ENCLAVE "z"
-#define RADIO_TOKEN_ENCLAVE ":z"
-
-#define RADIO_CHANNEL_TOWN "Town"
-#define RADIO_KEY_TOWN "f"
-#define RADIO_TOKEN_TOWN ":f"
-
-#define RADIO_CHANNEL_LEGION "Legion"
-#define RADIO_KEY_LEGION "l"
-#define RADIO_TOKEN_LEGION ":l"
-
-#define RADIO_CHANNEL_KHANS "Khans"
-#define RADIO_KEY_KHANS "a"
-#define RADIO_TOKEN_KHANS ":a"
-
-#define RADIO_CHANNEL_DEN "Den"
-#define RADIO_KEY_DEN "j"
-#define RADIO_TOKEN_DEN ":j"
+#define RADIO_CHANNEL_DFS "DFS"
+#define RADIO_KEY_DFS "d"
+#define RADIO_TOKEN_DFS ":d"
 
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"
@@ -99,14 +75,8 @@
 #define FREQ_ENGINEERING 1357  // Engineering comms frequency, orange
 #define FREQ_SECURITY 1359  // Security comms frequency, red
 #define FREQ_VAULT 1361 //Vault
-#define FREQ_NCR 1363 //NCR
-#define FREQ_BOS 1365 //BOS
-#define FREQ_ENCLAVE 1367 //ENCLAVE
-#define FREQ_TOWN 1369 //TOWN
-#define FREQ_LEGION 1371 //LEGION
-#define FREQ_RANGER 1373 //Ranger
-#define FREQ_DEN 1375 //Den
-#define FREQ_KHANS 1376 //Khans
+#define FREQ_GMB 1363 //GMB
+#define FREQ_DFS 1365 //DFS
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

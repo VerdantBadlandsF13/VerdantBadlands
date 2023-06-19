@@ -26,7 +26,7 @@
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	neck = /obj/item/storage/belt/holster/legholster
-	ears = null
+	ears = /obj/item/radio/headset/headset_dfs
 	uniform	= /obj/item/clothing/under/f13/merca/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare

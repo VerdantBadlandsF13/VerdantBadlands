@@ -68,7 +68,7 @@
 			M.Jitter(15)
 
 			to_chat(src, Gibberish("Biometric signature rejected! <br>\
-			Foreign bodies reported to containment team. Anti-contagion protocols enacted."), COMBAT_MESSAGE_RANGE)
+			Foreign bodies reported to containment team. Anti-contagion protocols enacted."), 15)
 
 			var/medical_alert = "Foreign bodies detected in denied biometric signature. Move to contain. Local contagion protocols enacted."
 			radio.talk_into(src, medical_alert, medical_channel, language = get_selected_language())
@@ -103,7 +103,7 @@
 		M.Jitter(15)
 
 		to_chat(src, Gibberish("Biometric signature not recognised! <br>\
-		On-site security has been alerted and will arrive shortly."), COMBAT_MESSAGE_RANGE)
+		On-site security has been alerted and will arrive shortly."), 15)
 
 		var/security_alert = "An unknown biometric signature has attempted to bypass surface security. Move to intercept."
 		radio.talk_into(src, security_alert, security_channel, language = get_selected_language())
@@ -120,7 +120,7 @@
 		M.dust()
 
 		to_chat(src, Gibberish("Biometric signature not recognised! <br>\
-		On-site security has been alerted and will arrive shortly."))
+		On-site security has been alerted and will arrive shortly."), 15)
 
 		var/security_alert = "An unknown biometric signature has attempted to bypass surface security. Move to intercept."
 		radio.talk_into(src, security_alert, security_channel, language = get_selected_language())

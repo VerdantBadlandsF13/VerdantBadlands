@@ -76,7 +76,6 @@
 	. = ..()
 	name = id
 
-
 /obj/machinery/telecomms/server/presets/science
 	id = "Science Server"
 	freq_listening = list(FREQ_SCIENCE)
@@ -102,56 +101,26 @@
 	freq_listening = list()
 	autolinkers = list("common")
 
-/obj/machinery/telecomms/server/presets/vault
-	id = "Vault Server"
-	freq_listening = list(FREQ_VAULT)
-	autolinkers = list("vault")
-
-/obj/machinery/telecomms/server/presets/ncr
-	id = "NCR Server"
-	freq_listening = list(FREQ_NCR)
-	autolinkers = list("ncr")
-
-/obj/machinery/telecomms/server/presets/bos
-	id = "BOS Server"
-	freq_listening = list(FREQ_BOS)
-	autolinkers = list("bos")
-
-/obj/machinery/telecomms/server/presets/enclave
-	id = "Enclave Server"
-	freq_listening = list(FREQ_ENCLAVE)
-	autolinkers = list("enclave")
-
-/obj/machinery/telecomms/server/presets/town
-	id = "Town Server"
-	freq_listening = list(FREQ_TOWN)
-	autolinkers = list("town")
-
-/obj/machinery/telecomms/server/presets/den
-	id = "Den Server"
-	freq_listening = list(FREQ_DEN)
-	autolinkers = list("den")
-
-/obj/machinery/telecomms/server/presets/legion
-	id = "Legion Server"
-	freq_listening = list(FREQ_LEGION)
-	autolinkers = list("legion")
-
-/obj/machinery/telecomms/server/presets/ranger
-	id = "Ranger Server"
-	freq_listening = list(FREQ_RANGER)
-	autolinkers = list("ranger")
-
-/obj/machinery/telecomms/server/presets/khans
-	id = "Khans Server"
-	freq_listening = list(FREQ_KHANS)
-	autolinkers = list("khans")
-
 //Common and other radio frequencies for people to freely use
 /obj/machinery/telecomms/server/presets/common/Initialize()
 	. = ..()
 	for(var/i = MIN_FREQ, i <= MAX_FREQ, i += 2)
 		freq_listening |= i
+
+/obj/machinery/telecomms/server/presets/vault
+	id = "Vault Server"
+	freq_listening = list(FREQ_VAULT)
+	autolinkers = list("vault")
+
+/obj/machinery/telecomms/server/presets/gmb
+	id = "GMB Server"
+	freq_listening = list(FREQ_GMB)
+	autolinkers = list("gmb")
+
+/obj/machinery/telecomms/server/presets/dfs
+	id = "DFS Server"
+	freq_listening = list(FREQ_DFS)
+	autolinkers = list("dfs")
 
 /obj/machinery/telecomms/server/presets/command
 	id = "Command Server"

@@ -17,14 +17,8 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	"[FREQ_CTF_RED]" = "redteamradio",
 	"[FREQ_CTF_BLUE]" = "blueteamradio",
 	"[FREQ_VAULT]" = "vaultradio",
-	"[FREQ_NCR]" = "ncrradio",
-	"[FREQ_BOS]" = "bosradio",
-	"[FREQ_ENCLAVE]" = "enclaveradio",
-	"[FREQ_TOWN]" = "townradio",
-	"[FREQ_LEGION]" = "legionradio",
-	"[FREQ_DEN]" = "denradio",
-	"[FREQ_RANGER]" = "rangerradio",
-	"[FREQ_KHANS]" = "khansradio"
+	"[FREQ_GMB]" = "gmbradio",
+	"[FREQ_DFS]" = "dfsradio",
 	))
 
 /atom/movable/proc/say(message, bubble_type, list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)

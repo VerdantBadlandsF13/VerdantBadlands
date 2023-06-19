@@ -129,9 +129,21 @@
 
 //FALLOUT
 
+/obj/item/encryptionkey/headset_gmb
+	name = "dusty encryption key"
+	desc = "An encryption key for a radio headset.  To access the vault channel, use :g."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_GMB = 1)
+
+/obj/item/encryptionkey/headset_dfs
+	name = "dusty encryption key"
+	desc = "An encryption key for a radio headset.  To access the vault channel, use :d."
+	icon_state = "cypherkey"
+	channels = list(RADIO_CHANNEL_DFS = 1)
+
 /obj/item/encryptionkey/headset_vault
 	name = "vault radio encryption key"
-	desc = "An encryption key for a radio headset.  To access the vault channel, use :b."
+	desc = "An encryption key for a radio headset.  To access the vault channel, use :v."
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_VAULT = 1)
 

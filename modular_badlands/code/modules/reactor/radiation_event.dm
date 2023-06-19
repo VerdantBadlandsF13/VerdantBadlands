@@ -4,14 +4,11 @@
 	probability = 12
 
 	telegraph_message = "<span class='userdanger'>The horizon darkens, a cloud of radioactive dust approaching fast.</span>"
-	telegraph_sound = 'modular_sunset/sound/weather/radstorm2.ogg'
 	telegraph_overlay = "light_ash"
 	telegraph_duration = 700
 
 	weather_message = "<span class='userdanger'><i>The land is pelted by radioactive debris and waves of heat! Find shelter!</i></span>"
 	weather_overlay = "ash_storm"
-	weather_color = "green"
-	weather_sound = 'modular_sunset/sound/weather/radstorm.ogg'
 	weather_duration_lower = 1500
 	weather_duration_upper = 3000
 

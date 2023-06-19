@@ -3688,6 +3688,7 @@
 #include "modular_badlands\code\modules\techno_jacks\mood\neutral.dm"
 #include "modular_badlands\code\modules\techno_jacks\obj\machinery\cryostasis.dm"
 #include "modular_badlands\code\modules\techno_jacks\obj\structures\defenses\shield_walls.dm"
+#include "modular_badlands\code\modules\techno_jacks\obj\structures\defenses\shieldtoggle.dm"
 #include "modular_badlands\code\modules\techno_jacks\obj\structures\defenses\turrets.dm"
 #include "modular_badlands\code\modules\trauma\_defines.dm"
 #include "modular_badlands\code\modules\trauma\handle_shock.dm"

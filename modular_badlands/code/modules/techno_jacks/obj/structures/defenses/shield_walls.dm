@@ -127,18 +127,6 @@
 
 		return FALSE
 
-//Disables bioscan.
-/obj/structure/shieldwall/attack_hand(mob/living/user)
-	var/mob/living/carbon/human/M = AM
-	var/allowed = allowed(AM)// Can pull people through it safely, to bypass restrictions.
-	if(allowed)
-		if(disabled == TRUE)
-			disabled = FALSE
-			to_chat(user, "<span class='warning'>You enable the scanners built into the shieldwall, returning it to its usual state.</span>")
-		else
-			disabled = TRUE
-			to_chat(user, "<span class='warning'>You disable the scanners built into the shieldwall, allowing anyone to pass.</span>")
-
 /*
 Below are all the shields. The above is the parent.
 Keep that in mind when making edits. I beg you.

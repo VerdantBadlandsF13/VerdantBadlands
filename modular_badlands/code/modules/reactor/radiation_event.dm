@@ -1,6 +1,6 @@
 /datum/weather/rad_storm
 	name = "radiation storm"
-	desc = "A cloud of radioactive debris sweeps through the area, dealing radiation damage to those who are unprotected."
+	desc = "A cloud of radioactive debris sweeps through the area, dealing radiation damage to those who are unprotected and leaving behind debris."
 	probability = 12
 
 	telegraph_message = "<span class='userdanger'>The horizon darkens, a cloud of radioactive dust approaching fast.</span>"

@@ -76,28 +76,28 @@ Pulled from MS ala ~2021, redone for our purposes. Cheers. - Carl
 Determines how badly a broadcasting radio suffers from static.
 The number refers to the odds that each character in a message is garbled.
 */
-#define STATIC_NONE 0// Vault.
-#define STATIC_LIGHT 12// GMB exclusive, for now.
-#define STATIC_MEDIUM 16// For DFS.
-#define STATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
+#define RADSTATIC_NONE 0// Vault.
+#define RADSTATIC_LIGHT 12// GMB exclusive, for now.
+#define RADSTATIC_MEDIUM 16// For DFS.
+#define RADSTATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
 
 /obj/item/radio
-	var/ranged_static = STATIC_HEAVY
+	var/ranged_static = RADSTATIC_HEAVY
 
 /obj/item/radio/headset/headset_overseer
-	ranged_static = STATIC_NONE
+	ranged_static = RADSTATIC_NONE
 
 /obj/item/radio/headset/headset_vault
-	ranged_static = STATIC_NONE
+	ranged_static = RADSTATIC_NONE
 
 /obj/item/radio/headset/headset_vaultsec
-	ranged_static = STATIC_NONE
+	ranged_static = RADSTATIC_NONE
 
 /obj/item/radio/headset/headset_cent
-	ranged_static = STATIC_NONE
+	ranged_static = RADSTATIC_NONE
 
 /obj/item/radio/headset/headset_gmb
-	ranged_static = STATIC_LIGHT
+	ranged_static = RADSTATIC_LIGHT
 
 /obj/item/radio/headset/headset_dfs
-	ranged_static = STATIC_MEDIUM
+	ranged_static = RADSTATIC_MEDIUM

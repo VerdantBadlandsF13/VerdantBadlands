@@ -72,6 +72,7 @@
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/headset_gmb
 	frequency = FREQ_GMB
+	freerange = TRUE
 	freqlock = TRUE
 	factionized = TRUE
 	linked_faction = FACTION_GMB
@@ -83,6 +84,7 @@
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/headset_dfs
 	frequency = FREQ_DFS
+	freerange = TRUE
 	freqlock = TRUE
 	factionized = TRUE
 	linked_faction = FACTION_DFS

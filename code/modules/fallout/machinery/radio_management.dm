@@ -3,6 +3,8 @@
 //Global list of radios
 GLOBAL_LIST_EMPTY(faction_radios)
 GLOBAL_LIST_EMPTY(vlt_radios)
+GLOBAL_LIST_EMPTY(gmb_radios)
+GLOBAL_LIST_EMPTY(dfs_radios)
 
 /obj/machinery/radioterminal
 	name = "radio control"
@@ -37,6 +39,14 @@ GLOBAL_LIST_EMPTY(vlt_radios)
 			for(var/obj/item/radio/radio in GLOB.vlt_radios)
 				if(radio.linked_mob)
 					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
+		if(FACTION_GMB)
+			for(var/obj/item/radio/radio in GLOB.gmb_radios)
+				if(radio.linked_mob)
+					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
+		if(FACTION_DFS)
+			for(var/obj/item/radio/radio in GLOB.dfs_radios)
+				if(radio.linked_mob)
+					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
 	var/datum/browser/popup = new(user, "radio_console", "Radio Terminal")
 	popup.set_content(dat)
 	popup.open()
@@ -56,6 +66,10 @@ GLOBAL_LIST_EMPTY(vlt_radios)
 			switch(assigned_faction)
 				if(FACTION_VLT)
 					LAZYREMOVE(GLOB.vlt_radios, terminate)
+				if(FACTION_GMB)
+					LAZYREMOVE(GLOB.gmb_radios, terminate)
+				if(FACTION_DFS)
+					LAZYREMOVE(GLOB.dfs_radios, terminate)
 	updateUsrDialog()
 	return
 

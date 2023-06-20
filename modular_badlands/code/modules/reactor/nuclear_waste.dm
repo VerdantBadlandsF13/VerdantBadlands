@@ -40,7 +40,7 @@
 	. = ..()
 
 /obj/effect/decal/nuclear_waste/epicenter
-	name = "dense nuclear sludge"
+	name = "dense radioactive debris"
 
 /obj/effect/decal/nuclear_waste/epicenter/Initialize(mapload)
 	. = ..()

@@ -54,12 +54,8 @@
 	backpack = /obj/item/storage/backpack/satchel/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak,
-		/obj/item/reagent_containers/pill/radx,
 		/obj/item/radio,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
-		/obj/item/storage/survivalkit,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -110,6 +106,7 @@
 		/obj/item/stack/sheet/mineral/wood/fifty = 1,
 		/obj/item/toy/crayon/spraycan = 1,
 		/obj/item/cultivator = 1,
+		/obj/item/shovel=1,
 		/obj/item/reagent_containers/glass/bucket = 1,
 		/obj/item/storage/bag/plants/portaseeder = 1)
 

@@ -160,10 +160,6 @@
 
 /turf/open/indestructible/ground/outside/savannah/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
-	var/HWeight = 0
-	var/MWeight = 0
-	var/randHazard = null
-	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -186,38 +182,6 @@
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
-		if(T.turfHazard)
-			HWeight += HAZARD_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(HWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(HWeight == (5 * HAZARD_WEIGHT))
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		else
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		setTurfHazard(new randHazard(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
-		if(T.turfMines)
-			MWeight += MINES_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(MWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(MWeight == (5 * MINES_WEIGHT))
-			randMines = pickweight(MINES_SPAWN_LIST)
-		else
-			randMines = pickweight(MINES_SPAWN_LIST)
-		setTurfMines(new randMines(src))
 		return TRUE
 
 
@@ -290,10 +254,6 @@
 
 /turf/open/indestructible/ground/outside/desert/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
-	var/HWeight = 0
-	var/MWeight = 0
-	var/randHazard = null
-	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -316,38 +276,6 @@
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(3, src))
-		if(T.turfHazard)
-			HWeight += HAZARD_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(HWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(HWeight == (5 * HAZARD_WEIGHT))
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		else
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		setTurfHazard(new randHazard(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(3, src))
-		if(T.turfMines)
-			MWeight += MINES_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(MWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(MWeight == (5 * MINES_WEIGHT))
-			randMines = pickweight(MINES_SPAWN_LIST)
-		else
-			randMines = pickweight(MINES_SPAWN_LIST)
-		setTurfMines(new randMines(src))
 		return TRUE
 
 /turf/open/indestructible/ground/outside/desert/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
@@ -507,10 +435,6 @@
 
 /turf/open/indestructible/ground/outside/snow/proc/plantGrass(Plantforce = FALSE)
 	var/Weight = 0
-	var/HWeight = 0
-	var/MWeight = 0
-	var/randHazard = null
-	var/randMines = null
 	var/randPlant = null
 
 	//spontaneously spawn grass
@@ -533,38 +457,6 @@
 		else
 			randPlant = pickweight(SNOW_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(3, src))
-		if(T.turfHazard)
-			HWeight += HAZARD_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(HWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(HWeight == (5 * HAZARD_WEIGHT))
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		else
-			randHazard = pickweight(HAZARD_SPAWN_LIST)
-		setTurfHazard(new randHazard(src))
-		return TRUE
-
-	//loop through neighbouring desert turfs, if they have a hazard, then increase weight
-	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(3, src))
-		if(T.turfMines)
-			MWeight += MINES_WEIGHT
-
-	//use weight to try to spawn a hazard
-	if(prob(MWeight))
-
-		//If surrounded on 5+ sides, pick from the same pool. :(
-		if(MWeight == (5 * MINES_WEIGHT))
-			randMines = pickweight(MINES_SPAWN_LIST)
-		else
-			randMines = pickweight(MINES_SPAWN_LIST)
-		setTurfMines(new randMines(src))
 		return TRUE
 
 /////////////////////////////////////////////////////////

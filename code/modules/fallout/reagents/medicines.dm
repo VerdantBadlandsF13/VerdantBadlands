@@ -12,6 +12,7 @@
 	addiction_threshold = 25
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	pain_resistance = 5
 
 /datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
@@ -61,6 +62,7 @@
 	reagent_state = LIQUID
 	color = "#FFA500"
 	ghoulfriendly = TRUE
+	pain_resistance = -5
 
 /datum/reagent/medicine/stimpakimitation/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
@@ -84,6 +86,7 @@
 	addiction_threshold = 16
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
+	pain_resistance = 15
 
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(M.health < 0)					//Functions as epinephrine.
@@ -392,6 +395,7 @@
 	reagent_state = SOLID
 	color = "#C8A5DC"
 	ghoulfriendly = TRUE
+	pain_resistance = -10
 
 /datum/reagent/medicine/fixer/on_mob_life(mob/living/carbon/M)
 	for(var/datum/reagent/R in M.reagents.addiction_list)

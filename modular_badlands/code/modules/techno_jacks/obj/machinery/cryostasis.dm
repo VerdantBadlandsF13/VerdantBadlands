@@ -48,6 +48,7 @@
 	var/message_cooldown = 5 SECONDS
 	var/cycling = FALSE// Is the player already waiting? If so, don't allow them to spam it.
 	var/used_machine = /obj/structure/cryostasis
+	var/mob/living/mob_occupant
 
 /obj/machinery/cryostasis/process()
 	..()

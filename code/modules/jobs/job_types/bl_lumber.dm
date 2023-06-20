@@ -51,8 +51,8 @@
 /datum/job/lbj/lumber
 	title = "Lumberjack"
 	flag = F13LBJLUMBERJACK
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 4
+	spawn_positions = 4
 	description = "..."
 	supervisors = "Foreman."
 	outfit = /datum/outfit/job/lbj

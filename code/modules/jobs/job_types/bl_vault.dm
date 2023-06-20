@@ -16,6 +16,9 @@
 				- Maintaining security and cohesion between your fellow dwellers. <br> \
 				- Obeying the words of Security and the Overseer."
 
+/datum/outfit/job/vault
+	gloves = /obj/item/pda/dweller
+
 /datum/outfit/job/vault/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -51,6 +54,7 @@ Overseer
 	implants = list(/obj/item/implant/mindshield)
 
 	id = 			/obj/item/card/id/gold
+	gloves =		/obj/item/pda/captain
 	uniform = 		/obj/item/clothing/under/f13/vault
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	glasses = 		/obj/item/clothing/glasses/sunglasses
@@ -92,6 +96,7 @@ Security Officer
 	uniform = 		/obj/item/clothing/under/f13/vault
 	head = 			/obj/item/clothing/head/helmet/riot/vaultsec
 	suit =			/obj/item/clothing/suit/armored/f13/light/vfe_vest
+	gloves =		/obj/item/pda/security
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	belt = 			/obj/item/storage/belt/security
@@ -135,6 +140,7 @@ Medical Doctor
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	suit =			/obj/item/clothing/suit/toggle/labcoat
 	l_hand = 		/obj/item/storage/firstaid/regular
+	gloves =		/obj/item/pda/medical
 	suit_store = 	/obj/item/flashlight/pen
 	backpack = 		/obj/item/storage/backpack/medic
 	satchel = 		/obj/item/storage/backpack/satchel/med
@@ -178,6 +184,7 @@ Scientist
 	ears = 			/obj/item/radio/headset/headset_vault/sci
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	suit =			/obj/item/clothing/suit/toggle/labcoat
+	gloves =		/obj/item/pda/toxins
 	backpack = 		/obj/item/storage/backpack/science
 	satchel = 		/obj/item/storage/backpack/satchel/tox
 	backpack_contents = list(/obj/item/crowbar = 1)
@@ -215,6 +222,7 @@ Vault Engineer
 	uniform = 		/obj/item/clothing/under/f13/vault
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	shoes = 		/obj/item/clothing/shoes/sneakers/red
+	gloves =		/obj/item/pda/engineering
 	head = 			/obj/item/clothing/head/hardhat
 	r_pocket = 		/obj/item/t_scanner
 	backpack = 		/obj/item/storage/backpack/industrial
@@ -257,13 +265,13 @@ Vault Dweller
 	Should the Overseer or Security declare something, you must follow it."
 	exp_requirements = 60
 
-/datum/job/followers/f13folborg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)
+/datum/job/vault/f13borg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)
 	return H.Robotize(FALSE, latejoin)
 
-/datum/job/followers/f13folborg/override_latejoin_spawn()
+/datum/job/vault/f13borg/override_latejoin_spawn()
 	return TRUE
 
-/datum/job/followers/f13folborg/after_spawn(mob/living/silicon/robot/R, mob/M)
+/datum/job/vault/f13borg/after_spawn(mob/living/silicon/robot/R, mob/M)
 	. = ..()
 	ADD_TRAIT(R, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	ADD_TRAIT(R, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)

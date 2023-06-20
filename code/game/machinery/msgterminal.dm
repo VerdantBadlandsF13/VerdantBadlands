@@ -21,6 +21,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "terminal"
 	plane = ABOVE_WALL_PLANE
+	layer = BELOW_OBJ_LAYER
 	var/terminalid = ""
 	var/beepsound = 'sound/effects/printer.ogg'
 	var/terminal = "terminal" //The list of all terminals on the station (Determined from this variable on each unit) Set this to the same thing if you want several consoles in one terminal
@@ -183,7 +184,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 		if(11)
 			var/message = input(usr,"Send a message to command staff. Ensure it makes sense IC.","") as message|null
 			if(message)
-				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>COMMAND MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:[ADMIN_JMP_MSGTERMINAL(src)]")
+				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>COMMAND MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:N/A")
 				log_terminal("[key_name(usr)] sent a COMMAND message, '[message]' from the terminal at [AREACOORD(usr)].")
 				screen = 6
 				dat += "<span class='good'>Message to Command delivered.</span><br><br>"

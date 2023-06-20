@@ -26,7 +26,7 @@
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	neck = /obj/item/storage/belt/holster/legholster
-	ears = null
+	ears = /obj/item/radio/headset/headset_dfs
 	uniform	= /obj/item/clothing/under/f13/merca/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
@@ -53,6 +53,13 @@
 	uniform = /obj/item/clothing/under/f13/mercc/dfs
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
+/datum/outfit/job/dfs/advisor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)
+
 // DFS Enforcer
 /datum/job/dfs/enforcer
 	title = "DFS Enforcer"
@@ -68,11 +75,37 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
+	loadout_options = list(
+	/datum/outfit/loadout/enforcer/taskmaster,
+	/datum/outfit/loadout/enforcer/peacemaker,
+	/datum/outfit/loadout/enforcer/enforcer)
+
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
 	jobtype = /datum/job/dfs/enforcer
 	uniform = /obj/item/clothing/under/f13/mercc/dfs
 	id = /obj/item/card/id/dfs_boss_raider_tags
+
+// Fourty-five submachinegun. For when business decisions become executive! And a badass coat.
+/datum/outfit/loadout/enforcer/taskmaster
+	name = "Taskmaster"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
+	gloves = /obj/item/clothing/gloves/f13/military
+	suit = /obj/item/clothing/suit/armored/f13/medium/armoredcoat
+
+// To be fair: nobody fucks with a dude who uses a flamethrower. Heavy armor and VERY clearly a background of Raider. What a peacemaker!
+/datum/outfit/loadout/enforcer/peacemaker
+	name = "Peacemaker"
+	r_hand = /obj/item/m2flamethrowertank
+	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+
+/datum/outfit/loadout/enforcer/enforcer
+	name = "Enforcer"
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
+	suit = /obj/item/clothing/suit/armored/f13/medium/combat/mk2
+	head = /obj/item/clothing/head/helmet/f13/combat/mk2
 
 // DFS Agent
 /datum/job/dfs/agent
@@ -100,9 +133,42 @@
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
+	loadout_options = list(
+	/datum/outfit/loadout/grunt/mercenary,
+	/datum/outfit/loadout/grunt/sadist,
+	/datum/outfit/loadout/grunt/punisher)
+
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
+
+// Mercenaries trade armor for a solid rifle. Something to show off for the Caravan.
+/datum/outfit/loadout/grunt/mercenary
+	name = "Mercenary"
+	r_hand = /obj/item/gun/ballistic/automatic/rangemaster
+	l_hand = /obj/item/ammo_box/magazine/m762 // 1 loaded, two empty standard magazines.
+	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
+	backpack_contents = list(/obj/item/ammo_box/magazine/m762/empty,
+							/obj/item/ammo_box/magazine/m762/empty,
+							/obj/item/melee/onehanded/knife/bayonet)
+
+// Sadists rush into combat with strong medium armor, but no firearm. Likely conscripted Raiders that proved their worth.
+/datum/outfit/loadout/grunt/sadist
+	name = "Sadist"
+	r_hand = /obj/item/twohanded/fireaxe/bmprsword
+	l_hand = /obj/item/melee/onehanded/knife/bowie
+	suit = /obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat
+	head = /obj/item/clothing/head/helmet/f13/combat
+	backpack_contents = list()
+
+// Punishers use heavy armor and shotguns to become bulwarks on the defence.
+/datum/outfit/loadout/grunt/punisher
+	name = "Punisher"
+	r_hand = /obj/item/gun/ballistic/shotgun/hunting // Full box of the fun-stuff
+	l_hand = /obj/item/melee/onehanded/knife/bowie
+	suit = /obj/item/clothing/suit/armored/f13/heavy/metal
+	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
+	backpack_contents = list(/obj/item/ammo_box/shotgun/buck)
 
 //DFS Grunt
 /datum/job/dfs/grunt

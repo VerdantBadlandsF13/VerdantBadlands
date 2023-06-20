@@ -1,6 +1,6 @@
 /obj/effect/decal/nuclear_waste
-	name = "nuclear sludge"
-	desc = "A writhing pool of heavily irradiated, spent reactor fuel. You probably shouldn't step through this..."
+	name = "radioactive debris"
+	desc = "A pile of heavily irradiated debris. You probably shouldn't step through this..."
 	icon = 'modular_badlands/code/modules/reactor/icons/reactor.dmi'
 	icon_state = "nuclearwaste"
 	alpha = 150
@@ -27,11 +27,11 @@
 	if(isliving(AM))
 		var/mob/living/L = AM
 		playsound(loc, 'sound/effects/gib_step.ogg', HAS_TRAIT(L, TRAIT_LIGHT_STEP) ? 20 : 50, 1)
-	radiation_pulse(src, 500, 5) //MORE RADS
+	radiation_pulse(src, 500, 5)
 
 /obj/effect/decal/nuclear_waste/attackby(obj/item/tool, mob/user)
 	if(tool.tool_behaviour == TOOL_SHOVEL)
-		radiation_pulse(src, 1000, 5) //MORE RADS
+		radiation_pulse(src, 1000, 5)
 		to_chat(user, "<span class='notice'>You start to clear [src]...</span>")
 		if(tool.use_tool(src, user, 50, volume=100))
 			to_chat(user, "<span class='notice'>You clear [src]. </span>")
@@ -39,8 +39,8 @@
 			return
 	. = ..()
 
-/obj/effect/decal/nuclear_waste/epicenter //The one that actually does the irradiating. This is to avoid every bit of sludge PROCESSING
-	name = "dense nuclear sludge"
+/obj/effect/decal/nuclear_waste/epicenter
+	name = "dense radioactive debris"
 
 /obj/effect/decal/nuclear_waste/epicenter/Initialize(mapload)
 	. = ..()

@@ -1,45 +1,54 @@
 /obj/machinery/autolathe/constructionlathe
-	name = "Workshop"
-	desc = "Contains an array of custom made and skilled tools for professional craftsmen."
+	name = "pre-war fabricator"
+	desc = "An incredible, yet simple, not to mention limited, fabricator. <br>\
+	It's unlikely that this can produce more than the most benign of objects. <br>\
+	Perhaps you could modify it?"
 	circuit = /obj/item/circuitboard/machine/autolathe/constructionlathe
-	super_advanced_technology = TRUE
+	stored_research = /datum/techweb/specialized/autounlocking/autolathe/public
 	resistance_flags = NONE
 	var/constage = 0 //construction stage for upgrading into a regular lathe
-	//DRM = 1
+	var/upgrade_step = 0
+	DRM = 1
 	categories = list(
-							"Tools",
-							"Electronics",
-							"Construction",
-							"T-Comm",
-							//"Security",
-							"Machinery",
-							"Medical",
-							"Misc",
-							"Dinnerware",
-							)
+					"Electronics",
+					"Construction",
+					)
 
-/*
+/obj/machinery/autolathe/constructionlathe/examine(mob/user)
+	. = ..()
+	. += upgrade_hint()
+
+/obj/machinery/autolathe/constructionlathe/proc/upgrade_hint()
+	switch(upgrade_step)
+		if(0)
+			return "<span class='warning'>Perhaps you can feed <i>munition schematics</i> into \the [src]?</span>"
+		if(1)
+			return "<span class='warning'>A lot of the internals are worn out. <i>A new fuse</i> would work to refurbish \the [src].</span>"
+		if(2)
+			return "<span class='warning'>Some kind of <i>makeshift reloading device</i> could be integrated into \the [src].</span>"
+		if(3)
+			return "<span class='notice'>The components have been fully refurbished. You can work no further to improve \the [src].</span>"
+
 /obj/machinery/autolathe/constructionlathe/attackby(obj/item/O, mob/user, params)
 	..()
 	if(DRM && panel_open)
 		if(constage == 0)
 			if(istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
-				to_chat(user, "<span class='notice'>You upgrade [src] with ammunition schematics. You'll still need to bypass the DRM with some high-quality metal parts.</span>")
+				to_chat(user, "<span class='notice'>You feed \the [src] with ammunition schematics. You'll still need to provide it with some high-quality metal parts.</span>")
 				constage = 1
+				upgrade_step = 1
 				qdel(O)
 		if(constage == 1)
-			if(istype(O, /obj/item/stack/crafting/goodparts))
-				var/obj/item/stack/crafting/goodparts/S = O
-				if(S.get_amount() < 5)
-					to_chat(user, "<span class='warning'>You need at least 5 high-quality metal parts to upgrade [src].</span>")
-					return
-				S.use(5)
-				to_chat(user, "<span class='notice'>You upgrade [src] to bypass the DRM. You'll still need to install a makeshift reloader to finish the process.</span>")
+			if(istype(O, /obj/item/crafting/fuse))
+				to_chat(user, "<span class='notice'>You upgrade \the [src] with a new fuse. You'll still need to install a makeshift reloader to finish the process.</span>")
 				constage = 2
+				upgrade_step = 2
+				qdel(O)
 		if(constage == 2)
 			if(istype(O, /obj/item/crafting/reloader))
 				to_chat(user, "<span class='notice'>You upgrade [src] with a makeshift reloader, allowing it to finally produce ammunition again.</span>")
 				constage = 3
+				upgrade_step = 3
 				DRM = 0
 				categories = list(
 							"Tools",
@@ -53,7 +62,7 @@
 							"Dinnerware",
 							)
 				hacked = TRUE
-				name = "Workshop"
+				name = "modified pre-war fabricator"
 				desc = "Contains an array of custom made and skilled tools for professional craftsmen."
 				qdel(O)
 	if(panel_open)
@@ -62,7 +71,6 @@
 	else
 		attack_hand(user)
 		return TRUE
-
 
 /obj/machinery/autolathe/constructionlathe/can_build(datum/design/D, amount = 1)
 	if("Security" in D.category)
@@ -73,20 +81,11 @@
 	else
 		. = ..()
 
-/obj/machinery/autolathe/ui_interact(mob/user)
-	if(isliving(user))
-		var/mob/living/L = user
-		if(L.has_trait(TRAIT_TECHNOPHOBE, TRAIT_GENERIC))
-			to_chat(user, "<span class='warning'>The array of simplistic button pressing confuses you. Besides, did you really want to spend all day staring at a screen?</span>")
-			return FALSE
-		else
-			. = ..()
-*/
-
 /obj/machinery/autolathe/ammo
 	name = "reloading bench"
 	icon = 'icons/obj/machines/reloadingbench.dmi'
-	desc = "An ammo bench that utilizes metal and other materials to make ammo and magazines."
+	desc = "An ammo bench that allows the user to hand load munitions. <br> \
+	This requires metal and other materials to make both ammo and magazines."
 	circuit = /obj/item/circuitboard/machine/autolathe/ammo
 	stored_research = /datum/techweb/specialized/autounlocking/autolathe/ammo
 	categories = list(
@@ -109,7 +108,7 @@
 	var/basic = 0
 	var/intermediate = 0
 	var/advanced = 0
-	tooadvanced = TRUE //technophobes will still need to be able to make ammo	//not anymore they wont
+	tooadvanced = FALSE
 
 /obj/machinery/autolathe/ammo/attackby(obj/item/O, mob/user, params)
 	if(!busy && !stat && istype(O, /obj/item/storage/bag/casings))
@@ -239,12 +238,53 @@
 	return
 
 /obj/machinery/autolathe/ammo/unlocked_basic
-	desc = "A ammo bench where you can make ammo and magazines. Copies of Guns and Ammo, parts one and two, can be found in a drawer."
+	desc = "An ammo bench where you can make simple munitions and their magazines. Copies of Guns and Ammo, parts one and two, can be found in a drawer."
 	simple = 1
 	basic = 1
 
 /obj/machinery/autolathe/ammo/unlocked
+	desc = "An ammo bench where you can make advanced munitions and their magazines. Copies of Guns and Ammo, parts one, two, three and four, can be found in a drawer."
 	simple = 1
 	basic = 1
 	intermediate = 1
 	advanced = 1
+
+/obj/machinery/autolathe/ammo/army
+	name = "pre-war military fabricator"
+	desc = "An old but well maintained military-grade fabricator. As with most pre-war miracles, this is incredibly rare. How'd you find it?"
+	icon = 'icons/obj/machines/reloadingbench.dmi'
+	icon_state = "autolathe_army"
+// More-or-less a debug machine, obtainable by players.
+// Don't think too hard about it.
+	base_print_speed = 60
+// For ammo.
+	simple = 1
+	basic = 1
+	intermediate = 1
+	advanced = 1
+// Actual cats.
+	categories = list(
+					"Simple Ammo",
+					"Simple Magazines",
+					"Basic Ammo",
+					"Basic Magazines",
+					"Intermediate Ammo",
+					"Intermediate Magazines",
+					"Advanced Ammo",
+					"Advanced Magazines",
+					"Materials",
+					"Tools",
+					"Electronics",
+					"Construction",
+					"T-Comm",
+					"Security",
+					"Machinery",
+					"Medical",
+					"Misc",
+					"Dinnerware"
+					)
+
+
+/obj/machinery/autolathe/ammo/army/Initialize()
+	. = ..()
+	adjust_hacked(TRUE)

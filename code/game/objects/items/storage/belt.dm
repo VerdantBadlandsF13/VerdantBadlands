@@ -638,6 +638,7 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	CANHOLD_STATIC(STR, typecacheof(list(
 		/obj/item/gun/ballistic/revolver,
+		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/ammo_box/magazine,
 		/obj/item/ammo_box/tube,
 		/obj/item/ammo_box/a357,

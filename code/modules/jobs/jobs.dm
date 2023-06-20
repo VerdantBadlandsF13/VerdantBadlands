@@ -16,7 +16,7 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Commander",
-	"Watchman",
+	"Practitioner",
 	"Walker",
 	"Militia",
 	"Volunteer",
@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 
 GLOBAL_LIST_INIT(gmb_positions, list(
 	"Commander",
-	"Watchman",
+	"Practitioner",
 	"Walker",
 	"Militia",
 	"Volunteer",

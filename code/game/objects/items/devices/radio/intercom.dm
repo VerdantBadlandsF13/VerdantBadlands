@@ -158,12 +158,6 @@
 	freerange = TRUE
 	canhear_range = 1
 
-/obj/item/radio/intercom/bear
-	name = "NCR intercom"
-	freqlock = TRUE
-	frequency = 1363
-	channels = list(RADIO_CHANNEL_NCR = 1)
-
 //Created through the autolathe or through deconstructing intercoms. Can be applied to wall to make a new intercom on it!
 /obj/item/wallframe/intercom
 	name = "intercom frame"
@@ -193,12 +187,6 @@
 		else
 			icon_state = initial(icon_state)
 
-/obj/item/radio/intercom/retro/kebob
-	name = "Bighorn intercom"
-	freqlock = TRUE
-	frequency = 1369
-	channels = list(RADIO_CHANNEL_TOWN = 1)
-
 /obj/item/radio/intercom/retro/kebob/mayor
 	name = "Mayor's intercom"
 	use_command = TRUE
@@ -216,8 +204,8 @@
 	freerange = TRUE
 	canhear_range = 1
 
-/obj/item/radio/intercom/retro/bear
-	name = "NCR intercom"
+/obj/item/radio/intercom/retro/green
+	name = "GMB intercom"
 	freqlock = TRUE
 	frequency = 1363
-	channels = list(RADIO_CHANNEL_NCR = 1)
+	channels = list(RADIO_CHANNEL_GMB = 1)

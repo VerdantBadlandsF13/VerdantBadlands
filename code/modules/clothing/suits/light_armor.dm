@@ -8,7 +8,6 @@
 	icon_state = "r_gear_rig"
 	item_state = "r_gear_rig"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
-	armor = list("tier" = 0)
 
 // VFE Kevlar
 /obj/item/clothing/suit/armored/f13/light/vfe_vest
@@ -17,7 +16,7 @@
 	Issued exclusively to Vault Security."
 	icon_state = "vest_large"
 	item_state = "vest_large"
-	armor = list("tier" = 4, "melee" = 35, "bullet" = 45, "laser" = 10, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = -5)
+	armor = list("melee" = 35, "bullet" = 45, "laser" = 10, "energy" = 10, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = -5)
 
 /////////////////////
 // DUSTERS & COATS //
@@ -31,7 +30,7 @@
 	permeability_coefficient = 0.9
 	heat_protection = CHEST | GROIN
 	cold_protection = CHEST | GROIN
-	armor = list("tier" = 1, "melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/duster/autumn
 	name = "tan trenchcoat"
@@ -71,7 +70,7 @@
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.5
-	armor = list("tier" = 1, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/badlands
 	name = "badlands raider armor"
@@ -80,7 +79,7 @@
 	item_state = "badlands"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor = list("tier" = 1, "melee" = 15, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 ////////////////
 // ARMOR KITS //
@@ -93,7 +92,7 @@
 	item_state = "armorkit"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
-	armor = list("tier" = 1, "melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/kit/punk
 	name = "armor kit"
@@ -111,7 +110,7 @@
 	name = "light armor plates"
 	desc = "Well-made metal plates covering your vital organs."
 	icon_state = "light_plates"
-	armor = list("tier" = 2, "melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 ///////////////////
 // LEATHER ARMOR //
@@ -122,7 +121,7 @@
 	desc = "Before the war motorcycle-football was one of the largest specator sports in America. This armor copies the style of armor used by the players,	using leather boiled in corn oil to make hard sheets to emulate the light weight and toughness of the original polymer armor."
 	icon_state = "leather_armor"
 	item_state = "leather_armor"
-	armor = list("tier" = 2, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 // Recipe the above + 2 gecko hides
 /obj/item/clothing/suit/armored/f13/light/leathermk2
@@ -130,7 +129,7 @@
 	desc = "Armor in the motorcycle-football style, either with intact original polymer plating, or reinforced with gecko hide."
 	icon_state = "leather_armor_mk2"
 	item_state = "leather_armor_mk2"
-	armor = list("tier" = 3, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/leathersuit
 	name = "leather suit"
@@ -140,21 +139,21 @@
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
-	armor = list("tier" = 3, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/leather_jacket
 	name = "bouncer jacket"
 	desc = "A very stylish pre-War black, heavy leather jacket. Not always a good choice to wear this the scorching sun of the wasteland, and one of the arms has been torn off"
 	icon_state = "leather_jacket_fighter"
 	item_state = "leather_jacket_fighter"
-	armor = list("tier" = 1, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/leather_jacketmk2
 	name = "thick leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	icon_state = "leather_jacket_thick"
 	item_state = "leather_jacket_thick"
-	armor = list("tier" = 2, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 // Recipe : one of the above + a suit_fashion leather coat
 /obj/item/clothing/suit/armored/f13/light/leathercoat
@@ -164,14 +163,14 @@
 	item_state = "leather_coat_fighter"
 	siemens_coefficient = 0.8
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor = list("tier" = 3, "melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 /obj/item/clothing/suit/armored/f13/light/tanvest
 	name = "tanned vest"
 	icon_state = "tanleather"
 	item_state = "tanleather"
 	desc = "Layers of leather glued together to make a stiff vest, crude but gives some protection against wild beasts and knife stabs to the liver."
-	armor = list("tier" = 1, "melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0, "wound" = 0)
 
 ///////////////
 //	CLOAKS	 //
@@ -183,7 +182,6 @@
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw. \
 	This one has been crafted to remove a good portion of its protection to improve on speed and trekking."
 	slowdown = 0.025
-	armor = list("tier" = 1)
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/birdclaw
 	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
@@ -193,7 +191,6 @@
 	name = "quickclaw hood"
 	icon_state = "hood_bird"
 	desc = "A hood made of deathclaw hides, light while also being comfortable to wear, designed for speed."
-	armor = list("tier" = 1)
 	heat_protection = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
@@ -201,7 +198,6 @@
 	name = "deathclaw cloak"
 	icon_state = "deathclaw"
 	desc = "Made from the sinew and skin of the fearsome deathclaw, this cloak will shield its wearer from harm."
-	armor = list("tier" = 3)
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 
@@ -209,14 +205,12 @@
 	name = "deathclaw cloak hood"
 	icon_state = "hood_deathclaw"
 	desc = "A protective and concealing hood."
-	armor = list("tier" = 2)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/suit/hooded/cloak/razorclaw
 	name = "razorclaw cloak"
 	icon_state = "razorclaw"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
-	armor = list("tier" = 4)
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/razorclaw
 	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
@@ -226,7 +220,6 @@
 	name = "razorclaw helm"
 	icon_state = "helmet_razorclaw"
 	desc = "The skull of a legendary deathclaw."
-	armor = list("tier" = 3)
 	heat_protection = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 
@@ -242,7 +235,6 @@
 	item_state = "winter_kit"
 	resistance_flags = FLAMMABLE
 	cold_protection = CHEST | GROIN | LEGS | ARMS
-	armor = list("tier" = 2)
 
 /obj/item/clothing/suit/armored/f13/light/mutantkit
 	name = "oversized armor kit"
@@ -251,4 +243,41 @@
 	item_state = "mutie_armorkit"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
-	armor = list("tier" = 5)
+
+// GMB
+
+/obj/item/clothing/suit/armored/f13/light/gmb
+	name = "surplus volunteer coat"
+	desc = "A surplus outfit, pulled from some old army depot and of a pattern long since obsolete. It has been fitted with the militia's patch."
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	icon_state = "volunteer"
+	item_state = "volunteer"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/militia
+	name = "militia overcoat"
+	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "militia"
+	item_state = "militia"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/practitioner
+	name = "practitioner outfit"
+	desc = "A handmade labcoat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "practitioner"
+	item_state = "practitioner"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/walker
+	name = "walker outfit"
+	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
+	icon_state = "walker"
+	item_state = "walker"
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/gmb/commander
+	name = "commander outfit"
+	desc = "A handmade coat. It has been fitted with the militia's patch."
+	icon_state = "commander"
+	item_state = "commander"

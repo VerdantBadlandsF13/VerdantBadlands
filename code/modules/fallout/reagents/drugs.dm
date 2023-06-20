@@ -94,6 +94,7 @@
 	addiction_threshold = 9
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	pain_resistance = 5
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
 	..()
@@ -173,7 +174,7 @@
 	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries an extreme risk of addiction."
 	reagent_state = LIQUID
 	color = "#FF0000"
-	overdose_threshold = 5
+	overdose_threshold = 5.1
 	addiction_threshold = 12.5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage

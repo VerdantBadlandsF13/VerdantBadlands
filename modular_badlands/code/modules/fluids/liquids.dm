@@ -100,10 +100,35 @@ Heavily repurposed for our use, with a smidge of pool code and jank. - Carl
 	name = "shallow spring water"
 	icon_state = "riverwater_motion"// Needs a better sprite.
 	radioactive = FALSE
+	sunlight_state = NO_SUNLIGHT
 
+/turf/open/liquid/water/scum_aboveground
+	name = "stagnant water"
+	icon_state = "riverwater_mapped"
+
+/turf/open/liquid/water/scum_aboveground/Initialize(mapload)
+	. = ..()
+	icon_state = "riverwater_stage"
+	setDir(dir)
+
+/turf/open/liquid/water/scum_aboveground/north
+	dir = 1
+
+/turf/open/liquid/water/scum_aboveground/south
+	dir = 2
+
+/turf/open/liquid/water/scum_aboveground/east
+	dir = 4
+
+/turf/open/liquid/water/scum_aboveground/west
+	dir = 8
+
+// THIS IS FOR UNDERGROUND
+// USE THE OTHER ONE ABOVE INSTEAD
 /turf/open/liquid/water/scum
 	name = "stagnant water"
 	icon_state = "riverwater_mapped"
+	sunlight_state = NO_SUNLIGHT
 
 /turf/open/liquid/water/scum/Initialize(mapload)
 	. = ..()

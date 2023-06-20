@@ -944,6 +944,10 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"eB" = (
+/obj/machinery/telecomms/relay/preset/telecomms,
+/turf/open/indestructible,
+/area/admin)
 "eE" = (
 /obj/structure/chair/sofa/left{
 	dir = 4
@@ -3950,7 +3954,7 @@
 	},
 /area/f13/building/mall)
 "tu" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -6435,7 +6439,7 @@
 /turf/open/transparent/openspace,
 /area/f13/village)
 "FJ" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "FK" = (
@@ -7135,7 +7139,7 @@
 	color = "#845f58";
 	pixel_x = -32
 	},
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/wood/wood_wide{
 	icon_state = "wide-broken2"
 	},
@@ -7605,6 +7609,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
+"Lo" = (
+/turf/closed/indestructible/riveted,
+/area/admin)
 "Ls" = (
 /turf/closed/indestructible/rock{
 	desc = "A pre-War wall made of solid concrete.";
@@ -9413,6 +9420,16 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"UP" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	faction = list("raider, wastebot");
+	name = "Techfiend Shooter";
+	desc = "A Techfiend raider with a keen eye for guns."
+	},
+/turf/open/floor/carpet/red,
+/area/f13/village)
 "UQ" = (
 /obj/structure/barricade/wooden/strong,
 /obj/structure/decoration/rag{
@@ -9447,6 +9464,9 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"UZ" = (
+/turf/open/indestructible,
+/area/admin)
 "Va" = (
 /obj/structure/fence/corner/wooden{
 	dir = 1
@@ -11066,12 +11086,12 @@ Mb
 Mb
 Mb
 Mb
-Mb
-Mb
-Mb
-Mb
-Mb
-Mb
+dd
+Lo
+Lo
+Lo
+Lo
+Lo
 "}
 (2,1,1) = {"
 Mb
@@ -11523,12 +11543,12 @@ Bv
 Bv
 Bv
 Bv
-Bv
-Bv
-Bv
-Bv
-Bv
-Mb
+dd
+Lo
+UZ
+UZ
+UZ
+Lo
 "}
 (3,1,1) = {"
 Mb
@@ -11980,12 +12000,12 @@ Bv
 Bv
 Bv
 Bv
-Bv
-Bv
-Bv
-Bv
-Bv
-Mb
+dd
+Lo
+UZ
+eB
+UZ
+Lo
 "}
 (4,1,1) = {"
 Mb
@@ -12437,12 +12457,12 @@ Bv
 Bv
 Bv
 Bv
-Bv
-Bv
-Bv
-Bv
-Bv
-Mb
+dd
+Lo
+UZ
+UZ
+UZ
+Lo
 "}
 (5,1,1) = {"
 Mb
@@ -12894,12 +12914,12 @@ Bv
 Bv
 Bv
 Bv
-Bv
-Bv
-Bv
-Bv
-Bv
-Mb
+dd
+Lo
+Lo
+Lo
+Lo
+Lo
 "}
 (6,1,1) = {"
 Mb
@@ -13351,12 +13371,12 @@ Bv
 Bv
 Bv
 Bv
-Bv
-Bv
-Bv
-Bv
-Bv
-Mb
+dd
+dd
+dd
+dd
+dd
+dd
 "}
 (7,1,1) = {"
 Mb
@@ -58226,7 +58246,7 @@ hD
 DK
 DK
 gY
-gY
+UP
 hD
 hD
 Ny

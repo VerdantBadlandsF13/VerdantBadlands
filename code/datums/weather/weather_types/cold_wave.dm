@@ -19,6 +19,7 @@
 	area_types = list(/area/f13/wasteland)
 	protected_areas = list(/area/shuttle)
 	target_trait = ZTRAIT_SURFACE
+	carbon_exclusive = TRUE
 
 	immunity_type = "snow"
 

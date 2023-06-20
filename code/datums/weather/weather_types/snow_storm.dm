@@ -20,6 +20,7 @@
 	protect_indoors = TRUE
 //	target_trait = ZTRAIT_SNOWSTORM
 	target_trait = ZTRAIT_SURFACE
+	carbon_exclusive = TRUE
 
 	immunity_type = "snow"
 

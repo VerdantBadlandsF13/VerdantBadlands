@@ -2511,6 +2511,10 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"lN" = (
+/obj/effect/landmark/start/f13/gmb_practitioner,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "lR" = (
 /obj/item/melee/cultblade/dagger,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -3232,7 +3236,7 @@
 /area/f13/sewer)
 "ph" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "pi" = (
@@ -4087,7 +4091,6 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/stock_parts,
 /obj/effect/spawner/lootdrop/stock_parts,
-/obj/effect/spawner/lootdrop/weapon_parts,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -4463,6 +4466,18 @@
 /mob/living/simple_animal/hostile/raider/junker/creator,
 /turf/open/floor/plating,
 /area/f13/sewer)
+"tZ" = (
+/obj/structure/vaultdoor{
+	icon_state = "oldopen";
+	name = "demo vault door";
+	opacity = 0;
+	density = 0
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid";
+	name = "store floor"
+	},
+/area/f13/tunnel)
 "ua" = (
 /obj/machinery/light{
 	dir = 1
@@ -4856,6 +4871,9 @@
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"vO" = (
+/turf/open/indestructible,
+/area/admin)
 "vQ" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -4902,7 +4920,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/liquid/water/scum/south,
+/turf/open/floor/plating,
 /area/f13/tunnel)
 "vZ" = (
 /obj/structure/mirelurkegg,
@@ -7815,13 +7833,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"Jo" = (
-/obj/structure/stairs/east{
-	icon = 'icons/fallout/turfs/asphalt.dmi';
-	icon_state = "horizontaltopborderbottom0"
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
 "Jp" = (
 /obj/structure/chair/office/dark{
 	dir = 4
@@ -8761,7 +8772,7 @@
 	},
 /area/f13/village)
 "Nr" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/item/stack/sheet/metal/fifty,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
@@ -8778,6 +8789,9 @@
 /obj/item/reagent_containers/syringe/bluespace,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"Nu" = (
+/turf/closed/indestructible/riveted,
+/area/admin)
 "Nv" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -9519,6 +9533,10 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/tunnel)
+"QQ" = (
+/obj/machinery/telecomms/relay/preset/telecomms,
+/turf/open/indestructible,
+/area/admin)
 "QR" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -11078,7 +11096,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "XW" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "XY" = (
@@ -11311,15 +11329,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"YX" = (
-/obj/structure/vaultdoor{
-	icon_state = "oldopen";
-	name = "demo vault door";
-	opacity = 0;
-	density = 0
-	},
-/turf/open/liquid/water/scum/south,
-/area/f13/tunnel)
 "YY" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal,
@@ -12006,11 +12015,11 @@ OA
 OA
 OA
 OA
-OA
-OA
-OA
-OA
-OA
+Nu
+Nu
+Nu
+Nu
+Nu
 "}
 (2,1,1) = {"
 OA
@@ -12462,12 +12471,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
 OA
+Nu
+vO
+vO
+vO
+Nu
 "}
 (3,1,1) = {"
 OA
@@ -12919,12 +12928,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
 OA
+Nu
+vO
+QQ
+vO
+Nu
 "}
 (4,1,1) = {"
 OA
@@ -13376,12 +13385,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
 OA
+Nu
+vO
+vO
+vO
+Nu
 "}
 (5,1,1) = {"
 OA
@@ -13833,12 +13842,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
 OA
+Nu
+Nu
+Nu
+Nu
+Nu
 "}
 (6,1,1) = {"
 OA
@@ -14290,11 +14299,11 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+OA
+OA
+OA
+OA
+OA
 OA
 "}
 (7,1,1) = {"
@@ -17924,7 +17933,7 @@ Va
 OA
 Gs
 Cg
-Cg
+lN
 Cg
 tE
 Cg
@@ -28635,7 +28644,7 @@ Dc
 Dc
 rD
 jX
-Jo
+dU
 DP
 DP
 DP
@@ -29092,7 +29101,7 @@ Zv
 Tq
 gY
 It
-Jo
+dU
 DP
 DP
 DP
@@ -29549,7 +29558,7 @@ Ko
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -30006,7 +30015,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -30463,7 +30472,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -30920,7 +30929,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -31377,7 +31386,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -31834,7 +31843,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -32291,7 +32300,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -32748,7 +32757,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -33205,7 +33214,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -33662,7 +33671,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -34119,7 +34128,7 @@ OA
 Ko
 Ig
 It
-Jo
+dU
 DP
 qM
 DP
@@ -34576,7 +34585,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -35033,7 +35042,7 @@ OA
 Ko
 QP
 It
-Jo
+dU
 DP
 qM
 DP
@@ -35490,7 +35499,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -35947,7 +35956,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -36404,7 +36413,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -36861,7 +36870,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 sg
 DP
@@ -37318,7 +37327,7 @@ OA
 Ko
 fg
 Gh
-Jo
+dU
 DP
 sg
 DP
@@ -37775,7 +37784,7 @@ OA
 Ko
 fg
 aA
-Jo
+dU
 DP
 sg
 DP
@@ -38232,7 +38241,7 @@ OA
 Ko
 fg
 xs
-Jo
+dU
 DP
 sg
 DP
@@ -38689,7 +38698,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 sg
 DP
@@ -39146,7 +39155,7 @@ OA
 Ko
 Wv
 It
-Jo
+dU
 DP
 sg
 DP
@@ -39603,7 +39612,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 sg
 DP
@@ -40060,7 +40069,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 sg
 DP
@@ -40517,7 +40526,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -40974,7 +40983,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -41431,7 +41440,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -41888,7 +41897,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -42345,7 +42354,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 qM
 DP
@@ -42802,7 +42811,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 RD
 DP
@@ -43259,7 +43268,7 @@ OA
 Ko
 QP
 It
-Jo
+dU
 DP
 DP
 DP
@@ -43716,7 +43725,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 Gw
 Ya
@@ -44173,7 +44182,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 IH
@@ -44630,7 +44639,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -45087,7 +45096,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -45544,7 +45553,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -46001,7 +46010,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -46458,7 +46467,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -46915,7 +46924,7 @@ OA
 Ko
 fg
 It
-Jo
+dU
 DP
 DP
 DP
@@ -47372,7 +47381,7 @@ OA
 Ko
 fg
 uW
-Jo
+dU
 DP
 DP
 DP
@@ -47829,7 +47838,7 @@ Ko
 Ko
 cQ
 It
-Jo
+dU
 DP
 DP
 DP
@@ -48286,7 +48295,7 @@ Dc
 Sw
 vj
 It
-Jo
+dU
 DP
 DP
 DP
@@ -48743,7 +48752,7 @@ yZ
 Zv
 Zv
 YU
-Jo
+dU
 DP
 DP
 DP
@@ -114241,7 +114250,7 @@ wz
 wz
 wz
 Ee
-YX
+xt
 xt
 xt
 xt
@@ -114697,7 +114706,7 @@ wz
 wz
 wz
 wz
-wz
+tZ
 vY
 vY
 vY

@@ -28,12 +28,14 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 
 /obj/item/grenade/f13/mine/planted/New()
 	. = ..()
+	icon_state = "landmine_active"
 	anchored = TRUE
 	armed = TRUE
 	add_appearance()
 
 /obj/item/grenade/f13/mine/planted/heavy/New()
 	. = ..()
+	icon_state = "landmine_active"
 	anchored = TRUE
 	armed = TRUE
 	range_heavy = 2
@@ -48,6 +50,7 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 		anchored = TRUE
 		addtimer(CALLBACK(src, .proc/arm), 5 SECONDS)
 		to_chat(user, "<span class='notice'>You drop the mine and activate the 5-second arming process.</span>")
+		add_appearance()
 		return
 
 /obj/item/grenade/f13/mine/proc/arm()

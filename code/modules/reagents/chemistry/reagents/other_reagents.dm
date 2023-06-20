@@ -299,9 +299,9 @@
 		var/mob/living/carbon/human/H = M
 		if(prob(1))//Practically never. Safe to drink, except for rads.
 			H.emote("cough")
-			if(prob(5))//RNG within RNG.
+/*			if(prob(5))//RNG within RNG.
 				H.vomit(1)
-				M.reagents.remove_all()
+				M.reagents.remove_all()*/
 	..()
 
 /datum/reagent/watertabletpowder

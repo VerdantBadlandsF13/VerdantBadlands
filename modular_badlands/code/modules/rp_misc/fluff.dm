@@ -69,3 +69,35 @@ Ignore it, if possible.
 	else
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/fatigue[rand(1,3)].ogg"
 	playsound(src, critstam_sound, 50, 1)
+
+/*
+Radio static below.
+Pulled from MS ala ~2021, redone for our purposes. Cheers. - Carl
+Determines how badly a broadcasting radio suffers from static.
+The number refers to the odds that each character in a message is garbled.
+*/
+#define RADSTATIC_NONE 0// Vault.
+#define RADSTATIC_LIGHT 12// GMB exclusive, for now.
+#define RADSTATIC_MEDIUM 16// For DFS.
+#define RADSTATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
+
+/obj/item/radio
+	var/ranged_static = RADSTATIC_HEAVY
+
+/obj/item/radio/headset/headset_overseer
+	ranged_static = RADSTATIC_NONE
+
+/obj/item/radio/headset/headset_vault
+	ranged_static = RADSTATIC_NONE
+
+/obj/item/radio/headset/headset_vaultsec
+	ranged_static = RADSTATIC_NONE
+
+/obj/item/radio/headset/headset_cent
+	ranged_static = RADSTATIC_NONE
+
+/obj/item/radio/headset/headset_gmb
+	ranged_static = RADSTATIC_LIGHT
+
+/obj/item/radio/headset/headset_dfs
+	ranged_static = RADSTATIC_MEDIUM

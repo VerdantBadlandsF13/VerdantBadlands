@@ -15,7 +15,8 @@
 	/// How many units it adds per tick
 	var/speed = 5
 	/// What reagent it adds?
-	var/datum/reagent/reagent_type = /datum/reagent/water/purified
+//	var/datum/reagent/reagent_type = /datum/reagent/water/purified
+	var/datum/reagent/reagent_type = /datum/reagent/water
 
 /obj/machinery/water_purifier/Destroy()
 	QDEL_NULL(output)

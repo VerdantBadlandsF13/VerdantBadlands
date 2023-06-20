@@ -154,7 +154,6 @@
 	desc = "A squat, spherical cactus blooming with a toxic fruit."
 	produce = /obj/item/reagent_containers/food/snacks/grown/feracactus
 
-
 /obj/structure/flora/wasteplant/wild_mutfruit
 	name = "wild mutfruit sapling"
 	icon_state = "wild_mutfruit"
@@ -214,7 +213,7 @@
 // Rocks
 
 /obj/structure/flora/rock/vermont
-	icon_state = "pile of rocks"
+	name = "pile of rocks"
 	desc = "A pile of rocks."
 	icon_state = "rock"
 	icon = 'icons/obj/flora/jungleflora.dmi'

@@ -8,7 +8,7 @@
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	var/obj/item/radio/radio
 	var/radio_key = /obj/item/encryptionkey
-	var/channel = RADIO_CHANNEL_ENCLAVE
+	var/channel = RADIO_CHANNEL_CENTCOM
 
 /obj/machinery/computer/vertibird_console/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()

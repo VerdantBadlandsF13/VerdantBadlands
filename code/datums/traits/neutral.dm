@@ -139,7 +139,7 @@
 	var/mob/living/carbon/C = quirk_holder
 	C.generate_fake_scars(rand(min_scars, max_scars))
 
-//Horrid and pulled from Crash
+//Horrid and pulled from Crash - Carl
 /datum/quirk/soapstone
 	name = "Soapstone"
 	desc = "You recently found this yellow rock. Neat. Now, if only you knew what this did..."

@@ -25,8 +25,9 @@
 	id = /obj/item/card/id/gmb_keys
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
-	ears = null
-	uniform	= /obj/item/clothing/under/f13/gmb
+	ears = /obj/item/radio/headset/headset_gmb
+	uniform = /obj/item/clothing/under/f13/gmb
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 	l_pocket = /obj/item/radio
@@ -48,26 +49,42 @@
 /datum/outfit/job/gmb/commander
 	name = "Commander"
 	jobtype = /datum/job/gmb/commander
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	id = /obj/item/card/id/gmb_commander_keys
 
+/datum/outfit/job/gmb/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)
+
 // Watchman
-/datum/job/gmb/watchman
-	title = "Watchman"
-	flag = F13GMBWATCHMAN
+/datum/job/gmb/practitioner
+	title = "Practitioner"
+	flag = F13GMBPRACTITIONER
 	total_positions = 1
 	spawn_positions = 1
-	description = "Like the Militia, but watches over the camp and its general surroundings as well as handling any disputes between both civilians and GMB members."
+	description = "A general purpose surgeon and field doctor of the camp. Rather important."
 	supervisors = "Commander."
-	outfit = /datum/outfit/job/gmb/watchman
+	outfit = /datum/outfit/job/gmb/practitioner
 	req_admin_notify = 1
 	exp_requirements = 480
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
-/datum/outfit/job/gmb/watchman
-	name = "Watchman"
-	jobtype = /datum/job/gmb/watchman
+/datum/outfit/job/gmb/practitioner
+	name = "Practitioner"
+	jobtype = /datum/job/gmb/practitioner
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
 	id = /obj/item/card/id/gmb_commander_keys
+
+/datum/outfit/job/gmb/practitioner/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_SURGERY_MID, TRAIT_GENERIC)
 
 // Walker
 /datum/job/gmb/walker
@@ -83,10 +100,25 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
 
+	loadout_options = list(
+	/datum/outfit/loadout/walker/marksmen,
+	/datum/outfit/loadout/walker/heavy)
+
 /datum/outfit/job/gmb/walker
 	name = "Walker"
 	jobtype = /datum/job/gmb/walker
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/walker
 	id = /obj/item/card/id/gmb_commander_keys
+
+/datum/outfit/loadout/walker/marksmen
+	name = "Marksmen"
+	r_hand = /obj/item/gun/ballistic/rifle/enfield
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
+
+/datum/outfit/loadout/walker/heavy
+	name = "Heavy"
+	r_hand = /obj/item/gun/ballistic/automatic/lsw
+	l_hand = /obj/item/ammo_box/magazine/m556/rifle
 
 // Militia
 /datum/job/gmb/militia
@@ -99,9 +131,31 @@
 	outfit = /datum/outfit/job/gmb/militia
 	exp_requirements = 120
 
+	loadout_options = list(
+	/datum/outfit/loadout/militia/hunter,
+	/datum/outfit/loadout/militia/musketeer,
+	/datum/outfit/loadout/militia/rifleman)
+
 /datum/outfit/job/gmb/militia
 	name = "Militia"
 	jobtype = /datum/job/gmb/militia
+	suit = /obj/item/clothing/suit/armored/f13/light/gmb/militia
+
+/datum/outfit/loadout/militia/rifleman
+	name = "Rifleman"
+	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+
+/datum/outfit/loadout/militia/hunter
+	name = "Hunter"
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+
+/datum/outfit/loadout/militia/musketeer
+	name = "Musketeer"
+	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
+	r_hand = /obj/item/ammo_box/lasmusket
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 // Volunteer
 /datum/job/gmb/volunteer
@@ -114,7 +168,20 @@
 	outfit = /datum/outfit/job/gmb/volunteer
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
+	loadout_options = list(
+	/datum/outfit/loadout/volunteer/conscript,
+	/datum/outfit/loadout/volunteer/watchmen)
 
 /datum/outfit/job/gmb/volunteer
 	name = "Volunteer"
 	jobtype = /datum/job/gmb/volunteer
+
+/datum/outfit/loadout/volunteer/conscript
+	name = "Conscript"
+	r_hand = /obj/item/gun/ballistic/revolver/piperifle // YOU'RE A CONSCRIPT. BE HAPPY YOU EVEN GET A GUN.
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+
+/datum/outfit/loadout/volunteer/watchmen
+	name = "Watchmen"
+	r_hand = /obj/item/gun/ballistic/revolver/piperifle // YOU'RE A CONSCRIPT. BE HAPPY YOU EVEN GET A GUN.
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)

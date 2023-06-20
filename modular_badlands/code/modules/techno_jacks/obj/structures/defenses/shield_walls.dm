@@ -68,7 +68,7 @@
 			M.Jitter(15)
 
 			to_chat(src, Gibberish("Biometric signature rejected! <br>\
-			Foreign bodies reported to containment team. Anti-contagion protocols enacted."), COMBAT_MESSAGE_RANGE)
+			Foreign bodies reported to containment team. Anti-contagion protocols enacted."), 15)
 
 			var/medical_alert = "Foreign bodies detected in denied biometric signature. Move to contain. Local contagion protocols enacted."
 			radio.talk_into(src, medical_alert, medical_channel, language = get_selected_language())
@@ -103,7 +103,7 @@
 		M.Jitter(15)
 
 		to_chat(src, Gibberish("Biometric signature not recognised! <br>\
-		On-site security has been alerted and will arrive shortly."), COMBAT_MESSAGE_RANGE)
+		On-site security has been alerted and will arrive shortly."), 15)
 
 		var/security_alert = "An unknown biometric signature has attempted to bypass surface security. Move to intercept."
 		radio.talk_into(src, security_alert, security_channel, language = get_selected_language())
@@ -120,7 +120,7 @@
 		M.dust()
 
 		to_chat(src, Gibberish("Biometric signature not recognised! <br>\
-		On-site security has been alerted and will arrive shortly."))
+		On-site security has been alerted and will arrive shortly."), 15)
 
 		var/security_alert = "An unknown biometric signature has attempted to bypass surface security. Move to intercept."
 		radio.talk_into(src, security_alert, security_channel, language = get_selected_language())
@@ -164,10 +164,18 @@ Keep that in mind when making edits. I beg you.
 	icon_state = "gate_OWB_on"
 	light_range = 2
 	light_color = "#75fcfc"
+	req_one_access = list(ACCESS_LBJ)
+
+/obj/structure/shieldwall/standard_owb/active/Initialize(mapload)
+	. = ..()
+	radio = null// Not needed, as this is for the Lumber Camp.
+	soundloop = new(src, TRUE)
+	soundloop.start()
 
 // 52x32 base.
 /obj/structure/shieldwall/full
 	name = "Full Parent Shield - DO NOT USE"
+	desc = "A field of light, preventing access and likely killing those not meant to cross."
 	icon = 'modular_badlands/code/modules/techno_jacks/icons/Fields52x32.dmi'
 	icon_state = "gate_full_off"
 	pixel_x = -10
@@ -177,6 +185,7 @@ Keep that in mind when making edits. I beg you.
 
 /obj/structure/shieldwall/full/active_stun
 	name = "shieldwall"
+	desc = "A field of bright light, preventing access. This one is configured to be less-lethal, or has otherwise resorted to backup power."
 	icon_state = "gate_full_yellow"
 	lethal = FALSE
 	light_range = 3
@@ -203,6 +212,7 @@ Keep that in mind when making edits. I beg you.
 // 64x32 base.
 /obj/structure/shieldwall/large
 	name = "Large Parent Shield - DO NOT USE"
+	desc = "A field of light, preventing access and likely killing those not meant to cross."
 	icon = 'modular_badlands/code/modules/techno_jacks/icons/Fields64x32.dmi'
 	icon_state = "large_gate_off"
 	bound_width = 64
@@ -210,6 +220,7 @@ Keep that in mind when making edits. I beg you.
 
 /obj/structure/shieldwall/large/active
 	name = "shieldwall"
+	desc = "A field of bright light, preventing access. This one is configured to be less-lethal, or has otherwise resorted to backup power."
 	icon_state = "large_gate_on"
 	light_range = 6
 	light_color = "#75fcfc"

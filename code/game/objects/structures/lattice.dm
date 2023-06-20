@@ -115,6 +115,8 @@ Spaced for reading.
 	var/heavyfootstep = FOOTSTEP_CATWALK
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
+	density = FALSE
+	anchored = TRUE
 	obj_flags = CAN_BE_HIT | BLOCK_Z_OUT_DOWN | BLOCK_Z_IN_UP
 
 /obj/structure/catwalk/Initialize(mapload)

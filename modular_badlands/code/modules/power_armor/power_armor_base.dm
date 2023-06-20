@@ -103,6 +103,10 @@
 		return ..()
 	return
 
+/obj/item/clothing/suit/armored/f13/power_armor/process()
+	..()
+	processPower()
+
 /obj/item/clothing/suit/armored/f13/power_armor/equipped(mob/user, slot)
 	..()
 	if(slot == SLOT_WEAR_SUIT && powered)

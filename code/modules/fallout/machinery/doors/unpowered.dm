@@ -75,6 +75,7 @@
 	obj_integrity = 1000
 	assemblytype = /obj/item/stack/rods
 	visible = FALSE
+	opacity = FALSE
 	explosion_block = FALSE
 	pass_flags_self = LETPASSTHROW
 	barricade = TRUE
@@ -265,6 +266,8 @@
 	name = "vault airlock"
 	req_access_txt = "149"
 	icon_state = "vault_glass"
+	opacity = FALSE
+	glass = TRUE
 
 /obj/machinery/door/unpowered/securedoor/vfe/glass/update_icon()
 	if(density)

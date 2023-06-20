@@ -12,8 +12,7 @@
 	materials = list(/datum/material/iron = 400, /datum/material/glass = 120)
 	build_path = /obj/item/assembly/signaler
 	category = list("initial", "T-Comm")
-
-
+/*
 /datum/design/radio_headset
 	name = "Radio Headset"
 	id = "radio_headset"
@@ -21,10 +20,9 @@
 	materials = list(/datum/material/iron = 75)
 	build_path = /obj/item/radio/headset
 	category = list("initial", "T-Comm")
-
-
+*/
 /datum/design/bounced_radio
-	name = "Station Bounced Radio"
+	name = "Handheld Radio"
 	id = "bounced_radio"
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 75, /datum/material/glass = 25)
@@ -291,12 +289,4 @@
 	build_type = AUTOLATHE
 	materials = list(/datum/material/iron = 5000, /datum/material/glass = 2000)
 	build_path = /obj/item/vending_refill/custom
-	category = list("initial", "Misc")
-
-/datum/design/trigger_assembly
-	name = "Trigger Assembly"
-	id = "trigger_assembly"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/iron = 6500, /datum/material/glass = 50)
-	build_path = /obj/item/weaponcrafting/improvised_parts/trigger_assembly
 	category = list("initial", "Misc")

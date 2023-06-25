@@ -9827,6 +9827,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
 /area/f13/building)
+"kdx" = (
+/obj/structure/sign/poster/prewar{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault/vents)
 "kdI" = (
 /turf/closed/wall/f13/ruins,
 /area/f13/wasteland)
@@ -48080,7 +48086,7 @@ hem
 tTc
 vty
 tjb
-tTc
+kdx
 tTc
 tTc
 nCM

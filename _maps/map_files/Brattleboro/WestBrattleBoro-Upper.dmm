@@ -8469,6 +8469,12 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/carpet/blue,
 /area/f13/building)
+"Kk" = (
+/obj/structure/sign/poster/prewar{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/vault/vents)
 "Kl" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt/harsh{
@@ -20358,7 +20364,7 @@ wo
 Nr
 Rh
 eD
-zr
+Kk
 zr
 zr
 Rh

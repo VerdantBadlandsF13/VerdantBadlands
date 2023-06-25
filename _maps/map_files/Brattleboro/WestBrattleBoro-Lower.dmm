@@ -2714,6 +2714,9 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /obj/effect/spawner/lootdrop/f13/crafting,
+/obj/structure/sign/poster/prewar{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/vents)
 "tG" = (

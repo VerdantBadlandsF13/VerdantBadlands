@@ -345,12 +345,10 @@
 	// deny checks
 	if (!on || !listening || wires.is_cut(WIRE_RX))
 		return FALSE
-	//Fortuna edit start. Radio management
 	if(kill_switched)
 		return FALSE
 	if(factionized && !linked_mob)
 		return
-	//Fortuna edit end. Radio management
 	if (freq == FREQ_SYNDICATE && !syndie)
 		return FALSE
 	if (freq == FREQ_CENTCOM)

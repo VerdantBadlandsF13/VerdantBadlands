@@ -690,6 +690,7 @@
 #include "code\datums\skills\blacksmithing.dm"
 #include "code\datums\skills\engineering.dm"
 #include "code\datums\skills\medical.dm"
+#include "code\datums\skills\mining.dm"
 #include "code\datums\skills\modifiers\job.dm"
 #include "code\datums\skills\modifiers\mood.dm"
 #include "code\datums\skills\modifiers\organs.dm"

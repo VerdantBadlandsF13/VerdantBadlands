@@ -1,4 +1,3 @@
-//this file is where we put all of our fortuna verb additions
 GLOBAL_LIST_INIT(staff_verbs, list(
 	/client/proc/cmd_staff_say,
 	/client/proc/open_event_panel
@@ -56,7 +55,7 @@ GLOBAL_PROTECT(staff)
 	if(!add_or_remove)
 		return
 
-	
+
 	switch(add_or_remove)
 		if("Add")
 			chosen_recipe = input(src, "Enter the recipe name to add to [target.name].", "Search recipes") as null|text
@@ -100,7 +99,7 @@ GLOBAL_PROTECT(staff)
 				to_chat(src, "<span class='warning'>Target does not know any recipes!</span>")
 				return
 
-			
+
 //event coordinator stuff
 /datum/admins/proc/event_panel()
 	if(!check_rights(R_SPAWN))
@@ -153,7 +152,7 @@ GLOBAL_PROTECT(staff)
 		message_admins("[ADMIN_TPMONTY(usr)] tried to use open_event_panel() without perms!")
 		log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use open_event_panel() without perms!")
 		return
-	
+
 	src.holder.event_panel()
 
 //for the client to optionally go fullscreen

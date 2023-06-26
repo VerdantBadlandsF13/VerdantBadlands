@@ -129,6 +129,8 @@ Medical Doctor
 	access = list(ACCESS_VFE, ACCESS_VFE_MEDICAL)
 	minimal_access = list(ACCESS_VFE, ACCESS_VFE_MEDICAL)
 
+	starting_modifiers = list(/datum/skill_modifier/job/surgery, /datum/skill_modifier/job/affinity/surgery)
+
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/vault/f13doctor

@@ -231,7 +231,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	holder = GLOB.admin_datums[ckey]
 	var/debug_tools_allowed = FALSE			//CITADEL EDIT
 	if(holder)
-		if(check_rights_for(src, R_ADMIN)) //Fortuna edit. Are they /really/ admins?
+		if(check_rights_for(src, R_ADMIN))
 			GLOB.admins |= src
 			GLOB.adminchat |= src
 			holder.owner = src
@@ -240,7 +240,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		if(check_rights_for(src, R_DEBUG))
 			debug_tools_allowed = TRUE
 		//END CITADEL EDIT
-		if(check_rights_for(src, R_SPAWN)) //Fortuna edit. Are they lower ranked staff?
+		if(check_rights_for(src, R_SPAWN))
 			GLOB.staff |= src
 	else if(GLOB.deadmins[ckey])
 		add_verb(src, /client/proc/readmin)
@@ -519,7 +519,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		adminGreet(1)
 		holder.owner = null
 		GLOB.admins -= src
-		GLOB.adminchat -= src //fortuna add
+		GLOB.adminchat -= src
 		if (!GLOB.admins.len && SSticker.IsRoundInProgress()) //Only report this stuff if we are currently playing.
 			var/cheesy_message = pick(
 				"I have no admins online!",\

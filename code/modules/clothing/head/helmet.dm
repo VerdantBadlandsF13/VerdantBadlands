@@ -79,8 +79,8 @@
 
 /obj/item/clothing/head/helmet/proc/fix_armor()
 	if(armor_durability<100)
-		armor = armor.modifyRating(initial(linemelee), initial(linebullet), initial(linelaser))
-		armor_durability = initial(armor_durability)
+		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
+		armor_durability += 1
 
 /obj/item/clothing/head/helmet/handle_atom_del(atom/A)
 	if(A == attached_light)

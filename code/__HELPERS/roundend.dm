@@ -208,7 +208,6 @@
 
 	if(length(CONFIG_GET(keyed_list/cross_server)))
 		send_news_report()
-	//fortuna addition. list of random names for the roundend news author
 	var/list/publisher = list("Mountain Boy News","Vermont Publishing")
 	//tell the nice people on discord what went on before the salt cannon happens.
 	// send2chat sending the new round ping off

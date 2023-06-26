@@ -188,7 +188,7 @@
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
 
-	if(href_list["refresh_chat"]) //fortuna addition. asset delivery pain
+	if(href_list["refresh_chat"])
 		client.nuke_chat()
 
 	if(href_list["late_join"])

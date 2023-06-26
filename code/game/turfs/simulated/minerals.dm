@@ -13,7 +13,7 @@
 	density = TRUE
 	blocks_air = 1
 	layer = EDGED_TURF_LAYER
-	var/indestructible = 0 //fortuna edit
+	var/indestructible = 0
 	initial_temperature = 293.15
 	// base_icon_state = "smoothrocks"
 	smooth_icon = 'icons/turf/smoothrocks.dmi'
@@ -51,7 +51,7 @@
 
 
 /turf/closed/mineral/attackby(obj/item/pickaxe/I, mob/user, params)
-	if(indestructible) //fortuna edit. RNG rocks that dont budge
+	if(indestructible)
 		return
 	var/stored_dir = user.dir
 	if (!user.IsAdvancedToolUser())
@@ -85,7 +85,7 @@
 		return attack_hand(user)
 
 /turf/closed/mineral/proc/gets_drilled()
-	if(indestructible) //fortuna edit. RNG rocks that dont budge
+	if(indestructible)
 		return
 	if (mineralType && (mineralAmt > 0))
 		new mineralType(src, mineralAmt)
@@ -113,7 +113,7 @@
 
 /turf/closed/mineral/Bumped(atom/movable/AM)
 	..()
-	if(indestructible) //fortuna edit. RNG rocks that dont budge
+	if(indestructible)
 		return
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
@@ -248,13 +248,13 @@
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
 		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40, /turf/closed/mineral/lead = 30, /turf/closed/mineral/limestone = 20,
-		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1) //indestructable chance moved to child, /underground
+		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/strong = 15) //indestructable chance moved to child, /underground
 
 /turf/closed/mineral/random/low_chance/underground
 	mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
 		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40, /turf/closed/mineral/lead = 30, /turf/closed/mineral/limestone = 20,
-		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/indestructible = 50) //fortuna edit, indestructible rocks added to chance list
+		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/strong = 15, /turf/closed/mineral/indestructible = 50)
 
 /turf/closed/mineral/random/low_chance/earth_like
 	icon_state = "rock_lowchance_oxy"
@@ -850,35 +850,30 @@
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 
 /turf/closed/mineral/strong
-	name = "Very strong rock"
+	name = "very strong rock"
 	desc = "Seems to be stronger than the other rocks in the area. Only a master of mining techniques could destroy this."
-	environment_type = "basalt"
-	turf_type = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	baseturfs = /turf/open/floor/plating/asteroid/basalt/lava_land_surface
-	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = 1
 	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
 
-/*
 /turf/closed/mineral/strong/attackby(obj/item/I, mob/user, params)
 	if(!ishuman(user))
 		to_chat(usr, "<span class='warning'>Only a more advanced species could break a rock such as this one!</span>")
 		return FALSE
 	var/mob/living/carbon/human/H = user
-	if(H.mind.get_skill_level(/datum/skill/mining) >= SKILL_LEVEL_MASTER)
+	if(H.mind.get_skill_level(/datum/skill/level/mining) >= JOB_SKILL_MASTER)
 		. = ..()
 	else
 		to_chat(usr, "<span class='warning'>The rock seems to be too strong to destroy. Maybe I can break it once I become a master miner.</span>")
-*/
+
 
 /turf/closed/mineral/strong/gets_drilled(mob/user)
 	if(!ishuman(user))
 		return // see attackby
-	/*
+
 	var/mob/living/carbon/human/H = user
-	if(!(H.mind.get_skill_level(/datum/skill/mining) >= SKILL_LEVEL_MASTER))
+	if(!(H.mind.get_skill_level(/datum/skill/level/mining) >= JOB_SKILL_MASTER))
 		return
-	*/
+
 	drop_ores()
 //	H.client.give_award(/datum/award/achievement/skill/legendary_miner, H)
 	var/flags = NONE
@@ -887,7 +882,8 @@
 	ScrapeAway(flags=flags)
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
-//	H.mind.adjust_experience(/datum/skill/mining, 100) //yay!
+	if(user.mind.skill_holder)
+		user.mind.auto_gain_experience(/datum/skill/level/mining, 5, BARE_USE_TOOL_MULT)
 
 /turf/closed/mineral/strong/proc/drop_ores()
 	if(prob(10))
@@ -901,7 +897,7 @@
 /turf/closed/mineral/strong/ex_act(severity, target)
 	return
 
-//fortuna edit start. adds an indestructible rock type to the ore generator
+// Adds an indestructible rock type to the ore generator
 // as well as adjusting the rock around faction bases to let RNG decide if there is an exploitable opening or not.
 // some rounds may have exploitable areas everywhere, some may have none anywhere. utter chaos.
 /turf/closed/mineral/indestructible
@@ -919,4 +915,3 @@
 		/turf/closed/mineral/random/low_chance = 5, /turf/closed/mineral/indestructible = 95)
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
 	canSmoothWith = list (/turf/closed/mineral)
-//fortuna edit end

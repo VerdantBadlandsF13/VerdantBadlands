@@ -365,12 +365,10 @@
 	if(vb_pilot == TRUE)
 		ADD_TRAIT(H, TRAIT_PILOT, "vb_pilot")
 
-	//Fortuna edit start. radio management
 	if(J.faction && ears)
 		var/obj/item/radio/T = H.get_item_by_slot(SLOT_EARS)
 		if(istype(T) && T.factionized)
 			T.linked_mob = H
-	//Fortuna edit end. radio management
 
 /datum/outfit/job/get_chameleon_disguise_info()
 	var/list/types = ..()

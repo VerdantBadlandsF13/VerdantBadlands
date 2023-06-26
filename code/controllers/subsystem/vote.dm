@@ -376,7 +376,7 @@ SUBSYSTEM_DEF(vote)
 			if(SSmapping.changemap(config.maplist[.]))
 				to_chat(world, "<span class='boldannounce'>The map vote has chosen [VM.map_name] for next round!</span>")
 	if(end_round)
-	/* Fortuna edit, shuttle will autocall after a successful transfer vote even when admins are online
+	/* Shuttle will autocall after a successful transfer vote even when admins are online
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)
 			if(!C.is_afk() && check_rights_for(C, R_SERVER))

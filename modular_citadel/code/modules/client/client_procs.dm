@@ -1,7 +1,7 @@
 /client/New()
 	. = ..()
 	mentor_datum_set()
-	staff_setup() //fortuna addition
+	staff_setup()
 
 /client/proc/citadel_client_procs(href_list)
 	if(href_list["mentor_msg"])
@@ -41,7 +41,7 @@
 	if(mentor_datum || check_rights_for(src, R_ADMIN,0))
 		return TRUE
 
-/client/proc/is_staff() // fortuna add
+/client/proc/is_staff()
 	if(check_rights_for(src, R_SPAWN,0) || check_rights_for(src, R_ADMIN,0))
 		return TRUE
 

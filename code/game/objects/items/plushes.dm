@@ -464,7 +464,7 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 	icon_state = "bubbleplush"
 	attack_verb = list("rends")
 	squeak_override = list('sound/magic/demon_attack1.ogg'=1)
-/* Fortuna removal. dear god unoptimized plushie code
+/*Dear god unoptimized plushie code
 /obj/item/toy/plush/plushvar
 	name = "ratvar plushie"
 	desc = "An adorable plushie of the clockwork justiciar himself with new and improved spring arm action."

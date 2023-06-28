@@ -98,6 +98,8 @@
 	ScrapeAway(null, flags)
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, 1) //beautiful destruction
+	if(user.mind.skill_holder)
+		user.mind.auto_gain_experience(/datum/skill/level/mining, 5, BARE_USE_TOOL_MULT)
 
 /turf/closed/mineral/attack_animal(mob/living/simple_animal/user)
 	if((user.environment_smash & ENVIRONMENT_SMASH_WALLS) || (user.environment_smash & ENVIRONMENT_SMASH_RWALLS))
@@ -883,7 +885,7 @@
 	addtimer(CALLBACK(src, .proc/AfterChange), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
 	if(user.mind.skill_holder)
-		user.mind.auto_gain_experience(/datum/skill/level/mining, 5, BARE_USE_TOOL_MULT)
+		user.mind.auto_gain_experience(/datum/skill/level/mining, 15, BARE_USE_TOOL_MULT)
 
 /turf/closed/mineral/strong/proc/drop_ores()
 	if(prob(10))

@@ -88,7 +88,7 @@
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 
 
-// Mole Miner				
+// Mole Miner
 /obj/item/melee/powerfist/f13/moleminer
 	name = "mole miner gauntlet"
 	desc = "A hand-held mining and cutting implement, repurposed into a deadly melee weapon.  Its name origins are a mystery..."
@@ -103,6 +103,7 @@
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	tool_behaviour = TOOL_MINING
+	used_skills = list(/datum/skill/level/mining)
 	var/digrange = 0
 	toolspeed = 0.4
 	sharpness = SHARP_EDGED

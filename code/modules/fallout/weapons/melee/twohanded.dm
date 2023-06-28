@@ -604,6 +604,7 @@
 	icon_prefix = "hammer-rocket"
 	force = 20
 	tool_behaviour = TOOL_MINING
+	used_skills = list(/datum/skill/level/mining)
 	toolspeed = 0.5
 	hitsound = "sound/f13effects/explosion_distant_2.ogg"
 	usesound = "sound/f13effects/explosion_distant_2.ogg"

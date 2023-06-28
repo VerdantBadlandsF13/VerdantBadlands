@@ -862,7 +862,16 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(!delay && !tool_start_check(user, amount))
 		return
 
-	delay *= toolspeed
+	var/skill_modifier = 1
+
+	if(tool_behaviour == TOOL_MINING && ishuman(user))
+		if(user.mind)
+			skill_modifier = user.mind.skill_holder(/datum/skill/level/mining, JOB_SKILL_EXPERT)
+
+			if(user.mind.get_skill_level(/datum/skill/level/mining) >= JOB_SKILL_EXPERT && prob(user.mind.skill_holder(/datum/skill/level/mining, JOB_SKILL_EXPERT)))
+				mineral_scan_pulse(get_turf(user), 2)
+
+	delay *= toolspeed *- skill_modifier
 
 	// Play tool sound at the beginning of tool usage.
 	play_tool_sound(target, volume)

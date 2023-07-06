@@ -77,14 +77,3 @@
 /obj/item/projectile/beam/laser/pistol/wattz
 	name = "feeble laser bolt"
 	damage = 18
-
-/obj/item/projectile/beam/laser/pistol/stun
-	name = "compliance beam"
-	damage = 32
-	armour_penetration = 0.5
-	damage_type = STAMINA
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
-	light_color = LIGHT_COLOR_BLUE
-	tracer_type = /obj/effect/projectile/tracer/disabler
-	muzzle_type = /obj/effect/projectile/muzzle/disabler
-	impact_type = /obj/effect/projectile/impact/disabler

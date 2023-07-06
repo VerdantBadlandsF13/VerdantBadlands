@@ -6,6 +6,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(command_positions, list(
 	"Vault-Tec Overseer",
+	"Vault-Tec Security Chief",
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
@@ -31,6 +32,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Lumberjack",
 
 	"Vault-Tec Overseer",
+	"Vault-Tec Security Chief",
 	"Vault-Tec Security",
 	"Vault-Tec Doctor",
 	"Vault-Tec Scientist",
@@ -41,6 +43,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 GLOBAL_LIST_INIT(vault_positions, list(
 	"Vault-Tec Overseer",
+	"Vault-Tec Security Chief",
 	"Vault-Tec Security",
 	"Vault-Tec Doctor",
 	"Vault-Tec Scientist",
@@ -51,6 +54,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
+	"Tavernkeep",
 	))
 
 GLOBAL_LIST_INIT(security_positions, list(

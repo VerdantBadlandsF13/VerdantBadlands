@@ -19,6 +19,33 @@
 				- Ensure a consistent food supply for your militia company and citizens. <br> \
 				- Make contact and build rapport with existing powers in the area."
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+	)
+
 /datum/outfit/job/gmb
 	name = "GMBdatums"
 	jobtype = /datum/job/gmb

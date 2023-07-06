@@ -12,7 +12,6 @@
 		new /obj/item/storage/backpack(src)
 	else
 		new /obj/item/storage/backpack/satchel(src)
-	new /obj/item/radio/headset( src )
 
 /obj/structure/closet/secure_closet/personal/patient
 	name = "patient's closet"
@@ -31,7 +30,6 @@
 /obj/structure/closet/secure_closet/personal/cabinet/PopulateContents()
 	new /obj/item/storage/backpack/satchel/leather/withwallet( src )
 	new /obj/item/instrument/piano_synth(src)
-	new /obj/item/radio/headset( src )
 
 /obj/structure/closet/secure_closet/personal/attackby(obj/item/W, mob/user, params)
 	var/obj/item/card/id/I = W.GetID()
@@ -56,7 +54,7 @@
 
 /obj/structure/closet/secure_closet/personal/handle_lock_addition() //If lock construction is successful we don't care what access the electronics had, so we override it
 	if(..())
-		req_access = list(ACCESS_ALL_PERSONAL_LOCKERS)
+		req_access = list(ACCESS_VFE_RESTRICT)
 		lockerelectronics.accesses = req_access
 
 /obj/structure/closet/secure_closet/personal/handle_lock_removal()

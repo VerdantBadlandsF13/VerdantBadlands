@@ -127,9 +127,7 @@
 /obj/item/reagent_containers/food/snacks/grown/glow
 	seed = /obj/item/seeds/glow
 	name = "shroom"
-	desc = "An edible mushroom which has the ability to decrease radiation levels."
+	desc = "An edible mushroom. Probably."
 	icon_state = "shroom"
 	icon = 'icons/obj/hydroponics/harvest.dmi'
 	filling_color = "#FF6347"
-
-/*MRP*/

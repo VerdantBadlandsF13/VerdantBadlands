@@ -77,7 +77,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/mechanical
 	name = "mechanical toolbox"
-	icon_state = "blue"
+	icon_state = "blue_dep"
 	item_state = "toolbox_blue"
 
 /obj/item/storage/toolbox/mechanical/PopulateContents()
@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/mechanical/old
 	name = "rusty blue toolbox"
-	icon_state = "toolbox_blue_old"
+	icon_state = "toolbox_blue_old_dep"
 	has_latches = FALSE
 	can_rubberify = FALSE
 
@@ -109,7 +109,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	item_state = "toolbox_yellow"
 
 /obj/item/storage/toolbox/electrical/PopulateContents()
-	var/pickedcolor = pick("red","yellow","green","blue","pink","orange","cyan","white")
+	var/pickedcolor = pick("red","yellow","green","blue_dep","pink","orange","cyan","white")
 	new /obj/item/screwdriver(src)
 	new /obj/item/wirecutters(src)
 	new /obj/item/t_scanner(src)
@@ -145,11 +145,11 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 
 /obj/item/storage/toolbox/drone
 	name = "mechanical toolbox"
-	icon_state = "blue"
+	icon_state = "blue_dep"
 	item_state = "toolbox_blue"
 
 /obj/item/storage/toolbox/drone/PopulateContents()
-	var/pickedcolor = pick("red","yellow","green","blue","pink","orange","cyan","white")
+	var/pickedcolor = pick("red","yellow","green","blue_dep","pink","orange","cyan","white")
 	new /obj/item/screwdriver(src)
 	new /obj/item/wrench(src)
 	new /obj/item/weldingtool(src)
@@ -204,7 +204,7 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	name = "plastitanium toolbox"
 	desc = "A toolbox made out of plastitanium. Probably packs a massive punch."
 	total_mass = 5
-	icon_state = "blue"
+	icon_state = "blue_dep"
 	item_state = "toolbox_blue"
 	w_class = WEIGHT_CLASS_HUGE		//heyo no bohing this!
 	force = 18		//spear damage
@@ -326,10 +326,25 @@ GLOBAL_LIST_EMPTY(rubber_toolbox_icons)
 	can_rubberify = FALSE //we are already the future.
 
 /obj/item/storage/toolbox/rubber/Initialize()
-	icon_state = pick("blue", "red", "yellow", "green")
+	icon_state = pick("blue_dep", "red", "yellow", "green")
 	item_state = "toolbox_[icon_state]"
 	if(!GLOB.rubber_toolbox_icons[icon_state])
 		generate_rubber_toolbox_icon()
 	icon = GLOB.rubber_toolbox_icons[icon_state]
 	. = ..()
 	AddComponent(/datum/component/bouncy)
+
+/obj/item/storage/toolbox/old
+	name = "rusty toolbox"
+	desc = "An aged toolbox, hardly holding together and on the verge of falling to pieces. Inside, the tools are much of the same."
+	icon_state = "toolbox_blue_old"
+	has_latches = FALSE
+	can_rubberify = FALSE
+
+/obj/item/storage/toolbox/old/PopulateContents()
+	new /obj/item/weldingtool/crude(src)
+	new /obj/item/screwdriver/crude(src)
+	new /obj/item/wirecutters/crude(src)
+	new /obj/item/wrench/crude(src)
+	new /obj/item/crowbar/crude(src)
+	new /obj/item/multitool/basic(src)

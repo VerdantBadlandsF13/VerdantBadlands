@@ -172,6 +172,43 @@
 	desc = "The juice of this fleshy plant soothes burns, but it also removes nutrients from the body."
 	produce = /obj/item/reagent_containers/food/snacks/grown/agave
 
+/obj/structure/flora/wasteplant/rad_fungus
+	name = "glowing fungi"
+	icon = 'icons/fallout/flora/flora.dmi'
+	icon_state = "mushroom_1"
+	desc = "This bio-luminescent fungus is a prime example of something that has thrived within the wasteland. \
+	Beyond providing light, it has little use. For those with good intentions, that is."
+	produce = /obj/item/reagent_containers/food/snacks/grown/glow
+	light_color = LIGHT_COLOR_GREEN
+	light_power = 1.75
+	light_range = 3
+
+/obj/structure/flora/wasteplant/rad_fungus/Initialize()
+	. = ..()
+	icon_state = "mushroom_[rand(1,4)]"
+	START_PROCESSING(SSradiation,src)
+
+/obj/structure/flora/wasteplant/rad_fungus/Destroy()
+	STOP_PROCESSING(SSradiation,src)
+	return ..()
+
+/obj/structure/flora/wasteplant/rad_fungus/process()
+	if(QDELETED(src))
+		return PROCESS_KILL
+
+	if(!z || !SSmobs.clients_by_zlevel[z].len)
+		return
+
+	for(var/mob/living/carbon/human/victim in view(src,1))
+		if(istype(victim) && victim.stat != DEAD)
+			victim.rad_act(5)
+
+	for(var/obj/item/geiger_counter/geiger in view(src,5))
+		if(istype(geiger))
+			geiger.rad_act(15)
+
+// No one in view?  Don't do anything.
+	return
 
 /////FALLOUT 13 TREES////
 /obj/structure/flora/tree/joshua

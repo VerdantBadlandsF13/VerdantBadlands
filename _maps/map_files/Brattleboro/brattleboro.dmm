@@ -181,7 +181,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
+	faction = list("raider,                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -299,7 +299,7 @@
 	light_color = "#c1caff"
 	},
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
+	faction = list("raider,                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -361,7 +361,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -379,7 +379,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -818,7 +818,7 @@
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowtop"
 	},
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
 "acg" = (
@@ -840,10 +840,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red,
 /area/f13/village)
-"acw" = (
-/obj/item/grenade/f13/mine/planted,
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "acB" = (
 /obj/machinery/workbench,
 /obj/item/stack/sheet/metal/fifty,
@@ -1221,10 +1217,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"arC" = (
-/obj/machinery/vending/engineering,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/building)
 "arP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1374,6 +1366,12 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"ayW" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "ayZ" = (
 /obj/machinery/light/small,
 /obj/item/kirbyplants/random,
@@ -1977,6 +1975,13 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/building/mall)
+"aUi" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerborder"
+	},
+/area/f13/wasteland)
 "aUw" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /obj/effect/decal/cleanable/oil,
@@ -2147,6 +2152,10 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"aZt" = (
+/obj/item/minefield_sign,
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/wasteland)
 "aZx" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
@@ -2527,7 +2536,12 @@
 	},
 /area/f13/village)
 "bkE" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
 	},
@@ -2738,10 +2752,6 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bighorn)
-"bsG" = (
-/obj/structure/fluff/fokoff_sign,
-/turf/open/indestructible/ground/outside/dirt/harsh,
-/area/f13/wasteland)
 "bsO" = (
 /obj/structure/reagent_dispensers/compostbin,
 /turf/open/floor/f13/wood,
@@ -3113,6 +3123,14 @@
 "bEW" = (
 /turf/closed/wall/mineral/brick,
 /area/f13/bl/gmb)
+"bFp" = (
+/obj/structure/fence/end{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "bFJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/wood/house,
@@ -3487,12 +3505,6 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"bRE" = (
-/obj/structure/fluff/fokoff_sign,
-/turf/open/indestructible/ground/outside/desert/harsh{
-	name = "dry dirt"
-	},
-/area/f13/wasteland)
 "bRI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4282,7 +4294,7 @@
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowbottom"
 	},
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/barricade/wooden/strong,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
@@ -5899,7 +5911,12 @@
 	},
 /area/f13/village)
 "dEj" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/wood/wood_fancy/wood_fancy_light,
 /area/f13/building)
 "dEL" = (
@@ -6052,6 +6069,15 @@
 	icon_state = "cafeteria"
 	},
 /area/f13/building)
+"dKX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/rack/shelf_metal,
+/obj/item/key/motorcycle,
+/obj/item/key/motorcycle,
+/turf/open/floor/plasteel/f13/vault_floor,
+/area/f13/bl/gmb)
 "dLe" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -6736,7 +6762,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "ekf" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /obj/effect/decal/cleanable/glass,
 /obj/structure/curtain{
 	color = "#363636";
@@ -6780,7 +6811,12 @@
 /area/f13/building/mall)
 "ekG" = (
 /obj/structure/lattice,
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /obj/effect/decal/cleanable/glass,
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
@@ -7173,7 +7209,12 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "exI" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "ezc" = (
@@ -7498,6 +7539,14 @@
 /obj/item/storage/trash_stack,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"eKO" = (
+/obj/structure/decoration/rag{
+	icon_state = "skin";
+	pixel_x = 32;
+	name = "human skin"
+	},
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/caves)
 "eLa" = (
 /obj/structure/table/wood,
 /turf/open/indestructible/ground/outside/dirt/harsh,
@@ -7943,7 +7992,12 @@
 	},
 /area/f13/village)
 "eZa" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "eZW" = (
@@ -8116,7 +8170,7 @@
 	},
 /area/f13/wasteland/bl/dfs)
 "fgM" = (
-/obj/machinery/vending/tool,
+/obj/structure/wreck/trash/machinepile,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -10185,13 +10239,6 @@
 	icon_state = "horizontaloutermain1"
 	},
 /area/f13/wasteland)
-"gEp" = (
-/obj/machinery/vending/engineering,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/building/mall)
 "gFk" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -10846,10 +10893,6 @@
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"gXw" = (
-/mob/living/simple_animal/hostile/radscorpion,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "gXz" = (
 /obj/effect/overlay/junk/sink{
 	pixel_y = 20
@@ -10862,6 +10905,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood/interior,
 /area/f13/village)
+"gYp" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain1"
+	},
+/area/f13/wasteland)
 "gYG" = (
 /obj/structure/junk/small/bed2,
 /turf/open/floor/f13/wood{
@@ -11376,10 +11425,6 @@
 	icon_state = "wide_dark1"
 	},
 /area/f13/village)
-"hwd" = (
-/obj/item/key/motorcycle,
-/turf/open/floor/plasteel/f13/vault_floor,
-/area/f13/bl/gmb)
 "hwS" = (
 /obj/structure/table/wood,
 /obj/machinery/microwave,
@@ -12543,17 +12588,6 @@
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"imS" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/workbench/advanced,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/building/mall)
 "imV" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt,
@@ -13664,7 +13698,7 @@
 	name = "ghoulified miner";
 	desc = "The shambling. irradiated form of a former Granite State Quarries worker."
 	},
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jbd" = (
@@ -13721,7 +13755,7 @@
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowright"
 	},
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/barricade/wooden/strong,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
@@ -15484,7 +15518,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	color = "#818181";
@@ -15618,6 +15652,12 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"kvy" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
 "kvz" = (
 /turf/open/indestructible/ground/outside/dirt/harsh/side{
 	dir = 10
@@ -16209,6 +16249,13 @@
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/wasteland)
+"kMW" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/road{
+	dir = 8;
+	icon_state = "horizontalinnermain2left"
+	},
 /area/f13/wasteland)
 "kNj" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -17495,6 +17542,12 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"lLw" = (
+/turf/open/indestructible/ground/outside/dirt/harsh{
+	dir = 6;
+	icon_state = "dirt"
+	},
+/area/f13/caves)
 "lLz" = (
 /obj/structure/chair/sofa/right{
 	dir = 4
@@ -17684,6 +17737,10 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"lSu" = (
+/obj/item/clothing/suit/armored/f13/light/kit/punk,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/building)
 "lSv" = (
 /obj/structure/table/wood,
 /obj/item/fishingrod,
@@ -17882,12 +17939,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/village)
-"lZQ" = (
-/turf/open/indestructible/ground/outside/dirt/harsh/side{
-	dir = 1;
-	icon_state = "dirtcorner"
-	},
-/area/f13/wasteland/bl/gmb)
 "lZR" = (
 /obj/structure/sink{
 	dir = 4;
@@ -18133,6 +18184,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"mhz" = (
+/obj/structure/fence,
+/turf/open/indestructible/ground/outside/desert/harsh,
+/area/f13/wasteland)
 "mhE" = (
 /obj/structure/cargocrate,
 /obj/structure/cargocrate{
@@ -18153,7 +18208,7 @@
 /area/f13/building/mall)
 "mhS" = (
 /obj/structure/window/fulltile/store,
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
 "mij" = (
@@ -18194,6 +18249,12 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bl/gmb)
+"mjs" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
 "mjy" = (
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_6"
@@ -19376,11 +19437,15 @@
 /area/f13/village)
 "mYD" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox/electrical,
-/obj/item/storage/toolbox/drone,
 /obj/item/pickaxe,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"mYK" = (
+/obj/structure/fence/end,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "mYS" = (
 /obj/structure/table/booth,
 /turf/open/floor/wood/wood_common,
@@ -19617,6 +19682,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"nhS" = (
+/obj/structure/fence/end{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "nhW" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -20664,6 +20737,14 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/village)
+"nXY" = (
+/obj/structure/fence/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "nYh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -21065,7 +21146,12 @@
 	},
 /area/f13/building/mall)
 "olj" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "olk" = (
@@ -21571,6 +21657,12 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"oAR" = (
+/obj/effect/landmark/nuclear_waste_spawner/strong,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "oBa" = (
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontal"
@@ -24522,8 +24614,8 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "qBj" = (
-/obj/machinery/vending/engivend,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid";
 	name = "store floor"
@@ -25416,12 +25508,6 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
-"rhJ" = (
-/obj/structure/decoration/rag{
-	pixel_y = 33
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/building)
 "rhN" = (
 /obj/structure/disposalpipe/junction/yjunction,
 /obj/structure/railing/handrail/rusty,
@@ -25458,6 +25544,10 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"riZ" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/wasteland)
 "rjf" = (
 /obj/structure/bookshelf{
 	icon_state = "book-4"
@@ -25809,7 +25899,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "rxx" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "rxC" = (
@@ -25954,11 +26044,6 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/building)
-"rCd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/key/motorcycle,
-/turf/open/floor/plasteel/f13/vault_floor,
-/area/f13/bl/gmb)
 "rCn" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -26531,6 +26616,10 @@
 	icon_state = "cafeteria"
 	},
 /area/f13/building)
+"rWg" = (
+/obj/effect/landmark/nuclear_waste_spawner/weak,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
 "rWo" = (
 /obj/structure/window/fulltile/house,
 /obj/effect/decal/cleanable/dirt,
@@ -27261,7 +27350,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
@@ -27449,11 +27538,6 @@
 	icon_state = "horizontalbottombordertop0"
 	},
 /area/f13/wasteland)
-"sHC" = (
-/obj/effect/decal/remains/human,
-/obj/item/clothing/suit/armored/f13/light/kit/punk,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/building)
 "sIg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/stairs/north,
@@ -27949,6 +28033,12 @@
 	icon_state = "verticalleftborderright0"
 	},
 /area/f13/wasteland)
+"taq" = (
+/obj/structure/fence/corner,
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "tau" = (
 /obj/structure/lamp_post,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -28042,7 +28132,12 @@
 /turf/open/liquid/water/deep,
 /area/f13/wasteland)
 "tdc" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
@@ -28105,6 +28200,14 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bighorn)
+"tfb" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "tfl" = (
 /obj/structure/fence{
 	dir = 4;
@@ -28370,6 +28473,7 @@
 /area/f13/village)
 "tqR" = (
 /obj/machinery/autolathe/ammo,
+/obj/item/storage/toolbox/ammo,
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	icon_state = "dirtcorner"
 	},
@@ -29040,12 +29144,6 @@
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
-"tQw" = (
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 1;
-	icon_state = "verticalrightborderright0"
-	},
-/area/f13/caves)
 "tQx" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/destructible/hobo_barrel/lit,
@@ -29871,10 +29969,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
-"utc" = (
-/obj/structure/nest/scorpion,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "utd" = (
 /obj/structure/table/wood/settler,
 /obj/machinery/computer/terminal{
@@ -29926,7 +30020,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain1"
@@ -30037,6 +30131,14 @@
 	icon_state = "common-broken3"
 	},
 /area/f13/bl/gmb)
+"uxs" = (
+/obj/structure/fence{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "uyf" = (
 /obj/structure/flora/rock/pile/largejungle,
 /turf/open/indestructible/ground/outside/savannah{
@@ -30617,10 +30719,6 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/wasteland)
-"uRe" = (
-/obj/structure/billboard/den,
-/turf/open/indestructible/ground/outside/dirt/harsh,
-/area/f13/city/bighorn)
 "uRv" = (
 /mob/living/simple_animal/hostile/raider,
 /turf/open/floor/f13/wood,
@@ -31522,6 +31620,14 @@
 	},
 /turf/open/floor/wood/wood_common/wood_common_light,
 /area/f13/wasteland)
+"vyi" = (
+/obj/structure/decoration/rag{
+	icon_state = "skulls";
+	name = "human skulls";
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/outside/dirt/harsh,
+/area/f13/caves)
 "vyq" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood/wood_common,
@@ -31584,8 +31690,8 @@
 	},
 /area/f13/village)
 "vBH" = (
-/obj/machinery/vending/tool,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/junk/machinery,
 /turf/open/floor/f13{
 	color = "#818181";
 	icon_state = "floorrustysolid"
@@ -31848,7 +31954,7 @@
 /area/f13/village)
 "vNw" = (
 /obj/structure/window/fulltile/store,
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/barricade/wooden/strong,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
@@ -32044,6 +32150,13 @@
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outermaincornerinner"
 	},
+/area/f13/wasteland)
+"vWp" = (
+/obj/effect/decal/marking{
+	icon_state = "doublehorizontal"
+	},
+/obj/effect/landmark/nuclear_waste_spawner/strong,
+/turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "vWs" = (
 /obj/structure/railing{
@@ -32446,7 +32559,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -32963,6 +33076,14 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"wCD" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert/harsh{
+	name = "dry dirt"
+	},
+/area/f13/wasteland)
 "wCN" = (
 /obj/structure/closet/fridge/standard,
 /obj/item/storage/box/ingredients/grains,
@@ -34070,7 +34191,6 @@
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
 	},
-/obj/item/storage/toolbox/drone,
 /obj/item/pickaxe,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
@@ -34444,7 +34564,7 @@
 	},
 /area/f13/village)
 "xBq" = (
-/obj/structure/nest/fireant,
+/obj/structure/nest/ant,
 /obj/structure/junk/small/bed,
 /obj/item/reagent_containers/hypospray/medipen/medx,
 /turf/open/indestructible/ground/inside/mountain,
@@ -34646,10 +34766,6 @@
 /obj/machinery/vending/boozeomat,
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
-"xGD" = (
-/obj/machinery/vending/tool,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/building)
 "xGE" = (
 /turf/open/floor/plating/wooden,
 /area/f13/village)
@@ -34711,10 +34827,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"xIQ" = (
-/obj/structure/nest/fireant,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "xIY" = (
 /turf/closed/indestructible/rock{
 	color = "#b09168";
@@ -35030,7 +35142,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot, raider")
+	faction = list("wastebot,                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -35358,12 +35470,19 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"yeE" = (
+/obj/structure/badlands_props{
+	icon_state = "medical_flag";
+	pixel_x = -32
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "yeL" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowleft"
 	},
 /obj/structure/barricade/wooden/strong,
-/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/plasteel/dark,
 /area/f13/village)
 "yfi" = (
@@ -36837,7 +36956,7 @@ mzx
 mho
 sDW
 baC
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -37293,8 +37412,8 @@ sAB
 sAB
 pqb
 nRs
-bxh
-bxh
+tfb
+taq
 bxh
 bxh
 bxh
@@ -37750,8 +37869,8 @@ oeM
 oeM
 pqb
 nRs
-bxh
-bxh
+wCD
+iyu
 bxh
 bxh
 bxh
@@ -38207,7 +38326,7 @@ oeM
 oeM
 pqb
 nRs
-iyu
+wCD
 bxh
 bxh
 bxh
@@ -38664,7 +38783,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -39121,7 +39240,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -39578,7 +39697,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -40035,7 +40154,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -40492,7 +40611,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -40949,8 +41068,8 @@ oeM
 oeM
 pqb
 nRs
+wCD
 dmg
-bxh
 bxh
 bxh
 bxh
@@ -41406,15 +41525,15 @@ oeM
 oeM
 pqb
 nRs
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+taq
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+tfb
 bxh
 bxh
 bxh
@@ -41871,7 +41990,7 @@ rSx
 rSx
 rSx
 cyw
-bxh
+wCD
 bxh
 vTN
 bxh
@@ -42328,7 +42447,7 @@ mzx
 mzx
 mho
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -42785,7 +42904,7 @@ sAB
 dmk
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -42860,7 +42979,7 @@ kvC
 aaR
 imr
 kvC
-kvC
+yeE
 kvC
 nCZ
 fxI
@@ -43242,7 +43361,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -43699,7 +43818,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -44078,7 +44197,7 @@ gOW
 oeM
 oeM
 oeM
-oeM
+rWg
 oeM
 pqb
 rjo
@@ -44156,7 +44275,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 cti
@@ -44613,7 +44732,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -45070,7 +45189,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -45527,7 +45646,7 @@ oeM
 xga
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -45984,7 +46103,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -46441,7 +46560,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -46898,7 +47017,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -47355,7 +47474,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bVf
@@ -47812,7 +47931,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -48267,9 +48386,9 @@ xhr
 wko
 oeM
 oeM
-pqb
+kvy
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -48726,7 +48845,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -48909,7 +49028,7 @@ tzL
 oeM
 oeM
 oeM
-oeM
+rWg
 oeM
 oeM
 oeM
@@ -49183,7 +49302,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -49640,7 +49759,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bOs
 bxh
 bxh
@@ -50097,7 +50216,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -50520,7 +50639,7 @@ sAB
 sAB
 eVS
 oeM
-oeM
+rWg
 oeM
 sHs
 pqb
@@ -50554,7 +50673,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -51011,7 +51130,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -51152,7 +51271,7 @@ bxh
 bxh
 bxh
 fwS
-srA
+aUi
 mho
 mPu
 nRs
@@ -51353,7 +51472,7 @@ cDu
 lpp
 lpp
 cDu
-oeM
+rWg
 cDu
 cDu
 cDu
@@ -51468,7 +51587,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -51749,7 +51868,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -51925,7 +52044,7 @@ oeM
 gte
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 cti
@@ -52382,7 +52501,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -52839,7 +52958,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -53296,7 +53415,7 @@ ehL
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -53753,7 +53872,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bVf
 bxh
 bxh
@@ -54017,7 +54136,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -54210,7 +54329,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -54667,7 +54786,7 @@ rSx
 rSx
 pUN
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -55124,7 +55243,7 @@ mzx
 mzx
 mzx
 baC
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -55573,6 +55692,15 @@ oeM
 oeM
 pqb
 nRs
+tfb
+uxs
+uxs
+uxs
+uxs
+uxs
+uxs
+uxs
+taq
 bxh
 bxh
 bxh
@@ -55590,16 +55718,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+oAR
 bxh
 bxh
 bxh
@@ -56030,7 +56149,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -56487,7 +56606,7 @@ oeM
 oeM
 pzg
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -56787,7 +56906,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -56944,7 +57063,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -57225,7 +57344,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -57401,7 +57520,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -57858,7 +57977,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -58315,7 +58434,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -58578,7 +58697,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -58772,7 +58891,7 @@ oeM
 xga
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -59229,7 +59348,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -59521,7 +59640,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -59686,7 +59805,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -60143,7 +60262,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -60600,7 +60719,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -60648,7 +60767,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+cti
 bxh
 bxh
 bxh
@@ -60852,7 +60971,7 @@ mwf
 vga
 nRs
 wko
-her
+kMW
 cDu
 oeM
 oeM
@@ -61057,7 +61176,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -61514,7 +61633,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -61971,7 +62090,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -62022,7 +62141,7 @@ bxh
 bxh
 bxh
 bxh
-cti
+bxh
 bxh
 bxh
 bxh
@@ -62428,7 +62547,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -62472,7 +62591,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+roe
 bEW
 iEP
 iEP
@@ -62885,7 +63004,7 @@ oeM
 oeM
 pzg
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -62928,13 +63047,13 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
+roe
+iuY
 oSR
 vjY
-hwd
+bBN
 dHs
-vjY
+dKX
 iEP
 lkg
 xDf
@@ -63342,7 +63461,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -63384,9 +63503,9 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
 oSR
 bBN
 pLk
@@ -63799,6 +63918,7 @@ oeM
 oeM
 pqb
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -63839,11 +63959,10 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
+anP
 oSR
 bBN
 bBN
@@ -64098,7 +64217,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -64256,7 +64375,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -64296,11 +64415,11 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
+anP
+anP
 oSR
 bBN
 pLk
@@ -64713,6 +64832,7 @@ oeM
 oeM
 pqb
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -64751,16 +64871,15 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
+anP
+anP
+anP
 oSR
 dHs
-rCd
+dHs
 wxs
 ljd
 iEP
@@ -65170,7 +65289,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -65208,13 +65327,13 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bOs
-bxh
-bxh
+roe
+iuY
+anP
+anP
+anP
+anP
+anP
 oSR
 kYI
 uVO
@@ -65627,6 +65746,7 @@ oeM
 oeM
 pqb
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -65663,15 +65783,14 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bOs
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
+anP
+anP
+anP
+anP
+qvg
 bEW
 iEP
 iEP
@@ -66084,7 +66203,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -66120,15 +66239,15 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+roe
+iuY
+anP
+anP
+anP
+anP
+anP
+qvg
+fdx
 bxh
 bxh
 bxh
@@ -66541,7 +66660,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -66577,17 +66696,17 @@ bxh
 bOs
 bxh
 bxh
+fwS
+anP
+anP
+anP
+anP
+anP
+anP
+thO
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+bOs
 bxh
 iEP
 qWa
@@ -66998,6 +67117,7 @@ oeM
 oeM
 pqb
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -67033,15 +67153,14 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bOs
-bxh
-bxh
+fwS
+anP
+anP
+anP
+anP
+anP
+qvg
+fdx
 bxh
 bxh
 bxh
@@ -67455,7 +67574,7 @@ cDu
 oeM
 pqb
 nRs
-bxh
+nXY
 bxh
 ldO
 qqZ
@@ -67491,13 +67610,13 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+fwS
+anP
+anP
+anP
+anP
+qvg
+fdx
 bxh
 bxh
 bxh
@@ -67746,7 +67865,7 @@ xKH
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -67915,7 +68034,7 @@ nRs
 bxh
 ldO
 kZA
-anP
+aZt
 azq
 cEU
 bxh
@@ -67948,12 +68067,12 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+fwS
+anP
+anP
+anP
+qvg
+fdx
 bxh
 bxh
 bxh
@@ -68405,16 +68524,16 @@ bxh
 bxh
 bxh
 bxh
+fwS
+anP
+anP
+anP
+thO
 bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+bOs
 bxh
 bxh
 xqq
@@ -68862,11 +68981,11 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+fwS
+anP
+anP
+anP
+thO
 bxh
 bxh
 bxh
@@ -69319,14 +69438,14 @@ bOs
 bxh
 bxh
 bxh
-bOs
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+fwS
+anP
+anP
+anP
+gim
+oRd
+oRd
+nlm
 bxh
 bEW
 xqq
@@ -69776,14 +69895,14 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-ldO
-qqZ
-qqZ
-qqZ
+fwS
+anP
+anP
+anP
+anP
+anP
+aZt
+gim
 qqZ
 vmc
 qfN
@@ -70197,7 +70316,7 @@ cDu
 cDu
 pqb
 nRs
-bxh
+bFp
 bxh
 bxh
 lla
@@ -70233,11 +70352,11 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-ldO
-qqZ
-kZA
+fwS
+anP
+anP
+anP
+anP
 anP
 anP
 anP
@@ -70654,7 +70773,7 @@ cDu
 cDu
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -70690,9 +70809,9 @@ bxh
 bxh
 bxh
 bxh
-ldO
-qqZ
-kZA
+fwS
+anP
+anP
 anP
 anP
 anP
@@ -71111,7 +71230,7 @@ cDu
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -71568,7 +71687,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -71668,7 +71787,7 @@ fwb
 fwb
 fwb
 fwb
-acw
+oMJ
 fwb
 fwb
 fwb
@@ -72025,7 +72144,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 vTN
@@ -72087,7 +72206,7 @@ dZi
 dZi
 dZi
 dZi
-fxI
+uZi
 fxI
 fxI
 fxI
@@ -72482,7 +72601,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -72545,7 +72664,7 @@ dZi
 dZi
 dZi
 qgd
-fxI
+uZi
 fxI
 fxI
 woD
@@ -72939,7 +73058,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -73396,7 +73515,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -73853,7 +73972,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -74151,7 +74270,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -74310,7 +74429,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -74342,7 +74461,7 @@ anP
 anP
 anP
 anP
-anP
+riZ
 anP
 anP
 jzu
@@ -74767,7 +74886,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -75224,7 +75343,7 @@ oeM
 oeM
 pzg
 nRs
-bxh
+wCD
 bxh
 iyu
 bxh
@@ -75319,7 +75438,7 @@ bxh
 bxh
 bxh
 bxh
-bqC
+bxh
 bxh
 bxh
 fwb
@@ -75681,7 +75800,7 @@ oeM
 aPg
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -75737,7 +75856,7 @@ fxI
 fxI
 fxI
 fxI
-ybI
+utG
 dZi
 dZi
 dZi
@@ -75745,7 +75864,7 @@ dZi
 dZi
 dZi
 dZi
-fxI
+oHo
 efh
 fao
 kYx
@@ -76138,7 +76257,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -76194,15 +76313,15 @@ fxI
 fxI
 fxI
 fxI
-fxI
-fxI
+ybI
+kvz
 dZi
 dZi
 dZi
 dZi
 dZi
 dZi
-fxI
+oHo
 efh
 efh
 efh
@@ -76314,7 +76433,7 @@ sAB
 dmk
 sAB
 sAB
-sAB
+mjs
 sAB
 sAB
 sAB
@@ -76429,7 +76548,7 @@ xKH
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -76511,7 +76630,7 @@ ldD
 ldD
 ldD
 ldD
-anP
+ldD
 ldD
 ldD
 ldD
@@ -76595,7 +76714,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 vTN
@@ -76652,14 +76771,14 @@ efh
 efh
 efh
 fxI
-fxI
+nye
 dZi
 dZi
 dZi
 dZi
 dZi
 dZi
-tsG
+qgd
 tsG
 tsG
 tsG
@@ -76968,7 +77087,7 @@ ldD
 ldD
 ldD
 ldD
-anP
+ldD
 ldD
 ldD
 ldD
@@ -77052,7 +77171,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -77108,15 +77227,15 @@ kvC
 ikX
 kvC
 efh
-fxI
-fxI
+siN
+ahI
 dZi
 dZi
 dZi
 dZi
 dZi
 dZi
-kmp
+new
 kmp
 kmp
 kmp
@@ -77509,7 +77628,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -77565,7 +77684,7 @@ wzS
 kvC
 olS
 efh
-fxI
+utG
 dZi
 dZi
 dZi
@@ -77573,7 +77692,7 @@ dZi
 dZi
 dZi
 dZi
-fxI
+oHo
 fxI
 fxI
 efh
@@ -77964,9 +78083,9 @@ nRs
 wko
 oeM
 oeM
-pqb
+kvy
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -78022,7 +78141,7 @@ pue
 vvR
 pue
 efh
-fxI
+utG
 dZi
 dZi
 dZi
@@ -78030,7 +78149,7 @@ dZi
 dZi
 dZi
 dZi
-fxI
+oHo
 fxI
 fxI
 efh
@@ -78423,7 +78542,7 @@ cDu
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -78479,7 +78598,7 @@ kob
 kvC
 kvC
 efh
-haH
+gVv
 dZi
 dZi
 dZi
@@ -78488,7 +78607,7 @@ dZi
 dZi
 dZi
 qgd
-fxI
+uZi
 fxI
 efh
 voM
@@ -78880,7 +78999,7 @@ cDu
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bVf
 bxh
@@ -79337,7 +79456,7 @@ cDu
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -79637,7 +79756,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -79794,7 +79913,7 @@ oeM
 tzL
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -80251,7 +80370,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -80708,7 +80827,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -81165,7 +81284,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -81622,7 +81741,7 @@ xga
 oeM
 pzg
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -81687,7 +81806,7 @@ new
 ojU
 ojU
 ojU
-lZQ
+kvz
 efh
 vyq
 dmb
@@ -82079,7 +82198,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 cti
 bxh
@@ -82144,7 +82263,7 @@ oHo
 fxI
 fxI
 fxI
-fxI
+wYu
 efh
 efh
 woD
@@ -82536,7 +82655,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -82993,7 +83112,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -83263,7 +83382,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -83450,7 +83569,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -83907,7 +84026,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -84166,7 +84285,7 @@ tzL
 tFY
 nRs
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -84190,7 +84309,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -84364,7 +84483,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -84821,7 +84940,7 @@ her
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -85087,7 +85206,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -85114,7 +85233,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -85278,8 +85397,8 @@ jix
 oeM
 pqb
 nRs
+wCD
 iyu
-bxh
 bxh
 bxh
 bxh
@@ -85735,7 +85854,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -86729,15 +86848,15 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+tfb
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+tfb
 bxh
 bxh
 bxh
@@ -87186,7 +87305,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 mJO
 rSx
 rSx
@@ -87194,7 +87313,7 @@ rSx
 rSx
 rSx
 cyw
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -87643,7 +87762,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 sDW
 mzx
@@ -88100,7 +88219,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -88557,7 +88676,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -88837,7 +88956,7 @@ kds
 eVH
 vMj
 fsG
-uRe
+voW
 voW
 voW
 fsG
@@ -89014,7 +89133,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -89471,7 +89590,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -89861,7 +89980,7 @@ mfh
 mfh
 vga
 vga
-bxh
+tfb
 bxh
 bxh
 bxh
@@ -89928,8 +90047,8 @@ bxh
 bxh
 bxh
 bxh
-bxh
-pqb
+wCD
+kvy
 nRs
 oeM
 oeM
@@ -90318,6 +90437,7 @@ mPu
 mPu
 mPu
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -90328,9 +90448,8 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-lub
+ldO
+kZA
 anP
 anP
 anP
@@ -90385,7 +90504,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -90557,7 +90676,7 @@ vga
 oUK
 nRs
 wko
-oeM
+rWg
 oeM
 oeM
 oeM
@@ -90775,8 +90894,7 @@ mPu
 jZT
 mPu
 nRs
-bxh
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -90788,6 +90906,7 @@ bxh
 bxh
 ldO
 kZA
+anP
 anP
 anP
 anP
@@ -90842,7 +90961,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -91232,7 +91351,7 @@ mzx
 mzx
 mho
 nRs
-bxh
+wCD
 bxh
 bxh
 vTN
@@ -91241,9 +91360,9 @@ bxh
 bxh
 bxh
 dmg
-bxh
 ldO
 kZA
+anP
 anP
 anP
 anP
@@ -91253,6 +91372,18 @@ bxh
 bxh
 bxh
 bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+jRG
 bxh
 bxh
 bxh
@@ -91287,19 +91418,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -91689,6 +91808,7 @@ oeM
 oeM
 pqb
 nRs
+wCD
 bxh
 bxh
 bxh
@@ -91697,9 +91817,8 @@ bxh
 bxh
 bxh
 bxh
-bxh
-ldO
-kZA
+lub
+aZt
 anP
 anP
 anP
@@ -91756,7 +91875,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -92027,7 +92146,7 @@ oeM
 oeM
 oeM
 oeM
-oeM
+rWg
 oeM
 oeM
 oeM
@@ -92146,7 +92265,7 @@ oeM
 oeM
 pqb
 nRs
-bxh
+wCD
 bxh
 bxh
 bxh
@@ -92179,7 +92298,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+nKO
 bxh
 bxh
 bxh
@@ -92213,7 +92332,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+wCD
 pqb
 nRs
 oeM
@@ -92603,74 +92722,74 @@ oeM
 oeM
 pqb
 nRs
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+taq
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+mYK
 bxh
 lla
 ufZ
 ufZ
 opX
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-jRG
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+nhS
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+mhz
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+taq
 pqb
 nRs
 oeM
@@ -92687,13 +92806,13 @@ jeF
 fGL
 fGL
 xhr
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
-bxh
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
+ayW
 fwb
 oMJ
 "}
@@ -93151,7 +93270,7 @@ rSx
 rSx
 rSx
 rSx
-tQw
+rSx
 oMJ
 "}
 (127,1,1) = {"
@@ -94901,7 +95020,7 @@ oeM
 oeM
 oeM
 oeM
-oeM
+rWg
 oeM
 oeM
 oeM
@@ -102629,7 +102748,7 @@ anP
 anP
 anP
 anP
-bsG
+anP
 anP
 oeM
 oeM
@@ -102637,7 +102756,7 @@ lWC
 oeM
 sHs
 anP
-bsG
+anP
 anP
 anP
 anP
@@ -105097,8 +105216,8 @@ oeM
 oeM
 ckt
 kWs
-dzo
 bEm
+dzo
 csh
 adF
 kWs
@@ -105554,10 +105673,10 @@ oeM
 oeM
 oeM
 kWs
-dFl
-sHC
 dmn
 dmn
+aJj
+lSu
 kWs
 rsU
 rsU
@@ -106011,10 +106130,10 @@ oeM
 oeM
 oeM
 kWs
-xzb
+dmn
+dmn
 kUM
 dmn
-arC
 kWs
 rsU
 rsU
@@ -106468,10 +106587,10 @@ oeM
 srD
 oeM
 kWs
-rhJ
+xzb
 dmn
 dmn
-xGD
+dmn
 kWs
 kWs
 rsU
@@ -115429,7 +115548,7 @@ anP
 anP
 oeM
 oeM
-tWq
+vWp
 oeM
 sHs
 anP
@@ -123951,7 +124070,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -125329,7 +125448,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -126707,7 +126826,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -127607,7 +127726,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -128989,7 +129108,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+asR
 bxh
 bxh
 bxh
@@ -130354,14 +130473,14 @@ bxh
 bxh
 bxh
 bxh
+asR
 bxh
 bxh
 bxh
 bxh
-bxh
-swC
-swC
-swC
+fwb
+fwb
+fwb
 fwb
 fwb
 fwb
@@ -131202,7 +131321,7 @@ bxh
 bxh
 bxh
 bxh
-bxh
+oAR
 bxh
 bxh
 bxh
@@ -132402,7 +132521,7 @@ vdk
 hku
 hku
 hku
-vdk
+gYp
 oeM
 oeM
 vdk
@@ -134185,19 +134304,19 @@ bxh
 bxh
 bxh
 bxh
-anP
-anP
-anP
-anP
 bxh
 bxh
 bxh
 bxh
 bxh
-anP
-anP
-anP
-anP
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+roe
+iuY
 fwb
 fwb
 fwb
@@ -134640,20 +134759,20 @@ bxh
 bxh
 bxh
 bxh
-anP
-anP
-anP
+bxh
+bxh
+bxh
 fwb
 fwb
-anP
-anP
-anP
-anP
-anP
-anP
-anP
-fwb
-fwb
+bxh
+bxh
+bxh
+bxh
+bxh
+bxh
+roe
+oRd
+lLw
 fwb
 tso
 tso
@@ -135097,7 +135216,7 @@ bxh
 bxh
 bxh
 bxh
-anP
+bxh
 fwb
 fwb
 fwb
@@ -135109,8 +135228,8 @@ fwb
 fwb
 fwb
 fwb
-fwb
-fwb
+vyi
+wlC
 tso
 tso
 tso
@@ -135554,7 +135673,7 @@ bxh
 bxh
 bxh
 bxh
-anP
+bxh
 fwb
 fwb
 fwb
@@ -135565,9 +135684,9 @@ fwb
 fwb
 fwb
 fwb
-fwb
-fwb
-fwb
+wlC
+wlC
+eKO
 tso
 fwb
 tso
@@ -136011,8 +136130,8 @@ bxh
 bxh
 bxh
 bxh
-anP
-anP
+bxh
+bxh
 fwb
 fwb
 fwb
@@ -136022,8 +136141,8 @@ fwb
 fwb
 fwb
 fwb
-fwb
-fwb
+ecI
+ecI
 fwb
 tso
 fwb
@@ -136469,8 +136588,8 @@ ubM
 ubM
 ubM
 bxh
-anP
-anP
+bxh
+bxh
 fwb
 fwb
 fwb
@@ -143338,7 +143457,7 @@ oeM
 cDu
 cDu
 cDu
-oeM
+rWg
 cDu
 cDu
 oeM
@@ -143733,7 +143852,7 @@ oMJ
 fwb
 fwb
 ubM
-imS
+pwR
 qDL
 dzH
 nNo
@@ -144190,7 +144309,7 @@ oMJ
 fwb
 fwb
 ubM
-gEp
+tzj
 oYS
 qDL
 qDL
@@ -145350,7 +145469,7 @@ fwb
 fwb
 fwb
 sQZ
-utc
+uDH
 sQZ
 sQZ
 sQZ
@@ -145469,7 +145588,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-gXw
+nmu
 sQZ
 sQZ
 sQZ
@@ -146440,7 +146559,7 @@ fwb
 nUX
 kqM
 gSg
-xIQ
+uDH
 fwb
 sQZ
 sQZ
@@ -146605,7 +146724,7 @@ bxh
 bxh
 bxh
 gFY
-bRE
+bxh
 nMR
 mLy
 xlP
@@ -148670,7 +148789,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-utc
+uDH
 sQZ
 kkF
 sQZ
@@ -149575,7 +149694,7 @@ fwb
 rxx
 sQZ
 sQZ
-gXw
+nmu
 sQZ
 sQZ
 sQZ

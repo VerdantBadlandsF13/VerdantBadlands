@@ -213,7 +213,7 @@
 	// send2chat sending the new round ping off
 	send2chat(" <@&1100493376207462464> ", CONFIG_GET(string/discord_channel_serverstatus))
 	world.TgsTargetedChatBroadcast("The current round has ended. Please standby for your [pick(publisher)] report!", FALSE)
-	//lonestar edit. i'm adding a timer here because i'm tired of the messages being sent out of order
+	//A timer here because messages being sent out of order
 	addtimer(CALLBACK(src, .proc/send_roundinfo), 3 SECONDS)
 
 	CHECK_TICK

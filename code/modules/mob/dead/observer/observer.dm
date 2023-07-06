@@ -107,8 +107,8 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 
 	update_icon()
 
-	if(!isturf(loc))
-		var/turf/T
+	var/turf/T
+	if(!isturf(loc) || is_secret_level(T.z))
 		var/list/turfs = get_area_turfs(/area/shuttle/arrival)
 		if(turfs.len)
 			T = pick(turfs)
@@ -563,7 +563,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 // This is the ghost's follow verb with an argument
 /mob/dead/observer/proc/ManualFollow(atom/movable/target)
-	if (!istype(target))
+	if (!istype(target) || (is_secret_level(target.z) && !client?.holder))
 		return
 
 	var/icon/I = icon(target.icon,target.icon_state,target.dir)
@@ -957,6 +957,10 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	//Istype so we filter out points of interest that are not mobs
 	if(client && mob_eye && istype(mob_eye))
 		client.eye = mob_eye
+		client.perspective = EYE_PERSPECTIVE
+		if(is_secret_level(mob_eye.z) && !client?.holder)
+			sight = null //we dont want ghosts to see through walls in secret areas
+		RegisterSignal(mob_eye, COMSIG_MOVABLE_Z_CHANGED, .proc/on_observing_z_changed)
 		if(mob_eye.hud_used)
 			client.screen = list()
 			LAZYINITLIST(mob_eye.observers)
@@ -965,6 +969,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			observetarget = mob_eye
 			HandlePlanes()
 
+/mob/dead/observer/proc/on_observing_z_changed(datum/source, turf/old_turf, turf/new_turf)
+	SIGNAL_HANDLER
+
+	if(is_secret_level(new_turf.z) && !client?.holder)
+		sight = null //we dont want ghosts to see through walls in secret areas
+	else
+		sight = initial(sight)
 
 /mob/dead/observer/verb/register_pai_candidate()
 	set category = "Ghost"

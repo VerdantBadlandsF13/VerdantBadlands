@@ -1129,8 +1129,10 @@
 	var/blocked = getarmor(null, "rad")
 
 	if(HAS_TRAIT(src,TRAIT_RADX))
-		blocked *= 1.25
+		blocked *= 2
 
+	if(special_e >= 8)
+		blocked *= 1.25
 
 /*
 	if(user.perks.have(/datum/perk/radresist))

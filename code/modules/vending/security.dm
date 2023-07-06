@@ -8,20 +8,11 @@
 					/obj/item/restraints/handcuffs/cable/zipties = 10,
 					/obj/item/grenade/flashbang = 4,
 					/obj/item/assembly/flash/handheld = 5,
-					/obj/item/reagent_containers/food/snacks/donut = 12,
 					/obj/item/storage/box/evidence = 6,
 					/obj/item/flashlight/seclite = 4,
-					/obj/item/restraints/legcuffs/bola/energy = 7,
-					/obj/item/secbat = 5)
-	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,
-					/obj/item/storage/fancy/donut_box = 2,
-					/obj/item/ssword_kit = 1)
-	premium = list(/obj/item/coin/antagtoken = 1,
-					/obj/item/clothing/under/rank/security/officer/blueshirt = 1,
-					/obj/item/clothing/gloves/tackler = 5,
-					/obj/item/grenade/stingbang = 1,
-					/obj/item/ssword_kit = 1,
 					/obj/item/storage/bag/ammo = 3)
+	contraband = list()
+	premium = list()
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/security

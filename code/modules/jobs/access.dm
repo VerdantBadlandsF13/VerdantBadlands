@@ -442,10 +442,10 @@
 			return "Security"
 
 /proc/get_all_jobs()
-	return list("Wastelander",
+	return list("Wastelander", "Tavernkeep",
 				"Commander", "Practitioner", "Walker", "Militia", "Volunteer",
 				"DFS Advisor", "DFS Enforcer", "DFS Agent", "DFS Regular", "DFS Grunt",
-				"Vault-Tec Overseer", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
+				"Vault-Tec Overseer", "Vault-Tec Security Chief", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
 				"Vault-Tec Engineer", "Vault-Tec Robot", "Vault Dweller",
 				"Foreman", "Lumberjack")
 

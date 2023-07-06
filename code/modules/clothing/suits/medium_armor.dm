@@ -164,6 +164,10 @@
 	item_state = "duster-renegade"
 	armor = list("melee" = 20, "bullet" = 35, "laser" = 30, "energy" = 25, "bomb" = 20, "bio" = 5, "rad" = 10, "fire" = 25, "acid" = 5, "wound" = 10)
 
+/obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
+	name = "duster"
+	desc = "Metal armor worn under a stylish duster. Repurposed, once found in a far more savage time, now protecting the frail and ill. Or not."
+
 /obj/item/clothing/suit/armored/f13/medium/slam
 	name = "slammer raider armor"
 	desc = "Crude armor using a premium selection of sawn up tires and thick layers of filthy cloth to give that murderous hobo look.<br>Come on and slam and turn your foes to jam! Pretty warm, but it is made of very flammable stuff. It's probably fine."

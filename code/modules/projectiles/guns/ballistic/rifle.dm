@@ -25,6 +25,7 @@
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	var/pump_stam_cost = 2
 
 /obj/item/gun/ballistic/rifle/process_chamber(mob/living/user, empty_chamber = 0)

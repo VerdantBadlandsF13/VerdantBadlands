@@ -428,10 +428,6 @@
 	to_chat(S, "<span class='warning'>Destroying this object, will disrupt the research development that may serve for our masters in the future. Aborting.</span>")
 	return FALSE
 
-/obj/machinery/pool_filter/swarmer_act(mob/living/simple_animal/hostile/swarmer/S) //pool's closed, but not.
-	to_chat(S, "<span class='warning'>The pool must not be closed, it will provide healthy fun for our masters in the future. Aborting.</span>")
-	return FALSE
-
 /turf/open/indestructible/sound/pool/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
 	to_chat(S, "<span class='warning'>The pool must not be closed, it will provide healthy fun for our masters in the future. Aborting.</span>")
 	return FALSE

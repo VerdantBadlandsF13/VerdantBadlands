@@ -6,6 +6,7 @@
 	inaccuracy_modifier = 0.5
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin

@@ -12,10 +12,14 @@
 	dismemberable = FALSE
 	var/obj/item/cavity_item
 
+// WHY DO WE HAVE THIS?
+// THERE'S ALREADY A CHECK IN DISMEMBERMENT, AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+/*
 /obj/item/bodypart/chest/can_dismember(obj/item/I)
 	if(!((owner.stat == DEAD) || owner.InFullCritical()) || !get_organs())
 		return FALSE
 	return ..()
+*/
 
 /obj/item/bodypart/chest/Destroy()
 	if(cavity_item)

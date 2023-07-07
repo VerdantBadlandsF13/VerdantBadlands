@@ -168,7 +168,7 @@
 	supervisors = "fate"
 	selection_color = "#ccd2cf"
 
-	outfit = /datum/outfit/job/wasteland/f13wastelander
+	outfit = /datum/outfit/job/wasteland/f13tavernkeep
 
 	access = list(ACCESS_TOWN_BAR)
 	minimal_access = list(ACCESS_TOWN_BAR)

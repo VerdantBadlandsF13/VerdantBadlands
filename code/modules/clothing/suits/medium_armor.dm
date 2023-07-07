@@ -160,13 +160,13 @@
 /obj/item/clothing/suit/armored/f13/medium/duster_renegade
 	name = "renegade duster"
 	desc = "Metal armor worn under a stylish duster. For the bad boy who wants to look good while commiting murder."
-	icon_state = "duster-renegade"
-	item_state = "duster-renegade"
+	icon_state = "duster_renegade"
+	item_state = "duster_renegade"
 	armor = list("melee" = 20, "bullet" = 35, "laser" = 30, "energy" = 25, "bomb" = 20, "bio" = 5, "rad" = 10, "fire" = 25, "acid" = 5, "wound" = 10)
 
 /obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
 	name = "duster"
-	desc = "Metal armor worn under a stylish duster. Repurposed, once found in a far more savage time, now protecting the frail and ill. Or not."
+	desc = "Metal armor worn under a stylish duster. Once found in a far more savage time, it's been repurposed now protecting the frail and ill. Or not."
 
 /obj/item/clothing/suit/armored/f13/medium/slam
 	name = "slammer raider armor"

@@ -7743,6 +7743,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
+"IL" = (
+/obj/structure/stacklifter,
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
+/area/f13/bl/gmb)
 "IN" = (
 /mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/plating/rust,
@@ -10101,6 +10107,12 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"Tg" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
+/area/f13/bl/gmb)
 "Th" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer,
@@ -53131,7 +53143,7 @@ bU
 Je
 Gs
 bU
-bU
+IL
 bU
 Gs
 mR
@@ -54045,7 +54057,7 @@ bU
 bU
 Gs
 bU
-bU
+Tg
 bU
 Gs
 bv

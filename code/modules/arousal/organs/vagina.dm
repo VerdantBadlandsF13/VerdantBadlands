@@ -4,7 +4,7 @@
 	icon = 'icons/obj/genitals/vagina.dmi'
 	icon_state = ORGAN_SLOT_VAGINA
 	zone = BODY_ZONE_PRECISE_GROIN
-	slot = "vagina"
+	slot = ORGAN_SLOT_VAGINA
 	size = 1 //There is only 1 size right now
 	shape = DEF_VAGINA_SHAPE
 	genital_flags = CAN_MASTURBATE_WITH|CAN_CLIMAX_WITH|GENITAL_CAN_AROUSE|GENITAL_UNDIES_HIDDEN
@@ -24,23 +24,9 @@
 /obj/item/organ/genital/vagina/update_appearance()
 	. = ..()
 	icon_state = "vagina"
-	if(owner)
-		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
-			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
-				var/mob/living/carbon/human/H = owner // only human mobs have skin_tone, which we need.
-				color = SKINTONE2HEX(H.skin_tone)
-				if(!H.dna.skin_tone_override)
-					icon_state += "_s"
-		else
-			color = "#[owner.dna.features["vag_color"]]"
-		if(ishuman(owner))
-			var/mob/living/carbon/human/H = owner
-			H.update_genitals()
-
-/obj/item/organ/genital/vagina/genital_examine(mob/user)
-	. = list()
 	var/lowershape = lowertext(shape)
-	var/details = ""
+	var/details
+
 	switch(lowershape)
 		if("tentacle")
 			details = "Its opening is lined with several tentacles and "
@@ -56,13 +42,29 @@
 			details = "It is a plush canine spade, it "
 		if("furred")
 			details = "It has neatly groomed fur around the outer folds, it "
+		if("cloaca")
+			details = "It it a tight, small horizontal vent and "
 		else
 			details = "It has an exotic shape and "
 	if(aroused_state)
-		details += "is slick with female arousal."
+		details += "is slick with arousal."
 	else
 		details += "seems to be dry."
-	. |= "<span class='notice'>You see a vagina. [details]</span>"
+
+	desc = "You see a vagina. [details]"
+
+	if(owner)
+		if(owner.dna.species.use_skintones && owner.dna.features["genitals_use_skintone"])
+			if(ishuman(owner)) // Check before recasting type, although someone fucked up if you're not human AND have use_skintones somehow...
+				var/mob/living/carbon/human/H = owner // only human mobs have skin_tone, which we need.
+				color = SKINTONE2HEX(H.skin_tone)
+				if(!H.dna.skin_tone_override)
+					icon_state += "_s"
+		else
+			color = "#[owner.dna.features["vag_color"]]"
+		if(ishuman(owner))
+			var/mob/living/carbon/human/H = owner
+			H.update_genitals()
 
 /obj/item/organ/genital/vagina/get_features(mob/living/carbon/human/H)
 	var/datum/dna/D = H.dna

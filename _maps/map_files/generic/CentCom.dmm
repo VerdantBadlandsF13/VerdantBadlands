@@ -1211,7 +1211,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar        Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -1237,7 +1237,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar        Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -1252,7 +1252,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar        Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -9547,9 +9547,6 @@
 /obj/item/paper/fluff/stations/centcom/broken_evac,
 /turf/open/floor/mineral/titanium,
 /area/shuttle/escape/backup)
-"Ko" = (
-/turf/open/space/basic,
-/area/cordon)
 "Kq" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -10020,7 +10017,8 @@
 /area/f13/wasteland)
 "Mt" = (
 /mob/living/simple_animal/pet/bumbles{
-	name = "Rutabaga"
+	name = "Rutabaga";
+	desc = "A very humble bumblebee."
 	},
 /turf/open/floor/wood/wood_fancy,
 /area/centcom)
@@ -39418,60 +39416,60 @@ aa
 (109,1,1) = {"
 aa
 aa
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -39675,7 +39673,7 @@ aa
 (110,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 rc
 rc
@@ -39728,7 +39726,7 @@ rc
 rc
 rc
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -39932,7 +39930,7 @@ aa
 (111,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -39985,7 +39983,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -40189,7 +40187,7 @@ aa
 (112,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -40242,7 +40240,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -40446,7 +40444,7 @@ aa
 (113,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -40499,7 +40497,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -40703,7 +40701,7 @@ aa
 (114,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 qN
@@ -40756,7 +40754,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -40960,7 +40958,7 @@ aa
 (115,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -41013,7 +41011,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -41217,7 +41215,7 @@ aa
 (116,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -41270,7 +41268,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -41474,7 +41472,7 @@ aa
 (117,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -41527,7 +41525,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -41731,7 +41729,7 @@ aa
 (118,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -41784,7 +41782,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -41988,7 +41986,7 @@ aa
 (119,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -42041,7 +42039,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -42245,7 +42243,7 @@ aa
 (120,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -42298,7 +42296,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -42502,7 +42500,7 @@ aa
 (121,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -42555,7 +42553,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -42759,7 +42757,7 @@ aa
 (122,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -42812,7 +42810,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -43016,7 +43014,7 @@ aa
 (123,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -43069,7 +43067,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -43273,7 +43271,7 @@ aa
 (124,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -43326,7 +43324,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -43530,7 +43528,7 @@ aa
 (125,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -43583,7 +43581,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -43787,7 +43785,7 @@ aa
 (126,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -43840,7 +43838,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -44044,7 +44042,7 @@ aa
 (127,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -44097,7 +44095,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -44301,7 +44299,7 @@ aa
 (128,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -44354,7 +44352,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -44558,7 +44556,7 @@ aa
 (129,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -44611,7 +44609,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -44815,7 +44813,7 @@ aa
 (130,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -44868,7 +44866,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -45072,7 +45070,7 @@ aa
 (131,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -45125,7 +45123,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -45329,7 +45327,7 @@ aa
 (132,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -45382,7 +45380,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -45586,7 +45584,7 @@ aa
 (133,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -45639,7 +45637,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -45843,7 +45841,7 @@ aa
 (134,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -45896,7 +45894,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -46100,7 +46098,7 @@ aa
 (135,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -46153,7 +46151,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -46357,7 +46355,7 @@ aa
 (136,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -46410,7 +46408,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -46614,7 +46612,7 @@ aa
 (137,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -46667,7 +46665,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -46871,7 +46869,7 @@ aa
 (138,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -46924,7 +46922,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -47128,7 +47126,7 @@ aa
 (139,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -47181,7 +47179,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -47385,7 +47383,7 @@ aa
 (140,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -47438,7 +47436,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -47642,7 +47640,7 @@ aa
 (141,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 TR
@@ -47695,7 +47693,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -47899,7 +47897,7 @@ aa
 (142,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -47952,7 +47950,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -48156,7 +48154,7 @@ aa
 (143,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -48209,7 +48207,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -48413,7 +48411,7 @@ aa
 (144,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -48466,7 +48464,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -48670,7 +48668,7 @@ aa
 (145,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -48723,7 +48721,7 @@ TR
 TR
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -48927,7 +48925,7 @@ aa
 (146,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -48980,7 +48978,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -49184,7 +49182,7 @@ aa
 (147,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 Ro
@@ -49237,7 +49235,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -49441,7 +49439,7 @@ aa
 (148,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ti
 Ia
@@ -49494,7 +49492,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -49698,7 +49696,7 @@ aa
 (149,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -49751,7 +49749,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -49955,7 +49953,7 @@ aa
 (150,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 gG
@@ -50008,7 +50006,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -50212,7 +50210,7 @@ aa
 (151,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -50265,7 +50263,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -50469,7 +50467,7 @@ aa
 (152,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -50522,7 +50520,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -50726,7 +50724,7 @@ aa
 (153,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -50779,7 +50777,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -50983,7 +50981,7 @@ aa
 (154,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -51036,7 +51034,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -51240,7 +51238,7 @@ aa
 (155,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 Ro
@@ -51293,7 +51291,7 @@ ps
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -51497,7 +51495,7 @@ aa
 (156,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -51550,7 +51548,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -51754,7 +51752,7 @@ aa
 (157,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 th
@@ -51807,7 +51805,7 @@ TR
 ps
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -52011,7 +52009,7 @@ aa
 (158,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -52064,7 +52062,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -52268,7 +52266,7 @@ aa
 (159,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -52321,7 +52319,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -52525,7 +52523,7 @@ aa
 (160,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 ps
 ps
@@ -52578,7 +52576,7 @@ yx
 JC
 ps
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -52782,7 +52780,7 @@ aa
 (161,1,1) = {"
 aa
 aa
-Ko
+aa
 rc
 rc
 rc
@@ -52835,7 +52833,7 @@ rc
 rc
 rc
 rc
-Ko
+aa
 aa
 aa
 aa
@@ -53039,60 +53037,60 @@ aa
 (162,1,1) = {"
 aa
 aa
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

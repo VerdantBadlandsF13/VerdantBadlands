@@ -12,6 +12,7 @@
 	density = TRUE
 	blocks_air = TRUE
 	bullet_bounce_sound = null
+	baseturfs = /turf/cordon
 
 /turf/cordon/AfterChange()
 	. = ..()

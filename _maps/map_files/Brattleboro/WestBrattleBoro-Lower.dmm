@@ -396,6 +396,12 @@
 	icon_state = "plating"
 	},
 /area/f13/tunnel)
+"cH" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/building)
 "cJ" = (
 /obj/structure/chair/stool/retro{
 	pixel_y = 2;
@@ -1843,6 +1849,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
+"mb" = (
+/obj/structure/well_foundation,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "mc" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
 /turf/open/indestructible/ground/inside/mountain,
@@ -6225,6 +6235,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault/overseer)
+"ML" = (
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/building)
 "MM" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
@@ -7170,6 +7184,12 @@
 	dir = 8
 	},
 /area/f13/vault/storageoffice)
+"SY" = (
+/obj/structure/table/reinforced,
+/obj/item/multitool,
+/obj/item/wrench,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault/reactor)
 "Tf" = (
 /obj/structure/holohoop,
 /obj/effect/turf_decal/stripes/white/line{
@@ -7430,12 +7450,6 @@
 /obj/item/restraints/handcuffs,
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
-"UF" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "UH" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/f13{
@@ -7874,10 +7888,10 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/badlands_props/modern_filter,
 /obj/structure/decoration/vent{
 	pixel_y = 32
 	},
+/obj/structure/badlands_props/modern_filter,
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
 /area/f13/vault/reactor)
 "Xp" = (
@@ -8828,7 +8842,7 @@ xk
 xk
 xk
 xk
-UF
+xk
 "}
 (2,1,1) = {"
 xk
@@ -12542,7 +12556,7 @@ Ii
 ZY
 ZY
 YH
-rK
+SY
 Vg
 Ii
 GS
@@ -21389,7 +21403,7 @@ xk
 xk
 aJ
 aJ
-aJ
+cH
 aJ
 aJ
 UO
@@ -24590,7 +24604,7 @@ wU
 wU
 XL
 wU
-aJ
+ML
 UO
 xk
 PV
@@ -26879,7 +26893,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+cH
 UO
 xk
 xk
@@ -28569,7 +28583,7 @@ Fu
 Fu
 SI
 xk
-hx
+mb
 gw
 uD
 xk

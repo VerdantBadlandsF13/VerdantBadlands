@@ -249,7 +249,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                wastebot");
+	faction = list("raider,                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -6366,7 +6366,7 @@
 "Fe" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/chem_master/advanced,
+/obj/structure/frame/machine,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
@@ -6779,12 +6779,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
-"Hv" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/riveted,
-/area/admin)
 "Hw" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -7222,7 +7216,7 @@
 /area/f13/building)
 "Ju" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/chem_dispenser/low_power,
+/obj/structure/frame/machine,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -9428,7 +9422,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                wastebot");
+	faction = list("raider,                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -9558,7 +9552,7 @@
 /turf/open/floor/carpet,
 /area/f13/bl/dfs)
 "Vr" = (
-/obj/machinery/vending/medical,
+/obj/structure/frame/machine,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10164,15 +10158,6 @@
 "Yr" = (
 /obj/structure/anvil,
 /turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/village)
-"Ys" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/turf/open/floor/carpet/red,
 /area/f13/village)
 "Yt" = (
 /obj/structure/rack/shelf_metal,
@@ -11095,7 +11080,7 @@ Lo
 Lo
 Lo
 Lo
-Hv
+Lo
 "}
 (2,1,1) = {"
 Mb
@@ -58697,7 +58682,7 @@ PW
 pP
 gY
 gY
-Ys
+UP
 gY
 hD
 qC

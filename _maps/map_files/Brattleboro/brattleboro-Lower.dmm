@@ -126,12 +126,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/tunnel)
-"aH" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/riveted,
-/area/admin)
 "aI" = (
 /obj/structure/chair/sofa/corp/left,
 /turf/open/floor/plasteel/f13/vault_floor,
@@ -12065,7 +12059,7 @@ Nu
 Nu
 Nu
 Nu
-aH
+Nu
 "}
 (2,1,1) = {"
 OA

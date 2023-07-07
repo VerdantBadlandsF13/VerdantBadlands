@@ -123,6 +123,7 @@
 	icon_state = "plating"
 
 /turf/open/floor/plasteel/f13/vault_floor/plating/random
+/*
 	junk = list(/obj/structure/junk/machinery,
 	/obj/structure/junk/locker,
 	/obj/structure/junk/cabinet,
@@ -142,11 +143,12 @@
 
 	plant_stuff = list(/obj/structure/flora/wasteplant/wild_fungus,
 	/obj/structure/flora/wasteplant/rad_fungus)
-
+*/
 /turf/open/floor/plasteel/f13/vault_floor/plating/random/Initialize()
 	. = ..()
 	icon_state = "plating[rand(0,4)]"
-	if(!(\
+
+/*	if(!(\
 			(locate(/obj/structure) in src) || \
 			(locate(/obj/machinery) in src) ))
 		DrawPipes()
@@ -160,6 +162,7 @@
 		pipes_probably = new junk(src)
 		. = TRUE
 		return.
+*/
 
 /turf/open/floor/plasteel/f13/vault_floor/floor
 	icon_state = "floor"

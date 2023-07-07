@@ -232,6 +232,13 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"6bc473\">[replacetext(get_bos_access_desc(A), " ", "&nbsp")]</font></a> "
 				else
 					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=1'>[replacetext(get_bos_access_desc(A), " ", "&nbsp")]</a> "
+		else if(istype(src, /obj/machinery/computer/card/vfe))
+			accesses += "<h5>Vault Fifty-Eight:</h5>"
+			for(var/A in get_all_vfe_access())
+				if(A in inserted_modify_id.access)
+					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=0'><font color=\"6bc473\">[replacetext(get_vfe_access_desc(A), " ", "&nbsp")]</font></a> "
+				else
+					accesses += "<a href='?src=[REF(src)];choice=access;access_target=[A];allowed=1'>[replacetext(get_vfe_access_desc(A), " ", "&nbsp")]</a> "
 		else
 			accesses += {"<div align='center'><b>Access</b></div>
 				<table style='width:100%'>
@@ -357,6 +364,8 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 						access_types = get_all_enclave_access()
 					else if(istype(src, /obj/machinery/computer/card/bos))
 						access_types = get_all_bos_access()
+					else if(istype(src, /obj/machinery/computer/card/vfe))
+						access_types = get_all_vfe_access()
 					else
 						access_types = get_all_accesses()
 
@@ -570,4 +579,19 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		"Keeper",
 		"Knight-Commander",
 		"Inquisitorial Acolyte",
+		)
+
+/obj/machinery/computer/card/vfe
+	name = "\improper Vault Fifty-Eight identification console"
+	circuit = /obj/item/circuitboard/computer/card/vfe
+	job_list = list(
+		"Vault-Tec Security",
+		"Vault-Tec Doctor",
+		"Vault-Tec Scientist",
+		"Vault-Tec Engineer",
+		"Vault Dweller",
+		)
+	job_req = list(
+		"Vault-Tec Overseer",
+		"Vault-Tec Security Chief",
 		)

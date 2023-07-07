@@ -359,7 +359,6 @@
 	desc = "A warning to NCR troopers about eating irradiated food."
 	icon_state = "poster48"
 
-
 /obj/structure/sign/poster/contraband/pinup_assaultron
 	name = "Pin-Up - Assaultron"
 	desc = "This poster definitely puts the 'ass' in assaultron."

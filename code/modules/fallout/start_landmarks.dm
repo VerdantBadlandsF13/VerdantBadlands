@@ -1,6 +1,4 @@
 // FO13 Faction Start. Set to override for the time being to allow latejoining in their original spots.
-
-// NCR
 /obj/effect/landmark/start/f13
 	icon = 'icons/mob/landmarks.dmi'
 	jobspawn_override = TRUE

@@ -10528,6 +10528,12 @@
 	},
 /turf/closed/wall/f13/vault,
 /area/f13/brotherhood)
+"tUk" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/rock,
+/area/f13/tunnel)
 "tUm" = (
 /obj/machinery/light/small{
 	light_color = "#ad1b1b"
@@ -13041,7 +13047,7 @@ shC
 shC
 shC
 shC
-shC
+tUk
 "}
 (2,1,1) = {"
 shC

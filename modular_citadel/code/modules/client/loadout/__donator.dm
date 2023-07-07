@@ -91,6 +91,22 @@
 	new /obj/item/twohanded/baseball/louisville(src)
 	new /obj/item/toy/tennis/baseball(src)
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
-	new /obj/item/gun/ballistic/automatic/pistol/pistol22(src)
-	new /obj/item/ammo_box/magazine/m22(src)
-	new /obj/item/ammo_box/magazine/m22(src)
+	new /obj/item/gun/ballistic/automatic/pistol/n99(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
+
+/datum/gear/donator/kits/lurzefromgermany
+	name = "Robot Token"
+	path = /obj/item/storage/box/large/custom_kit/lurzefromgermany
+	ckeywhitelist = list("lurzefromgermany")
+
+/obj/item/storage/box/large/custom_kit/lurzefromgermany/PopulateContents()
+	var/player = get_mob_by_key("lurzefromgermany")
+	if(!ishuman(player))
+		return
+	playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/ambience/unsorted/electr[rand(1,3)].ogg", 50, 0)
+	robot_token(player)
+	qdel(src)
+
+/obj/item/storage/box/large/custom_kit/lurzefromgermany/proc/robot_token(mob/living/carbon/human/H)
+	H.Robotize()

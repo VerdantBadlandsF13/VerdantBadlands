@@ -971,6 +971,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			var/file = GLOB.vox_sounds[name]
 			Export("##action=load_rsc", file)
 			stoplag()
+		for (var/name in GLOB.vox_sounds_male)
+			var/file = GLOB.vox_sounds_male[name]
+			Export("##action=load_rsc", file)
+			stoplag()
+		for (var/name in GLOB.vox_sounds_military)
+			var/file = GLOB.vox_sounds_military[name]
+			Export("##action=load_rsc", file)
+			stoplag()
 		#endif
 
 

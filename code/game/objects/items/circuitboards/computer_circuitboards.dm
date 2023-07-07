@@ -71,6 +71,10 @@
 	name = "Brotherhood of Steel ID Console (Computer Board)"
 	build_path = /obj/machinery/computer/card/bos
 
+/obj/item/circuitboard/computer/card/vfe
+	name = "Vault Fifty-Eight ID Console (Computer Board)"
+	build_path = /obj/machinery/computer/card/vfe
+
 /obj/item/circuitboard/computer/card/minor
 	name = "Department Management Console (Computer Board)"
 	build_path = /obj/machinery/computer/card/minor

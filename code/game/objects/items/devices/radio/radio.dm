@@ -361,6 +361,7 @@
 	// allow checks: are we listening on that frequency?
 	if (freq == frequency)
 		return TRUE
+		src.play_receive_transmission()
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)
 			//the GLOB.radiochannels list is located in communications.dm

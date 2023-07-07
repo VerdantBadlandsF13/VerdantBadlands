@@ -68,6 +68,18 @@
 	new /obj/item/stack/medical/suture/medicated(src)
 	new /obj/item/stack/medical/mesh/advanced(src)
 
+/obj/item/storage/basic_survivalkit
+	name = "leather pouch"
+	desc = "A leather pouch containing the essentials of your average Wastrel."
+	icon_state = "survivalkit"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/basic_survivalkit/PopulateContents()
+	. = ..()
+	new /obj/item/stack/medical/gauze/improvised(src)
+	new /obj/item/stack/medical/mesh/aloe(src)
+	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+
 /obj/item/storage/survivalkit_empty
 	name = "survival kit"
 	desc = "A robust leather pouch containing the essentials for wasteland survival."

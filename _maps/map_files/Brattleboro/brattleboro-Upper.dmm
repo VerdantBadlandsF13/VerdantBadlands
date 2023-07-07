@@ -249,7 +249,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,        wastebot");
+	faction = list("raider,                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -749,7 +749,7 @@
 /area/f13/caves)
 "dI" = (
 /obj/structure/curtain,
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/machinery/shower{
 	dir = 1
 	},
@@ -3018,7 +3018,7 @@
 /obj/machinery/shower{
 	pixel_y = 18
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -3547,9 +3547,7 @@
 	},
 /area/f13/village)
 "rs" = (
-/obj/structure/decoration/vent{
-	icon_state = "ventrusty"
-	},
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -3717,7 +3715,7 @@
 /obj/effect/overlay/junk/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -4487,7 +4485,7 @@
 /obj/machinery/shower{
 	dir = 1
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -6781,6 +6779,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"Hv" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/riveted,
+/area/admin)
 "Hw" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8032,7 +8036,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -8851,7 +8855,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/f13{
 	icon_state = "white"
 	},
@@ -9424,7 +9428,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,        wastebot");
+	faction = list("raider,                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -11091,7 +11095,7 @@ Lo
 Lo
 Lo
 Lo
-Lo
+Hv
 "}
 (2,1,1) = {"
 Mb

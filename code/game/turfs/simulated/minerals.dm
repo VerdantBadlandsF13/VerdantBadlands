@@ -2,7 +2,7 @@
 
 /turf/closed/mineral //wall piece
 	name = "rock"
-	icon = 'icons/turf/mining.dmi'
+	icon = 'icons/fallout/turfs/mining.dmi'
 	icon_state = "rock"
 	var/smooth_icon = 'icons/turf/walls/f13rock.dmi'
 	smooth = SMOOTH_MORE|SMOOTH_BORDER
@@ -160,7 +160,7 @@
 	var/list/mineralSpawnChanceList = list(
 		/turf/closed/mineral/uranium = 2, /turf/closed/mineral/diamond = 1, /turf/closed/mineral/gold = 4, /turf/closed/mineral/titanium = 4,
 		/turf/closed/mineral/silver = 6, /turf/closed/mineral/plasma = 15, /turf/closed/mineral/iron = 40, /turf/closed/mineral/lead = 30, /turf/closed/mineral/limestone = 20,
-		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/strong = 15, /turf/closed/mineral/indestructible = 50) //indestructable chance moved to child, /underground
+		/turf/closed/mineral/gibtonite = 2, /turf/closed/mineral/bscrystal = 1, /turf/closed/mineral/strong = 50) //strong chance
 	var/mineralChance = 0
 	var/display_icon_state = "rock"
 
@@ -413,8 +413,8 @@
 /turf/closed/mineral/strong
 	name = "very strong rock"
 	desc = "Seems to be stronger than the other rocks in the area. Only a master of mining techniques could destroy this."
+	icon_state = "basalt"
 	defer_change = 1
-	smooth_icon = 'icons/turf/walls/rock_wall.dmi'
 
 /turf/closed/mineral/strong/attackby(obj/item/I, mob/user, params)
 	if(!ishuman(user))

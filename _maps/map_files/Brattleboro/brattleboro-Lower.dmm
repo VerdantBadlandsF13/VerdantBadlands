@@ -126,6 +126,12 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/tunnel)
+"aH" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/riveted,
+/area/admin)
 "aI" = (
 /obj/structure/chair/sofa/corp/left,
 /turf/open/floor/plasteel/f13/vault_floor,
@@ -2238,7 +2244,7 @@
 /area/f13/sewer)
 "kv" = (
 /obj/structure/railing/handrail/rusty,
-/obj/structure/flora/wasteplant/wild_punga,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/liquid/water/safe,
 /area/f13/caves)
 "kw" = (
@@ -3011,10 +3017,6 @@
 	icon_state = "car_rubish3"
 	},
 /turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
-"oa" = (
-/obj/structure/flora/wasteplant/wild_punga,
-/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "oc" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
@@ -6442,10 +6444,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"CI" = (
-/obj/structure/flora/wasteplant/wild_punga,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "CJ" = (
 /obj/structure/nest/ant,
 /turf/open/floor/carpet,
@@ -8496,7 +8494,6 @@
 /area/f13/tunnel)
 "Mp" = (
 /obj/structure/destructible/cult/talisman,
-/obj/item/clothing/head/helmet/plate/crusader,
 /obj/item/eldritch_deal,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
@@ -12056,7 +12053,7 @@ Nu
 Nu
 Nu
 Nu
-Nu
+aH
 "}
 (2,1,1) = {"
 OA
@@ -33417,7 +33414,7 @@ Va
 Va
 Va
 Va
-OA
+Va
 Va
 Va
 Va
@@ -33874,10 +33871,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -34330,11 +34327,11 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -34786,12 +34783,12 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -35243,12 +35240,12 @@ Va
 Va
 Va
 Va
-OA
 Va
 Va
 Va
-OA
-OA
+Va
+Va
+Va
 OA
 Va
 Va
@@ -35703,9 +35700,9 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
+Va
+Va
+Va
 OA
 Va
 Va
@@ -36159,10 +36156,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -36616,10 +36613,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -37073,10 +37070,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -38319,7 +38316,7 @@ wF
 vV
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -41974,7 +41971,7 @@ wF
 wF
 vV
 EY
-EY
+OO
 Va
 Va
 Va
@@ -44478,7 +44475,7 @@ bU
 Gs
 Va
 Va
-CI
+AP
 CS
 Xb
 Xb
@@ -46545,7 +46542,7 @@ wF
 vV
 EY
 EY
-EY
+OO
 Va
 ft
 Lc
@@ -58101,8 +58098,8 @@ RE
 ix
 Va
 OA
-Va
-Va
+OA
+OA
 Va
 Va
 Va
@@ -61299,7 +61296,7 @@ Va
 Va
 Va
 OA
-Va
+OA
 Va
 Va
 Va
@@ -63020,7 +63017,7 @@ vV
 Md
 Va
 Va
-EY
+OO
 Va
 Va
 Va
@@ -64851,11 +64848,11 @@ Va
 Va
 Va
 Va
+OO
 EY
 EY
 EY
-EY
-EY
+OO
 Va
 Va
 Va
@@ -68597,7 +68594,7 @@ vV
 vV
 EV
 GD
-CI
+CS
 Va
 Va
 Va
@@ -68989,7 +68986,7 @@ Md
 Md
 Md
 Md
-EY
+OO
 EY
 EY
 EY
@@ -69451,7 +69448,7 @@ EY
 EY
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -69510,7 +69507,7 @@ Va
 Va
 Va
 Va
-CI
+AP
 CS
 CS
 CS
@@ -69926,7 +69923,7 @@ EY
 EY
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -71859,7 +71856,7 @@ CC
 CC
 CC
 qt
-CI
+AP
 CS
 CS
 Va
@@ -79581,7 +79578,7 @@ Ps
 xi
 mf
 sD
-CS
+AP
 CS
 CS
 CS
@@ -117795,7 +117792,7 @@ kr
 iz
 zG
 mf
-oa
+We
 kr
 kr
 mf

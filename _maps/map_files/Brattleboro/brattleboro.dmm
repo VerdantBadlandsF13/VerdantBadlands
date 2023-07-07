@@ -181,7 +181,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                                                                                wastebot");
+	faction = list("raider,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -299,7 +299,7 @@
 	light_color = "#c1caff"
 	},
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                                                                                wastebot");
+	faction = list("raider,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -361,7 +361,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -379,7 +379,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -4875,6 +4875,12 @@
 	name = "dry dirt"
 	},
 /area/f13/wasteland/bl/gmb)
+"cSR" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/riveted,
+/area/admin)
 "cSV" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -7545,6 +7551,7 @@
 	pixel_x = 32;
 	name = "human skin"
 	},
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/caves)
 "eLa" = (
@@ -14233,13 +14240,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/village)
-"jrU" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/landmark/observer_start,
-/turf/open/floor/carpet/red,
-/area/f13/village)
 "jsN" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -15518,7 +15518,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	color = "#818181";
@@ -21439,7 +21439,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -27350,7 +27350,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
@@ -30020,7 +30020,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain1"
@@ -32489,6 +32489,7 @@
 /obj/structure/sign/poster/contraband/pinup_anthro13{
 	pixel_x = 32
 	},
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "wiD" = (
@@ -32559,7 +32560,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -33227,6 +33228,11 @@
 /obj/structure/bed/old,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"wIM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/flora/wasteplant/rad_fungus,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "wIR" = (
 /obj/structure/table/wood,
 /obj/item/kitchen/knife{
@@ -33917,10 +33923,7 @@
 	dir = 4
 	},
 /obj/effect/spawner/lootdrop/f13/junkspawners,
-/obj/structure/decoration/vent,
-/obj/structure/decoration/vent{
-	icon_state = "ventrusty"
-	},
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -35142,7 +35145,7 @@
 /mob/living/simple_animal/hostile/handy{
 	desc = "A reprogrammed Mister Handy, now serving the Techfiends.";
 	name = "Mr. Techfiend";
-	faction = list("wastebot,                                                                                                                                raider")
+	faction = list("wastebot,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                raider")
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -35387,9 +35390,7 @@
 /obj/effect/overlay/junk/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent{
-	icon_state = "ventrusty"
-	},
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -36146,7 +36147,7 @@ lwA
 lwA
 lwA
 lwA
-lwA
+cSR
 "}
 (2,1,1) = {"
 oMJ
@@ -36667,7 +36668,7 @@ sQZ
 sQZ
 aPS
 xwt
-qJd
+rxx
 wns
 sQZ
 sWP
@@ -37068,7 +37069,7 @@ fwb
 fwb
 fwb
 fwb
-sQZ
+rxx
 sQZ
 qJd
 sQZ
@@ -37247,7 +37248,7 @@ fwb
 fwb
 fwb
 fwb
-sQZ
+rxx
 sQZ
 ewt
 fKW
@@ -37584,7 +37585,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-qJd
+rxx
 kqM
 sQZ
 fwb
@@ -38493,7 +38494,7 @@ fwb
 fwb
 fwb
 fwb
-qJd
+rxx
 lrH
 tSO
 sQZ
@@ -38545,7 +38546,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-sQZ
+rxx
 fwb
 fwb
 fwb
@@ -38625,7 +38626,7 @@ sQZ
 sQZ
 pEQ
 sQZ
-sQZ
+rxx
 fwb
 fwb
 fwb
@@ -38989,7 +38990,7 @@ vgc
 sQZ
 sQZ
 azj
-sQZ
+rxx
 fwb
 kJz
 fwb
@@ -39825,7 +39826,7 @@ fwb
 fwb
 fwb
 fwb
-sQZ
+rxx
 sQZ
 sQZ
 oAQ
@@ -40730,7 +40731,7 @@ bVe
 sSP
 sQZ
 sQZ
-sQZ
+rxx
 fwb
 fwb
 fwb
@@ -40823,7 +40824,7 @@ fwb
 fwb
 fwb
 fwb
-sQZ
+rxx
 sQZ
 sQZ
 sQZ
@@ -49284,7 +49285,7 @@ fDe
 bhZ
 fDe
 gKQ
-jrU
+bhZ
 fDe
 bhZ
 fDe
@@ -115052,11 +115053,11 @@ anP
 anP
 anP
 anP
-lNm
 anP
 anP
 anP
 anP
+sjc
 rsU
 rsU
 rsU
@@ -115506,7 +115507,7 @@ rsU
 rsU
 rsU
 rsU
-anP
+sjc
 anP
 anP
 anP
@@ -116423,7 +116424,7 @@ rsU
 rsU
 rsU
 rsU
-anP
+sjc
 anP
 anP
 anP
@@ -146273,7 +146274,7 @@ gFY
 qMI
 xlP
 xlP
-xlP
+wIM
 sNZ
 fwb
 fwb
@@ -148098,7 +148099,7 @@ fwb
 fwb
 fwb
 fwb
-xlP
+wIM
 xlP
 sQZ
 nFR
@@ -149932,7 +149933,7 @@ fwb
 fwb
 fwb
 fwb
-sQZ
+rxx
 sQZ
 nFR
 xlP
@@ -150381,7 +150382,7 @@ xlP
 xlP
 xlP
 xlP
-sQZ
+rxx
 fwb
 fwb
 fwb

@@ -180,8 +180,8 @@
 	Beyond providing light, it has little use. For those with good intentions, that is."
 	produce = /obj/item/reagent_containers/food/snacks/grown/glow
 	light_color = LIGHT_COLOR_GREEN
-	light_power = 1.75
-	light_range = 3
+	light_power = 1.25
+	light_range = 1
 
 /obj/structure/flora/wasteplant/rad_fungus/Initialize()
 	. = ..()
@@ -199,16 +199,14 @@
 	if(!z || !SSmobs.clients_by_zlevel[z].len)
 		return
 
-	for(var/mob/living/carbon/human/victim in view(src,1))
+	for(var/mob/living/carbon/human/victim in view(src,0))// Only those standing on it.
 		if(istype(victim) && victim.stat != DEAD)
 			victim.rad_act(5)
 
-	for(var/obj/item/geiger_counter/geiger in view(src,5))
+	for(var/obj/item/geiger_counter/geiger in view(src,5))// Geigers will hate it, though, regardless.
 		if(istype(geiger))
 			geiger.rad_act(15)
 
-// No one in view?  Don't do anything.
-	return
 
 /////FALLOUT 13 TREES////
 /obj/structure/flora/tree/joshua

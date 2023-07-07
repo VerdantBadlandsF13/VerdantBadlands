@@ -991,7 +991,7 @@
 		upgrades |= new /obj/item/borg/upgrade/ai(src)
 	shell = TRUE
 	braintype = "AI Shell"
-	name = "[designation] AI Shell [rand(100,999)]"
+	name = "[designation] ZAX Shell [rand(100,999)]"
 	real_name = name
 	GLOB.available_ai_shells |= src
 	if(!QDELETED(builtInCamera))

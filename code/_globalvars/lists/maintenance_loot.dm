@@ -202,9 +202,7 @@ GLOBAL_LIST_INIT(trash_gun, list(
 ))
 
 GLOBAL_LIST_INIT(trash_money, list(
-	/obj/item/stack/f13Cash/random/low = 30,
-	/obj/item/stack/f13Cash/random/med = 9,
-	/obj/item/stack/f13Cash/random/high = 1
+	/obj/item/stack/f13Cash/random/low = 30
 ))
 
 GLOBAL_LIST_INIT(trash_tool, list(

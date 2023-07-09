@@ -1,9 +1,7 @@
 /******************** Message Terminal ********************/
 /** Ported and condensed version of requests_console.dm using existing telecomms setup. */
 
-GLOBAL_LIST_EMPTY(NCR_req_terminal)
-
-GLOBAL_LIST_EMPTY(LEGION_req_terminal)
+GLOBAL_LIST_EMPTY(VFE_req_terminal)
 
 GLOBAL_LIST_EMPTY(req_terminal)
 
@@ -20,7 +18,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 	desc = "Where mail is sent and received."
 	icon = 'icons/obj/computer.dmi'
 	icon_state = "terminal"
-	plane = ABOVE_WALL_PLANE
+	plane = OBJITEM_PLANE
 	layer = BELOW_OBJ_LAYER
 	var/terminalid = ""
 	var/beepsound = 'sound/effects/printer.ogg'

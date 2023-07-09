@@ -37,6 +37,7 @@
 	can_bayonet = FALSE
 	pump_sound = 'sound/f13weapons/BBgun_pump.ogg'
 	fire_sound = 'sound/f13weapons/BBgun_fire.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	fire_delay = 3
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

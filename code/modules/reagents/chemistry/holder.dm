@@ -1213,3 +1213,9 @@
 		var/datum/reagent/R = GLOB.chemical_reagents_list[X]
 		if(ckey(chem_name) == ckey(lowertext(R.name)))
 			return X
+
+/proc/find_reagent_object_from_type(input)
+	if(GLOB.chemical_reagents_list[input]) //prefer IDs!
+		return GLOB.chemical_reagents_list[input]
+	else
+		return null

@@ -83,8 +83,6 @@
 		O.Shift(SOUTH, 6)
 		overlays += O
 
-//fortuna statues
-
 /obj/structure/statue/bos/ladyleft
 	name = "The Lady"
 	desc = "The inscription reads 'Scribe with hands outstretched, pray her shelter of the world, reborn anew of olde.'"

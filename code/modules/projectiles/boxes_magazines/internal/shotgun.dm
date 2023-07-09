@@ -14,6 +14,7 @@
 		return boolets
 	else
 		return ..()
+
 /obj/item/ammo_box/magazine/internal/shot/trench
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 5
@@ -52,11 +53,11 @@
 
 /obj/item/ammo_box/magazine/internal/shot/dual/simple
 	name = "double-barrel shotgun internal magazine (simple)"
-	ammo_type = /obj/item/ammo_casing/shotgun/improvised
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 
 /obj/item/ammo_box/magazine/internal/shot/improvised
 	name = "improvised shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/improvised
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/internal/shot/police

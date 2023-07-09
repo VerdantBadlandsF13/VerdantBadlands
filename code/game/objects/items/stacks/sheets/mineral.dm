@@ -408,7 +408,7 @@ GLOBAL_LIST_INIT(snow_recipes, list ( \
 /*
  * Alien Alloy
  */
-/obj/item/stack/sheet/mineral/abductor //Start Fortuna edit: alien alloy -> polymer alloy
+/obj/item/stack/sheet/mineral/abductor
 	name = "experimental polymer alloy"
 	icon = 'icons/obj/abductor.dmi'
 	icon_state = "sheet-abductor"
@@ -430,7 +430,7 @@ GLOBAL_LIST_INIT(abductor_recipes, list ( \
 	new/datum/stack_recipe("poylmer airlock assembly", /obj/structure/door_assembly/door_assembly_abductor, 4, time = 20, one_per_turf = 1, on_floor = 1), \
 	null, \
 	new/datum/stack_recipe("polymer floor tile", /obj/item/stack/tile/mineral/abductor, 1, 4, 20), \
-	)) //End Fortuna edit
+	))
 
 /obj/item/stack/sheet/mineral/abductor/get_main_recipes()
 	. = ..()

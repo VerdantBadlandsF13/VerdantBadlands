@@ -441,11 +441,33 @@
 		if(ACCESS_SECURITY)
 			return "Security"
 
+/* Vault Fifty-Eight */
+/proc/get_all_vfe_access()
+	return list(
+				ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY,
+				ACCESS_VFE_MEDICAL, ACCESS_VFE_ENGINEERING, ACCESS_VFE_SCIENCE,
+				)
+
+/proc/get_vfe_access_desc(A)
+	switch(A)
+		if(ACCESS_VFE)
+			return "Vault Citizenship"
+		if(ACCESS_VFE_RESTRICT)
+			return "High Security Access"
+		if(ACCESS_VFE_SECURITY)
+			return "General Security Access"
+		if(ACCESS_VFE_MEDICAL)
+			return "Medical Access"
+		if(ACCESS_VFE_ENGINEERING)
+			return "Engineering Access"
+		if(ACCESS_VFE_SCIENCE)
+			return "Science Access"
+
 /proc/get_all_jobs()
-	return list("Wastelander",
+	return list("Wastelander", "Tavernkeep",
 				"Commander", "Practitioner", "Walker", "Militia", "Volunteer",
 				"DFS Advisor", "DFS Enforcer", "DFS Agent", "DFS Regular", "DFS Grunt",
-				"Vault-Tec Overseer", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
+				"Vault-Tec Overseer", "Vault-Tec Security Chief", "Vault-Tec Security", "Vault-Tec Doctor", "Vault-Tec Scientist",
 				"Vault-Tec Engineer", "Vault-Tec Robot", "Vault Dweller",
 				"Foreman", "Lumberjack")
 

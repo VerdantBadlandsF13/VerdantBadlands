@@ -23,6 +23,7 @@ Proper GL below.
 	spread = 8
 	fire_delay = 1
 	fire_sound = 'sound/f13weapons/WattzRifleFire.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/gatlingequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/gatling)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	var/weapon_heat = 1

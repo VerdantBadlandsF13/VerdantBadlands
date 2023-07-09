@@ -1,7 +1,5 @@
 /datum/looping_sound/active_outside_radstorm
 	mid_sounds = list(
-		'modular_badlands/code/modules/reactor/sounds/radstorm/outside/active_mid1.ogg'=1,
-		'modular_badlands/code/modules/reactor/sounds/radstorm/outside/active_mid1.ogg'=1,
 		'modular_badlands/code/modules/reactor/sounds/radstorm/outside/active_mid1.ogg'=1
 		)
 	mid_length = 80

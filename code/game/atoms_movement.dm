@@ -235,7 +235,7 @@
 
 	if (old_turf?.z != new_turf?.z)
 		on_changed_z_level(old_turf, new_turf)
-	
+
 	return TRUE
 
 
@@ -322,6 +322,12 @@
 /atom/movable/proc/forceMove(atom/destination)
 	. = FALSE
 	if(destination)
+		var/turf/new_turf = get_turf(destination)
+		if(new_turf && ismob(src))
+			var/mob/M = src
+			if(is_secret_level(new_turf.z) && !M.client?.holder)
+				return
+
 		. = doMove(destination)
 	else
 		CRASH("No valid destination passed into forceMove")

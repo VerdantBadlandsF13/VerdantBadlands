@@ -183,7 +183,7 @@
 	canSmoothWith = null
 
 /turf/closed/wall/mineral/abductor
-	name = "polymer wall" // Fortuna edit: alien alloy -> polymer
+	name = "polymer wall"
 	desc = "A wall with an advanced polymer alloy plating."
 	icon = 'icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor"

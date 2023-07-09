@@ -117,6 +117,11 @@
 		/obj/item/grenade/homemade
 		)))
 
+/obj/item/storage/belt/bandolier/tavern/PopulateContents()
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
+
 /obj/item/storage/belt/sabre/heavy
 	name = "heavy-duty sheath"
 	desc = "A rugged set of leather straps and metal tips to comfortably carry a large variety of blades (and even blunt objects) on your side."

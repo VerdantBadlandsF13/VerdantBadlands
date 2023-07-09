@@ -18,6 +18,7 @@
 	slowdown = 0.5
 	fire_delay = 6
 	spread = 0
+	recoil = 1
 	force = 15 //Decent clubs generally speaking
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
@@ -25,6 +26,7 @@
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	var/pump_stam_cost = 2
 
 /obj/item/gun/ballistic/rifle/process_chamber(mob/living/user, empty_chamber = 0)

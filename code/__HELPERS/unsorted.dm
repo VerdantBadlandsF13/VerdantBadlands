@@ -482,6 +482,16 @@ Turf and target are separate in case you want to teleport some distance from a t
 			processing += A.contents
 			. += A
 
+///Almost identical to GetAllContents but returns a list of atoms of the type passed in the argument.
+/atom/proc/GetAllContentsType(type)
+	var/list/processing_list = list(src)
+	. = list()
+	while(length(processing_list))
+		var/atom/checked_atom = processing_list[1]
+		processing_list.Cut(1, 2)
+		processing_list += checked_atom.contents
+		if(istype(checked_atom, type))
+			. += checked_atom
 
 //Step-towards method of determining whether one atom can see another. Similar to viewers()
 /proc/can_see(atom/source, atom/target, length=5) // I couldnt be arsed to do actual raycasting :I This is horribly inaccurate.
@@ -1154,25 +1164,22 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 	var/initialpixely = pixel_y
 	var/shiftx = rand(-pixelshiftx,pixelshiftx)
 	var/shifty = rand(-pixelshifty,pixelshifty)
-	animate(src, pixel_x = pixel_x + shiftx, pixel_y = pixel_y + shifty, time = 0.2, loop = duration)
-	pixel_x = initialpixelx
-	pixel_y = initialpixely
+	animate(src, pixel_x = shiftx, pixel_y = shifty, time = 0.2, loop = duration, flags = ANIMATION_RELATIVE)
+	animate(pixel_x = initialpixelx, pixel_y = initialpixely, time = 0.2)
 
-/atom/proc/do_jiggle(targetangle = 45, timer = 20)
+/atom/proc/do_jiggle(targetangle = 25, timer = 20)
 	var/matrix/OM = matrix(transform)
 	var/matrix/M = matrix(transform)
-	var/halftime = timer * 0.5
 	M.Turn(pick(-targetangle, targetangle))
-	animate(src, transform = M, time = halftime, easing = ELASTIC_EASING)
-	animate(src, transform = OM, time = halftime, easing = ELASTIC_EASING)
+	animate(src, transform = M, time = timer * 0.1, easing = BACK_EASING | EASE_IN)
+	animate(transform = OM, time = timer * 0.4, easing = ELASTIC_EASING)
 
 /atom/proc/do_squish(squishx = 1.2, squishy = 0.6, timer = 20)
 	var/matrix/OM = matrix(transform)
 	var/matrix/M = matrix(transform)
-	var/halftime = timer * 0.5
 	M.Scale(squishx, squishy)
-	animate(src, transform = M, time = halftime, easing = BOUNCE_EASING)
-	animate(src, transform = OM, time = halftime, easing = BOUNCE_EASING)
+	animate(src, transform = M, time = timer * 0.5, easing = ELASTIC_EASING)
+	animate(transform = OM, time = timer * 0.5, easing = BOUNCE_EASING, flags = ANIMATION_PARALLEL)
 
 /proc/weightclass2text(w_class)
 	switch(w_class)

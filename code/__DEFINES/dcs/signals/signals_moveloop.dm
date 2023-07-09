@@ -31,6 +31,8 @@
 /// Called from /mob/living/PushAM -- Called when this mob is about to push a movable, but before it moves
 /// (aotm/movable/being_pushed)
 #define COMSIG_LIVING_PUSHING_MOVABLE "living_pushing_movable"
+///From base of mob/living/MobBump() (mob/living)
+#define COMSIG_LIVING_MOB_BUMP "living_mob_bump"
 ///from base of [/atom/proc/interact]: (mob/user)
 #define COMSIG_ATOM_UI_INTERACT "atom_ui_interact"
 ///from base of atom/relaymove(): (mob/living/user, direction)

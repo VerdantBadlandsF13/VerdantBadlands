@@ -72,6 +72,9 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 		target.adjustBruteLoss(min(99,(target.health - 1)))
 		target.Knockdown(400)
 		target.stuttering = 20
+		var/obj/item/bodypart/chest/O = target.get_bodypart(LEGS)
+		O.force_wound_upwards(/datum/wound/burn/critical)
+		O.force_wound_upwards(/datum/wound/blunt/critical)
 
 /obj/item/grenade/f13/mine/proc/on_entered(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
@@ -81,6 +84,11 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 		return
 
 	if(arrived.movement_type & FLYING)
+		return
+
+	var/mob/living/target = arrived
+	if(target.special_a >= 8)
+		visible_message("<span class='danger'>[arrived] deftly avoids \the [icon2html(src, viewers(src))] [src]!</span>")
 		return
 
 	INVOKE_ASYNC(src, .proc/triggermine, arrived)

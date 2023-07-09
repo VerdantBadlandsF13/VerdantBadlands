@@ -151,7 +151,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	var/obj/item/heirloom_type  ///DONT CHANGE HERILOOM STUFF FOR SOME REASON DONT WORK IF YOU REMOVE IT AAAAA.
 	switch(quirk_holder.mind.assigned_role)
-		if("Baron", "Centurion", "Sheriff", "NCR Captain")
+		if("Vault-Tec Overseer", "DFS Advisor", "Commander", "Foreman")
 			heirloom_type = pick(/obj/item/soapstone)
 		else
 			heirloom_type = pick(

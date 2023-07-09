@@ -49,7 +49,7 @@
 	merge_type = /obj/item/stack/tile/mineral/diamond
 
 /obj/item/stack/tile/mineral/abductor
-	name = "polymer floor tile" //Fortuna edit: alien alloy -> polymer
+	name = "polymer floor tile"
 	singular_name = "polymer floor tile"
 	desc = "A tile made from an experimental polymer alloy."
 	icon = 'icons/obj/abductor.dmi'

@@ -44,7 +44,7 @@
 		return FALSE			//This is VV, not to be called by anything else.
 	if(href_list[VV_HK_MODIFY_TRAITS])
 		usr.client.holder.modify_traits(src)
-	if(href_list[VV_HK_MODIFY_RECIPES]) //fortuna addition
+	if(href_list[VV_HK_MODIFY_RECIPES])
 		usr.client.modify_recipes(src)
 	return TRUE
 

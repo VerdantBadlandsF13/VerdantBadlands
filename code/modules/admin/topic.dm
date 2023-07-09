@@ -2094,7 +2094,7 @@
 		show_player_panel(M)
 
 	else if(href_list["adminplayerobservefollow"])
-		if(!isobserver(usr) && !check_rights(R_SPAWN)) //fortuna edit. event manager change
+		if(!isobserver(usr) && !check_rights(R_SPAWN))
 			return
 
 		var/atom/movable/AM = locate(href_list["adminplayerobservefollow"])
@@ -2365,14 +2365,14 @@
 		if(istype(charter))
 			charter.reject_proposed(usr)
 	else if(href_list["jumpto"])
-		if(!isobserver(usr) && !check_rights(R_SPAWN)) //fortuna edit. event manager change
+		if(!isobserver(usr) && !check_rights(R_SPAWN))
 			return
 
 		var/mob/M = locate(href_list["jumpto"])
 		usr.client.jumptomob(M)
 
 	else if(href_list["getmob"])
-		if(!check_rights(R_SPAWN)) //fortuna edit. event manager change
+		if(!check_rights(R_SPAWN))
 			message_admins("[ADMIN_TPMONTY(usr)] tried to use /datum/admins/proc/CheckAdminHref(): getmob without admin perms.")
 			log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use /datum/admins/proc/CheckAdminHref(): getmob without admin perms.")
 			return
@@ -2392,7 +2392,7 @@
 		usr.client.sendmob(M)
 
 	else if(href_list["narrateto"])
-		if(!check_rights(R_SPAWN)) //fortuna edit. event manager change
+		if(!check_rights(R_SPAWN))
 			message_admins("[ADMIN_TPMONTY(usr)] tried to use /datum/admins/proc/CheckAdminHref(): narrateto without admin perms.")
 			log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use /datum/admins/proc/CheckAdminHref(): narrateto without admin perms.")
 			return
@@ -2401,7 +2401,7 @@
 		usr.client.cmd_admin_direct_narrate(M)
 
 	else if(href_list["subtlemessage"])
-		if(!check_rights(R_SPAWN)) //fortuna edit. event manager change
+		if(!check_rights(R_SPAWN))
 			message_admins("[ADMIN_TPMONTY(usr)] tried to use /datum/admins/proc/CheckAdminHref(): subtlemessage without admin perms.")
 			log_admin("INVALID ADMIN PROC ACCESS: [key_name(usr)] tried to use /datum/admins/proc/CheckAdminHref(): subtlemessage without admin perms.")
 			return
@@ -2477,7 +2477,7 @@
 			to_chat(usr, "This can only be used on instances on mindless mobs")
 			return
 		M.mind_initialize()
-//fortuna addition start
+
 	else if(href_list["toggle_build"])
 		if(!check_rights(R_SPAWN))
 			return
@@ -2488,7 +2488,6 @@
 			return
 		usr.client.invisimin()
 
-//fortuna addition end
 	else if(href_list["create_object"])
 		if(!check_rights(R_SPAWN))
 			return

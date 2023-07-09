@@ -28,6 +28,7 @@
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	pb_knockback = 1
 
 
@@ -102,8 +103,10 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
 	fire_delay = 0.5
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	extra_damage = 4
 	extra_penetration = 0.1
+	pb_knockback = 2
 
 /obj/item/gun/ballistic/revolver/single_shotgun/update_icon_state()
 	if(!magazine || !magazine.ammo_count(0))
@@ -132,9 +135,11 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/simple
 	sawn_desc = "Short and concealable, terribly uncomfortable to fire, but worse on the other end."
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	recoil = 1.55
 	extra_damage = 3
 	extra_penetration = 0.05
+	pb_knockback = 2
 
 /obj/item/gun/ballistic/revolver/caravan_shotgun/attackby(obj/item/A, mob/user, params)
 	..()
@@ -170,9 +175,11 @@
 	force = 20
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
 	fire_sound = 'sound/f13weapons/max_sawn_off.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	recoil = 0.55
 	extra_damage = 2
 	extra_penetration = 0.15
+	pb_knockback = 2
 
 /obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
 	..()
@@ -392,11 +399,13 @@
 	icon_state = "pancor"
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	is_automatic = TRUE
 	autofire_shot_delay = 3.55
 	fire_delay = 2.85
 	recoil = 1.35
 	automatic = 1
+	pb_knockback = 1
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

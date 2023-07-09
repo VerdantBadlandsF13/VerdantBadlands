@@ -32,6 +32,10 @@
 /obj/item/projectile/bullet/dart/piercing
 	piercing = TRUE
 
+/obj/item/projectile/bullet/dart/piercing/surgeon/Initialize()
+	. = ..()
+	reagents.add_reagent(/datum/reagent/toxin/zombiepowder, 5)
+
 /obj/item/projectile/bullet/dart/metalfoam/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/aluminium, 15)

@@ -19,6 +19,33 @@
 				- Kidnapping. Someone have something you want? Try taking one of their friends, or them. People are usually worth a lot more than their share of cram alive. <br> \
 				- Negotiation. Violence has its place, but diplomacy goes a long way when it's backed up by your guns."
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+	)
+
 /datum/outfit/job/dfs
 	name = "DFSdatums"
 	jobtype = /datum/job/dfs

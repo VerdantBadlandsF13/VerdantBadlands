@@ -152,7 +152,7 @@
 
 /obj/item/screwdriver/advanced
 	name = "advanced screwdriver"
-	desc = "A classy silver screwdriver with a polymer alloy tip, it works almost as well as the real thing." //Fortuna edit: alien alloy -> polymer
+	desc = "A classy silver screwdriver with a polymer alloy tip, it works almost as well as the real thing."
 	icon = 'icons/obj/advancedtools.dmi'
 	icon_state = "screwdriver_a"
 	item_state = "screwdriver_nuke"

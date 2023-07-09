@@ -376,7 +376,7 @@ SUBSYSTEM_DEF(vote)
 			if(SSmapping.changemap(config.maplist[.]))
 				to_chat(world, "<span class='boldannounce'>The map vote has chosen [VM.map_name] for next round!</span>")
 	if(end_round)
-	/* Fortuna edit, shuttle will autocall after a successful transfer vote even when admins are online
+	/* Shuttle will autocall after a successful transfer vote even when admins are online
 		var/active_admins = 0
 		for(var/client/C in GLOB.admins)
 			if(!C.is_afk() && check_rights_for(C, R_SERVER))
@@ -461,7 +461,7 @@ SUBSYSTEM_DEF(vote)
 				to_chat(usr, "<span class='warning'>A vote was initiated recently, you must wait [DisplayTimeText(next_allowed_time-world.time)] before a new vote can be started!</span>")
 				return 0
 
-		SEND_SOUND(world, sound('sound/f13/mysterious_stranger.ogg'))
+		SEND_SOUND(world, sound('sound/f13/pip_notif.ogg'))
 		reset()
 		display_votes = display //CIT CHANGE - adds obfuscated votes
 		switch(vote_type)

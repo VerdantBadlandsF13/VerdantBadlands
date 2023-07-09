@@ -15,6 +15,7 @@
 	fire_delay = 4
 	burst_size = 1
 	extra_damage = 3
+	recoil = 0.25
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 
 /obj/item/gun/ballistic/automatic/hobo/zipgun/update_icon_state()
@@ -49,6 +50,7 @@
 	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/autopipe
 	force = 20
+	recoil = 2
 	is_automatic = TRUE
 	automatic = 1
 	autofire_shot_delay = 1.75

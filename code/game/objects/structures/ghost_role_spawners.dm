@@ -619,18 +619,21 @@
 	rank = "Gunner"
 
 /obj/effect/mob_spawn/human/ghostcafe
-	name = "Ghost Cafe Sleeper"
+	name = "Route-Nine Entry Point"
 	uses = -1
-	icon = 'icons/obj/machines/sleeper.dmi'
-	icon_state = "sleeper"
-	mob_name = "a ghost cafe visitor"
+	desc = "<span class='revenminor'>OOC: An entry point for the RP hub.</span>."
+	icon = 'icons/obj/turrets.dmi'
+	icon_state = "hologram"
+	mob_name = "an explorer"
 	roundstart = FALSE
 	anchored = TRUE
 	density = FALSE
 	death = FALSE
-	assignedrole = "Ghost Cafe Visitor"
-	short_desc = "You are a Ghost Cafe Visitor!"
-	flavour_text = "You know one thing for sure. You arent actually alive. Are you in a simulation?"
+	assignedrole = "Route-Nine Explorer"
+	short_desc = "You're an explorer on Route-Nine. <br> \
+	<span class='revenminor'>OOC: You may play your own character here, or come up with something new. This is a post-death RP hub.</span>"
+	flavour_text = "Whether or not you're leaving or returning, you're in the outskirts of Brattleboro. Relatively safe, all things considered. <br>\
+	<span class='revenminor'>OOC: An entry point for the RP hub.</span>."
 	skip_reentry_check = TRUE
 	banType = ROLE_GHOSTCAFE
 
@@ -650,7 +653,6 @@
 	else
 		ADD_TRAIT(M,TRAIT_SIXTHSENSE,GHOSTROLE_TRAIT)
 		to_chat(M,"<span class='notice'>You're once again longer hearing deadchat.</span>")
-
 
 /obj/effect/mob_spawn/human/ghostcafe/special(mob/living/carbon/human/new_spawn)
 	if(new_spawn.client)
@@ -673,7 +675,7 @@
 	name = "ID, jumpsuit and shoes"
 	uniform = /obj/item/clothing/under/color/random
 	shoes = /obj/item/clothing/shoes/sneakers/black
-	id = /obj/item/card/id/no_banking
+	id = /obj/item/card/id/brokenholodog
 	r_hand = /obj/item/storage/box/syndie_kit/chameleon/ghostcafe
 
 
@@ -689,7 +691,7 @@
 			uniform = suited ? /obj/item/clothing/under/color/random : /obj/item/clothing/under/color/jumpskirt/random
 
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe
-	name = "ghost cafe costuming kit"
+	name = "costuming kit"
 	desc = "Look just the way you did in life - or better!"
 
 /obj/item/storage/box/syndie_kit/chameleon/ghostcafe/PopulateContents() // Doesn't contain a PDA, for isolation reasons.

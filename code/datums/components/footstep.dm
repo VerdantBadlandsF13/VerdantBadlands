@@ -10,7 +10,7 @@
 	var/footstep_type
 	///This can be a list OR a soundfile OR null. Determines whatever sound gets played.
 	var/footstep_sounds
-	//fortuna edit. power armor sound list
+	//Power armor sound list
 	var/powerArmorSounds = list('sound/f13effects/footstep/ArmorPower/FST_ArmorPower_Dirt_Walk_3rd_01.ogg',
 	'sound/f13effects/footstep/ArmorPower/FST_ArmorPower_Dirt_Walk_3rd_02.ogg',
 	'sound/f13effects/footstep/ArmorPower/FST_ArmorPower_Dirt_Walk_3rd_03.ogg',
@@ -68,7 +68,7 @@
 		if(!C.get_bodypart(BODY_ZONE_L_LEG) && !C.get_bodypart(BODY_ZONE_R_LEG))
 			return
 		if(C.m_intent == MOVE_INTENT_WALK)
-			powerarmorcheck() //fortuna edit. power armor walking sounds
+			powerarmorcheck()
 			return
 	steps++
 
@@ -108,7 +108,7 @@
 	if(!T)
 		return
 	var/mob/living/carbon/human/H = parent
-	powerarmorcheck() //fortuna edit. power armor sounds
+	powerarmorcheck()
 	var/list/L = GLOB.barefootstep
 	var/turf_footstep = T.barefootstep
 	var/special = FALSE
@@ -150,7 +150,6 @@
 			TRUE,
 			L[turf_footstep][3] + e_range)
 
-//fortuna edit. power armor sound check proc
 /datum/component/footstep/proc/powerarmorcheck()
 	var/mob/living/carbon/human/P = parent
 	var/turf/open/T = get_turf(P)

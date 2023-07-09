@@ -349,7 +349,7 @@
 			outfit = /datum/outfit/syndicatecommandocorpse
 		if("Shadow")
 			mob_species = /datum/species/shadow
-			// r_pocket = /obj/item/reagent_containers/pill/shadowtoxin //Fortuna edit: shadowtoxin pills disabled due to mutation toxin removal
+			// r_pocket = /obj/item/reagent_containers/pill/shadowtoxin //Shadowtoxin pills disabled due to mutation toxin removal
 			neck = /obj/item/clothing/accessory/medal/nobel_science
 			uniform = /obj/item/clothing/under/color/black
 			shoes = /obj/item/clothing/shoes/sneakers/black

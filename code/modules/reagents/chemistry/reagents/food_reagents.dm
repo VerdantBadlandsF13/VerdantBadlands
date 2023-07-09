@@ -171,7 +171,7 @@
 		mytray.adjustPests(rand(1,2))
 
 /datum/reagent/consumable/sugar/overdose_start(mob/living/M)
-	to_chat(M, "<span class='userdanger'>You go into hyperglycaemic shock! Lay off the twinkies!</span>")
+	to_chat(M, "<span class='userdanger'>You go into hyperglycaemic shock!</span>")
 	M.AdjustSleeping(600, FALSE)
 	. = 1
 
@@ -766,6 +766,17 @@
 			var/datum/surgery/S = s
 			S.success_multiplier = max(0.6, S.success_multiplier) // +60% success probability on each step, compared to bacchus' blessing's ~46%
 	..()
+
+// Intended for mob production. Doesn't have utility, unlike above.
+/datum/reagent/consumable/honey_weak
+	name = "watery honey"
+	description = "Sweet sweet honey that decays into sugar. Too diluted to be of much use."
+	color = "#d3a308"
+	value = REAGENT_VALUE_COMMON
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	taste_description = "sweetness"
+	water_level = 2
 
 /datum/reagent/consumable/mayonnaise
 	name = "Mayonnaise"

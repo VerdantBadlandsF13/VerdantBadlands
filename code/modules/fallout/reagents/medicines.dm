@@ -157,7 +157,6 @@
 
 /datum/reagent/medicine/radx
 	name = "Rad-X"
-
 	description = "Reduces massive amounts of radiation and some toxin damage."
 	reagent_state = LIQUID
 	color = "#ff6100"
@@ -165,8 +164,8 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/radx/on_mob_life(mob/living/carbon/M)
-	if(M.radiation > 0)
-		M.radiation -= min(M.radiation, 8)
+/*	if(M.radiation > 0)
+		M.radiation -= min(M.radiation, 8)*/
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	..()
 	return TRUE // update health at end of tick

@@ -1,7 +1,7 @@
 /obj/item/organ/genital
 	color = "#fcccb3"
 	w_class = WEIGHT_CLASS_SMALL
-	organ_flags = ORGAN_NO_DISMEMBERMENT|ORGAN_EDIBLE //skyrat edit - fuck this shit i want to castrate people with a cleaver
+	organ_flags = ORGAN_NO_DISMEMBERMENT | ORGAN_EDIBLE
 	var/shape
 	var/sensitivity = 1 // wow if this were ever used that'd be cool but it's not but i'm keeping it for my unshit code
 	var/genital_flags //see citadel_defines.dm
@@ -144,7 +144,6 @@
 			to_chat(src,"<span class='userlove'>You can't make that genital [picked_organ.aroused_state ? "unaroused" : "aroused"]!</span>")
 		picked_organ.update_appearance()
 	return
-
 
 /obj/item/organ/genital/proc/modify_size(modifier, min = -INFINITY, max = INFINITY)
 	fluid_max_volume += modifier*2.5

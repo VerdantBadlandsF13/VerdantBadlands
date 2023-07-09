@@ -11,6 +11,7 @@
 	armour_penetration = 0.1
 	slowdown = 0.75 //this is one of the worst slowdowns in the game
 	fire_delay = 5.2
+	recoil = 0.25
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
@@ -22,6 +23,7 @@
 	item_state = "plasma-pistol"
 	icon_state = "glock86"
 	slowdown = 0.1
+	recoil = 0.15
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = WEAPON_MEDIUM
 	slot_flags = ITEM_SLOT_BELT

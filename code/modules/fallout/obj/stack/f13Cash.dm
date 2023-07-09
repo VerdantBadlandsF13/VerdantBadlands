@@ -148,7 +148,7 @@
 	icon_state = "spacecash"
 	flavor_desc = "An incredibly valuable token, printed within the Vault's confines. <br>\
 	If you're holding this, you're either one of their trade partners, or about to be shot."
-	value = CASH_VLT * CASH_CAP
+	value = CASH_VLT
 	merge_type = /obj/item/stack/f13Cash/vault
 
 /obj/item/stack/f13Cash/random/vault

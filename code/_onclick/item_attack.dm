@@ -100,7 +100,7 @@
 	// Let this be a lesson not to do that. When in doubt, remember:
 	// Don't Repeat Yourself!
 
-	damage_multiplier += (user.special_s/* + 0.5*/)
+	damage_multiplier += (user.special_s / 10)
 
 	var/bonus_damage = 0
 	if (force >= 5)
@@ -146,6 +146,8 @@
 		return
 	user.do_attack_animation(O)
 	O.attacked_by(src, user)
+	if(force >= 20)
+		shake_camera(user, ((force - 15) * 0.01 + 1), ((force - 15) * 0.01))
 
 /atom/movable/proc/attacked_by()
 	return

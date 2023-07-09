@@ -539,11 +539,11 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 
 	if(!(L.client && (L.client.prefs.toggles & SOUND_AMBIENCE)))
 		return //General ambience check is below the ship ambience so one can play without the other
-	var/sound //fortuna edit. lets make this its own variable for convenience
+	var/sound //Its own variable for convenience
 	if(prob(35))
 		sound = pick(ambientsounds)
 
-	if(prob(35)) //fortuna add. re-implements ambient music
+	if(prob(35)) //Re-implements ambient music
 		sound = pick(ambientmusic)
 
 		if(!L.client.played)

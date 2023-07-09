@@ -84,7 +84,6 @@
 	if(spark_system)
 		qdel(spark_system)
 		spark_system = null
-	//fortuna edit. logging door destruction
 	investigate_log("Door '[src]' destroyed at [AREACOORD(src)]. Last fingerprints: [src.fingerprintslast]", INVESTIGATE_DESTROYED)
 	message_admins("Door '[ADMIN_JMP(src)]' destroyed at [AREACOORD(src)]. Last fingerprints(If any): [src.fingerprintslast]")
 	log_game("Door '[src]' destroyed at [AREACOORD(src)]. Last fingerprints: [src.fingerprintslast]")

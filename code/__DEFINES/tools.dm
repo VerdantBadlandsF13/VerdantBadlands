@@ -27,7 +27,7 @@
 #define TOOL_WORKBENCH      "workbench"
 #define TOOL_BOTTLER		"bottler"
 #define TOOL_AWORKBENCH     "advanced workbench"
-//
+//GNB
 #define TOOL_GUNTIER1		"Guns and Bullets: Part 1"
 #define TOOL_GUNTIER2		"Guns and Bullets: Part 2"
 #define TOOL_GUNTIER3		"Guns and Bullets: Part 3"

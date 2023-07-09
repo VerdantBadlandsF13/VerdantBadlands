@@ -58,6 +58,12 @@ require only minor tweaks.
 ///boolean - does this z disable parallax?
 #define ZTRAIT_NOPARALLAX "No Parallax"
 
+/// boolean - does this z prevent xray/meson/thermal vision
+#define ZTRAIT_NOXRAY "No X-Ray"
+
+/// boolean - does this z prevent ghosts from observing it
+#define ZTRAIT_SECRET "Secret"
+
 // numeric offsets - e.g. {"Down": -1} means that chasms will fall to z - 1 rather than oblivion
 #define ZTRAIT_UP "Up"
 #define ZTRAIT_DOWN "Down"

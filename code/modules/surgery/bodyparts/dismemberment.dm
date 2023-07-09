@@ -52,28 +52,39 @@
 	..()
 
 /obj/item/bodypart/chest/dismember()
+
 	if(!owner)
 		return FALSE
+
 	var/mob/living/carbon/C = owner
 	if(!dismemberable)
 		return FALSE
+
 	if(HAS_TRAIT(C, TRAIT_NODISMEMBER))
 		return FALSE
+
 	if(HAS_TRAIT(C, TRAIT_NOGUT)) //Just for not allowing gutting
 		return FALSE
+
+	if(!C.InFullCritical())//From my old codebase, for balance purposes. Don't want someone 'awake' being one-tapped. - Carl
+		return FALSE
+
 	. = list()
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)
 	C.bleed(50)
 	playsound(get_turf(C), "modular_badlands/code/modules/rp_misc/sound/gore/destroyed_limb[rand(1,3)].ogg", 80, 1)
+
 	for(var/X in C.internal_organs)
 		var/obj/item/organ/O = X
 		if(O.organ_flags & ORGAN_NO_DISMEMBERMENT || check_zone(O.zone) != BODY_ZONE_CHEST)
 			continue
+
 		O.Remove()
 		O.forceMove(T)
 		organ_spilled = 1
 		. += X
+
 	if(cavity_item)
 		cavity_item.forceMove(T)
 		. += cavity_item

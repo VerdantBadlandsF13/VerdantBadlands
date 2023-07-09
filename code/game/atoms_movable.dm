@@ -59,7 +59,7 @@
 	var/list/affected_dynamic_lights
 	///Highest-intensity light affecting us, which determines our visibility.
 	var/affecting_dynamic_lumi = 0
-	
+
 	/// Whether this atom should have its dir automatically changed when it moves. Setting this to FALSE allows for things such as directional windows to retain dir on moving without snowflake code all of the place.
 	var/set_dir_on_move = TRUE
 	///how many times a this movable had movement procs called on it since Moved() was last called
@@ -653,13 +653,12 @@
 	if(throwing)
 		return
 	if(on && (!(movement_type & FLOATING) || floating_need_update))
-		animate(src, pixel_y = pixel_y + 2, time = 10, loop = -1)
-		sleep(10)
-		animate(src, pixel_y = pixel_y - 2, time = 10, loop = -1)
+		animate(src, pixel_z = 2, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
+		animate(pixel_z = -4, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
 		if(!(movement_type & FLOATING))
 			setMovetype(movement_type | FLOATING)
 	else if (!on && movement_type & FLOATING)
-		animate(src, pixel_y = initial(pixel_y), time = 10)
+		animate(src, pixel_z = initial(pixel_y), time = 10)
 		setMovetype(movement_type & ~FLOATING)
 	floating_need_update = FALSE
 
@@ -803,7 +802,7 @@
 	M.Turn(pick(-30, 30))
 	animate(I, alpha = 175, pixel_x = to_x, pixel_y = to_y, time = 3, transform = M, easing = CUBIC_EASING)
 	sleep(1)
-	animate(I, alpha = 0, transform = matrix(), time = 1)
+	animate(I, alpha = 0, transform = matrix(), time = 1, flags = ANIMATION_PARALLEL)
 
 /atom/movable/proc/set_anchored(anchorvalue) //literally only for plumbing ran
 	SHOULD_CALL_PARENT(TRUE)

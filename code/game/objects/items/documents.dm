@@ -36,6 +36,10 @@
 	name = "representative dossier"
 	desc = "\"Top Secret\" NCR documents trusted to the Representative. A mixture of financial records and political papers."
 
+/obj/item/documents/vfe
+	name = "vault fifty-eight dossier"
+	desc = "\"Top Secret\" Vault documents trusted to the Overseer. A mixture of medical and security papers."
+
 /obj/item/documents/photocopy
 	desc = "A copy of some top-secret documents. Nobody will notice they aren't the originals... right?"
 	var/forgedseal = 0

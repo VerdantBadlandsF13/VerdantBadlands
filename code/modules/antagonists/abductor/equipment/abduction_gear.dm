@@ -683,7 +683,7 @@
 	name = "beacon - Reagent Synthesizer"
 	spawned_machine = /obj/machinery/chem_dispenser/abductor
 
-/obj/item/scalpel/alien //Fortuna edit: alien tools -> experimental tools
+/obj/item/scalpel/alien
 	name = "experimental scalpel"
 	desc = "It's a gleaming sharp knife made out of silvery-green metal."
 	icon = 'icons/obj/abductor.dmi'
@@ -869,7 +869,7 @@
 
 /obj/item/clothing/under/abductor
 	desc = "The most advanced form of jumpsuit known to reality, looks uncomfortable."
-	name = "polymer jumpsuit" //End Fortuna edit
+	name = "polymer jumpsuit"
 	icon_state = "abductor"
 	item_state = "bl_suit"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 10, rad = 0, fire = 0, acid = 0)

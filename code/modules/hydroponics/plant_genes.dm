@@ -130,8 +130,6 @@
 	formatted_name += "[name] production [rate*100]%"
 	return formatted_name
 
-
-
 /datum/plant_gene/reagent/proc/set_reagent(reag_id)
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 

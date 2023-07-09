@@ -13,6 +13,9 @@
 	slot_flags = ITEM_SLOT_BELT
 	resistance_flags = FLAMMABLE
 	max_integrity = 40
+
+	var/equipsound = 'modular_badlands/code/modules/unsorted/sound/grenade_equip.ogg'
+
 	var/active = 0
 	var/det_time = 50
 	var/display_timer = 1
@@ -208,3 +211,16 @@
 
 /obj/item/proc/grenade_prime_react(obj/item/grenade/nade)
 	return
+
+/obj/item/grenade/proc/play_grenade_equip_sound(src, volume=50)
+	if(src && equipsound && volume)
+		var/played_sound = equipsound
+
+		if(islist(equipsound))
+			played_sound = pick(equipsound)
+
+		playsound(src, played_sound, volume, 1)
+
+/obj/item/grenade/pickup(mob/living/user)
+	. = ..()
+	play_grenade_equip_sound(src)

@@ -642,10 +642,10 @@
 	hitsound = 'sound/f13weapons/pan.ogg'
 	custom_materials = list(/datum/material/iron = 4000)
 
-// Entrenching tool P81
+// Entrenching tool
 /obj/item/shovel/trench
-	name = "p81 entrenching tool"
-	desc = "The 'Pattern 2281' Entrenching Tool is a new piece of infantry equipment given in limited quantity to infantry troops. An extremely robust shovel with a serrated edge for chopping wood."
+	name = "entrenching tool"
+	desc = "A piece of equipment given to infantry troops. An extremely robust shovel with a serrated edge for chopping wood."
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'

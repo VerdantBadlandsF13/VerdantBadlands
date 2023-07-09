@@ -139,12 +139,9 @@
 			"9mm FMJ" = image(icon = 'icons/obj/ammo.dmi', icon_state = "9mmbox"),
 			".44 FMJ" = image(icon = 'icons/obj/ammo.dmi', icon_state = "44box"),
 			"12g BKS" = image(icon = 'icons/obj/ammo.dmi', icon_state = "gshell-live"),
-			"Rubber" = image(icon = 'icons/obj/ammo.dmi', icon_state = "stunbox"),
-			"Beanbag" = image(icon = 'icons/obj/ammo.dmi', icon_state = "bbox"),
 			"5mm" = image(icon = 'icons/fallout/objects/guns/ammo.dmi', icon_state = "5mmbox"),
 			"mfc" = image(icon = 'icons/fallout/objects/powercells.dmi', icon_state = "mfc-full"),
-			"4.73mm" = image(icon = 'icons/fallout/objects/guns/ammo.dmi', icon_state = "ammobox"),
-			"Rubber 4.73mm" = image(icon = 'icons/fallout/objects/guns/ammo.dmi', icon_state = "ammobox")
+			"4.73mm" = image(icon = 'icons/fallout/objects/guns/ammo.dmi', icon_state = "ammobox")
 			)
 		var/list/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE)
 		switch(choice)

@@ -250,13 +250,13 @@
 
 //Fast and regenerates... but can only speak like an abductor
 /datum/species/golem/alloy
-	name = "Polymer Alloy Golem" //Fortuna edit: alien alloy -> polymer
+	name = "Polymer Alloy Golem"
 	id = "alloy golem"
 	fixed_mut_color = "333"
 	meat = /obj/item/stack/sheet/mineral/abductor
 	mutanttongue = /obj/item/organ/tongue/abductor
 	speedmod = 1 //faster
-	info_text = "As an <span class='danger'>Alloy Golem</span>, you are made of an experimental polymer alloy: you are faster and regenerate over time. You are, however, only able to be heard by other alloy golems." //Fortuna edit: alien alloy -> polymer
+	info_text = "As an <span class='danger'>Alloy Golem</span>, you are made of an experimental polymer alloy: you are faster and regenerate over time. You are, however, only able to be heard by other alloy golems."
 	prefix = "Alien"
 	special_names = list("Outsider", "Technology", "Watcher", "Stranger") //ominous and unknown
 

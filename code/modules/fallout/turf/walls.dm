@@ -385,9 +385,9 @@
 		var/turf/T = locate(destination_x, destination_y, destination_z)
 		user.forceMove(T)
 
-/turf/closed/indestructible/f13/obsidian //Just like that one game studio that worked on the original game, or that block in Minecraft!
+/turf/closed/indestructible/f13/obsidian
 	name = "obsidian"
-	desc = "No matter what you do with this rock, there's not even a scratch left on its surface.<br><font color='#7e0707'>You shall not pass!!!</font>"
+	desc = "No matter what you do with this rock, there's not even a scratch left on its surface.<br><font color='#7e0707'>You will not be getting through this.</font>"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	icon_state = "rock1"
 

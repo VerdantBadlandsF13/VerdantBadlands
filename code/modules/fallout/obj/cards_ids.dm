@@ -70,7 +70,7 @@ OTHER BELOW
 	assignment = "slave brand"
 	uses_overlays = FALSE
 
-/obj/item/card/id/legionbrand/Initialize()
+/obj/item/card/id/brand/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
@@ -128,3 +128,13 @@ OTHER BELOW
 	assignment = "old keys"
 	uses_overlays = FALSE
 	access = list(ACCESS_LBJ)
+
+// Tavern
+/obj/item/card/id/tavern_keys
+	name = "frail keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_TOWN_BAR)

@@ -53,7 +53,8 @@ GLOBAL_LIST_INIT(prewar_recipes, list ( \
 /obj/item/stack/sheet/prewar
 	name = "pre-war alloys"
 	singular_name = "pre war alloy"
-	desc = "This sheet was manufactured by using advanced smelting techniques before the war."
+	desc = "This sheet was manufactured by using advanced smelting techniques before the war. <br>\
+	To say this would be a great find is an understatement. Any Blacksmith worth their weight would want this."
 	icon_state = "sheet-prewar"
 	item_state = "sheet-metal"
 	custom_materials = list()

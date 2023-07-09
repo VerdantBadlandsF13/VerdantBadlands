@@ -145,7 +145,6 @@
 		picked_organ.update_appearance()
 	return
 
-
 /obj/item/organ/genital/proc/modify_size(modifier, min = -INFINITY, max = INFINITY)
 	fluid_max_volume += modifier*2.5
 	fluid_rate += modifier/10

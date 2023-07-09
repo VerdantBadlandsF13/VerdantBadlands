@@ -45,6 +45,8 @@
 	desc = "An exhaust ventilation system designed to keep the air safe via several stages of filtering."
 	icon = 'icons/fallout/objects/decals.dmi'
 	icon_state = "ventblue" //ventred, ventorange
+
+/*
 	var/datum/looping_sound/vent_decoration/soundloop
 
 /datum/looping_sound/vent_decoration
@@ -58,6 +60,7 @@
 
 /obj/structure/decoration/vent/Destroy()
 	QDEL_NULL(soundloop)
+*/
 
 /obj/structure/decoration/vent/rusty
 	name = "rusty vent"

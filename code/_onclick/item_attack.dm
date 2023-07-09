@@ -146,6 +146,8 @@
 		return
 	user.do_attack_animation(O)
 	O.attacked_by(src, user)
+	if(force >= 20)
+		shake_camera(user, ((force - 15) * 0.01 + 1), ((force - 15) * 0.01))
 
 /atom/movable/proc/attacked_by()
 	return

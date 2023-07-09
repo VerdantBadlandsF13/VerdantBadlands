@@ -4,6 +4,7 @@
 	icon_state = "dshotgun-sawn"
 	item_state = "gun"
 	inaccuracy_modifier = 0.5
+	recoil = 1
 	mag_type = /obj/item/ammo_box/magazine/internal/grenadelauncher
 	fire_sound = 'sound/weapons/grenadelaunch.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
@@ -42,6 +43,7 @@
 	slowdown = 1
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
+	recoil = 1
 	casing_ejector = FALSE
 	weapon_weight = WEAPON_HEAVY
 	magazine_wording = "rocket"

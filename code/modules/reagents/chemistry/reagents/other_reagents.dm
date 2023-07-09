@@ -418,7 +418,6 @@
 	color = "#88878777"
 	taste_description = "emptyiness"
 
-
 /datum/reagent/water/holywater
 	name = "Holy Water"
 	description = "Water blessed by some deity."
@@ -2570,7 +2569,6 @@
 	metabolization_rate = REAGENTS_METABOLISM * 0.25
 	ghoulfriendly = TRUE
 
-
 /datum/reagent/wittel
 	name = "Wittel"
 	description = "An extremely rare metallic-white substance only found on demon-class planets."
@@ -2761,7 +2759,7 @@
 /datum/reagent/red_ichor
 	name = "Red Ichor"
 	can_synth = FALSE
-	description = "A unknown red liquid, linked to healing of most moral wounds."
+	description = "A unknown red liquid, linked to healing of most mortal wounds."
 	color = "#c10000"
 	metabolization_rate = REAGENTS_METABOLISM * 2.5
 	ghoulfriendly = TRUE

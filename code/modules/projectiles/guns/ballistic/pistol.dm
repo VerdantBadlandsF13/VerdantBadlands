@@ -19,6 +19,7 @@
 	spread = 2
 	burst_size = 1
 	fire_delay = 0
+	recoil = 0.25
 	select = FALSE
 	automatic_burst_overlay = FALSE
 	can_automatic = FALSE

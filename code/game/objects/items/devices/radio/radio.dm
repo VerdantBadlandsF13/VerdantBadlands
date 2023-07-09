@@ -233,7 +233,7 @@
 		if (!ranged_static)
 			return FALSE
 		else
-			message = Gibberish(message, ranged_static)
+			message = stars/*Gibberish*/(message, ranged_static)
 
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
@@ -360,8 +360,8 @@
 
 	// allow checks: are we listening on that frequency?
 	if (freq == frequency)
-		return TRUE
 		src.play_receive_transmission()
+		return TRUE
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)
 			//the GLOB.radiochannels list is located in communications.dm

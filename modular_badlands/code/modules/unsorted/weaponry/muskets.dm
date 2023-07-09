@@ -33,6 +33,7 @@
 	item_state = "plasmamusket"
 	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
 	fire_delay = 20
+	recoil = 0.5
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
 	scope_state = "scope_medium"

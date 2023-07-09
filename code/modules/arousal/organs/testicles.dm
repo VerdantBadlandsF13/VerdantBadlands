@@ -67,4 +67,11 @@
 	fluid_rate = D.features["balls_cum_rate"]
 	fluid_mult = D.features["balls_cum_mult"]
 	fluid_efficiency = D.features["balls_efficiency"]
+
+	var/datum/reagent/fluid = find_reagent_object_from_type(D.features["balls_fluid"])
+	if(istype(fluid, /datum/reagent/blood))
+		fluid_id = H.get_blood_id()
+	else if(fluid && (fluid in GLOB.genital_fluids_list))
+		fluid_id = D.features["balls_fluid"]
+
 	toggle_visibility(D.features["balls_visibility"], FALSE)

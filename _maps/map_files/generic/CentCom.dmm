@@ -1211,7 +1211,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -1237,7 +1237,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -1252,7 +1252,7 @@
 	},
 /obj/machinery/computer/arcade/orion_trail{
 	desc = "A test for cadets";
-	events = list("Raiders"=3,"Interstellar                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
+	events = list("Raiders"=3,"Interstellar                                Flux"=1,"Illness"=3,"Breakdown"=2,"Malfunction"=2,"Collision"=1,"Spaceport"=2);
 	icon = 'icons/obj/machines/particle_accelerator.dmi';
 	icon_state = "control_boxp";
 	name = "Kobayashi Maru control computer";
@@ -11637,14 +11637,6 @@
 /obj/effect/holodeck_effect/cards,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/centcom/evac)
-"ZX" = (
-/obj/structure/statue_fal{
-	pixel_x = -20;
-	desc = "A big statue. Odd.";
-	name = "old statue"
-	},
-/turf/open/liquid/water/safe,
-/area/centcom)
 "ZY" = (
 /obj/structure/railing{
 	dir = 8
@@ -46373,7 +46365,7 @@ OB
 OB
 SL
 uD
-ZX
+sh
 Dm
 SL
 gT

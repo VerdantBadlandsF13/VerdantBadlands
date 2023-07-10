@@ -5,6 +5,11 @@
 	intact = 0
 	density = 1
 	opacity = 1
+// Players shouldn't be able to see this, really. At all.
+// Generally used in tandem with the cordon on CentCom.
+	invisibility = INVISIBILITY_ABSTRACT
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
 /*don't need space. so dont initialize it.
 	initial_temperature = TCMB
 	thermal_conductivity = 0

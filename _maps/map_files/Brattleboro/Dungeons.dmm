@@ -2580,10 +2580,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
-"fjr" = (
-/obj/structure/weightlifter,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "fjB" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -67007,7 +67003,7 @@ hrZ
 hrZ
 hrZ
 sQQ
-fjr
+nlT
 oVm
 hrZ
 hrZ

@@ -4312,12 +4312,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"ejR" = (
-/obj/structure/weightlifter,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
-	dir = 8
-	},
-/area/f13/vault/dormitory)
 "eku" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/door{
@@ -15822,13 +15816,6 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/building)
-"pEM" = (
-/obj/structure/stacklifter,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13/wood{
-	icon_state = "housewood1-broken"
-	},
-/area/f13/building)
 "pEO" = (
 /turf/open/indestructible/ground/outside/dirt/harsh{
 	dir = 9;
@@ -19032,6 +19019,12 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
+"snJ" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/rock,
+/area/f13/caves)
 "sog" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -25987,7 +25980,7 @@ pac
 pac
 pac
 pac
-pac
+snJ
 "}
 (2,1,1) = {"
 pac
@@ -28335,7 +28328,7 @@ mVj
 sJT
 mVj
 sJT
-ejR
+sJT
 sJT
 aze
 vQQ
@@ -109893,7 +109886,7 @@ qur
 qur
 qur
 sDZ
-pEM
+wnW
 vhR
 vhR
 mwt

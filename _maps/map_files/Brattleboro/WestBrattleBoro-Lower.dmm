@@ -4592,6 +4592,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/f13/tunnel)
+"Dh" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/rock,
+/area/f13/caves)
 "Dj" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -6323,10 +6329,6 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating,
 /area/f13/tunnel)
-"Nn" = (
-/obj/structure/weightlifter,
-/turf/open/floor/plasteel/f13/vault_floor/plating/random,
-/area/f13/vault/vents)
 "Nq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
@@ -8842,7 +8844,7 @@ xk
 xk
 xk
 xk
-xk
+Dh
 "}
 (2,1,1) = {"
 xk
@@ -35894,7 +35896,7 @@ PV
 SI
 Fu
 VK
-Nn
+Fu
 Fu
 OF
 SI

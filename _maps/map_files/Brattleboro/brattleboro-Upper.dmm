@@ -249,7 +249,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                wastebot");
+	faction = list("raider,                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -2168,6 +2168,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
+"kL" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/riveted,
+/area/admin)
 "kN" = (
 /turf/closed/wall/f13/wood,
 /area/f13/building)
@@ -9422,7 +9428,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                wastebot");
+	faction = list("raider,                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -11080,7 +11086,7 @@ Lo
 Lo
 Lo
 Lo
-Lo
+kL
 "}
 (2,1,1) = {"
 Mb

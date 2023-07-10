@@ -159,6 +159,9 @@ GLOB.genital_fluids_list = list(
 		/datum/reagent/consumable/laughsyrup,
 		// General booze.
 		/datum/reagent/consumable/ethanol,
+		// F13 booze, with limits below the standard.
+		/datum/reagent/consumable/ethanol/yellowpulque,
+		/datum/reagent/consumable/ethanol/oldpossum,
 		// So you can't stack and produce infinite food.
 		/datum/reagent/consumable/enzyme,
 		// Nutriment itself.
@@ -200,6 +203,8 @@ GLOB.genital_fluids_list = list(
 	var/list/whitelist_list = list(
 		// Just water
 		/datum/reagent/water,
+		// Not quite a liquid.
+		/datum/reagent/consumable/sugar,
 		// ERP chems.
 		/datum/reagent/drug/aphrodisiac,
 		/datum/reagent/breast_enlarger,

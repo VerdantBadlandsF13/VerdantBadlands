@@ -5887,6 +5887,12 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Am" = (
+/obj/effect/mapping_helpers/ztrait_injector{
+	traits_to_add = list(ZTRAIT_SECRET)
+	},
+/turf/closed/indestructible/riveted,
+/area/admin)
 "Aq" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
@@ -6905,12 +6911,6 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
-"Ft" = (
-/obj/structure/weightlifter,
-/turf/open/floor/f13{
-	icon_state = "greenrustyfull"
-	},
-/area/f13/bl/gmb)
 "Fu" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/mask/cigarette{
@@ -7737,12 +7737,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
-"IL" = (
-/obj/structure/stacklifter,
-/turf/open/floor/f13{
-	icon_state = "greenrustyfull"
-	},
-/area/f13/bl/gmb)
 "IN" = (
 /mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/plating/rust,
@@ -12059,7 +12053,7 @@ Nu
 Nu
 Nu
 Nu
-Nu
+Am
 "}
 (2,1,1) = {"
 OA
@@ -50410,7 +50404,7 @@ Gs
 Gs
 bU
 bU
-Ft
+bU
 bU
 qS
 Gs
@@ -53137,7 +53131,7 @@ bU
 Je
 Gs
 bU
-IL
+bU
 bU
 Gs
 mR

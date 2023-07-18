@@ -177,3 +177,11 @@
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
 	armor = list("melee" = 45, "bullet" = 20, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 10, "rad" = 10, "fire" = -25, "acid" = 0, "wound" = 10)
+
+/obj/item/clothing/suit/armored/f13/medium/finlay
+	name = "ancient pattern riot overcoat"
+	desc = "A customized and well-worn suit of pre-war riot gear, including overcoat. Reeks of whiskey or some other drinker's favourite. <br>\
+	It bears the markings of an unknown group. Odd."
+	armor = list("melee" = 45, "bullet" = 25, "laser" = 25, "energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	icon_state = "finlayranger"
+	item_state = "finlayranger"

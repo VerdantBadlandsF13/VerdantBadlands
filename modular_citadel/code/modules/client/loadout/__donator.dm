@@ -84,7 +84,7 @@
 /datum/gear/donator/kits/appleplastic
 	name = "Slugger's Lootbox"
 	path = /obj/item/storage/box/large/custom_kit/appleplastic
-	ckeywhitelist = list("ApplePlastic")
+	ckeywhitelist = list("appleplastic")
 
 /obj/item/storage/box/large/custom_kit/appleplastic/PopulateContents()
 	new /obj/item/clothing/gloves/f13/baseball(src)
@@ -110,3 +110,17 @@
 
 /obj/item/storage/box/large/custom_kit/lurzefromgermany/proc/robot_token(mob/living/carbon/human/H)
 	H.Robotize()
+
+/datum/gear/donator/kits/metro
+	name = "Finlay's Kit"
+	path = /obj/item/storage/box/large/custom_kit/metro
+	ckeywhitelist = list("metrobotic")
+
+/obj/item/storage/box/large/custom_kit/metro/PopulateContents()
+	new /obj/item/clothing/head/helmet/finlay(src)
+	new /obj/item/clothing/suit/armored/f13/medium/finlay(src)
+	new /obj/item/gun/energy/laser/pistol/finlay_fluff(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+
+
+

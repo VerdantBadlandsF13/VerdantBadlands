@@ -28,10 +28,9 @@
 	if(attached_light)
 		alight = new(src)
 	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
-	if((durability_threshold <= 0) && round_armor > 30)
+	if((durability_threshold <= 0) && round_armor >= 30)
 		var/tier_ar = round(round_armor / 10)
 		durability_threshold = tier_ar
-
 
 /obj/item/clothing/head/helmet/Destroy()
 	var/obj/item/flashlight/seclite/old_light = set_attached_light(null)
@@ -41,13 +40,18 @@
 
 /obj/item/clothing/head/helmet/examine(mob/user)
 	. = ..()
+
 	if(attached_light)
 		. += "It has \a [attached_light] [can_flashlight ? "" : "permanently "]mounted on it."
 		if(can_flashlight)
 			. += "<span class='info'>[attached_light] looks like it can be <b>unscrewed</b> from [src].</span>"
 	else if(can_flashlight)
 		. += "It has a mounting point for a <b>seclite</b>."
-	. += "The helmet is at [armor_durability] durability and is providing [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+
+	if(armor.tier >= 1)
+		. += "The helmet is at [armor_durability] durability and is providing an additional [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	else
+		. += "The helmet is at [armor_durability] durability."
 	if(durability_threshold > 0)
 		. += "Additionally, any attack below [durability_threshold] force will not damage its durability."
 
@@ -61,26 +65,29 @@
 
 /obj/item/clothing/head/helmet/proc/use_kit(obj/item/I, mob/user)
 	var/obj/item/repair_kit/kit = I
-	while(armor_durability<100)
+	while(armor_durability < 100)
 		if(do_after(user, 10))
-			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability+1] durability.")
-			if(kit.uses_left>1)
+			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability] durability.")
+			if(kit.uses_left > 1)
 				kit.uses_left -= 1
 				fix_armor()
 			else
 				fix_armor()
+				to_chat(user,"You've used up the last of your repair kit.")
 				qdel(kit)
 				break
 
 /obj/item/clothing/head/helmet/proc/damage_armor()
-	if(armor.linebullet>0 && armor.linelaser>0 && armor.linemelee>0 && armor_durability>0)
+	if(armor.linebullet > 0 && armor.linelaser > 0 && armor.linemelee > 0 && armor_durability > 0)
 		armor_durability -= 1
 		armor = armor.modifyRating(linemelee = -1, linebullet = -1, linelaser = -1)
+	return
 
 /obj/item/clothing/head/helmet/proc/fix_armor()
-	if(armor_durability<100)
+	if(armor_durability < 100)
 		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
 		armor_durability += 1
+	return
 
 /obj/item/clothing/head/helmet/handle_atom_del(atom/A)
 	if(A == attached_light)
@@ -91,6 +98,10 @@
 		qdel(A)
 	return ..()
 
+/obj/item/clothing/head/helmet/attackby(obj/item/I, mob/user, params)
+	if(istype(I, repair_kit))
+		use_kit(I, user)
+		return
 
 ///Called when attached_light value changes.
 /obj/item/clothing/head/helmet/proc/set_attached_light(obj/item/flashlight/seclite/new_attached_light)
@@ -116,9 +127,7 @@
 	can_flashlight = TRUE
 
 /obj/item/clothing/head/helmet/sec/attackby(obj/item/I, mob/user, params)
-	if(istype(I, repair_kit))
-		use_kit(I, user)
-		return
+	. = ..()
 
 	if(issignaler(I))
 		var/obj/item/assembly/signaler/S = I
@@ -323,6 +332,13 @@
 /obj/item/clothing/head/helmet/f13/combat/environmental/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
+
+/obj/item/clothing/head/helmet/finlay
+	name = "ancient pattern combat helmet"
+	desc = "A modified pre-war helmet now utilised by an unknown faction."
+	armor = list("melee" = 45, "bullet" = 25, "laser" = 25, "energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	icon_state = "finlayhelmet"
+	item_state = "finlayhelmet"
 
 //LightToggle
 

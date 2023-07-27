@@ -1,8 +1,7 @@
 /*
 Pulled from one of the old Russian servers.
 Can't recall the name, but all credit to them.
-All I've done is make small adjustments to fit our server, and to clean it up a bit.
- - Carl
+All I've done is make small adjustments to fit our server, and to clean it up a bit. - Carl
 */
 /obj/item/stock_parts/cell_pa
 	name = "Fusion core"

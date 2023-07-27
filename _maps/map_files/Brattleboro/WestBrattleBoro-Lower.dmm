@@ -4592,12 +4592,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/f13/tunnel)
-"Dh" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "Dj" = (
 /obj/structure/chair/sofa/left{
 	dir = 8
@@ -8844,7 +8838,7 @@ xk
 xk
 xk
 xk
-Dh
+xk
 "}
 (2,1,1) = {"
 xk

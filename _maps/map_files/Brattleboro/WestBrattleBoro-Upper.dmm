@@ -11257,12 +11257,6 @@
 /obj/structure/tires/five,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
-"TG" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/rock,
-/area/f13/wasteland)
 "TH" = (
 /mob/living/simple_animal/hostile/raider{
 	name = "Highland Raider"
@@ -13176,7 +13170,7 @@ UR
 UR
 UR
 UR
-TG
+UR
 "}
 (2,1,1) = {"
 CM

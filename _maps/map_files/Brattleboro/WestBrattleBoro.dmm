@@ -19019,12 +19019,6 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
-"snJ" = (
-/obj/effect/mapping_helpers/ztrait_injector{
-	traits_to_add = list(ZTRAIT_SECRET)
-	},
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "sog" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -25980,7 +25974,7 @@ pac
 pac
 pac
 pac
-snJ
+pac
 "}
 (2,1,1) = {"
 pac

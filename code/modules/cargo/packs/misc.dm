@@ -221,12 +221,6 @@
 					)
 	crate_name = "jewelry crate"
 
-/datum/supply_pack/misc/jukebox
-	name = "Jukebox"
-	cost = 10000
-	contains = list(/obj/machinery/jukebox)
-	crate_name = "Jukebox"
-
 /datum/supply_pack/misc/abandonedcrate
 	name = "Loot Box"
 	desc = "Try your luck with these highly secure loot boxes! Solve the lock, win great prizes! WARNING: EXPLOSIVE FAILURE."

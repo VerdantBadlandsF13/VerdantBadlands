@@ -17,7 +17,7 @@ Just a simple, cheap replacement to atmos in a few locations.
 	. = ..()
 	if(istype(wear_mask, /obj/item/clothing/mask/gas))
 
-	for(var/mob/living/M as AM in arrived.get_all_contents_type(/mob/living))
+	for(var/mob/living/M as AM in arrived.GetAllContentsType(/mob/living))
 		to_chat(enterer, span_userdanger("This was a bad idea..."))
 		enterer.dust(TRUE, FALSE, TRUE)
 

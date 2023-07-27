@@ -519,11 +519,25 @@
 
 // GMB
 /obj/item/clothing/under/f13/gmb
-	name = "surplus militia outfit"
-	desc = "A surplus outfit, pulled from some old army depot and of a pattern long since obsolete. It has been fitted with the militia's patch."
-	icon_state = "merc_camo"
+	name = "militia outfit"
+	desc = "A neatly put together uniform, intended for the militia of the GMB. It has been fitted with the militia's patch."
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	icon_state = "gmuniform1"
+	item_state = "gmuniform1h"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/under/f13/gmb/officer
+	name = "militia officer outfit"
+	desc = "A clean cut vest, intended for higher ranking individuals within the GMB's camp. It has been fitted with the militia's patch."
+	icon_state = "gmuniformvest"
+	item_state = "gmuniformvesth"
+
+/obj/item/clothing/under/f13/gmb/farmhand
+	name = "militia farmhand outfit"
+	desc = "A pair of overalls, normally meant for civilians within the GMB's ranks. It has been fitted with the militia's patch."
+	icon_state = "farmhand"
+	item_state = "farmhandh"
 
 // DFS
 /obj/item/clothing/under/f13/merca/dfs

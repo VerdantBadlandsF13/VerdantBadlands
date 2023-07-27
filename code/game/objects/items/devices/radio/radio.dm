@@ -227,15 +227,15 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
-	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 
 // See fluff.dm
 	if (ranged_static)
-		if (ranged_static == FALSE)
+		if (!ranged_static)
 			return FALSE
-		if (ranged_static > 0)
-			message = Gibberish(message, ranged_static)
+		else
+			message = stars/*Gibberish*/(message, ranged_static)
 
+	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
 
 /obj/item/radio/proc/talk_into_impl(atom/movable/M, message, channel, list/spans, datum/language/language)
@@ -345,12 +345,10 @@
 	// deny checks
 	if (!on || !listening || wires.is_cut(WIRE_RX))
 		return FALSE
-	//Fortuna edit start. Radio management
 	if(kill_switched)
 		return FALSE
 	if(factionized && !linked_mob)
 		return
-	//Fortuna edit end. Radio management
 	if (freq == FREQ_SYNDICATE && !syndie)
 		return FALSE
 	if (freq == FREQ_CENTCOM)
@@ -362,6 +360,7 @@
 
 	// allow checks: are we listening on that frequency?
 	if (freq == frequency)
+		src.play_receive_transmission()
 		return TRUE
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)

@@ -1,6 +1,8 @@
 // A continuation of what's in obstacle.dm
 // Instead of 1:1, this uses a new parent.
 /obj/structure/badlands_props
+	name = "signage"
+	desc = "..."
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/decals.dmi'
 	anchored = 1
 	density = 1
@@ -21,15 +23,16 @@
 				new M.sheet_type(loc, FLOOR(custom_materials[M] / MINERAL_MATERIAL_AMOUNT, 1))
 	..()
 
-/obj/structure/badlands_props/waterpump
-	name = "large pump"
-	desc = "A pump of rather considerable size."
+/obj/structure/badlands_props/water_pump
+	name = "water pump"
+	desc = "An old, pre-war water pump. Likely used to filter the water from the river, for Brattleboro citizenry. <br>\
+	It appears sealed shut, not to mention unpowered. Bummer."
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/decals_wider.dmi'
 	icon_state = "waterpump"
+	density = TRUE
+	anchored = TRUE
 	bound_width = 96
 	bound_height = 96
-	bound_x = 32
-	anchored = TRUE
 
 /obj/structure/badlands_props/modern_filter
 	name = "industrial air filter"
@@ -43,7 +46,6 @@
 
 /obj/structure/badlands_props/radio
 	name = "parent object"
-	desc = "A dj setup for makin sick beats."
 	icon = 'icons/fallout/machines/radio.dmi'
 	density = TRUE
 	opacity = TRUE
@@ -100,7 +102,8 @@
 //////////////////////////CAMONET/////////////////////////////////
 
 /obj/structure/badlands_props/camonet
-	name ="camonet"
+	name = "camonet"
+	desc = "Poorly put together mesh, meant to conceal infantry."
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/structures.dmi'
 	icon_state ="camonet"
 	layer = ABOVE_FLY_LAYER
@@ -111,17 +114,6 @@
 
 
 /////////////////////CONSTRUCTION PROPS///////////////////////
-
-/obj/structure/badlands_props/water_pump
-	name = "water pump"
-	desc = "An old, pre-war water pump. Likely used to filter the water from the river, for Brattleboro citizenry. <br>\
-	It appears sealed shut, not to mention unpowered. Bummer."
-	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/decals_wider.dmi'
-	icon_state = "waterpump"
-	density = TRUE
-	anchored = TRUE
-	bound_width = 96
-	bound_height = 96
 
 /obj/structure/badlands_props/forklift
 	name = "forklift"

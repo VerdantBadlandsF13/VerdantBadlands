@@ -208,7 +208,7 @@
 	roundstart = TRUE
 
 ///////////////////////////////////////// this pill is used only in a legion mob drop
-/* Fortuna edit: Disabled mutation toxins
+/* Disabled mutation toxins
 /obj/item/reagent_containers/pill/shadowtoxin
 	name = "black pill"
 	desc = "I wouldn't eat this if I were you."

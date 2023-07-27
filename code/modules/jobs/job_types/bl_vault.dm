@@ -3,6 +3,7 @@
 	selection_color = "#668959"
 	faction = FACTION_VLT
 	exp_type = EXP_TYPE_VLT
+	roleplay_exclusive_notify = 1
 	access = list(ACCESS_VFE)
 	minimal_access = list(ACCESS_VFE)
 
@@ -15,6 +16,33 @@
 				- Trading with the outside world. You've a secure depot up above, giving plenty of reason to leave the Vault. <br> \
 				- Maintaining security and cohesion between your fellow dwellers. <br> \
 				- Obeying the words of Security and the Overseer."
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/vault,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+	)
 
 /datum/outfit/job/vault
 	gloves = /obj/item/pda/dweller
@@ -53,7 +81,7 @@ Overseer
 
 	implants = list(/obj/item/implant/mindshield)
 
-	id = 			/obj/item/card/id/gold
+	id = 			/obj/item/card/id/chief
 	gloves =		/obj/item/pda/captain
 	uniform = 		/obj/item/clothing/under/f13/vault
 	shoes = 		/obj/item/clothing/shoes/f13/military
@@ -62,6 +90,47 @@ Overseer
 	backpack = 		/obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/storage/box/ids = 1,
+		/obj/item/melee/classic_baton/telescopic = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
+		/obj/item/crowbar = 1)
+
+/*
+Security Chief
+*/
+
+/datum/job/vault/f13hos
+	title = "Vault-Tec Security Chief"
+	flag = F13VFEHOS
+	head_announce = list("Security")
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the leader of the Security Team, and your word is near law. \
+	Working with the Security team, Overseer and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault. \
+	Obey the Overseer's wishes, when possible. You should act as his attack dog, ideally."
+	supervisors = "Vault-Tec"
+	req_admin_notify = 1
+	exp_requirements = 120
+
+	outfit = /datum/outfit/job/vault/f13hos
+
+	access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+	minimal_access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+
+/datum/outfit/job/vault/f13hos
+	name = "Vault-Tec Security Chief"
+	jobtype = /datum/job/vault/f13hos
+
+	implants = list(/obj/item/implant/mindshield)
+
+	id = 			/obj/item/card/id/chief
+	gloves =		/obj/item/pda/captain
+	uniform = 		/obj/item/clothing/under/f13/vault
+	shoes = 		/obj/item/clothing/shoes/f13/military
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	ears = 			/obj/item/radio/headset/headset_vaultsec
+	backpack = 		/obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
@@ -91,7 +160,7 @@ Security Officer
 
 	implants = list(/obj/item/implant/mindshield)
 
-	id = /obj/item/card/id/sec
+	id =			/obj/item/card/id/sec
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	uniform = 		/obj/item/clothing/under/f13/vault
 	head = 			/obj/item/clothing/head/helmet/riot/vaultsec
@@ -108,7 +177,7 @@ Security Officer
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/sec
 	box = 			/obj/item/storage/box/security
 	backpack_contents = list(
-		/obj/item/melee/classic_baton/telescopic = 1,
+		/obj/item/melee/classic_baton/police = 1,
 		/obj/item/restraints/handcuffs = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 2,
 		/obj/item/crowbar = 1)
@@ -128,6 +197,8 @@ Medical Doctor
 
 	access = list(ACCESS_VFE, ACCESS_VFE_MEDICAL)
 	minimal_access = list(ACCESS_VFE, ACCESS_VFE_MEDICAL)
+
+	starting_modifiers = list(/datum/skill_modifier/job/surgery, /datum/skill_modifier/job/affinity/surgery)
 
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
@@ -154,6 +225,7 @@ Medical Doctor
 		return
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
@@ -195,6 +267,8 @@ Scientist
 		return
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*

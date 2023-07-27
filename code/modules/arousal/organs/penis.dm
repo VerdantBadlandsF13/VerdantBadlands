@@ -59,9 +59,11 @@
 			owner.apply_status_effect(STATUS_EFFECT_PENIS_ENLARGEMENT)
 		else if(!enlargement && status_effect)
 			owner.remove_status_effect(STATUS_EFFECT_PENIS_ENLARGEMENT)
+/*
 	if(linked_organ)
 		linked_organ.size = clamp(size + new_size, BALLS_SIZE_MIN, BALLS_SIZE_MAX)
 		linked_organ.update()
+*/
 	size = new_size
 
 	if(owner)

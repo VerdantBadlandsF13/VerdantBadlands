@@ -28,7 +28,6 @@
 	desc = "Fire in the hole."
 	icon_state = "frag"
 
-
 /obj/item/grenade/frag
 	name = "frag grenade"
 	desc = "An anti-personnel fragmentation grenade, this weapon excels at killing soft targets by shredding them with metal shrapnel."

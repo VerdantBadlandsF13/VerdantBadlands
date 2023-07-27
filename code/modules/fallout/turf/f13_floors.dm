@@ -105,14 +105,64 @@
 		. = TRUE //in case we ever need this to return if we spawned
 		return.
 
+// Literally just for plants. Not related to pipes. For now.
+#define PIPE_SPAWN	1
+
 /turf/open/floor/plasteel/f13/vault_floor
 	name = "vault floor"
 	icon = 'icons/turf/f13floors2.dmi'
 	icon_state = "vault_floor"
-	planetary_atmos = FALSE // They're _inside_ a vault.
+	planetary_atmos = FALSE
+	var/obj/structure/flora/turfPlant = null
+	var/obj/structure/pipes_probably = null
+	var/list/junk
+	var/list/plant_stuff
 
 /turf/open/floor/plasteel/f13/vault_floor/plating
+	name = "reinforced plating"
 	icon_state = "plating"
+
+/turf/open/floor/plasteel/f13/vault_floor/plating/random
+/*
+	junk = list(/obj/structure/junk/machinery,
+	/obj/structure/junk/locker,
+	/obj/structure/junk/cabinet,
+	/obj/structure/junk/drawer,
+	/obj/structure/junk/micro,
+	/obj/structure/junk/jukebox,
+	/obj/structure/junk/arcade,
+	/obj/structure/junk/small/table,
+	/obj/structure/junk/small/tv,
+	/obj/structure/junk/small/bed,
+	/obj/structure/junk/small/bed2,
+	/obj/structure/junk/small/disco,
+	/obj/structure/barricade/wooden,
+	/obj/structure/wreck/trash/brokenvendor,
+	/obj/structure/wreck/trash/machinepile,
+	/obj/structure/wreck/trash/machinepiletwo)
+
+	plant_stuff = list(/obj/structure/flora/wasteplant/wild_fungus,
+	/obj/structure/flora/wasteplant/rad_fungus)
+*/
+/turf/open/floor/plasteel/f13/vault_floor/plating/random/Initialize()
+	. = ..()
+	icon_state = "plating[rand(0,4)]"
+
+/*	if(!(\
+			(locate(/obj/structure) in src) || \
+			(locate(/obj/machinery) in src) ))
+		DrawPipes()
+
+/turf/open/floor/plasteel/f13/vault_floor/plating/random/proc/DrawPipes()
+	if(prob(PIPE_SPAWN))
+		turfPlant = new plant_stuff(src)
+		. = TRUE
+		return.
+	else
+		pipes_probably = new junk(src)
+		. = TRUE
+		return.
+*/
 
 /turf/open/floor/plasteel/f13/vault_floor/floor
 	icon_state = "floor"

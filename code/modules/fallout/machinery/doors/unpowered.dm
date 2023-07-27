@@ -303,3 +303,13 @@
 /obj/machinery/door/unpowered/securedoor/vfe/vfe_res
 	name = "reinforced restricted vault airlock"
 	req_access_txt = "150"
+
+// ------------------------------------
+// Badlands
+// Tavern
+
+/obj/machinery/door/unpowered/securedoor/tavern
+	name = "tavern door"
+	max_integrity = 1250
+	obj_integrity = 1250
+	req_access_txt = "137"

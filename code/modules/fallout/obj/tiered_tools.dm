@@ -123,10 +123,10 @@
 	usesound = 'sound/items/jaws_pry.ogg'
 	toolspeed = 0.1
 
-// CROWBARS
+// MULTITOOL
 /obj/item/multitool/basic
 	name = "crude voltage scanner"
-	desc = "A mechanically scrapped together device that barely works, a small wired and broken screen state voltages and pulse-ometer levels."
+	desc = "A mechanically scrapped together device that barely works, using a small wired and cracked display barely visible to the user."
 	icon_state = "basicvolt"
 	item_state = "basicvolt"
 	toolspeed = 6

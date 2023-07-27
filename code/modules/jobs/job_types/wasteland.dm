@@ -15,26 +15,34 @@
 
 	access = list()
 	minimal_access = list()
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/wasteland/f13wastelander,
+			/datum/job/wasteland/f13tavernkeep,
 		),
 	)
+
 	loadout_options = list(
 	/datum/outfit/loadout/wanderer,
 	/datum/outfit/loadout/prospector,
@@ -149,3 +157,65 @@
 	backpack_contents =  list(/obj/item/storage/box/vendingmachine=1,
 							/obj/item/book/granter/trait/selection =1,)
 */
+
+/datum/job/wasteland/f13tavernkeep
+	title = "Tavernkeep"
+	flag = F13TAVERNKEEP
+	faction = FACTION_WASTELAND
+	total_positions = 1
+	spawn_positions = 1
+	req_admin_notify = 1
+	roleplay_exclusive_notify = 1
+	description = "You own the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
+	supervisors = "fate"
+	selection_color = "#ccd2cf"
+
+	outfit = /datum/outfit/job/wasteland/f13tavernkeep
+
+	access = list(ACCESS_TOWN_BAR)
+	minimal_access = list(ACCESS_TOWN_BAR)
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/wasteland/f13wastelander,
+		),
+	)
+
+/datum/outfit/job/wasteland/f13tavernkeep
+	name = "Tavernkeep"
+	jobtype = /datum/job/wasteland/f13tavernkeep
+	id =			/obj/item/card/id/tavern_keys
+	ears =			null
+	uniform =		/obj/item/clothing/under/suit_jacket/burgundy
+	suit =			/obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
+	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	l_pocket =		/obj/item/storage/bag/money/small/wastelander
+	r_pocket =		/obj/item/restraints/handcuffs
+	belt =			/obj/item/storage/belt/bandolier/tavern
+	backpack =		/obj/item/storage/backpack/satchel/explorer
+	satchel =		/obj/item/storage/backpack/satchel/explorer
+	backpack_contents = list(
+		/obj/item/radio,
+		)
+
+/datum/outfit/job/wasteland/f13tavernkeep/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_MACHINE_SPIRITS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)

@@ -33,9 +33,13 @@
 	if(usr.hud_used.inventory_shown && targetmob.hud_used)
 		usr.hud_used.inventory_shown = FALSE
 		usr.client.screen -= targetmob.hud_used.toggleable_inventory
+		SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/buttonout[rand(1,4)].ogg",0,1,0,250))
+
 	else
 		usr.hud_used.inventory_shown = TRUE
 		usr.client.screen += targetmob.hud_used.toggleable_inventory
+		SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/buttonin[rand(1,4)].ogg",0,1,0,250))
+
 
 	targetmob.hud_used.hidden_inventory_update(usr)
 

@@ -7,6 +7,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
 	fire_delay = 4.5
 	spread = 1
+	recoil = 0.5
 	force = 12 // Pistol whip
 	casing_ejector = FALSE
 	spawnwithmagazine = TRUE

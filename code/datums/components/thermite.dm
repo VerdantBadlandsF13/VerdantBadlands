@@ -7,7 +7,8 @@
 		/turf/open/lava,
 		/turf/open/space,
 		/turf/open/water,
-		/turf/open/chasm)
+		/turf/open/chasm,
+		/turf/open/liquid)
 		)
 
 	var/static/list/immunelist = typecacheof(list(

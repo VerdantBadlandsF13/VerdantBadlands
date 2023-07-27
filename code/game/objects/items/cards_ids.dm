@@ -202,7 +202,7 @@
 	. = ..()
 	if(mapload && access_txt)
 		access = text2access(access_txt)
-	/* //fortuna removal
+	/*
 	switch(bank_support)
 		if(ID_FREE_BANK_ACCOUNT)
 			var/turf/T = get_turf(src)
@@ -237,7 +237,7 @@
 /obj/item/card/id/attackby(obj/item/W, mob/user, params)
 	if(!bank_support)
 		return ..()
-	/* //fortuna removal
+	/*
 	if(istype(W, /obj/item/holochip))
 		insert_money(W, user)
 	else if(istype(W, /obj/item/stack/spacecash) || istype(W, /obj/item/coin))
@@ -336,7 +336,7 @@
 
 /obj/item/card/id/AltClick(mob/living/user)
 	. = ..()
-	/* //fortuna removal
+	/*
 	if(!bank_support || !alt_click_can_use_id(user))
 		return
 

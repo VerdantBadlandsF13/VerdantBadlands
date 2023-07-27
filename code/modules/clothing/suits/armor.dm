@@ -35,7 +35,10 @@
 
 /obj/item/clothing/suit/armored/examine(mob/user)
 	. = ..()
-	. += "The armor is at [armor_durability] durability and is providing an additional [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	if(armor.tier >= 1)
+		. += "The armor is at [armor_durability] durability and is providing an additional [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	else
+		. += "The armor is at [armor_durability] durability."
 	if(durability_threshold > 0)
 		. += "Additionally, any attack below [durability_threshold] force will not damage its durability."
 
@@ -46,31 +49,34 @@
 
 /obj/item/clothing/suit/armored/proc/use_kit(obj/item/I, mob/user)
 	var/obj/item/repair_kit/kit = I
-	while(armor_durability<100)
+	while(armor_durability < 100)
 		if(do_after(user, 10))
-			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability+1] durability.")
-			if(kit.uses_left>1)
+			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability] durability.")
+			if(kit.uses_left > 1)
 				kit.uses_left -= 1
 				fix_armor()
 			else
 				fix_armor()
+				to_chat(user,"You've used up the last of your repair kit.")
 				qdel(kit)
 				break
 
 /obj/item/clothing/suit/armored/proc/damage_armor()
-	if(armor.linebullet>0 && armor.linelaser>0 && armor.linemelee>0 && armor_durability>0)
+	if(armor.linebullet > 0 && armor.linelaser > 0 && armor.linemelee > 0 && armor_durability > 0)
 		armor_durability -= 1
 		armor = armor.modifyRating(linemelee = -1, linebullet = -1, linelaser = -1)
+	return
 
 /obj/item/clothing/suit/armored/proc/fix_armor()
-	if(armor_durability<100)
+	if(armor_durability < 100)
 		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
 		armor_durability += 1
+	return
 
 /obj/item/clothing/suit/armored/Initialize()
 	. = ..()
 	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
-	if((durability_threshold <= 0) && round_armor > 30)// Weak armor, meh.
+	if((durability_threshold <= 0) && round_armor >= 30)// Weak armor, meh.
 		var/tier_ar = round(round_armor / 10)
 		durability_threshold = tier_ar
 

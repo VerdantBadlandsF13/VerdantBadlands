@@ -59,14 +59,14 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/fishmeat/salmon
 	secondary_drop = /obj/item/fishyegg/salmon
 
-/obj/item/fishy/eel
+/obj/item/fishy/electric_eel
 	name = "electric eel"
 	desc = "When you're down by the sea and an eel bites your knee, that's a moray."
 	icon_state = "electric_eel"
 	secondary_drop = /obj/item/fishyegg/eel
 	var/delay_shock = 0
 
-/obj/item/fishy/eel/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+/obj/item/fishy/electric_eel/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	if(delay_shock > world.time)
 		return
@@ -74,6 +74,12 @@
 	if(istype(target, /mob/living))
 		var/mob/living/livingTarget = target
 		livingTarget.electrocute_act(35, src, 1, flags = SHOCK_NOGLOVES|SHOCK_ILLUSION)
+
+/obj/item/fishy/american_eel
+	name = "eel"
+	desc = "When you're down by the sea and an eel bites your knee, that's a moray."
+	icon_state = "electric_eel"
+	secondary_drop = /obj/item/fishyegg/eel
 
 /obj/item/fishy/lobster
 	name = "lobster"

@@ -42,9 +42,6 @@
 	. = ..()
 	name = "[easy_naming][initial(name)]"
 
-	if(prob(50))
-		trapped = TRUE
-
 	if(enable_loot_initialize)
 		initialize_prizes()
 

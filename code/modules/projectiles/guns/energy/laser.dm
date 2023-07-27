@@ -93,7 +93,8 @@
 
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
-	desc = "A basic energy-based laser gun that fires concentrated beams of light."
+	desc = "A basic energy-based laser gun that fires concentrated beams of light.<br>\
+	This specific model includes a top-mounting for an optic."
 	slowdown = 0.2
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
@@ -103,11 +104,18 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	fire_delay = 0
-	can_scope = FALSE
 	scope_state = "AEP7_scope"
 	scope_x_offset = 7
 	scope_y_offset = 22
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+
+/obj/item/gun/energy/laser/pistol/finlay_fluff
+	name = "\improper weathered AEP7 laser pistol"
+	desc = "An old pre-war laser pistol. Judging from the aged exterior, this hasn't seen much use in a long time.<br>\
+	That, or it's seen too much in a short period. Regardless, the mounting for a scope atop the weapon has been snapped clean off.<br>\
+	Atop that, if it weren't bad enough, it also appears to have a cracked focusing lense."
+	extra_damage = -6
+	can_scope = FALSE
 
 ////////////////
 //LASER RIFLES//

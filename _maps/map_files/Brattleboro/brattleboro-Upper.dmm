@@ -249,7 +249,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
+	faction = list("raider,                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -749,7 +749,7 @@
 /area/f13/caves)
 "dI" = (
 /obj/structure/curtain,
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/machinery/shower{
 	dir = 1
 	},
@@ -3018,7 +3018,7 @@
 /obj/machinery/shower{
 	pixel_y = 18
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -3547,9 +3547,7 @@
 	},
 /area/f13/village)
 "rs" = (
-/obj/structure/decoration/vent{
-	icon_state = "ventrusty"
-	},
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -3717,7 +3715,7 @@
 /obj/effect/overlay/junk/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -4487,7 +4485,7 @@
 /obj/machinery/shower{
 	dir = 1
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -5567,7 +5565,7 @@
 /area/f13/wasteland)
 "Bb" = (
 /obj/structure/table/wood,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -6368,7 +6366,7 @@
 "Fe" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/chem_master/advanced,
+/obj/structure/frame/machine,
 /turf/open/floor/plasteel/f13{
 	icon_state = "whitebluerustychess"
 	},
@@ -7218,7 +7216,7 @@
 /area/f13/building)
 "Ju" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/chem_dispenser/low_power,
+/obj/structure/frame/machine,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -8032,7 +8030,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -8414,7 +8412,7 @@
 	},
 /area/f13/building/mall)
 "PK" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "PL" = (
@@ -8851,7 +8849,7 @@
 /obj/machinery/shower{
 	dir = 4
 	},
-/obj/structure/decoration/vent,
+/obj/structure/drain,
 /turf/open/floor/f13{
 	icon_state = "white"
 	},
@@ -9424,7 +9422,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider, wastebot");
+	faction = list("raider,                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -9554,7 +9552,7 @@
 /turf/open/floor/carpet,
 /area/f13/bl/dfs)
 "Vr" = (
-/obj/machinery/vending/medical,
+/obj/structure/frame/machine,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10160,15 +10158,6 @@
 "Yr" = (
 /obj/structure/anvil,
 /turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/village)
-"Ys" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/junker{
-	name = "Techfiend Marauder";
-	desc = "A raider from the Techfiend gang."
-	},
-/turf/open/floor/carpet/red,
 /area/f13/village)
 "Yt" = (
 /obj/structure/rack/shelf_metal,
@@ -58693,7 +58682,7 @@ PW
 pP
 gY
 gY
-Ys
+UP
 gY
 hD
 qC
@@ -60076,7 +60065,7 @@ ee
 Pb
 Wq
 gY
-Ys
+gY
 Wq
 BH
 Wq

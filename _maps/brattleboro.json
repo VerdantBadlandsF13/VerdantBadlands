@@ -13,6 +13,7 @@
 	"station_ruin_budget":0,
 	"space_ruin_levels":0,
 	"space_empty_levels":0,
+	"year_offset":265,
 	"shuttles": {
 		"cargo":"cargo_pahrump",
 		"emergency": "emergency_pahrump",
@@ -24,16 +25,20 @@
 			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
 			"Dungeons": true,
 			"Up": 1,
+			"Surface": false,
 			"No Parallax": true,
 			"Linkage" : null,
+			"Secret": true,
 			"Name": "Dungeons"
 		},
 		{
 			"Gravity": true,
 			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
 			"Up": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : null,
+			"Secret": true,
 			"Name": "Lower Brattleboro"
 		},
 		{
@@ -43,25 +48,31 @@
 			"Surface": true,
 			"Up": 1,
 			"Down": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : "Cross",
+			"Secret": true,
 			"Name": "Brattleboro"
 		},
 		{
 			"Gravity": true,
 			"Baseturf": "/turf/open/transparent/openspace",
 			"Down": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : null,
 			"Above": true,
+			"Secret": true,
 			"Name": "Upper Brattleboro"
 		},
 		{
 			"Gravity": true,
 			"Baseturf": "/turf/open/transparent/openspace",
 			"Up": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : null,
+			"Secret": true,
 			"Name": "Lower Western Brattleboro"
 		},
 		{
@@ -70,17 +81,21 @@
 			"Station": 1,
 			"Up": 1,
 			"Down": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : "Cross",
+			"Secret": true,
 			"Name": "Western Brattleboro"
 		},
 		{
 			"Gravity": true,
 			"Baseturf": "/turf/open/transparent/openspace",
 			"Down": 1,
+			"Surface": true,
 			"No Parallax": true,
 			"Linkage" : null,
 			"Above": true,
+			"Secret": true,
 			"Name": "Upper Western Brattleboro"
 		}
 	],

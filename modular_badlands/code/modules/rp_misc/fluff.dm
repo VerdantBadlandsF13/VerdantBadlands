@@ -73,13 +73,38 @@ Ignore it, if possible.
 /*
 Radio static below.
 Pulled from MS ala ~2021, redone for our purposes. Cheers. - Carl
-Determines how badly a broadcasting radio suffers from static.
+Determines how badly a broadcasting radio suffers from static (garbled text in our case).
 The number refers to the odds that each character in a message is garbled.
 */
 #define RADSTATIC_NONE 0// Vault.
 #define RADSTATIC_LIGHT 12// GMB exclusive, for now.
 #define RADSTATIC_MEDIUM 16// For DFS.
 #define RADSTATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
+#define RADSTATIC_STORM 95// Used for global overrides, on storm conditions.
+
+GLOBAL_LIST_EMPTY(radio_sets)
+
+/datum/weather/rad_storm/start()
+	for(var/R in GLOB.radio_sets)
+		var/obj/item/radio/S = R
+		if(!S.ranged_static == RADSTATIC_NONE)
+			S.ranged_static = RADSTATIC_STORM
+	. = ..()
+
+/datum/weather/rad_storm/end()
+	for(var/R in GLOB.radio_sets)
+		var/obj/item/radio/S = R
+		if(!S.ranged_static == RADSTATIC_NONE)
+			S.ranged_static = (initial(S.ranged_static))
+	. = ..()
+
+/obj/item/radio/New()
+	. = ..()
+	GLOB.radio_sets += src
+
+/obj/item/radio/Destroy()
+	GLOB.radio_sets -= src
+	. = ..()
 
 /obj/item/radio
 	var/ranged_static = RADSTATIC_HEAVY

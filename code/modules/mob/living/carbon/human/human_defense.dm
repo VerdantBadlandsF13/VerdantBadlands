@@ -369,13 +369,13 @@
 
 	switch (severity)
 		if (EXPLODE_DEVASTATE)
-			/*if(bomb_armor < EXPLODE_GIB_THRESHOLD) //gibs the mob if their bomb armor is lower than EXPLODE_GIB_THRESHOLD
+			if(bomb_armor < EXPLODE_GIB_THRESHOLD) //gibs the mob if their bomb armor is lower than EXPLODE_GIB_THRESHOLD
 				for(var/I in contents)
 					var/atom/A = I
 					if(!QDELETED(A))
 						A.ex_act(severity)
 				gib()
-				return*/
+				return
 			brute_loss = 150
 			var/atom/throw_target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
 			throw_at(throw_target, 200, 4)

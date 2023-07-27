@@ -128,8 +128,6 @@
 		var/mob/living/L = user
 		L.SetSleeping(200)
 
-
-/* Fortuna edit: flapping your wings disabled
 /datum/emote/living/flap
 	key = "flap"
 	key_third_person = "flaps"
@@ -156,7 +154,6 @@
 	message = "flaps their wings ANGRILY!"
 	restraint_check = TRUE
 	wing_time = 10
-*/
 
 /datum/emote/living/frown
 	key = "frown"
@@ -509,16 +506,6 @@
 	message = jointext(message, "")
 
 	to_chat(user, message)
-
-/* Fortuna edit: beep disabled
-/datum/emote/beep
-	key = "beep"
-	key_third_person = "beeps"
-	message = "beeps."
-	message_param = "beeps at %t."
-	sound = 'sound/machines/twobeep.ogg'
-	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/living/carbon/human)
-*/
 
 /datum/emote/living/circle
 	key = "circle"

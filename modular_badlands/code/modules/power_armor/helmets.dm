@@ -1,6 +1,9 @@
 /////////////////
 // Power Armor //
 /////////////////
+/datum/action/item_action/toggle/pa_helmet_toggle
+	button_icon_state = "pa_helmet"
+
 /obj/item/clothing/head/helmet/f13/power_armor
 	cold_protection = HEAD
 	heat_protection = HEAD
@@ -8,7 +11,7 @@
 	strip_delay = 200
 	equip_delay_self = 20
 	slowdown = 0.05
-	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT|HIDESNOUT
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
@@ -36,6 +39,8 @@
 	/// Used to track next tool required to salvage the suit
 	var/salvage_step = 0
 
+	actions_types = list(/datum/action/item_action/toggle/pa_helmet_toggle)
+
 	durability_threshold = 15
 
 	armor_durability = 100
@@ -45,13 +50,17 @@
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
+/obj/item/clothing/head/helmet/f13/power_armor/ui_action_click(mob/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle/pa_helmet_toggle))
+		toggle_helmet_light()
+		return
+
 /obj/item/clothing/head/helmet/f13/power_armor/attack_self(mob/living/user)
 	toggle_helmet_light(user)
 
 /obj/item/clothing/head/helmet/f13/power_armor/proc/toggle_helmet_light(mob/living/user)
 	set_light_on(!light_on)
 	update_icon()
-
 
 /obj/item/clothing/head/helmet/f13/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
@@ -147,11 +156,11 @@
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
-	desc = "An old pre-War power armor helmet. It's pretty hot inside of it."
+	desc = "An old pre-war power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
-	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 25, "bomb" = 65, "bio" = 75, "rad" = 80, "fire" = 85, "acid" = 30, "wound" = 50)
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	armor = list("tier" = 8, "melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 25, "bomb" = 65, "bio" = 75, "rad" = 80, "fire" = 85, "acid" = 30, "wound" = 50)
+	actions_types = list(/datum/action/item_action/toggle/pa_helmet_toggle)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/update_icon_state()
@@ -160,34 +169,26 @@
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
-	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
+	desc = "It's a T-51b power helmet."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
-	armor = list("melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
+	armor = list("tier" = 9, "melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	durability_threshold = 25
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	actions_types = list(/datum/action/item_action/toggle/pa_helmet_toggle)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/salvaged_pa/t51b
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/update_icon_state()
 	icon_state = "t51bhelmet[light_on]"
 	item_state = "t51bhelmet[light_on]"
 
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
-	name = "T-51b power helmet"
-	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
-
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos/update_icon_state()
-	icon_state = "t51bhelmet[light_on]"
-	item_state = "t51bhelmet[light_on]"
-
 /obj/item/clothing/head/helmet/f13/power_armor/t60
 	name = "T-60a power helmet"
-	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, dynamic HuD, and an internal music player."
+	desc = "The T-60 powered helmet, equipped with targetting software suite, Friend-or-Foe identifiers, and a dynamic HuD."
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
-	armor = list("melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
+	armor = list("tier" = 10, "melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	durability_threshold = 35
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	actions_types = list(/datum/action/item_action/toggle/pa_helmet_toggle)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/salvaged_pa/t60
 
 /obj/item/clothing/head/helmet/f13/power_armor/t60/update_icon_state()

@@ -27,7 +27,6 @@
 
 	return pain_level
 
-
 /mob/living/carbon/proc/handle_shock() //Currently only used for humans
 	update_pain_level()
 

@@ -75,6 +75,7 @@
 	/// Items that are dropped on salvage; If it's empty - item can't salvaged
 	var/list/salvage_loot = list()
 
+
 /obj/item/clothing/Initialize()
 	. = ..()
 	if(CHECK_BITFIELD(clothing_flags, VOICEBOX_TOGGLABLE))
@@ -114,7 +115,7 @@
 	var/obj/item/repair_kit/kit = I
 	while(armor_durability<100)
 		if(do_after(user, 10))
-			to_chat(user,"You fix some of the damage on \the [src], it is now at [armor_durability+1] durability.")
+			to_chat(user,"You fix some of the damage on \the [src], it is now at [armor_durability] durability.")
 			if(kit.uses_left>1)
 				kit.uses_left -= 1
 				repair(user)

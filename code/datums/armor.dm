@@ -22,7 +22,8 @@
 	var/acid
 	var/magic
 	var/wound
-	var/tierline = list(10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+	var/tierline = list(25, 50, 75, 100, 125, 150, 200, 250, 300, 350, 400, 500, 600)
+//	var/tierline = list(20, 40, 60, 80, 100, 120, 140, 160, 180, 200)// temp out
 
 /datum/armor/New(tier = 0, linemelee = 0, linebullet = 0, linelaser = 0, melee = 0, bullet = 0, laser = 0,  energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0, magic = 0, wound = 0)
 
@@ -43,6 +44,7 @@
 	src.acid = acid
 	src.magic = magic
 	src.wound = wound
+
 // % damage reduction is exponential (E.G. 90 doubles the effective health increase of 80).
 // Linearmor is linear (so 100 armor is twice 50). Linearmor will never equal 100 armor.
 // If a mob were to have 100 health, each point of linearmor would be the equivalent to +1 effective health.

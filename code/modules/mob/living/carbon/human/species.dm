@@ -685,10 +685,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(H.warpaint)
 		standing += mutable_appearance('icons/mob/tribe_warpaint.dmi', H.warpaint, -MARKING_LAYER, color = H.warpaint_color)
 
-
 	if(standing.len)
 		H.overlays_standing[BODY_LAYER] = standing
-
 
 	if(standing.len)
 		H.overlays_standing[BODY_LAYER] = standing

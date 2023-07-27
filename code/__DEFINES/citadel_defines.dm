@@ -46,7 +46,8 @@
 
 #define BALLS_SIZE_MIN		1
 #define BALLS_SIZE_DEF		2
-#define BALLS_SIZE_MAX		3
+#define BALLS_SIZE_THD		3
+#define BALLS_SIZE_MAX		4
 
 #define CUM_RATE			2 // units per 10 seconds
 #define CUM_RATE_MULT		1

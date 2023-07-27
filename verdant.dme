@@ -1905,6 +1905,7 @@
 #include "code\modules\clothing\head\_head.dm"
 #include "code\modules\clothing\head\beanie.dm"
 #include "code\modules\clothing\head\collectable.dm"
+#include "code\modules\clothing\head\f13_bl_misc.dm"
 #include "code\modules\clothing\head\f13misc.dm"
 #include "code\modules\clothing\head\f13raider.dm"
 #include "code\modules\clothing\head\f13soft.dm"

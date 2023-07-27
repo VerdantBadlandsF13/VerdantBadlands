@@ -3,6 +3,7 @@
 	selection_color = "#668959"
 	faction = FACTION_VLT
 	exp_type = EXP_TYPE_VLT
+	roleplay_exclusive_notify = 1
 	access = list(ACCESS_VFE)
 	minimal_access = list(ACCESS_VFE)
 

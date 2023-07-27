@@ -493,6 +493,16 @@
 	min_val = 0
 	max_val = BUTT_SIZE_MAX
 
+/datum/config_entry/number/balls_min_size_prefs
+	config_entry_value = 1
+	min_val = 0
+	max_val = BALLS_SIZE_MAX
+
+/datum/config_entry/number/balls_max_size_prefs
+	config_entry_value = BALLS_SIZE_MAX
+	min_val = 0
+	max_val = BALLS_SIZE_MAX
+
 /datum/config_entry/keyed_list/safe_visibility_toggles
 	key_mode = KEY_MODE_TEXT
 	value_mode = VALUE_MODE_FLAG

@@ -738,6 +738,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!B_sizes)
 		var/list/L = CONFIG_GET(keyed_list/breasts_cups_prefs)
 		B_sizes = L.Copy()
+	var/static/min_T
+	if(!min_T)
+		min_T = CONFIG_GET(number/balls_min_size_prefs)
+	var/static/max_T
+	if(!max_T)
+		max_T = CONFIG_GET(number/balls_max_size_prefs)
 	var/static/min_D
 	if(!min_D)
 		min_D = CONFIG_GET(number/penis_min_inches_prefs)
@@ -758,6 +764,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	features["breasts_size"]		= sanitize_inlist(features["breasts_size"], B_sizes, BREASTS_SIZE_DEF)
 	features["cock_length"]			= sanitize_integer(features["cock_length"], min_D, max_D, COCK_SIZE_DEF)
+	features["balls_size"]			= sanitize_integer(features["balls_size"], min_T, max_T, BALLS_SIZE_DEF)
 	features["breasts_shape"]		= sanitize_inlist(features["breasts_shape"], GLOB.breasts_shapes_list, DEF_BREASTS_SHAPE)
 	features["cock_shape"]			= sanitize_inlist(features["cock_shape"], GLOB.cock_shapes_list, DEF_COCK_SHAPE)
 	features["butt_size"]			= sanitize_integer(features["butt_size"], min_B, max_B, BUTT_SIZE_DEF)

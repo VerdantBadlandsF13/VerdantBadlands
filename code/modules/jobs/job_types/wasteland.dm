@@ -164,6 +164,8 @@
 	faction = FACTION_WASTELAND
 	total_positions = 1
 	spawn_positions = 1
+	req_admin_notify = 1
+	roleplay_exclusive_notify = 1
 	description = "You own the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
 	supervisors = "fate"
 	selection_color = "#ccd2cf"
@@ -209,3 +211,11 @@
 	backpack_contents = list(
 		/obj/item/radio,
 		)
+
+/datum/outfit/job/wasteland/f13tavernkeep/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_MACHINE_SPIRITS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)

@@ -119,3 +119,18 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 	strip_mod = 0.9
+
+// GMB
+/obj/item/clothing/gloves/gmb
+	name = "thick leather gloves"
+	desc = "Thick leather gloves, commonly worn by the local militia."
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	icon_state = "gmglove"
+	item_state = "temp_gmgloveh"
+	permeability_coefficient = 0.9
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	resistance_flags = NONE
+	strip_mod = 0.9

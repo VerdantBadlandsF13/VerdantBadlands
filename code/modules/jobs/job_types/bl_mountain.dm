@@ -54,10 +54,11 @@
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	ears = /obj/item/radio/headset/headset_gmb
 	uniform = /obj/item/clothing/under/f13/gmb
+	head = /obj/item/clothing/head/gmb
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb
-	shoes = /obj/item/clothing/shoes/f13/military
+	gloves = /obj/item/clothing/gloves/gmb
+	shoes = /obj/item/clothing/shoes/f13/military/gmb
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/radio
 
 // Commander
 /datum/job/gmb/commander
@@ -77,6 +78,7 @@
 	name = "Commander"
 	jobtype = /datum/job/gmb/commander
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/commander
+	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/job/gmb/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -96,6 +98,7 @@
 	supervisors = "Commander."
 	outfit = /datum/outfit/job/gmb/practitioner
 	req_admin_notify = 1
+	roleplay_exclusive_notify = 1
 	exp_requirements = 480
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
@@ -104,13 +107,14 @@
 	name = "Practitioner"
 	jobtype = /datum/job/gmb/practitioner
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
+	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/job/gmb/practitioner/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MACHINE_SPIRITS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, TRAIT_GENERIC)
 
 // Walker
@@ -135,6 +139,7 @@
 	name = "Walker"
 	jobtype = /datum/job/gmb/walker
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/walker
+	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/loadout/walker/marksmen
@@ -201,6 +206,9 @@
 
 /datum/outfit/job/gmb/volunteer
 	name = "Volunteer"
+	uniform = /obj/item/clothing/under/f13/gmb/farmhand
+	shoes = /obj/item/clothing/shoes/f13/military/gmb/leather
+	head = /obj/item/clothing/head/gmb/brimmed
 	jobtype = /datum/job/gmb/volunteer
 
 /datum/outfit/loadout/volunteer/conscript

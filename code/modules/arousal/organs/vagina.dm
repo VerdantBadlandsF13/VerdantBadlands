@@ -19,7 +19,7 @@
 	var/clits = 1
 	var/clit_diam = 0.25
 	var/clit_len = 0.25
-	var/list/vag_types = list("tentacle", "dentata", "hairy", "spade", "furred", "cloaca")
+	var/list/vag_types = list("tentacle", "dentata", "hairy", "gaping", "spade", "furred", "cloaca")
 
 /obj/item/organ/genital/vagina/update_appearance()
 	. = ..()

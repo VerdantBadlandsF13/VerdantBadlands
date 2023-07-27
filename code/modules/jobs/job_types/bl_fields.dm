@@ -57,7 +57,6 @@
 	uniform	= /obj/item/clothing/under/f13/merca/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/radio
 
 // DFS Advisor
 /datum/job/dfs/advisor

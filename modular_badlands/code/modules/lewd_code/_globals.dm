@@ -5,7 +5,6 @@ GLOBAL_VAR(interactions)
 // Edits by me to fit our purposes better. - Carl
 #define GFLUID_ETHANOL_POWER_LIMIT 5
 #define GFLUID_RARITY_LIMIT REAGENT_VALUE_RARE
-#define GFLUID_RARITY_LIMIT REAGENT_VALUE_RARE
 GLOBAL_LIST(genital_fluids_list)
 GLOBAL_LIST(genital_fluids_paths)
 

@@ -25,9 +25,8 @@
 
 /obj/item/organ/genital/testicles/upon_link()
 //	size = linked_organ.size
-//	update_size()
-//	update_appearance()
-	update()
+	update_size()
+	update_appearance()
 
 
 /obj/item/organ/genital/testicles/update_size(modified = FALSE)
@@ -48,7 +47,6 @@
 		else
 			size_name = "nonexistant"
 	size = new_size
-	update()
 
 /obj/item/organ/genital/testicles/update_appearance()
 	. = ..()

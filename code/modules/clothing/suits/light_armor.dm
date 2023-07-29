@@ -251,8 +251,9 @@
 	desc = "A militia coat, intended for volunteers and handouts. Appears to be some manner of leather. Tough, but not rigid. <br>\
 	While it has been fitted with the militia's patch, it hasn't been otherwise modified."
 	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_mountain.dmi'
 	icon_state = "gmbrowncoat"
-	item_state = "gmbrowncoath"
+	item_state = "gmbrowncoat"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
@@ -260,7 +261,7 @@
 	name = "militia overcoat"
 	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
 	icon_state = "gmgreencoat"
-	item_state = "gmgreencoath"
+	item_state = "gmgreencoat"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
@@ -268,19 +269,19 @@
 	desc = "A handmade coat, intended for the practitioner. Intended to remain out of the way, while keeping one's cloathing safe from spills. <br>\
 	It has been fitted with the militia's patch."
 	icon_state = "leathercoat"
-	item_state = "gmbrowncoath"
+	item_state = "gmbrowncoat"
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/walker
 	name = "walker plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
-	item_state = "gmbrowncoatplatedh"
+	item_state = "gmbrowncoatplated"
 	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	name = "commander plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
-	item_state = "gmbrowncoatplatedh"
+	item_state = "gmbrowncoatplated"
 	armor = list("melee" = 45, "bullet" = 45, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)

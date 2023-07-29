@@ -125,8 +125,9 @@
 	name = "thick leather gloves"
 	desc = "Thick leather gloves, commonly worn by the local militia."
 	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_mountain.dmi'
 	icon_state = "gmglove"
-	item_state = "temp_gmgloveh"
+	item_state = "gmglove"
 	permeability_coefficient = 0.9
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT

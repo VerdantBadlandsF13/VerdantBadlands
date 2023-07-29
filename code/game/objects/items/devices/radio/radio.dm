@@ -233,7 +233,7 @@
 		if (!ranged_static)
 			return FALSE
 		else
-			message = stars/*Gibberish*/(message, ranged_static)
+			message = Gibberish(message, (ranged_static*1))
 
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
@@ -360,7 +360,6 @@
 
 	// allow checks: are we listening on that frequency?
 	if (freq == frequency)
-		src.play_receive_transmission()
 		return TRUE
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)

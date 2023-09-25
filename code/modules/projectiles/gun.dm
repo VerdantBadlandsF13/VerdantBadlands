@@ -550,11 +550,14 @@ ATTACHMENTS
 
 	if(on_cooldown())
 		return
+
 	if(user.IsWeaponDrawDelayed())
 		to_chat(user, "<span class='notice'>[src] is not yet ready to fire!</span>")
 		return
+
 	firing = TRUE
 	. = do_fire(target, user, message, params, zone_override, bonus_spread, stam_cost)
+
 	firing = FALSE
 	last_fire = world.time
 

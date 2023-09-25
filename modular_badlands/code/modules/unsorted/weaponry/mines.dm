@@ -66,6 +66,8 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
 
 	var/mob/living/target = victim
+	if(!ishuman(target))
+		target.gib(1, 1)
 	if(target.health <= 1)
 		target.gib(1, 1)
 	else

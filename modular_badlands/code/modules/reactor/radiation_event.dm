@@ -5,13 +5,14 @@
 
 	telegraph_message = "<span class='userdanger'>The horizon darkens, a cloud of radioactive dust approaching fast.</span>"
 	telegraph_overlay = "light_ash"
-	telegraph_duration = 700
+	telegraph_duration = 250
 
 	weather_message = "<span class='userdanger'><i>The land is pelted by radioactive debris and waves of heat! Find shelter!</i></span>"
 	weather_overlay = "ash_storm"
-	weather_duration_lower = 1500
-	weather_duration_upper = 3000
+	weather_duration_lower = 750
+	weather_duration_upper = 1800
 
+	end_overlay = "light_ash"
 	end_duration = 100
 	end_message = "<span class='userdanger'>The worst of the storm passes, an open sky once again visible.</span>"
 

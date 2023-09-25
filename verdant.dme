@@ -3706,7 +3706,7 @@
 #include "modular_badlands\code\modules\unsorted\obj\f13lootdrop.dm"
 #include "modular_badlands\code\modules\unsorted\obj\machinery\intruder_alarm.dm"
 #include "modular_badlands\code\modules\unsorted\obj\structures\barbedwire.dm"
-#include "modular_badlands\code\modules\unsorted\obj\structures\bl_wasteplants.dm"
+#include "modular_badlands\code\modules\unsorted\obj\structures\bl_flora.dm"
 #include "modular_badlands\code\modules\unsorted\obj\structures\mortar.dm"
 #include "modular_badlands\code\modules\unsorted\obj\structures\obstacles.dm"
 #include "modular_badlands\code\modules\unsorted\obj\structures\overlay.dm"

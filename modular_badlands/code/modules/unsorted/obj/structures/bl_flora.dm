@@ -63,29 +63,8 @@
 	reagents_add = list(/datum/reagent/medicine/charcoal = 0.1, /datum/reagent/consumable/nutriment = 0.1, /datum/reagent/medicine/radaway = 0.05)
 
 /obj/item/seeds/bl/licorice
-	name = "PARENT BADLAND SEED PACK"
-	desc = "I SHOULD NOT EXIST AAAAAAAAAAA YELL AT CARL"
-	icon_state = "ERROR"
-	species = "error_or_something_lol"
-	plantname = "Error Bush"
-	lifespan = 100
-	endurance = 30
-	maturation = 10
-	production = 5
-	yield = 3
-	potency = 30
-	growthstages = 1
-	rarity = 20
-	icon_grow = "ERROR-grow"
-	icon_dead = "ERROR-dead"
-	icon_harvest = "ERROR-harvest"
-	product = /obj/item/reagent_containers/food/snacks/grown/bl
-	reagents_add = list(/datum/reagent/medicine/charcoal = 0.1, /datum/reagent/consumable/nutriment = 0.1, /datum/reagent/medicine/radaway = 0.05)
-
 /obj/item/seeds/bl/milkweed
-
 /obj/item/seeds/bl/yarrow
-
 /obj/item/seeds/bl/skullcap
 
 // Produce containers.
@@ -99,14 +78,6 @@
 	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)
 
 /obj/item/reagent_containers/food/snacks/grown/bl/licorice
-	seed = /obj/item/seeds/punga
-	name = "PARENT BADLAND GROWN HARVESTED THINGY"
-	desc = "I SHOULD NOT EXIST AAAAAAAAAAA YELL AT CARL"
-	icon = 'modular_badlands/code/modules/unsorted/icons/bl_produce.dmi'
-	icon_state = "ERROR"
-	filling_color = "#000000"
-	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)
-
 /obj/item/reagent_containers/food/snacks/grown/bl/milkweed
 /obj/item/reagent_containers/food/snacks/grown/bl/yarrow
 /obj/item/reagent_containers/food/snacks/grown/bl/skullcap

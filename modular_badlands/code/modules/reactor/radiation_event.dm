@@ -38,7 +38,8 @@
 
 /datum/weather/rad_storm/end()
 	GLOB.rad_storm_sounds -= weak_sounds
-	nightmare()
+// Nightmare spawns the radioactive debris around the map. I haven't redone this yet, so don't use it. - Carl
+//	nightmare()
 	return ..()
 
 /datum/weather/rad_storm/telegraph()

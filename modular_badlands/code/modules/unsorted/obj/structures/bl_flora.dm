@@ -33,7 +33,7 @@
 // Skullcap
 /obj/structure/flora/wasteplant/bl/skullcap
 	name = "skullcap flowers"
-	icon_state = "skull_cap"
+	icon_state = "skullcap"
 	desc = "An odd looking group of flowers. Locals swear by its utility as a painkiller. Others caution against even looking at it. \
 	Madness, truly."
 	produce = /obj/item/reagent_containers/food/snacks/grown/bl/skullcap

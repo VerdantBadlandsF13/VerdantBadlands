@@ -66,9 +66,6 @@
 	if(HAS_TRAIT(C, TRAIT_NOGUT)) //Just for not allowing gutting
 		return FALSE
 
-	if(!C.InFullCritical())//From my old codebase, for balance purposes. Don't want someone 'awake' being one-tapped. - Carl
-		return FALSE
-
 	. = list()
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)

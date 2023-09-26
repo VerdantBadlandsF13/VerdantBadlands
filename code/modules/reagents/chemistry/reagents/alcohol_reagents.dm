@@ -12,6 +12,7 @@
 	color = "#404030" // rgb: 64, 64, 48
 	nutriment_factor = 0
 	taste_description = "alcohol"
+	pain_resistance = 5//Five by default for ALL ethanol. Raise or lower individually.
 	var/boozepwr = 65 //Higher numbers equal higher hardness, higher hardness equals more intense alcohol poisoning
 	pH = 7.33
 	boiling_point = 351.38
@@ -2244,7 +2245,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	M.set_drugginess(50)
 	M.adjustStaminaLoss(-2)
 	return ..()
-	
+
 /datum/reagent/consumable/ethanol/rotgut
 	name = "Rotgut"
 	description = "The folks out west started outfitting their vehicles with rot gut engines to get around. A waste of a tasty drink if you ask me"

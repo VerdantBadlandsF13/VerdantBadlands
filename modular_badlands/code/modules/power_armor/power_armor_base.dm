@@ -91,7 +91,6 @@
 		to_chat(usr, "<span class='userdanger'>There's no power.</span>")
 		return
 
-	enabled = !enabled
 	if(enabled)
 		if(do_after(usr, 5, target = loc))
 			to_chat(usr, "<span class='green'>[src] activated.</span>")
@@ -127,27 +126,38 @@
 			power_cell = null
 
 /obj/item/clothing/suit/armored/f13/power_armor/proc/powerControl(mob/user)
+	var/mob/living/L = loc
 	if(!power_cell || power_cell.charge <= 0)
 		enabled = FALSE
 		remove_traits(user)
-		slowdown = 4
+		var/unpowered_slowdown = 4
+		unpowered_slowdown = 4
+		slowdown += unpowered_slowdown
+		L.update_equipment_speed_mods()
 		playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg", 40, 0, 0)
+		STOP_PROCESSING(SSobj, src)
 		return
-
-	assign_traits(user)
-	slowdown = 0.8
-	playsound(src.loc, 'modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg', 40, 0, 0)
-	START_PROCESSING(SSobj, src)
+	else
+		enabled = TRUE
+		assign_traits(user)
+		var/powered_slowdown = 1
+		powered_slowdown = 1
+		slowdown += powered_slowdown
+		L.update_equipment_speed_mods()
+		playsound(src.loc, 'modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg', 40, 0, 0)
+		START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/armored/f13/power_armor/equipped(mob/user, slot)
 	..()
 	if(slot == SLOT_WEAR_SUIT && enabled)
+		enabled = TRUE
 		assign_traits(user)
 		START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/armored/f13/power_armor/dropped(mob/user)
 	..()
 	if(enabled)
+		enabled = FALSE
 		remove_traits(user)
 		STOP_PROCESSING(SSobj, src)
 

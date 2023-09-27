@@ -1588,6 +1588,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 	pH = 9.12
+	pain_resistance = 2//As a component of skullcap.
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 

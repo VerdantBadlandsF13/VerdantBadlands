@@ -20,7 +20,6 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	var/maxcharge = 1000
 	var/rigged = 0		// true if rigged to explode
 	var/chargerate = 1 //how much power is given every tick if self-charging
-	var/ratingdesc = TRUE
 	var/bcell = null
 	var/self_recharge = 0 //does it self recharge, or not?
 
@@ -29,9 +28,8 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	bcell = src
 	START_PROCESSING(SSobj, src)
 	charge = maxcharge
-	if(ratingdesc)
-		desc += "This has a rating for an internal power level of [maxcharge]."
 	update_cell_icon()
+	desc += "This has a rating for an internal power level of [maxcharge]."
 
 /obj/item/stock_parts/cell_pa/Destroy()
 	STOP_PROCESSING(SSobj, src)

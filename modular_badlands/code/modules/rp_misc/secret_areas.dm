@@ -1,4 +1,4 @@
-// Prevents ghosts and players alike from crossing.
+// Prevents ghosts and players alike from crossing, though the former can just click-jump through.
 // Use the area to kill players. This is just for blocking transport.
 /turf/cordon
 	name = "cordon"

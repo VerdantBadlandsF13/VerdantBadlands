@@ -27399,6 +27399,19 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
+"sAA" = (
+/obj/docking_port/stationary{
+	area_type = /area/f13/wasteland;
+	dir = 4;
+	height = 6;
+	id = "emergency_home";
+	name = "BoxStation emergency evac bay";
+	width = 25
+	},
+/turf/open/indestructible/ground/outside/gravel{
+	dir = 1
+	},
+/area/f13/wasteland)
 "sAB" = (
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright0"
@@ -97006,7 +97019,7 @@ xHy
 xHy
 xHy
 xHy
-xHy
+sAA
 xHy
 xHy
 xHy

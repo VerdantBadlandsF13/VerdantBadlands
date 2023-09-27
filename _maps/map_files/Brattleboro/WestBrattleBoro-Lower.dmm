@@ -2774,6 +2774,8 @@
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "rK" = (
+/obj/item/am_containment,
+/obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/reactor)
 "rL" = (
@@ -3453,7 +3455,8 @@
 	dir = 1
 	},
 /obj/structure/bookshelf{
-	icon_state = "book-4"
+	icon_state = "book-4";
+	density = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/overseer)
@@ -7465,7 +7468,8 @@
 /area/f13/tunnel)
 "UL" = (
 /obj/structure/bookshelf{
-	icon_state = "book-5"
+	icon_state = "book-5";
+	density = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/overseer)
@@ -55706,8 +55710,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+Jm
+Jm
 hx
 hx
 hx
@@ -56163,7 +56167,7 @@ PV
 PV
 PV
 PV
-PV
+Jm
 uD
 hx
 hx
@@ -56620,7 +56624,7 @@ PV
 PV
 PV
 PV
-PV
+Jm
 hx
 hx
 hx
@@ -57077,7 +57081,7 @@ PV
 PV
 PV
 PV
-PV
+Jm
 hx
 hx
 hx
@@ -57534,7 +57538,7 @@ PV
 PV
 PV
 PV
-PV
+Jm
 qi
 hx
 hx
@@ -57991,8 +57995,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+Jm
+Jm
 hx
 hx
 hx

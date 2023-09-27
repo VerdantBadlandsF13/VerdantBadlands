@@ -19,13 +19,13 @@
 
 	for(var/viewer in oviewers(world.view, src))
 		var/mob/living/M = viewer
-		if(M.client && istype(M) && M.can_have_vision_cone)
+		if(M.client && istype(M) && M.has_field_of_vision)
 			if(M.client.view != world.view && get_dist(M, src) > M.client.view)
 				continue
 			else
 				var/turf/T = get_turf(M)
 				var/turf/Ts = get_turf(src)
-				if(Ts.InConeDirection(T, reverse_direction(M.dir)))
+				if(Ts.InConeDirection(T, REVERSE_DIR(M.dir)))
 					if(!(src in M.client.hidden_mobs))
 						if(M.InCone(T, M.dir))
 							M.add_to_mobs_hidden_atoms(src)

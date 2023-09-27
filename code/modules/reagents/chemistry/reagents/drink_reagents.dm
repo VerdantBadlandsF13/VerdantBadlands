@@ -951,6 +951,14 @@
 	L.apply_status_effect(/datum/status_effect/throat_soothed)
 	..()
 
+/datum/reagent/consumable/menthol/on_mob_metabolize(mob/living/L)
+	..()
+	ADD_TRAIT(L, TRAIT_AGEUSIA, type)
+
+/datum/reagent/consumable/menthol/on_mob_end_metabolize(mob/living/L)
+	REMOVE_TRAIT(L, TRAIT_AGEUSIA, type)
+	..()
+
 /datum/reagent/consumable/grenadine
 	name = "Grenadine"
 	description = "Not cherry flavored!"

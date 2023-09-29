@@ -284,3 +284,18 @@
 		to_chat(user, "<span class ='danger'>You attempt to fire the rifle from the hip unprepared, tossing you to the ground!</span>")
 		H.visible_message("<span class='danger'>[H] drops to the floor from recoil as they fire unprepared!</span>")
 		user.Knockdown(60)
+
+//Anti-Material Rifle - GMB EDITION		Keywords: .50, Bolt-action, 8 round magazine
+/obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons
+	name = "\improper Liberty"
+	desc = "A high-powered bolt action rifle, chambered in .50 caliber ammunition. Custom made by the GMB's gunsmiths. <br>\
+	Lacks the mounting for optics, and boasts fixed iron sights."
+	icon_state = "amr_gmb"
+	item_state = "amr_gmb"
+	spread = 0.25
+	zoomable = FALSE
+
+/obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 25)
+	..()
+	if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
+		src.pump(user)

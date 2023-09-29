@@ -814,10 +814,7 @@
 /obj/effect/spawner/lootdrop/f13/seedspawner,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/xander,
 /obj/item/seeds/mutfruit,
-/obj/item/seeds/punga,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/caves)
 "dY" = (

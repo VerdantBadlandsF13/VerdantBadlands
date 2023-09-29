@@ -90,16 +90,6 @@
 	result = /obj/item/reagent_containers/food/snacks/soup/squirrelstew
 	subcategory = CAT_WASTEFOOD
 
-/datum/crafting_recipe/food/gourdsoup
-	name = "Buffalo Gourd Soup"
-	reqs = list(
-		/obj/item/reagent_containers/glass/bowl = 1,
-		/obj/item/reagent_containers/food/snacks/grown/buffalogourd = 1,
-		/datum/reagent/consumable/milk = 5
-	)
-	result = /obj/item/reagent_containers/food/snacks/soup/buffalogourd
-	subcategory = CAT_WASTEFOOD
-
 // SUNSET EDIT
 //// HAPPY SHARKY LOCKED FLUFF RECIPES
 
@@ -108,8 +98,6 @@
 	time = 40
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/meat/cutlet = 1,
-		/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 1,
-		/obj/item/reagent_containers/food/snacks/grown/mesquite =1,
 		/datum/reagent/consumable/sodiumchloride = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/sunset/happyshark/jerky
@@ -121,9 +109,7 @@
 	name = "Happy Sharky Sweet Bar"
 	time = 40
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/chocolatebar = 1,
-		/obj/item/reagent_containers/food/snacks/grown/pinyon = 1,
-		/obj/item/reagent_containers/food/snacks/grown/yucca = 2
+		/obj/item/reagent_containers/food/snacks/chocolatebar = 1
 	)
 	result = /obj/item/reagent_containers/food/snacks/sunset/happyshark/candybar
 	subcategory = CAT_MISCFOOD

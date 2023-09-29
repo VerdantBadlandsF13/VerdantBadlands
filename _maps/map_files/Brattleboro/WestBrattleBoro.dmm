@@ -24333,8 +24333,6 @@
 /obj/effect/spawner/lootdrop/f13/seedspawner,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/xander,
 /turf/open/indestructible/ground/outside/dirt/harsh,
 /area/f13/wasteland)
 "xfE" = (

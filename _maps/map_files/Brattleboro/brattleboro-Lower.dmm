@@ -10577,12 +10577,6 @@
 /area/f13/building)
 "Vp" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,

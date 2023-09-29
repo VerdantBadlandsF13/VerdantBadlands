@@ -74,3 +74,10 @@
 	desc = "An arrow made of wood, tipped with bronze. The tip is dense enough to provide some armor penetration."
 	icon_state = "bronzearrow"
 	projectile_type = /obj/item/projectile/bullet/reusable/arrow/bronze
+
+/obj/item/ammo_casing/caseless/arrow/death
+	name = "custom bolt"
+	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	desc = "An incredibly dangerous bolt, fitted with wickedly sharp serrated teeth. Likely to punch into a target and cause horrific damage."
+	icon_state = "arrow_serrated"
+	projectile_type = /obj/item/projectile/bullet/reusable/arrow/death

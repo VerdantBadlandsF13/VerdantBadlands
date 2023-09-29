@@ -29,7 +29,6 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	START_PROCESSING(SSobj, src)
 	charge = maxcharge
 	update_cell_icon()
-	desc += "This has a rating for an internal power level of [maxcharge]."
 
 /obj/item/stock_parts/cell_pa/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -85,10 +84,10 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 
 /obj/item/stock_parts/cell_pa/examine(mob/user)
 	..()
+	. += "Indicator shows: [round(src.percent() )]%. <br>\
+	This has a rating for an internal power level of [maxcharge]."
 	if(rigged)
 		. += "<span class='danger'>This power cell seems to be dripping some sort of fluid!</span>"
-	else
-		. += "Indicator shows: [round(src.percent() )]%."
 
 /obj/item/stock_parts/cell_pa/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is licking the electrodes of [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")

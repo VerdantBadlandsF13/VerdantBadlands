@@ -4598,7 +4598,6 @@
 /obj/item/seeds/cabbage,
 /obj/item/seeds/carrot,
 /obj/item/seeds/corn,
-/obj/item/seeds/poppy/broc,
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"
 	},
@@ -8289,10 +8288,6 @@
 /area/f13/village)
 "flW" = (
 /obj/structure/table/wood/settler,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/xander,
-/obj/item/seeds/xander,
 /obj/item/reagent_containers/spray/plantbgone,
 /obj/item/reagent_containers/spray/pestspray,
 /obj/item/reagent_containers/spray/pestspray,
@@ -35225,7 +35220,6 @@
 /obj/item/seeds/peach,
 /obj/item/seeds/orange,
 /obj/item/seeds/apple,
-/obj/item/seeds/xander,
 /obj/item/seeds/mutfruit,
 /turf/open/indestructible/ground/outside/desert/harsh{
 	name = "dry dirt"

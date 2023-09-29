@@ -76,83 +76,11 @@
 	else
 		icon_state = "[initial(icon_state)]_no"
 
-/obj/structure/flora/wasteplant/wild_broc
-	name = "wild broc flower"
-	icon_state = "wild_broc"
-	desc = "A tall stalk bearing a vibrant, orange flower famed for its healing properties."
-	produce = /obj/item/reagent_containers/food/snacks/grown/broc
-
-/obj/structure/flora/wasteplant/wild_xander
-	name = "wild xander roots"
-	icon_state = "wild_xander"
-	desc = "A hardy, onion-like root with mild healing properties."
-	produce = /obj/item/reagent_containers/food/snacks/grown/xander
-
-/obj/structure/flora/wasteplant/wild_buffalogourd
-	name = "wild buffalo vines"
-	icon_state = "wild_gourd"
-	desc = "This large spreading perennial vine is a close relative of many cultivated gourd crops. The ripe fruit forms a small gourd, which was reportedly boiled and eaten by various tribes."
-	produce = /obj/item/reagent_containers/food/snacks/grown/buffalogourd
-
-/obj/structure/flora/wasteplant/wild_horsenettle
-	name = "wild horsenettle"
-	icon_state = "wild_horsenettle"
-	desc = "The tribes use the berries of this toxic plant as a vegetable rennet."
-	produce = /obj/item/reagent_containers/food/snacks/grown/horsenettle
-
-/obj/structure/flora/wasteplant/wild_mesquite
-	name = "wild mesquite"
-	icon_state = "wild_mesquite"
-	desc = "The honey mesquite pod grows on a short tree with willow-like branches. Trees with pickable pods will appear bushier in foliage and have strings of pods on them, resembling a fern pattern. Pods can be eaten or used in recipes"
-	produce = /obj/item/reagent_containers/food/snacks/grown/mesquite
-
-/obj/structure/flora/wasteplant/wild_pinyon
-	name = "wild pinyon pine"
-	icon_state = "wild_pinyon"
-	desc = "The seeds of the pinyon pine, known as pine nuts, are an important food for settlers and tribes living in the mountains of the North American Southwest. All species of pine produce edible seeds, but in North America only the pinyon produces seeds large enough to be a major source of food."
-	produce = /obj/item/reagent_containers/food/snacks/grown/pinyon
-
-/obj/structure/flora/wasteplant/wild_prickly
-	name = "wild prickly pear"
-	icon_state = "wild_prickly"
-	desc = "Distinguished by having cylindrical, rather than flattened, stem segments with large barbed spines. The stem joints are very brittle on young stems, readily breaking off when the barbed spines stick to clothing or animal fur."
-	produce = /obj/item/reagent_containers/food/snacks/grown/pricklypear
-
-/obj/structure/flora/wasteplant/wild_datura
-	name = "wild datura"
-	icon_state = "wild_datura"
-	desc = "The sacred datura root, useful as an anesthetic for surgery and in healing salves, as well as for rites of passage rituals and ceremonies"
-	produce = /obj/item/reagent_containers/food/snacks/grown/datura
-
-/obj/structure/flora/wasteplant/wild_punga
-	name = "wild punga"
-	icon_state = "wild_punga"
-	desc = "Punga fruit plants flower at a single point at the terminus of their stems, gradually developing into large, fleshy fruits with a yellow/brown, thick skin."
-	produce = /obj/item/reagent_containers/food/snacks/grown/pungafruit
-
-/obj/structure/flora/wasteplant/wild_coyote
-	name = "wild coyote tobacco shrub"
-	icon_state = "wild_coyote"
-	desc = "This tobacco like plant is commonly used by tribals for a great variety of medicinal and ceremonial purposes."
-	produce = /obj/item/reagent_containers/food/snacks/grown/coyotetobacco
-
-/obj/structure/flora/wasteplant/wild_yucca
-	name = "wild banana yucca"
-	icon_state = "wild_yucca"
-	desc = "The species gets its common name banana yucca from its banana-shaped fruit. The specific epithet baccata means 'with berries'"
-	produce = /obj/item/reagent_containers/food/snacks/grown/yucca
-
 /obj/structure/flora/wasteplant/wild_tato
 	name = "wild tato"
 	icon_state = "wild_tato"
 	desc = "The outside looks like a tomato, but the inside is brown. Tastes as absolutely disgusting as it looks, but will keep you from starving."
 	produce = /obj/item/reagent_containers/food/snacks/grown/tato
-
-/obj/structure/flora/wasteplant/wild_feracactus
-	name = "wild barrel cactus"
-	icon_state = "wild_feracactus"
-	desc = "A squat, spherical cactus blooming with a toxic fruit."
-	produce = /obj/item/reagent_containers/food/snacks/grown/feracactus
 
 /obj/structure/flora/wasteplant/wild_mutfruit
 	name = "wild mutfruit sapling"
@@ -165,12 +93,6 @@
 	icon_state = "wild_fungus"
 	desc = "This edible strain of fungus grows in dark places and is said to have anti-toxic properties."
 	produce = /obj/item/reagent_containers/food/snacks/grown/fungus
-
-/obj/structure/flora/wasteplant/wild_agave
-	name = "wild agave"
-	icon_state = "wild_agave"
-	desc = "The juice of this fleshy plant soothes burns, but it also removes nutrients from the body."
-	produce = /obj/item/reagent_containers/food/snacks/grown/agave
 
 /obj/structure/flora/wasteplant/rad_fungus
 	name = "glowing fungi"
@@ -209,27 +131,10 @@
 
 
 /////FALLOUT 13 TREES////
-/obj/structure/flora/tree/joshua
-	name = "joshua tree"
-	desc = "A tree named by Msormons, who said its branches looked like the biblical Joshua with his hands raised in prayer."
-	icon = 'icons/obj/flora/deadtrees.dmi'
-	log_amount = 3
-	icon_state = "joshua_1"
-
-/obj/structure/flora/tree/joshua/Initialize()
-	. = ..()
-	icon_state = "joshua_[rand(1,4)]"
-	AddComponent(/datum/component/largetransparency, y_offset = 1)
-
-/obj/structure/flora/tree/cactus
-	name = "cactus"
-	desc = "It's a giant cowboy hat! It's waving hello! It wants you to hug it!"
-	icon = 'icons/obj/flora/deadtrees.dmi'
-	icon_state = "cactus"
-	log_amount = 2
-
 //////
 // Reused jungle sprites, for Vermont.
+// Temp until we get a proper replacement.
+// Pretty out of place and I feel gross using them.
 //////
 
 /obj/structure/flora/grass/vermont
@@ -261,23 +166,23 @@
 
 // Bushes
 
-/obj/structure/flora/vermontbush
+/obj/structure/flora/grass/wasteland/vermontbush
 	name = "bush"
 	desc = "A wild plant, birthed from the Vermont wilderness."
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "busha"
 
-/obj/structure/flora/vermontbush/Initialize()
+/obj/structure/flora/grass/wasteland/vermontbush/Initialize()
 	. = ..()
 	icon_state = "[icon_state][rand(1, 3)]"
 
-/obj/structure/flora/vermontbush/b
+/obj/structure/flora/grass/wasteland/vermontbush/b
 	icon_state = "bushb"
 
-/obj/structure/flora/vermontbush/c
+/obj/structure/flora/grass/wasteland/vermontbush/c
 	icon_state = "bushc"
 
-/obj/structure/flora/vermontbush/large
+/obj/structure/flora/grass/wasteland/vermontbush/large
 	icon_state = "bush"
 	icon = 'icons/obj/flora/largejungleflora.dmi'
 	pixel_x = -16
@@ -285,9 +190,10 @@
 	plane = MOB_PLANE
 	layer = ABOVE_ALL_MOB_LAYER
 
-/obj/structure/flora/vermontbush/large/Initialize()
+/obj/structure/flora/grass/wasteland/vermontbush/large/Initialize()
 	. = ..()
 	AddComponent(/datum/component/largetransparency, 1, 1)
+	icon_state = "[icon_state][rand(1, 3)]"
 
 /obj/structure/flora/rock/pile/largevermont
 	name = "rocks"
@@ -296,6 +202,8 @@
 	density = FALSE
 	pixel_x = -16
 	pixel_y = -16
+	obj_integrity = 100//So you can remove them, for building purposes.
+	max_integrity = 100
 
 /obj/structure/flora/rock/pile/largevermont/Initialize()
 	. = ..()

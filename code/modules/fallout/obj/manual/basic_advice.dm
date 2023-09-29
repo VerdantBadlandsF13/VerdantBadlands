@@ -25,7 +25,7 @@
 				<body>
 				<h3>The basics of farming in the wasteland of today</h3>
 
-				Slowly starving to death? Stop worrying and start working, the earth will provide, even now. First, you need to understand the basics. 
+				Slowly starving to death? Stop worrying and start working, the earth will provide, even now. First, you need to understand the basics.
 				<p>
 				<ol>
 				<li>To grow plants reliably you need at minimum, a plot of soil, a rake or cultivator to whack weeds, and a bucket for water and fertilizer. </li>
@@ -46,7 +46,7 @@
 				<li>From sandstone: drying racks, soil plots, gardening pots. </li>
 				<li>From cloth: plant bags. </li>
 				<li>From leather: gardeners belt, farmers gloves.</li>
-				<li>From hay: wicker baskets.</li>				
+				<li>From hay: wicker baskets.</li>
 				</ol>
 				<p>
 				From here, you know enough to get started, keep on trying things out and learn from old hands, and soon you will be as fat and content as me.
@@ -107,7 +107,7 @@
 				</ol>
 				<p>
 
-	
+
 				<h3>Some secret smithing recipes.</h3>
 
 				These are some of the items that can be made with hot iron and a steady hand. Results are not always the same depending on the anvil used.
@@ -139,7 +139,8 @@
 ///////////////////////
 // NUKA COLA RECIPES //
 ///////////////////////
-
+// Stupidly out of date. Don't use this unless you UPDATE IT FIRST. - Carl
+/*
 /obj/item/book/manual/nuka_recipes
 	name = "Nuka-Cola Recipes"
 	icon_state = "barbook"
@@ -211,7 +212,7 @@
 				</body>
 				</html>
 			"}
-
+*/
 ///////////////////////////////
 // ADVICE FOR FUSION ROOKIES //
 ///////////////////////////////

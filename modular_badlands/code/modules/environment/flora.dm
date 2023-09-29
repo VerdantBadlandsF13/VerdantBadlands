@@ -158,7 +158,6 @@
 	icon_state = "licorice"
 	filling_color = "#999966"
 	tastes = list("natural sweetness" = 1)
-	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)
 
 /obj/item/reagent_containers/food/snacks/grown/bl/milkweed
 	seed = /obj/item/seeds/bl/milkweed
@@ -168,7 +167,6 @@
 	icon_state = "milkweed"
 	filling_color = "#AAA1C9"
 	tastes = list("strong bitterness" = 1)
-	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)
 
 /obj/item/reagent_containers/food/snacks/grown/bl/yarrow
 	seed = /obj/item/seeds/bl/yarrow
@@ -178,7 +176,6 @@
 	icon_state = "yarrow"
 	filling_color = "#CBC9D4"
 	tastes = list("sweetly bitterness" = 1)
-	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)
 
 /obj/item/reagent_containers/food/snacks/grown/bl/skullcap
 	seed = /obj/item/seeds/bl/skullcap
@@ -188,4 +185,3 @@
 	icon_state = "skullcap"
 	filling_color = "#B294D1"
 	tastes = list("mild bitterness" = 1)
-	juice_results = list(/datum/reagent/consumable/ethanol/pungajuice = 0)

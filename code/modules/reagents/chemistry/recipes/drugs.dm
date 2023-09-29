@@ -124,5 +124,5 @@
 	name = "Buffout"
 	id = /datum/reagent/drug/buffout
 	results = list(/datum/reagent/drug/buffout = 10)
-	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/drug/crank = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1, /datum/reagent/consumable/yuccajuice = 1)
+	required_reagents = list(/datum/reagent/consumable/sugar = 1, /datum/reagent/phosphorus = 1, /datum/reagent/sulfur = 1, /datum/reagent/drug/crank = 1, /datum/reagent/carbondioxide = 1, /datum/reagent/nitrous_oxide = 1)
 

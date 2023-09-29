@@ -23,7 +23,7 @@
 // Left-4-Zed Tribal edition
 /datum/reagent/reactive_compost
 	name = "reactive compost"
-	description = "Compost mixed with mutjuice and daturatea. The resulting mixture is capable of drawing forth the inner potential of plants, at the expense of it's well being."
+	description = "Compost mixed with mutjuice. The resulting mixture is capable of drawing forth the inner potential of plants, at the expense of well being."
 	reagent_state = "LIQUID"
 	color = "#8181E9"
 	taste_description = "sizzling rot"
@@ -32,7 +32,7 @@
 /datum/chemical_reaction/reactive_compost
 	id = /datum/reagent/reactive_compost
 	results = list(/datum/reagent/reactive_compost = 3)
-	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/mutjuice = 1, /datum/reagent/consumable/ethanol/daturatea = 1)
+	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/mutjuice = 1)
 	mix_message = "The compost emits a noxious scent"
 
 //If used on trays
@@ -45,18 +45,18 @@
 // Enduro Grow Tribal Edition
 /datum/reagent/fortifying_compost
 	name = "fortifying compost"
-	description = "Compost mixed with tatojuice and yucca juice. The resulting mixture will fortify the plant from weed infestations, toxins and the toils of gardening."
+	description = "Compost mixed with tatojuice. The resulting mixture will fortify the plant from weed infestations, toxins and the toils of gardening."
 	reagent_state = "LIQUID"
 	color = "#AD462C"
 	taste_description = "earthy rot"
-	
+
 // Making Enduro Grow Tribal edition
 /datum/chemical_reaction/fortifying_compost
 	id = /datum/reagent/fortifying_compost
 	results = list(/datum/reagent/fortifying_compost = 3)
-	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/yuccajuice = 1, /datum/reagent/consumable/tato_juice = 1)
+	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/tato_juice = 1)
 	mix_message = "The compost emits an earthy armora"
-	
+
 //If used on trays
 /datum/reagent/fortifying_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()
@@ -68,7 +68,7 @@
 // Saltpetre Tribal Edition
 /datum/reagent/alacritous_compost
 	name = "alacritous compost"
-	description = "A strange mixture of compost, ashes and pungajuice. This potent mixture will hasten the plant's harvest while increasing the yield."
+	description = "A strange mixture of compost and ashes. This potent mixture will hasten the plant's harvest while increasing the yield."
 	reagent_state = "LIQUID"
 	color = "#4CB529"
 	taste_description = "cool, salty rot"
@@ -77,13 +77,13 @@
 /datum/chemical_reaction/alacritous_compost
 	id = /datum/reagent/alacritous_compost
 	results = list(/datum/reagent/alacritous_compost = 3)
-	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/compost = 1)
+	required_reagents = list(/datum/reagent/ash = 1, /datum/reagent/compost = 1)
 	mix_message = "The compost starts smelling like manure"
 
 // If added to tray
 /datum/reagent/alacritous_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()
-	if(chems.has_reagent(src.type, 1))	
+	if(chems.has_reagent(src.type, 1))
 		var/acompost = chems.get_reagent_amount(src.type)
 		if(myseed)
 			myseed.adjust_production(-round(acompost/8)-prob(acompost%10))
@@ -104,7 +104,7 @@
 	results = list(/datum/reagent/stabilizing_compost = 3)
 	required_reagents = list(/datum/reagent/compost = 1, /datum/reagent/consumable/honey = 1, /datum/reagent/consumable/milk = 1)
 	mix_message= "A sweet smell comes over the compost"
-	
+
 // If added to tray
 /datum/reagent/stabilizing_compost/on_hydroponics_apply(obj/item/seeds/myseed, datum/reagents/chems, obj/machinery/hydroponics/mytray)
 	. = ..()

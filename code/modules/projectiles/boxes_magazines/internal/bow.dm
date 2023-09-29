@@ -10,6 +10,11 @@
 	max_ammo = 3
 	start_empty = 1
 
+/obj/item/ammo_box/magazine/internal/bow/gmb
+	name = "crossbow magazine"
+	max_ammo = 6
+	ammo_type = /obj/item/ammo_casing/caseless/arrow/death
+
 //Deathclaw Bow Ammo
 /obj/item/ammo_box/magazine/internal/bow/claw
 	name = "bow internal magazine"

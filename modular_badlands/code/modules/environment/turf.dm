@@ -1,10 +1,11 @@
 //////////////
 // DEFAULTS //
 //////////////
+/*
 /turf/open/indestructible/ground/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-
+*/
 /turf/open/indestructible/ground/outside/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
@@ -75,21 +76,6 @@
 		plantGrass()
 	icon_state = "grass[rand(0,3)]"
 
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_grass_meadow/DS = new /obj/effect/overlay/bl_turf/bl_grass_meadow(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
-
 /obj/effect/overlay/bl_turf/bl_grass_meadow
 	name = "meadow"
 	icon_state = "grass_edges"
@@ -109,21 +95,6 @@
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
 	icon_state = "grass_dead[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_dead_meadow/DS = new /obj/effect/overlay/bl_turf/bl_dead_meadow(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
 
 /obj/effect/overlay/bl_turf/bl_dead_meadow
 	name = "dying meadow"
@@ -145,21 +116,6 @@
 		plantGrass()
 	icon_state = "grass_swamp[rand(0,3)]"
 
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_swamp/DS = new /obj/effect/overlay/bl_turf/bl_swamp(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
-
 /obj/effect/overlay/bl_turf/bl_swamp
 	name = "moist grass"
 	icon_state = "grass_swamp_edges"
@@ -180,21 +136,6 @@
 		plantGrass()
 	icon_state = "grass_taiga[rand(0,3)]"
 
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_taiga/DS = new /obj/effect/overlay/bl_turf/bl_taiga(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
-
 /obj/effect/overlay/bl_turf/bl_taiga
 	name = "mossy soil"
 	icon_state = "grass_taiga_edges"
@@ -214,21 +155,6 @@
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
 	icon_state = "grass_badlands[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_taiga/DS = new /obj/effect/overlay/bl_turf/bl_taiga(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
 
 /obj/effect/overlay/bl_turf/bl_taiga
 	name = "mossy soil"
@@ -300,21 +226,6 @@
 	. = ..()
 	icon_state = "sand[rand(0,3)]"
 
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_sand/DS = new /obj/effect/overlay/bl_turf/bl_sand(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
-
 /obj/effect/overlay/bl_turf/bl_sand
 	name = "sand"
 	icon_state = "sand_edges"
@@ -349,24 +260,9 @@
 	barefootstep = FOOTSTEP_FLOOR
 	clawfootstep = FOOTSTEP_FLOOR
 
-/turf/open/indestructible/ground/outside/bl/sand/Initialize()
+/turf/open/indestructible/ground/outside/bl/clay/Initialize()
 	. = ..()
 	icon_state = "clay[rand(0,4)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_clay/DS = new /obj/effect/overlay/bl_turf/bl_clay(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
 
 /obj/effect/overlay/bl_turf/bl_clay
 	name = "clay"

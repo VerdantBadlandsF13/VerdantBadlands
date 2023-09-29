@@ -12,15 +12,6 @@
 		. = TRUE
 	..()
 
-/datum/reagent/consumable/yuccajuice
-	name = "Yucca Juice"
-	description = "The raw essence of a	banana yucca."
-	color = "#863333" // rgb: 175, 175, 0
-	taste_description = "sand and bunker-air"
-	glass_icon_state = "banana"
-	glass_name = "glass of yucca juice"
-	glass_desc = "A wastelanders favourite."
-
 /datum/reagent/consumable/tato_juice
 	name = "Tato Juice"
 	description = "Juice of the tato. Smells like bad eggs."

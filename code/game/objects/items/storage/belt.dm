@@ -735,3 +735,21 @@
 	fitting_swords = list(/obj/item/melee/rapier)
 	starting_sword = /obj/item/melee/rapier
 
+/obj/item/storage/belt/bolt_quiver
+	name = "bolt quiver"
+	desc = "A quiver designed to hold bolts, fashioned from some wasteland creature's hide."
+	icon_state = "quiver"
+	item_state = "quiver"
+
+/obj/item/storage/belt/bolt_quiver/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 15
+	STR.display_numerical_stacking = TRUE
+	CANHOLD_STATIC(STR, typecacheof(list(
+		/obj/item/ammo_casing/caseless/arrow/death
+		)))
+
+/obj/item/storage/belt/bolt_quiver/full/PopulateContents()
+	for(var/i in 1 to 16)
+		new /obj/item/ammo_casing/caseless/arrow/death(src)

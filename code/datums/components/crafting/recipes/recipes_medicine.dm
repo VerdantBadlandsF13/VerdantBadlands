@@ -31,7 +31,6 @@
 				/datum/reagent/medicine/silver_sulfadiazine = 10)
 	category = CAT_MEDICAL
 
-
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
 	result = /obj/item/smelling_salts

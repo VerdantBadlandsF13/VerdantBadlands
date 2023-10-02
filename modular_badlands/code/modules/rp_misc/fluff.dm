@@ -71,6 +71,29 @@ Ignore it, if possible.
 	playsound(src, critstam_sound, 50, 1)
 
 /*
+Mob audio for catching fire.
+Easier to have it here.
+*/
+/mob/living/carbon/proc/handle_incineration(mob/living/M)
+	var/incineration_sound
+	if(src.gender == FEMALE)
+		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
+	else
+		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_onfire[rand(1,3)].ogg"
+	playsound(src, incineration_sound, 50, 1)
+
+/*
+Mob audio for extreme pain.
+*/
+/mob/living/carbon/proc/handle_highpain(mob/living/M)
+	var/highpain_sound
+	if(src.gender == FEMALE)
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
+	else
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
+	playsound(src, highpain_sound, 50, 1)
+
+/*
 Radio static below.
 Pulled from MS ala ~2021, redone for our purposes. Cheers. - Carl
 Determines how badly a broadcasting radio suffers from static (garbled text in our case).

@@ -3678,6 +3678,7 @@
 #include "modular_badlands\code\modules\rp_misc\environmental_props\interactive.dm"
 #include "modular_badlands\code\modules\rp_misc\environmental_props\junk.dm"
 #include "modular_badlands\code\modules\rp_misc\environmental_props\signage.dm"
+#include "modular_badlands\code\modules\rp_misc\footstep_pings\footsteps.dm"
 #include "modular_badlands\code\modules\rp_misc\mood\positive.dm"
 #include "modular_badlands\code\modules\techno_jacks\spawns.dm"
 #include "modular_badlands\code\modules\techno_jacks\mood\neutral.dm"

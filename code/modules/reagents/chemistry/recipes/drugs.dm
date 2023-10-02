@@ -112,7 +112,7 @@
 	name = "Turbo"
 	id = /datum/reagent/drug/turbo
 	results = list(/datum/reagent/drug/turbo = 4)
-	required_reagents = list(/datum/reagent/cellulose = 1, /datum/reagent/toxin/cyanide = 1, /datum/reagent/consumable/brocjuice = 1, /datum/reagent/drug/jet = 1) //fairly close to the ingame recipe
+	required_reagents = list(/datum/reagent/cellulose = 1, /datum/reagent/toxin/cyanide = 1, /datum/reagent/consumable/cavefungusjuice = 1, /datum/reagent/drug/jet = 1) //fairly close to the ingame recipe
 
 /datum/chemical_reaction/psycho
 	name = "Psycho"

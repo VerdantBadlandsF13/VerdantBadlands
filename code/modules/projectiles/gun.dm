@@ -183,6 +183,7 @@ ATTACHMENTS
 		safety = !safety
 		playsound(user, safety_audio, 100, 1)
 		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+		sleep 15
 	. = ..()
 
 /obj/item/gun/Initialize()
@@ -270,7 +271,14 @@ ATTACHMENTS
 		. += "<span class='revenminor'>This weapon does not use the condition system.</span>"
 	if(cell_discharge)
 		. += "<span class='revenminor'>Condition on this weapon heavily changes how much cell charge it consumes. <br>\
-		It does not suffer from traditional jams, as a consequence.</span>"
+		It does not suffer from traditional jams, as a consequence. Additionally, all energy weapons require three or more intelligence to use. <br>\
+		An exception is made for special weaponry, which requires six or higher. A note like this will be present, if that's the case.</span>"
+	if(heavy_weapon)
+		. += "<span class='revenminor'>This weapon requires a strength of six or higher.</span>"
+	if(special_weapon)
+		. += "<span class='revenminor'>This weapon requires an intelligence of six or higher.</span>"
+	if(pb_knockback >= 1)
+		. += "<span class='revenminor'>This weapon will provide knockback when point-blank.</span>"
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/gun/proc/process_chamber(mob/living/user)
@@ -574,7 +582,7 @@ ATTACHMENTS
 	else if(burst_size > 1 && burst_spread)
 		randomized_gun_spread = rand(0, burst_spread)
 	var/randomized_bonus_spread = rand(0, bonus_spread)
-	if(HAS_TRAIT(user, SPREAD_CONTROL))
+	if(HAS_TRAIT(user, TRAIT_SPREAD_CONTROL))
 		randomized_gun_spread = max(0, randomized_gun_spread-8)
 		randomized_bonus_spread = max(0, randomized_bonus_spread-8)
 	if(burst_size > 1)

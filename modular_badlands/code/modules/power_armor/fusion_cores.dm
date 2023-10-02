@@ -24,7 +24,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	var/self_recharge = 0 //does it self recharge, or not?
 
 /obj/item/stock_parts/cell_pa/New()
-	..()
+	. = ..()
 	bcell = src
 	START_PROCESSING(SSobj, src)
 	charge = maxcharge
@@ -83,7 +83,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	return power_used
 
 /obj/item/stock_parts/cell_pa/examine(mob/user)
-	..()
+	. = ..()
 	. += "Indicator shows: [round(src.percent() )]%. <br>\
 	This has a rating for an internal power level of [maxcharge]."
 	if(rigged)
@@ -94,7 +94,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	return (FIRELOSS)
 
 /obj/item/stock_parts/cell_pa/attackby(obj/item/W, mob/user, params)
-	..()
+	. = ..()
 	if(istype(W, /obj/item/reagent_containers/syringe))
 		var/obj/item/reagent_containers/syringe/S = W
 		to_chat(user, "<span class='notice'>You inject the solution into the fusion core.</span>")
@@ -138,7 +138,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	..()
 
 /obj/item/stock_parts/cell_pa/ex_act(severity, target)
-	..()
+	. = ..()
 	if(!QDELETED(src))
 		switch(severity)
 			if(2)
@@ -164,7 +164,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	rating = 2
 
 /obj/item/stock_parts/cell_pa/default/empty/New()
-	..()
+	. = ..()
 	charge = 0
 
 /obj/item/stock_parts/cell_pa/high
@@ -173,7 +173,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	rating = 3
 
 /obj/item/stock_parts/cell_pa/high/empty/New()
-	..()
+	. = ..()
 	charge = 0
 
 /obj/item/stock_parts/cell_pa/admin/self_recharge

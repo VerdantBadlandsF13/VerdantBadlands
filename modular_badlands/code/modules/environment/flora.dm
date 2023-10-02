@@ -79,7 +79,7 @@
 	icon_grow = "licorice-grow"
 	icon_dead = "licorice-dead"
 	icon_harvest = "licorice-harvest"
-	reagents_add = list(/datum/reagent/consumable/sugar = 0.1, /datum/reagent/medicine/salglu_solution = 0.05)
+	reagents_add = list(/datum/reagent/consumable/licoricepulp = 0.05)
 
 /obj/item/seeds/bl/milkweed
 	name = "milkweed seed pack"
@@ -99,7 +99,7 @@
 	icon_grow = "milkweed-grow"
 	icon_dead = "milkweed-dead"
 	icon_harvest = "milkweed-harvest"
-	reagents_add = list(/datum/reagent/medicine/silver_sulfadiazine = 0.05, /datum/reagent/consumable/menthol = 0.05)
+	reagents_add = list(/datum/reagent/consumable/milkweedpulp = 0.05)
 
 /obj/item/seeds/bl/yarrow
 	name = "yarrow seed pack"
@@ -119,7 +119,7 @@
 	icon_grow = "yarrow-grow"
 	icon_dead = "yarrow-dead"
 	icon_harvest = "yarrow-harvest"
-	reagents_add = list(/datum/reagent/medicine/charcoal = 0.1, /datum/reagent/abraxo_cleaner/sterilizine = 0.1, /datum/reagent/medicine/spaceacillin = 0.05, /datum/reagent/medicine/radaway = 0.05)
+	reagents_add = list(/datum/reagent/consumable/yarrowpulp = 0.05)
 
 /obj/item/seeds/bl/skullcap
 	name = "skullcap seed pack"
@@ -139,7 +139,7 @@
 	icon_grow = "skullcap-grow"
 	icon_dead = "skullcap-dead"
 	icon_harvest = "skullcap-harvest"
-	reagents_add = list(/datum/reagent/medicine/psicodine = 0.1, /datum/reagent/toxin/staminatoxin = 0.1, /datum/reagent/serotrotium = 0.05, /datum/reagent/medicine/synaphydramine = 0.05, /datum/reagent/toxin/leadacetate = 0.01)
+	reagents_add = list(/datum/reagent/consumable/skullcappulp = 0.05)
 
 // Produce containers third.
 /obj/item/reagent_containers/food/snacks/grown/bl
@@ -149,6 +149,10 @@
 	icon = 'modular_badlands/code/modules/environment/icons/bl_produce.dmi'
 	icon_state = "ERROR"
 	filling_color = "#000000"
+	foodtype = RAW | VEGETABLES
+	list_reagents = list()
+	grind_results = list()
+	juice_results = list()
 
 /obj/item/reagent_containers/food/snacks/grown/bl/licorice
 	seed = /obj/item/seeds/bl/licorice
@@ -158,6 +162,46 @@
 	icon_state = "licorice"
 	filling_color = "#999966"
 	tastes = list("natural sweetness" = 1)
+	list_reagents = list(/datum/reagent/consumable/licoricepulp = 1)
+	grind_results = list(/datum/reagent/consumable/licoricepulp = 1)
+
+////////////////////////
+//  LICORICE CHEMS   //
+///////////////////////
+/datum/reagent/consumable/licoricepulp
+	name = "licorice pulp"
+	description = "Pulped licorice root."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#14FF3C" // rgb: 48, 32, 0
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	overdose_threshold = 30
+	water_level = 1
+
+/datum/reagent/consumable/licoricepulp/on_mob_life(mob/living/carbon/M)
+	if(M.oxyloss > 35)
+		M.setOxyLoss(35, 0)
+	if(M.losebreath >= 4)
+		M.losebreath -= 2
+	if(M.losebreath < 0)
+		M.losebreath = 0
+	M.adjustStaminaLoss(-0.5*REM, updating_health = FALSE)
+	if(prob(20))
+		for(var/organ in M.internal_organs)
+			M.adjustOrganLoss(-1 *REAGENTS_EFFECT_MULTIPLIER, 150)
+	..()
+	return TRUE // update health at end of tick
+
+/datum/reagent/consumable/licoricepulp/overdose_process(mob/living/M)
+	if(prob(33))
+		M.adjustStaminaLoss(2.5*REM, updating_health = FALSE)
+		M.adjustToxLoss(1*REM, updating_health = FALSE)
+		M.losebreath++
+		. = 1
+	..()
+
+////////////////////////
+//	END CHEMS		 //
+///////////////////////
 
 /obj/item/reagent_containers/food/snacks/grown/bl/milkweed
 	seed = /obj/item/seeds/bl/milkweed
@@ -167,6 +211,31 @@
 	icon_state = "milkweed"
 	filling_color = "#AAA1C9"
 	tastes = list("strong bitterness" = 1)
+	list_reagents = list(/datum/reagent/consumable/milkweedpulp = 1)
+	grind_results = list(/datum/reagent/consumable/milkweedpulp = 1)
+
+////////////////////////
+//  MILKWEED CHEMS   //
+///////////////////////
+/datum/reagent/consumable/milkweedpulp
+	name = "milkweed pulp"
+	description = "Pulped milkweed flower, pod and sap."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = ""
+	taste_description = ""
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	glass_icon_state = ""
+	overdose_threshold = 1
+
+/datum/reagent/consumable/milkweedpulp/on_mob_life(mob/living/carbon/M)
+	..()
+	return TRUE // update health at end of tick
+
+/datum/reagent/consumable/milkweedpulp/overdose_process(mob/living/M)
+	..()
+////////////////////////
+//	END CHEMS		 //
+///////////////////////
 
 /obj/item/reagent_containers/food/snacks/grown/bl/yarrow
 	seed = /obj/item/seeds/bl/yarrow
@@ -176,6 +245,31 @@
 	icon_state = "yarrow"
 	filling_color = "#CBC9D4"
 	tastes = list("sweetly bitterness" = 1)
+	list_reagents = list(/datum/reagent/consumable/yarrowpulp = 1)
+	grind_results = list(/datum/reagent/consumable/yarrowpulp = 1)
+
+////////////////////////
+//  YARROW CHEMS     //
+///////////////////////
+/datum/reagent/consumable/yarrowpulp
+	name = "yarrow pulp"
+	description = "Pulped yarrow."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = ""
+	taste_description = ""
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	glass_icon_state = ""
+	overdose_threshold = 1
+
+/datum/reagent/consumable/yarrowpulp/on_mob_life(mob/living/carbon/M)
+	..()
+	return TRUE // update health at end of tick
+
+/datum/reagent/consumable/yarrowpulp/overdose_process(mob/living/M)
+	..()
+////////////////////////
+//	END CHEMS		 //
+///////////////////////
 
 /obj/item/reagent_containers/food/snacks/grown/bl/skullcap
 	seed = /obj/item/seeds/bl/skullcap
@@ -185,3 +279,28 @@
 	icon_state = "skullcap"
 	filling_color = "#B294D1"
 	tastes = list("mild bitterness" = 1)
+	list_reagents = list(/datum/reagent/consumable/skullcappulp = 1)
+	grind_results = list(/datum/reagent/consumable/skullcappulp = 1)
+
+////////////////////////
+//  SKULLCAP CHEMS   //
+///////////////////////
+/datum/reagent/consumable/skullcappulp
+	name = "skullcap pulp"
+	description = "Pulped skullcap."
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = ""
+	taste_description = ""
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	glass_icon_state = ""
+	overdose_threshold = 5
+
+/datum/reagent/consumable/skullcappulp/on_mob_life(mob/living/carbon/M)
+	..()
+	return TRUE // update health at end of tick
+
+/datum/reagent/consumable/skullcappulp/overdose_process(mob/living/M)
+	..()
+////////////////////////
+//	END CHEMS		 //
+///////////////////////

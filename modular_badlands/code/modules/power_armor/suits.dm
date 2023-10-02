@@ -13,7 +13,6 @@
 	First introduced in the Battle of Anchorage, it is highly valued today for its increased protective capabilities."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	slowdown = 0.3
 	armor = list("tier" = 9, "melee" = 72.5, "bullet" = 72.5, "laser" = 72.5, "energy" = 30, "bomb" = 62, "bio" = 100, "rad" = 99, "fire" = 90, "acid" = 40, "wound" = 50)
 	durability_threshold = 25
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 25)
@@ -25,7 +24,6 @@
 	Ultimately, it was to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
-	slowdown = 0.2
 	armor = list("tier" = 10, "melee" = 80, "bullet" = 70, "laser" = 80, "energy" = 30, "bomb" = 82, "bio" = 100, "rad" = 100, "fire" = 95, "acid" = 50, "wound" = 50)
 	durability_threshold = 35
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 30)

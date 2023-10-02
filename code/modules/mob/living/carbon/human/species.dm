@@ -1247,6 +1247,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		stealth = new
 		stealth.Grant(H)
 
+	if(H.special_e >= 6)
+		to_chat(H, "With years of enduring the harsh wasteland, your body has adapted. Whether due to radiation or otherwise, \
+		you're no longer capable of being bisected or gutted.")
+		ADD_TRAIT(H, TRAIT_NOGUT, GENERIC)
+
 	H.update_mutant_bodyparts()
 
 /datum/species/proc/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)

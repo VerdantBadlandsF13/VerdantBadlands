@@ -838,7 +838,7 @@
 /obj/machinery/workbench,
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/glass/fifty,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "acF" = (
 /obj/structure/junk/small/bed,
@@ -1349,7 +1349,7 @@
 /obj/machinery/workbench/forge/primal,
 /obj/item/clothing/gloves/f13/blacksmith,
 /obj/item/twohanded/sledgehammer/simple,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/stone,
 /area/f13/bl/dfs)
 "azj" = (
 /obj/item/gun/ballistic/automatic/pistol/m1911,
@@ -1435,7 +1435,7 @@
 /obj/structure/fluff/rails{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/stone,
 /area/f13/wasteland)
 "aBQ" = (
 /obj/structure/table/wood,
@@ -2232,7 +2232,7 @@
 	dir = 4;
 	pixel_y = -1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland/bl/dfs)
 "bdv" = (
 /obj/structure/fence{
@@ -4374,7 +4374,7 @@
 /area/f13/village)
 "cAA" = (
 /obj/machinery/autolathe/ammo,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "cCh" = (
 /turf/closed/wall/f13/wood/house,
@@ -4755,6 +4755,10 @@
 	icon_state = "wide_dark1"
 	},
 /area/f13/building)
+"cTK" = (
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/bl/stone,
+/area/f13/bl/dfs)
 "cTN" = (
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/light,
@@ -4933,7 +4937,7 @@
 	dir = 4;
 	pixel_x = -15
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/stone,
 /area/f13/bl/dfs)
 "daI" = (
 /obj/structure/bed,
@@ -5800,7 +5804,7 @@
 "dFE" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "dGf" = (
 /obj/structure/chair/office/dark{
@@ -5968,7 +5972,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/f13/dfs_grunt,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "dNZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6425,7 +6429,7 @@
 /area/f13/bl/gmb)
 "efT" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "egk" = (
 /obj/structure/railing{
@@ -6467,7 +6471,7 @@
 	dir = 4;
 	pixel_x = 1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland/bl/dfs)
 "ehY" = (
 /obj/structure/table/wood,
@@ -6807,7 +6811,7 @@
 	pixel_y = -1;
 	pixel_x = 1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "eqE" = (
 /turf/open/floor/wood/wood_wide{
@@ -8726,6 +8730,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"fJZ" = (
+/obj/structure/fence{
+	dir = 4;
+	pixel_y = -1
+	},
+/turf/open/indestructible/ground/outside/bl/stone,
+/area/f13/bl/dfs)
 "fKW" = (
 /obj/effect/decal/cleanable/blood/gibs/human/lizard/down,
 /obj/item/reagent_containers/food/snacks/meat/slab/human,
@@ -10412,7 +10423,7 @@
 /area/f13/wasteland)
 "gTB" = (
 /obj/structure/destructible/hobo_barrel/lit,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "gTI" = (
 /obj/structure/chair/sofa,
@@ -11479,6 +11490,9 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
+"hJf" = (
+/turf/open/indestructible/ground/outside/bl/stone,
+/area/f13/bl/dfs)
 "hJz" = (
 /obj/structure/junk/small/bed2,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -11954,7 +11968,7 @@
 "hZW" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "iat" = (
 /obj/machinery/light/small,
@@ -13494,7 +13508,7 @@
 /area/f13/building)
 "jfu" = (
 /obj/structure/rack/shelf_metal,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "jfT" = (
 /obj/structure/closet/cabinet,
@@ -14328,7 +14342,7 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "jLN" = (
 /mob/living/simple_animal/hostile/radroach,
@@ -14898,7 +14912,7 @@
 /area/f13/village)
 "khT" = (
 /obj/structure/table/optable,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "khV" = (
 /obj/structure/junk/small/table,
@@ -15012,9 +15026,7 @@
 /obj/structure/fluff/rails{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 1
-	},
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland)
 "kmU" = (
 /obj/effect/decal/cleanable/dirt{
@@ -15208,7 +15220,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "ktL" = (
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/dfs)
 "kui" = (
 /obj/item/kirbyplants/random,
@@ -15666,7 +15678,7 @@
 	pixel_y = -1
 	},
 /obj/structure/decoration/rag,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "kKi" = (
 /obj/machinery/light{
@@ -16304,7 +16316,7 @@
 	dir = 4;
 	pixel_x = 1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "lcC" = (
 /obj/structure/barricade/wooden,
@@ -16459,7 +16471,7 @@
 /area/f13/village)
 "liG" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "liJ" = (
 /obj/structure/fence/corner,
@@ -16558,7 +16570,7 @@
 /area/f13/bl/gmb)
 "lnc" = (
 /obj/structure/table,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "lnn" = (
 /obj/structure/rack/shelf_metal,
@@ -17194,14 +17206,6 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
-"lPw" = (
-/obj/structure/fluff/rails{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 8
-	},
-/area/f13/wasteland)
 "lPz" = (
 /obj/structure/car/rubbish2{
 	pixel_x = -19
@@ -18445,6 +18449,9 @@
 	icon_state = "verticalinnermain1"
 	},
 /area/f13/wasteland)
+"mIa" = (
+/turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/bl/dfs)
 "mIc" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -19453,7 +19460,7 @@
 /obj/item/defibrillator/primitive{
 	pixel_y = 6
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "nva" = (
 /obj/machinery/washing_machine,
@@ -23654,7 +23661,7 @@
 /area/f13/village)
 "qpn" = (
 /obj/structure/fence,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland/bl/dfs)
 "qqc" = (
 /obj/structure/chair/stool/retro/tan,
@@ -23813,7 +23820,7 @@
 /area/f13/village)
 "qvh" = (
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "qvq" = (
 /obj/machinery/shower{
@@ -25185,7 +25192,7 @@
 	dir = 4;
 	pixel_y = -1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland/bl/dfs)
 "rxN" = (
 /obj/structure/table/wood/settler,
@@ -25660,6 +25667,16 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/village)
+"rMp" = (
+/obj/structure/fence{
+	pixel_x = 17
+	},
+/obj/structure/fence{
+	pixel_x = -15
+	},
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/bl/stone,
+/area/f13/bl/dfs)
 "rMH" = (
 /obj/machinery/light{
 	dir = 8
@@ -26110,7 +26127,7 @@
 	pixel_y = -1;
 	pixel_x = -15
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "seH" = (
 /obj/machinery/vending/cigarette,
@@ -26161,11 +26178,6 @@
 	icon_state = "asteroidfloor"
 	},
 /area/f13/village)
-"sgW" = (
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 8
-	},
-/area/f13/wasteland)
 "sgZ" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13,
@@ -26312,9 +26324,7 @@
 /area/f13/wasteland)
 "slV" = (
 /obj/structure/destructible/hobo_barrel,
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 1
-	},
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland)
 "smg" = (
 /obj/structure/table/wood,
@@ -26534,7 +26544,7 @@
 	pixel_x = -15
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "swz" = (
 /obj/machinery/light/small{
@@ -26643,9 +26653,7 @@
 	name = "BoxStation emergency evac bay";
 	width = 25
 	},
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 1
-	},
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland)
 "sAB" = (
 /turf/open/indestructible/ground/outside/road{
@@ -27616,7 +27624,7 @@
 	dir = 4;
 	pixel_y = -1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "toV" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -28510,7 +28518,7 @@
 /area/f13/bl/gmb)
 "tXc" = (
 /obj/item/target,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "tXn" = (
 /obj/structure/rack/shelf_metal,
@@ -29147,7 +29155,7 @@
 /area/f13/wasteland)
 "utR" = (
 /obj/machinery/autolathe/constructionlathe,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "uua" = (
 /obj/structure/bed,
@@ -31686,7 +31694,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/f13/dfs_grunt,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "wlN" = (
 /obj/effect/overlay/turfs/cliff{
@@ -31772,7 +31780,7 @@
 /area/f13/building/mall)
 "wnr" = (
 /obj/effect/landmark/start/f13/dfs_regular,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/dfs)
 "wns" = (
 /obj/effect/mob_spawn/human/corpse/raiderrangedsulphite,
@@ -33224,7 +33232,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "xoH" = (
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/outside/bl/stone,
 /area/f13/wasteland)
 "xpd" = (
 /obj/structure/fence{
@@ -33800,9 +33808,7 @@
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
 /area/f13/wasteland)
 "xHy" = (
-/turf/open/indestructible/ground/outside/gravel{
-	dir = 1
-	},
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/wasteland)
 "xHG" = (
 /obj/structure/dresser,
@@ -60435,9 +60441,9 @@ ktL
 ktL
 ktL
 ktL
-ktL
-ktL
-ktL
+mIa
+mIa
+mIa
 xsS
 ddQ
 xKH
@@ -60886,15 +60892,15 @@ ddQ
 xsS
 ktL
 gTB
+mIa
+mIa
+mIa
+mIa
 ktL
-ktL
-ktL
-ktL
-ktL
-ktL
-ktL
+mIa
+mIa
 gTB
-ktL
+mIa
 xsS
 ddQ
 xKH
@@ -61346,12 +61352,12 @@ ktL
 eqA
 lcw
 eqA
-ktL
-ktL
-ktL
-ktL
-ktL
-ktL
+mIa
+mIa
+mIa
+mIa
+mIa
+mIa
 xsS
 ddQ
 xKH
@@ -61800,10 +61806,10 @@ ddQ
 xsS
 ktL
 ktL
+fJZ
+mIa
 toR
-ktL
-toR
-ktL
+mIa
 ktL
 ktL
 ktL
@@ -62257,10 +62263,10 @@ ddQ
 xsS
 rAS
 ktL
+fJZ
+mIa
 toR
-ktL
-toR
-ktL
+mIa
 ktL
 ktL
 ktL
@@ -63170,16 +63176,16 @@ qrd
 qrd
 qrd
 rAS
-liG
+cTK
 efT
-ktL
+mIa
 utR
 acB
 rAS
 fOp
-ktL
-ktL
-ktL
+mIa
+mIa
+mIa
 mDo
 ddQ
 xKH
@@ -63626,17 +63632,17 @@ kLx
 iJr
 iJr
 qrd
-liG
+cTK
 azg
-ktL
-ktL
-ktL
-ktL
+hJf
+mIa
+mIa
+mIa
 cAA
 sev
-ktL
-ktL
-ktL
+mIa
+mIa
+mIa
 kKe
 ddQ
 xKH
@@ -64071,8 +64077,8 @@ bxh
 ddQ
 xsS
 liG
-ktL
-ktL
+mIa
+mIa
 liG
 iJr
 eau
@@ -64084,16 +64090,16 @@ lkv
 jbd
 qrd
 rAS
-ktL
-ktL
-ktL
-ktL
+hJf
+hJf
+mIa
+mIa
 gTB
 rAS
 sev
-ktL
-ktL
-ktL
+hJf
+mIa
+mIa
 toR
 ddQ
 xKH
@@ -64528,8 +64534,8 @@ bxh
 pES
 xsS
 liG
-ktL
-ktL
+mIa
+mIa
 liG
 grV
 bUz
@@ -64548,9 +64554,9 @@ qrd
 qrd
 qrd
 sev
-ktL
-ktL
-ktL
+hJf
+hJf
+mIa
 toR
 ddQ
 xKH
@@ -64985,8 +64991,8 @@ bxh
 ddQ
 xIY
 liG
-ktL
-ktL
+mIa
+mIa
 liG
 gUf
 kLx
@@ -65005,7 +65011,7 @@ qrd
 qrd
 qrd
 fOp
-swu
+rMp
 daF
 swu
 mDo
@@ -65442,8 +65448,8 @@ bxh
 hBy
 xIY
 liG
-ktL
-ktL
+mIa
+mIa
 liG
 gUf
 uZe
@@ -66833,8 +66839,8 @@ mkf
 kSG
 iJr
 qrd
-ktL
-ktL
+mIa
+mIa
 liG
 xsS
 ddQ
@@ -67290,8 +67296,8 @@ nTl
 ayZ
 iJr
 qrd
-ktL
-ktL
+mIa
+mIa
 liG
 xsS
 ddQ
@@ -67747,8 +67753,8 @@ pSe
 yiS
 iJr
 qrd
-ktL
-ktL
+mIa
+mIa
 liG
 xsS
 ddQ
@@ -68204,7 +68210,7 @@ xFM
 djx
 iJr
 qrd
-ktL
+mIa
 gTB
 liG
 xsS
@@ -68661,7 +68667,7 @@ mkf
 kvW
 iJr
 qrd
-ktL
+mIa
 lnc
 liG
 xsS
@@ -69118,7 +69124,7 @@ nTl
 iat
 iJr
 qrd
-ktL
+mIa
 dFE
 liG
 xsS
@@ -69557,7 +69563,7 @@ xIY
 liG
 dNH
 dNH
-ktL
+mIa
 qrd
 iJr
 yiS
@@ -69575,7 +69581,7 @@ pSe
 erO
 iJr
 qrd
-ktL
+mIa
 nug
 liG
 fgr
@@ -70014,7 +70020,7 @@ xsS
 liG
 qvh
 hZW
-ktL
+mIa
 qrd
 iJr
 xFM
@@ -70032,7 +70038,7 @@ djx
 xFM
 iJr
 qrd
-ktL
+mIa
 khT
 liG
 fgr
@@ -70471,7 +70477,7 @@ xsS
 liG
 wlv
 wlv
-ktL
+mIa
 qrd
 iJr
 xZT
@@ -70928,7 +70934,7 @@ fgr
 liG
 wnr
 wnr
-ktL
+mIa
 qrd
 aDL
 mRo
@@ -71385,7 +71391,7 @@ fgr
 liG
 gTB
 wnr
-ktL
+mIa
 qrd
 kLx
 erO
@@ -71842,7 +71848,7 @@ fgr
 liG
 jLo
 wnr
-ktL
+mIa
 qrd
 iJr
 xFM
@@ -71860,7 +71866,7 @@ xFM
 xFM
 kLx
 qrd
-ktL
+mIa
 jfu
 liG
 xsS
@@ -72299,7 +72305,7 @@ xsS
 liG
 wnr
 wnr
-ktL
+mIa
 qrd
 iJr
 uJp
@@ -72317,7 +72323,7 @@ bKw
 kvW
 xFM
 qrd
-ktL
+mIa
 jfu
 liG
 fgr
@@ -72756,7 +72762,7 @@ xsS
 liG
 dNH
 dNH
-ktL
+mIa
 qrd
 pPy
 mRo
@@ -72774,7 +72780,7 @@ nTl
 oOp
 kLx
 qrd
-ktL
+mIa
 gTB
 liG
 xsS
@@ -73213,7 +73219,7 @@ xsS
 liG
 qvh
 qvh
-ktL
+mIa
 qrd
 sWY
 erO
@@ -73231,7 +73237,7 @@ wkD
 erO
 kLx
 qrd
-ktL
+mIa
 jfu
 liG
 xsS
@@ -73670,7 +73676,7 @@ fgr
 liG
 wlv
 wlv
-ktL
+mIa
 qrd
 iJr
 iJr
@@ -73688,7 +73694,7 @@ iJr
 iJr
 kLx
 qrd
-ktL
+mIa
 jfu
 liG
 xsS
@@ -95912,24 +95918,6 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xHy
-xHy
-xHy
-xHy
-xHy
-xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
 xHy
 xHy
 xHy
@@ -95945,23 +95933,41 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xHy
 xHy
 xHy
@@ -96168,9 +96174,9 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xHy
 xHy
 xHy
@@ -96366,10 +96372,10 @@ fDt
 (136,1,1) = {"
 uMg
 aBH
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96393,8 +96399,8 @@ aBH
 aBH
 kmK
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96418,63 +96424,9 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
 kmK
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
 kmK
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-lPw
-lPw
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
-aBH
+kmK
 aBH
 aBH
 aBH
@@ -96516,11 +96468,11 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
+aBH
+aBH
+aBH
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96565,10 +96517,16 @@ aBH
 aBH
 aBH
 kmK
-lPw
-lPw
-lPw
-lPw
+aBH
+aBH
+aBH
+aBH
+aBH
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96588,8 +96546,6 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
 aBH
 aBH
 aBH
@@ -96598,8 +96554,58 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+aBH
+aBH
+aBH
+aBH
+aBH
+kmK
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+kmK
+kmK
+kmK
+kmK
+kmK
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+kmK
+kmK
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+aBH
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96624,18 +96630,14 @@ aBH
 aBH
 aBH
 aBH
-lPw
+kmK
 aBH
 aBH
 aBH
-lPw
+kmK
 aBH
-lPw
-lPw
-aBH
-aBH
-aBH
-aBH
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96643,8 +96645,12 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+aBH
+aBH
+aBH
+aBH
+kmK
+kmK
 aBH
 aBH
 kmK
@@ -96667,9 +96673,9 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -96826,15 +96832,15 @@ xoH
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
 xHy
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
 xHy
 xHy
@@ -96847,19 +96853,19 @@ xHy
 xHy
 xHy
 xoH
-sgW
+xHy
 xoH
+xHy
+xHy
+xHy
+xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -96877,7 +96883,7 @@ xoH
 xoH
 xoH
 xoH
-sgW
+xHy
 xoH
 xoH
 xoH
@@ -96897,36 +96903,36 @@ xoH
 xHy
 xoH
 xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
 xoH
 xoH
 xoH
 xoH
+xHy
 xHy
 xHy
-sgW
 xoH
 xoH
-sgW
-sgW
+xHy
+xHy
 xoH
 xoH
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -96937,32 +96943,32 @@ xoH
 xoH
 xoH
 xoH
+xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
 xHy
 xHy
 xHy
+xHy
+xHy
+xHy
 xoH
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
 xHy
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
 xoH
-sgW
+xHy
 xoH
 xoH
 xoH
@@ -96971,20 +96977,20 @@ xHy
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
 xoH
-sgW
+xHy
 xoH
 xoH
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -96998,16 +97004,16 @@ xHy
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
 xHy
 xHy
 xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -97020,14 +97026,14 @@ xoH
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
 xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -97043,22 +97049,22 @@ xoH
 xoH
 xoH
 xoH
-sgW
+xHy
 xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
 xoH
+xHy
+xHy
 xHy
-sgW
-sgW
 xHy
 xHy
 xHy
@@ -97074,13 +97080,13 @@ xoH
 xoH
 xoH
 xoH
+xHy
+xHy
+xHy
 xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
 xHy
 xoH
 xoH
@@ -97089,30 +97095,30 @@ xoH
 xHy
 xHy
 xHy
-sgW
-sgW
 xHy
 xHy
 xHy
 xHy
+xHy
+xHy
 xoH
 xoH
 xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
-sgW
-sgW
+xHy
+xHy
 xHy
 xoH
 xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
 xoH
 xoH
 xHy
@@ -97124,38 +97130,38 @@ xoH
 xHy
 xHy
 xHy
-sgW
 xHy
-sgW
-sgW
 xHy
 xHy
 xHy
 xHy
+xHy
+xHy
+xHy
 xoH
-sgW
+xHy
 xHy
-sgW
-sgW
+xHy
+xHy
 xoH
 xoH
 xHy
 xHy
 xHy
 xoH
-sgW
-sgW
+xHy
+xHy
 xoH
-sgW
+xHy
 xoH
 xoH
+xHy
+xHy
 xHy
 xHy
 xHy
-sgW
 xHy
 xHy
-sgW
 xHy
 xHy
 xHy
@@ -97292,18 +97298,18 @@ xoH
 xoH
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -97339,22 +97345,22 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
 xoH
 xoH
 xoH
@@ -97364,87 +97370,52 @@ xoH
 xoH
 xoH
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-xoH
-sgW
-xoH
-xoH
-xoH
-sgW
-sgW
-xoH
-xoH
-xoH
-xoH
-xoH
-sgW
-sgW
-sgW
-xoH
-xoH
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
 xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
 xHy
 xHy
 xHy
-xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
 xoH
 xoH
 xHy
-xHy
-sgW
-sgW
+xoH
+xoH
 xoH
 xHy
 xHy
 xoH
 xoH
 xoH
-sgW
 xoH
 xoH
+xHy
+xHy
+xHy
 xoH
 xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xoH
-xoH
-xoH
-sgW
-sgW
-sgW
-xoH
-xoH
-xoH
-xoH
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 xHy
 xHy
 xHy
@@ -97453,71 +97424,16 @@ xoH
 xoH
 xoH
 xHy
-sgW
-sgW
+xHy
+xHy
+xHy
+xoH
+xHy
 xHy
 xoH
 xoH
 xoH
 xHy
-xHy
-xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-sgW
-sgW
-xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-xoH
-xHy
-xHy
-sgW
-sgW
-sgW
 xoH
 xoH
 xoH
@@ -97526,16 +97442,98 @@ xoH
 xoH
 xoH
 xHy
-sgW
+xHy
+xHy
+xoH
 xoH
 xoH
 xoH
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xoH
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xoH
+xoH
+xoH
+xoH
+xoH
+xHy
+xHy
+xoH
 xoH
 xoH
 xHy
@@ -97546,72 +97544,80 @@ xHy
 xHy
 xoH
 xoH
-xoH
-xoH
-sgW
-sgW
-sgW
-sgW
-xHy
-xHy
-sgW
-sgW
-xoH
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-xoH
-sgW
-sgW
-sgW
-xoH
-sgW
-sgW
-sgW
-sgW
-sgW
 xHy
-xoH
-sgW
-sgW
-xHy
-xHy
-sgW
-sgW
-sgW
-xoH
-xHy
-xHy
-sgW
-sgW
-xoH
-xoH
-sgW
-sgW
-sgW
-sgW
-xHy
-xHy
-xHy
-xoH
-xHy
-xHy
-sgW
 xHy
 xHy
 xoH
 xoH
 xoH
 xoH
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xHy
+xHy
+xHy
+xHy
+xHy
+xoH
+xoH
+xoH
+xoH
+xHy
 xHy
 xHy
 xHy
@@ -97792,18 +97798,18 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97831,9 +97837,9 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97845,8 +97851,8 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97859,8 +97865,8 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97878,13 +97884,13 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97901,16 +97907,16 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97941,8 +97947,8 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97957,8 +97963,8 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -97968,28 +97974,28 @@ aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -98035,24 +98041,24 @@ aBH
 aBH
 kmK
 kmK
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
 aBH
 aBH
 aBH
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
 aBH
-lPw
-lPw
-lPw
-lPw
-lPw
+kmK
+kmK
+kmK
+kmK
+kmK
 aBH
 aBH
 aBH
@@ -98217,14 +98223,6 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
-sgW
 xHy
 xHy
 xHy
@@ -98250,11 +98248,6 @@ xHy
 xHy
 xHy
 xHy
-sgW
-sgW
-sgW
-sgW
-sgW
 xHy
 xHy
 xHy
@@ -98527,7 +98520,20 @@ xHy
 xHy
 xHy
 xHy
-sgW
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
+xHy
 oeM
 oeM
 oeM

@@ -333,7 +333,6 @@ ATTACHMENTS
 				else
 					user.visible_message("<span class='danger'>[user] hip fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 					shake_camera(user, recoil + 1, recoil)
-					bonus_spread += 24
 
 //Adds logging to the attack log whenever anyone draws a gun, adds a pause after drawing a gun before you can do anything based on it's size
 /obj/item/gun/pickup(mob/living/user)

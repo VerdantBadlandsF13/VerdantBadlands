@@ -24748,9 +24748,6 @@
 	icon_state = "whitebluerustychess"
 	},
 /area/f13/village)
-"rgr" = (
-/turf/open/indestructible/ground/outside/bl/mud,
-/area/f13/bl/gmb)
 "rgz" = (
 /obj/structure/chair{
 	dir = 4
@@ -68885,8 +68882,8 @@ anP
 anP
 anP
 aZt
-qqZ
-qqZ
+anP
+anP
 vmc
 qfN
 qfN
@@ -69801,7 +69798,7 @@ anP
 anP
 anP
 anP
-rgr
+qfN
 qfN
 qfN
 qfN

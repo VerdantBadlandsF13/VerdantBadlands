@@ -54,7 +54,7 @@
 		if(Weight == (5 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
-			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
+			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
@@ -137,12 +137,12 @@
 	icon_state = "grass_taiga[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_taiga
-	name = "mossy soil"
+	name = "mossy grass"
 	icon_state = "grass_taiga_edges"
 
 // BADLANDS GRASS
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass
-	name = "mossy soil"
+	name = "mossy grass"
 	desc = "There's dark days ahead, friend."
 	icon_state = "grass_badlands0"
 	footstep = FOOTSTEP_GRASS

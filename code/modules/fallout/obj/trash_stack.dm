@@ -61,7 +61,7 @@
 	anchored = TRUE
 	density = TRUE
 	var/list/paid_players = list()
-	var/list/pay = list(/obj/item/stack/f13Cash/random/med)
+	var/list/pay = list(/obj/item/stack/f13Cash/random/low)
 
 /obj/item/storage/money_stack/vault
 	pay = list(/obj/item/stack/f13Cash/random/vault)

@@ -10,7 +10,6 @@
 /mob/living/Move(atom/newloc, direct, glide_size_override)
 	. = ..()
 
-	var/datum/component/field_of_vision/F = GetComponent(/datum/component/field_of_vision)
 	for(var/viewer in oviewers(world.view, src))
 		var/mob/living/M = viewer
 		if(M.client && istype(M) && M.has_field_of_vision)
@@ -19,7 +18,7 @@
 			else
 				var/turf/T = get_turf(M)
 				var/turf/Ts = get_turf(src)
-				if(F.on_fov_view(T, REVERSE_DIR(M.dir)))
+				if(Ts.fov_view(T, REVERSE_DIR(M.dir)))
 					Ts.show_footsteps(M, T, src)
 
 /turf/proc/show_footsteps(mob/viewer, turf/Tviewer, mob/M)
@@ -31,19 +30,8 @@
 	if(dist > MAX_FOOTSTEP_DISTANCE || prob(100*max(dist-ALWAYS_FOOTSTEP_DISTANCE,0) / MAX_FOOTSTEP_DISTANCE))
 		return
 
-/*
-	if(isdeaf(viewer))
-		return
-*/
-
 	if(viewer.stat || M.stat || M.lying)
 		return
-
-/*	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(!H.is_noisy)
-			return
-*/
 
 	var/image/marker = image(icon, src, icon_state, layer = layer)
 	marker.overlays = overlays.Copy()

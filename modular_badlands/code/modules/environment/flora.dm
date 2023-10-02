@@ -175,7 +175,6 @@
 	color = "#14FF3C" // rgb: 48, 32, 0
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
-	water_level = 1
 
 /datum/reagent/consumable/licoricepulp/on_mob_life(mob/living/carbon/M)
 	if(M.oxyloss > 35)
@@ -221,11 +220,12 @@
 	name = "milkweed pulp"
 	description = "Pulped milkweed flower, pod and sap."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
+	water_level = -0.05
 	color = ""
 	taste_description = ""
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	glass_icon_state = ""
-	overdose_threshold = 1
+	overdose_threshold = 15
 
 /datum/reagent/consumable/milkweedpulp/on_mob_life(mob/living/carbon/M)
 	..()
@@ -259,7 +259,7 @@
 	taste_description = ""
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	glass_icon_state = ""
-	overdose_threshold = 1
+	overdose_threshold = 15
 
 /datum/reagent/consumable/yarrowpulp/on_mob_life(mob/living/carbon/M)
 	..()
@@ -289,6 +289,7 @@
 	name = "skullcap pulp"
 	description = "Pulped skullcap."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
+	water_level = -1
 	color = ""
 	taste_description = ""
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM

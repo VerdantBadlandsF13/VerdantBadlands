@@ -4,7 +4,7 @@
 #define TURF_HAS_EDGES		1
 #define TURF_HAS_CORNERS	2
 
-var/list/flooring_cache = list()
+GLOBAL_LIST_EMPTY(flooring_cache)
 
 // State values:
 // [icon_base]: initial base icon_state without edges or corners.

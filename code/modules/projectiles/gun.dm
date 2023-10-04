@@ -179,14 +179,10 @@ ATTACHMENTS
 /obj/item/gun/CtrlClick(mob/living/user)
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
-	if(src == user.get_active_held_item())
-		if(!M.CheckActionCooldown(CLICK_CD_CLICK_ABILITY))
-			return
-		else
-			safety = !safety
-			playsound(user, safety_audio, 100, 1)
-			to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
-			user.DelayNextAction(CLICK_CD_CLICK_ABILITY)
+	safety = !safety
+	playsound(user, safety_audio, 100, 1)
+	to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+	user.DelayNextAction(CLICK_CD_CLICK_ABILITY)
 	. = ..()
 
 /obj/item/gun/Initialize()

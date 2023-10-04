@@ -159,42 +159,9 @@
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
-	loadout_options = list(
-	/datum/outfit/loadout/grunt/mercenary,
-	/datum/outfit/loadout/grunt/sadist,
-	/datum/outfit/loadout/grunt/punisher)
-
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
-
-// Mercenaries trade armor for a solid rifle. Something to show off for the Caravan.
-/datum/outfit/loadout/grunt/mercenary
-	name = "Mercenary"
-	r_hand = /obj/item/gun/ballistic/automatic/rangemaster
-	l_hand = /obj/item/ammo_box/magazine/m762 // 1 loaded, two empty standard magazines.
-	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
-	backpack_contents = list(/obj/item/ammo_box/magazine/m762/empty,
-							/obj/item/ammo_box/magazine/m762/empty,
-							/obj/item/melee/onehanded/knife/bayonet)
-
-// Sadists rush into combat with strong medium armor, but no firearm. Likely conscripted Raiders that proved their worth.
-/datum/outfit/loadout/grunt/sadist
-	name = "Sadist"
-	r_hand = /obj/item/twohanded/fireaxe/bmprsword
-	l_hand = /obj/item/melee/onehanded/knife/bowie
-	suit = /obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat
-	head = /obj/item/clothing/head/helmet/f13/combat
-	backpack_contents = list()
-
-// Punishers use heavy armor and shotguns to become bulwarks on the defence.
-/datum/outfit/loadout/grunt/punisher
-	name = "Punisher"
-	r_hand = /obj/item/gun/ballistic/shotgun/hunting // Full box of the fun-stuff
-	l_hand = /obj/item/melee/onehanded/knife/bowie
-	suit = /obj/item/clothing/suit/armored/f13/heavy/metal
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	backpack_contents = list(/obj/item/ammo_box/shotgun/buck)
 
 //DFS Grunt
 /datum/job/dfs/grunt

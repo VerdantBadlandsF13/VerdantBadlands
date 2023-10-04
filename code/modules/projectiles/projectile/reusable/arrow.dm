@@ -39,7 +39,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/cheap
 
 /obj/item/projectile/bullet/reusable/arrow/ap
-	name = "sturdy arrow"
+	name = "bodkin arrow"
 	desc = "A reinforced arrow with a metal shaft and heavy duty head."
 	damage = 35
 	armour_penetration = 0.66
@@ -99,3 +99,20 @@
 	armour_penetration = 0.05
 	damage = 30
 	ammo_type = /obj/item/ammo_casing/caseless/arrow/serrated
+
+/obj/item/projectile/bullet/reusable/arrow/death
+	name = "custom bolt"
+	desc = "A bolt that shreds both flesh and protection. It punches into a target and causes havoc. A wicked weapon of a far more savage time. <br>\
+	Ironically, it's a mainstay of GMB ranger groups, when dealing with raiders."
+	armour_penetration = 0.8
+	damage = 24
+	wound_bonus = 35
+	bare_wound_bonus = 40
+	sharpness = SHARP_EDGED
+	ammo_type = /obj/item/ammo_casing/caseless/arrow/death
+	embedding = list(embed_chance=100, fall_chance=0, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.2, pain_mult=2, jostle_pain_mult=1, rip_time=25, projectile_payload = /obj/item/ammo_casing/caseless/arrow/death)
+
+/obj/item/projectile/bullet/reusable/arrow/death/on_hit(atom/target, blocked)
+	if(iscarbon(target))
+		dropped = TRUE
+	..()

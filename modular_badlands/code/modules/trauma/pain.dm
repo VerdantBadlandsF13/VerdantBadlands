@@ -59,6 +59,7 @@
 				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
 			if(91 to 10000)
 				flash_pain()
+				handle_highpain()
 				msg = "<b><font size=3>OH GOD! Your [partname] is hurting terribly!</font></b>"
 	if(msg && (msg != last_pain_message || prob(10)))
 		last_pain_message = msg

@@ -104,6 +104,7 @@
 
 	AddElement(/datum/element/weather_listener, /datum/weather/rain, ZTRAIT_SURFACE, GLOB.rain_sounds)
 	AddElement(/datum/element/weather_listener, /datum/weather/ash_storm, ZTRAIT_SURFACE, GLOB.ash_storm_sounds)
+	AddElement(/datum/element/weather_listener, /datum/weather/rad_storm, ZTRAIT_SURFACE, GLOB.rad_storm_sounds)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_LOGGED_IN, src)
 

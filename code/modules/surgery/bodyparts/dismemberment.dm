@@ -64,6 +64,7 @@
 		return FALSE
 
 	if(HAS_TRAIT(C, TRAIT_NOGUT)) //Just for not allowing gutting
+		C.bleed(50)
 		return FALSE
 
 	. = list()

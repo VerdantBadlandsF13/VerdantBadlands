@@ -54,7 +54,6 @@ GLOB.genital_fluids_list = list(
 		/datum/reagent/consumable/vimice,
 		// Fruit
 		/datum/reagent/consumable/mutjuice,
-		/datum/reagent/consumable/yuccajuice,
 		/datum/reagent/consumable/tato_juice,
 		// Misc
 		/datum/reagent/consumable/bawlsshake,
@@ -159,7 +158,6 @@ GLOB.genital_fluids_list = list(
 		// General booze.
 		/datum/reagent/consumable/ethanol,
 		// F13 booze, with limits below the standard.
-		/datum/reagent/consumable/ethanol/yellowpulque,
 		/datum/reagent/consumable/ethanol/oldpossum,
 		// So you can't stack and produce infinite food.
 		/datum/reagent/consumable/enzyme,
@@ -172,15 +170,8 @@ GLOB.genital_fluids_list = list(
 		/datum/reagent/consumable/frostoil,
 		/datum/reagent/consumable/condensedcapsaicin,
 		/datum/reagent/consumable/sodiumchloride,
-		/datum/reagent/consumable/brocjuice,
-		/datum/reagent/consumable/xanderjuice,
-		/datum/reagent/consumable/agavejuice,
-		/datum/reagent/consumable/ferajuice,
-		/datum/reagent/consumable/daturajuice,
-		/datum/reagent/consumable/coyotejuice,
 		/datum/reagent/consumable/cavefungusjuice,
 		/datum/reagent/consumable/tato_juice,
-		/datum/reagent/consumable/buffalojuice,
 		/datum/reagent/consumable/tinlux,
 		// Health Chems.
 		/datum/reagent/consumable/vitfro,

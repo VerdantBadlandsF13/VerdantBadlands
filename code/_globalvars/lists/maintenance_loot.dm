@@ -191,9 +191,9 @@ GLOBAL_LIST_INIT(trash_craft, list(
 	/obj/item/crafting/abraxo = 5,
 	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/lunchbox = 5,
-	/obj/item/stack/crafting/metalparts/three = 5,
-	/obj/item/stack/crafting/electronicparts/three = 5,
-	/obj/item/stack/crafting/goodparts = 5
+	/obj/item/crafting/wonderglue = 5,
+	/obj/item/crafting/small_gear = 1,
+	/obj/item/crafting/large_gear = 1
 ))
 
 GLOBAL_LIST_INIT(trash_gun, list(
@@ -431,7 +431,6 @@ GLOBAL_LIST_INIT(loot_seed, list(
 	/obj/item/seeds/banana,
 	/obj/item/seeds/cotton,
 	/obj/item/seeds/berry,
-	/obj/item/seeds/poppy/broc,
 	/obj/item/seeds/cabbage,
 	/obj/item/seeds/carrot,
 	/obj/item/seeds/carrot/parsnip,
@@ -464,7 +463,6 @@ GLOBAL_LIST_INIT(loot_seed, list(
 	/obj/item/seeds/watermelon,
 	/obj/item/seeds/wheat,
 	/obj/item/seeds/whitebeet,
-	/obj/item/seeds/xander,
 	/obj/item/seeds/mutfruit,
 	/obj/item/seeds/amanita,
 	/obj/item/seeds/glowshroom,
@@ -518,16 +516,13 @@ GLOBAL_LIST_INIT(loot_food, list(
 ))
 
 GLOBAL_LIST_INIT(loot_craft_basic, list(
-	/obj/item/crafting/abraxo,
 	/obj/item/stack/crafting/metalparts/three,
 	/obj/item/stack/crafting/metalparts/five,
 	/obj/item/stack/crafting/goodparts/three,
 	/obj/item/stack/crafting/goodparts/five,
 	/obj/item/stack/crafting/electronicparts/three,
 	/obj/item/stack/crafting/electronicparts/five,
-	/obj/item/reagent_containers/glass/bottle/blackpowder,
-	/obj/item/crafting/wonderglue,
-	/obj/item/crafting/duct_tape
+	/obj/item/reagent_containers/glass/bottle/blackpowder
 ))
 
 GLOBAL_LIST_INIT(loot_alcohol, list(

@@ -652,12 +652,11 @@
 // Preloaded primitive seedbin for mapping. A little too complete for my taste but with the current farming economy its fine.
 /obj/machinery/smartfridge/bottlerack/seedbin/primitive
 	initial_contents = list(
-		/obj/item/seeds/wheat = 3,
-		/obj/item/seeds/poppy/broc = 2,
-		/obj/item/seeds/xander = 2,
-		/obj/item/seeds/feracactus = 1,
-		/obj/item/seeds/fungus = 1,
-		/obj/item/seeds/punga = 1,)
+		/obj/item/seeds/wheat = 6,
+		/obj/item/seeds/tato = 2,
+		/obj/item/seeds/mutfruit = 2,
+		/obj/item/seeds/fungus = 2,
+		/obj/item/seeds/glow = 1)
 
 //-------------------------
 // Grownbin
@@ -691,7 +690,6 @@
 	var/static/list/alchemyrack_typecache = typecacheof(list(
 		/obj/item/reagent_containers/pill/patch,
 		/obj/item/reagent_containers/glass/bottle/primitive,
-		/obj/item/stack/medical/poultice,
 		/obj/item/smelling_salts
 	))
 	if(is_type_in_typecache(O, alchemyrack_typecache))

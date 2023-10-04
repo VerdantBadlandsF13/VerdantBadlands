@@ -553,7 +553,7 @@
 	if(character.special_s + character.special_p +  character.special_e +  character.special_c +  character.special_i +  character.special_a +  character.special_l > 40)
 		message_admins("[key_name_admin(character.ckey)] has managed to bypass the special cap. They've been smited.")
 		to_chat(world, "<h2><span class='revenminor'>OOC: A sinner has been punished. Rejoice.</span></h2>")
-		character.adjustCloneLoss(80)
+		character.adjustCloneLoss(800)
 		character.adjustStaminaLoss(100)
 		var/obj/item/bodypart/head/O = character.get_bodypart(BODY_ZONE_HEAD)
 		O.force_wound_upwards(/datum/wound/slash/critical)

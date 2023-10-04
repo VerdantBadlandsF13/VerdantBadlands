@@ -17,7 +17,7 @@
 	desc = "A sweet and nutritious candy bar brought to you by Happy Sharky Co."
 	icon = 'modular_sunset/icons/obj/food/happy_shark.dmi'
 	icon_state = "shark_candy"
-	bonus_reagents = list(/datum/reagent/consumable/yuccajuice = 1, /datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/drug/happiness = 1)
+	bonus_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 5, /datum/reagent/drug/happiness = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 10, /datum/reagent/consumable/sugar = 10)
 	tastes = list("chocolate" = 2, "pine nuts" = 1, "sweet potato" = 1)
 	filling_color = "#BD4AD72"

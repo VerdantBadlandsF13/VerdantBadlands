@@ -9,17 +9,8 @@
 	px_y = 0
 	stam_damage_coeff = 1
 	max_stamina_damage = 200
-	dismemberable = FALSE
+	dismemberable = TRUE
 	var/obj/item/cavity_item
-
-// WHY DO WE HAVE THIS?
-// THERE'S ALREADY A CHECK IN DISMEMBERMENT, AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-/*
-/obj/item/bodypart/chest/can_dismember(obj/item/I)
-	if(!((owner.stat == DEAD) || owner.InFullCritical()) || !get_organs())
-		return FALSE
-	return ..()
-*/
 
 /obj/item/bodypart/chest/Destroy()
 	if(cavity_item)
@@ -40,7 +31,7 @@
 /obj/item/bodypart/chest/alien
 	icon = 'icons/mob/animal_parts.dmi'
 	icon_state = "alien_chest"
-	dismemberable = 0
+	dismemberable = FALSE
 	max_damage = 500
 	animal_origin = ALIEN_BODYPART
 

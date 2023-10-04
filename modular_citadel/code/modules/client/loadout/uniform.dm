@@ -7,6 +7,16 @@
 	name = "gear harness"
 	path = /obj/item/clothing/under/misc/gear_harness
 
+/datum/gear/uniform/digi_tacti
+	name = "tacticool turtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool
+	cost = 5
+
+/datum/gear/uniform/digi_tacti_skirt
+	name = "tacticool skirtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool/skirt
+	cost = 5
+
 //suits
 
 /datum/gear/uniform/suit

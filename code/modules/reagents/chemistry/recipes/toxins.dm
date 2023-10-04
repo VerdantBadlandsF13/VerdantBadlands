@@ -39,13 +39,13 @@
 	results = list(/datum/reagent/toxin/acid/fantiacid = 1)
 	required_reagents = list(/datum/reagent/toxin/acid/fluacid = 30, /datum/reagent/fluorine = 30, /datum/reagent/hydrogen = 30)
 	required_temp = 580
-/*
+
 /datum/chemical_reaction/sulfonal
 	name = "sulfonal"
 	id = /datum/reagent/toxin/sulfonal
 	results = list(/datum/reagent/toxin/sulfonal = 3)
 	required_reagents = list(/datum/reagent/acetone = 1, /datum/reagent/diethylamine = 1, /datum/reagent/sulfur = 1)
-*/
+
 /datum/chemical_reaction/lipolicide
 	name = "lipolicide"
 	id = /datum/reagent/toxin/lipolicide
@@ -75,13 +75,13 @@
 	id = /datum/reagent/toxin/mutetoxin
 	results = list(/datum/reagent/toxin/mutetoxin = 2)
 	required_reagents = list(/datum/reagent/uranium = 2, /datum/reagent/water = 1, /datum/reagent/carbon = 1)
-/*
+
 /datum/chemical_reaction/zombiepowder
 	name = "Zombie Powder"
 	id = /datum/reagent/toxin/zombiepowder
 	results = list(/datum/reagent/toxin/zombiepowder = 2)
 	required_reagents = list(/datum/reagent/toxin/carpotoxin = 5, /datum/reagent/medicine/morphine = 5, /datum/reagent/copper = 5)
-*/
+
 /datum/chemical_reaction/ghoulpowder
 	name = "Ghoul Powder"
 	id = /datum/reagent/toxin/ghoulpowder
@@ -132,5 +132,5 @@
 	name = "Spewium"
 	id = /datum/reagent/toxin/spewium
 	results = list(/datum/reagent/toxin/spewium = 5)
-	required_reagents = list (/datum/reagent/toxin/skewium = 1, /datum/reagent/consumable/ethanol/buffalo = 2, /datum/reagent/consumable/ethanol/yellowpulque = 2)
+	required_reagents = list (/datum/reagent/toxin/skewium = 3, /datum/reagent/toxin/rotatium = 2)
 	mix_message = "<span class='danger'>The mixture gives off a nauseating odor.</span>"

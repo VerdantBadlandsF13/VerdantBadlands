@@ -45,7 +45,9 @@
 	)
 
 /datum/outfit/job/vault
-	gloves = /obj/item/pda/dweller
+	ears = 		/obj/item/radio/headset/headset_vault
+	gloves = 	/obj/item/pda/dweller
+	uniform = 	/obj/item/clothing/under/f13/vault
 
 /datum/outfit/job/vault/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

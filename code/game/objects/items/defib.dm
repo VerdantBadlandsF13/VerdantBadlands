@@ -587,7 +587,6 @@
 					else
 						failed = "<span class='warning'>[req_defib ? "[defib]" : "[src]"] buzzes: Resuscitation failed - Patient's brain is missing. Replace the patient's brain.</span>"
 
-
 				if(failed)
 					user.visible_message(failed)
 					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)

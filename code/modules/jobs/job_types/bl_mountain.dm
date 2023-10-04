@@ -74,6 +74,10 @@
 	access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 	minimal_access = list(ACCESS_GMB, ACCESS_GMB_BOSS, ACCESS_GMB_MOTORPOOL)
 
+	loadout_options = list(
+	/datum/outfit/loadout/commander/liberty,
+	/datum/outfit/loadout/commander/death)
+
 /datum/outfit/job/gmb/commander
 	name = "Commander"
 	jobtype = /datum/job/gmb/commander
@@ -81,12 +85,25 @@
 	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
 
+/datum/outfit/loadout/commander/liberty
+	name = "Liberty"
+	r_hand = /obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+
+/datum/outfit/loadout/commander/death
+	name = "Death"
+	r_hand = /obj/item/gun/ballistic/bow/crossbow/gmb
+	l_hand = /obj/item/storage/belt/bolt_quiver
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+
 /datum/outfit/job/gmb/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_FAST_PUMP, TRAIT_GENERIC)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalwar/arrow_gmb_bolt)
 
 // Watchman
 /datum/job/gmb/practitioner

@@ -592,7 +592,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/caves)
 "cQ" = (
 /obj/structure/debris/v3,
@@ -1826,6 +1826,9 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"is" = (
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/caves)
 "it" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2187,6 +2190,10 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/tunnel)
+"kd" = (
+/obj/structure/mirelurkegg,
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/caves)
 "ke" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -2685,7 +2692,7 @@
 /area/f13/building)
 "mF" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "mJ" = (
 /obj/effect/decal/remains/human,
@@ -3598,7 +3605,7 @@
 /area/f13/tunnel)
 "qt" = (
 /mob/living/simple_animal/hostile/mirelurk/hunter,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/caves)
 "qu" = (
 /obj/structure/barricade/bars,
@@ -4650,7 +4657,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/caves)
 "uL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4934,7 +4941,7 @@
 	icon_state = "goo10"
 	},
 /mob/living/simple_animal/hostile/mirelurk/baby,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/caves)
 "wa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5598,7 +5605,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/caves)
 "yZ" = (
 /obj/item/storage/trash_stack{
@@ -6157,6 +6164,10 @@
 /obj/structure/window/fulltile/ruins,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"BB" = (
+/obj/structure/flora/wasteplant/rad_fungus,
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/caves)
 "BC" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -6472,7 +6483,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6482,7 +6493,7 @@
 /area/f13/building)
 "CY" = (
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "CZ" = (
 /obj/machinery/chem_heater,
@@ -6529,6 +6540,9 @@
 "Di" = (
 /turf/closed/indestructible/rock,
 /area/f13/building)
+"Dj" = (
+/turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/bl/gmb)
 "Dn" = (
 /obj/structure/bed/mattress/pregame,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -7046,7 +7060,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "FX" = (
 /obj/structure/table,
@@ -7507,7 +7521,7 @@
 "HH" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "HJ" = (
 /obj/structure/wreck/trash/machinepile,
@@ -8337,17 +8351,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
-"LM" = (
-/obj/structure/car/rubbish2{
-	pixel_x = -19;
-	icon_state = "car_rubish3"
-	},
-/obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
 "LP" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/tunnel)
@@ -9413,6 +9416,9 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Qn" = (
+/turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/caves)
 "Qq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -10100,6 +10106,10 @@
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
+"Ti" = (
+/obj/structure/flora/wasteplant/wild_fungus,
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/caves)
 "Tj" = (
 /obj/structure/table,
 /obj/item/reagent_containers/pill/happiness,
@@ -10233,7 +10243,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "TN" = (
 /obj/structure/barricade/bars,
@@ -10577,12 +10587,6 @@
 /area/f13/building)
 "Vp" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
@@ -10949,7 +10953,7 @@
 	},
 /obj/machinery/light/small,
 /mob/living/simple_animal/hostile/ghoul/glowing{
-	name = "Number-One"
+	name = "Number One"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -11005,6 +11009,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"Xz" = (
+/obj/structure/nest/mirelurk,
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/caves)
 "XA" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -26370,7 +26378,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -26827,7 +26835,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -27284,7 +27292,7 @@ Va
 OA
 Ko
 Lw
-Lw
+Up
 Up
 Up
 Up
@@ -27741,7 +27749,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -28198,7 +28206,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -52889,7 +52897,7 @@ It
 dU
 DP
 DP
-Ya
+DP
 Gw
 fg
 It
@@ -58132,20 +58140,20 @@ Va
 Va
 Va
 CS
-CS
-CS
-CS
-CS
-CS
-CS
+is
+is
+is
+is
+is
+Qn
 cP
-CS
-CS
-CS
-CS
-CS
+Qn
+Qn
+Qn
+Qn
+is
 TM
-Os
+Dj
 mF
 Cg
 Cg
@@ -58590,19 +58598,19 @@ Va
 jh
 CS
 CS
-CS
+is
 Va
 Va
-CS
-CS
+is
+Qn
 uK
-CS
-CS
+Qn
+Qn
 cP
-CS
-CS
+is
+is
 CV
-Os
+Dj
 mF
 HH
 Cg
@@ -59049,17 +59057,17 @@ CS
 CS
 CS
 CS
-CS
-CS
-CS
+is
+is
+is
 yY
-CS
-CS
+Qn
+Qn
 uK
-CS
-CS
+is
+Qn
 FW
-Os
+Dj
 mF
 CY
 kz
@@ -59507,16 +59515,16 @@ CS
 CS
 Va
 Va
-CS
-CS
-CS
-CS
-CS
+is
+is
+is
+is
+Qn
 yY
-CS
-CS
-Os
-Os
+Qn
+Qn
+Dj
+Dj
 qh
 qh
 qh
@@ -60657,7 +60665,7 @@ fg
 It
 dU
 DP
-LM
+nY
 DP
 DP
 fg
@@ -62940,11 +62948,11 @@ OA
 Ko
 tc
 iK
-Ix
-ju
-ju
-ju
-ju
+dU
+DP
+DP
+DP
+DP
 tc
 iK
 Ko
@@ -70475,7 +70483,7 @@ Va
 Va
 Va
 CS
-CS
+is
 Va
 Va
 Va
@@ -70931,14 +70939,14 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
 CC
 Va
 Va
-AP
+BB
 Va
 Va
 Va
@@ -71393,9 +71401,9 @@ Na
 CC
 CC
 CC
-CS
-Zh
-CS
+is
+Xz
+is
 Va
 Va
 Va
@@ -71850,9 +71858,9 @@ CC
 CC
 CC
 qt
-AP
-CS
-CS
+BB
+is
+is
 Va
 Va
 Va
@@ -72308,7 +72316,7 @@ kl
 kl
 kl
 kl
-CS
+is
 Va
 Va
 Va
@@ -72759,7 +72767,7 @@ kl
 QN
 KV
 kl
-CS
+is
 kl
 wA
 LT
@@ -95616,7 +95624,7 @@ Va
 Va
 Va
 CS
-CS
+is
 Va
 Va
 Va
@@ -96072,8 +96080,8 @@ Va
 Va
 Va
 Va
-CS
-CS
+is
+is
 Va
 Va
 Va
@@ -96528,8 +96536,8 @@ Va
 Va
 Va
 Va
-CS
-CS
+is
+is
 Va
 Va
 Va
@@ -96985,7 +96993,7 @@ Va
 Va
 Va
 Va
-CS
+is
 kK
 Va
 Va
@@ -102471,7 +102479,7 @@ Va
 Va
 Va
 Va
-CS
+is
 kK
 kK
 Va
@@ -102927,9 +102935,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-KW
+is
+is
+Ti
 Va
 Va
 Va
@@ -103383,9 +103391,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
 Va
 Va
@@ -103840,9 +103848,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-cZ
+is
+is
+kd
 Va
 Va
 Va
@@ -104296,9 +104304,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
 Va
 Va
@@ -104753,9 +104761,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
 Va
 Va
@@ -105209,9 +105217,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
 Va
 Va
@@ -105667,7 +105675,7 @@ Va
 CS
 CS
 CS
-CS
+is
 Va
 Va
 Va
@@ -108396,7 +108404,7 @@ Va
 Va
 Va
 Va
-CS
+is
 CS
 CS
 CS
@@ -108852,9 +108860,9 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 CS
 Va
 Va
@@ -109307,10 +109315,10 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
-cZ
+is
+is
+is
+kd
 Cp
 Cp
 Va
@@ -109765,8 +109773,8 @@ Va
 Va
 kK
 kK
-CS
-KW
+is
+Ti
 Va
 Va
 Va
@@ -111132,7 +111140,7 @@ Va
 Va
 Va
 Va
-CS
+is
 kK
 kK
 Va
@@ -111588,10 +111596,10 @@ OA
 OA
 OA
 OA
-KW
-CS
-CS
-CS
+Ti
+is
+is
+is
 Va
 Va
 Va
@@ -112045,10 +112053,10 @@ OA
 GG
 GG
 OA
-CS
-CS
-CS
-CS
+is
+is
+is
+is
 Va
 Va
 Va
@@ -112501,10 +112509,10 @@ Va
 CS
 CS
 CS
-CS
-CS
-CS
-CS
+is
+is
+is
+is
 Va
 Va
 Va
@@ -112958,9 +112966,9 @@ CS
 CS
 CS
 CS
-CS
-CS
-CS
+is
+is
+is
 Va
 Va
 Va
@@ -113414,8 +113422,8 @@ Va
 CS
 CS
 CS
-CS
-CS
+is
+is
 Va
 Va
 Va

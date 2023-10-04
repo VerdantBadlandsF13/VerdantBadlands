@@ -1,13 +1,19 @@
 //////////////
 // DEFAULTS //
 //////////////
+/*
 /turf/open/indestructible/ground/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-
+*/
 /turf/open/indestructible/ground/outside/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
+	has_base_range = 3
+	spillover_flags = TURF_HAS_EDGES// | TURF_HAS_CORNERS
+
+/turf/open/indestructible/ground/outside/bl/update_icon()
+	. = ..()
 
 /obj/effect/overlay/bl_turf
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
@@ -53,7 +59,7 @@
 		if(Weight == (5 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
-			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
+			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
@@ -63,7 +69,7 @@
 /turf/open/indestructible/ground/outside/bl/grass_standard/meadow
 	name = "meadow"
 	desc = "A brighter future, tomorrow."
-	icon_state = "grass0"
+	icon_state = "grass"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
@@ -73,22 +79,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	icon_state = "grass[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_grass_meadow/DS = new /obj/effect/overlay/bl_turf/bl_grass_meadow(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "grass[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_grass_meadow
 	name = "meadow"
@@ -98,7 +89,7 @@
 /turf/open/indestructible/ground/outside/bl/grass_standard/dead_meadow
 	name = "dying meadow"
 	desc = "There's dark days ahead, friend."
-	icon_state = "grass_dead0"
+	icon_state = "grass_dead"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
@@ -108,22 +99,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	icon_state = "grass_dead[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_dead_meadow/DS = new /obj/effect/overlay/bl_turf/bl_dead_meadow(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "grass_dead[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_dead_meadow
 	name = "dying meadow"
@@ -133,7 +109,7 @@
 /turf/open/indestructible/ground/outside/bl/grass_standard/swamp_grass
 	name = "moist grass"
 	desc = "There's dark days ahead, friend."
-	icon_state = "grass_swamp0"
+	icon_state = "grass_swamp"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
@@ -143,22 +119,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	icon_state = "grass_swamp[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_swamp/DS = new /obj/effect/overlay/bl_turf/bl_swamp(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "grass_swamp[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_swamp
 	name = "moist grass"
@@ -168,7 +129,7 @@
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass
 	name = "mossy soil"
 	desc = "There's dark days ahead, friend."
-	icon_state = "grass_taiga0"
+	icon_state = "grass_taiga"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
@@ -178,32 +139,17 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	icon_state = "grass_taiga[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_taiga/DS = new /obj/effect/overlay/bl_turf/bl_taiga(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "grass_taiga[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_taiga
-	name = "mossy soil"
+	name = "mossy grass"
 	icon_state = "grass_taiga_edges"
 
 // BADLANDS GRASS
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass
-	name = "mossy soil"
+	name = "mossy grass"
 	desc = "There's dark days ahead, friend."
-	icon_state = "grass_badlands0"
+	icon_state = "grass_badlands"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
@@ -213,22 +159,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	icon_state = "grass_badlands[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_taiga/DS = new /obj/effect/overlay/bl_turf/bl_taiga(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "grass_badlands[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_taiga
 	name = "mossy soil"
@@ -241,14 +172,15 @@
 /turf/open/indestructible/ground/outside/bl/dirt
 	name = "dry soil"
 	desc = "There's dark days ahead, friend."
-	icon_state = "dirt0"
+	icon_state = "dirt"
+	spillover_flags = null
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
 
 /turf/open/indestructible/ground/outside/bl/dirt/Initialize()
 	. = ..()
-	icon_state = "dirt[rand(0,3)]"
+//	icon_state = "dirt[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/dirt_tracks
 	name = "dry soil"
@@ -262,35 +194,37 @@
 /turf/open/indestructible/ground/outside/bl/gravel
 	name = "gravel"
 	desc = "There's dark days ahead, friend."
-	icon_state = "gravel0"
-	slowdown = 1
+	icon_state = "gravel"
+	slowdown = -0.1
+	spillover_flags = null
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL
 
 /turf/open/indestructible/ground/outside/bl/gravel/Initialize()
 	. = ..()
-	icon_state = "gravel[rand(0,3)]"
+//	icon_state = "gravel[rand(0,3)]"
 
 // MUD
 /turf/open/indestructible/ground/outside/bl/mud
 	name = "mud"
 	desc = "There's dark days ahead, friend."
-	icon_state = "mud0"
+	icon_state = "mud"
 	slowdown = 3
+	spillover_flags = null
 	footstep = FOOTSTEP_MEAT
 	barefootstep = FOOTSTEP_MEAT
 	clawfootstep = FOOTSTEP_MEAT
 
 /turf/open/indestructible/ground/outside/bl/mud/Initialize()
 	. = ..()
-	icon_state = "mud[rand(0,3)]"
+//	icon_state = "mud[rand(0,3)]"
 
 // SAND
 /turf/open/indestructible/ground/outside/bl/sand
 	name = "sand"
 	desc = "There's dark days ahead, friend."
-	icon_state = "sand0"
+	icon_state = "sand"
 	slowdown = 0.5
 	footstep = FOOTSTEP_LOOSE_SAND
 	barefootstep = FOOTSTEP_LOOSE_SAND
@@ -298,22 +232,7 @@
 
 /turf/open/indestructible/ground/outside/bl/sand/Initialize()
 	. = ..()
-	icon_state = "sand[rand(0,3)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_sand/DS = new /obj/effect/overlay/bl_turf/bl_sand(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "sand[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_sand
 	name = "sand"
@@ -323,14 +242,16 @@
 /turf/open/indestructible/ground/outside/bl/stone
 	name = "stone"
 	desc = "There's dark days ahead, friend."
-	icon_state = "stone0"
+	icon_state = "stone"
+	spillover_flags = null
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_FLOOR
 	clawfootstep = FOOTSTEP_FLOOR
+	spillover_flags = null
 
 /turf/open/indestructible/ground/outside/bl/stone/Initialize()
 	. = ..()
-	icon_state = "stone[rand(0,3)]"
+//	icon_state = "stone[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/rocks
 	name = "rocks"
@@ -344,29 +265,14 @@
 /turf/open/indestructible/ground/outside/bl/clay
 	name = "clay"
 	desc = "There's dark days ahead, friend."
-	icon_state = "clay0"
+	icon_state = "clay"
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_FLOOR
 	clawfootstep = FOOTSTEP_FLOOR
 
-/turf/open/indestructible/ground/outside/bl/sand/Initialize()
+/turf/open/indestructible/ground/outside/bl/clay/Initialize()
 	. = ..()
-	icon_state = "clay[rand(0,4)]"
-
-	for(var/direction in GLOB.cardinals)
-		var/turf/turf_to_check = get_step(src, direction)
-		if(istype(turf_to_check, /turf/open))
-			var/obj/effect/overlay/bl_turf/bl_clay/DS = new /obj/effect/overlay/bl_turf/bl_clay(src)
-			switch(direction)
-				if(NORTH)
-					DS.pixel_y = 32
-				if(SOUTH)
-					DS.pixel_y = -32
-				if(EAST)
-					DS.pixel_x = 32
-				if(WEST)
-					DS.pixel_x = -32
-			DS.dir = turn(direction, 180)
+//	icon_state = "clay[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_clay
 	name = "clay"

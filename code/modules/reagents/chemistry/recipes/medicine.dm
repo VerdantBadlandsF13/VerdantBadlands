@@ -385,7 +385,7 @@
 	name = "Imitation Stimpak Fluid"
 	id = /datum/reagent/medicine/stimpakimitation
 	results = list(/datum/reagent/medicine/stimpakimitation = 2)
-	required_reagents = list(/datum/reagent/consumable/brocjuice = 1, /datum/reagent/consumable/xanderjuice = 1)
+	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/consumable/mutjuice = 1)
 
 /datum/chemical_reaction/stimpak/synthetic
 	id = "stimpak_synthetic"
@@ -418,5 +418,5 @@
 	name = "Rehab"
 	id = "rehab"
 	results = list(/datum/reagent/medicine/rehab = 1)
-	required_reagents = list(/datum/reagent/medicine/stimpakimitation = 1, /datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/buffalojuice = 1, /datum/reagent/consumable/ferajuice = 1)
+	required_reagents = list(/datum/reagent/medicine/stimpakimitation = 1, /datum/reagent/medicine/mentat = 1)
 

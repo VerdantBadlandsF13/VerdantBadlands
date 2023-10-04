@@ -2941,10 +2941,6 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/f13/admeme)
-"jF" = (
-/obj/structure/flora/tree/joshua,
-/turf/open/floor/grass,
-/area/tdome/tdomeobserve)
 "jG" = (
 /obj/structure/table/reinforced,
 /obj/item/wrench,
@@ -35190,7 +35186,7 @@ iE
 iE
 ji
 jw
-jF
+jw
 GP
 Ep
 VD

@@ -7,13 +7,6 @@
 #define RIPPLE_START_SIZE 0
 #define RIPPLE_END_SIZE 16
 
-/client
-	var/list/hidden_atoms = list()
-	var/list/hidden_mobs = list()
-
-/mob/proc/is_invisible_to(mob/viewer)
-	return (!alpha || !mouse_opacity || viewer.see_invisible < invisibility || (viewer.client && (src in viewer.client.hidden_mobs)))
-
 /mob/living/Move(atom/newloc, direct, glide_size_override)
 	. = ..()
 
@@ -25,21 +18,8 @@
 			else
 				var/turf/T = get_turf(M)
 				var/turf/Ts = get_turf(src)
-				if(Ts.InConeDirection(T, REVERSE_DIR(M.dir)))
-					if(!(src in M.client.hidden_mobs))
-						if(M.InCone(T, M.dir))
-							M.add_to_mobs_hidden_atoms(src)
+				if(Ts.fov_view(T, REVERSE_DIR(M.dir)))
 					Ts.show_footsteps(M, T, src)
-				else
-					if(src in M.client.hidden_mobs)
-						M.client.hidden_mobs -= src
-						for(var/image in M.client.hidden_atoms)
-							var/image/I = image
-							if(I.loc == src)
-								I.override = FALSE
-								M.client.hidden_atoms -= I
-								M.client.images -= I
-								QDEL_IN(I, 1 SECONDS)
 
 /turf/proc/show_footsteps(mob/viewer, turf/Tviewer, mob/M)
 	var/dist = get_dist(src, Tviewer)
@@ -50,19 +30,8 @@
 	if(dist > MAX_FOOTSTEP_DISTANCE || prob(100*max(dist-ALWAYS_FOOTSTEP_DISTANCE,0) / MAX_FOOTSTEP_DISTANCE))
 		return
 
-/*
-	if(isdeaf(viewer))
-		return
-*/
-
 	if(viewer.stat || M.stat || M.lying)
 		return
-
-/*	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(!H.is_noisy)
-			return
-*/
 
 	var/image/marker = image(icon, src, icon_state, layer = layer)
 	marker.overlays = overlays.Copy()

@@ -20,7 +20,7 @@
 	result = /obj/item/stack/medical/ointment/five
 	time = 30
 	reqs = list(/obj/item/stack/medical/gauze/improvised = 1,
-				/obj/item/reagent_containers/food/snacks/grown/agave = 1)
+				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 1)
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/burn_pack
@@ -31,7 +31,6 @@
 				/datum/reagent/medicine/silver_sulfadiazine = 10)
 	category = CAT_MEDICAL
 
-
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
 	result = /obj/item/smelling_salts
@@ -39,27 +38,27 @@
 				/obj/item/reagent_containers/food/snacks/onion_slice = 4,    //Sliced onions, 2 total split into 4 slices.
 				/obj/item/reagent_containers/food/snacks/grown/garlic = 2,   //Pungent garlic.
 				/obj/item/reagent_containers/food/snacks/grown/bee_balm = 2) //Beebalm was a smelling salt utilized in the victorian era for vaporous herbal remedies to things like sore throats.
-	time = 50
+	time = 25
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/licorice = 2,
+				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 2,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_WORKBENCH)
-	time = 15
+	time = 30
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/stimpak5
 	name = "Stimpak x5"
 	result = /obj/item/storage/box/medicine/stimpaks/stimpaks5
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 10,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 10,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/licorice = 10,
+				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 10,
 				/obj/item/reagent_containers/syringe = 5)
 	tools = list(TOOL_WORKBENCH)
-	time = 20
+	time = 60
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/superstimpak
@@ -69,7 +68,7 @@
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2)
 	tools = list(TOOL_WORKBENCH)
-	time = 20
+	time = 60
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/superstimpak5
@@ -79,7 +78,7 @@
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 10)
 	tools = list(TOOL_WORKBENCH)
-	time = 30
+	time = 120
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/salvage_stimpak
@@ -104,8 +103,8 @@
 /datum/crafting_recipe/turbo
 	name = "Turbo"
 	result = /obj/item/reagent_containers/pill/patch/turbo
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
-				/obj/item/reagent_containers/food/snacks/grown/agave = 2,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 2,
+				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 2,
 				/datum/reagent/consumable/ethanol/whiskey = 15)
 	time = 60
 	tools = list(TOOL_WORKBENCH)
@@ -115,7 +114,7 @@
 /datum/crafting_recipe/psycho
 	name = "Psycho"
 	result = /obj/item/reagent_containers/hypospray/medipen/psycho
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/feracactus = 3,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 3,
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 3,
 				/datum/reagent/consumable/nuka_cola = 10)
 	time = 60
@@ -127,11 +126,10 @@
 	name = "Med-X"
 	result = /obj/item/reagent_containers/hypospray/medipen/medx
 	reqs = list(/obj/item/reagent_containers/syringe = 1,
-				/obj/item/reagent_containers/food/snacks/grown/pungafruit = 2,
-				/obj/item/reagent_containers/food/snacks/grown/datura = 2,
-				/obj/item/reagent_containers/food/snacks/grown/coyotetobacco = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
-				/obj/item/reagent_containers/food/snacks/grown/broc = 2)
+				/obj/item/reagent_containers/food/snacks/grown/bl/licorice = 2,
+				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 2,
+				/obj/item/reagent_containers/food/snacks/grown/bl/yarrow = 2,
+				/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 2)
 	time = 60
 	tools = list(TOOL_WORKBENCH, TOOL_WELDER)
 	category = CAT_MEDICAL
@@ -141,9 +139,9 @@
 	name = "Buffout"
 	result = /obj/item/storage/pill_bottle/chem_tin/buffout
 	reqs = list(/obj/item/storage/pill_bottle = 1,
-				/obj/item/reagent_containers/food/snacks/grown/buffalogourd = 10,
-				/obj/item/reagent_containers/food/snacks/grown/yucca = 10,
-				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 5,
+				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 10,
+				/obj/item/reagent_containers/food/snacks/grown/bl/licorice = 5,
+				/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 5,
 				/datum/reagent/consumable/nuka_cola = 60)
 	time = 60
 	tools = list(TOOL_WORKBENCH)

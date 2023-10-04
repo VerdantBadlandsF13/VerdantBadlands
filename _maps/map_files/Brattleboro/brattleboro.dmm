@@ -2196,6 +2196,13 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
+"bcd" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 71;
+	destination_z = 7
+	},
+/area/f13/village)
 "bcm" = (
 /obj/structure/chair{
 	dir = 4
@@ -5104,6 +5111,13 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"dgn" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 68;
+	destination_z = 7
+	},
+/area/f13/village)
 "dgy" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/brews,
 /turf/open/floor/f13{
@@ -7065,6 +7079,13 @@
 	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
+"eAb" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 65;
+	destination_z = 7
+	},
+/area/f13/village)
 "eAj" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/road{
@@ -9020,6 +9041,13 @@
 /obj/machinery/light/small,
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
+"fWr" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 66;
+	destination_z = 7
+	},
+/area/f13/village)
 "fXc" = (
 /obj/structure/rack,
 /obj/item/flashlight/seclite,
@@ -10373,7 +10401,7 @@
 /area/f13/bl/gmb)
 "gRy" = (
 /obj/machinery/light/small,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "gRL" = (
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -12345,6 +12373,9 @@
 	icon_state = "horizontaloutermain1"
 	},
 /area/f13/wasteland)
+"ipO" = (
+/turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/bl/gmb)
 "ipU" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -13375,7 +13406,7 @@
 /area/f13/building)
 "jbK" = (
 /obj/structure/sink/puddle,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "jbU" = (
 /obj/structure/rack/shelf_metal,
@@ -16154,7 +16185,7 @@
 "kYg" = (
 /turf/closed/indestructible/f13/matrix/transition{
 	destination_x = 254;
-	destination_y = 55;
+	destination_y = 63;
 	destination_z = 7
 	},
 /area/f13/village)
@@ -18055,7 +18086,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "mvf" = (
 /turf/open/floor/wood/wood_wide,
@@ -19313,7 +19344,7 @@
 	name = "strong metal bars";
 	obj_integrity = 1000
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "nnD" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -22106,6 +22137,13 @@
 	},
 /obj/structure/chair/right,
 /turf/open/floor/f13/wood,
+/area/f13/village)
+"plf" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 64;
+	destination_z = 7
+	},
 /area/f13/village)
 "plw" = (
 /obj/structure/window/fulltile/house,
@@ -25973,6 +26011,9 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"rZz" = (
+/turf/open/indestructible/ground/outside/bl/mud,
+/area/f13/bl/gmb)
 "rZT" = (
 /obj/structure/fence,
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
@@ -26307,7 +26348,7 @@
 /area/f13/village)
 "slf" = (
 /obj/effect/spawner/lootdrop/bedsheet,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "slJ" = (
 /obj/structure/rack/shelf_metal,
@@ -30105,6 +30146,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"uZV" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 67;
+	destination_z = 7
+	},
+/area/f13/village)
 "vaz" = (
 /obj/structure/car/rubbish2{
 	pixel_x = -19
@@ -31716,6 +31764,13 @@
 	},
 /turf/closed/wall/f13/store,
 /area/f13/building/mall)
+"wmK" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 70;
+	destination_z = 7
+	},
+/area/f13/village)
 "wmL" = (
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/f13{
@@ -31804,7 +31859,7 @@
 /area/f13/village)
 "wnY" = (
 /obj/machinery/door/unpowered/celldoor/gmb_gate,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/bl/gmb)
 "wof" = (
 /obj/structure/decoration/clock/old/active,
@@ -31895,6 +31950,13 @@
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
 /area/f13/wasteland/bighorn)
+"wrI" = (
+/turf/closed/indestructible/f13/matrix/transition{
+	destination_x = 254;
+	destination_y = 69;
+	destination_z = 7
+	},
+/area/f13/village)
 "wsr" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -34410,7 +34472,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "ycE" = (
 /turf/open/floor/wood/wood_common{
@@ -34612,7 +34674,7 @@
 /area/f13/wasteland)
 "yjT" = (
 /obj/item/reagent_containers/glass/bucket/wood,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/bl/gmb)
 "yjY" = (
 /mob/living/simple_animal/hostile/ghoul/rotting{
@@ -34991,14 +35053,14 @@ hKj
 hKj
 hKj
 ppz
-kYg
-kYg
-kYg
-kYg
-kYg
-kYg
-kYg
-kYg
+bcd
+wmK
+wrI
+dgn
+uZV
+fWr
+eAb
+plf
 kYg
 ppz
 hKj
@@ -41509,12 +41571,12 @@ fxI
 fxI
 nCZ
 jbK
-qfN
+rZz
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
-qfN
+rZz
 yjT
 nCZ
 fwb
@@ -41965,14 +42027,14 @@ nCZ
 fxI
 fxI
 nCZ
-qfN
+rZz
 slf
 nnC
-qfN
-qfN
+ipO
+ipO
 nnC
-qfN
-qfN
+rZz
+rZz
 nCZ
 fwb
 fwb
@@ -42423,12 +42485,12 @@ fxI
 fxI
 nCZ
 muZ
-qfN
+rZz
 wnY
-qfN
-qfN
+ipO
+ipO
 wnY
-qfN
+rZz
 gRy
 nCZ
 fwb
@@ -42880,12 +42942,12 @@ fxI
 fxI
 nCZ
 yjT
-qfN
+rZz
 nnC
-qfN
-qfN
+ipO
+ipO
 nnC
-qfN
+rZz
 slf
 nCZ
 fwb
@@ -43336,13 +43398,13 @@ oPl
 fxI
 fxI
 nCZ
-qfN
-qfN
+rZz
+rZz
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
-qfN
+rZz
 jbK
 nCZ
 fwb
@@ -43796,8 +43858,8 @@ nCZ
 nCZ
 nCZ
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
 nCZ
 nCZ
@@ -44251,12 +44313,12 @@ fxI
 fxI
 nCZ
 yjT
-qfN
+rZz
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
-qfN
+rZz
 jbK
 nCZ
 fwb
@@ -44707,13 +44769,13 @@ oPl
 fxI
 fxI
 nCZ
-qfN
-qfN
+rZz
+rZz
 nnC
-qfN
-qfN
+ipO
+ipO
 nnC
-qfN
+rZz
 yjT
 nCZ
 fwb
@@ -45165,12 +45227,12 @@ fxI
 fxI
 nCZ
 ycB
-qfN
+rZz
 wnY
-qfN
-qfN
+ipO
+ipO
 wnY
-qfN
+rZz
 gRy
 nCZ
 fwb
@@ -45621,14 +45683,14 @@ oPl
 fxI
 fxI
 nCZ
-qfN
-qfN
+rZz
+rZz
 nnC
-qfN
-qfN
+ipO
+ipO
 nnC
-qfN
-qfN
+rZz
+rZz
 nCZ
 fwb
 fwb
@@ -46079,13 +46141,13 @@ fxI
 fxI
 nCZ
 jbK
-qfN
+rZz
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
 slf
-qfN
+rZz
 nCZ
 fwb
 fwb
@@ -46538,8 +46600,8 @@ nCZ
 nCZ
 nCZ
 nCZ
-qfN
-qfN
+ipO
+ipO
 nCZ
 nCZ
 nCZ
@@ -49448,7 +49510,7 @@ sAB
 sAB
 sAB
 sAB
-sAB
+lvK
 lvK
 lvK
 tZG
@@ -49905,7 +49967,7 @@ oeM
 oeM
 oeM
 oeM
-cDu
+lvK
 lvK
 lvK
 tZG
@@ -50362,7 +50424,7 @@ ild
 trJ
 ild
 ild
-trJ
+lvK
 lvK
 lvK
 tZG
@@ -50819,7 +50881,7 @@ oeM
 oeM
 oeM
 oeM
-oeM
+lvK
 lvK
 lvK
 tZG
@@ -51276,7 +51338,7 @@ oYp
 oYp
 oYp
 oYp
-xWa
+lvK
 lvK
 lvK
 tZG
@@ -86476,11 +86538,11 @@ bxh
 srA
 mho
 nRs
-wko
-oeM
-oeM
-oeM
-oeM
+lvK
+lvK
+lvK
+lvK
+lvK
 pqb
 sDW
 baC

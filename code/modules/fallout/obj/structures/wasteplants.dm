@@ -38,6 +38,55 @@
 	icon_state = "deadtree_[rand(1,6)]"
 	AddComponent(/datum/component/largetransparency, y_offset = 1)
 
+// Below are trees but not trees. You know how it is. :(
+
+/obj/structure/flora/not_tree
+	icon = 'icons/fallout/flora/flora.dmi'
+	density = TRUE
+	var/timber_amount = 2
+
+/obj/structure/flora/not_tree/attackby(obj/item/W, mob/user, params)
+	if(timber_amount && (!(flags_1 & NODECONSTRUCT_1)))
+		if(W.sharpness && W.force > 0)
+			if(W.hitsound)
+				playsound(get_turf(src), 'sound/effects/wood_cutting.ogg', 100, 0, 0)
+			user.visible_message("<span class='notice'>[user] begins to cut up [src] with [W].</span>","<span class='notice'>You begin to cut up [src] with [W].</span>", "You hear the sound of sawing.")
+			if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
+				user.visible_message("<span class='notice'>[user] breaks apart [src] with the [W].</span>","<span class='notice'>You break apart [src] with the [W].</span>", "You hear the sound of sawing.")
+				playsound(get_turf(src), 'sound/effects/wood_cutting.ogg', 100 , 0, 0)
+				for(var/i=1 to timber_amount)
+					new /obj/item/grown/log/tree(get_turf(src))
+
+				qdel(src)
+
+	else
+		return ..()
+
+/obj/structure/flora/not_tree/wasteland_fallen
+	name = "log"
+	desc = "It's a log. Useful for combustion and/or construction."
+	icon_state = "timber"
+	timber_amount = 2
+	obj_integrity = 25
+	max_integrity = 25
+
+/obj/structure/flora/not_tree/brushwood
+	name = "brushwood"
+	desc = "Old brushwood. Useful for combustion and/or construction."
+	var/chosen_icon
+	icon_state = "branch"
+	density = FALSE
+	timber_amount = 1
+	obj_integrity = 5
+	max_integrity = 5
+
+/obj/structure/flora/not_tree/brushwood/Initialize()
+	. = ..()
+	chosen_icon = pick(list("branch", "branch_broken", "brushwood", "brushwood_alt"))
+	icon_state = chosen_icon
+	update_icon()
+
+// End of the trees that aren't trees.
 
 /obj/structure/flora/wasteplant
 	name = "wasteland plant"

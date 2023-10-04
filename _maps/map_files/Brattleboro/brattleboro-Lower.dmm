@@ -8351,17 +8351,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
-"LM" = (
-/obj/structure/car/rubbish2{
-	pixel_x = -19;
-	icon_state = "car_rubish3"
-	},
-/obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
 "LP" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/tunnel)
@@ -10964,7 +10953,7 @@
 	},
 /obj/machinery/light/small,
 /mob/living/simple_animal/hostile/ghoul/glowing{
-	name = "Number-One"
+	name = "Number One"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -26389,7 +26378,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -26846,7 +26835,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -27303,7 +27292,7 @@ Va
 OA
 Ko
 Lw
-Lw
+Up
 Up
 Up
 Up
@@ -27760,7 +27749,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -28217,7 +28206,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -52908,7 +52897,7 @@ It
 dU
 DP
 DP
-Ya
+DP
 Gw
 fg
 It
@@ -60676,7 +60665,7 @@ fg
 It
 dU
 DP
-LM
+nY
 DP
 DP
 fg
@@ -62959,11 +62948,11 @@ OA
 Ko
 tc
 iK
-Ix
-ju
-ju
-ju
-ju
+dU
+DP
+DP
+DP
+DP
 tc
 iK
 Ko

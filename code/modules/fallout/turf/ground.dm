@@ -63,6 +63,7 @@
 #define GRASS_WEIGHT				4
 #define HAZARD_WEIGHT				1
 #define MINES_WEIGHT				1
+
 #define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 5, /obj/structure/flora/stump = 1)
 
 #define SNOW_PLANT_SPAWN_LIST		list(/obj/structure/flora/tree/tall = 12, /obj/structure/flora/grass = 10, \
@@ -71,9 +72,11 @@
 
 #define VERMONT_PLANT_SPAWN_LIST	list(/obj/structure/flora/wasteplant/bl/licorice = 5, /obj/structure/flora/wasteplant/bl/milkweed = 5, \
 /obj/structure/flora/wasteplant/bl/yarrow = 5, /obj/structure/flora/wasteplant/bl/skullcap = 5, \
-/obj/structure/flora/wasteplant/wild_tato = 2, /obj/structure/flora/wasteplant/wild_mutfruit = 2)
+/obj/structure/flora/wasteplant/wild_tato = 2, /obj/structure/flora/wasteplant/wild_mutfruit = 2, /obj/structure/flora/not_tree/wasteland_fallen = 1, \
+/obj/structure/flora/not_tree/brushwood = 1)
 
-#define HAZARD_SPAWN_LIST			list(/obj/effect/landmark/nuclear_waste_spawner/weak = 4, /obj/effect/landmark/nuclear_waste_spawner = 2, /obj/effect/landmark/nuclear_waste_spawner/strong = 1)
+#define HAZARD_SPAWN_LIST			list(/obj/effect/landmark/nuclear_waste_spawner/weak = 4, /obj/effect/landmark/nuclear_waste_spawner = 2, \
+/obj/effect/landmark/nuclear_waste_spawner/strong = 1)
 #define MINES_SPAWN_LIST			list(/obj/item/grenade/f13/mine/planted = 2, /obj/item/grenade/f13/mine/planted/heavy = 1)
 
 /turf/open/indestructible/ground/outside/dirthole

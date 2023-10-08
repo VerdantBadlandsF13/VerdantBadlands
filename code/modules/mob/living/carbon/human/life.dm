@@ -130,7 +130,6 @@
 	//If have no DNA or can be Ignited, call parent handling to light user
 	//If firestacks are high enough
 	if(!dna || dna.species.CanIgniteMob(src))
-		handle_incineration()
 		return ..()
 	. = FALSE //No ignition
 

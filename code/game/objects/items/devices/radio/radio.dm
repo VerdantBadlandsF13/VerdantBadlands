@@ -233,7 +233,11 @@
 		if (!ranged_static)
 			return FALSE
 		else
-			message = Gibberish(message, (ranged_static*1))
+			message = scramble_message_replace_chars(message, ranged_static*1, replacementchars = list("...", "... ...", "... ... ..."), TRUE)
+
+	var/radiosound = "modular_badlands/code/modules/rp_misc/sound/radio/transmit/radio[rand(1,4)].ogg"
+	if(radiosound && listening)
+		playsound(M, radiosound, rand(20, 30))
 
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
@@ -364,6 +368,7 @@
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)
 			//the GLOB.radiochannels list is located in communications.dm
+			play_receive_transmission()
 			if(GLOB.radiochannels[ch_name] == text2num(freq) || syndie)
 				return TRUE
 	return FALSE

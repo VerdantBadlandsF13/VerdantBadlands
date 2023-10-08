@@ -104,7 +104,6 @@
 	var/player = get_mob_by_key("lurzefromgermany")
 	if(!ishuman(player))
 		return
-	playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/ambience/unsorted/electr[rand(1,3)].ogg", 50, 0)
 	robot_token(player)
 	qdel(src)
 

@@ -347,6 +347,24 @@
 /datum/effect_system/smoke_spread/teargas
 	effect_type = /obj/effect/particle_effect/smoke/teargas
 
+// Mine Collapse
+
+/obj/effect/particle_effect/smoke/teargas/mine
+	lifetime = 4
+	color = "#FFFFFF"
+
+/obj/effect/particle_effect/smoke/teargas/mine/smoke_mob(mob/living/carbon/M)
+	if(..())
+		if(M.getStaminaLoss() > 80)//just in case
+			return
+		M.adjustOxyLoss(5)
+		M.adjustStaminaLoss(10)
+		M.emote("cough")
+		return 1
+
+/datum/effect_system/smoke_spread/teargas/mine
+	effect_type = /obj/effect/particle_effect/smoke/teargas/mine
+
 /////////////////////////////////////////////
 // Willy Pete
 /////////////////////////////////////////////

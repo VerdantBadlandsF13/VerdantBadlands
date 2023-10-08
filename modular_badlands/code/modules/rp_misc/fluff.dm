@@ -10,14 +10,6 @@
 	var/drip_sound = "modular_badlands/code/modules/rp_misc/sound/gore/blood[rand(1,6)].ogg"
 	playsound(src, drip_sound, 50, 1)
 
-// General radio audio. Perhaps extend to other things.
-// Radio fluff. Audio from IB. Initial code without modification from SR(I think???).
-/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language)
-	var/radiosound = "modular_badlands/code/modules/rp_misc/sound/radio/transmit/radio[rand(1,4)].ogg"
-	if(radiosound && listening)
-		playsound(M, radiosound, rand(20, 30))
-	. = ..()
-
 // Tuning the channel provides feedback.
 // Hooked into tuning, rather than a piece of it like 'talk_into'.
 /obj/item/radio/proc/play_change_freq()
@@ -25,7 +17,7 @@
 	playsound(src, radtune_sound, rand(20, 30))
 
 // Receiving a message provides feedback.
-// Not used as of current.
+// Hooked into receiving, rather than a piece of it like 'talk_into'.
 /obj/item/radio/proc/play_receive_transmission()
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	playsound(src, radrec_sound, rand(20, 30))
@@ -83,8 +75,18 @@ Easier to have it here.
 	playsound(src, incineration_sound, 50, 1)
 
 /*
-Mob audio for extreme pain.
+Mob audio for pain.
+Light, followed by extreme.
 */
+
+/mob/living/carbon/proc/handle_lowpain(mob/living/M)
+	var/lowpain_sound
+	if(src.gender == FEMALE)
+		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/female_moan[rand(1,3)].ogg"
+	else
+		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_moan[rand(1,3)].ogg"
+	playsound(src, lowpain_sound, 50, 1)
+
 /mob/living/carbon/proc/handle_highpain(mob/living/M)
 	var/highpain_sound
 	if(src.gender == FEMALE)
@@ -94,10 +96,23 @@ Mob audio for extreme pain.
 	playsound(src, highpain_sound, 50, 1)
 
 /*
+Not quite just fluff, but handling explosive concussive force.
+*/
+/mob/living/carbon/ex_act(mob/living/carbon/M)
+	. = ..()
+	if(prob(20))
+		SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+		M.gain_trauma(/datum/brain_trauma/mild/concussion)
+		M.confused = max(M.confused, 10)
+		M.adjust_blurriness(60)
+	else
+		SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+		M.adjust_blurriness(30)
+
+/*
 Radio static below.
-Pulled from MS ala ~2021, redone for our purposes. Cheers. - Carl
-Determines how badly a broadcasting radio suffers from static (garbled text in our case).
-The number refers to the odds that each character in a message is garbled.
+Determines how badly a broadcasting radio suffers from dead air.
+The number refers to the odds that each character in a message is potentially dead air.
 */
 #define RADSTATIC_NONE 0// Vault.
 #define RADSTATIC_LIGHT 12// GMB exclusive, for now.
@@ -149,3 +164,84 @@ GLOBAL_LIST_EMPTY(radio_sets)
 
 /obj/item/radio/headset/headset_dfs
 	ranged_static = RADSTATIC_MEDIUM
+
+/*
+General audio for grabbing and dropping items.
+*/
+
+// Defines for items in regards to what they should sound like.
+// Bottlecaps, ammo, etc.
+// 0 = no audio.
+// Drop defines.
+#define DROP_CLASS			0
+#define DROP_CLASS_CAPS		1
+#define DROP_CLASS_KEYS		2
+#define DROP_CLASS_CLOTH	3
+#define DROP_CLASS_METAL	4
+#define DROP_CLASS_LGUNS	5
+#define DROP_CLASS_SGUNS	6
+#define DROP_CLASS_NADES	7
+#define DROP_CLASS_SHARP	8
+
+// GRAB defines.
+#define GRAB_CLASS			0
+#define GRAB_CLASS_CAPS		1
+#define GRAB_CLASS_KEYS		2
+#define GRAB_CLASS_CLOTH	3
+#define GRAB_CLASS_METAL	4
+#define GRAB_CLASS_LGUNS	5
+#define GRAB_CLASS_SGUNS	6
+#define GRAB_CLASS_NADES	7
+#define GRAB_CLASS_SHARP	8
+
+/obj/item
+	var/drop_class = null
+	var/grab_class = null
+
+// Dropping.
+/obj/item/dropped()
+	. = ..()
+	if(drop_class == 0)
+		return
+	else
+		switch(drop_class)
+			if(1)
+				playsound(src, "", 95, 1)
+			if(2)
+				playsound(src, "", 95, 1)
+			if(3)
+				playsound(src, "", 95, 1)
+			if(4)
+				playsound(src, "", 95, 1)
+			if(5)
+				playsound(src, "", 95, 1)
+			if(6)
+				playsound(src, "", 95, 1)
+			if(7)
+				playsound(src, "", 95, 1)
+			if(8)
+				playsound(src, "", 95, 1)
+
+// Grabbing.
+/obj/item/pickup()
+	. = ..()
+	if(grab_class == 0)
+		return
+	else
+		switch(grab_class)
+			if(1)
+				playsound(src, "", 95, 1)
+			if(2)
+				playsound(src, "", 95, 1)
+			if(3)
+				playsound(src, "", 95, 1)
+			if(4)
+				playsound(src, "", 95, 1)
+			if(5)
+				playsound(src, "", 95, 1)
+			if(6)
+				playsound(src, "", 95, 1)
+			if(7)
+				playsound(src, "", 95, 1)
+			if(8)
+				playsound(src, "", 95, 1)

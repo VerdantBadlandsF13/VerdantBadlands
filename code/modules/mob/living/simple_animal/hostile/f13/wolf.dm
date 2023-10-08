@@ -61,6 +61,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 35
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
+
 /mob/living/simple_animal/hostile/wolf/alpha/playable
 	health = 150
 	maxHealth = 150
@@ -73,6 +74,7 @@
 	anchored = FALSE
 	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
+
 // The first proper wolf, got to love just relabels without repathing.
 /mob/living/simple_animal/hostile/wolf/cold
 	name = "wolf"
@@ -86,7 +88,7 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 35
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	
+
 //Unique Dogs - Guerilla for Khans is a Rottweiler, Brutus and Lupa german shepherds, Sniffs-the-Earth a sheepdog.
 //Feel free to move or add code for different behaviours like sleep, some unused sprites prepped for that sort of thing.
 

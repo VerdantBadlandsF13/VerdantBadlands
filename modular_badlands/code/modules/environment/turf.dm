@@ -1,19 +1,26 @@
 //////////////
 // DEFAULTS //
 //////////////
-/*
+
 /turf/open/indestructible/ground/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-*/
+	has_base_range = 3
+	spillover_flags = TURF_HAS_EDGES// | TURF_HAS_CORNERS
+
+/turf/open/indestructible/ground/bl/New()
+	..()
+	update_icon(1)
+
 /turf/open/indestructible/ground/outside/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
 	has_base_range = 3
 	spillover_flags = TURF_HAS_EDGES// | TURF_HAS_CORNERS
 
-/turf/open/indestructible/ground/outside/bl/update_icon()
-	. = ..()
+/turf/open/indestructible/ground/outside/bl/New()
+	..()
+	update_icon(1)
 
 /obj/effect/overlay/bl_turf
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
@@ -43,11 +50,11 @@
 
 	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
-	//loop through neighbouring desert turfs, if they have grass, then increase weight
+	//loop through neighbouring turfs, if they have grass, then increase weight
 	for(var/turf/open/indestructible/ground/outside/bl/grass_standard/T in RANGE_TURFS(3, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
@@ -190,6 +197,19 @@
 	. = ..()
 	icon_state = "dirttrack[rand(0,3)]"
 
+/turf/open/indestructible/ground/bl/dirt
+	name = "dry soil"
+	desc = "There's dark days ahead, friend."
+	icon_state = "dirt"
+	spillover_flags = null
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
+
+/turf/open/indestructible/ground/bl/dirt/Initialize()
+	. = ..()
+//	icon_state = "dirt[rand(0,3)]"
+
 // GRAVEL
 /turf/open/indestructible/ground/outside/bl/gravel
 	name = "gravel"
@@ -205,6 +225,20 @@
 	. = ..()
 //	icon_state = "gravel[rand(0,3)]"
 
+/turf/open/indestructible/ground/bl/gravel
+	name = "gravel"
+	desc = "There's dark days ahead, friend."
+	icon_state = "gravel"
+	slowdown = -0.1
+	spillover_flags = null
+	footstep = FOOTSTEP_GRAVEL
+	barefootstep = FOOTSTEP_GRAVEL
+	clawfootstep = FOOTSTEP_GRAVEL
+
+/turf/open/indestructible/ground/bl/gravel/Initialize()
+	. = ..()
+//	icon_state = "gravel[rand(0,3)]"
+
 // MUD
 /turf/open/indestructible/ground/outside/bl/mud
 	name = "mud"
@@ -217,6 +251,20 @@
 	clawfootstep = FOOTSTEP_MEAT
 
 /turf/open/indestructible/ground/outside/bl/mud/Initialize()
+	. = ..()
+//	icon_state = "mud[rand(0,3)]"
+
+/turf/open/indestructible/ground/bl/mud
+	name = "mud"
+	desc = "There's dark days ahead, friend."
+	icon_state = "mud"
+	slowdown = 3
+	spillover_flags = null
+	footstep = FOOTSTEP_MEAT
+	barefootstep = FOOTSTEP_MEAT
+	clawfootstep = FOOTSTEP_MEAT
+
+/turf/open/indestructible/ground/bl/mud/Initialize()
 	. = ..()
 //	icon_state = "mud[rand(0,3)]"
 
@@ -250,6 +298,20 @@
 	spillover_flags = null
 
 /turf/open/indestructible/ground/outside/bl/stone/Initialize()
+	. = ..()
+//	icon_state = "stone[rand(0,3)]"
+
+/turf/open/indestructible/ground/bl/stone
+	name = "stone"
+	desc = "There's dark days ahead, friend."
+	icon_state = "stone"
+	spillover_flags = null
+	footstep = FOOTSTEP_FLOOR
+	barefootstep = FOOTSTEP_FLOOR
+	clawfootstep = FOOTSTEP_FLOOR
+	spillover_flags = null
+
+/turf/open/indestructible/ground/bl/stone/Initialize()
 	. = ..()
 //	icon_state = "stone[rand(0,3)]"
 

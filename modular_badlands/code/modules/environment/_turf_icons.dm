@@ -4,7 +4,7 @@
 #define TURF_HAS_EDGES		1
 #define TURF_HAS_CORNERS	2
 
-GLOBAL_LIST_EMPTY(flooring_cache)
+var/list/flooring_cache = list()
 
 // State values:
 // [icon_base]: initial base icon_state without edges or corners.
@@ -17,7 +17,7 @@ GLOBAL_LIST_EMPTY(flooring_cache)
 	var/icon_base
 	var/has_base_range
 	var/spillover_flags
-/*
+
 /turf/open/update_icon(update_neighbors)
 	. = ..()
 
@@ -77,4 +77,4 @@ GLOBAL_LIST_EMPTY(flooring_cache)
 		I.layer = layer
 		flooring_cache[cache_key] = I
 	return flooring_cache[cache_key]
-*/
+

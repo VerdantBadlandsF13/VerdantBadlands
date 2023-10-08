@@ -200,7 +200,6 @@
 					/mob/living/simple_animal/hostile/poison/giant_spider/hunter = 2,
 					/mob/living/simple_animal/hostile/poison/giant_spider/nurse = 2)
 
-
 /obj/structure/nest/wolf
 	name = "wolf den"
 	max_mobs = 2

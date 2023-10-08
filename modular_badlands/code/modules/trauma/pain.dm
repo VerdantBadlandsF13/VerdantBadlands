@@ -5,6 +5,8 @@
 
 /obj/screen/fullscreen/pain
 	icon_state = "painoverlay2"
+	layer = UI_DAMAGE_LAYER
+	plane = FULLSCREEN_PLANE
 
 /mob/proc/flash_weak_pain()
 	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/weak, 2)
@@ -13,6 +15,8 @@
 
 /obj/screen/fullscreen/pain/weak
 	icon_state = "painoverlay1"
+	layer = UI_DAMAGE_LAYER
+	plane = FULLSCREEN_PLANE
 
 /mob/proc/flash_agony()
 	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/agony, 2)
@@ -21,6 +25,8 @@
 
 /obj/screen/fullscreen/pain/agony
 	icon_state = "bloodlust"
+	layer = UI_DAMAGE_LAYER
+	plane = FULLSCREEN_PLANE
 
 /mob/var/list/pain_stored = list()
 /mob/var/last_pain_message = ""
@@ -37,28 +43,34 @@
 		return
 	if(amount > 50 && prob(amount / 5) && get_active_hand())
 		flash_agony()
+		handle_lowpain()
 		to_chat(src, "<span class='danger'>The pain in your [partname] causes you to wince and drop [get_active_hand()]!</span>")
 		src.dropItemToGround(force=TRUE)
 	var/msg
 	if(burning)
 		switch(amount)
 			if(1 to 10)
+				flash_weak_pain()
 				msg = "<span class='danger'>Your [partname] burns.</span>"
 			if(11 to 90)
-				flash_weak_pain()
+				flash_pain()
+				handle_lowpain()
 				msg = "<span class='danger'><font size=2>Your [partname] burns badly!</font></span>"
 			if(91 to 10000)
-				flash_pain()
+				flash_agony()
+				handle_highpain()
 				msg = "<span class='danger'><font size=3>OH GOD! Your [partname] is on fire!</font></span>"
 	else
 		switch(amount)
 			if(1 to 10)
+				flash_weak_pain()
 				msg = "<b>Your [partname] hurts.</b>"
 			if(11 to 90)
-				flash_weak_pain()
+				flash_pain()
+				handle_lowpain()
 				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
 			if(91 to 10000)
-				flash_pain()
+				flash_agony()
 				handle_highpain()
 				msg = "<b><font size=3>OH GOD! Your [partname] is hurting terribly!</font></b>"
 	if(msg && (msg != last_pain_message || prob(10)))

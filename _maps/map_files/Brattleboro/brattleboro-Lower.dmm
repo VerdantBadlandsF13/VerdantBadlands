@@ -1827,7 +1827,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "is" = (
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "it" = (
 /obj/machinery/light/small{
@@ -2192,7 +2192,7 @@
 /area/f13/tunnel)
 "kd" = (
 /obj/structure/mirelurkegg,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "ke" = (
 /obj/structure/chair/office/dark{
@@ -3605,7 +3605,7 @@
 /area/f13/tunnel)
 "qt" = (
 /mob/living/simple_animal/hostile/mirelurk/hunter,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "qu" = (
 /obj/structure/barricade/bars,
@@ -4941,7 +4941,7 @@
 	icon_state = "goo10"
 	},
 /mob/living/simple_animal/hostile/mirelurk/baby,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "wa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6166,7 +6166,7 @@
 /area/f13/tunnel)
 "BB" = (
 /obj/structure/flora/wasteplant/rad_fungus,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "BC" = (
 /obj/structure/table,
@@ -10108,7 +10108,7 @@
 /area/f13/tunnel)
 "Ti" = (
 /obj/structure/flora/wasteplant/wild_fungus,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "Tj" = (
 /obj/structure/table,
@@ -11011,7 +11011,7 @@
 /area/f13/sewer)
 "Xz" = (
 /obj/structure/nest/mirelurk,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "XA" = (
 /obj/structure/rack/shelf_metal,

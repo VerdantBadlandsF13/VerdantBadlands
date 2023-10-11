@@ -221,6 +221,6 @@
 
 		playsound(src, played_sound, volume, 1)
 
-/obj/item/grenade/pickup(mob/living/user)
+/obj/item/grenade/on_found(mob/living/user)
 	. = ..()
 	play_grenade_equip_sound(src)

@@ -338,10 +338,6 @@ ATTACHMENTS
 	. = ..()
 	weapondraw(src, user)
 
-/obj/item/gun/pickup(mob/living/user)
-	. = ..()
-	play_equip_sound(src)
-
 /obj/item/gun/emp_act(severity)
 	. = ..()
 	if(!(. & EMP_PROTECT_CONTENTS))

@@ -256,10 +256,10 @@
 /obj/machinery/door/unpowered/securedoor/vfe/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_open.ogg',40,1)
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/vaultairlock_open.ogg',40,1)
 			flick("vaultopening", src)
 		if("closing")
-			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_close.ogg',40,1)
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/vaultairlock_close.ogg',40,1)
 			flick("vaultclosing", src)
 
 /obj/machinery/door/unpowered/securedoor/vfe/glass
@@ -278,10 +278,10 @@
 /obj/machinery/door/unpowered/securedoor/vfe/glass/do_animate(animation)
 	switch(animation)
 		if("opening")
-			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_open.ogg',40,1)
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/vaultairlock_open.ogg',40,1)
 			flick("vault_glassopening", src)
 		if("closing")
-			playsound(src,'modular_badlands/code/modules/rp_misc/sound/vault/vaultairlock_close.ogg',40,1)
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/vaultairlock_close.ogg',40,1)
 			flick("vault_glassclosing", src)
 
 /obj/machinery/door/unpowered/securedoor/vfe/vfe_sci

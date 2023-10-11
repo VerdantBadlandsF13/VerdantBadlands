@@ -157,7 +157,7 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/afterattack()
 	. = ..()
-	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/stim_use.ogg', 100, 1)
+	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/stim_use.ogg', 100, 1)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()

@@ -287,7 +287,7 @@
 					if(L.stat == CONSCIOUS)
 						L.confused = max(L.confused, 20)
 						L.adjust_blurriness(10)
-					if(prob(15))
+					if(prob(35))
 						SEND_SOUND(L, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 						C.gain_trauma(/datum/brain_trauma/mild/concussion)
 					else if(prob(10))

@@ -319,9 +319,6 @@ General audio for grabbing and dropping items.
 // Grabbing.
 /obj/item/pickup()
 	. = ..()
-	for(var/obj/item/I in src)
-		if(I.on_found(user))
-			return ..()
 	if(grab_class == 0)
 		return ..()
 	else

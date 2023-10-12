@@ -10,17 +10,27 @@
 	var/drip_sound = "modular_badlands/code/modules/rp_misc/sound/gore/blood[rand(1,6)].ogg"
 	playsound(src, drip_sound, 50, 1)
 
-// Tuning the channel provides feedback.
-// Hooked into tuning, rather than a piece of it like 'talk_into'.
-/obj/item/radio/proc/play_change_freq()
-	var/radtune_sound = "modular_badlands/code/modules/rp_misc/sound/radio/radiohiss.ogg"
-	playsound(src, radtune_sound, rand(20, 30))
+// UNUSED START
+// General radio audio. Perhaps extend to other things.
+// Radio fluff. Audio from IB. Initial code without modification from SR(I think???).
+/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language)
+	var/radiosound = "modular_badlands/code/modules/rp_misc/sound/radio/transmit/radio[rand(1,4)].ogg"
+	if(radiosound && listening)
+		playsound(M, radiosound, rand(20, 30))
+	. = ..()
 
 // Receiving a message provides feedback.
 // Hooked into receiving, rather than a piece of it like 'talk_into'.
 /obj/item/radio/proc/play_receive_transmission()
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	playsound(src, radrec_sound, rand(20, 30))
+// UNUSED END
+
+// Tuning the channel provides feedback.
+// Hooked into tuning, rather than a piece of it like 'talk_into'.
+/obj/item/radio/proc/play_change_freq()
+	var/radtune_sound = "modular_badlands/code/modules/rp_misc/sound/radio/radiohiss.ogg"
+	playsound(src, radtune_sound, rand(20, 30))
 
 /*
 This is a huge block for stamina garbage.
@@ -252,7 +262,7 @@ General audio for grabbing and dropping items.
 	. = ..()
 // Am I already set? Return.
 	if(drop_class || grab_class)
-		return
+		return ..()
 // Shouldn't need it twice, but just in case.
 	if(sharpness == SHARP_EDGED || sharpness == SHARP_POINTY)
 		drop_class = 8
@@ -262,8 +272,8 @@ General audio for grabbing and dropping items.
 		grab_class = 9
 // Do I still not have a class? Return.
 	if(!drop_class || !grab_class)
-		return
-
+		return ..()
+/*
 /obj/item/gun/on_found(mob/finder)
 	. = ..()
 	play_equip_sound(finder)
@@ -289,7 +299,7 @@ General audio for grabbing and dropping items.
 			played_sound = pick(equipsound)
 
 		playsound(src, played_sound, volume, 1)
-
+*/
 // Dropping.
 /obj/item/dropped()
 	. = ..()
@@ -298,23 +308,23 @@ General audio for grabbing and dropping items.
 	else
 		switch(drop_class)
 			if(1)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/capslose[rand(1,2)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/capslose[rand(1,2)].ogg", 95, 0)
 			if(2)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/keydrop.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/keydrop.ogg", 95, 0)
 			if(3)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/clothdrop[rand(1,3)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/clothdrop[rand(1,3)].ogg", 95, 0)
 			if(4)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalarmordrop.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalarmordrop.ogg", 95, 0)
 			if(5)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/rifledrop[rand(1,2)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/rifledrop[rand(1,2)].ogg", 95, 0)
 			if(6)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/pistoldrop[rand(1,3)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/pistoldrop[rand(1,3)].ogg", 95, 0)
 			if(7)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/nadedrop.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/nadedrop.ogg", 95, 0)
 			if(8)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifedrop.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifedrop.ogg", 95, 0)
 			if(9)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metaldrop.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metaldrop.ogg", 95, 0)
 
 // Grabbing.
 /obj/item/pickup()
@@ -324,20 +334,20 @@ General audio for grabbing and dropping items.
 	else
 		switch(grab_class)
 			if(1)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/capspickup[rand(1,4)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/capspickup[rand(1,4)].ogg", 95, 0)
 			if(2)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/keypickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/keypickup.ogg", 95, 0)
 			if(3)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/clothpickup[rand(1,3)].ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/clothpickup[rand(1,3)].ogg", 95, 0)
 			if(4)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalarmorpickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalarmorpickup.ogg", 95, 0)
 			if(5)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/riflepickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/riflepickup.ogg", 95, 0)
 			if(6)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/pistolpickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/pistolpickup.ogg", 95, 0)
 			if(7)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/nadepickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/nadepickup.ogg", 95, 0)
 			if(8)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 0)
 			if(9)
-				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 1)
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 0)

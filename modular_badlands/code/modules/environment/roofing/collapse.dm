@@ -9,7 +9,7 @@
 // TODO: Scrap this and create an entirely new system. :(
 // For now, I'll put a fix together and keep this up.
 // - Carl
-/turf/open/indestructible/ground/inside/collapse_check()
+/turf/open/indestructible/ground/inside/mountain/collapse_check()
 	spawn(50)
 		var/area/A = get_area(src)
 		if(!A.outdoors)

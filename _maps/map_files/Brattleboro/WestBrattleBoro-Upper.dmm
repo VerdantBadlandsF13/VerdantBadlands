@@ -71,6 +71,10 @@
 /obj/machinery/light,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/vault/dormitory)
+"ap" = (
+/obj/structure/railing,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "aq" = (
 /turf/open/floor/carpet/royalblue,
 /area/f13/building)
@@ -771,6 +775,12 @@
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
+/area/f13/building)
+"dF" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
 "dG" = (
 /obj/machinery/light/small{
@@ -2168,6 +2178,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/vault/vents)
+"jD" = (
+/obj/machinery/door/poddoor/shutters/window{
+	desc = "Strong metal shutters."
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault/security/armory)
 "jE" = (
 /obj/structure/railing{
 	dir = 4
@@ -3190,6 +3206,9 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
+"nH" = (
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "nI" = (
 /mob/living/simple_animal/hostile/raider/ranged/boss{
 	name = "S-Mart Clerks Raider Boss"
@@ -3391,6 +3410,12 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"oM" = (
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "oN" = (
 /obj/structure/railing{
 	color = "#A47449"
@@ -3659,6 +3684,10 @@
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
+/area/f13/building)
+"pW" = (
+/obj/structure/railing/corner,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
 "pX" = (
 /obj/structure/toilet{
@@ -4453,6 +4482,14 @@
 	},
 /turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/wasteland)
+"tu" = (
+/obj/structure/badlands_props{
+	icon_state = "anatomy";
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "tv" = (
 /obj/structure/table/wood/junk,
 /obj/item/book/granter/trait/techno,
@@ -5408,10 +5445,21 @@
 /obj/item/reagent_containers/food/snacks/meat/steak/gecko,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/tunnel)
+"xf" = (
+/obj/machinery/computer/operating,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "xg" = (
 /obj/structure/chair/sofa,
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
+"xh" = (
+/mob/living/simple_animal/hostile/sentrybot/empproof{
+	faction = list("Vault Fifty-Eight");
+	AIStatus = 3
+	},
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/vault/security/armory)
 "xj" = (
 /obj/structure/railing{
 	dir = 1;
@@ -5859,6 +5907,15 @@
 	dir = 4
 	},
 /area/f13/vault/security)
+"yN" = (
+/obj/structure/table/optable,
+/obj/structure/badlands_props{
+	icon_state = "xray_off";
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "yO" = (
 /obj/structure/railing/corner{
 	dir = 1;
@@ -7738,6 +7795,12 @@
 	},
 /turf/open/floor/wood/wood_fancy,
 /area/f13/vault/dormitory)
+"Gx" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/transparent/openspace,
+/area/f13/building)
 "Gz" = (
 /obj/machinery/light{
 	dir = 8
@@ -7850,6 +7913,15 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/f13/vault/security)
+"GV" = (
+/obj/structure/table/optable,
+/obj/structure/badlands_props{
+	icon_state = "xray_on";
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "GW" = (
 /obj/machinery/light{
 	light_color = "#e8eaff";
@@ -8189,7 +8261,8 @@
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/badlands_props{
 	icon_state = "xray_on";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 4
@@ -9782,7 +9855,7 @@
 /turf/open/floor/carpet/royalblue,
 /area/f13/building)
 "OS" = (
-/obj/structure/simple_door/metal,
+/obj/machinery/door/unpowered/securedoor/vfe/vfe_sec,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -10575,6 +10648,12 @@
 "Sj" = (
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/medical/surgery)
+"Sk" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/transparent/openspace,
+/area/f13/building)
 "Sl" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
@@ -10632,7 +10711,8 @@
 /obj/item/reagent_containers/dropper,
 /obj/structure/badlands_props{
 	icon_state = "periodic";
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 8
@@ -10686,7 +10766,8 @@
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/badlands_props{
 	icon_state = "xray_off";
-	pixel_x = -32
+	pixel_x = 32;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 8
@@ -10708,6 +10789,12 @@
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
+/area/f13/building)
+"SF" = (
+/obj/structure/badlands_props/medical_divider{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
 "SG" = (
 /obj/item/cultivator,
@@ -11077,6 +11164,7 @@
 	icon_state = "skull";
 	pixel_y = 32
 	},
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "TW" = (
@@ -11998,7 +12086,8 @@
 "XO" = (
 /obj/structure/badlands_props{
 	icon_state = "anatomy";
-	pixel_x = 32
+	pixel_x = 32;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 4
@@ -12273,6 +12362,10 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
+"Zn" = (
+/obj/machinery/door/unpowered/securedoor/vfe/vfe_med,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/building)
 "Zp" = (
 /obj/machinery/light{
 	light_color = "#e8eaff";
@@ -21864,8 +21957,8 @@ qn
 qn
 QP
 pF
-Ee
 pF
+Sb
 yE
 qn
 qn
@@ -43568,9 +43661,9 @@ zr
 zr
 Nj
 zr
-zr
-zr
 Lz
+xh
+jD
 hz
 qN
 dy
@@ -43734,7 +43827,7 @@ UR
 wo
 qR
 hS
-qR
+lY
 qR
 qR
 wo
@@ -44024,9 +44117,9 @@ Nr
 Nr
 Nr
 Nr
-Nr
-Nr
 zr
+Lz
+Lz
 Lz
 Qo
 vI
@@ -44194,7 +44287,7 @@ qR
 qR
 yk
 Dk
-qR
+lY
 wo
 wo
 aj
@@ -44480,9 +44573,9 @@ wo
 wo
 wo
 wo
-wo
-wo
 Nr
+zr
+zr
 zr
 Lz
 Lz
@@ -44937,8 +45030,8 @@ wo
 wo
 wo
 wo
-wo
-wo
+Nr
+Nr
 Nr
 QA
 zr
@@ -45563,7 +45656,7 @@ wo
 wo
 wo
 wo
-qR
+lY
 qR
 qR
 wo
@@ -107292,8 +107385,8 @@ Ee
 my
 my
 my
-my
-my
+It
+It
 It
 It
 It
@@ -107749,17 +107842,17 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+nH
+nH
+oM
+Sk
+nH
+nH
+ap
+ge
+ge
+ge
 It
 It
 It
@@ -108206,19 +108299,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+nH
+nH
+pW
+Gx
+nH
+nH
+ap
+ge
+ge
+ge
+ge
+It
 Ee
 Ee
 Ee
@@ -108663,19 +108756,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+nH
+tu
+nH
+SF
+nH
+nH
+ap
+ge
+ge
+ge
+ge
+It
 Ee
 Ee
 Ee
@@ -109120,19 +109213,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+It
+It
+Zn
+It
+Zn
+It
+It
+It
+ge
+ge
+ge
+It
 Ee
 Ee
 Ee
@@ -109577,19 +109670,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+xf
+nH
+nH
+It
+nH
+nH
+dF
+It
+ge
+ge
+ge
+It
 Ee
 Ee
 Ee
@@ -110034,19 +110127,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+GV
+nH
+nH
+It
+nH
+nH
+yN
+It
+ge
+ge
+ge
+It
 Ee
 Ee
 Ee
@@ -110491,19 +110584,19 @@ Ee
 my
 my
 my
-my
-my
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+It
+It
+It
+It
+It
+It
+It
+It
+It
+It
+It
+It
+It
 Ee
 Ee
 Ee
@@ -116443,11 +116536,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 Ee
@@ -116900,11 +116993,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 xE
@@ -117357,11 +117450,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 xE
@@ -117814,11 +117907,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 xE
@@ -118271,11 +118364,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 xE
 xE
@@ -118728,11 +118821,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 xE
 so
@@ -119185,11 +119278,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 xE
 tg
@@ -119642,11 +119735,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 xE
 so
@@ -120099,11 +120192,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 xE
 xE
@@ -120556,11 +120649,11 @@ Ee
 Ee
 Ee
 Ee
-my
-my
-my
-my
-my
+Ee
+Ee
+Ee
+Ee
+Ee
 Ee
 Ee
 my

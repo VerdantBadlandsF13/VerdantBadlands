@@ -19219,6 +19219,12 @@
 /obj/item/mining_scanner,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"njm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "njQ" = (
 /obj/structure/bed/mattress/pregame,
 /turf/open/indestructible/ground/outside/bl/dirt,
@@ -22641,6 +22647,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"pCC" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "pDn" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -28135,6 +28145,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/bl/dfs)
+"tHd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "tHo" = (
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/light{
@@ -37024,7 +37039,7 @@ fwb
 sQZ
 sQZ
 sQZ
-sQZ
+pCC
 sQZ
 oMg
 orb
@@ -37081,7 +37096,7 @@ qJd
 sQZ
 sQZ
 sQZ
-sQZ
+pCC
 sQZ
 sQZ
 sQZ
@@ -37205,7 +37220,7 @@ sQZ
 sQZ
 sQZ
 uZt
-sQZ
+pCC
 sQZ
 oum
 vaR
@@ -37491,7 +37506,7 @@ sQZ
 sQZ
 xkV
 sQZ
-sQZ
+pCC
 sQZ
 nVo
 orb
@@ -39869,7 +39884,7 @@ sQZ
 sQZ
 sQZ
 eiQ
-sQZ
+pCC
 sQZ
 sQZ
 skd
@@ -140939,7 +140954,7 @@ sQZ
 sQZ
 eho
 sQZ
-sQZ
+pCC
 sQZ
 yjY
 sQZ
@@ -141420,7 +141435,7 @@ fwb
 sQZ
 sQZ
 okd
-sQZ
+pCC
 okd
 sQZ
 fwb
@@ -141841,7 +141856,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-sQZ
+pCC
 sQZ
 sQZ
 sQZ
@@ -141939,7 +141954,7 @@ fwb
 fwb
 sQZ
 sQZ
-sQZ
+pCC
 nmu
 sQZ
 fwb
@@ -144512,7 +144527,7 @@ fwb
 sQZ
 uDH
 sQZ
-sQZ
+pCC
 sQZ
 fwb
 fwb
@@ -144863,7 +144878,7 @@ fwb
 tso
 fwb
 sQZ
-nFR
+njm
 nFR
 fwb
 fwb
@@ -145043,7 +145058,7 @@ ecI
 sQZ
 lGP
 sQZ
-sQZ
+pCC
 sQZ
 sQZ
 gNb
@@ -145147,7 +145162,7 @@ fwb
 fwb
 sQZ
 sQZ
-sQZ
+pCC
 sQZ
 sQZ
 fwb
@@ -146914,7 +146929,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-sQZ
+pCC
 sQZ
 sQZ
 sQZ
@@ -147228,7 +147243,7 @@ fwb
 tso
 mXP
 xFq
-sQZ
+pCC
 ewt
 dWe
 mXP
@@ -148964,7 +148979,7 @@ fwb
 sQZ
 xlP
 xlP
-xlP
+tHd
 xlP
 xlP
 xlP

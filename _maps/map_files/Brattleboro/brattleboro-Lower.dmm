@@ -139,6 +139,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"aK" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "aL" = (
 /obj/structure/stairs/east{
 	color = "#624b30"
@@ -4873,6 +4877,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"vz" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "vA" = (
 /obj/structure/sign/warning{
 	pixel_y = -32
@@ -7666,6 +7674,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
+/area/f13/sewer)
+"Ii" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "Ij" = (
 /obj/structure/closet/cabinet,
@@ -15072,7 +15084,7 @@ Va
 Va
 ft
 ft
-EY
+Ii
 EY
 EY
 ft
@@ -23295,7 +23307,7 @@ ft
 EY
 EY
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -33790,7 +33802,7 @@ Va
 Va
 Va
 EY
-EY
+Ii
 QS
 Va
 Va
@@ -37437,7 +37449,7 @@ jL
 dO
 mf
 nd
-mf
+aK
 mf
 mf
 OO
@@ -37482,7 +37494,7 @@ ft
 ft
 ft
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -39740,7 +39752,7 @@ wF
 wF
 vV
 EY
-EY
+Ii
 EY
 EY
 Va
@@ -41597,7 +41609,7 @@ Va
 Va
 Va
 ft
-EY
+Ii
 EY
 ft
 ft
@@ -43165,7 +43177,7 @@ Va
 Xb
 Xb
 CS
-CS
+vz
 CS
 Va
 Va
@@ -56748,7 +56760,7 @@ EY
 EY
 EY
 Va
-EY
+Ii
 EY
 EY
 EY
@@ -59563,7 +59575,7 @@ Va
 Va
 jh
 CS
-CS
+vz
 CS
 Va
 Va
@@ -63606,7 +63618,7 @@ Va
 Va
 Va
 Va
-EY
+Ii
 EY
 Va
 Va
@@ -63649,7 +63661,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 CS
@@ -63660,7 +63672,7 @@ Hy
 xu
 sN
 CS
-CS
+vz
 CS
 Va
 Va
@@ -64587,7 +64599,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 Va
@@ -69003,7 +69015,7 @@ Md
 Md
 Md
 Md
-EY
+Ii
 EY
 Md
 Md
@@ -69514,7 +69526,7 @@ Va
 OA
 Va
 Va
-EY
+Ii
 EY
 zx
 EY
@@ -70897,7 +70909,7 @@ EY
 EY
 EY
 EY
-EY
+Ii
 Va
 Va
 Va
@@ -75066,7 +75078,7 @@ CS
 KW
 KW
 CS
-CS
+vz
 CS
 CS
 Va
@@ -76924,7 +76936,7 @@ LT
 nl
 rW
 CS
-CS
+vz
 CS
 CS
 CS
@@ -77396,7 +77408,7 @@ kl
 CS
 CS
 CS
-CS
+vz
 CS
 FK
 LT
@@ -86060,7 +86072,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 KW
 CS
@@ -88355,7 +88367,7 @@ CS
 CS
 CS
 CS
-CS
+vz
 CS
 Va
 Va
@@ -92933,7 +92945,7 @@ Va
 Va
 Va
 Va
-CS
+vz
 CS
 CS
 fY
@@ -107548,7 +107560,7 @@ CS
 CS
 CS
 CS
-CS
+vz
 Va
 Va
 Va
@@ -118302,7 +118314,7 @@ We
 Rz
 mf
 mf
-mf
+aK
 mf
 sz
 jL
@@ -118310,7 +118322,7 @@ mf
 kr
 mf
 mf
-mf
+aK
 mf
 mf
 JV
@@ -121966,7 +121978,7 @@ kr
 hY
 mf
 mf
-mf
+aK
 mf
 mf
 mf
@@ -122408,7 +122420,7 @@ YD
 YD
 lS
 DZ
-mf
+aK
 mf
 mf
 mf

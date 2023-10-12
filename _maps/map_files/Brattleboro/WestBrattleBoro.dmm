@@ -47,8 +47,8 @@
 /turf/open/indestructible/ground/outside/bl/dirt,
 /area/f13/ruins)
 "abW" = (
-/obj/structure/table/reinforced,
 /obj/structure/barricade/bars,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -770,6 +770,7 @@
 /mob/living/simple_animal/hostile/sentrybot/empproof{
 	faction = list("Vault Fifty-Eight");
 	AIStatus = 3;
+	name = "hardened vault sentry bot";
 	dir = 8
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -2179,6 +2180,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/dormitory)
+"chS" = (
+/obj/structure/shieldwall/large/active,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/building)
 "chU" = (
 /turf/open/floor/wood/wood_fancy,
 /area/f13/vault/dormitory)
@@ -2297,6 +2302,19 @@
 /obj/structure/simple_door/interior,
 /turf/open/floor/f13{
 	icon_state = "plating"
+	},
+/area/f13/building)
+"coP" = (
+/obj/effect/overlay/barbed{
+	dir = 4
+	},
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
 	},
 /area/f13/building)
 "cpp" = (
@@ -2911,6 +2929,17 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
+"cTa" = (
+/obj/effect/turf_decal/caution/stand_clear/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
 "cTj" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/suit/armored/f13/light/kit/shoulder,
@@ -4761,6 +4790,12 @@
 /obj/machinery/smartfridge/bottlerack/grownbin,
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
 /area/f13/vault/vents)
+"ePd" = (
+/obj/effect/decal/cleanable/oil,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland)
 "eQc" = (
 /obj/structure/closet/fridge,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4950,6 +4985,16 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"eXX" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 5
+	},
+/obj/machinery/light/floor,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 4;
+	icon_state = "outerbordercorner"
+	},
+/area/f13/wasteland)
 "eXY" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5237,6 +5282,17 @@
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright1"
+	},
+/area/f13/wasteland)
+"fmH" = (
+/obj/effect/turf_decal/caution/stand_clear/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
 "fmN" = (
@@ -6892,16 +6948,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"hfq" = (
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/wasteland)
 "hgx" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_3"
@@ -7172,6 +7218,9 @@
 /area/f13/building)
 "hxf" = (
 /obj/machinery/chem_dispenser,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building)
 "hxZ" = (
@@ -8014,6 +8063,17 @@
 	dir = 1
 	},
 /area/f13/building)
+"iws" = (
+/obj/structure/badlands_props/shieldwall_shield_projector/right,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building)
 "iwT" = (
 /obj/structure/closet/cabinet,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8125,6 +8185,20 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
+	},
+/area/f13/building)
+"iEd" = (
+/obj/effect/overlay/barbed{
+	dir = 4
+	},
+/obj/effect/overlay/barbed,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
 	},
 /area/f13/building)
 "iES" = (
@@ -8765,6 +8839,19 @@
 "jgw" = (
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
+"jgG" = (
+/obj/effect/overlay/barbed{
+	dir = 8
+	},
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building)
 "jgQ" = (
 /obj/structure/toilet{
 	dir = 1;
@@ -8915,6 +9002,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/dormitory)
+"jpb" = (
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
 "jqL" = (
 /obj/machinery/light{
 	dir = 4
@@ -9093,6 +9186,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/dormitory)
+"jyF" = (
+/obj/structure/railing/corner,
+/turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/wasteland)
 "jyL" = (
 /obj/structure/curtain,
 /obj/machinery/shower{
@@ -11529,6 +11626,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/green,
 /area/f13/building)
+"lQT" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "lQZ" = (
 /obj/machinery/shower{
 	dir = 8
@@ -12982,6 +13083,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/ruins)
+"ngY" = (
+/obj/effect/decal/cleanable/oil,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "nhg" = (
 /obj/structure/dresser,
 /obj/item/storage/book/bible,
@@ -13520,6 +13627,17 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/outside/bl/gravel,
 /area/f13/building)
+"nHn" = (
+/obj/effect/overlay/barbed,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building)
 "nHt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/kirbyplants/random,
@@ -13821,6 +13939,14 @@
 /obj/machinery/microwave/stove,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood4-broken"
+	},
+/area/f13/building)
+"nWF" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
 	},
 /area/f13/building)
 "nWL" = (
@@ -14199,6 +14325,12 @@
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom1"
+	},
+/area/f13/wasteland)
+"onX" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland)
 "ooY" = (
@@ -14655,6 +14787,12 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"oLX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "oMd" = (
 /obj/machinery/light/broken,
 /obj/effect/decal/remains/deadeyebot,
@@ -14863,6 +15001,16 @@
 	pixel_y = -16
 	},
 /turf/open/indestructible/ground/outside/bl/gravel,
+/area/f13/wasteland)
+"oYt" = (
+/obj/item/storage/trash_stack,
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 4
+	},
+/obj/machinery/light/floor,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
 /area/f13/wasteland)
 "oYu" = (
 /obj/structure/curtain{
@@ -15099,10 +15247,34 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
+"pmu" = (
+/obj/effect/overlay/barbed{
+	dir = 8
+	},
+/obj/effect/overlay/barbed,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building)
 "pmR" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
 	icon_state = "outerborder"
+	},
+/area/f13/wasteland)
+"pmW" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 9
+	},
+/obj/machinery/light/floor,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
 "pnL" = (
@@ -16542,6 +16714,16 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"qHW" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 8
+	},
+/obj/machinery/light/floor,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "qHY" = (
 /obj/machinery/light{
 	dir = 8;
@@ -18916,6 +19098,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"sCN" = (
+/obj/structure/reagent_dispensers/barrel/four,
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
 "sCT" = (
 /obj/structure/table/snooker{
 	dir = 6
@@ -20498,6 +20689,14 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
+"ubZ" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "uce" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/foodspawner,
@@ -20559,6 +20758,17 @@
 	pixel_y = -7
 	},
 /turf/open/floor/f13/wood,
+/area/f13/building)
+"ufe" = (
+/obj/structure/badlands_props/shieldwall_shield_projector/left,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
 /area/f13/building)
 "ufv" = (
 /obj/structure/table/wood,
@@ -21965,6 +22175,17 @@
 	icon_state = "whiteyellowchess"
 	},
 /area/f13/building)
+"vyq" = (
+/mob/living/simple_animal/hostile/handy/gutsy{
+	dir = 8;
+	name = "Cerberus";
+	faction = list("Vault Fifty-Eight");
+	AIStatus = 3
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building)
 "vyw" = (
 /turf/open/floor/carpet/arcade,
 /area/f13/building)
@@ -22360,6 +22581,13 @@
 /obj/item/reagent_containers/food/condiment/soymilk,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/vault/diner)
+"vUf" = (
+/obj/effect/turf_decal/caution/stand_clear/red,
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
+	},
+/area/f13/wasteland)
 "vUk" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
@@ -22547,6 +22775,12 @@
 "wcx" = (
 /turf/open/floor/plating/rust,
 /area/f13/building)
+"wcQ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/area/f13/wasteland)
 "wdg" = (
 /obj/structure/chair/sofa{
 	dir = 8
@@ -22688,6 +22922,12 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"wjk" = (
+/obj/structure/railing/corner{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/area/f13/wasteland)
 "wkZ" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -23368,6 +23608,17 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"wPN" = (
+/obj/structure/chair/folding{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/building)
 "wPV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light{
@@ -28890,7 +29141,7 @@ vKr
 uBH
 uBH
 uBH
-uBH
+lQT
 uBH
 uBH
 uBH
@@ -31641,7 +31892,7 @@ uBH
 uBH
 uBH
 uBH
-uBH
+lQT
 fdY
 fdY
 fdY
@@ -113269,41 +113520,41 @@ qur
 qur
 qur
 qur
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
 qur
 qur
 qur
@@ -113722,45 +113973,45 @@ pac
 pac
 qur
 qur
-sdn
-sdn
-sdn
-sdn
-sdn
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-sdn
+sSH
+sSH
+sSH
+sSH
+sSH
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -114179,12 +114430,12 @@ pac
 pac
 pac
 qur
-sdn
-hfq
-hfq
-hfq
-hfq
-hfq
+sSH
+wMR
+wMR
+wMR
+wMR
+wMR
 ofS
 ofS
 ofS
@@ -114216,8 +114467,8 @@ cqQ
 cqQ
 cqQ
 vKo
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -114636,8 +114887,8 @@ pac
 fdY
 pac
 qur
-sdn
-hfq
+sSH
+wMR
 sDZ
 sDZ
 sDZ
@@ -114673,8 +114924,8 @@ fPh
 fPh
 udo
 tRm
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -115092,9 +115343,9 @@ fdY
 pac
 fdY
 pac
-sdn
-sdn
-hfq
+sSH
+sSH
+wMR
 sDZ
 gUY
 gUY
@@ -115130,8 +115381,8 @@ vvK
 ibO
 cSd
 tRm
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -115550,8 +115801,8 @@ pac
 fdY
 pac
 pac
-hfq
-hfq
+wMR
+wMR
 sDZ
 nXU
 nXU
@@ -115587,8 +115838,8 @@ ibO
 ibO
 cSd
 tRm
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -116044,21 +116295,21 @@ ibO
 ibO
 cSd
 tRm
-hfq
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
+wMR
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
 yfV
 cSd
 tRm
@@ -116515,7 +116766,7 @@ wMR
 wMR
 wMR
 wMR
-sdn
+sSH
 qur
 acQ
 lDO
@@ -116972,8 +117223,8 @@ wMR
 hXm
 vJr
 wMR
-sdn
-sdn
+sSH
+sSH
 wMR
 wMR
 lTa
@@ -116983,7 +117234,7 @@ ief
 ief
 wMR
 wMR
-sdn
+sSH
 rwM
 qur
 qur
@@ -117440,7 +117691,7 @@ lUe
 glr
 wMR
 wMR
-sdn
+sSH
 qur
 qur
 oCM
@@ -117897,7 +118148,7 @@ lUe
 tRy
 anU
 wMR
-sdn
+sSH
 qur
 qur
 qur
@@ -118354,7 +118605,7 @@ lUe
 tRy
 anU
 wMR
-sdn
+sSH
 qur
 qur
 qur
@@ -118811,7 +119062,7 @@ lUe
 tRy
 anU
 wMR
-sdn
+sSH
 qur
 qur
 qur
@@ -119247,7 +119498,7 @@ wMR
 lqi
 bil
 mal
-lqi
+vyq
 cEA
 xAg
 lCu
@@ -119268,7 +119519,7 @@ lUe
 tRy
 kFu
 wMR
-sdn
+sSH
 qur
 qur
 qur
@@ -119725,17 +119976,17 @@ lUe
 glr
 wMR
 wMR
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
 qur
 qur
 qur
@@ -120160,11 +120411,11 @@ sDZ
 wMR
 wMR
 eKm
-eEg
+oLX
 eEg
 gSl
 jxX
-jxX
+nWF
 jxX
 jxX
 wMR
@@ -120182,17 +120433,17 @@ xMS
 xMS
 wMR
 wMR
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -120648,8 +120899,8 @@ sDZ
 sDZ
 sDZ
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -121105,9 +121356,9 @@ fXz
 fXz
 rOo
 sDZ
-hfq
-sdn
-sdn
+wMR
+sSH
+sSH
 qur
 qur
 qur
@@ -121562,9 +121813,9 @@ wRE
 wRE
 mOs
 sDZ
-hfq
-hfq
-sdn
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -122020,8 +122271,8 @@ wRE
 xIB
 sDZ
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -122449,7 +122700,7 @@ hxf
 vHr
 wMR
 gNx
-mEx
+wPN
 mEx
 drS
 wMR
@@ -122477,15 +122728,15 @@ nXU
 nXU
 sxi
 sDZ
-hfq
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
-sdn
+wMR
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
+sSH
 qur
 qur
 qur
@@ -122934,15 +123185,15 @@ nXU
 nXU
 nXU
 sDZ
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -123356,7 +123607,7 @@ cqQ
 cqQ
 cqQ
 cqQ
-cqQ
+wMR
 cqQ
 cqQ
 cqQ
@@ -123398,8 +123649,8 @@ sDZ
 sDZ
 sDZ
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -123813,7 +124064,7 @@ fPh
 fPh
 fPh
 fPh
-fPh
+ufe
 fPh
 fPh
 fPh
@@ -123855,8 +124106,8 @@ wMN
 nuH
 wMN
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -124270,7 +124521,7 @@ ibO
 ibO
 ibO
 ibO
-ibO
+chS
 ibO
 ibO
 ibO
@@ -124312,8 +124563,8 @@ wMN
 wMN
 wMN
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -124727,7 +124978,7 @@ ibO
 ibO
 ibO
 ibO
-ibO
+tRy
 ibO
 ibO
 ibO
@@ -124769,8 +125020,8 @@ ncV
 wMN
 wMN
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -125184,7 +125435,7 @@ cqQ
 cqQ
 cqQ
 cqQ
-cqQ
+iws
 cqQ
 cqQ
 cqQ
@@ -125226,8 +125477,8 @@ fpB
 sDZ
 pqk
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -125641,11 +125892,11 @@ fPh
 fPh
 fPh
 fPh
-fPh
-fPh
-fPh
-fPh
-udo
+wMR
+qHW
+fmH
+ubZ
+eXX
 tRm
 psq
 ibO
@@ -125683,8 +125934,8 @@ nXU
 nXU
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -126093,16 +126344,16 @@ psq
 ibO
 cSd
 tRm
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-cSd
+qur
+qur
+jfI
+jyF
+eoK
+wMR
+coP
+coP
+iEd
+vUf
 tRm
 psq
 ibO
@@ -126140,8 +126391,8 @@ nXU
 nXU
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 oCM
@@ -126550,16 +126801,16 @@ psq
 ibO
 cSd
 tRm
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-cSd
+qur
+qur
+jfI
+jfI
+nLT
+wMR
+wMR
+wMR
+nHn
+jpb
 tRm
 psq
 ibO
@@ -126597,8 +126848,8 @@ uen
 jqL
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -126974,7 +127225,7 @@ fdY
 pac
 pac
 uBH
-uBH
+lQT
 uBH
 pac
 pac
@@ -127007,16 +127258,16 @@ psq
 ibO
 cSd
 tRm
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-cSd
+qur
+qur
+jfI
+jfI
+nLT
+wMR
+wMR
+wMR
+nHn
+jpb
 tRm
 psq
 ibO
@@ -127054,8 +127305,8 @@ sDZ
 sDZ
 pqk
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -127464,16 +127715,16 @@ psq
 ibO
 cSd
 tRm
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-cSd
+qur
+qur
+qur
+wjk
+wcQ
+wMR
+jgG
+jgG
+pmu
+vUf
 tRm
 psq
 ibO
@@ -127511,8 +127762,8 @@ bcC
 lXo
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -127921,16 +128172,16 @@ psq
 ibO
 pmR
 qng
-ofS
-ofS
-ofS
-ofS
-ofS
-boQ
-cqQ
-cqQ
-cqQ
-iHV
+qur
+qur
+qur
+qur
+qur
+wMR
+oYt
+cTa
+sCN
+pmW
 tRm
 psq
 ibO
@@ -127968,8 +128219,8 @@ nXU
 nXU
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -128382,8 +128633,8 @@ nkJ
 nkJ
 nkJ
 sDZ
-ofS
-cSd
+qur
+wMR
 eey
 fPh
 fPh
@@ -128425,8 +128676,8 @@ xOT
 fzK
 nXU
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -128839,9 +129090,9 @@ bot
 tnq
 hLN
 sDZ
-ofS
-cSd
-tRm
+qur
+wMR
+ePd
 dfj
 vMp
 vMp
@@ -128882,8 +129133,8 @@ sDZ
 sDZ
 pqk
 sDZ
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -129296,8 +129547,8 @@ kCl
 nXU
 nXU
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 pAO
 ofS
@@ -129339,8 +129590,8 @@ wOw
 mBU
 cXR
 rkS
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -129753,9 +130004,9 @@ byy
 nXU
 jqL
 sDZ
-ofS
-cSd
-tRm
+qur
+wMR
+qvn
 pAO
 bOz
 ofS
@@ -129796,8 +130047,8 @@ nOc
 aqa
 aqa
 iBg
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -130210,8 +130461,8 @@ mwt
 nDL
 mwt
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 puR
 gbE
@@ -130253,8 +130504,8 @@ aqa
 aqa
 nOc
 fnz
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -130667,8 +130918,8 @@ nXU
 nXU
 lXo
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 pAO
 aoc
@@ -130710,8 +130961,8 @@ aqa
 aqa
 ijX
 fLi
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -131124,9 +131375,9 @@ nXU
 nXU
 nXU
 sDZ
-ofS
-cSd
-tRm
+qur
+wMR
+ePd
 pAO
 xfC
 ofS
@@ -131167,8 +131418,8 @@ cvk
 cvk
 cvk
 vex
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -131581,8 +131832,8 @@ nXU
 rQK
 rQK
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 puR
 emI
@@ -131624,9 +131875,9 @@ pEn
 pEn
 pEn
 tRm
-hfq
-sdn
-sdn
+wMR
+sSH
+sSH
 qur
 qur
 qur
@@ -132038,8 +132289,8 @@ nXU
 sDZ
 sDZ
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 pAO
 uxE
@@ -132079,11 +132330,11 @@ fPh
 fPh
 fPh
 fPh
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -132495,9 +132746,9 @@ jqL
 sDZ
 sDZ
 sDZ
-ofS
-cSd
-tRm
+qur
+wMR
+qvn
 pAO
 uxE
 ofS
@@ -132535,12 +132786,12 @@ ibO
 ibO
 ibO
 nLT
-hfq
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -132917,8 +133168,8 @@ fdY
 pac
 pac
 uBH
+lQT
 uBH
-uBH
 pac
 pac
 fdY
@@ -132952,8 +133203,8 @@ sDZ
 sDZ
 sDZ
 sDZ
-ofS
-cSd
+qur
+wMR
 tRm
 wXQ
 vMp
@@ -132992,12 +133243,12 @@ ibO
 ibO
 ibO
 nLT
-hfq
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -133387,30 +133638,30 @@ pac
 pac
 pac
 pac
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-cSd
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+wMR
 pwE
 cqQ
 cqQ
@@ -133450,11 +133701,11 @@ fdY
 cqQ
 cqQ
 cqQ
-hfq
-hfq
-hfq
-hfq
-sdn
+wMR
+wMR
+wMR
+wMR
+sSH
 qur
 qur
 qur
@@ -133845,33 +134096,33 @@ fdY
 fdY
 pac
 fdY
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-pmR
-fPh
-fPh
-fPh
-fPh
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+wMR
+onX
+liN
+onX
+ngY
 fPh
 fPh
 fPh
@@ -133908,10 +134159,10 @@ fdY
 fdY
 fPh
 fPh
-hfq
-hfq
-sdn
-sdn
+wMR
+wMR
+sSH
+sSH
 qur
 qur
 qur
@@ -134308,21 +134559,21 @@ fdY
 fdY
 fdY
 fdY
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
+qur
 fdY
 fdY
 fdY
@@ -134366,8 +134617,8 @@ fdY
 fdY
 fdY
 fdY
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur
@@ -134766,13 +135017,13 @@ fdY
 fdY
 fdY
 fdY
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
-ofS
+qur
+qur
+qur
+qur
+qur
+qur
+qur
 fdY
 fdY
 fdY
@@ -134823,8 +135074,8 @@ fdY
 fdY
 fdY
 fdY
-hfq
-sdn
+wMR
+sSH
 qur
 qur
 qur

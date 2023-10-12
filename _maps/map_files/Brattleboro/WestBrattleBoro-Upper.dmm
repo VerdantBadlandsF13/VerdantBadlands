@@ -2613,10 +2613,6 @@
 /obj/structure/closet/crate/footlocker,
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/f13/vault/security)
-"lt" = (
-/obj/structure/chair/stool,
-/turf/open/floor/f13,
-/area/f13/building)
 "lu" = (
 /obj/structure/sign/poster/prewar/poster81{
 	pixel_x = -32
@@ -3921,9 +3917,6 @@
 	},
 /area/f13/vault/security)
 "qQ" = (
-/obj/structure/chair/f13chair2{
-	dir = 8
-	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -4482,14 +4475,6 @@
 	},
 /turf/open/indestructible/ground/outside/bl/mud,
 /area/f13/wasteland)
-"tu" = (
-/obj/structure/badlands_props{
-	icon_state = "anatomy";
-	pixel_x = 32;
-	density = 0
-	},
-/turf/open/floor/plasteel/f13/vault_floor/dark,
-/area/f13/building)
 "tv" = (
 /obj/structure/table/wood/junk,
 /obj/item/book/granter/trait/techno,
@@ -4583,9 +4568,7 @@
 /turf/open/indestructible/ground/outside/bl/dirt,
 /area/f13/wasteland)
 "tL" = (
-/obj/machinery/sleeper{
-	pixel_y = 1
-	},
+/obj/machinery/autodoc,
 /obj/structure/decoration/vent,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault/medical)
@@ -7767,6 +7750,12 @@
 /obj/structure/fireplace,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Gm" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "Gp" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
@@ -7835,6 +7824,14 @@
 	destination_z = 8
 	},
 /area/f13/caves)
+"GF" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags,
+/obj/machinery/light/floor,
+/turf/open/floor/f13,
+/area/f13/building)
 "GH" = (
 /obj/structure/sign/poster/prewar{
 	pixel_x = 32
@@ -8215,6 +8212,7 @@
 /area/f13/building)
 "HU" = (
 /obj/structure/wreck/trash/one_tire,
+/obj/effect/landmark/tremor_area,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "HV" = (
@@ -8280,6 +8278,14 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
+/area/f13/building)
+"Ih" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags,
+/obj/machinery/light/floor,
+/turf/open/floor/f13,
 /area/f13/building)
 "Ii" = (
 /obj/structure/table/wood/junk,
@@ -8990,6 +8996,12 @@
 "Lg" = (
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault/medical/chemistry)
+"Lh" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "Li" = (
 /obj/structure/sign/painting/library{
 	pixel_y = 32
@@ -9716,6 +9728,10 @@
 /obj/machinery/light,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"Oe" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Og" = (
 /obj/item/clothing/suit/armored/f13/medium/rebel,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
@@ -10793,6 +10809,11 @@
 "SF" = (
 /obj/structure/badlands_props/medical_divider{
 	dir = 1
+	},
+/obj/structure/badlands_props{
+	icon_state = "anatomy";
+	pixel_x = 32;
+	density = 0
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
@@ -44742,7 +44763,7 @@ wo
 oG
 fo
 qR
-qR
+Oe
 qR
 qR
 wo
@@ -69211,7 +69232,7 @@ Ee
 wo
 qR
 qR
-qR
+Oe
 UR
 "}
 (125,1,1) = {"
@@ -77643,7 +77664,7 @@ wo
 wo
 UR
 wo
-qR
+Oe
 qR
 lY
 wo
@@ -80179,7 +80200,7 @@ Ee
 Ee
 Ee
 wo
-qR
+Oe
 UR
 "}
 (149,1,1) = {"
@@ -81757,7 +81778,7 @@ wo
 UR
 wo
 lY
-qR
+Oe
 wo
 wo
 Ee
@@ -103943,7 +103964,7 @@ Ee
 wo
 wo
 wo
-qR
+Oe
 UR
 "}
 (201,1,1) = {"
@@ -108758,11 +108779,11 @@ my
 my
 It
 nH
-tu
+Lh
 nH
 SF
 nH
-nH
+Lh
 ap
 ge
 ge
@@ -109672,11 +109693,11 @@ my
 my
 It
 xf
-nH
+Gm
 nH
 It
 nH
-nH
+Gm
 dF
 It
 ge
@@ -113784,11 +113805,11 @@ Ee
 Ee
 Ee
 Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+dR
+Zx
+It
+Ih
+It
 Ee
 Ee
 Ee
@@ -114242,10 +114263,10 @@ Ee
 Ee
 Ee
 Ee
-Ee
-Ee
-Ee
-Ee
+Fn
+Fn
+Fn
+qA
 Ee
 Ee
 Ee
@@ -114699,10 +114720,10 @@ Ee
 Ee
 Ee
 Ee
-Ee
-Ee
-Ee
-Ee
+Fn
+Fn
+Fn
+gb
 Ee
 Ee
 Ee
@@ -115155,11 +115176,11 @@ Ee
 Ee
 Ee
 Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+Po
+rl
+It
+GF
+It
 Ee
 Ee
 Ee
@@ -120225,7 +120246,7 @@ Ee
 aS
 Fn
 Fn
-lt
+Fn
 qA
 Ee
 Ee
@@ -120682,7 +120703,7 @@ Ee
 cW
 Fn
 Fn
-lt
+Fn
 gb
 Ee
 Ee
@@ -126664,7 +126685,7 @@ wo
 wo
 kN
 qR
-qR
+Oe
 LW
 qR
 qR
@@ -126681,7 +126702,7 @@ wo
 wo
 Pk
 qR
-qR
+Oe
 Kx
 LY
 Kx
@@ -127150,7 +127171,7 @@ wo
 wo
 wo
 wo
-qR
+Oe
 qR
 qR
 qR

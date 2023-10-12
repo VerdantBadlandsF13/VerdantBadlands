@@ -9169,6 +9169,10 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/village)
+"TZ" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Uc" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -34293,7 +34297,7 @@ PW
 sU
 DG
 Sq
-Sq
+TZ
 Sq
 Sq
 Bv
@@ -40228,7 +40232,7 @@ Bv
 Bv
 Bv
 Sq
-Sq
+TZ
 Sq
 Bv
 Bv
@@ -118147,7 +118151,7 @@ Bv
 ui
 Sq
 YU
-Sq
+TZ
 ui
 ui
 Bv
@@ -120310,7 +120314,7 @@ Bv
 Bv
 Bv
 Bv
-Sq
+TZ
 Sq
 Sq
 Sq
@@ -123488,7 +123492,7 @@ we
 Sq
 we
 Bv
-Sq
+TZ
 Sq
 Bv
 YG
@@ -125322,7 +125326,7 @@ Bv
 Bv
 Bv
 Sq
-Sq
+TZ
 Bv
 Bv
 Bv
@@ -125758,7 +125762,7 @@ Bv
 Bv
 Bv
 Bv
-Sq
+TZ
 Sq
 rk
 XK

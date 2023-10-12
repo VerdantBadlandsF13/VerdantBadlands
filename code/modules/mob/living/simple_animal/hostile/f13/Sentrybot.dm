@@ -30,6 +30,7 @@
 	light_on = TRUE
 	light_color = LIGHT_COLOR_BLOOD_MAGIC
 
+
 	melee_damage_lower = 48
 	melee_damage_upper = 72
 	projectiletype = /obj/item/projectile/beam/laser/gatling/sentrybot
@@ -69,6 +70,7 @@
 	faction = list("wastebot")
 	vision_range = 12
 	aggro_vision_range = 12
+	a_intent = INTENT_HARM// No, you cannot push the metal monster about.
 	move_resist = MOVE_FORCE_OVERPOWERING
 	mob_size = MOB_SIZE_LARGE
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 | HEAR_1

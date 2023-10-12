@@ -982,6 +982,8 @@ ATTACHMENTS
 	..()
 
 /obj/item/gun/proc/zoom(mob/living/user, forced_zoom)
+	var/datum/hud/hud = user.hud_used
+
 	if(!(user?.client))
 		return
 
@@ -993,6 +995,7 @@ ATTACHMENTS
 		zoomed = !zoomed
 
 	if(zoomed)//if we need to be zoomed in
+		hud.show_hud(version = 3)
 		user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		var/_x = 0
 		var/_y = 0
@@ -1013,6 +1016,7 @@ ATTACHMENTS
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
+		hud.show_hud(version = 1)
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0

@@ -51,7 +51,10 @@
 				to_chat(src, "<span class='danger'>You trip!</span>")
 
 		if(HAS_TRAIT(src, TRAIT_SNEAK))
-			adjustStaminaLoss(5)
+			if(m_intent == MOVE_INTENT_RUN)
+				adjustStaminaLoss(5)
+			if(m_intent == MOVE_INTENT_WALK)
+				adjustStaminaLoss(1)
 
 /mob/living/carbon/can_move_under_living(mob/living/other)
 	. = ..()

@@ -249,20 +249,39 @@ General audio for grabbing and dropping items.
 
 // General Melee
 /obj/item/New()
+	. = ..()
+// Am I already set? Return.
 	if(drop_class || grab_class)
 		return
-	if(sharpness == SHARP_EDGED || SHARP_POINTY)
+// Shouldn't need it twice, but just in case.
+	if(sharpness == SHARP_EDGED || sharpness == SHARP_POINTY)
 		drop_class = 8
 		grab_class = 8
-	else if(sharpness == SHARP_NONE)
+	if(sharpness == SHARP_NONE)
 		drop_class = 9
 		grab_class = 9
+// Do I still not have a class? Return.
+	if(!drop_class || !grab_class)
+		return
 
-/obj/item/gun/on_found(mob/living/user)
+/obj/item/gun/on_found(mob/finder)
 	. = ..()
-	play_equip_sound(src)
+	play_equip_sound(finder)
+
+/obj/item/grenade/on_found(mob/finder)
+	. = ..()
+	play_grenade_equip_sound(finder)
 
 /obj/item/gun/proc/play_equip_sound(src, volume=50)
+	if(src && equipsound && volume)
+		var/played_sound = equipsound
+
+		if(islist(equipsound))
+			played_sound = pick(equipsound)
+
+		playsound(src, played_sound, volume, 1)
+
+/obj/item/grenade/proc/play_grenade_equip_sound(src, volume=50)
 	if(src && equipsound && volume)
 		var/played_sound = equipsound
 
@@ -300,6 +319,9 @@ General audio for grabbing and dropping items.
 // Grabbing.
 /obj/item/pickup()
 	. = ..()
+	for(var/obj/item/I in src)
+		if(I.on_found(user))
+			return ..()
 	if(grab_class == 0)
 		return ..()
 	else

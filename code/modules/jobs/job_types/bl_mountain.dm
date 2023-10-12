@@ -126,6 +126,7 @@
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
 	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
+	chemwhiz = TRUE
 
 /datum/outfit/job/gmb/practitioner/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

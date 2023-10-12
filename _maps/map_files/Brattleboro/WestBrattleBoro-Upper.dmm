@@ -522,7 +522,7 @@
 	pixel_y = 32;
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cv" = (
 /obj/structure/curtain{
@@ -970,7 +970,7 @@
 /area/f13/building)
 "et" = (
 /obj/item/toy/beach_ball,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "eu" = (
 /obj/structure/dresser,
@@ -1456,7 +1456,7 @@
 /area/f13/building)
 "gu" = (
 /obj/item/binoculars,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "gv" = (
 /obj/structure/railing{
@@ -2857,7 +2857,7 @@
 "mg" = (
 /obj/structure/chair/stool,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_y = 32
 	},
 /turf/open/floor/f13/wood{
@@ -3107,7 +3107,7 @@
 /area/f13/building)
 "nj" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "nl" = (
 /obj/item/kirbyplants/random,
@@ -3364,7 +3364,7 @@
 /turf/open/transparent/glass/reinforced,
 /area/f13/vault)
 "ox" = (
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oA" = (
 /obj/structure/railing,
@@ -3493,7 +3493,7 @@
 "pd" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/dresser,
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = -32
 	},
 /turf/open/floor/f13/wood{
@@ -3666,7 +3666,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /turf/open/floor/carpet/red,
@@ -4676,7 +4676,7 @@
 	pixel_y = -6
 	},
 /obj/item/reagent_containers/food/snacks/meat/steak/ant_meat,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "ug" = (
 /obj/structure/chair/sofa/corp/corner{
@@ -4764,7 +4764,7 @@
 /area/f13/wasteland)
 "uv" = (
 /obj/structure/fluff/beach_umbrella,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "ux" = (
 /obj/structure/railing/wood{
@@ -5324,7 +5324,7 @@
 	dir = 4;
 	icon_state = "post_wood"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "wJ" = (
 /turf/open/transparent/glass/reinforced,
@@ -5751,7 +5751,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
 "yj" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /turf/open/floor/wood/wood_wide,
@@ -6254,7 +6254,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = -32
 	},
 /turf/open/floor/wood/wood_wide,
@@ -6928,6 +6928,12 @@
 	dir = 10
 	},
 /area/f13/vault/security)
+"CY" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/building)
 "Db" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -7251,7 +7257,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "El" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /obj/structure/table/wood,
@@ -7534,7 +7540,7 @@
 	},
 /area/f13/building)
 "Fp" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -7833,7 +7839,7 @@
 /turf/open/floor/f13,
 /area/f13/building)
 "GH" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9449,7 +9455,7 @@
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/security/checkpoint)
 "MX" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_y = 32
 	},
 /turf/open/floor/f13/wood{
@@ -9767,7 +9773,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "Or" = (
 /obj/item/attachments/scope,
@@ -10013,7 +10019,7 @@
 /area/f13/tunnel)
 "PD" = (
 /obj/structure/chair/stool,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "PE" = (
 /obj/structure/shieldwall/full/active_lethal,
@@ -10717,7 +10723,7 @@
 /obj/structure/fence/wooden{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "Su" = (
 /obj/structure/table,
@@ -11465,6 +11471,12 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
+"Vd" = (
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building)
 "Ve" = (
 /obj/structure/chair/sofa/corp/left,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12032,7 +12044,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/medical)
 "Xv" = (
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /turf/open/transparent/openspace,
@@ -12117,7 +12129,7 @@
 "XR" = (
 /obj/item/kirbyplants/random,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 32
 	},
 /turf/open/floor/f13/wood{
@@ -12227,7 +12239,7 @@
 /area/f13/building)
 "YA" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/poster/prewar{
+/obj/effect/landmark/poster_spawner/prewar{
 	pixel_y = 32
 	},
 /turf/open/floor/f13/wood{
@@ -110150,11 +110162,11 @@ my
 my
 It
 GV
-nH
+Vd
 nH
 It
 nH
-nH
+Vd
 yN
 It
 ge
@@ -110608,9 +110620,9 @@ my
 It
 It
 It
+CY
 It
-It
-It
+CY
 It
 It
 It

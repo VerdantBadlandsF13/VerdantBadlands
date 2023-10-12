@@ -1,4 +1,4 @@
-// Pulled from FP13, reworked for our purposes and given some life.
+// Pulled from FP13, original from Hippie. Reworked for our purposes and given some life.
 // A salute to those lost to time.
 // - Carl
 
@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
 	if (user.active_storage)
 		user.active_storage.close(user)
-	ST.orient2hud_legacy(user)
+//	ST.orient2hud_legacy(user)
 	SEND_SIGNAL(ST, COMSIG_TRY_STORAGE_SHOW, user)
 
 /obj/machinery/autodoc/ui_act(action, list/params)
@@ -280,8 +280,8 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		open_machine()
 	update_icon()
 
-/obj/machinery/autodoc/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+/obj/machinery/autodoc/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 
 	if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ))
 		to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")

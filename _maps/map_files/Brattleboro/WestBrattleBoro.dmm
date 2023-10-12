@@ -47,7 +47,6 @@
 /turf/open/indestructible/ground/outside/bl/dirt,
 /area/f13/ruins)
 "abW" = (
-/obj/structure/barricade/bars,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
@@ -119,7 +118,7 @@
 	dir = 4
 	},
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "aeE" = (
 /obj/structure/railing,
@@ -999,7 +998,7 @@
 /area/f13/building)
 "aVs" = (
 /obj/item/chair,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "aVB" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1041,7 +1040,7 @@
 /area/f13/building)
 "aXO" = (
 /obj/machinery/light/floor,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "aXS" = (
 /obj/structure/barricade/wooden,
@@ -1345,7 +1344,7 @@
 /area/f13/building)
 "boj" = (
 /obj/structure/simple_door/metal/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "bos" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
@@ -1398,7 +1397,7 @@
 	},
 /obj/structure/fence/wooden,
 /obj/structure/railing/wood,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "bpt" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/corner{
@@ -1407,7 +1406,7 @@
 /area/f13/vault)
 "bpu" = (
 /obj/item/storage/trash_stack,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "bpI" = (
 /obj/machinery/light{
@@ -1930,7 +1929,7 @@
 /area/f13/building)
 "bUo" = (
 /obj/structure/car/rubbish1,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "bVr" = (
 /obj/effect/decal/marking{
@@ -2266,7 +2265,7 @@
 /obj/item/storage/trash_stack{
 	icon_state = "Junk_3"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cns" = (
 /obj/structure/fence{
@@ -2598,7 +2597,7 @@
 /obj/structure/chair/f13chair2{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cAG" = (
 /obj/machinery/vending/nukacolavend,
@@ -2740,7 +2739,7 @@
 	pixel_x = -28
 	},
 /obj/structure/railing/wood,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cGz" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2862,7 +2861,7 @@
 /area/f13/wasteland)
 "cOc" = (
 /obj/structure/fence/corner,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cOz" = (
 /turf/open/floor/carpet/arcade,
@@ -3095,7 +3094,7 @@
 	dir = 4;
 	pixel_x = 9
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cYB" = (
 /obj/structure/table,
@@ -3749,7 +3748,7 @@
 /area/f13/vault/diner)
 "dKw" = (
 /obj/item/minefield_sign,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "dKx" = (
 /obj/machinery/light{
@@ -4820,7 +4819,7 @@
 /area/f13/building)
 "eRo" = (
 /obj/effect/landmark/nuclear_waste_spawner/weak,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "eRr" = (
 /mob/living/simple_animal/hostile/radroach,
@@ -5034,7 +5033,7 @@
 	dir = 4;
 	pixel_x = 9
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "eYG" = (
 /obj/structure/curtain{
@@ -5941,7 +5940,7 @@
 /obj/structure/billboard/cola/pristine{
 	icon_state = "advert1"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "fVG" = (
 /obj/structure/bonfire/prelit,
@@ -6307,7 +6306,7 @@
 	dir = 4;
 	pixel_x = 9
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "gpz" = (
 /obj/structure/chair/folding{
@@ -6670,7 +6669,7 @@
 /area/f13/wasteland)
 "gQc" = (
 /obj/structure/stairs/west,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "gQk" = (
 /obj/item/kirbyplants/random,
@@ -7309,7 +7308,7 @@
 /obj/structure/fence/wooden{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "hER" = (
 /obj/structure/shelf_wood,
@@ -7411,7 +7410,7 @@
 	dir = 4;
 	pixel_x = 3
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "hLE" = (
 /obj/structure/table/reinforced,
@@ -7488,7 +7487,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = 17
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "hPk" = (
 /obj/structure/table/wood,
@@ -8112,7 +8111,7 @@
 /area/f13/building)
 "iyJ" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "izk" = (
 /obj/machinery/light{
@@ -8131,7 +8130,7 @@
 /obj/structure/railing/handrail/blue{
 	pixel_y = 32
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "iBi" = (
 /obj/item/grenade/f13/mine/planted,
@@ -8403,7 +8402,7 @@
 /obj/item/storage/trash_stack{
 	icon_state = "trash_2"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "iOc" = (
 /obj/structure/curtain{
@@ -9066,7 +9065,7 @@
 	pixel_y = -16;
 	pixel_x = 2
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "jth" = (
 /obj/effect/decal/waste{
@@ -9932,7 +9931,7 @@
 /area/f13/building)
 "kna" = (
 /obj/structure/fence,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "knh" = (
 /obj/structure/table/wood,
@@ -9972,7 +9971,7 @@
 /obj/structure/fence{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "kpR" = (
 /obj/structure/chair/stool/retro,
@@ -9982,7 +9981,7 @@
 /obj/structure/fence/corner{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "kql" = (
 /obj/structure/curtain{
@@ -10052,7 +10051,7 @@
 /area/f13/vault/dormitory)
 "ktV" = (
 /obj/structure/debris/v1,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "kug" = (
 /obj/structure/curtain{
@@ -10584,7 +10583,7 @@
 	pixel_x = -28
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "kRF" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10731,7 +10730,7 @@
 /area/f13/building)
 "kZm" = (
 /obj/structure/car/rubbish3,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "kZn" = (
 /obj/item/key/motorcycle,
@@ -10912,7 +10911,7 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "lfQ" = (
 /obj/structure/table/wood,
@@ -12171,7 +12170,7 @@
 /obj/structure/fence/wooden{
 	pixel_y = 32
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "mrI" = (
 /obj/structure/curtain{
@@ -12279,7 +12278,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "mvY" = (
 /obj/structure/easel,
@@ -12538,7 +12537,7 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "mKH" = (
 /obj/structure/table/wood,
@@ -13122,7 +13121,7 @@
 /area/f13/wasteland)
 "niF" = (
 /obj/structure/nest/molerat,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "nje" = (
 /obj/structure/railing/wood,
@@ -13176,7 +13175,7 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "nkO" = (
 /obj/structure/car/rubbish4,
@@ -13964,7 +13963,7 @@
 	pixel_x = 9
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "nXt" = (
 /obj/structure/toilet{
@@ -14615,7 +14614,7 @@
 /area/f13/ruins)
 "oCM" = (
 /obj/item/grenade/f13/mine/planted,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oCT" = (
 /obj/structure/sign/painting/library{
@@ -14835,7 +14834,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oPm" = (
 /obj/structure/curtain{
@@ -14869,7 +14868,7 @@
 /area/f13/building)
 "oRm" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oRV" = (
 /obj/structure/chair/sofa/corp{
@@ -14924,7 +14923,7 @@
 "oUx" = (
 /obj/structure/railing/wood,
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oUK" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
@@ -16145,7 +16144,7 @@
 /area/f13/building)
 "qhL" = (
 /obj/structure/nest/ant,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "qhS" = (
 /obj/item/kirbyplants/random,
@@ -16437,7 +16436,7 @@
 	},
 /area/f13/wasteland)
 "qur" = (
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "quu" = (
 /obj/machinery/light{
@@ -16609,7 +16608,7 @@
 	dir = 1;
 	pixel_y = 7
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "qCD" = (
 /obj/structure/catwalk,
@@ -17177,7 +17176,7 @@
 /obj/structure/fence/corner{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "rdf" = (
 /obj/structure/decoration/vent/rusty,
@@ -17488,7 +17487,7 @@
 /area/f13/building)
 "roD" = (
 /obj/effect/decal/remains/human,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "roI" = (
 /obj/item/storage/trash_stack,
@@ -17667,7 +17666,7 @@
 	density = 0;
 	pixel_y = 18
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "rxb" = (
 /obj/structure/railing/wood{
@@ -18101,7 +18100,7 @@
 	pixel_y = 32;
 	pixel_x = 17
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "rPa" = (
 /obj/machinery/button/door{
@@ -18196,14 +18195,6 @@
 	destination_z = 4
 	},
 /area/f13/tunnel)
-"rTs" = (
-/obj/effect/decal/cleanable/crayon{
-	name = "grafitti";
-	icon_state = "toilet";
-	pixel_x = -32
-	},
-/turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
-/area/f13/building)
 "rTP" = (
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side{
@@ -18306,7 +18297,7 @@
 /obj/structure/fence{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "rYs" = (
 /mob/living/simple_animal/hostile/radroach,
@@ -18343,7 +18334,7 @@
 	pixel_y = 7
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "sak" = (
 /obj/machinery/light{
@@ -18630,7 +18621,7 @@
 /area/f13/tunnel)
 "sih" = (
 /obj/structure/barricade/wooden,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "siE" = (
 /obj/structure/dresser,
@@ -19074,7 +19065,7 @@
 /area/f13/vault/dormitory)
 "sBL" = (
 /obj/effect/landmark/nuclear_waste_spawner,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "sCb" = (
 /obj/effect/decal/marking{
@@ -19220,7 +19211,7 @@
 	dir = 4;
 	icon_state = "post_wood"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "sHO" = (
 /obj/structure/table/wood,
@@ -19327,7 +19318,7 @@
 /obj/structure/fence/corner{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "sOd" = (
 /obj/structure/window/fulltile/house{
@@ -19440,7 +19431,7 @@
 	icon_state = "trash_3"
 	},
 /obj/machinery/light/floor,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "sSH" = (
 /turf/closed/wall/f13/tunnel,
@@ -22209,7 +22200,7 @@
 	},
 /area/f13/building)
 "vAS" = (
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/building)
 "vBm" = (
 /obj/machinery/workbench,
@@ -22248,7 +22239,7 @@
 /obj/item/minefield_sign{
 	pixel_y = 8
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "vDg" = (
 /obj/structure/toilet{
@@ -22779,7 +22770,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "wdg" = (
 /obj/structure/chair/sofa{
@@ -22926,7 +22917,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "wkZ" = (
 /obj/structure/curtain{
@@ -23787,7 +23778,7 @@
 /area/f13/building)
 "wYS" = (
 /obj/structure/debris/v3,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "wZk" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
@@ -24017,7 +24008,7 @@
 /area/f13/building)
 "xit" = (
 /obj/structure/car/rubbish2,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "xiB" = (
 /obj/structure/fence,
@@ -24095,7 +24086,7 @@
 /obj/structure/stairs/east{
 	color = "#624b30"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "xmd" = (
 /obj/structure/chair/stool/retro,
@@ -24314,7 +24305,7 @@
 	dir = 4;
 	pixel_x = 3
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "xyQ" = (
 /obj/structure/table,
@@ -24425,7 +24416,7 @@
 /area/f13/building)
 "xEV" = (
 /obj/structure/billboard/cola/pristine,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "xFd" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -24504,7 +24495,7 @@
 /area/f13/building)
 "xJG" = (
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "xKq" = (
 /obj/structure/disposalpipe/broken{
@@ -24975,7 +24966,7 @@
 /area/f13/vault/diner)
 "yfV" = (
 /obj/item/trade_sign,
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass,
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "ygr" = (
 /obj/effect/decal/cleanable/blood/gibs/core{
@@ -37214,7 +37205,7 @@ iVp
 kCY
 oVm
 qeW
-rTs
+nCL
 exy
 bRJ
 jgw

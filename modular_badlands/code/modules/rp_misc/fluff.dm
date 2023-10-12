@@ -256,7 +256,7 @@ General audio for grabbing and dropping items.
 /obj/item/grenade
 	drop_class = 7
 	grab_class = 7
-
+/*
 // General Melee
 /obj/item/New()
 	. = ..()
@@ -273,7 +273,7 @@ General audio for grabbing and dropping items.
 // Do I still not have a class? Return.
 	if(!drop_class || !grab_class)
 		return ..()
-/*
+
 /obj/item/gun/on_found(mob/finder)
 	. = ..()
 	play_equip_sound(finder)

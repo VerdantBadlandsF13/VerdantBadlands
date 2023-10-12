@@ -5,22 +5,10 @@
 /turf/open/indestructible/ground/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-	has_base_range = 3
-	spillover_flags = TURF_HAS_EDGES// | TURF_HAS_CORNERS
-
-/turf/open/indestructible/ground/bl/New()
-	..()
-	update_icon(1)
 
 /turf/open/indestructible/ground/outside/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-	has_base_range = 3
-	spillover_flags = TURF_HAS_EDGES// | TURF_HAS_CORNERS
-
-/turf/open/indestructible/ground/outside/bl/New()
-	..()
-	update_icon(1)
 
 /obj/effect/overlay/bl_turf
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
@@ -86,7 +74,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-//	icon_state = "grass[rand(0,3)]"
+	icon_state = "grass[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_grass_meadow
 	name = "meadow"
@@ -106,7 +94,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-//	icon_state = "grass_dead[rand(0,3)]"
+	icon_state = "grass_dead[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_dead_meadow
 	name = "dying meadow"
@@ -126,7 +114,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-//	icon_state = "grass_swamp[rand(0,3)]"
+	icon_state = "grass_swamp[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_swamp
 	name = "moist grass"
@@ -134,7 +122,7 @@
 
 // TAIGA GRASS
 /turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass
-	name = "mossy soil"
+	name = "mossy grass"
 	desc = "There's dark days ahead, friend."
 	icon_state = "grass_taiga"
 	footstep = FOOTSTEP_GRASS
@@ -146,30 +134,30 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-//	icon_state = "grass_taiga[rand(0,3)]"
+	icon_state = "grass_taiga[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_taiga
 	name = "mossy grass"
 	icon_state = "grass_taiga_edges"
 
 // BADLANDS GRASS
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass
-	name = "mossy grass"
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass
+	name = "dry grass"
 	desc = "There's dark days ahead, friend."
 	icon_state = "grass_badlands"
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_GRASS
 	clawfootstep = FOOTSTEP_GRASS
 
-/turf/open/indestructible/ground/outside/bl/grass_standard/taiga_grass/Initialize()
+/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass/Initialize()
 	. = ..()
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-//	icon_state = "grass_badlands[rand(0,3)]"
+	icon_state = "grass_badlands[rand(0,3)]"
 
-/obj/effect/overlay/bl_turf/bl_taiga
-	name = "mossy soil"
+/obj/effect/overlay/bl_turf/bl_badlands
+	name = "dry grass"
 	icon_state = "grass_badlands_edges"
 
 /////////////////
@@ -180,14 +168,13 @@
 	name = "dry soil"
 	desc = "There's dark days ahead, friend."
 	icon_state = "dirt"
-	spillover_flags = null
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
 
 /turf/open/indestructible/ground/outside/bl/dirt/Initialize()
 	. = ..()
-//	icon_state = "dirt[rand(0,3)]"
+	icon_state = "dirt[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/dirt_tracks
 	name = "dry soil"
@@ -201,14 +188,13 @@
 	name = "dry soil"
 	desc = "There's dark days ahead, friend."
 	icon_state = "dirt"
-	spillover_flags = null
 	footstep = FOOTSTEP_SAND
 	barefootstep = FOOTSTEP_SAND
 	clawfootstep = FOOTSTEP_SAND
 
 /turf/open/indestructible/ground/bl/dirt/Initialize()
 	. = ..()
-//	icon_state = "dirt[rand(0,3)]"
+	icon_state = "dirt[rand(0,3)]"
 
 // GRAVEL
 /turf/open/indestructible/ground/outside/bl/gravel
@@ -216,28 +202,26 @@
 	desc = "There's dark days ahead, friend."
 	icon_state = "gravel"
 	slowdown = -0.1
-	spillover_flags = null
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL
 
 /turf/open/indestructible/ground/outside/bl/gravel/Initialize()
 	. = ..()
-//	icon_state = "gravel[rand(0,3)]"
+	icon_state = "gravel[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/gravel
 	name = "gravel"
 	desc = "There's dark days ahead, friend."
 	icon_state = "gravel"
 	slowdown = -0.1
-	spillover_flags = null
 	footstep = FOOTSTEP_GRAVEL
 	barefootstep = FOOTSTEP_GRAVEL
 	clawfootstep = FOOTSTEP_GRAVEL
 
 /turf/open/indestructible/ground/bl/gravel/Initialize()
 	. = ..()
-//	icon_state = "gravel[rand(0,3)]"
+	icon_state = "gravel[rand(0,3)]"
 
 // MUD
 /turf/open/indestructible/ground/outside/bl/mud
@@ -245,28 +229,26 @@
 	desc = "There's dark days ahead, friend."
 	icon_state = "mud"
 	slowdown = 3
-	spillover_flags = null
 	footstep = FOOTSTEP_MEAT
 	barefootstep = FOOTSTEP_MEAT
 	clawfootstep = FOOTSTEP_MEAT
 
 /turf/open/indestructible/ground/outside/bl/mud/Initialize()
 	. = ..()
-//	icon_state = "mud[rand(0,3)]"
+	icon_state = "mud[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/mud
 	name = "mud"
 	desc = "There's dark days ahead, friend."
 	icon_state = "mud"
 	slowdown = 3
-	spillover_flags = null
 	footstep = FOOTSTEP_MEAT
 	barefootstep = FOOTSTEP_MEAT
 	clawfootstep = FOOTSTEP_MEAT
 
 /turf/open/indestructible/ground/bl/mud/Initialize()
 	. = ..()
-//	icon_state = "mud[rand(0,3)]"
+	icon_state = "mud[rand(0,3)]"
 
 // SAND
 /turf/open/indestructible/ground/outside/bl/sand
@@ -280,7 +262,7 @@
 
 /turf/open/indestructible/ground/outside/bl/sand/Initialize()
 	. = ..()
-//	icon_state = "sand[rand(0,3)]"
+	icon_state = "sand[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_sand
 	name = "sand"
@@ -291,29 +273,25 @@
 	name = "stone"
 	desc = "There's dark days ahead, friend."
 	icon_state = "stone"
-	spillover_flags = null
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_FLOOR
 	clawfootstep = FOOTSTEP_FLOOR
-	spillover_flags = null
 
 /turf/open/indestructible/ground/outside/bl/stone/Initialize()
 	. = ..()
-//	icon_state = "stone[rand(0,3)]"
+	icon_state = "stone[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/stone
 	name = "stone"
 	desc = "There's dark days ahead, friend."
 	icon_state = "stone"
-	spillover_flags = null
 	footstep = FOOTSTEP_FLOOR
 	barefootstep = FOOTSTEP_FLOOR
 	clawfootstep = FOOTSTEP_FLOOR
-	spillover_flags = null
 
 /turf/open/indestructible/ground/bl/stone/Initialize()
 	. = ..()
-//	icon_state = "stone[rand(0,3)]"
+	icon_state = "stone[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/rocks
 	name = "rocks"
@@ -334,7 +312,7 @@
 
 /turf/open/indestructible/ground/outside/bl/clay/Initialize()
 	. = ..()
-//	icon_state = "clay[rand(0,3)]"
+	icon_state = "clay[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_clay
 	name = "clay"

@@ -11,12 +11,9 @@ It keeps the map changing, and has various applications in the realm of RP. - Ca
 
 /obj/effect/landmark/tremor_area/proc/tremor()
 
-	for(var/turf/open/indestructible/ground/inside/TR in orange(range, get_turf(src)))
+	for(var/turf/open/indestructible/ground/inside/mountain/TR in orange(range, get_turf(src)))
 		TR.collapse_check()
 
-	if(prob(80))
-		SEND_SOUND(world, sound("sound/effects/explosioncreak[rand(1,2)].ogg", 75))
-	else
-		SEND_SOUND(world, sound('sound/effects/explosionfar.ogg', 75))
+	qdel(src)
 
 #undef TREMOR_CHECK_RANGE

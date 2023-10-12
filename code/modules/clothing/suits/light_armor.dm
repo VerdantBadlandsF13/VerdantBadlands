@@ -244,6 +244,14 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
 
+/obj/item/clothing/suit/armored/f13/light/khan
+	name = "biker jacket"
+	desc = "Tough leather and a faded logo. What'd this stand for? Clearly not anything still around, that's for sure."
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
+	heat_protection = CHEST
+	siemens_coefficient = 1.1
+
 // GMB
 
 /obj/item/clothing/suit/armored/f13/light/gmb

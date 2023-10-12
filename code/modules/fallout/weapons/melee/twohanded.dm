@@ -75,6 +75,10 @@
 		var/obj/structure/simple_door/M = A
 		M.take_damage(40, BRUTE, "melee", 0)
 
+/obj/item/twohanded/legionaxe/splitter
+	name = "splitter"
+	desc = "A heavy fireman axe from the old world, restored to working order by an unknown craftsmen. Excellent for smashing doors or heads."
+
 // Fire Axe			Keywords: Damage 25/46
 /obj/item/twohanded/fireaxe
 	name = "fire axe"

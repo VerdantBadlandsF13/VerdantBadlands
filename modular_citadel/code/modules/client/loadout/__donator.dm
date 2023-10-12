@@ -95,6 +95,18 @@
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
 
+/datum/gear/donator/kits/appleplastic_two
+	name = "Groupie Kit"
+	path = /obj/item/storage/box/large/custom_kit/appleplastic_two
+	ckeywhitelist = list("appleplastic")
+
+/obj/item/storage/box/large/custom_kit/appleplastic_two/PopulateContents()
+	new /obj/item/clothing/suit/armored/f13/light/khan_groupie(src)
+	new /obj/item/clothing/under/f13/khan_groupie(src)
+	new /obj/item/twohanded/legionaxe/splitter(src)
+	new /obj/item/gun/ballistic/rifle/repeater/brush(src)
+	new /obj/item/ammo_box/tube/c4570(src)
+
 /datum/gear/donator/kits/lurzefromgermany
 	name = "Robot Token"
 	path = /obj/item/storage/box/large/custom_kit/lurzefromgermany

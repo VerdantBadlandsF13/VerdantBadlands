@@ -17,7 +17,7 @@ var/list/flooring_cache = list()
 	var/icon_base
 	var/has_base_range
 	var/spillover_flags
-/*
+
 /turf/open/update_icon(update_neighbors)
 	. = ..()
 
@@ -77,4 +77,4 @@ var/list/flooring_cache = list()
 		I.layer = layer
 		flooring_cache[cache_key] = I
 	return flooring_cache[cache_key]
-*/
+

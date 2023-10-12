@@ -20,6 +20,7 @@
 	var/draw_sound = 'sound/weapons/bowdraw.wav'
 	dryfire_text = "*no arrows*"
 	dryfire_sound = ""
+	can_jam = 0
 
 /obj/item/gun/ballistic/bow/process_chamber(mob/living/user, empty_chamber = 0)
 	var/obj/item/ammo_casing/AC = chambered //Find chambered round

@@ -182,7 +182,7 @@ ATTACHMENTS
 	safety = !safety
 	playsound(user, safety_audio, 100, 1)
 	to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
-	user.DelayNextAction(CLICK_CD_CLICK_ABILITY)
+	user.DelayNextAction(CLICK_CD_RESIST)
 	. = ..()
 
 /obj/item/gun/Initialize()

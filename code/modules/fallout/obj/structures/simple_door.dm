@@ -28,8 +28,8 @@
 	var/moving = 0
 	var/material_type = /obj/item/stack/sheet/mineral/wood
 	var/can_disasemble = 0
-	var/open_sound = 'sound/machines/door_open.ogg'
-	var/close_sound = 'sound/machines/door_close.ogg'
+	var/open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/dooropen.ogg'
+	var/close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/doorclose.ogg'
 	var/opening_time = 2
 	var/closing_time = 4
 
@@ -340,8 +340,8 @@
 	icon_state = "metal"
 	door_type = "metal"
 	material_type = /obj/item/stack/sheet/metal
-	open_sound = "sound/f13machines/doorstore_open.ogg"
-	close_sound = "sound/f13machines/doorstore_close.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen[rand(1,2)].ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose[rand(1,2)].ogg"
 	explosion_block = 1.5
 	material_count = 5
 

@@ -16,8 +16,8 @@
 	material_drop = /obj/item/stack/sheet/plasteel
 	material_drop_amount = 5
 	var/obj/item/paper/fluff/jobs/cargo/manifest/manifest
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateopenmetal.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateclosemetal.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateopenmetal.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateclosemetal.ogg"
 
 /obj/structure/closet/crate/New()
 	..()
@@ -90,8 +90,8 @@
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	material_drop_amount = 5
 	var/pryLidTimer = 250
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateclose.ogg"
 
 /obj/structure/closet/crate/coffin/examine(mob/user)
 	. = ..()
@@ -126,8 +126,8 @@
 	desc = "A freezer."
 	name = "freezer"
 	icon_state = "freezer"
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateclose.ogg"
 
 //Snowflake organ freezer code
 //Order is important, since we check source, we need to do the check whenever we have all the organs in the crate
@@ -198,8 +198,8 @@
 	name = "hydroponics crate"
 	desc = "All you need to destroy those pesky weeds and pests."
 	icon_state = "hydrocrate"
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateclose.ogg"
 
 /obj/structure/closet/crate/engineering
 	name = "engineering crate"
@@ -230,8 +230,8 @@
 /obj/structure/closet/crate/solarpanel_small
 	name = "budget solar panel crate"
 	icon_state = "engi_e_crate"
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/crateclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/crateclose.ogg"
 
 /obj/structure/closet/crate/solarpanel_small/PopulateContents()
 	..()

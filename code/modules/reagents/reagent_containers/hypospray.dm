@@ -205,6 +205,10 @@
 	amount_per_transfer_from_this = 15
 	list_reagents = list(/datum/reagent/medicine/medx = 15)
 
+/obj/item/reagent_containers/hypospray/medipen/medx/afterattack()
+	. = ..()
+	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingmedx.ogg', 100, 1)
+
 // ---------------------------------
 // PSYCHO
 
@@ -216,6 +220,10 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/psycho = 10)
+
+/obj/item/reagent_containers/hypospray/medipen/psycho/afterattack()
+	. = ..()
+	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg', 100, 1)
 
 // End Fallout -------------------------------------------------
 

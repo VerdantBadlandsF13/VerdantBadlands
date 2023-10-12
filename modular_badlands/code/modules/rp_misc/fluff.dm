@@ -351,3 +351,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 0)
+
+/obj/item/reagent_containers/food/drinks/pickup()
+	. = ..()
+	playsound(src, "modular_badlands/code/modules/rp_misc/sound/food/bottlefullgrab[rand(1,2)].ogg", 95, 0)

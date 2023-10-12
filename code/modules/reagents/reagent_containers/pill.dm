@@ -14,6 +14,7 @@
 	var/roundstart = FALSE
 	var/self_delay = FALSE //pills are instant, this is because patches inheret their aplication from pills
 	var/dissolvable = TRUE
+	var/swallow_audio = 'modular_badlands/code/modules/rp_misc/sound/medical/pillswallow.ogg'
 
 /obj/item/reagent_containers/pill/Initialize()
 	. = ..()
@@ -24,6 +25,10 @@
 
 /obj/item/reagent_containers/pill/attack_self(mob/user)
 	return
+
+/obj/item/reagent_containers/pill/afterattack()
+	. = ..()
+	playsound(loc, swallow_audio, 100, 1)
 
 /obj/item/reagent_containers/pill/get_w_volume() // DEFAULT_VOLUME_TINY at 25u, DEFAULT_VOLUME_SMALL at 50u
 	return DEFAULT_VOLUME_TINY/2 + reagents.total_volume / reagents.maximum_volume * DEFAULT_VOLUME_TINY

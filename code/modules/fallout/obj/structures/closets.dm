@@ -25,5 +25,5 @@
 	name = "fridge"
 	desc = "Old fridge without power."
 	icon_state = "fridger"
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/fridgeopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/fridgeclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/fridgeopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/fridgeclose.ogg"

@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/freezer
 	icon_state = "freezer"
-	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/fridgeopen.ogg"
-	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/fridgeclose.ogg"
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/fridgeopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/fridgeclose.ogg"
 	var/jones = FALSE
 
 /obj/structure/closet/secure_closet/freezer/Destroy()

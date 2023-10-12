@@ -127,7 +127,7 @@
 		reagents.reaction(C, INGEST, fraction) 	//checkLiked(fraction, M) // Blood isn't food, sorry.
 		reagents.trans_to(C, gulp_size)
 		reagents.remove_reagent(src, 2) //Inneficency, so hey, IVs are usefull.
-		playsound(C.loc,'sound/items/drink.ogg', rand(10, 50), TRUE)
+		playsound(C.loc,"modular_badlands/code/modules/rp_misc/sound/food/sip[rand(1,5)].ogg", rand(10, 50), TRUE)
 		return
 	..()
 

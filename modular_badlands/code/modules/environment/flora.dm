@@ -177,13 +177,6 @@
 	overdose_threshold = 30
 
 /datum/reagent/consumable/licoricepulp/on_mob_life(mob/living/carbon/M)
-	if(M.oxyloss > 35)
-		M.setOxyLoss(35, 0)
-	if(M.losebreath >= 4)
-		M.losebreath -= 2
-	if(M.losebreath < 0)
-		M.losebreath = 0
-	M.adjustStaminaLoss(-0.5*REM, updating_health = FALSE)
 	if(prob(20))
 		for(var/organ in M.internal_organs)
 			M.adjustOrganLoss(-1 *REAGENTS_EFFECT_MULTIPLIER, 150)

@@ -287,4 +287,5 @@
 	icon_state = "amr_gmb"
 	item_state = "amr_gmb"
 	spread = 0.25
+	recoil = 3
 	zoomable = FALSE

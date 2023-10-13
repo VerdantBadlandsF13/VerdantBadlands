@@ -4,6 +4,7 @@
 	..()
 	if(status_flags & GODMODE || !feels_pain())
 		return 0
+
 	var/pain_goes_up = TRUE
 
 	if(health < HEALTH_THRESHOLD_CRIT) //Going under the crit threshold makes you immediately collapse

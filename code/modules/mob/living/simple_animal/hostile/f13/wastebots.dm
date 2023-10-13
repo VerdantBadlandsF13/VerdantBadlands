@@ -199,10 +199,9 @@
 	icon_dead = "protectron_dead"
 	health = 130
 	maxHealth = 130
-	speed = 4
+	move_to_delay = 4
 	melee_damage_lower = 15
 	melee_damage_upper = 25
-	extra_projectiles = 1
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
@@ -254,7 +253,7 @@
 	health = 200
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	maxHealth = 200
-	speed = 0
+	move_to_delay = 1.8
 	melee_damage_lower = 55
 	melee_damage_upper = 60
 	environment_smash = 2 //can smash walls

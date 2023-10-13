@@ -155,9 +155,12 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/medicine/stimpak = 10)
 
-/obj/item/reagent_containers/hypospray/medipen/stimpak/afterattack()
+/obj/item/reagent_containers/hypospray/medipen/stimpak/attack()
 	. = ..()
-	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/stim_use.ogg', 100, 1)
+	if(!list_reagents)
+		return
+	else
+		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/stim_use.ogg', 100, 1)
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()
@@ -205,9 +208,12 @@
 	amount_per_transfer_from_this = 15
 	list_reagents = list(/datum/reagent/medicine/medx = 15)
 
-/obj/item/reagent_containers/hypospray/medipen/medx/afterattack()
+/obj/item/reagent_containers/hypospray/medipen/medx/attack()
 	. = ..()
-	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingmedx.ogg', 100, 1)
+	if(!list_reagents)
+		return
+	else
+		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingmedx.ogg', 100, 1)
 
 // ---------------------------------
 // PSYCHO
@@ -221,9 +227,12 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/psycho = 10)
 
-/obj/item/reagent_containers/hypospray/medipen/psycho/afterattack()
+/obj/item/reagent_containers/hypospray/medipen/psycho/attack()
 	. = ..()
-	playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg', 100, 1)
+	if(!list_reagents)
+		return
+	else
+		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg', 100, 1)
 
 // End Fallout -------------------------------------------------
 

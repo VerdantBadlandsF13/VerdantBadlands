@@ -90,34 +90,26 @@ Light, followed by extreme.
 */
 
 /mob/living/carbon/proc/handle_lowpain(mob/living/M)
+	if(world.time < last_breath)
+		return
 	var/lowpain_sound
 	if(src.gender == FEMALE)
 		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/female_moan[rand(1,3)].ogg"
 	else
 		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_moan[rand(1,3)].ogg"
 	playsound(src, lowpain_sound, 50, 1)
+	last_breath = world.time + 24 SECONDS
 
 /mob/living/carbon/proc/handle_highpain(mob/living/M)
+	if(world.time < last_breath)
+		return
 	var/highpain_sound
 	if(src.gender == FEMALE)
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
 	else
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
 	playsound(src, highpain_sound, 50, 1)
-
-/*
-Not quite just fluff, but handling explosive concussive force.
-*/
-/mob/living/carbon/ex_act(mob/living/carbon/M)
-	. = ..()
-	if(prob(20))
-		SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
-		M.gain_trauma(/datum/brain_trauma/mild/concussion)
-		M.confused = max(M.confused, 10)
-		M.adjust_blurriness(60)
-	else
-		SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
-		M.adjust_blurriness(30)
+	last_breath = world.time + 48 SECONDS
 
 /*
 Radio static below.

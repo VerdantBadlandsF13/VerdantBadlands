@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
 	if (user.active_storage)
 		user.active_storage.close(user)
-//	ST.orient2hud_legacy(user)
+	ST.orient2hud_volumetric(user, 2)
 	SEND_SIGNAL(ST, COMSIG_TRY_STORAGE_SHOW, user)
 
 /obj/machinery/autodoc/ui_act(action, list/params)
@@ -280,16 +280,15 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		open_machine()
 	update_icon()
 
-/obj/machinery/autodoc/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+/obj/machinery/autodoc/ui_interact(mob/user, datum/tgui/ui)
 
 	if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ))
 		to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
 		return
 
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "autodoc", name, 455, 440, master_ui, state)
+		ui = new(user, src, "Autodoc")
 		ui.open()
 
 /obj/machinery/autodoc/ui_data(mob/user)

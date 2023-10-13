@@ -26,10 +26,6 @@
 /obj/item/reagent_containers/pill/attack_self(mob/user)
 	return
 
-/obj/item/reagent_containers/pill/afterattack()
-	. = ..()
-	playsound(loc, swallow_audio, 100, 1)
-
 /obj/item/reagent_containers/pill/get_w_volume() // DEFAULT_VOLUME_TINY at 25u, DEFAULT_VOLUME_SMALL at 50u
 	return DEFAULT_VOLUME_TINY/2 + reagents.total_volume / reagents.maximum_volume * DEFAULT_VOLUME_TINY
 
@@ -57,6 +53,8 @@
 	var/makes_me_think = pick(strings("redpill.json", "redpill_questions"))
 	if(icon_state == "pill4" && prob(5)) //you take the red pill - you stay in Wonderland, and I show you how deep the rabbit hole goes
 		addtimer(CALLBACK(GLOBAL_PROC, /proc/to_chat, M, "<span class='notice'>[makes_me_think]</span>"), 50)
+
+	playsound(loc, swallow_audio, 100, 1)
 
 	log_combat(user, M, "fed", reagents.log_list())
 	if(reagents.total_volume)

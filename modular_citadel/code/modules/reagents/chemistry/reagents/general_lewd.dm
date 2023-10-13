@@ -1,3 +1,8 @@
+// The unfortunate defines.
+#define BLOOD_STATE_SEMEN				"semen"
+#define BLOOD_STATE_SEFEM				"femcum"
+#define SEMEN_AMOUNT_PER_DECAL			20
+
 //body bluids
 /datum/reagent/consumable/semen
 	name = "Semen"
@@ -33,6 +38,8 @@
 	icon = 'icons/obj/genitals/effects.dmi'
 	icon_state = "semen1"
 	random_icon_states = list("semen1", "semen2", "semen3", "semen4")
+	blood_state = BLOOD_STATE_SEMEN
+	bloodiness = SEMEN_AMOUNT_PER_DECAL
 
 /obj/effect/decal/cleanable/semen/New()
 	..()
@@ -67,6 +74,8 @@
 	random_icon_states = list("fem1", "fem2", "fem3", "fem4")
 	blood_state = null
 	bloodiness = null
+//	blood_state = BLOOD_STATE_SEFEM
+//	bloodiness = SEMEN_AMOUNT_PER_DECAL
 
 /obj/effect/decal/cleanable/femcum/New()
 	..()

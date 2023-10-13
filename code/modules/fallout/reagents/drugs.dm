@@ -237,6 +237,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage2(mob/living/M)
 	M.hallucination += 20
 	M.Jitter(10)
@@ -246,6 +247,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage3(mob/living/M)
 	M.hallucination += 30
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
@@ -258,6 +260,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage4(mob/living/carbon/human/M)
 	M.hallucination += 40
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))

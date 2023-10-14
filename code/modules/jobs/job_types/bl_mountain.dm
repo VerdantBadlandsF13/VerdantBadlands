@@ -148,7 +148,7 @@
 
 	loadout_options = list(
 	/datum/outfit/loadout/walker/marksmen,
-	/datum/outfit/loadout/walker/heavy)
+	/datum/outfit/loadout/walker/motorised)
 
 /datum/outfit/job/gmb/walker
 	name = "Walker"
@@ -180,8 +180,7 @@
 
 	loadout_options = list(
 	/datum/outfit/loadout/militia/hunter,
-	/datum/outfit/loadout/militia/musketeer,
-	/datum/outfit/loadout/militia/rifleman)
+	/datum/outfit/loadout/militia/musketeer)
 
 /datum/outfit/job/gmb/militia
 	name = "Militia"

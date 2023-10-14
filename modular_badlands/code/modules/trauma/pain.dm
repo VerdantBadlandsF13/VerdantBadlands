@@ -68,8 +68,8 @@
 			if(11 to 90)
 				flash_pain()
 				handle_lowpain()
-				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
-			if(91 to 10000)
+				msg = "<b><font size=2>Your \the [partname] hurts badly.</font></b>"
+			if(91 to INFINITY)
 				flash_agony()
 				handle_highpain()
 				msg = "<b><font size=3>OH GOD! Your \the [partname] is hurting terribly!</font></b>"
@@ -109,7 +109,7 @@
 	for(var/obj/item/organ/I in internal_organs)
 		if(I.damage > 2)
 			if(prob(2))
-				custom_pain("You feel a sharp pain in your [I]", 1)
+				custom_pain("You feel a sharp pain in your \the [I]", 1)
 
 	var/toxDamageMessage = null
 	var/toxMessageProb = 1

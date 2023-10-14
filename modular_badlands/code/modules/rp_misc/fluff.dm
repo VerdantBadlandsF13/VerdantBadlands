@@ -62,7 +62,7 @@ Ignore it, if possible.
 		lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
 	else
 		lowstam_sound = "modular_badlands/code/modules/rp_misc/sound/inhale.ogg"
-	playsound(src, lowstam_sound, 50, 1)
+	playsound(src, lowstam_sound, 50, 0)
 
 /mob/living/carbon/proc/handle_crit_stamina_sound(mob/living/M)
 	var/critstam_sound
@@ -70,7 +70,7 @@ Ignore it, if possible.
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/tired.ogg"
 	else
 		critstam_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/fatigue[rand(1,3)].ogg"
-	playsound(src, critstam_sound, 50, 1)
+	playsound(src, critstam_sound, 50, 0)
 
 /*
 Mob audio for catching fire.
@@ -82,7 +82,7 @@ Easier to have it here.
 		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
 	else
 		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_onfire[rand(1,3)].ogg"
-	playsound(src, incineration_sound, 50, 1)
+	playsound(src, incineration_sound, 50, 0)
 
 /*
 Mob audio for pain.
@@ -97,7 +97,7 @@ Light, followed by extreme.
 		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/female_moan[rand(1,3)].ogg"
 	else
 		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_moan[rand(1,3)].ogg"
-	playsound(src, lowpain_sound, 50, 1)
+	playsound(src, lowpain_sound, 50, 0)
 	last_breath = world.time + 24 SECONDS
 
 /mob/living/carbon/proc/handle_highpain(mob/living/M)
@@ -108,7 +108,7 @@ Light, followed by extreme.
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
 	else
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
-	playsound(src, highpain_sound, 50, 1)
+	playsound(src, highpain_sound, 50, 0)
 	last_breath = world.time + 48 SECONDS
 
 /*

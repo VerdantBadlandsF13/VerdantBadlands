@@ -58,7 +58,7 @@
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb
 	gloves = /obj/item/clothing/gloves/gmb
 	shoes = /obj/item/clothing/shoes/f13/military/gmb
-	r_pocket = /obj/item/flashlight/flare
+	neck = /obj/item/storage/belt/sabre/heavy/gmb
 
 // Commander
 /datum/job/gmb/commander
@@ -88,13 +88,10 @@
 /datum/outfit/loadout/commander/liberty
 	name = "Liberty"
 	r_hand = /obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 /datum/outfit/loadout/commander/death
 	name = "Death"
 	r_hand = /obj/item/gun/ballistic/bow/crossbow/gmb
-	l_hand = /obj/item/storage/belt/bolt_quiver
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 /datum/outfit/job/gmb/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -111,7 +108,7 @@
 	flag = F13GMBPRACTITIONER
 	total_positions = 1
 	spawn_positions = 1
-	description = "A general purpose surgeon and field doctor of the camp. Rather important."
+	description = "A general purpose surgeon and field doctor of the camp. Rather important. Acts as authority in the absence of a Commander."
 	supervisors = "Commander."
 	outfit = /datum/outfit/job/gmb/practitioner
 	req_admin_notify = 1
@@ -142,7 +139,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	description = "A veteran militia member tasked with diplomacy, relations, retrieval and scouting as well as leading patrols. \
-	Answers only to the Commander and in the absence of a Commander is the leading authority."
+	Answers only to the Commander and, in their absence, the Practitioner."
 	supervisors = "Commander."
 	outfit = /datum/outfit/job/gmb/walker
 	exp_requirements = 240
@@ -161,14 +158,14 @@
 	id = /obj/item/card/id/gmb_commander_keys
 
 /datum/outfit/loadout/walker/marksmen
-	name = "Marksmen"
+	name = "Watchdog"
+	r_hand = /obj/item/gun/ballistic/rifle/enfield
+	l_hand = /obj/item/ammo_box/a308
+
+/datum/outfit/loadout/walker/motorised
+	name = "Motorised"
 	r_hand = /obj/item/gun/ballistic/rifle/enfield
 	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
-
-/datum/outfit/loadout/walker/heavy
-	name = "Heavy"
-	r_hand = /obj/item/gun/ballistic/automatic/lsw
-	l_hand = /obj/item/ammo_box/magazine/m556/rifle
 
 // Militia
 /datum/job/gmb/militia
@@ -191,21 +188,14 @@
 	jobtype = /datum/job/gmb/militia
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/militia
 
-/datum/outfit/loadout/militia/rifleman
-	name = "Rifleman"
-	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
-
 /datum/outfit/loadout/militia/hunter
-	name = "Hunter"
+	name = "Reserve"
 	r_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
 	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
 	r_hand = /obj/item/ammo_box/lasmusket
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
 
 // Volunteer
 /datum/job/gmb/volunteer
@@ -213,13 +203,13 @@
 	flag = F13GMBVOLUNTEER
 	total_positions = -1
 	spawn_positions = -1
-	description = "You're essentially just a wastelander with a uniform and a gun."
+	description = "You're essentially just a wastelander."
 	supervisors = "Commander."
 	outfit = /datum/outfit/job/gmb/volunteer
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
 	loadout_options = list(
-	/datum/outfit/loadout/volunteer/conscript,
+	/datum/outfit/loadout/volunteer/farmhand,
 	/datum/outfit/loadout/volunteer/watchmen)
 
 /datum/outfit/job/gmb/volunteer
@@ -227,14 +217,20 @@
 	uniform = /obj/item/clothing/under/f13/gmb/farmhand
 	shoes = /obj/item/clothing/shoes/f13/military/gmb/leather
 	head = /obj/item/clothing/head/gmb/brimmed
+	neck = null// N O
 	jobtype = /datum/job/gmb/volunteer
 
-/datum/outfit/loadout/volunteer/conscript
-	name = "Conscript"
-	r_hand = /obj/item/gun/ballistic/revolver/piperifle // YOU'RE A CONSCRIPT. BE HAPPY YOU EVEN GET A GUN.
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+/datum/outfit/loadout/volunteer/farmhand
+	name = "Farmhand"
+	r_hand = /obj/item/flashlight/flare/torch
+	backpack_contents = list(
+		/obj/item/storage/bag/plants = 1,
+		/obj/item/cultivator = 1,
+		/obj/item/soap/homemade = 1,
+		/obj/item/shovel/spade = 1,
+		)
 
 /datum/outfit/loadout/volunteer/watchmen
-	name = "Watchmen"
-	r_hand = /obj/item/gun/ballistic/revolver/piperifle // YOU'RE A CONSCRIPT. BE HAPPY YOU EVEN GET A GUN.
-	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet)
+	name = "Volunteer Watchmen"
+	r_hand = /obj/item/gun/ballistic/revolver/piperifle // BE HAPPY YOU EVEN GET A GUN.
+	backpack_contents = list(/obj/item/melee/onehanded/knife/bayonet = 1)

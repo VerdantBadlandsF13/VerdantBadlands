@@ -60,7 +60,6 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_power_usage = 300
 //	pixel_x = -16
 	var/speed_mult = 1
-	var/max_storage = 1
 	var/list/valid_surgeries = list()
 	var/datum/surgery/target_surgery
 	var/datum/surgery/active_surgery
@@ -97,12 +96,8 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		if(valid)
 			valid_surgeries += S
 
-/obj/machinery/autodoc/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
-	STR.cant_hold = typecacheof(list(/obj/item/card/emag))
-
 /obj/machinery/autodoc/RefreshParts()
+	. = ..()
 	var/list/P = list()
 	var/avg = 1
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
@@ -116,23 +111,28 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		if(4)
 			speed_mult = 0.25
 		else
-			speed_mult = 1
-	for(var/obj/item/stock_parts/matter_bin/M in component_parts)
-		P += M.get_part_rating()
-	max_storage = round(list_avg(P), 1)
-	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
-	STR.max_items = max_storage
-	STR.cant_hold = typecacheof(list(/obj/item/card/emag))
+			speed_mult = 0.1
+
+	var/Pwr = -1
+	for(var/obj/item/stock_parts/capacitor/cap in component_parts)
+		Pwr += cap.rating
+	active_power_usage = initial(active_power_usage) - (initial(active_power_usage)*(Pwr))/4
+	if(active_power_usage <= 1000)
+		active_power_usage = 1000
 
 /obj/machinery/autodoc/CtrlClick(mob/user)
-	if(in_use && isliving(user))
-		playsound(src, 'sound/machines/buzz-two.ogg', 50, FALSE)
-		return
-	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
-	if (user.active_storage)
-		user.active_storage.close(user)
-	ST.orient2hud_volumetric(user, 2)
-	SEND_SIGNAL(ST, COMSIG_TRY_STORAGE_SHOW, user)
+	playsound(src, 'sound/machines/buzz-two.ogg', 50, FALSE)
+
+/obj/machinery/autodoc/AltClick(mob/user, list/modifiers)
+	. = ..()
+	playsound(src, 'sound/machines/buzz-two.ogg', 50, FALSE)
+	active_surgery.complete()
+	active_surgery = null
+	active_step = null
+	in_use = FALSE
+	if(!state_open)
+		open_machine()
+	update_icon()
 
 /obj/machinery/autodoc/ui_act(action, list/params)
 	if(..())
@@ -242,9 +242,6 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 			return
 		qdel(SS)
 	in_use = TRUE
-	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
-	ST.close_all()
-	ST.locked = TRUE
 	update_icon()
 	active_surgery = new target_surgery.type(patient, target_zone, affecting)
 	while(active_surgery.status <= active_surgery.steps.len)
@@ -275,20 +272,14 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_surgery = null
 	active_step = null
 	in_use = FALSE
-	ST.locked = FALSE
 	if(!state_open)
 		open_machine()
 	update_icon()
 
 /obj/machinery/autodoc/ui_interact(mob/user, datum/tgui/ui)
-
-	if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ))
-		to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")
-		return
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "Autodoc")
+		ui = new(user, src, "Autodoc", name)
 		ui.open()
 
 /obj/machinery/autodoc/ui_data(mob/user)
@@ -303,7 +294,6 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 				"name" = initial(S.name),
 				"current" = active_step ? (active_step.type == s) : FALSE
 			))
-
 	else
 		.["mode"] = 1
 		.["target"] = target_zone
@@ -324,15 +314,6 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	if(close_machine(target))
 		log_combat(user, target, "inserted", null, "into [src].")
 	add_fingerprint(user)
-
-/obj/machinery/autodoc/emag_act(mob/user)
-	if(hacked)
-		to_chat(user, "<span class='notice'>\The [src]'s safeties are already corrupted!</span>")
-		return
-	log_combat(user, src, "emagged")
-	to_chat(user, "<span class='notice'>You discretely emag \the [src], corrupting it's safeties.</span>")
-	add_fingerprint(user)
-	hacked = TRUE
 
 /obj/machinery/autodoc/update_icon()
 	if(occupant)
@@ -367,3 +348,4 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 			message_cooldown = world.time + 50
 			to_chat(user, "<span class='warning'>[src]'s door won't budge!</span>")
 		return
+	open_machine()

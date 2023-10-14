@@ -205,6 +205,9 @@
 	absorption_capacity = 4
 	merge_type = /obj/item/stack/medical/gauze/improvised
 
+/obj/item/stack/medical/gauze/improvised/five
+	amount = 1
+
 /obj/item/stack/medical/gauze/improvised/microwave_act(obj/machinery/microwave/MW)
 	..()
 	new /obj/item/stack/medical/gauze(drop_location(), amount)
@@ -501,6 +504,9 @@
 	amount = 20
 	max_amount = 20
 	grind_results = list(/datum/reagent/consumable/aloejuice = 1)
+
+/obj/item/stack/medical/mesh/aloe/five
+	amount = 5
 
 /obj/item/stack/medical/mesh/aloe/Initialize()
 	. = ..()

@@ -148,6 +148,9 @@
 	/obj/item/melee/powered/ripper)
 	starting_sword = null
 
+/obj/item/storage/belt/sabre/heavy/gmb
+	starting_sword = /obj/item/melee/smith/sword/sabre/gmb
+
 /obj/item/storage/belt/holster/ranger357/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357(src)
 	new /obj/item/ammo_box/a357(src)

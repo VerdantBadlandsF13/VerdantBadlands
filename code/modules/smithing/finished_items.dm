@@ -240,6 +240,12 @@
 	force = 24
 	block_chance = 25
 
+/obj/item/melee/smith/sword/sabre/gmb
+	name = "cavalry sabre"
+	armour_penetration = 0.4
+	force = 32
+	block_chance = 42
+
 /datum/block_parry_data/smith_generic
 	parry_stamina_cost = 12
 	parry_time_active = 6
@@ -479,7 +485,7 @@
 
 
 // Good throwing, thats about it (27, 40)
-/obj/item/melee/smith/javelin 
+/obj/item/melee/smith/javelin
 	name = "javelin"
 	icon_state = "javelin_smith"
 	overlay_state = "shaft_javelin"

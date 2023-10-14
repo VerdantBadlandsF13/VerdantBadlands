@@ -270,7 +270,7 @@
 	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
 	icon_state = "gmgreencoat"
 	item_state = "gmgreencoat"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 10)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
 	name = "practitioner coat"
@@ -278,18 +278,18 @@
 	It has been fitted with the militia's patch."
 	icon_state = "leathercoat"
 	item_state = "gmbrowncoat"
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80, "wound" = 50)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/walker
 	name = "walker plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
 	item_state = "gmbrowncoatplated"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 25)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	name = "commander plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
 	item_state = "gmbrowncoatplated"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 50)

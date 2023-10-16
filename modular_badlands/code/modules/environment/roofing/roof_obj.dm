@@ -49,7 +49,7 @@
 	overlay_state = "fortressroof"
 	icon_state = "fortress_roof_dm"
 
-/obj/roof/proc/update_transparency(var/on = TRUE)
+/obj/roof/proc/update_transparency(on = TRUE)
 	roof_overlay.alpha = 255
 	spawn(1)
 		if (on)
@@ -62,7 +62,7 @@
 		else
 			roof_overlay.alpha = 255
 
-/obj/roof/proc/recalculate_borders(var/recalculate_others = FALSE)
+/obj/roof/proc/recalculate_borders(recalculate_others = FALSE)
 	var/founddir = 0
 	for (var/drr in list(NORTH,SOUTH,EAST,WEST))
 		for (var/obj/roof/RF in get_step(src, drr))

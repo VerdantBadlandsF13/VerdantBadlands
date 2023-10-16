@@ -60,6 +60,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_power_usage = 300
 //	pixel_x = -16
 	var/speed_mult = 1
+	var/max_storage = 1
 	var/list/valid_surgeries = list()
 	var/datum/surgery/target_surgery
 	var/datum/surgery/active_surgery
@@ -119,9 +120,17 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_power_usage = initial(active_power_usage) - (initial(active_power_usage)*(Pwr))/4
 	if(active_power_usage <= 1000)
 		active_power_usage = 1000
+	max_storage = round(list_avg(P), 1)
+	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
+	STR.max_items = max_storage
+	STR.cant_hold = typecacheof(list(/obj/item/card/emag))
 
 /obj/machinery/autodoc/CtrlClick(mob/user)
-	playsound(src, 'sound/machines/buzz-two.ogg', 50, FALSE)
+	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
+	if (user.active_storage)
+		user.active_storage.close(user)
+	ST.orient2hud_legacy(user)
+	SEND_SIGNAL(ST, COMSIG_TRY_STORAGE_SHOW, user)
 
 /obj/machinery/autodoc/AltClick(mob/user, list/modifiers)
 	. = ..()
@@ -241,6 +250,9 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 				open_machine()
 			return
 		qdel(SS)
+	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)
+	ST.close_all()
+	ST.locked = TRUE
 	in_use = TRUE
 	update_icon()
 	active_surgery = new target_surgery.type(patient, target_zone, affecting)
@@ -272,6 +284,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_surgery = null
 	active_step = null
 	in_use = FALSE
+	ST.locked = FALSE
 	if(!state_open)
 		open_machine()
 	update_icon()

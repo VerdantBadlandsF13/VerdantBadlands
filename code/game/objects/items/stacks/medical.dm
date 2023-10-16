@@ -198,7 +198,7 @@
 	name = "improvised gauze"
 	singular_name = "improvised gauze"
 	heal_brute = 0
-	desc = "A roll of cloth. Useful for staunching bleeding, healing burns, and reversing infection, but not THAT useful."
+	desc = "A roll of cloth. Useful for staunching bleeding."
 	self_delay = 60
 	other_delay = 30
 	absorption_rate = 0.15
@@ -206,7 +206,7 @@
 	merge_type = /obj/item/stack/medical/gauze/improvised
 
 /obj/item/stack/medical/gauze/improvised/five
-	amount = 1
+	amount = 5
 
 /obj/item/stack/medical/gauze/improvised/microwave_act(obj/machinery/microwave/MW)
 	..()

@@ -182,8 +182,10 @@ ATTACHMENTS
 	safety = !safety
 	playsound(user, safety_audio, 100, 1)
 	to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
-	user.DelayNextAction(CLICK_CD_RESIST)
+	user.attackby(src, user)
 	. = ..()
+	if(!(. & DISCARD_LAST_ACTION))
+		user.DelayNextAction(CLICK_CD_RESIST)
 
 /obj/item/gun/Initialize()
 	. = ..()
@@ -332,6 +334,7 @@ ATTACHMENTS
 				else
 					user.visible_message("<span class='danger'>[user] hip fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 					shake_camera(user, recoil + 1, recoil)
+					user.adjustStaminaLossBuffered(1)
 
 //Adds logging to the attack log whenever anyone draws a gun, adds a pause after drawing a gun before you can do anything based on it's size
 /obj/item/gun/pickup(mob/living/user)
@@ -510,7 +513,10 @@ ATTACHMENTS
 
 	if(safety)
 		shoot_while_safe(user)
-		return
+		if(user.a_intent == INTENT_HARM)
+			safety = 0
+		else
+			return
 
 	if(condition == 1)
 		if(condition_lvl == 0)
@@ -529,13 +535,11 @@ ATTACHMENTS
 				if(can_jam)
 					jammed = TRUE
 
-/*
 	if(condition == 1)
 		if(user.special_l >= 1)
-			if(prob(15 - (user.special_l * 0.05)))
+			if(prob(1 - (user.special_l * 0.05)))
 				if(can_jam)
 					jammed = TRUE
-*/
 
 	if(user.special_s <= 6)
 		bonus_spread += 5

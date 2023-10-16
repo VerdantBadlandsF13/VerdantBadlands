@@ -17,14 +17,14 @@ GLOBAL_LIST_EMPTY(roofs_list) //list of all the roof IMAGES (not the object!!!)
 			has_opaque_atom = TRUE
 
 // If an opaque movable atom moves around we need to potentially update visibility.
-/turf/Entered(var/atom/movable/Obj, var/atom/OldLoc)
+/turf/Entered(atom/movable/Obj, atom/OldLoc)
 	. = ..()
 
 	if (Obj && Obj.opacity)
 		has_opaque_atom = TRUE // Make sure to do this before reconsider_lights(), incase we're on instant updates. Guaranteed to be on in this case.
 		reconsider_lights()
 
-/turf/Exited(var/atom/movable/Obj, var/atom/newloc)
+/turf/Exited(atom/movable/Obj, atom/newloc)
 	. = ..()
 
 	if (Obj && Obj.opacity)

@@ -113,10 +113,10 @@
 
 /obj/item/clothing/proc/use_sewkit(obj/item/I, mob/user)
 	var/obj/item/repair_kit/kit = I
-	while(armor_durability<100)
+	while(armor_durability < 100)
 		if(do_after(user, 10))
 			to_chat(user,"You fix some of the damage on \the [src], it is now at [armor_durability] durability.")
-			if(kit.uses_left>1)
+			if(kit.uses_left > 1)
 				kit.uses_left -= 1
 				repair(user)
 			else
@@ -173,6 +173,7 @@
 	if(user)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 		to_chat(user, "<span class='notice'>You fix the damage on [src].</span>")
+		playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/interface/repair[rand(1,7)].ogg", 40, 0, 0)
 
 /**
  * take_damage_zone() is used for dealing damage to specific bodyparts on a worn piece of clothing, meant to be called from [/obj/item/bodypart/proc/check_woundings_mods()]

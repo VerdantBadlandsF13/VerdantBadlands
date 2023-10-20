@@ -6316,6 +6316,13 @@
 	icon_state = "floordirty"
 	},
 /area/f13/village)
+"ecs" = (
+/obj/effect/decal/marking{
+	icon_state = "doublevertical"
+	},
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
 "ecI" = (
 /turf/open/transparent/openspace,
 /area/f13/caves)
@@ -18533,6 +18540,10 @@
 /obj/structure/fence/corner/wooden,
 /turf/open/indestructible/ground/outside/bl/grass_standard/swamp_grass,
 /area/f13/wasteland/bl/gmb)
+"mKQ" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
 "mLl" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_west_north"
@@ -19574,6 +19585,12 @@
 /obj/item/stack/f13Cash/random/low,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"nAB" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
 "nAE" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_2"
@@ -21582,6 +21599,12 @@
 "oUK" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain2"
+	},
+/area/f13/wasteland)
+"oUQ" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft2"
 	},
 /area/f13/wasteland)
 "oUU" = (
@@ -34238,6 +34261,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"xTD" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom0"
+	},
+/area/f13/wasteland)
 "xTQ" = (
 /obj/structure/table/wood,
 /obj/item/seeds/onion,
@@ -49448,7 +49477,7 @@ olk
 sAB
 sAB
 sAB
-sAB
+nAB
 lvK
 lvK
 lvK
@@ -49905,7 +49934,7 @@ jix
 oeM
 oeM
 oeM
-oeM
+mKQ
 lvK
 lvK
 lvK
@@ -50362,7 +50391,7 @@ oeM
 ild
 trJ
 ild
-ild
+ecs
 lvK
 lvK
 lvK
@@ -50819,7 +50848,7 @@ oeM
 oeM
 oeM
 oeM
-oeM
+mKQ
 lvK
 lvK
 lvK
@@ -51276,7 +51305,7 @@ oeM
 oYp
 oYp
 oYp
-oYp
+oUQ
 lvK
 lvK
 lvK
@@ -86934,11 +86963,11 @@ bxh
 bxh
 pqb
 nRs
-wko
-oeM
-oeM
-oeM
-oeM
+xTD
+mKQ
+mKQ
+mKQ
+mKQ
 pqb
 nRs
 bxh

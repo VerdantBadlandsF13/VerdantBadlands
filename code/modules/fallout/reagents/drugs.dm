@@ -3,7 +3,7 @@
 	description = "A chemical used to induce a euphoric high derived from brahmin dung. Fast-acting, powerful, and highly addictive."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 20
-	addiction_threshold = 12.5
+	addiction_threshold = 5
 	ghoulfriendly = TRUE
 	pain_resistance = 5
 
@@ -91,7 +91,7 @@
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 14
-	addiction_threshold = 9
+	addiction_threshold = 5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 	pain_resistance = 5
@@ -174,13 +174,12 @@
 	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries an extreme risk of addiction."
 	reagent_state = LIQUID
 	color = "#FF0000"
-	overdose_threshold = 5.1
-	addiction_threshold = 12.5
+	overdose_threshold = 10.1
+	addiction_threshold = 5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
 	pain_resistance = 95
-
 
 /datum/reagent/drug/psycho/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("<br><font color='#FF0000'><b>FUCKING KILL!</b></font>", "<br><font color='#FF0000'><b>RAAAAR!</b></font>", "<br><font color='#FF0000'><b>BRING IT!</b></font>")
@@ -280,8 +279,8 @@
 	description = "A powerful steroid which increases the user's strength and endurance."
 	color = "#FF9900"
 	reagent_state = SOLID
-	overdose_threshold = 20
-	addiction_threshold = 11
+	overdose_threshold = 10
+	addiction_threshold = 5
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE

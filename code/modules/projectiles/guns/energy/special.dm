@@ -15,6 +15,7 @@
 	shaded_charge = 1
 	weapon_weight = WEAPON_HEAVY
 	slowdown = 0.25
+	can_charge = 0
 	flight_x_offset = 17
 	flight_y_offset = 9
 	equipsound = 'sound/f13weapons/equipsounds/yk42equip.ogg'
@@ -69,6 +70,7 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	fire_delay = 13
 	slowdown = 1
+	can_charge = 0
 	weapon_weight = WEAPON_HEAVY
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 	special_weapon = TRUE
@@ -97,6 +99,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	fire_delay = 0
+	can_remove = 0
 	can_scope = TRUE// Shouldn't be needed, but for future reference.
 	scope_state = "AEP7_scope"
 	scope_x_offset = 7

@@ -144,6 +144,7 @@ ATTACHMENTS
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
 	var/safety = 1
+	var/safe_delay = 50
 	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
 
 	var/condition = 1// Should I use conditions?
@@ -182,10 +183,8 @@ ATTACHMENTS
 	safety = !safety
 	playsound(user, safety_audio, 100, 1)
 	to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
-	user.attackby(src, user)
+	user.DelayNextAction(safe_delay, TRUE)
 	. = ..()
-	if(!(. & DISCARD_LAST_ACTION))
-		user.DelayNextAction(CLICK_CD_RESIST)
 
 /obj/item/gun/Initialize()
 	. = ..()

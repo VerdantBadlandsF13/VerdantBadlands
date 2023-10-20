@@ -13,6 +13,6 @@
 	caliber = "fuel"
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "floor1"
-	projectile_type = /obj/item/projectile/incendiary/flamethrower
+	projectile_type = /obj/item/projectile/bullet/incendiary/flamethrower
 	pellets = 3
 	variance = 20

@@ -9,7 +9,8 @@
 	item_state = "plasma"
 	icon_state = "plasma"
 	armour_penetration = 0.1
-	slowdown = 0.75 //this is one of the worst slowdowns in the game
+	slowdown = 0.75
+	can_charge = 0
 	fire_delay = 5.2
 	recoil = 0.25
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)

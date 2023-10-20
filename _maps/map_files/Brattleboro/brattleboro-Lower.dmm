@@ -1616,6 +1616,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "hx" = (
@@ -2051,6 +2052,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "jw" = (
@@ -7739,6 +7741,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
@@ -8332,6 +8335,7 @@
 /obj/effect/decal/marking{
 	icon_state = "doublevertical"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "Ly" = (

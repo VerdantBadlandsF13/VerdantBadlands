@@ -328,6 +328,12 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/building)
+"bA" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalleftborderright0"
+	},
+/area/f13/wasteland)
 "bB" = (
 /obj/structure/closet/crate/footlocker,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
@@ -651,6 +657,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building)
+"cV" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/wasteland)
 "cW" = (
 /obj/structure/railing{
 	dir = 4
@@ -7348,6 +7358,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building)
+"ED" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalrightborderleft0"
+	},
+/area/f13/wasteland)
 "EE" = (
 /obj/structure/railing{
 	color = "#A47449"
@@ -8527,6 +8543,12 @@
 	dir = 6
 	},
 /area/f13/vault/medical)
+"Jb" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
 "Jc" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
@@ -9152,6 +9174,12 @@
 /obj/structure/chair/sofa/left,
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
+"LR" = (
+/obj/effect/decal/bl_stairway/down,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft0"
+	},
+/area/f13/wasteland)
 "LU" = (
 /obj/machinery/door/unpowered/securedoor/vfe/glass{
 	req_access_txt = "152"
@@ -20609,7 +20637,7 @@ Ee
 Ee
 Ee
 Ee
-ja
+Jb
 ja
 ja
 ja
@@ -20630,7 +20658,7 @@ wg
 ja
 ja
 ja
-ja
+Jb
 Ee
 Ee
 Ee
@@ -21066,7 +21094,7 @@ Ee
 Ee
 Ee
 Ee
-Cl
+LR
 Cl
 Cl
 Cl
@@ -21087,7 +21115,7 @@ Kr
 Cl
 Cl
 Cl
-Cl
+LR
 Ee
 Ee
 Ee
@@ -21523,7 +21551,7 @@ Ee
 Ee
 Ee
 Ee
-kv
+bA
 kv
 kv
 kv
@@ -21544,7 +21572,7 @@ kv
 kv
 kv
 kv
-kv
+bA
 Ee
 Ee
 Ee
@@ -21980,7 +22008,7 @@ Ee
 Ee
 Ee
 Ee
-qn
+cV
 qn
 qn
 qn
@@ -22001,7 +22029,7 @@ rU
 gf
 qn
 qn
-qn
+cV
 Ee
 Ee
 Ee
@@ -22437,7 +22465,7 @@ Ee
 Ee
 Ee
 Ee
-Re
+ED
 Re
 Re
 Re
@@ -22458,7 +22486,7 @@ Re
 Re
 Re
 Re
-Re
+ED
 Ee
 Ee
 Ee
@@ -22894,7 +22922,7 @@ Ee
 Ee
 Ee
 Ee
-ja
+Jb
 Dp
 Dp
 GC
@@ -22915,7 +22943,7 @@ ja
 ja
 ja
 ja
-ja
+Jb
 Ee
 Ee
 Ee
@@ -23351,7 +23379,7 @@ Ee
 Ee
 Ee
 Ee
-Cl
+LR
 Cl
 Kr
 Kr
@@ -23372,7 +23400,7 @@ vb
 Cl
 Cl
 Cl
-Cl
+LR
 Ee
 Ee
 Ee

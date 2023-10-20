@@ -36,7 +36,7 @@
 // Legion Axe		Keywords: Damage 30/60 do not change these numbers
 /obj/item/twohanded/legionaxe
 	name = "war-honed axe"
-	desc = "Heavy fireman axe from the old world, restored to working order by Legion craftsmen. Excellent for smashing doors or heads."
+	desc = "Heavy fireman axe from the old world, restored to working order by expert craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
 	block_parry_data = /datum/block_parry_data/smith_generic //data is in finished items file

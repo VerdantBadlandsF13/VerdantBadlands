@@ -20,6 +20,16 @@
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
 
+/obj/effect/decal/bl_stairway
+	icon = 'modular_badlands/code/modules/environment/icons/bl_decals.dmi'
+	icon_state = "up"
+
+/obj/effect/decal/bl_stairway/down
+	icon_state = "down"
+
+/obj/effect/decal/bl_stairway/ex_act(severity)
+	return
+
 //////////////
 // GRASSSTF //
 //////////////

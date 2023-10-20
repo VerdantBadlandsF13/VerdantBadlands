@@ -80,6 +80,11 @@ GLOBAL_LIST_EMPTY(PDAs)
 	var/allow_emojis = TRUE //if the pda can send emojis and actually have them parsed as such
 	var/list/pipsounds = list("modular_sunset/sound/pipsounds/pip1.ogg", "modular_sunset/sound/pipsounds/pip2.ogg", "modular_sunset/sound/pipsounds/pip3.ogg")
 
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_range = 4
+	light_power = 0.8
+	light_color = "#99FF33"
+
 	var/obj/item/card/id/id = null //Making it possible to slot an ID card into the PDA so it can function as both.
 	var/ownjob = null //related to above
 
@@ -118,7 +123,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 /obj/item/pda/Initialize()
 	. = ..()
 	if(fon)
-		set_light(f_lum, f_pow, f_col)
+		light_on = TRUE
 
 	GLOB.PDAs += src
 	if(default_cartridge)
@@ -465,7 +470,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "<a href='?src=[REF(src)];rfreq=2'>+</a>"
 				dat += "<a href='?src=[REF(src)];rfreq=10'>+</a>"
 				dat += " | <a href='?src=[REF(src)];rsavefreq=[radio.frequency]'>Save Frequency</a><br><br>"
-				
+
 				if(saved_frequencies)
 					dat += "<b>Saved Frequencies</b>"
 					dat += "<ul>"
@@ -501,7 +506,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(usr.canUseTopic(src, BE_CLOSE, FALSE, NO_TK, FALSE) && !href_list["close"])
 		add_fingerprint(U)
 		U.set_machine(src)
-		
+
 		if(href_list["choice"])
 
 			switch(href_list["choice"])
@@ -783,7 +788,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 			loaded_frequency = sanitize_frequency(text2num(loaded_frequency))
 			radio.set_frequency(loaded_frequency)
 			Boop()
-		
+
 		if (href_list["rrenfreq"])
 			var/renamed_frequency = href_list["rrenfreq"]
 			renamed_frequency = text2num(renamed_frequency)
@@ -1027,11 +1032,11 @@ GLOBAL_LIST_EMPTY(PDAs)
 		return
 	if(fon)
 		fon = FALSE
-		set_light(0)
+		light_on = FALSE
 		playsound(src, "modular_sunset/sound/pipsounds/piplightoff.ogg", 50, 1)
 	else if(f_lum)
 		fon = TRUE
-		set_light(f_lum, f_pow, f_col)
+		light_on = TRUE
 		playsound(src, "modular_sunset/sound/pipsounds/piplighton.ogg", 50, 1)
 	update_icon()
 

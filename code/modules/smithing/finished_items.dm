@@ -221,7 +221,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/belt.dmi'
 	layer = MOB_UPPER_LAYER
 	wound_bonus = 20
-	block_chance = 15
+	block_chance = 0// Nadda.
 
 /obj/item/melee/smith/sword/spatha
 	name = "spatha"
@@ -238,13 +238,11 @@
 	block_parry_data = /datum/block_parry_data/smithsaber
 	armour_penetration = 0.2
 	force = 24
-	block_chance = 25
 
 /obj/item/melee/smith/sword/sabre/gmb
 	name = "cavalry sabre"
 	armour_penetration = 0.4
 	force = 32
-	block_chance = 42
 
 /datum/block_parry_data/smith_generic
 	parry_stamina_cost = 12

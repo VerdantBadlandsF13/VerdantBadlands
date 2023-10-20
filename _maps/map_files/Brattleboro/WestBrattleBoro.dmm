@@ -15,6 +15,7 @@
 /obj/structure/stairs/south{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "abd" = (
@@ -1757,6 +1758,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -2584,6 +2586,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "czk" = (
@@ -4406,6 +4409,7 @@
 /obj/structure/stairs/south{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalrightborderleft0"
 	},
@@ -6777,6 +6781,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright0"
 	},
@@ -7478,6 +7483,7 @@
 /obj/structure/stairs/south{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -9389,6 +9395,7 @@
 /obj/structure/stairs/south{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalleftborderright0"
 	},
@@ -22349,6 +22356,7 @@
 /obj/structure/stairs/south{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright0"
 	},
@@ -22459,6 +22467,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright0"
 	},
@@ -24287,6 +24296,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalrightborderleft0"
 	},

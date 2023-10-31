@@ -3388,6 +3388,17 @@
 /obj/structure/table/wood/poker,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/vault/dormitory)
+"dpi" = (
+/obj/effect/decal/cleanable/crayon{
+	name = "grafitti";
+	icon_state = "food";
+	pixel_x = -32
+	},
+/obj/machinery/jukebox,
+/turf/open/floor/wood/wood_wide{
+	icon_state = "wide-broken1"
+	},
+/area/f13/building)
 "dpT" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
@@ -8233,14 +8244,6 @@
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
-/area/f13/building)
-"iFL" = (
-/obj/effect/decal/cleanable/crayon{
-	name = "grafitti";
-	icon_state = "food";
-	pixel_x = -32
-	},
-/turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "iFO" = (
 /obj/structure/chair/comfy/beige{
@@ -39952,7 +39955,7 @@ bRJ
 cFv
 viM
 klJ
-qeW
+uce
 bRJ
 gjh
 gjh
@@ -40409,7 +40412,7 @@ bRJ
 lZP
 txR
 qeW
-qeW
+txR
 bRJ
 gjh
 gjh
@@ -40864,9 +40867,9 @@ qeW
 qeW
 bRJ
 aws
-uce
-uce
+qeW
 txR
+uce
 bRJ
 gjh
 fAF
@@ -41322,8 +41325,8 @@ qeW
 bRJ
 bRJ
 bRJ
-bRJ
 toQ
+bRJ
 bRJ
 fAF
 fAF
@@ -41779,8 +41782,8 @@ qeW
 qeW
 ihR
 ups
-iFL
-ieq
+qeW
+dpi
 xiR
 fAF
 fAF

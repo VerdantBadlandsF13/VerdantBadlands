@@ -112,7 +112,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		if(4)
 			speed_mult = 0.25
 		else
-			speed_mult = 0.1
+			speed_mult = 1
 
 	var/Pwr = -1
 	for(var/obj/item/stock_parts/capacitor/cap in component_parts)

@@ -139,7 +139,6 @@ GLOBAL_LIST_EMPTY(lifts)
 	icon_state = "catwalk"
 	density = FALSE
 	anchored = TRUE
-	armor = list(MELEE = 50, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 50)
 	max_integrity = 50
 	layer = LATTICE_LAYER //under pipes
 	plane = FLOOR_PLANE
@@ -387,10 +386,9 @@ GLOBAL_LIST_EMPTY(lifts)
 
 /obj/structure/industrial_lift/tram
 	name = "tram"
-	desc = "A tram for traversing the station."
+	desc = "A tram for traversing tunnels."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "titanium_yellow"
-	armor = list(MELEE = 80, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 100, BIO = 80, RAD = 80, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	var/travelling = FALSE
 	var/travel_distance = 0

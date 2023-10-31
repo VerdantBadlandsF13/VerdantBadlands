@@ -5,3 +5,4 @@
 	drop_all_on_deconstruct = TRUE
 	drop_all_on_destroy = TRUE
 	attack_hand_interact = FALSE
+	allow_big_nesting = TRUE

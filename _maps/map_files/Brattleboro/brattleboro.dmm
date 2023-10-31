@@ -10384,7 +10384,6 @@
 /area/f13/bl/gmb)
 "gRy" = (
 /obj/machinery/light/small,
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "gRL" = (
@@ -12357,10 +12356,6 @@
 	icon_state = "horizontaloutermain1"
 	},
 /area/f13/wasteland)
-"ipO" = (
-/obj/roof/wood,
-/turf/open/indestructible/ground/bl/outside/gravel,
-/area/f13/bl/gmb)
 "ipU" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -13387,7 +13382,6 @@
 /area/f13/building)
 "jbK" = (
 /obj/structure/sink/puddle,
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "jbU" = (
@@ -18055,7 +18049,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "mvf" = (
@@ -19324,7 +19317,6 @@
 	name = "strong metal bars";
 	obj_integrity = 1000
 	},
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "nnD" = (
@@ -25978,7 +25970,6 @@
 	},
 /area/f13/village)
 "rZz" = (
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "sad" = (
@@ -26311,7 +26302,6 @@
 /area/f13/village)
 "slf" = (
 /obj/effect/spawner/lootdrop/bedsheet,
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "slJ" = (
@@ -31577,10 +31567,6 @@
 	},
 /turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
-"whj" = (
-/obj/roof/wood,
-/turf/closed/wall/f13/wood,
-/area/f13/bl/gmb)
 "whm" = (
 /obj/structure/dresser,
 /turf/open/floor/f13/wood,
@@ -31831,7 +31817,6 @@
 /area/f13/village)
 "wnY" = (
 /obj/machinery/door/unpowered/celldoor/gmb_gate,
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/outside/gravel,
 /area/f13/bl/gmb)
 "wof" = (
@@ -34454,7 +34439,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "ycE" = (
@@ -34657,7 +34641,6 @@
 /area/f13/wasteland)
 "yjT" = (
 /obj/item/reagent_containers/glass/bucket/wood,
-/obj/roof/wood,
 /turf/open/indestructible/ground/bl/stone,
 /area/f13/bl/gmb)
 "yjY" = (
@@ -41096,16 +41079,16 @@ kvC
 nCZ
 fxI
 fxI
-whj
-whj
-whj
-whj
-whj
-whj
-whj
-whj
-whj
-whj
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
+nCZ
 fwb
 oMJ
 fwb
@@ -41553,16 +41536,16 @@ eRL
 nCZ
 fxI
 fxI
-whj
+nCZ
 jbK
 rZz
-whj
-ipO
-ipO
-whj
+nCZ
+wvE
+wvE
+nCZ
 rZz
 yjT
-whj
+nCZ
 fwb
 oMJ
 fwb
@@ -42010,16 +41993,16 @@ kvC
 nCZ
 fxI
 fxI
-whj
+nCZ
 rZz
 slf
 nnC
-ipO
-ipO
+wvE
+wvE
 nnC
 rZz
 rZz
-whj
+nCZ
 fwb
 fwb
 oMJ
@@ -42467,16 +42450,16 @@ kvC
 oPl
 fxI
 fxI
-whj
+nCZ
 muZ
 rZz
 wnY
-ipO
-ipO
+wvE
+wvE
 wnY
 rZz
 gRy
-whj
+nCZ
 fwb
 fwb
 oMJ
@@ -42924,16 +42907,16 @@ kvC
 oPl
 fxI
 fxI
-whj
+nCZ
 yjT
 rZz
 nnC
-ipO
-ipO
+wvE
+wvE
 nnC
 rZz
 slf
-whj
+nCZ
 fwb
 fwb
 oMJ
@@ -43381,16 +43364,16 @@ oXV
 oPl
 fxI
 fxI
-whj
+nCZ
 rZz
 rZz
-whj
-ipO
-ipO
-whj
+nCZ
+wvE
+wvE
+nCZ
 rZz
 jbK
-whj
+nCZ
 fwb
 fwb
 oMJ
@@ -43838,16 +43821,16 @@ pcZ
 nCZ
 fxI
 fxI
-whj
-whj
-whj
-whj
-ipO
-ipO
-whj
-whj
-whj
-whj
+nCZ
+nCZ
+nCZ
+nCZ
+wvE
+wvE
+nCZ
+nCZ
+nCZ
+nCZ
 fwb
 fwb
 oMJ
@@ -44295,16 +44278,16 @@ uUK
 nCZ
 fxI
 fxI
-whj
+nCZ
 yjT
 rZz
-whj
-ipO
-ipO
-whj
+nCZ
+wvE
+wvE
+nCZ
 rZz
 jbK
-whj
+nCZ
 fwb
 fwb
 oMJ
@@ -44752,16 +44735,16 @@ kvC
 oPl
 fxI
 fxI
-whj
+nCZ
 rZz
 rZz
 nnC
-ipO
-ipO
+wvE
+wvE
 nnC
 rZz
 yjT
-whj
+nCZ
 fwb
 fwb
 fwb
@@ -45209,16 +45192,16 @@ kvC
 oPl
 fxI
 fxI
-whj
+nCZ
 ycB
 rZz
 wnY
-ipO
-ipO
+wvE
+wvE
 wnY
 rZz
 gRy
-whj
+nCZ
 fwb
 fwb
 fwb
@@ -45666,16 +45649,16 @@ kvC
 oPl
 fxI
 fxI
-whj
+nCZ
 rZz
 rZz
 nnC
-ipO
-ipO
+wvE
+wvE
 nnC
 rZz
 rZz
-whj
+nCZ
 fwb
 fwb
 fwb
@@ -46123,16 +46106,16 @@ kvC
 nCZ
 fxI
 fxI
-whj
+nCZ
 jbK
 rZz
-whj
-ipO
-ipO
-whj
+nCZ
+wvE
+wvE
+nCZ
 slf
 rZz
-whj
+nCZ
 fwb
 fwb
 fwb
@@ -46580,16 +46563,16 @@ oBi
 nCZ
 fxI
 kLf
-whj
-whj
-whj
-whj
-ipO
-ipO
-whj
-whj
-whj
-whj
+nCZ
+nCZ
+nCZ
+nCZ
+wvE
+wvE
+nCZ
+nCZ
+nCZ
+nCZ
 fwb
 fwb
 fwb

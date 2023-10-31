@@ -4,7 +4,7 @@
 #define TURF_HAS_EDGES		1
 #define TURF_HAS_CORNERS	2
 
-var/list/flooring_cache = list()
+GLOBAL_LIST_EMPTY(flooring_cache)
 
 // State values:
 // [icon_base]: initial base icon_state without edges or corners.
@@ -72,9 +72,9 @@ var/list/flooring_cache = list()
 			F.update_icon()
 
 /turf/open/indestructible/ground/bl/proc/get_flooring_overlay(cache_key, icon_base, icon_dir = 0, layer = TURF_DECAL_LAYER)
-	if(!flooring_cache[cache_key])
+	if(!GLOB.flooring_cache[cache_key])
 		var/image/I = image(icon = icon, icon_state = icon_base, dir = icon_dir)
 		I.layer = layer
-		flooring_cache[cache_key] = I
-	return flooring_cache[cache_key]
+		GLOB.flooring_cache[cache_key] = I
+	return GLOB.flooring_cache[cache_key]
 

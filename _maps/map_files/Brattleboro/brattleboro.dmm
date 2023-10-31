@@ -1349,7 +1349,7 @@
 /obj/machinery/workbench/forge/primal,
 /obj/item/clothing/gloves/f13/blacksmith,
 /obj/item/twohanded/sledgehammer/simple,
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "azj" = (
 /obj/item/gun/ballistic/automatic/pistol/m1911,
@@ -1435,7 +1435,7 @@
 /obj/structure/fluff/rails{
 	dir = 4
 	},
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
 "aBQ" = (
 /obj/structure/table/wood,
@@ -4748,7 +4748,7 @@
 /area/f13/building)
 "cTK" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "cTN" = (
 /obj/effect/decal/cleanable/blood,
@@ -4928,7 +4928,7 @@
 	dir = 4;
 	pixel_x = -15
 	},
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "daI" = (
 /obj/structure/bed,
@@ -8739,7 +8739,7 @@
 	dir = 4;
 	pixel_y = -1
 	},
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "fKW" = (
 /obj/effect/decal/cleanable/blood/gibs/human/lizard/down,
@@ -11502,7 +11502,7 @@
 	},
 /area/f13/village)
 "hJf" = (
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "hJz" = (
 /obj/structure/junk/small/bed2,
@@ -21540,6 +21540,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
+"oRC" = (
+/obj/machinery/door/unpowered/securedoor/gmb_door,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "oRG" = (
 /obj/structure/catwalk,
 /obj/structure/railing/handrail/rusty,
@@ -25668,7 +25672,7 @@
 	pixel_x = -15
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/bl/dfs)
 "rMH" = (
 /obj/machinery/light{
@@ -33252,7 +33256,7 @@
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "xoH" = (
-/turf/open/floor/plasteel/f13/stone,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
 "xpd" = (
 /obj/structure/fence{
@@ -66184,7 +66188,7 @@ iEP
 oNd
 fxI
 fxI
-fxI
+kLf
 kLf
 dZi
 dZi
@@ -66640,8 +66644,8 @@ yhw
 bEW
 boN
 mPe
-fxI
-fxI
+kLf
+kLf
 kLf
 dZi
 dZi
@@ -67095,11 +67099,11 @@ wCj
 bxc
 wCj
 xqq
-fxI
-fxI
-fxI
-fxI
 kLf
+kLf
+kLf
+dZi
+dZi
 dZi
 dZi
 dZi
@@ -67551,12 +67555,12 @@ wCj
 wCj
 wCj
 wCj
-xqq
-fxI
-fxI
-fxI
-fxI
-kLf
+oRC
+tfM
+tfM
+tfM
+dZi
+dZi
 dZi
 dZi
 dZi
@@ -68009,11 +68013,11 @@ wVz
 psc
 wCj
 xqq
-fxI
-fxI
 kLf
-kLf
-kLf
+tfM
+tfM
+dZi
+dZi
 dZi
 dZi
 dZi
@@ -68467,8 +68471,8 @@ lqT
 lqT
 xqq
 bEW
-kLf
-kLf
+tfM
+tfM
 dZi
 dZi
 dZi

@@ -1,7 +1,7 @@
 /datum/weather/rain
 	name = "rain"
 	desc = "Rain will fall on the Wasteland, cleaning it."
-	probability = 15
+	probability = 3
 
 	telegraph_duration = 300
 	telegraph_overlay = "rain_gathering"

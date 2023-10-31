@@ -56,9 +56,6 @@
 	growthstages = 1
 	rarity = 20
 	growing_icon = 'modular_badlands/code/modules/environment/icons/bl_flora_bw.dmi'
-	icon_grow = "ERROR-grow"
-	icon_dead = "ERROR-dead"
-	icon_harvest = "ERROR-harvest"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 
 /obj/item/seeds/bl/licorice
@@ -76,9 +73,6 @@
 	potency = 30
 	growthstages = 1
 	rarity = 20
-	icon_grow = "licorice-grow"
-	icon_dead = "licorice-dead"
-	icon_harvest = "licorice-harvest"
 	reagents_add = list(/datum/reagent/consumable/licoricepulp = 0.05)
 
 /obj/item/seeds/bl/milkweed
@@ -96,9 +90,6 @@
 	potency = 30
 	growthstages = 1
 	rarity = 20
-	icon_grow = "milkweed-grow"
-	icon_dead = "milkweed-dead"
-	icon_harvest = "milkweed-harvest"
 	reagents_add = list(/datum/reagent/consumable/milkweedpulp = 0.05)
 
 /obj/item/seeds/bl/yarrow
@@ -116,9 +107,6 @@
 	potency = 30
 	growthstages = 1
 	rarity = 20
-	icon_grow = "yarrow-grow"
-	icon_dead = "yarrow-dead"
-	icon_harvest = "yarrow-harvest"
 	reagents_add = list(/datum/reagent/consumable/yarrowpulp = 0.05)
 
 /obj/item/seeds/bl/skullcap
@@ -136,9 +124,6 @@
 	potency = 30
 	growthstages = 1
 	rarity = 20
-	icon_grow = "skullcap-grow"
-	icon_dead = "skullcap-dead"
-	icon_harvest = "skullcap-harvest"
 	reagents_add = list(/datum/reagent/consumable/skullcappulp = 0.05)
 
 // Produce containers third.

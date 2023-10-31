@@ -26,7 +26,7 @@
 /obj/item/repair_kit/reloader_set
 	name = "powder kit"
 	desc = "Used to create additional ammunition. Not good for much else."
-	icon_state = "reloader_set"
+	icon_state = "reloaderkit"
 	item_state = "sewingkit"//temp
 
 /obj/item/repair_kit/sewingkit

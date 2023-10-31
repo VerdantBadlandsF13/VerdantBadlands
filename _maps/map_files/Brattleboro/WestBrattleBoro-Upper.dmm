@@ -51,7 +51,7 @@
 	},
 /area/f13/wasteland)
 "aj" = (
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "ak" = (
 /obj/machinery/door/unpowered/securedoor/vfe/glass{
@@ -146,11 +146,11 @@
 /area/f13/wasteland)
 "aE" = (
 /obj/structure/bed/dogbed,
-/mob/living/simple_animal/pet/dog/eyebot{
-	name = "Sparky"
-	},
 /obj/machinery/light{
 	dir = 1
+	},
+/mob/living/simple_animal/pet/dog/eyebot{
+	name = "Sparky"
 	},
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/vault/security)
@@ -231,7 +231,7 @@
 	pixel_y = 32;
 	pixel_x = 14
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "aY" = (
 /obj/machinery/light{
@@ -292,7 +292,7 @@
 "bp" = (
 /obj/structure/fence/corner/wooden,
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "bu" = (
 /obj/item/storage/box/evidence,
@@ -426,7 +426,7 @@
 /area/f13/vault/security)
 "bV" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "bW" = (
 /obj/machinery/light{
@@ -528,7 +528,7 @@
 	pixel_y = 32;
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "cv" = (
 /obj/structure/curtain{
@@ -620,7 +620,7 @@
 	pixel_x = -9;
 	pixel_y = 4
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "cO" = (
 /obj/structure/bed/wooden,
@@ -703,7 +703,7 @@
 	pixel_x = -4;
 	pixel_y = 16
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "dg" = (
 /obj/structure/curtain{
@@ -980,7 +980,7 @@
 /area/f13/building)
 "et" = (
 /obj/item/toy/beach_ball,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "eu" = (
 /obj/structure/dresser,
@@ -1165,7 +1165,7 @@
 /area/f13/tunnel)
 "eZ" = (
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "fc" = (
 /obj/structure/table,
@@ -1328,7 +1328,7 @@
 "fO" = (
 /obj/machinery/light/small,
 /obj/machinery/smartfridge/drying_rack,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "fP" = (
 /obj/machinery/light,
@@ -1420,7 +1420,7 @@
 /mob/living/simple_animal/hostile/raider{
 	name = "Highland Raider"
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "go" = (
 /obj/structure/sink/greyscale{
@@ -1466,7 +1466,7 @@
 /area/f13/building)
 "gu" = (
 /obj/item/binoculars,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "gv" = (
 /obj/structure/railing{
@@ -1558,7 +1558,7 @@
 "gJ" = (
 /obj/structure/table,
 /obj/item/binoculars,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "gK" = (
 /mob/living/simple_animal/hostile/raider/junker,
@@ -1579,12 +1579,12 @@
 	},
 /area/f13/vault/security)
 "gQ" = (
-/mob/living/simple_animal/hostile/raider/ranged/boss{
-	name = "Highland Raider Leader"
-	},
 /obj/structure/chair/office/dark,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged/boss{
+	name = "Highland Raider Leader"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "gT" = (
@@ -1913,7 +1913,7 @@
 /area/f13/building)
 "ix" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "iy" = (
 /obj/item/weldingtool,
@@ -1980,11 +1980,11 @@
 /turf/open/floor/wood/wood_fancy,
 /area/f13/vault/dormitory)
 "iK" = (
-/mob/living/simple_animal/hostile/raider/junker,
 /obj/machinery/light{
 	light_color = "#e8eaff";
 	dir = 4
 	},
+/mob/living/simple_animal/hostile/raider/junker,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -2065,7 +2065,7 @@
 /area/f13/vault/vents)
 "jf" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "jg" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
@@ -2140,7 +2140,7 @@
 /area/f13/building)
 "ju" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_longarms,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "jw" = (
 /obj/machinery/light{
@@ -2537,6 +2537,14 @@
 /obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/wood/wood_wide/wood_wide_dark,
 /area/f13/building)
+"ld" = (
+/obj/structure/shieldwall/standard/stun{
+	req_one_access = list(151)
+	},
+/turf/open/floor/f13{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/building)
 "le" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 6
@@ -2576,7 +2584,7 @@
 /area/f13/building)
 "lm" = (
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "ln" = (
 /obj/structure/curtain{
@@ -2744,7 +2752,7 @@
 /area/f13/building)
 "lR" = (
 /obj/structure/tires/five,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "lT" = (
 /obj/structure/rack/shelf_metal,
@@ -3048,7 +3056,7 @@
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "mT" = (
 /obj/structure/table/wood,
@@ -3065,7 +3073,7 @@
 /area/f13/building)
 "mU" = (
 /obj/item/grenade/f13/mine/planted,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "mX" = (
 /obj/structure/closet/crate/footlocker,
@@ -3117,7 +3125,7 @@
 /area/f13/building)
 "nj" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "nl" = (
 /obj/item/kirbyplants/random,
@@ -3216,10 +3224,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
 "nI" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/boss{
 	name = "S-Mart Clerks Raider Boss"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
@@ -3255,7 +3263,7 @@
 /obj/structure/fence/corner/wooden{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "nO" = (
 /obj/structure/railing/wood{
@@ -3280,8 +3288,8 @@
 	},
 /area/f13/vault)
 "nW" = (
-/mob/living/simple_animal/hostile/trog/sporecarrier,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/trog/sporecarrier,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "oa" = (
@@ -3374,7 +3382,7 @@
 /turf/open/transparent/glass/reinforced,
 /area/f13/vault)
 "ox" = (
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "oA" = (
 /obj/structure/railing,
@@ -3568,7 +3576,7 @@
 	dir = 4
 	},
 /obj/effect/decal/remains/human,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "pu" = (
 /obj/structure/chair/stool,
@@ -3610,7 +3618,7 @@
 /area/f13/building)
 "pB" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "pC" = (
 /obj/structure/table,
@@ -3683,7 +3691,7 @@
 /area/f13/building)
 "pS" = (
 /obj/structure/wreck/trash/halftire,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "pT" = (
 /obj/structure/simple_door/metal/store,
@@ -3793,7 +3801,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = 13
 	},
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "qq" = (
 /turf/open/floor/wood/wood_fancy,
@@ -3819,7 +3827,7 @@
 /area/f13/wasteland)
 "qw" = (
 /obj/effect/decal/remains/human,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "qy" = (
 /obj/structure/chair/pew/left{
@@ -4139,7 +4147,7 @@
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Highland Raider"
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "rL" = (
 /obj/structure/chair/sofa/right,
@@ -4205,7 +4213,7 @@
 /obj/item/radio/tribal{
 	pixel_y = 5
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "sb" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/white/corner{
@@ -4215,7 +4223,7 @@
 "sc" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "sd" = (
 /obj/structure/chair/office/dark{
@@ -4262,7 +4270,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
 "sr" = (
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "ss" = (
 /obj/structure/wreck/trash/machinepile,
@@ -4371,7 +4379,7 @@
 /area/f13/wasteland)
 "sR" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "sS" = (
 /obj/structure/curtain{
@@ -4406,7 +4414,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = 13
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "tb" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/white/corner{
@@ -4483,7 +4491,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = -15
 	},
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "tv" = (
 /obj/structure/table/wood/junk,
@@ -4575,7 +4583,7 @@
 "tK" = (
 /obj/item/grenade/f13/mine/planted,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "tL" = (
 /obj/machinery/autodoc,
@@ -4686,7 +4694,7 @@
 	pixel_y = -6
 	},
 /obj/item/reagent_containers/food/snacks/meat/steak/ant_meat,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "ug" = (
 /obj/structure/chair/sofa/corp/corner{
@@ -4697,7 +4705,7 @@
 "uh" = (
 /obj/structure/table,
 /obj/item/stack/medical/gauze/improvised,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "ui" = (
 /obj/structure/table/wood/poker,
@@ -4774,13 +4782,13 @@
 /area/f13/wasteland)
 "uv" = (
 /obj/structure/fluff/beach_umbrella,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "ux" = (
 /obj/structure/railing/wood{
 	pixel_y = 32
 	},
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "uy" = (
 /obj/structure/closet/secure_closet/personal{
@@ -5176,7 +5184,7 @@
 	dir = 4;
 	icon_state = "post_wood"
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "we" = (
 /obj/structure/wreck/trash/five_tires,
@@ -5327,14 +5335,14 @@
 /area/f13/vault/security/armory)
 "wH" = (
 /obj/structure/chair/bench,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "wI" = (
 /obj/structure/fence/wooden{
 	dir = 4;
 	icon_state = "post_wood"
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "wJ" = (
 /turf/open/transparent/glass/reinforced,
@@ -5392,7 +5400,7 @@
 	dir = 8
 	},
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "wV" = (
 /obj/machinery/light{
@@ -5882,7 +5890,7 @@
 /area/f13/wasteland)
 "yH" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "yJ" = (
 /obj/structure/table,
@@ -5904,8 +5912,7 @@
 /obj/structure/table/optable,
 /obj/structure/badlands_props{
 	icon_state = "xray_off";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
@@ -6415,7 +6422,7 @@
 /area/f13/wasteland)
 "AT" = (
 /obj/item/trash/f13/tin,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "AW" = (
 /obj/structure/table/wood,
@@ -6468,7 +6475,7 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "Be" = (
 /obj/structure/railing{
@@ -6515,15 +6522,15 @@
 /area/f13/building)
 "Bm" = (
 /obj/item/toy/beach_ball,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Bn" = (
 /obj/structure/chair/comfy/black,
 /turf/open/floor/carpet/orange,
 /area/f13/vault/dormitory)
 "Bo" = (
-/mob/living/simple_animal/hostile/giantant,
 /obj/structure/nest/ant,
+/mob/living/simple_animal/hostile/giantant,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Bq" = (
@@ -6659,7 +6666,7 @@
 /area/f13/vault/medical)
 "BR" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
 "BS" = (
 /obj/structure/table,
@@ -6760,7 +6767,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Co" = (
 /obj/structure/railing{
@@ -6860,7 +6867,7 @@
 "CG" = (
 /obj/structure/table/wood,
 /obj/item/binoculars,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "CH" = (
 /obj/machinery/workbench,
@@ -7066,10 +7073,10 @@
 /obj/structure/fence/wooden{
 	pixel_x = -15
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Dx" = (
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Dy" = (
 /obj/effect/decal/cleanable/oil,
@@ -7284,7 +7291,7 @@
 /area/f13/building)
 "Ep" = (
 /obj/structure/wreck/trash/two_tire,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Eq" = (
 /obj/structure/chair/sofa/right,
@@ -7325,11 +7332,11 @@
 	},
 /area/f13/building)
 "Ey" = (
+/obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider{
 	name = "Highland Raider"
 	},
-/obj/structure/chair/wood,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "Ez" = (
 /obj/structure/curtain{
@@ -7376,7 +7383,7 @@
 /area/f13/building)
 "EG" = (
 /obj/item/minefield_sign,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "EH" = (
 /obj/effect/decal/cleanable/ash/large,
@@ -7537,7 +7544,7 @@
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
 "Fl" = (
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
 "Fn" = (
 /turf/open/floor/f13,
@@ -7564,7 +7571,7 @@
 /area/f13/building)
 "Fr" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Fs" = (
 /obj/structure/bed/wooden{
@@ -7936,8 +7943,7 @@
 /obj/structure/table/optable,
 /obj/structure/badlands_props{
 	icon_state = "xray_on";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
@@ -8281,8 +8287,7 @@
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/badlands_props{
 	icon_state = "xray_on";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 4
@@ -8374,7 +8379,7 @@
 /area/f13/tunnel)
 "Iq" = (
 /obj/structure/wreck/trash/two_tire,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "It" = (
 /turf/closed/indestructible/rock{
@@ -8444,8 +8449,8 @@
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/raider/firefighter,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/firefighter,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "IM" = (
@@ -8840,7 +8845,7 @@
 /area/f13/building)
 "Ko" = (
 /obj/structure/reagent_dispensers/barrel/four,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Kq" = (
 /obj/item/ammo_casing/spent,
@@ -8857,14 +8862,14 @@
 /obj/structure/fence/wooden{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Kt" = (
 /turf/open/floor/carpet/blue,
 /area/f13/building)
 "Kv" = (
 /obj/structure/wreck/trash/one_tire,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Kw" = (
 /turf/closed/wall/rust,
@@ -9009,7 +9014,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
 "Ld" = (
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "Le" = (
 /obj/effect/spawner/lootdrop/bedsheet,
@@ -9082,7 +9087,7 @@
 /obj/structure/chair/comfy/plywood{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Lt" = (
 /obj/structure/dresser,
@@ -9155,7 +9160,7 @@
 /area/f13/building)
 "LJ" = (
 /obj/item/storage/trash_stack,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "LK" = (
 /turf/closed/wall/f13/wood/house,
@@ -9544,7 +9549,7 @@
 	pixel_y = 32;
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Nj" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -9586,7 +9591,7 @@
 "No" = (
 /obj/structure/table,
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "Nq" = (
 /obj/structure/table/wood,
@@ -9781,7 +9786,7 @@
 /area/f13/building)
 "Ol" = (
 /obj/structure/campfire,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Om" = (
 /obj/structure/table/reinforced,
@@ -9801,7 +9806,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = -14
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "Or" = (
 /obj/item/attachments/scope,
@@ -9868,10 +9873,10 @@
 /obj/structure/chair/sofa/right{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider{
 	name = "S-Mart Clerks Raider"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
@@ -9896,7 +9901,7 @@
 /area/f13/vault/security)
 "OM" = (
 /obj/item/storage/trash_stack,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "OO" = (
 /obj/structure/chair/sofa/corp{
@@ -9918,8 +9923,8 @@
 /turf/open/floor/carpet/orange,
 /area/f13/building)
 "OV" = (
-/mob/living/simple_animal/hostile/raider/ranged,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "OW" = (
@@ -10047,7 +10052,7 @@
 /area/f13/tunnel)
 "PD" = (
 /obj/structure/chair/stool,
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "PE" = (
 /obj/structure/shieldwall/full/active_lethal,
@@ -10083,6 +10088,10 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
+/area/f13/building)
+"PL" = (
+/obj/machinery/shield_switch,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
 "PO" = (
 /obj/item/instrument/guitar,
@@ -10178,7 +10187,7 @@
 	dir = 1
 	},
 /obj/machinery/smartfridge/drying_rack,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "Qh" = (
 /obj/structure/bed/wooden,
@@ -10499,7 +10508,7 @@
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Highland Raider"
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Rq" = (
 /obj/structure/curtain{
@@ -10593,13 +10602,13 @@
 /obj/structure/chair{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "RI" = (
 /obj/structure/chair{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "RJ" = (
 /obj/structure/closet/fridge,
@@ -10613,7 +10622,7 @@
 "RM" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "RN" = (
 /obj/item/chair/stool,
@@ -10630,7 +10639,7 @@
 	pixel_x = -15
 	},
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "RS" = (
 /obj/structure/railing{
@@ -10724,7 +10733,7 @@
 /area/f13/building)
 "Sn" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "So" = (
 /obj/structure/table/wood,
@@ -10751,7 +10760,7 @@
 /obj/structure/fence/wooden{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/grass_standard/badlands_grass,
+/turf/open/indestructible/ground/bl/outside/grass_standard/badlands_grass,
 /area/f13/wasteland)
 "Su" = (
 /obj/structure/table,
@@ -10761,8 +10770,7 @@
 /obj/item/reagent_containers/dropper,
 /obj/structure/badlands_props{
 	icon_state = "periodic";
-	pixel_x = -32;
-	density = 0
+	pixel_x = -32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 8
@@ -10816,8 +10824,7 @@
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/badlands_props{
 	icon_state = "xray_off";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 8
@@ -10846,8 +10853,7 @@
 	},
 /obj/structure/badlands_props{
 	icon_state = "anatomy";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building)
@@ -11032,7 +11038,7 @@
 "Te" = (
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Tg" = (
 /obj/item/kirbyplants/random,
@@ -11047,12 +11053,12 @@
 	},
 /area/f13/wasteland)
 "Th" = (
-/mob/living/simple_animal/hostile/raider/baseball,
 /obj/structure/chair/sofa/corp/right,
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "Ti" = (
@@ -11156,13 +11162,13 @@
 /area/f13/wasteland)
 "TF" = (
 /obj/structure/tires/five,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "TH" = (
 /mob/living/simple_animal/hostile/raider{
 	name = "Highland Raider"
 	},
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "TI" = (
 /turf/closed/indestructible/f13/matrix/transition{
@@ -11224,7 +11230,7 @@
 /area/f13/caves)
 "TW" = (
 /obj/structure/campfire,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/building)
 "TY" = (
 /obj/structure/railing/wood,
@@ -11569,7 +11575,7 @@
 /area/f13/building)
 "Vp" = (
 /obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "Vr" = (
 /obj/structure/sign/painting/library_private{
@@ -11633,7 +11639,7 @@
 /area/f13/wasteland)
 "VE" = (
 /obj/item/dice/d20,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "VF" = (
 /obj/structure/shelf_wood,
@@ -11794,8 +11800,8 @@
 	},
 /area/f13/building)
 "Wk" = (
-/mob/living/simple_animal/hostile/raider/thief,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/thief,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "Wm" = (
@@ -11833,7 +11839,7 @@
 /area/f13/wasteland)
 "Wq" = (
 /obj/item/trash/f13/k_ration,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Wr" = (
 /obj/structure/bed/wooden,
@@ -11887,7 +11893,7 @@
 /area/f13/vault/vents)
 "WE" = (
 /obj/structure/fence/wooden,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "WG" = (
 /obj/structure/bed/wooden,
@@ -11906,7 +11912,7 @@
 /obj/structure/fence/wooden{
 	pixel_x = 13
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "WM" = (
 /turf/open/floor/carpet/red,
@@ -11983,7 +11989,7 @@
 /area/f13/building)
 "Xe" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "Xf" = (
 /obj/structure/railing{
@@ -12147,8 +12153,7 @@
 "XO" = (
 /obj/structure/badlands_props{
 	icon_state = "anatomy";
-	pixel_x = 32;
-	density = 0
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side{
 	dir = 4
@@ -12195,7 +12200,7 @@
 /area/f13/vault/security)
 "Yb" = (
 /obj/machinery/smartfridge/bottlerack/gardentool/primitive,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Yc" = (
 /turf/closed/indestructible/f13/matrix/transition{
@@ -12301,7 +12306,7 @@
 /area/f13/wasteland)
 "YG" = (
 /obj/structure/tires/five,
-/turf/open/indestructible/ground/outside/graveldirt,
+/turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/building)
 "YH" = (
 /obj/structure/chair/comfy/beige{
@@ -12353,13 +12358,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
 /area/f13/vault/vents)
 "YW" = (
-/mob/living/simple_animal/hostile/raider/ranged/biker{
-	name = "Highland Raider"
-	},
 /obj/structure/chair/wood{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	name = "Highland Raider"
+	},
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "YY" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/white/side,
@@ -12378,10 +12383,10 @@
 /turf/open/transparent/openspace,
 /area/f13/vault)
 "Zc" = (
+/obj/machinery/light,
 /mob/living/silicon/robot/modules/gutsy{
 	shell = 1
 	},
-/obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 6
 	},
@@ -12484,7 +12489,7 @@
 /area/f13/wasteland)
 "Zy" = (
 /obj/effect/landmark/nuclear_waste_spawner/weak,
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "Zz" = (
 /turf/closed/indestructible/vaultdoor,
@@ -12509,7 +12514,7 @@
 	pixel_x = 13;
 	pixel_y = 32
 	},
-/turf/open/indestructible/ground/outside/bl/dirt,
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "ZG" = (
 /obj/structure/curtain{
@@ -106994,7 +106999,7 @@ my
 It
 dV
 dV
-tf
+dV
 dV
 dV
 tf
@@ -107452,7 +107457,7 @@ It
 It
 It
 It
-It
+ld
 It
 It
 It
@@ -107908,7 +107913,7 @@ nH
 nH
 oM
 Sk
-nH
+PL
 nH
 ap
 ge

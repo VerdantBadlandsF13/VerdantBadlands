@@ -8,6 +8,7 @@
 	resistance_flags = NONE
 	var/constage = 0 //construction stage for upgrading into a regular lathe
 	var/upgrade_step = 0
+
 	DRM = 1
 	categories = list(
 					"Electronics",
@@ -21,7 +22,7 @@
 /obj/machinery/autolathe/constructionlathe/proc/upgrade_hint()
 	switch(upgrade_step)
 		if(0)
-			return "<span class='warning'>Perhaps you can feed <i>munition schematics</i> into \the [src]?</span>"
+			return "<span class='warning'>Perhaps you can feed <i>'Guns and Bullets, Part 4'</i> into \the [src]?</span>"
 		if(1)
 			return "<span class='warning'>A lot of the internals are worn out. <i>A new fuse</i> would work to refurbish \the [src].</span>"
 		if(2)
@@ -34,7 +35,7 @@
 	if(DRM && panel_open)
 		if(constage == 0)
 			if(istype(O, /obj/item/book/granter/crafting_recipe/gunsmith_four))
-				to_chat(user, "<span class='notice'>You feed \the [src] with ammunition schematics. You'll still need to provide it with some high-quality metal parts.</span>")
+				to_chat(user, "<span class='notice'>You feed \the [src] with schematics from 'Guns and Bullets, Part 4'. You'll still need to provide it with some high-quality metal parts.</span>")
 				constage = 1
 				upgrade_step = 1
 				qdel(O)

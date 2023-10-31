@@ -163,7 +163,7 @@ GLOBAL_LIST_EMPTY(explosions)
 			L.flash_act()
 
 	//concuss mobs
-	for(var/mob/living/carbon/M in viewers(7, epicenter))
+	for(var/mob/living/carbon/M in viewers(2, epicenter))
 		if(prob(20))
 			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 			M.gain_trauma(/datum/brain_trauma/mild/concussion)

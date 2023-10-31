@@ -1,9 +1,13 @@
-// A variety of things, such as sounds and so on, to make the world feel more alive. A lot of this is pulled directly, almost 1:1, from Interbay.
+// A variety of things, such as sounds and so on, to make the world feel more alive.
 // Gasmask fluff from IB.
 /mob/living/carbon/human/proc/handle_gas_mask_sound()
 	if(istype(wear_mask, /obj/item/clothing/mask/gas))
 		var/mask_sound = "modular_badlands/code/modules/rp_misc/sound/mask/gasmask[rand(1,10)].ogg"
 		playsound(src, mask_sound, 50, 1)
+
+/mob/living/carbon/human/proc/handle_deathdoor_sound()
+	var/deathdoor_sound = "modular_badlands/code/modules/rp_misc/sound/gore/death/deadgasp[rand(1,5)].ogg"
+	playsound(src, deathdoor_sound, 50, 1)
 
 // Audio for bleeding.
 /mob/living/carbon/proc/handle_blood_drip_sound()
@@ -98,7 +102,7 @@ Light, followed by extreme.
 	else
 		lowpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_moan[rand(1,3)].ogg"
 	playsound(src, lowpain_sound, 50, 0)
-	last_breath = world.time + 24 SECONDS
+	last_breath = world.time + 2 MINUTES
 
 /mob/living/carbon/proc/handle_highpain(mob/living/M)
 	if(world.time < last_breath)
@@ -109,7 +113,7 @@ Light, followed by extreme.
 	else
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
 	playsound(src, highpain_sound, 50, 0)
-	last_breath = world.time + 48 SECONDS
+	last_breath = world.time + 5 MINUTES
 
 /*
 Radio static below.

@@ -144,7 +144,7 @@ ATTACHMENTS
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
 	var/safety = 1
-	var/safe_delay = 50
+	var/safe_delay = 5
 	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
 
 	var/condition = 1// Should I use conditions?

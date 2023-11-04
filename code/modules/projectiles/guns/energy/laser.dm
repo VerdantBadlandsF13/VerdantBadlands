@@ -4,6 +4,7 @@
 	icon_state = "laser"
 	item_state = "laser"
 	slowdown = 0.3
+	can_charge = 0
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
 	custom_materials = list(/datum/material/iron=2000)

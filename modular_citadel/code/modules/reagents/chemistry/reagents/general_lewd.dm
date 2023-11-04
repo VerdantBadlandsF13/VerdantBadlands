@@ -1,3 +1,8 @@
+// The unfortunate defines.
+#define BLOOD_STATE_SEMEN				"semen"
+#define BLOOD_STATE_SEFEM				"femcum"
+#define SEMEN_AMOUNT_PER_DECAL			20
+
 //body bluids
 /datum/reagent/consumable/semen
 	name = "Semen"
@@ -9,8 +14,7 @@
 	color = "#FFFFFF" // rgb: 255, 255, 255
 	can_synth = FALSE
 	nutriment_factor = 0.5 * REAGENTS_METABOLISM
-	glass_icon_state = "semen"
-	glass_name = "chalice of semen"
+	glass_icon_state = "nothing"
 	glass_desc = "In the Sumerian mythology, Enki - the God of water, was believed to have created the Tigris and Euphrates rivers by masturbating and ejaculating into their empty riverbeds."
 
 /datum/reagent/consumable/semen/reaction_turf(turf/T, reac_volume)
@@ -34,6 +38,8 @@
 	icon = 'icons/obj/genitals/effects.dmi'
 	icon_state = "semen1"
 	random_icon_states = list("semen1", "semen2", "semen3", "semen4")
+	blood_state = BLOOD_STATE_SEMEN
+	bloodiness = SEMEN_AMOUNT_PER_DECAL
 
 /obj/effect/decal/cleanable/semen/New()
 	..()
@@ -55,6 +61,7 @@
 	color = "#AAAAAA77"
 	can_synth = FALSE
 	nutriment_factor = 0.5 * REAGENTS_METABOLISM
+	glass_icon_state = "nothing"
 
 /obj/effect/decal/cleanable/femcum
 	name = "female ejaculate"
@@ -67,6 +74,8 @@
 	random_icon_states = list("fem1", "fem2", "fem3", "fem4")
 	blood_state = null
 	bloodiness = null
+//	blood_state = BLOOD_STATE_SEFEM
+//	bloodiness = SEMEN_AMOUNT_PER_DECAL
 
 /obj/effect/decal/cleanable/femcum/New()
 	..()

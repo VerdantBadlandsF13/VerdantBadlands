@@ -20,7 +20,7 @@
 	var/obj/item/flashlight/seclite/attached_light
 	var/datum/action/item_action/toggle_helmet_flashlight/alight
 
-	var/durability_threshold = 5
+	var/durability_threshold = 0
 	repair_kit = /obj/item/repair_kit/arm_repair_kit
 
 /obj/item/clothing/head/helmet/Initialize()
@@ -68,6 +68,7 @@
 	while(armor_durability < 100)
 		if(do_after(user, 10))
 			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability] durability.")
+			playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/interface/repair[rand(1,7)].ogg", 40, 0, 0)
 			if(kit.uses_left > 1)
 				kit.uses_left -= 1
 				fix_armor()
@@ -85,8 +86,8 @@
 
 /obj/item/clothing/head/helmet/proc/fix_armor()
 	if(armor_durability < 100)
-		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
-		armor_durability += 1
+		armor = armor.modifyRating(initial(armor.linemelee), initial(armor.linebullet), initial(armor.linelaser))
+		armor_durability = initial(armor_durability)
 	return
 
 /obj/item/clothing/head/helmet/handle_atom_del(atom/A)

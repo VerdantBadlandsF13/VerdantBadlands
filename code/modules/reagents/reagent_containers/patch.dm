@@ -56,7 +56,11 @@
 	list_reagents = list(/datum/reagent/drug/jet = 10)
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_jet"
+	swallow_audio = 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg'
 
+/obj/item/reagent_containers/pill/patch/jet/afterattack()
+	. = ..()
+	playsound(loc, swallow_audio, 100, 1)
 
 // ---------------------------------
 // TURBO

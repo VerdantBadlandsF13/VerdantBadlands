@@ -14,6 +14,7 @@
 	var/roundstart = FALSE
 	var/self_delay = FALSE //pills are instant, this is because patches inheret their aplication from pills
 	var/dissolvable = TRUE
+	var/swallow_audio = 'modular_badlands/code/modules/rp_misc/sound/medical/pillswallow.ogg'
 
 /obj/item/reagent_containers/pill/Initialize()
 	. = ..()
@@ -52,6 +53,8 @@
 	var/makes_me_think = pick(strings("redpill.json", "redpill_questions"))
 	if(icon_state == "pill4" && prob(5)) //you take the red pill - you stay in Wonderland, and I show you how deep the rabbit hole goes
 		addtimer(CALLBACK(GLOBAL_PROC, /proc/to_chat, M, "<span class='notice'>[makes_me_think]</span>"), 50)
+
+	playsound(loc, swallow_audio, 100, 1)
 
 	log_combat(user, M, "fed", reagents.log_list())
 	if(reagents.total_volume)

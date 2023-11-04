@@ -40,6 +40,7 @@
 	var/emped = 0
 	var/requires_training = TRUE
 	var/armor_block_threshold = 0.6 //projectiles with AP below this will be ignored.
+	slowdown = 4
 
 	actions_types = list(/datum/action/item_action/toggle/pa_cell, /datum/action/item_action/toggle/pa_toggle)
 
@@ -113,14 +114,14 @@
 				power_cell.forceMove(src)
 				powerControl()
 				to_chat(usr, "<span class='notice'>You inserted [power_cell.name] to [src].</span>")
-				playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg", 40, 0, 0)
+				playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg", 40, 0, 0)
 				return
 		to_chat(usr, "<span class='warning'>There's no fusion core!</span>")
 		return
 	else
 		if(do_after(usr, 10, target = loc))
 			to_chat(usr, "<span class='green'>You ejected [power_cell.name] from [src].</span>")
-			playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/pulling/pull_closet[rand(1,6)].ogg", 40, 0, 0)
+			playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg", 40, 0, 0)
 			usr.put_in_hands(power_cell)
 			power_cell = null
 
@@ -131,7 +132,7 @@
 		remove_traits(user)
 		var/unpowered_slowdown = 4
 		unpowered_slowdown = 4
-		slowdown += unpowered_slowdown
+		slowdown = unpowered_slowdown
 		L.update_equipment_speed_mods()
 		playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/access_rejected.ogg", 40, 0, 0)
 		STOP_PROCESSING(SSobj, src)
@@ -141,7 +142,7 @@
 		assign_traits(user)
 		var/powered_slowdown = 1
 		powered_slowdown = 1
-		slowdown += powered_slowdown
+		slowdown = powered_slowdown
 		L.update_equipment_speed_mods()
 		playsound(src.loc, 'modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg', 40, 0, 0)
 		START_PROCESSING(SSobj, src)

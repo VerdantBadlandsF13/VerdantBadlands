@@ -56,7 +56,7 @@
 	var/fraction = min(10/reagents.total_volume, 1)
 	reagents.reaction(M, INGEST, fraction)
 	reagents.trans_to(M, 10, log = TRUE)
-	playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
+	playsound(M.loc,"modular_badlands/code/modules/rp_misc/sound/food/sip[rand(1,5)].ogg", rand(10,50), 1)
 	return 1
 
 /obj/item/reagent_containers/food/condiment/afterattack(obj/target, mob/user , proximity)

@@ -153,8 +153,8 @@ Security Officer
 
 	outfit = /datum/outfit/job/vault/f13security
 
-	access = list(ACCESS_VFE, ACCESS_VFE_SECURITY)
-	minimal_access = list(ACCESS_VFE, ACCESS_VFE_SECURITY)
+	access = list(ACCESS_VFE, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_ENGINEERING, ACCESS_VFE_SCIENCE)
+	minimal_access = list(ACCESS_VFE, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_ENGINEERING, ACCESS_VFE_SCIENCE)
 
 /datum/outfit/job/vault/f13security
 	name = "Vault-Tec Security"
@@ -325,7 +325,7 @@ Vault Dweller
 
 /datum/outfit/job/vault/f13vaultDweller
 	name = "Vault Dweller"
-	id = /obj/item/card/id/vaultiecard
+	id = /obj/item/card/id/vfe
 	jobtype = /datum/job/vault/f13vaultDweller
 	backpack = 		/obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(/obj/item/crowbar = 1)

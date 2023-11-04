@@ -8,19 +8,19 @@
 	path = /obj/item/clothing/shoes/f13/rag
 
 /datum/gear/shoes/wraps
-	name = "golden leg wraps"
+	name = "(Digi Friendly) golden leg wraps"
 	path = /obj/item/clothing/shoes/wraps
 
 /datum/gear/shoes/wrapssilver
-	name = "silver leg wraps"
+	name = "(Digi Friendly) silver leg wraps"
 	path = /obj/item/clothing/shoes/wraps/silver
 
 /datum/gear/shoes/wrapsblue
-	name = "blue leg wraps"
+	name = "(Digi Friendly) blue leg wraps"
 	path = /obj/item/clothing/shoes/wraps/blue
 
 /datum/gear/shoes/wrapsred
-	name = "red leg wraps"
+	name = "(Digi Friendly) red leg wraps"
 	path = /obj/item/clothing/shoes/wraps/red
 
 /datum/gear/shoes/military

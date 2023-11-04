@@ -54,7 +54,7 @@
 	key_third_person = "chokes"
 	message = "chokes!"
 	emote_type = EMOTE_AUDIBLE
-	sound = 'sound/f13effects/sunsetsounds/choke.ogg' //Sunset Edit - TK
+	sound = 'sound/f13effects/sunsetsounds/choke.ogg'
 
 /datum/emote/living/chuckle
 	key = "chuckle"

@@ -244,6 +244,14 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
 
+/obj/item/clothing/suit/armored/f13/light/khan_groupie
+	name = "biker jacket"
+	desc = "Tough leather and a faded logo. What'd this stand for? Clearly not anything still around, that's for sure."
+	icon_state = "khan_jacket"
+	item_state = "khan_jacket"
+	heat_protection = CHEST
+	siemens_coefficient = 1.1
+
 // GMB
 
 /obj/item/clothing/suit/armored/f13/light/gmb
@@ -262,7 +270,7 @@
 	desc = "A handmade coat. It has been fitted with the militia's patch, and has ballistic weave sewn in."
 	icon_state = "gmgreencoat"
 	item_state = "gmgreencoat"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 10)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/practitioner
 	name = "practitioner coat"
@@ -270,18 +278,18 @@
 	It has been fitted with the militia's patch."
 	icon_state = "leathercoat"
 	item_state = "gmbrowncoat"
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80)
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 15, "rad" = 60, "fire" = 60, "acid" = 80, "wound" = 50)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/walker
 	name = "walker plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
 	item_state = "gmbrowncoatplated"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 25)
 
 /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	name = "commander plated overcoat"
 	desc = "A handmade overcoat, fitted with plating and sewn in ballistic weave. It has been fitted with the militia's patch."
 	icon_state = "gmbrowncoatplated"
 	item_state = "gmbrowncoatplated"
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 15, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50, "wound" = 50)

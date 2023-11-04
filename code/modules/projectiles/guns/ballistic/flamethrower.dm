@@ -143,7 +143,7 @@
 			ammo_pack.overheat += burst_size
 			..()
 		else
-			to_chat(user, "The flamethrower is extremely hot! You shouldn't fire it anymore or it might blow up!.")
+			to_chat(user, "The flamethrower is extremely hot! You shouldn't fire it anymore or it might blow up!")
 
 /obj/item/gun/ballistic/m2flamethrower/afterattack(atom/target, mob/living/user, flag, params)
 	if(!ammo_pack || ammo_pack.loc != user)

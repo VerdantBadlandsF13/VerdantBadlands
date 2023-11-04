@@ -744,11 +744,11 @@
 /obj/item/storage/belt/bolt_quiver/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 15
-	STR.display_numerical_stacking = TRUE
-	CANHOLD_STATIC(STR, typecacheof(list(
+	STR.max_items = 16
+	var/static/list/can_hold = typecacheof(list(
 		/obj/item/ammo_casing/caseless/arrow/death
-		)))
+		))
+	STR.can_hold = can_hold
 
 /obj/item/storage/belt/bolt_quiver/full/PopulateContents()
 	for(var/i in 1 to 16)

@@ -139,6 +139,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"aK" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "aL" = (
 /obj/structure/stairs/east{
 	color = "#624b30"
@@ -316,6 +320,11 @@
 /obj/structure/decoration/smokeold{
 	pixel_y = 32
 	},
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "bu" = (
@@ -592,7 +601,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "cQ" = (
 /obj/structure/debris/v3,
@@ -1432,6 +1441,12 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"gI" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "gJ" = (
 /obj/structure/nest/mirelurk,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1601,6 +1616,7 @@
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "hx" = (
@@ -1827,7 +1843,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "is" = (
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "it" = (
 /obj/machinery/light/small{
@@ -2036,6 +2052,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "jw" = (
@@ -2192,7 +2209,7 @@
 /area/f13/tunnel)
 "kd" = (
 /obj/structure/mirelurkegg,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "ke" = (
 /obj/structure/chair/office/dark{
@@ -2691,8 +2708,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "mF" = (
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "mJ" = (
 /obj/effect/decal/remains/human,
@@ -2946,6 +2962,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"nK" = (
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/bl/gmb)
 "nL" = (
 /obj/structure/table/wood/settler,
 /obj/item/instrument/guitar,
@@ -3019,6 +3039,12 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
+"oa" = (
+/obj/structure/nest/mirelurk{
+	max_mobs = 1
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "oc" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Raider"
@@ -3154,6 +3180,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"oC" = (
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/caves)
 "oE" = (
 /obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 31
@@ -3605,7 +3635,7 @@
 /area/f13/tunnel)
 "qt" = (
 /mob/living/simple_animal/hostile/mirelurk/hunter,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "qu" = (
 /obj/structure/barricade/bars,
@@ -4314,6 +4344,12 @@
 /obj/structure/debris/v4,
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
+"tl" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "tn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/prewar/poster82{
@@ -4657,7 +4693,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "uL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4843,6 +4879,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"vz" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "vA" = (
 /obj/structure/sign/warning{
 	pixel_y = -32
@@ -4941,7 +4981,7 @@
 	icon_state = "goo10"
 	},
 /mob/living/simple_animal/hostile/mirelurk/baby,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "wa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5415,6 +5455,14 @@
 	},
 /turf/open/floor/plating,
 /area/f13/sewer)
+"yc" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "ye" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -5605,7 +5653,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "yZ" = (
 /obj/item/storage/trash_stack{
@@ -5629,6 +5677,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/rock,
 /area/f13/building)
+"ze" = (
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/bl/gmb)
 "zf" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -5948,6 +6000,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"AC" = (
+/obj/effect/spawner/lootdrop/f13/traitbooks/low,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "AE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/booth,
@@ -6166,7 +6222,7 @@
 /area/f13/tunnel)
 "BB" = (
 /obj/structure/flora/wasteplant/rad_fungus,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "BC" = (
 /obj/structure/table,
@@ -6483,7 +6539,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6493,7 +6549,7 @@
 /area/f13/building)
 "CY" = (
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "CZ" = (
 /obj/machinery/chem_heater,
@@ -6541,7 +6597,7 @@
 /turf/closed/indestructible/rock,
 /area/f13/building)
 "Dj" = (
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/bl/gmb)
 "Dn" = (
 /obj/structure/bed/mattress/pregame,
@@ -7060,7 +7116,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "FX" = (
 /obj/structure/table,
@@ -7521,7 +7577,7 @@
 "HH" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "HJ" = (
 /obj/structure/wreck/trash/machinepile,
@@ -7621,6 +7677,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Ii" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/sewer)
 "Ij" = (
 /obj/structure/closet/cabinet,
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
@@ -7681,6 +7741,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
@@ -8274,6 +8335,7 @@
 /obj/effect/decal/marking{
 	icon_state = "doublevertical"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "Ly" = (
@@ -9417,7 +9479,7 @@
 	},
 /area/f13/sewer)
 "Qn" = (
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "Qq" = (
 /obj/effect/decal/remains/human,
@@ -10108,7 +10170,7 @@
 /area/f13/tunnel)
 "Ti" = (
 /obj/structure/flora/wasteplant/wild_fungus,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "Tj" = (
 /obj/structure/table,
@@ -10243,7 +10305,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/bl/gravel,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "TN" = (
 /obj/structure/barricade/bars,
@@ -10972,6 +11034,12 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Xm" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Xo" = (
 /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 /obj/item/ammo_box/shotgun/buck,
@@ -11011,7 +11079,7 @@
 /area/f13/sewer)
 "Xz" = (
 /obj/structure/nest/mirelurk,
-/turf/open/indestructible/ground/outside/bl/mud,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "XA" = (
 /obj/structure/rack/shelf_metal,
@@ -15020,7 +15088,7 @@ Va
 Va
 ft
 ft
-EY
+Ii
 EY
 EY
 ft
@@ -17977,7 +18045,7 @@ Cg
 xR
 Gs
 OA
-Va
+OA
 Va
 Va
 Va
@@ -19798,7 +19866,7 @@ OA
 Gs
 HU
 OF
-Cg
+gI
 Gs
 Cg
 uo
@@ -21626,7 +21694,7 @@ OA
 Gs
 HU
 OF
-Cg
+gI
 Gs
 Cg
 Cg
@@ -22542,7 +22610,7 @@ Vy
 Cg
 if
 Gs
-Cg
+yc
 Cg
 Xi
 Gs
@@ -23243,7 +23311,7 @@ ft
 EY
 EY
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -28949,7 +29017,7 @@ Va
 CS
 CS
 Va
-CS
+AC
 Va
 Va
 Va
@@ -29405,13 +29473,13 @@ Va
 CS
 CS
 CS
-ja
+Va
 Va
 Va
 Va
 Va
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -29864,11 +29932,11 @@ CS
 CS
 CS
 CS
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -30319,14 +30387,14 @@ Va
 Va
 Va
 Va
+ja
+Va
+Va
+Va
+Va
+Va
 CS
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+CS
 Va
 Va
 Va
@@ -30782,9 +30850,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -31240,8 +31308,8 @@ Cp
 Cp
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -31697,8 +31765,8 @@ Cp
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -32154,8 +32222,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -32611,7 +32679,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -33067,8 +33135,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -33523,8 +33591,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+AP
+CS
 Va
 Va
 Va
@@ -33738,7 +33806,7 @@ Va
 Va
 Va
 EY
-EY
+Ii
 QS
 Va
 Va
@@ -33980,8 +34048,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -34438,8 +34506,8 @@ Va
 Va
 Va
 Va
-Va
-Cp
+CS
+CS
 Va
 Va
 Va
@@ -34895,7 +34963,7 @@ Va
 Va
 Va
 Va
-Cp
+CS
 Va
 Va
 Va
@@ -35352,8 +35420,8 @@ Va
 Va
 Va
 Va
-Cp
-Va
+CS
+CS
 Va
 Va
 Va
@@ -35809,8 +35877,8 @@ Va
 Va
 Va
 Cp
-Cp
-Va
+CS
+CS
 Va
 Va
 Va
@@ -36266,7 +36334,7 @@ Va
 Va
 Va
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -36723,7 +36791,7 @@ Va
 Va
 Cp
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -37179,8 +37247,8 @@ Va
 Va
 Va
 Cp
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -37385,7 +37453,7 @@ jL
 dO
 mf
 nd
-mf
+aK
 mf
 mf
 OO
@@ -37430,7 +37498,7 @@ ft
 ft
 ft
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -37636,7 +37704,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -38092,8 +38160,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -38548,9 +38616,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -39005,7 +39073,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -39461,8 +39529,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -39688,7 +39756,7 @@ wF
 wF
 vV
 EY
-EY
+Ii
 EY
 EY
 Va
@@ -39918,7 +39986,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -40375,7 +40443,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -40832,7 +40900,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -41288,8 +41356,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -41545,7 +41613,7 @@ Va
 Va
 Va
 ft
-EY
+Ii
 EY
 ft
 ft
@@ -41744,8 +41812,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+Xm
+CS
 Va
 Va
 Va
@@ -42198,10 +42266,10 @@ Xb
 Xb
 Xb
 Xb
-Va
-Va
-Va
-Va
+AP
+CS
+CS
+tl
 Va
 Va
 Va
@@ -42655,9 +42723,9 @@ Va
 gR
 Xb
 Xb
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -43112,9 +43180,9 @@ Va
 Va
 Xb
 Xb
-Va
-Va
-Va
+CS
+vz
+CS
 Va
 Va
 Va
@@ -43569,9 +43637,9 @@ Va
 Xb
 Xb
 Xb
-Va
-Va
-Va
+CS
+CS
+CS
 Va
 Va
 Va
@@ -44027,8 +44095,8 @@ Xb
 Xb
 Va
 Va
-Va
-Va
+CS
+AP
 Va
 Va
 Va
@@ -45392,7 +45460,7 @@ Gs
 Va
 cZ
 CS
-Zh
+oa
 cZ
 CS
 gR
@@ -56696,7 +56764,7 @@ EY
 EY
 EY
 Va
-EY
+Ii
 EY
 EY
 EY
@@ -58147,13 +58215,13 @@ is
 is
 Qn
 cP
+is
+is
 Qn
-Qn
-Qn
-Qn
+oC
 is
 TM
-Dj
+mF
 mF
 Cg
 Cg
@@ -58601,7 +58669,7 @@ CS
 is
 Va
 Va
-is
+oC
 Qn
 uK
 Qn
@@ -58610,8 +58678,8 @@ cP
 is
 is
 CV
-Dj
 mF
+nK
 HH
 Cg
 Cg
@@ -59067,8 +59135,8 @@ uK
 is
 Qn
 FW
-Dj
 mF
+nK
 CY
 kz
 mR
@@ -59511,7 +59579,7 @@ Va
 Va
 jh
 CS
-CS
+vz
 CS
 Va
 Va
@@ -59525,11 +59593,11 @@ Qn
 Qn
 Dj
 Dj
+ze
 qh
 qh
 qh
 qh
-Va
 Va
 Va
 Va
@@ -63554,7 +63622,7 @@ Va
 Va
 Va
 Va
-EY
+Ii
 EY
 Va
 Va
@@ -63597,7 +63665,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 CS
@@ -63608,7 +63676,7 @@ Hy
 xu
 sN
 CS
-CS
+vz
 CS
 Va
 Va
@@ -64535,7 +64603,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 Va
@@ -68951,7 +69019,7 @@ Md
 Md
 Md
 Md
-EY
+Ii
 EY
 Md
 Md
@@ -69462,7 +69530,7 @@ Va
 OA
 Va
 Va
-EY
+Ii
 EY
 zx
 EY
@@ -70845,7 +70913,7 @@ EY
 EY
 EY
 EY
-EY
+Ii
 Va
 Va
 Va
@@ -75014,7 +75082,7 @@ CS
 KW
 KW
 CS
-CS
+vz
 CS
 CS
 Va
@@ -76872,7 +76940,7 @@ LT
 nl
 rW
 CS
-CS
+vz
 CS
 CS
 CS
@@ -77344,7 +77412,7 @@ kl
 CS
 CS
 CS
-CS
+vz
 CS
 FK
 LT
@@ -86008,7 +86076,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 KW
 CS
@@ -88303,7 +88371,7 @@ CS
 CS
 CS
 CS
-CS
+vz
 CS
 Va
 Va
@@ -92881,7 +92949,7 @@ Va
 Va
 Va
 Va
-CS
+vz
 CS
 CS
 fY
@@ -107496,7 +107564,7 @@ CS
 CS
 CS
 CS
-CS
+vz
 Va
 Va
 Va
@@ -118250,7 +118318,7 @@ We
 Rz
 mf
 mf
-mf
+aK
 mf
 sz
 jL
@@ -118258,7 +118326,7 @@ mf
 kr
 mf
 mf
-mf
+aK
 mf
 mf
 JV
@@ -121914,7 +121982,7 @@ kr
 hY
 mf
 mf
-mf
+aK
 mf
 mf
 mf
@@ -122356,7 +122424,7 @@ YD
 YD
 lS
 DZ
-mf
+aK
 mf
 mf
 mf

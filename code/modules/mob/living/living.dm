@@ -932,6 +932,7 @@
 		strip_silence = TRUE
 
 	if(!strip_silence)
+		playsound(src, "modular_badlands/code/modules/rp_misc/sound/storage/searchsound[rand(1,2)].ogg", 90, 0)
 		who.visible_message("<span class='danger'>[src] tries to remove [who]'s [what.name].</span>", \
 					"<span class='userdanger'>[src] tries to remove your [what.name].</span>", target = src,
 					target_message = "<span class='danger'>You try to remove [who]'s [what.name].</span>")
@@ -1202,6 +1203,9 @@
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
 		SEND_SIGNAL(src, COMSIG_LIVING_IGNITED,src)
+		if(ishuman(src))
+			var/mob/living/carbon/C = src
+			C.handle_incineration()
 		return TRUE
 	return FALSE
 

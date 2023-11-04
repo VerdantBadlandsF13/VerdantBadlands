@@ -28,8 +28,8 @@
 	var/moving = 0
 	var/material_type = /obj/item/stack/sheet/mineral/wood
 	var/can_disasemble = 0
-	var/open_sound = 'sound/machines/door_open.ogg'
-	var/close_sound = 'sound/machines/door_close.ogg'
+	var/open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/dooropen.ogg'
+	var/close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/doorclose.ogg'
 	var/opening_time = 2
 	var/closing_time = 4
 
@@ -340,8 +340,8 @@
 	icon_state = "metal"
 	door_type = "metal"
 	material_type = /obj/item/stack/sheet/metal
-	open_sound = "sound/f13machines/doorstore_open.ogg"
-	close_sound = "sound/f13machines/doorstore_close.ogg"
+	open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen1.ogg'
+	close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose1.ogg'
 	explosion_block = 1.5
 	material_count = 5
 
@@ -383,6 +383,8 @@
 	opacity = FALSE
 	base_opacity = FALSE
 	can_hold_padlock = TRUE
+	open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen2.ogg'
+	close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose2.ogg'
 
 /obj/structure/simple_door/glass
 	desc = "The glass is quite clean, someone took care of this door."
@@ -391,6 +393,8 @@
 	opacity = FALSE
 	base_opacity = FALSE
 	can_hold_padlock = TRUE
+	open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen2.ogg'
+	close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose2.ogg'
 
 
 /obj/structure/simple_door/metal/dirtystore
@@ -398,6 +402,8 @@
 	icon_state = "dirtystore"
 	door_type = "dirtystore"
 	can_hold_padlock = TRUE
+	open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen2.ogg'
+	close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose2.ogg'
 
 /obj/structure/simple_door/metal/store
 	icon_state = "store"
@@ -406,6 +412,8 @@
 	base_opacity = FALSE
 	can_disasemble = 1
 	can_hold_padlock = TRUE
+	open_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen2.ogg'
+	close_sound = 'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose2.ogg'
 
 
 // --------------------------------------

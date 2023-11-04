@@ -133,7 +133,6 @@
 	light_color = LIGHT_COLOR_FIRE
 	light_power = 1
 	light_range = 0
-	break_sound = 'modular_badlands/code/modules/rp_misc/sound/gore/nonorganic_impact/bash1.ogg'
 	debris = list(/obj/item/stack/sheet/metal = 2)
 	var/burning = FALSE
 	var/flickering = FALSE

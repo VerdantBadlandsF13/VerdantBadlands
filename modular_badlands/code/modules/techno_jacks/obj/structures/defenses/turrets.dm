@@ -12,6 +12,9 @@ Woe, ballistic wounds be upon ye.
 	scan_range = 9
 	max_integrity = 650
 	obj_integrity = 650
+
+	shot_delay = 1// :)
+
 	req_access = list(ACCESS_LBJ)
 	mode = TURRET_LETHAL
 	stun_projectile = /obj/item/projectile/bullet/a50MG/depleteduranium

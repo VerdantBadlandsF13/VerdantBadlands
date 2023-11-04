@@ -517,6 +517,14 @@
 	item_state = "raiderharness"
 	item_color = "raiderharness"
 
+/obj/item/clothing/under/f13/khan_groupie
+	name = "biker getup"
+	desc = "The apparel of a potentially psychotic biker. What's this even supposed to be?"
+	icon_state = "marlowduds"
+	item_state = "marlowduds"
+	item_color = "marlowduds"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+
 // GMB
 /obj/item/clothing/under/f13/gmb
 	name = "militia outfit"

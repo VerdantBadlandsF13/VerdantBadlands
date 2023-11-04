@@ -1242,7 +1242,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		to_chat(H,"You can understand idiots!")
 		H.grant_language(/datum/language/aphasia)
 
-	if(H.special_a >= 2)
+	if(H.special_a >= 6)
 		to_chat(H,"As you have enough agility points, you know how to sneak. Higher points increases effectiveness.")
 		stealth = new
 		stealth.Grant(H)
@@ -1251,6 +1251,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		to_chat(H, "With years of enduring the harsh wasteland, your body has adapted. Whether due to radiation or otherwise, \
 		you're no longer capable of being bisected or gutted.")
 		ADD_TRAIT(H, TRAIT_NOGUT, GENERIC)
+
+	if(H.special_c >= 8)
+		to_chat(H, "You speak with a voice far louder than others. When appropriate, of course.")
+		H.AddSpell(new /obj/effect/proc_holder/spell/terrifying_presence)
 
 	H.update_mutant_bodyparts()
 

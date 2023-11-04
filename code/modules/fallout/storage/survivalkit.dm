@@ -76,8 +76,10 @@
 
 /obj/item/storage/basic_survivalkit/PopulateContents()
 	. = ..()
-	new /obj/item/stack/medical/gauze/improvised(src)
-	new /obj/item/stack/medical/mesh/aloe(src)
+	new /obj/item/stack/medical/gauze/improvised/five(src)
+	new /obj/item/stack/medical/suture/five(src)
+	new /obj/item/stack/medical/mesh/aloe/five(src)
+	new /obj/item/flashlight/flare(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
 
 /obj/item/storage/survivalkit_empty

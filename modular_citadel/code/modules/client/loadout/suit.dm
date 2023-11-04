@@ -6,10 +6,12 @@
 /datum/gear/suit/redhood
 	name = "Red cloak"
 	path = /obj/item/clothing/suit/hooded/cloak/david
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 
 /datum/gear/suit/labcoat
 	name = "Labcoat"
 	path = /obj/item/clothing/suit/toggle/labcoat
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 
 /datum/gear/suit/rig
 	name = "(None) Makeshift Rig"

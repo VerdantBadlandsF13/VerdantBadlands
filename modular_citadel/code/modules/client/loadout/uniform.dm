@@ -4,18 +4,21 @@
 	cost = 2
 
 /datum/gear/uniform/harn
-	name = "gear harness"
+	name = "(Digi Friendly) gear harness"
 	path = /obj/item/clothing/under/misc/gear_harness
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 
 /datum/gear/uniform/digi_tacti
-	name = "tacticool turtleneck"
+	name = "(Digi Friendly) tacticool turtleneck"
 	path = /obj/item/clothing/under/syndicate/tacticool
 	cost = 5
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 
 /datum/gear/uniform/digi_tacti_skirt
-	name = "tacticool skirtleneck"
+	name = "(Digi Friendly) tacticool skirtleneck"
 	path = /obj/item/clothing/under/syndicate/tacticool/skirt
 	cost = 5
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 
 //suits
 

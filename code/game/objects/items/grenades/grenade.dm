@@ -211,16 +211,3 @@
 
 /obj/item/proc/grenade_prime_react(obj/item/grenade/nade)
 	return
-
-/obj/item/grenade/proc/play_grenade_equip_sound(src, volume=50)
-	if(src && equipsound && volume)
-		var/played_sound = equipsound
-
-		if(islist(equipsound))
-			played_sound = pick(equipsound)
-
-		playsound(src, played_sound, volume, 1)
-
-/obj/item/grenade/pickup(mob/living/user)
-	. = ..()
-	play_grenade_equip_sound(src)

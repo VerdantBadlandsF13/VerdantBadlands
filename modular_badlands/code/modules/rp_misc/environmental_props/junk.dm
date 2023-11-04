@@ -5,7 +5,7 @@
 	desc = "..."
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/decals.dmi'
 	anchored = 1
-	density = 1
+	density = 0
 	opacity = FALSE
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE

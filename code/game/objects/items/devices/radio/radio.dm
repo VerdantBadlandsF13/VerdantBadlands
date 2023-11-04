@@ -121,6 +121,10 @@
 		switch(linked_faction)
 			if(FACTION_VLT)
 				LAZYADD(GLOB.vlt_radios, src)
+			if(FACTION_GMB)
+				LAZYADD(GLOB.gmb_radios, src)
+			if(FACTION_DFS)
+				LAZYADD(GLOB.dfs_radios, src)
 
 /obj/item/radio/ComponentInitialize()
 	. = ..()
@@ -233,7 +237,7 @@
 		if (!ranged_static)
 			return FALSE
 		else
-			message = Gibberish(message, (ranged_static*1))
+			message = scramble_message_replace_chars(message, ranged_static*1)
 
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE

@@ -54,9 +54,9 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 	if(charge < 0.01)
 		return
 	else if(charge/maxcharge >=0.995)
-		add_overlay(image('icons/obj/power.dmi', "pa_cell-o2"))
+		add_overlay(image('modular_badlands/code/modules/power_armor/icons/cell.dmi', "pa_cell-o2"))
 	else
-		add_overlay(image('icons/obj/power.dmi', "pa_cell-o1"))
+		add_overlay(image('modular_badlands/code/modules/power_armor/icons/cell.dmi', "pa_cell-o1"))
 
 /obj/item/stock_parts/cell_pa/proc/percent()		// return % charge of cell
 	return 100*charge/maxcharge
@@ -165,6 +165,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 
 /obj/item/stock_parts/cell_pa/default/empty/New()
 	. = ..()
+	update_cell_icon()
 	charge = 0
 
 /obj/item/stock_parts/cell_pa/high
@@ -174,6 +175,7 @@ All I've done is make small adjustments to fit our server, and to clean it up a 
 
 /obj/item/stock_parts/cell_pa/high/empty/New()
 	. = ..()
+	update_cell_icon()
 	charge = 0
 
 /obj/item/stock_parts/cell_pa/admin/self_recharge

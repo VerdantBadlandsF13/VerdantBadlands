@@ -61,7 +61,7 @@
 			var/fraction = min(5/reagents.total_volume, 1)
 			reagents.reaction(M, INGEST, fraction)
 			addtimer(CALLBACK(reagents, /datum/reagents.proc/trans_to, M, 5, null, null, null, self_fed? "self swallowed" : "fed by [user]"), 5)
-			playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
+			playsound(M.loc,"modular_badlands/code/modules/rp_misc/sound/food/sip[rand(1,5)].ogg", rand(10,50), 1)
 
 /obj/item/reagent_containers/glass/afterattack(obj/target, mob/user, proximity)
 	. = ..()

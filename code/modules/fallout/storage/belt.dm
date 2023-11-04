@@ -110,6 +110,7 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	CANHOLD_STATIC(STR, typecacheof(list(
 		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/clip,
 		/obj/item/ammo_box/lasmusket,
 		/obj/item/reagent_containers/food/drinks/flask,
 		/obj/item/grenade/f13,
@@ -147,6 +148,9 @@
 	/obj/item/melee/transforming/energy/axe/protonaxe,
 	/obj/item/melee/powered/ripper)
 	starting_sword = null
+
+/obj/item/storage/belt/sabre/heavy/gmb
+	starting_sword = /obj/item/melee/smith/sword/sabre/gmb
 
 /obj/item/storage/belt/holster/ranger357/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357(src)

@@ -39,6 +39,7 @@
 			var/itemtypebonus= pickweight(lootable_trash)
 			if(itemtype)
 				to_chat(user, "<span class='notice'>You scavenge through [src].</span>")
+				playsound(src, "modular_badlands/code/modules/rp_misc/sound/storage/searchsound[rand(1,2)].ogg", 90, 0)
 				var/obj/item/item = new itemtype(ST)
 				if (prob(10+(user.special_l*3.5)))//SPECIAL Integration
 					to_chat(user, "<span class='notice'>You get lucky and find even more loot!</span>")

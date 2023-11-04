@@ -64,7 +64,12 @@
 		..()
 
 /mob/living/carbon/human/breathe()
-	handle_gas_mask_sound()
+
+	if(InCritical())
+		handle_deathdoor_sound()
+	else
+		handle_gas_mask_sound()
+
 	update_oxy_hud()
 	if(!dna.species.breathe(src))
 		..()
@@ -130,7 +135,6 @@
 	//If have no DNA or can be Ignited, call parent handling to light user
 	//If firestacks are high enough
 	if(!dna || dna.species.CanIgniteMob(src))
-		handle_incineration()
 		return ..()
 	. = FALSE //No ignition
 

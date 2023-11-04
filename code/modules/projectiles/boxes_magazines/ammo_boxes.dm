@@ -433,20 +433,25 @@
 //////////////////
 //STRIPPER CLIPS//
 //////////////////
+// Parent first.
+/obj/item/ammo_box/clip
+	name = "stripper clip (debug)"
+	desc = "A stripper clip, designed to help with testing. Scream at Carl if you see this."
+	icon = 'icons/obj/ammo.dmi'
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_POCKET
+	w_class = WEIGHT_CLASS_SMALL
+	w_volume = ITEM_VOLUME_STRIPPER_CLIP
+	start_empty = TRUE
 
+// Actual clips second.
 /obj/item/ammo_box/clip/shotgun
 	name = "stripper clip (shotgun shells)"
 	desc = "A stripper clip, designed to help with loading a shotgun slightly faster."
-	icon = 'icons/obj/ammo.dmi'
 	icon_state = "shotgunclip"
 	caliber = "shotgun" // slapped in to allow shell mix n match
-	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_POCKET
-	w_class = WEIGHT_CLASS_NORMAL
-	w_volume = ITEM_VOLUME_STRIPPER_CLIP
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 4
 	var/pixeloffsetx = 4
-	start_empty = TRUE
 
 /obj/item/ammo_box/clip/shotgun/update_overlays()
 	. = ..()

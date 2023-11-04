@@ -11,25 +11,6 @@
 	supereffective_damage = 62
 	supereffective_faction = list("supermutant", "deathclaw", "raider", "wastebot", "radscorpion")
 
-/obj/item/projectile/incendiary/flamethrower
-	name = "FIREEEEEEEEEE!!!!!"
-	icon = 'icons/effects/fire.dmi'
-	icon_state = "3"
-	light_range = LIGHT_RANGE_FIRE
-	light_color = LIGHT_COLOR_FIRE
-	damage_type = BURN
-	damage = 12 //slight damage on impact
-	wound_bonus = 60//Most wounds come from fire stacks, but this is insult to injury. :)
-	bare_wound_bonus = 80
-	range = 10
-
-/obj/item/projectile/incendiary/flamethrower/on_hit(atom/target)
-	. = ..()
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(3)
-		M.IgniteMob()
-
 /obj/item/projectile/bullet/pellet
 	var/tile_dropoff = 0
 	var/tile_dropoff_s = 0

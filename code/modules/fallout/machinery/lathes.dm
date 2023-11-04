@@ -257,7 +257,7 @@
 	icon_state = "autolathe_army"
 // More-or-less a debug machine, obtainable by players.
 // Don't think too hard about it.
-	base_print_speed = 60
+	base_print_speed = 15
 // For ammo.
 	simple = 1
 	basic = 1

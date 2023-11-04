@@ -126,15 +126,13 @@
 	shoes = /obj/item/clothing/shoes/f13/tan
 	gloves = /obj/item/clothing/gloves/f13/crudemedical
 	neck = /obj/item/clothing/neck/stethoscope
-	belt = /obj/item/storage/belt/medical
+	belt = /obj/item/storage/belt/medical/primitive
 	backpack_contents = list(/obj/item/smelling_salts=1,
 							/obj/item/healthanalyzer=1,
 							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
-							/obj/item/storage/backpack/duffelbag/med/surgery=1,
 							/obj/item/paper_bin=1,
 							/obj/item/folder=1,
 							/obj/item/pen/fountain=1,
-							/obj/item/storage/firstaid/ancient=1,
 							/obj/item/book/granter/trait/lowsurgery=1)
 
 // Chemrunner - Chemrunners aren't exactly the most reliable folks in the wasteland, but they can find a strong niche.
@@ -143,6 +141,7 @@
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/f13/tan
 	gloves = /obj/item/clothing/gloves/f13/handwraps
+	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
 	backpack_contents = list(/obj/item/book/granter/trait/chemistry=1)
 
 /datum/job/wasteland/f13tavernkeep

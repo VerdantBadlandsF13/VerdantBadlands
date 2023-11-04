@@ -116,7 +116,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	name = "\improper Beretta 93R"
-	desc = "An automatic 9mm pistol, featuring a fix muzzle brake."
+	desc = "An automatic 9mm pistol, featuring a fixed muzzle brake."
 	icon_state = "m93r"
 	fire_delay = 2
 	burst_size = 2

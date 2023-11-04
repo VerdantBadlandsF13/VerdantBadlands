@@ -81,6 +81,11 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 		return FALSE
 	return ..()
 
+/obj/machinery/autodoc/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
+	STR.cant_hold = typecacheof(list(/obj/item/card/emag))
+
 /obj/machinery/autodoc/Initialize()
 	. = ..()
 	occupant_typecache = GLOB.typecache_living
@@ -120,6 +125,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_power_usage = initial(active_power_usage) - (initial(active_power_usage)*(Pwr))/4
 	if(active_power_usage <= 1000)
 		active_power_usage = 1000
+
 	max_storage = round(list_avg(P), 1)
 	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
 	STR.max_items = max_storage

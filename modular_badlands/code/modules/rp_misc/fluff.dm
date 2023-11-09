@@ -113,7 +113,7 @@ Light, followed by extreme.
 	else
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
 	playsound(src, highpain_sound, 50, 0)
-	last_breath = world.time + 5 MINUTES
+	last_breath = world.time + 2 MINUTES
 
 /*
 Radio static below.
@@ -122,7 +122,7 @@ The number refers to the odds that each character in a message is potentially de
 */
 #define RADSTATIC_NONE 0// Vault.
 #define RADSTATIC_LIGHT 12// GMB exclusive, for now.
-#define RADSTATIC_MEDIUM 16// For DFS.
+#define RADSTATIC_MEDIUM 18// For DFS.
 #define RADSTATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
 #define RADSTATIC_STORM 95// Used for global overrides, on storm conditions.
 
@@ -266,9 +266,10 @@ General audio for grabbing and dropping items.
 	if(sharpness == SHARP_NONE)
 		drop_class = 9
 		grab_class = 9
-// Do I still not have a class? Return.
+// Do I still not have a class? Set to silent.
 	if(!drop_class || !grab_class)
-		return ..()
+		drop_class = 0
+		grab_class = 0
 
 /obj/item/gun/on_found(mob/finder)
 	. = ..()

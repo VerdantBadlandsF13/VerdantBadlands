@@ -247,7 +247,7 @@
 			if(length(picked_materials))
 				new_item.set_custom_materials(picked_materials, 1 / multiplier) //Ensure we get the non multiplied amount
 
-	icon_state = "[icon_state]"
+	icon_state = initial(icon_state)
 	busy = FALSE
 	updateDialog()
 

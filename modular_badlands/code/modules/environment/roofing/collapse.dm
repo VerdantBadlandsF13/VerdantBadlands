@@ -1,15 +1,15 @@
-/turf/open/proc/collapse_check()
-	return
-
 /turf/open
 	var/busy = FALSE
+
+/turf/open/proc/collapse_check()
+	return
 
 // We only want interiors to have a collapse chance...
 // Jesus, guys. What is this? My code is meant to be bad. Not yours.
 // TODO: Scrap this and create an entirely new system. :(
 // For now, I'll put a fix together and keep this up.
 // - Carl
-/turf/open/indestructible/ground/inside/mountain/collapse_check()
+/turf/open/collapse_check()
 	spawn(50)
 		var/area/A = get_area(src)
 		if(!A.outdoors)
@@ -27,13 +27,13 @@
 				if(A.outdoors)
 					supportfound = TRUE
 
-			for (var/turf/open/indestructible/ground/inside/mountain/U in get_turf(locate(x-1,y,z)))
+			for (var/turf/open/U in get_turf(locate(x-1,y,z)))
 				supportcount++
-			for (var/turf/open/indestructible/ground/inside/mountain/U in get_turf(locate(x+1,y,z)))
+			for (var/turf/open/U in get_turf(locate(x+1,y,z)))
 				supportcount++
-			for (var/turf/open/indestructible/ground/inside/mountain/U in get_turf(locate(x,y+1,z)))
+			for (var/turf/open/U in get_turf(locate(x,y+1,z)))
 				supportcount++
-			for (var/turf/open/indestructible/ground/inside/mountain/U in get_turf(locate(x,y-1,z)))
+			for (var/turf/open/U in get_turf(locate(x,y-1,z)))
 				supportcount++
 			if (supportcount >= 3 && !supportfound)
 				supportfound = TRUE
@@ -41,13 +41,15 @@
 			//Without support, dangerous situations abound.
 			if (!supportfound)
 				if (prob(80))
-					visible_message("The walls are unstable! Some rocks get loose and fall around!")
+					visible_message("The walls are unstable! Some debris gets loose and falls around!")
 					playsound(src,'modular_badlands/code/modules/environment/sound/debris.ogg',75,0,2)
 					for (var/mob/living/carbon/M in range(1, src))
 						M.take_overall_damage(brute = rand(10,30), stamina = rand(45,60))
 						M.adjust_blurriness(25)
-					var/turf/open/indestructible/ground/inside/mountain/DT = get_turf(src)
-					if (!istype(DT, /turf/open/indestructible/ground/inside/mountain))
+					var/turf/open/DT = get_turf(src)
+					if (istype(DT, /turf/open/indestructible/ground/inside/mountain))
+						DT.ChangeTurf(/turf/closed/mineral/random/low_chance)
+					else
 						DT.ChangeTurf(/turf/closed/mineral/random/low_chance)
 				else
 					visible_message("The tunnel starts to cave in!")

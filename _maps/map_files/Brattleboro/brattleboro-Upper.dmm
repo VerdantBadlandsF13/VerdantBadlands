@@ -249,7 +249,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},
@@ -2123,7 +2122,6 @@
 "kG" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /turf/open/floor/plating/rust,
@@ -2175,8 +2173,7 @@
 "kQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
@@ -5477,8 +5474,7 @@
 /area/f13/caves)
 "AS" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
@@ -6563,8 +6559,7 @@
 "GA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -7399,7 +7394,6 @@
 "KH" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /turf/open/floor/plating,
@@ -9341,7 +9335,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
-	faction = list("raider,                                                                                                                                                                                                                                                                wastebot");
 	name = "Techfiend Shooter";
 	desc = "A Techfiend raider with a keen eye for guns."
 	},

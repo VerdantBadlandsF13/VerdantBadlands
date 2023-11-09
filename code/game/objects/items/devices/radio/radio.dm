@@ -231,14 +231,6 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
-
-// See fluff.dm
-	if (ranged_static)
-		if (!ranged_static)
-			return FALSE
-		else
-			message = scramble_message_replace_chars(message, ranged_static*1)
-
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
 
@@ -288,6 +280,17 @@
 		if(position.z == jammer_turf.z && (get_dist(position, jammer_turf) < jammer.range))
 			message = Gibberish(message,100)
 			break
+
+// See fluff.dm
+	if(ranged_static)
+		if(!ranged_static)
+			return FALSE
+		var/turf/T = get_turf(src)
+		if(is_above_level(T.z))// Being higher up helps, always changing static to a low value.
+// Six, against the next lowest, which is twelve.
+			message = scramble_message_replace_chars(message, 6*1)
+		else
+			message = scramble_message_replace_chars(message, ranged_static*1)
 
 	// Determine the identity information which will be attached to the signal.
 	var/atom/movable/virtualspeaker/speaker = new(null, M, src)

@@ -474,3 +474,10 @@
 		to_chat(user, "<span class='warning'>You refrain from hitting [L] with [src], as you are in help intent.</span>")
 		return
 	return ..()
+
+/obj/item/bonesetter/tribal
+	name = "bone-puller"
+	desc = "Isn't this just a hook made from bone? Damn tribals..."
+	icon_state = "bonesetter_tribe"
+	attack_verb = list("corrected", "improperly set")
+	toolspeed = 2

@@ -1203,7 +1203,8 @@
 		throw_alert("fire", /obj/screen/alert/fire)
 		update_fire()
 		SEND_SIGNAL(src, COMSIG_LIVING_IGNITED,src)
-		if(ishuman(src))
+
+		if(ishuman(src) || stat != DEAD)
 			var/mob/living/carbon/C = src
 			C.handle_incineration()
 		return TRUE

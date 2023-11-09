@@ -150,7 +150,7 @@ The big bang.
 		target.Knockdown(400)
 
 		// Pick us a leg, if one exists.
-		var/obj/item/bodypart/target_limb = pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+		var/obj/item/bodypart/target_limb = get_bodypart(pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
 		// Dismember it.
 		target_limb.dismember()
 

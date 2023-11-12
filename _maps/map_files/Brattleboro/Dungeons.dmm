@@ -3120,9 +3120,7 @@
 	},
 /area/f13/tunnel)
 "goX" = (
-/obj/structure/nest/protectron{
-	max_mobs = 1
-	},
+/obj/structure/nest/protectron,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -3636,13 +3634,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/ahs)
-"hvX" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "hwR" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/fulltile,
@@ -10095,10 +10086,6 @@
 /obj/effect/turf_decal/caution,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
-"tfC" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plating/tunnel,
-/area/f13/bunker)
 "tfE" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -11352,12 +11339,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
-"vpy" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "vqH" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plating/tunnel,
@@ -71147,7 +71128,7 @@ sor
 shC
 ekT
 qfY
-vpy
+tNV
 urK
 ekT
 jHa
@@ -74724,7 +74705,7 @@ shC
 shC
 shC
 qpP
-tfC
+qpP
 lDm
 mRq
 oQi
@@ -76534,7 +76515,7 @@ bha
 dhY
 kVk
 kVk
-hvX
+kVk
 kVk
 mRq
 kVk

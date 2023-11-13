@@ -29,6 +29,8 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 
 	var/obj/screen/devil/soul_counter/devilsouldisplay
 
+	var/obj/screen/synth/coolant_counter/coolant_display
+
 	var/obj/screen/action_intent
 	var/obj/screen/zone_select
 	var/obj/screen/pull_icon

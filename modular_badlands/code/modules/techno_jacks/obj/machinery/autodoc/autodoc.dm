@@ -1,16 +1,6 @@
 // Pulled from FP13, original from Hippie. Reworked for our purposes and given some life.
-// A salute to those lost to time.
+// A salute, for those lost to time.
 // - Carl
-
-// There's gotta be something better for this.
-// No?
-/proc/list_avg(list/L)
-	. = 0
-	for(var/num in L)
-		. += num
-	. /= length(L)
-	LAZYCLEARLIST(L)
-
 GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	/datum/surgery_step/incise,
 	/datum/surgery_step/clamp_bleeders,
@@ -48,7 +38,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 
 /obj/machinery/autodoc
 	name = "Auto-Doc Mark IX"
-	desc = "A pre-war automated surgeon. Most would kill, if not do worse, for something this valuable. How'd you find this?"
+	desc = "A pre-war automated surgeon. Most would kill, if not do worse, for something so valuable. How'd you find this?"
 	circuit = /obj/item/circuitboard/machine/autodoc
 	icon = 'modular_badlands/code/modules/techno_jacks/icons/autodoc.dmi'
 	icon_state = "autodoc-open"
@@ -108,7 +98,7 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	var/avg = 1
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		P += M.get_part_rating()
-	avg = round(list_avg(P), 1)
+	avg = round(1,1)//TODO, FIX ME!!!!!!!!!
 	switch(avg)
 		if(2)
 			speed_mult = 0.75
@@ -125,11 +115,6 @@ GLOBAL_LIST_INIT(autodoc_supported_surgery_steps, typecacheof(list(
 	active_power_usage = initial(active_power_usage) - (initial(active_power_usage)*(Pwr))/4
 	if(active_power_usage <= 1000)
 		active_power_usage = 1000
-
-	max_storage = round(list_avg(P), 1)
-	var/datum/component/storage/STR = LoadComponent(/datum/component/storage/concrete/autodoc)
-	STR.max_items = max_storage
-	STR.cant_hold = typecacheof(list(/obj/item/card/emag))
 
 /obj/machinery/autodoc/CtrlClick(mob/user)
 	var/datum/component/storage/ST = GetComponent(/datum/component/storage/concrete/autodoc)

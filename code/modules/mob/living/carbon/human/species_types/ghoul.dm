@@ -9,7 +9,11 @@
 	say_mod = "rasps"
 	limbs_id = "ghoul"
 	species_traits = list(HAIR,FACEHAIR,HAS_BONE,NOGENITALS, NOBLOOD)
-	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT, TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH/*, TRAIT_LIMBATTACHMENT*/)
+
+	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
+	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER,
+	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH, TRAIT_LIMBATTACHMENT)
+
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	punchstunthreshold = 9
 	use_skintones = 0
@@ -45,6 +49,7 @@
 		b.max_damage -= 20
 		b.wound_resistance = -35
 	C.faction |= "ghoul"
+
 /datum/species/ghoul/on_species_loss(mob/living/carbon/C)
 	..()
 	C.faction -= "ghoul"

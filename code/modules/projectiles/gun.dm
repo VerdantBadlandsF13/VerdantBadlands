@@ -272,11 +272,11 @@ ATTACHMENTS
 	if(cell_discharge)
 		. += "<span class='revenminor'>Condition on this weapon heavily changes how much cell charge it consumes. <br>\
 		It does not suffer from traditional jams, as a consequence. Additionally, all energy weapons require three or more intelligence to use. <br>\
-		An exception is made for special weaponry, which requires six or higher. A note like this will be present, if that's the case.</span>"
+		An exception is made for special weaponry, which requires seven or higher. A note like this will be present, if that's the case.</span>"
 	if(heavy_weapon)
-		. += "<span class='revenminor'>This weapon requires a strength of six or higher.</span>"
+		. += "<span class='revenminor'>This weapon requires a strength of seven or higher.</span>"
 	if(special_weapon)
-		. += "<span class='revenminor'>This weapon requires an intelligence of six or higher.</span>"
+		. += "<span class='revenminor'>This weapon requires an intelligence of seven or higher.</span>"
 	if(pb_knockback >= 1)
 		. += "<span class='revenminor'>This weapon will provide knockback when point-blank.</span>"
 

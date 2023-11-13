@@ -36,7 +36,6 @@
 	owner.stuttering = 0
 	..()
 
-
 /datum/brain_trauma/mild/speech_impediment
 	name = "Speech Impediment"
 	desc = "Patient is unable to form coherent sentences."

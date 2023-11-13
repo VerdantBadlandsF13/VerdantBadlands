@@ -1,11 +1,12 @@
 /*
-Pulled from one of the old Russian servers.
-Can't recall the name, sadly. Credit to them, if we ever figure out who.
+Landmines used by players, and pre-spawned.
 */
 /obj/item/grenade/f13/mine
 	name = "landmine"
 	desc = "An explosive charge, designed and produced before the Great War. <br>\
-	Many such examples still litter the wasteland, killing indiscriminately."
+	Many such examples still litter the wasteland, killing indiscriminately. <br>\
+	<span class='revenminor'>You can bury and uncover this with a shovel, making it near impossible to detect or visible once more. <br>\
+	Additionally, you can use a screwdriver to disarm it.</span>"
 	density = FALSE
 	anchored = FALSE
 	icon = 'modular_badlands/code/modules/unsorted/icons/items.dmi'
@@ -15,14 +16,14 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	var/triggered = FALSE
 	var/hidden = FALSE
 	var/range_devastation = 0
-	var/range_heavy = 1
+	var/range_heavy = 0
 	var/range_light = 1
-	var/range_flash = 2
+	var/range_flash = 0
 
 /obj/item/grenade/f13/mine/Initialize()
 	. = ..()
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = .proc/on_entered
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
@@ -38,7 +39,6 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	icon_state = "landmine_active"
 	anchored = TRUE
 	armed = TRUE
-	range_heavy = 2
 	range_light = 2
 	range_flash = 3
 	add_appearance()
@@ -53,6 +53,43 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 		add_appearance()
 		return
 
+/obj/item/grenade/f13/mine/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir)
+	. = ..()
+	triggermine()
+
+/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/user, params)
+	..()
+
+/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/S)
+	if(!armed)
+		return
+	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
+	if(S.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
+		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
+		qdel(src)
+	else
+		triggermine(user)
+
+/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/shovel))
+		if(hidden == 0)
+			if(do_after(user, 20, target = loc))
+				to_chat(user, "You covered landmine with some debris.")
+				icon_state = "landmine_hidden"
+				hidden = 1
+				remove_appearance()
+				return
+		else
+			if(do_after(user, 20, target = loc))
+				to_chat(user, "You uncovered landmine.")
+				icon_state = "landmine_active"
+				hidden = 0
+				add_appearance()
+				return
+
+/*
+Procs
+*/
 /obj/item/grenade/f13/mine/proc/arm()
 	visible_message("<span class='danger'>[src] beeps!</span>")
 	if(armed)
@@ -61,22 +98,9 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	add_appearance()
 	armed = TRUE
 
-/obj/item/grenade/f13/mine/proc/mineEffect(mob/victim)
-	to_chat(victim, "<span class='danger'>*click*</span>")
-	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
-
-	var/mob/living/target = victim
-	if(!ishuman(target))
-		target.gib(1, 1)
-	if(target.health <= 1)
-		target.gib(1, 1)
-	else
-		target.adjustBruteLoss(min(99,(target.health - 1)))
-		target.Knockdown(400)
-		target.stuttering = 20
-		var/obj/item/bodypart/chest/O = target.get_bodypart(LEGS)
-		O.force_wound_upwards(/datum/wound/burn/critical)
-		O.force_wound_upwards(/datum/wound/blunt/critical)
+/*
+Enter & Exit stuff.
+*/
 
 /obj/item/grenade/f13/mine/proc/on_entered(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
 	SIGNAL_HANDLER
@@ -95,6 +119,10 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 
 	INVOKE_ASYNC(src, .proc/triggermine, arrived)
 
+/*
+The big bang.
+*/
+
 /obj/item/grenade/f13/mine/proc/triggermine(mob/victim)
 	if(triggered)
 		return
@@ -107,22 +135,33 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	triggered = 1
 	qdel(src)
 
-/obj/item/grenade/f13/mine/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir)
-	. = ..()
-	triggermine()
+/obj/item/grenade/f13/mine/proc/mineEffect(mob/victim)
+	explosion(loc, range_devastation, range_heavy, range_light, range_flash)
 
-/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/user, params)
-	..()
+	var/mob/living/target = victim
 
-/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/S)
-	if(!armed)
-		return
-	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
-	if(S.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
-		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
-		qdel(src)
+// Not carbon? Gib.
+	if(!ishuman(target))
+		target.gib(1, 1)
+
+// Continue otherwise.
 	else
-		triggermine(user)
+		target.adjustBruteLoss(10,65)
+		target.Knockdown(400)
+
+		// Pick us a leg, if one exists.
+		var/obj/item/bodypart/target_limb = target.get_bodypart(pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
+		// Dismember it.
+		target_limb.dismember()
+
+		// Now do wounding damage to the main body.
+		var/obj/item/bodypart/chest/O = target.get_bodypart(BODY_ZONE_CHEST)
+		O.force_wound_upwards(/datum/wound/burn/critical)
+		O.force_wound_upwards(/datum/wound/blunt/critical)
+
+/*
+Other stuff.
+*/
 
 /obj/item/grenade/f13/mine/proc/add_appearance()
 	var/image/I = image(icon = 'modular_badlands/code/modules/unsorted/icons/items.dmi', icon_state = "landmine_active", loc = src)
@@ -143,21 +182,3 @@ Can't recall the name, sadly. Credit to them, if we ever figure out who.
 	remove_alt_appearance("landmine_small")
 	remove_alt_appearance("landmine_ordinary")
 	remove_alt_appearance("landmine_large")
-
-/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/shovel))
-		if(hidden == 0)
-			if(do_after(user, 20, target = loc))
-				to_chat(user, "You covered landmine with some sand.")
-				icon_state = "landmine_hidden"
-				hidden = 1
-				remove_appearance()
-				return
-		else
-			if(do_after(user, 20, target = loc))
-				to_chat(user, "You uncovered landmine.")
-				icon_state = "landmine_active"
-				hidden = 0
-				add_appearance()
-				return
-

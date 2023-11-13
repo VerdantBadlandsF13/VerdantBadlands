@@ -11,7 +11,9 @@ Houses the defines required, to keep this modular.
 		handle_pain()
 	. = ..()
 
-/mob/living/proc/feels_pain()
+/mob/living/proc/feels_pain(mob/living/carbon/human/H)
+	if(HAS_TRAIT(H, TRAIT_NOPAIN))
+		return FALSE
 	return TRUE
 
 /mob/living/silicon/feels_pain()

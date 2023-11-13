@@ -89,10 +89,10 @@
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/scalpel (src)
 	new /obj/item/handsaw(src)
-	new /obj/item/retractor(src)
-	new /obj/item/hemostat(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/hemostat/tribal(src)
 	new /obj/item/weldingtool/basic(src)
-	new /obj/item/bonesetter(src)
+	new /obj/item/bonesetter/tribal(src)
 
 // ---------------------------------------------
 // BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs

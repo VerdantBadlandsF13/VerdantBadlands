@@ -7,11 +7,11 @@ It keeps the map changing, and has various applications in the realm of RP. - Ca
 
 /obj/effect/landmark/tremor_area
 	name = "tremor impact area"
-	var/range = TREMOR_CHECK_RANGE //tile radius to spawn goop
+	var/range = TREMOR_CHECK_RANGE //tile radius to check
 
 /obj/effect/landmark/tremor_area/proc/tremor()
 
-	for(var/turf/open/indestructible/ground/inside/mountain/TR in orange(range, get_turf(src)))
+	for(var/turf/open/TR in orange(range, get_turf(src)))
 		TR.collapse_check()
 
 	qdel(src)

@@ -28,6 +28,32 @@
 /turf/open/floor/plating/f13/MakeDry()
 	return
 
+/turf/open/floor/plating/f13/pry_tile()
+	return
+
+/turf/open/floor/plating/f13/remove_tile()
+	return
+
+// Plasteel
+/turf/open/floor/plasteel/f13/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+	return
+
+/turf/open/floor/plasteel/f13/burn_tile()
+	return
+
+/turf/open/floor/plasteel/f13/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
+	return
+
+/turf/open/floor/plasteel/f13/MakeDry()
+	return
+
+/turf/open/floor/plasteel/f13/pry_tile()
+	return
+
+/turf/open/floor/plasteel/f13/remove_tile()
+	return
+
+// End of the screaming.
 /turf/open/floor/plating/f13/outside
 	name = "What the fuck mappers? why is this here"
 	desc = "If found, scream at the github repo about this"

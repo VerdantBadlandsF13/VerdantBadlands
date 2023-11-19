@@ -464,6 +464,7 @@
 	var/informed = FALSE
 	if(isrobotic(src))
 		apply_status_effect(/datum/status_effect/no_combat_mode/robotic_emp, severity / 20)
+		hud_used?.coolant_display.jam(round(severity / 10 , 1)) //Scrambles coolant readout
 	severity *= 0.5
 	for(var/obj/item/bodypart/L in src.bodyparts)
 		if(L.status == BODYPART_ROBOTIC)

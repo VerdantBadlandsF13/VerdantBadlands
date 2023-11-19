@@ -127,6 +127,7 @@
 #define TRAIT_EASYLIMBDISABLE	"easy_limb_disable"
 #define TRAIT_TOXINLOVER		"toxinlover"
 #define TRAIT_NOBREATH			"no_breath"
+#define TRAIT_AUXILIARY_LUNGS 	"auxiliary_lungs" //Lungs not neccessary required due to nobreath, but provides some other helpful function.
 #define TRAIT_ANTIMAGIC			"anti_magic"
 #define TRAIT_HOLY				"holy"
 #define TRAIT_DEPRESSION		"depression"

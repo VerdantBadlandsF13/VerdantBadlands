@@ -81,6 +81,7 @@
 	new /obj/item/stack/medical/mesh/aloe/five(src)
 	new /obj/item/flashlight/flare(src)
 	new /obj/item/reagent_containers/food/drinks/flask/survival(src)
+	new /obj/item/geiger_counter(src)
 
 /obj/item/storage/survivalkit_empty
 	name = "survival kit"

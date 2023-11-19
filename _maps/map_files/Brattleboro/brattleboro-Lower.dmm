@@ -3148,8 +3148,7 @@
 	pixel_y = 32
 	},
 /obj/structure/nest/protectron{
-	spawn_time = 1000;
-	max_mobs = 1
+	spawn_time = 1000
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
@@ -5326,8 +5325,7 @@
 /area/f13/tunnel)
 "xs" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -7508,7 +7506,6 @@
 "Hu" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -8980,7 +8977,6 @@
 "NW" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -9073,8 +9069,7 @@
 /area/f13/sewer)
 "Ox" = (
 /obj/structure/nest/protectron{
-	spawn_time = 1000;
-	max_mobs = 1
+	spawn_time = 1000
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -9979,8 +9974,7 @@
 /area/f13/tunnel)
 "Sw" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -11209,8 +11203,7 @@
 /area/f13/tunnel)
 "Ya" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
@@ -11332,10 +11325,6 @@
 /obj/item/storage/box/cups,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
-"YA" = (
-/obj/structure/nest/gecko,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "YD" = (
 /turf/open/liquid/water/safe,
 /area/f13/tunnel)
@@ -69625,7 +69614,7 @@ CS
 CS
 CS
 CS
-YA
+CS
 CS
 Va
 Va
@@ -73254,7 +73243,7 @@ CS
 Va
 Va
 Va
-YA
+CS
 CS
 CS
 Va
@@ -83351,7 +83340,7 @@ Va
 Va
 Va
 Va
-YA
+CS
 CS
 CS
 Va

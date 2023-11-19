@@ -10,6 +10,7 @@ Heavily repurposed for our use, with a smidge of pool code and jank. - Carl
 /turf/open/liquid //Basic liquid turf parent
 	name = "seashallow"
 	icon = 'modular_badlands/code/modules/fluids/icons/fluids.dmi'
+	desc = "<span class='revenminor'>While dangerous, you can click-drag your icon onto and off of water to swim.</span>"
 	///Multiplier on any slowdown applied to a mob moving through this turf
 	var/slowdown_multiplier = 1
 	///How high up on the mob water overlays sit

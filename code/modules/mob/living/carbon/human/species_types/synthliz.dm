@@ -43,7 +43,6 @@
 			chem.reaction_mob(H, TOUCH, 2 ,0) //heal a little
 			H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)
 			return TRUE
-		
 
 /datum/species/synthliz/spec_life(mob/living/carbon/human/H)
 	if(H.nutrition < NUTRITION_LEVEL_FED)

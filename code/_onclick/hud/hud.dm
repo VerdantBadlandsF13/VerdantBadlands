@@ -6,7 +6,7 @@
 
 // The default UI style is the first one in the list
 GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Fallout" = 'icons/fallout/UI/screen_badlands.dmi'))
+	"Verdant" = 'icons/fallout/UI/screen_badlands.dmi'))
 
 /proc/ui_style2icon(ui_style)
 	return GLOB.available_ui_styles[ui_style] || GLOB.available_ui_styles[GLOB.available_ui_styles[1]]

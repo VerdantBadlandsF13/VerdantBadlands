@@ -555,8 +555,7 @@
 		to_chat(world, "<h2><span class='revenminor'>OOC: A sinner has been punished. Rejoice.</span></h2>")
 		character.take_overall_damage(brute = 800, burn = 800, stamina = 800)
 		character.adjustCloneLoss(800)
-		var/obj/item/bodypart/head/O = character.get_bodypart(BODY_ZONE_HEAD)
-		O.force_wound_upwards(/datum/wound/slash/critical)
+		character.hellbound = TRUE
 		to_chat(character, "<font color='red'>You've somehow bypassed the special cap. Suffer.</font>")
 		SEND_SOUND(world, sound('sound/f13npc/assaultron/beam.ogg'))
 

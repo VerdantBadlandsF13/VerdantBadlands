@@ -29,7 +29,7 @@
 	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
 	if((damage + AP_mod) < durability_threshold)
 		return ..()
-	if(def_zone in protected_zones)
+	if(def_zone in body_parts_covered/*protected_zones*/)
 		damage_armor()
 	. = ..()
 

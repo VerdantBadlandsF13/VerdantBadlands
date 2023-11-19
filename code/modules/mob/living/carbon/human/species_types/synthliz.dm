@@ -38,7 +38,7 @@
 	wagging_type = "mam_waggingtail"
 	species_type = "robotic"
 
-/datum/species/synthanthro/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
+/datum/species/synthliz/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(chem.type == /datum/reagent/medicine/synthflesh)
 		chem.reaction_mob(H, TOUCH, 2 ,0) //heal a little
 		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)

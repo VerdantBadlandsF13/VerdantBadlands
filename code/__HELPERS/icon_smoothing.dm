@@ -133,7 +133,7 @@
 	if(A.smooth & SMOOTH_OLD)
 		A:recalculate_junction()
 		A:relative()
-		
+
 	if(A.smooth & (SMOOTH_TRUE | SMOOTH_MORE))
 		var/adjacencies = calculate_adjacencies(A)
 

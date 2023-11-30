@@ -1,50 +1,103 @@
+import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Button, LabeledList, Section } from '../components';
+import { Button, LabeledList, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
-import { InterfaceLockNoticeBox } from './common/InterfaceLockNoticeBox';
 
-export const TurretControl = (props, context) => {
+export const PortableTurret = (props, context) => {
   const { act, data } = useBackend(context);
-  const locked = data.locked && !data.siliconUser;
   const {
-    enabled,
-    lethal,
-    shootCyborgs,
+    locked,
+    on,
+    turret_shoot_wildlife,
+    turret_shoot_players,
+    turret_shoot_raiders,
+    turret_shoot_robots,
+    turret_shoot_ignore_faction,
+    turret_make_noise,
+    turret_use_laser_pointer,
   } = data;
   return (
     <Window
-      width={305}
-      height={172}>
+      width={310}
+      height={lasertag_turret ? 110 : 292}>
       <Window.Content>
-        <InterfaceLockNoticeBox />
-        <Section>
-          <LabeledList>
-            <LabeledList.Item label="Turret Status">
-              <Button
-                icon={enabled ? 'power-off' : 'times'}
-                content={enabled ? 'Enabled' : 'Disabled'}
-                selected={enabled}
+        <NoticeBox>
+          Swipe an ID card to {locked ? 'unlock' : 'lock'} this interface.
+        </NoticeBox>
+        <Fragment>
+          <Section>
+            <LabeledList>
+              <LabeledList.Item
+                label="Status"
+                buttons={!lasertag_turret && (!!allow_manual_control
+                  || (!!manual_control && !!silicon_user)) && (
+                  <Button
+                    icon={manual_control ? "wifi" : "terminal"}
+                    content={manual_control
+                      ? "Remotely Controlled"
+                      : "Manual Control"}
+                    disabled={manual_control}
+                    color="bad"
+                    onClick={() => act('manual')} />
+                )}>
+                <Button
+                  icon={on ? 'power-off' : 'times'}
+                  content={on ? 'On' : 'Off'}
+                  selected={on}
+                  disabled={locked}
+                  onClick={() => act('power')} />
+              </LabeledList.Item>
+            </LabeledList>
+          </Section>
+          {!lasertag_turret && (
+            <Section
+              title="Target Settings"
+              buttons={(
+                <Button.Checkbox
+                  checked={!turret_shoot_ignore_faction}
+                  content="Disable IFF"
+                  disabled={locked}
+                  onClick={() => act('turret_return_ignore_faction')} />
+              )}>
+              <Button.Checkbox
+                fluid
+                checked={turret_shoot_players}
+                content="Target Civilians"
                 disabled={locked}
-                onClick={() => act('power')} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Turret Mode">
-              <Button
-                icon={lethal ? 'exclamation-triangle' : 'minus-circle'}
-                content={lethal ? 'Lethal' : 'Stun'}
-                color={lethal ? "bad" : "average"}
+                onClick={() => act('turret_return_shoot_players')} />
+              <Button.Checkbox
+                fluid
+                checked={turret_shoot_wildlife}
+                content="Target All Wildlife"
                 disabled={locked}
-                onClick={() => act('mode')} />
-            </LabeledList.Item>
-            <LabeledList.Item label="Target Cyborgs">
-              <Button
-                icon={shootCyborgs ? 'check' : 'times'}
-                content={shootCyborgs ? 'Yes' : 'No'}
-                selected={shootCyborgs}
+                onClick={() => act('turret_return_shoot_wildlife')} />
+              <Button.Checkbox
+                fluid
+                checked={turret_shoot_raiders}
+                content="Target Hostile Wildlife"
                 disabled={locked}
-                onClick={() => act('shoot_silicons')} />
-            </LabeledList.Item>
-          </LabeledList>
-        </Section>
+                onClick={() => act('turret_return_shoot_raiders')} />
+              <Button.Checkbox
+                fluid
+                checked={turret_shoot_robots}
+                content="Target Machinery"
+                disabled={locked}
+                onClick={() => act('turret_return_shoot_robots')} />
+              <Button.Checkbox
+                fluid
+                checked={turret_use_laser_pointer}
+                content="Targetting Laser"
+                disabled={locked}
+                onClick={() => act('turret_return_use_laser_pointer')} />
+              <Button.Checkbox
+                fluid
+                checked={turret_make_noise}
+                content="Internal Speakers"
+                disabled={locked}
+                onClick={() => act('turret_return_make_noise')} />
+            </Section>
+          )}
+        </Fragment>
       </Window.Content>
     </Window>
   );

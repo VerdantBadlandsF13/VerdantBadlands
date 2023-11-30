@@ -17,10 +17,10 @@
 // UNUSED START
 // General radio audio. Perhaps extend to other things.
 // Radio fluff. Audio from IB. Initial code without modification from SR(I think???).
-/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language)
+/obj/item/radio/proc/radio_vacant()
 	var/radiosound = "modular_badlands/code/modules/rp_misc/sound/radio/transmit/radio[rand(1,4)].ogg"
 	if(radiosound && listening)
-		playsound(M, radiosound, rand(20, 30))
+		playsound(src, radiosound, rand(20, 30))
 	. = ..()
 
 // Receiving a message provides feedback.
@@ -80,6 +80,7 @@ Ignore it, if possible.
 Mob audio for catching fire.
 Easier to have it here.
 */
+
 /mob/living/carbon/proc/handle_incineration(mob/living/M)
 	var/incineration_sound
 	if(src.gender == FEMALE)
@@ -322,6 +323,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifedrop.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metaldrop.ogg", 95, 0)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 // Grabbing.
 /obj/item/pickup()
@@ -348,6 +350,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 0)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/reagent_containers/food/drinks/pickup()
 	. = ..()

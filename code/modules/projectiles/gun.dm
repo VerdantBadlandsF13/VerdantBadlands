@@ -144,12 +144,14 @@ ATTACHMENTS
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
 	var/safety = 1
-	var/safe_delay = 5
+	var/safe_delay = 15
 	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
 
 	var/condition = 1// Should I use conditions?
 	var/condition_lvl = 100// Automatically shoved to 100 on init, regardless.
 	var/condition_mul = 1// How quickly I decay. 0.25 is easy, 1 is hard.
+	var/randomize_condition_lvl = TRUE
+
 	var/can_jam = TRUE// CAN I jam?
 	var/cell_discharge = FALSE// Instead of a traditional jam, it eats additional cell charge.
 	var/jammed = FALSE// Am I jammed?
@@ -195,7 +197,16 @@ ATTACHMENTS
 	if(gun_light)
 		alight = new (src)
 	build_zooming()
-	safety = 1// Lock the safety.
+
+	if(condition)
+		if(randomize_condition_lvl)
+			condition_lvl = rand(1,100)
+			if(can_jam && randomize_condition_lvl && !cell_discharge)
+				jammed = rand(0,1)//Rather than TRUE or FALSE, but it works the same.
+		else
+			condition_lvl = initial(condition_lvl)
+
+	safety = rand(0,1)
 
 /obj/item/gun/Destroy()
 	if(istype(pin)) // could be a typepath if qdel init hint was used before parent
@@ -295,18 +306,22 @@ ATTACHMENTS
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>[dryfire_text]</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_jammed(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon is jammed! Alt-click to clear it!</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_broken(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>This weapon is broken!</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_safe(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon has its safety on! Ctrl-click to toggle.</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	if(recoil)
@@ -318,8 +333,10 @@ ATTACHMENTS
 
 	if(suppressed)
 		playsound(user, fire_sound, 10, 1)
+		//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 	else
 		playsound(user, fire_sound, 50, 1)
+		//show_sound_effect(src, soundicon = SFX_ICON_JAGGED)
 		if(message)
 			if(pointblank)
 				user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
@@ -532,12 +549,14 @@ ATTACHMENTS
 		if(condition_lvl < 60)
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
+					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
 	if(condition == 1)
 		if(user.special_l >= 1)
 			if(prob(1 - (user.special_l * 0.05)))
 				if(can_jam)
+					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
 	if(user.special_s <= 6)

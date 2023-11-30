@@ -126,8 +126,10 @@
 
 	if(!force)
 		playsound(loc, 'sound/weapons/tap.ogg', get_clamped_volume(), 1, -1)
+		//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 	else if(hitsound)
 		playsound(loc, hitsound, get_clamped_volume(), 1, -1)
+		//show_sound_effect(src, soundicon = SFX_ICON_JAGGED)
 
 	M.lastattacker = user.real_name
 	M.lastattackerckey = user.ckey

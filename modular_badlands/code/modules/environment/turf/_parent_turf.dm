@@ -27,6 +27,7 @@ I really, really don't want to do it this way. Forgive me.
 	. = ..()
 	if(prob(2))
 		salvage = pickweight(loots)
+	update_icon(TRUE)
 
 /turf/open/indestructible/ground/bl/outside
 	slowdown = 0.4

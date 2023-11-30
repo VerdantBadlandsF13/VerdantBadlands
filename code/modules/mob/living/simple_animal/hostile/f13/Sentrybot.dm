@@ -1,7 +1,9 @@
 /* IN THIS FILE:
 -Sentry Bot
+Super powerful ranged boss, intended for higher end dungeons and military themed locations.
+This WILL wipe entire groups of players, if not the server. It's intended to be this way.
 */
-//Sentry Bot
+
 /mob/living/simple_animal/hostile/sentrybot
 	name = "sentry bot"
 	desc = "A pre-war military robot armed with a deadly gatling laser, missile launcher and covered in thick armor plating."

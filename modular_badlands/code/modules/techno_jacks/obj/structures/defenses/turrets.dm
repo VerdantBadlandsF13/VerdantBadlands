@@ -13,7 +13,7 @@ Woe, ballistic wounds be upon ye.
 	max_integrity = 650
 	obj_integrity = 650
 
-	shot_delay = 1// :)
+	burst_count = 12// :)
 
 	req_access = list(ACCESS_LBJ)
 	mode = TURRET_LETHAL
@@ -32,9 +32,6 @@ Woe, ballistic wounds be upon ye.
 
 /obj/machinery/porta_turret/lbj/setup()
 	return
-
-/obj/machinery/porta_turret/lbj/assess_perp(mob/living/carbon/human/perp)
-	return 10
 
 /obj/machinery/porta_turret/lbj/hologram
 	name = "hologram"

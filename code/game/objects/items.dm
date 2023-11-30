@@ -31,8 +31,6 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	//Forced mob worn layer instead of the standard preferred size.
 	var/alternate_worn_layer
 
-	var/icon/altfem_mob_worn_overlay //Used by alternate female sprites, for Humans.
-
 	var/icon/anthro_mob_worn_overlay //Version of the above dedicated to muzzles/digitigrade
 	var/icon/taur_mob_worn_overlay // Idem but for taurs. Currently only used by suits.
 

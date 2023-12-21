@@ -472,7 +472,10 @@ ATTACHMENTS
 				var/stam_cost = G.getstamcost(user)
 				addtimer(CALLBACK(G, /obj/item/gun.proc/process_fire, target, user, TRUE, params, null, bonus_spread, stam_cost), loop_counter)
 
-	condition_lvl = max(0, condition_lvl - (0.25 * condition_mul))
+	if(chambered.condition_malus)
+		condition_lvl = max(0, condition_lvl - (0.5 * condition_mul))
+	else
+		condition_lvl = max(0, condition_lvl - (0.25 * condition_mul))
 
 	var/stam_cost = getstamcost(user)
 
@@ -745,7 +748,7 @@ ATTACHMENTS
 		if(istype(I, /obj/item/repair_kit/weapon_repair_kit))
 			if(condition_lvl < 90)
 				if(do_after(user, 20, target = src))
-					to_chat(user, "<span class='notice'>You repaired your weapon.</span>")
+					to_chat(user, "<span class='notice'>You have repaired your weapon.</span>")
 					condition_lvl = min(100, condition_lvl + 40)
 					qdel(I)
 			else

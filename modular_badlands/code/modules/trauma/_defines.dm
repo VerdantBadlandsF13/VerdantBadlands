@@ -6,8 +6,6 @@ Houses the defines required, to keep this modular.
 #define BASE_CARBON_PAIN_RESIST 80// Amount of arbitrary "pain" that a mob can take before they start going into shock (see: update_pain_level())
 
 /mob/living/carbon/human/Life(mob/living/carbon/human/H)
-	if(HAS_TRAIT(H, TRAIT_NOPAIN))
-		return FALSE
 	if(stat != DEAD)
 		handle_shock()
 		handle_pain()

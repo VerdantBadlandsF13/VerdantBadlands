@@ -14,9 +14,9 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 /// How frequently does the turret visibly swap targets?
 #define TURRET_LASER_COOLDOWN_TIME 1 SECONDS
 /// How frequently can the turret fire?
-#define TURRET_SHOOT_DELAY_BASE 1 SECONDS
+#define TURRET_SHOOT_DELAY_BASE 3 SECONDS
 /// How frequently does the turret scan for new targets? Beeps if object given loud flag upon scan, too.
-#define TURRET_SCAN_RATE 1 SECONDS
+#define TURRET_SCAN_RATE 2 SECONDS
 /// How much of a grace period do we give players, before hosing them with bullets?
 #define TURRET_PREFIRE_DELAY 2 SECONDS
 /// How frequently should we fire, when burst firing?
@@ -71,7 +71,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	use_power = FALSE //this turret does not use and require power
 	idle_power_usage = 50 //when inactive, this turret takes up constant 50 Equipment power
 	active_power_usage = 300 //when active, this turret takes up constant 300 Equipment power
-	req_access = list(ACCESS_LBJ) /// Only people with Security access
+	req_access = list(ACCESS_LBJ) /// Only people of the sanctuary.
 	power_channel = EQUIP //drains power from the EQUIPMENT channel
 
 	max_integrity = 160 //the turret's health
@@ -127,7 +127,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	/// The turret will try to shoot from a turf in that direction when in a wall
 	var/wall_turret_direction
 	/// Only try to shoot people at this status or lower
-	var/maximum_valid_stat = UNCONSCIOUS
+	var/maximum_valid_stat = /*UN*/CONSCIOUS
 	/// The laserpointer the turret uses' icon
 	var/icon/turret_pointer_icon = 'icons/obj/projectiles.dmi'
 	/// The laserpointer the turret uses
@@ -646,13 +646,9 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	COOLDOWN_START(src, turret_prefire_delay, prefire_delay)
 	awake = TRUE
 
-	if(always_up)
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), target_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
-	else
-		popUp()
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), target_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+	popUp()
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), target_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 
 	var/mob/our_target = GET_WEAKREF(last_target)
 
@@ -675,14 +671,14 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	clear_cooldowns()
 	scan_pings_left = scan_ping_max
 	caution_bursts_left = 0
+
 	if(always_up)
 		visible_message(span_alert("[src] acquires a new target!"))
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), wakeup_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 	else
 		visible_message(span_alert("[src] deploys its active sensors!"))
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), wakeup_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), wakeup_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 
 /// telll everyone we're going to sleep
 /obj/machinery/porta_turret/proc/enter_sleep_mode()
@@ -691,15 +687,14 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	scan_pings_left = 0
 	awake = FALSE
 
+	popDown()
 	if(always_up)
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), sleep_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 		visible_message(span_alert("[src] loses its target and goes into passive scanning mode!"))
 	else
-		popDown()
-		if(turret_flags & TF_BE_REALLY_LOUD)
-			playsound(get_turf(src), sleep_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 		visible_message(span_alert("[src] retracts its active sensors and goes into passive scanning mode!"))
+
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), sleep_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 
 /// clears our targets
 /obj/machinery/porta_turret/proc/clear_targets()
@@ -734,8 +729,12 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 // Are we a tripod/always up? Skip some and return.
 	if(always_up)
 		invisibility = 0
+		raising = 1
+		sleep(POPUP_ANIM_TIME)
+		raising = 0
 		raised = 1
 		layer = MOB_LAYER
+		update_icon()
 		return
 
 	invisibility = 0
@@ -750,12 +749,21 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	layer = MOB_LAYER
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
-	if(always_up)
-		return
 	if(raising || !raised)
 		return
 	if(stat & BROKEN)
 		return
+
+// Are we a tripod/always up? Skip some and return.
+	if(always_up)
+		layer = OBJ_LAYER
+		raising = 1
+		sleep(POPDOWN_ANIM_TIME)
+		raising = 0
+		raised = 0
+		update_icon()
+		return
+
 	layer = OBJ_LAYER
 	raising = 1
 	if(cover)
@@ -920,7 +928,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	src.mode = mode
 	power_change()
 
-/obj/machinery/porta_turret/xray
+/obj/machinery/porta_turret/example
 	installation = null
 	always_up = 1
 	use_power = NO_POWER_USE
@@ -933,14 +941,13 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	stun_projectile_sound = 'sound/weapons/gunshot.ogg'
 	icon_state = "syndie_off"
 	base_icon_state = "syndie"
-	faction = list("xray")
 	desc = "A ballistic machine gun auto-turret."
 
-/obj/machinery/porta_turret/xray/ComponentInitialize()
+/obj/machinery/porta_turret/example/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
 
-/obj/machinery/porta_turret/xray/setup()
+/obj/machinery/porta_turret/example/setup()
 	return
 
 ////////////////////////
@@ -1176,4 +1183,3 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
 	lethal_projectile = /obj/item/projectile/bullet/c9mm
 	lethal_projectile_sound = 'sound/f13weapons/9mm.ogg'
 	stun_projectile_sound = 'sound/f13weapons/9mm.ogg'
-	faction = null

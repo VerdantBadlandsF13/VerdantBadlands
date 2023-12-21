@@ -1,3 +1,20 @@
+//////////////////////
+// AMMUNITION TYPES //
+//////////////////////
+
+/*
+FMJ - Exclusive to looting. Very slim chance to pass through a target and hit someone else. Good AP and no condition malus.
+
+HP - Exclusive to looting. Less AP. Significant tissue damage, although it 'shatters' on impact against armour.
+
+DU - Unobtanium. Super high AP and hits multiple targets. Unique to high powered weaponry, such as the AMR and mounted guns.
+
+JNK - The standard ammunition for crafting and almost every obtainable firearm at round start.
+Incurs a significant condition malus, travels ever slightly slower and possesses less slightly lower AP.
+
+CTM - Contaminated ammunition. Identical to junk rounds, but has a very slight chance to cause infections.
+*/
+
 ////////////////////
 // 5.56 MM & .223 //
 ////////////////////
@@ -9,8 +26,11 @@
 	wound_bonus = 18
 	bare_wound_bonus = 24
 
-// For use against simple mobs.
-// Also carries a fairly strong wound bonus, to make it viable in PvP.
+/obj/item/projectile/bullet/a556/junk
+	name = "hand loaded 5.56 bullet"
+	pixels_per_second = TILES_TO_PIXELS(13)
+	armour_penetration = 0.15
+
 /obj/item/projectile/bullet/a556/a223
 	name = ".223 FMJ bullet"
 	damage = 24
@@ -30,8 +50,11 @@
 	wound_bonus = 28
 	bare_wound_bonus = 24
 
-// For use against simple mobs.
-// Also carries a fairly strong wound bonus, to make it viable in PvP.
+/obj/item/projectile/bullet/a762/junk
+	name = "hand loaded 7.62 bullet"
+	pixels_per_second = TILES_TO_PIXELS(13)
+	armour_penetration = 0.25
+
 /obj/item/projectile/bullet/a762/a308
 	name = ".308 bullet"
 	damage = 32
@@ -47,7 +70,7 @@
 	name = ".50 bullet"
 	damage = 75
 	armour_penetration = 1
-	pixels_per_second = 4000
+	pixels_per_second = TILES_TO_PIXELS(200)
 	zone_accuracy_factor = 100
 	wound_bonus = 60
 	bare_wound_bonus = 80//Same as the HMG.
@@ -74,7 +97,6 @@
 	bare_wound_bonus = 12
 
 /obj/item/projectile/bullet/a473/minigun
-	name = "4.73 FMJ bullet"
 	damage = 14
 	armour_penetration = 0
 	wound_bonus = 24

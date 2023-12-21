@@ -1,3 +1,7 @@
+////////////////////
+//	12g SLUGS	  //
+////////////////////
+
 /obj/item/projectile/bullet/shotgun_slug
 	name = "12g shotgun slug"
 	damage = 42
@@ -10,6 +14,23 @@
 	wound_falloff_tile = -7.5
 	supereffective_damage = 62
 	supereffective_faction = list("supermutant", "deathclaw", "raider", "wastebot", "radscorpion")
+
+////////////////////
+//	12g BNBG	  //
+////////////////////
+
+/obj/item/projectile/bullet/shotgun_beanbag
+	name = "12g shotgun slug"//:)
+	damage = 10
+	stamina = 60
+	bare_wound_bonus = 120
+	sharpness = SHARP_NONE
+	embedding = null
+	hitsound = "sound/effects/wounds/crack[rand(1,2)].ogg"
+
+////////////////////
+//	12g BUCK	  //
+////////////////////
 
 /obj/item/projectile/bullet/pellet
 	var/tile_dropoff = 0
@@ -36,6 +57,10 @@
 	if(damage < 0 && stamina < 0)
 		qdel(src)
 
+////////////////////
+//	12g IMPR	  //
+////////////////////
+
 /obj/item/projectile/bullet/pellet/shotgun_improvised
 	damage = 4
 	wound_bonus = 62
@@ -51,6 +76,10 @@
 /obj/item/projectile/bullet/pellet/shotgun_improvised/on_range()
 	do_sparks(1, TRUE, src)
 	..()
+
+////////////////////
+//	12g FLCH	  //
+////////////////////
 
 /obj/item/projectile/bullet/pellet/flechette
 	name = "flechette"

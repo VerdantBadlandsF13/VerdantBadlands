@@ -36,7 +36,7 @@
 	//this makes it to where one can either allow or disallow the addition of the loot tables
 	var/enable_loot_initialize = TRUE
 	//this is the probability that the lockbox will just open on spawn
-	var/prob_open = 40
+	var/prob_open = 0
 
 /obj/item/locked_box/Initialize(mapload)
 	. = ..()

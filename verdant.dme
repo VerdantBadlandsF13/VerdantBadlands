@@ -3638,7 +3638,6 @@
 #include "interface\skin.dmf"
 #include "modular_badlands\_readme.dm"
 #include "modular_badlands\code\modules\character_building\stealth.dm"
-#include "modular_badlands\code\modules\environment\_turf_icons.dm"
 #include "modular_badlands\code\modules\environment\flora.dm"
 #include "modular_badlands\code\modules\environment\dangers\mines.dm"
 #include "modular_badlands\code\modules\environment\movement\industrial_lift\_tramprocess.dm"

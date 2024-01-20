@@ -2,12 +2,11 @@
 #define WOUND_DAMAGE_EXPONENT	1.2
 
 /// an attack must do this much damage after armor in order to roll for being a wound (incremental pressure damage need not apply)
-#define WOUND_MINIMUM_DAMAGE		5
+#define WOUND_MINIMUM_DAMAGE		1
 /// an attack must do this much damage after armor in order to be eliigible to dismember a suitably mushed bodypart
 #define DISMEMBER_MINIMUM_DAMAGE	10
 /// any damage dealt over this is ignored for damage rolls unless the target has the frail quirk (35^1.4=145)
 #define WOUND_MAX_CONSIDERED_DAMAGE	35
-
 
 #define WOUND_SEVERITY_TRIVIAL	0 // for jokey/meme wounds like stubbed toe, no standard messages/sounds or second winds
 #define WOUND_SEVERITY_MODERATE	1
@@ -61,11 +60,11 @@ GLOBAL_LIST_INIT(global_all_wound_types, list(/datum/wound/blunt/critical, /datu
 
 
 /// how quickly sanitization removes infestation and decays per tick
-#define WOUND_BURN_SANITIZATION_RATE 	0.4
+#define WOUND_BURN_SANITIZATION_RATE 	0.1
 /// how much blood you can lose per tick per slash max. 8 is a LOT of blood for one cut so don't worry about hitting it easily
 #define WOUND_SLASH_MAX_BLOODFLOW		8
 /// dead people don't bleed, but they can clot! this is the minimum amount of clotting per tick on dead people, so even critical cuts will slowly clot in dead people
-#define WOUND_SLASH_DEAD_CLOT_MIN		0.05
+#define WOUND_SLASH_DEAD_CLOT_MIN		0.01
 /// if we suffer a bone wound to the head that creates brain traumas, the timer for the trauma cycle is +/- by this percent (0-100)
 #define WOUND_BONE_HEAD_TIME_VARIANCE 	20
 

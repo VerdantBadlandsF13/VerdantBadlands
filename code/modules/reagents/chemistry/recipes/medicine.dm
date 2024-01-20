@@ -93,20 +93,20 @@
 	required_reagents = list(/datum/reagent/medicine/synthflesh = 1)
 	required_catalysts = list(/datum/reagent/consumable/sugar = 0.1)
 	//FermiChem vars:
-//	OptimalTempMin 		= 305		// Lower area of bell curve for determining heat based rate reactions
-//	OptimalTempMax 		= 315 		// Upper end for above
-//	ExplodeTemp 		= 1050 		// Temperature at which reaction explodes
-//	OptimalpHMin 		= 8.5 		// Lowest value of pH determining pH a 1 value for pH based rate reactions (Plateu phase)
-//	OptimalpHMax 		= 9.5 		// Higest value for above
-//	ReactpHLim 			= 2 		// How far out pH wil react, giving impurity place (Exponential phase)
-//	CatalystFact 		= 0 		// How much the catalyst affects the reaction (0 = no catalyst)
-//	CurveSharpT 		= 1 		// How sharp the temperature exponential curve is (to the power of value)
-//	CurveSharppH 		= 2.5 		// How sharp the pH exponential curve is (to the power of value)
-//	ThermicConstant		= 0.01 		// Temperature change per 1u produced
-//	HIonRelease 		= 0.015 		// pH change per 1u reaction (inverse for some reason)
-//	RateUpLim 			= 0.1 		// Optimal/max rate possible if all conditions are perfect
-//	FermiChem 			= TRUE		// If the chemical uses the Fermichem reaction mechanics
-//	PurityMin 			= 0
+	OptimalTempMin 		= 305		// Lower area of bell curve for determining heat based rate reactions
+	OptimalTempMax 		= 315 		// Upper end for above
+	ExplodeTemp 		= 1050 		// Temperature at which reaction explodes
+	OptimalpHMin 		= 8.5 		// Lowest value of pH determining pH a 1 value for pH based rate reactions (Plateu phase)
+	OptimalpHMax 		= 9.5 		// Higest value for above
+	ReactpHLim 			= 2 		// How far out pH wil react, giving impurity place (Exponential phase)
+	CatalystFact 		= 0 		// How much the catalyst affects the reaction (0 = no catalyst)
+	CurveSharpT 		= 1 		// How sharp the temperature exponential curve is (to the power of value)
+	CurveSharppH 		= 2.5 		// How sharp the pH exponential curve is (to the power of value)
+	ThermicConstant		= 0.01 		// Temperature change per 1u produced
+	HIonRelease 		= 0.015 		// pH change per 1u reaction (inverse for some reason)
+	RateUpLim 			= 0.1 		// Optimal/max rate possible if all conditions are perfect
+	FermiChem 			= TRUE		// If the chemical uses the Fermichem reaction mechanics
+	PurityMin 			= 0
 
 /datum/chemical_reaction/synthtissue/FermiCreate(datum/reagents/holder, added_volume, added_purity)
 	var/datum/reagent/synthtissue/St = holder.has_reagent(/datum/reagent/synthtissue)
@@ -385,7 +385,7 @@
 	name = "Imitation Stimpak Fluid"
 	id = /datum/reagent/medicine/stimpakimitation
 	results = list(/datum/reagent/medicine/stimpakimitation = 2)
-	required_reagents = list(/datum/reagent/consumable/brocjuice = 1, /datum/reagent/consumable/xanderjuice = 1)
+	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/consumable/mutjuice = 1)
 
 /datum/chemical_reaction/stimpak/synthetic
 	id = "stimpak_synthetic"
@@ -418,5 +418,5 @@
 	name = "Rehab"
 	id = "rehab"
 	results = list(/datum/reagent/medicine/rehab = 1)
-	required_reagents = list(/datum/reagent/medicine/stimpakimitation = 1, /datum/reagent/consumable/ethanol/pungajuice = 1, /datum/reagent/consumable/buffalojuice = 1, /datum/reagent/consumable/ferajuice = 1)
+	required_reagents = list(/datum/reagent/medicine/stimpakimitation = 1, /datum/reagent/medicine/mentat = 1)
 

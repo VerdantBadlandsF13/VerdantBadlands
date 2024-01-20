@@ -144,6 +144,7 @@ ATTACHMENTS
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
 	var/safety = 1
+	var/safe_delay = 5
 	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
 
 	var/condition = 1// Should I use conditions?
@@ -179,10 +180,10 @@ ATTACHMENTS
 /obj/item/gun/CtrlClick(mob/living/user)
 	if(!istype(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return
-	if(src == user.get_active_held_item())
-		safety = !safety
-		playsound(user, safety_audio, 100, 1)
-		to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+	safety = !safety
+	playsound(user, safety_audio, 100, 1)
+	to_chat(user, "<span class='notice'>You toggle the safety [safety ? "on":"off"].</span>")
+	user.DelayNextAction(safe_delay, TRUE)
 	. = ..()
 
 /obj/item/gun/Initialize()
@@ -270,7 +271,14 @@ ATTACHMENTS
 		. += "<span class='revenminor'>This weapon does not use the condition system.</span>"
 	if(cell_discharge)
 		. += "<span class='revenminor'>Condition on this weapon heavily changes how much cell charge it consumes. <br>\
-		It does not suffer from traditional jams, as a consequence.</span>"
+		It does not suffer from traditional jams, as a consequence. Additionally, all energy weapons require three or more intelligence to use. <br>\
+		An exception is made for special weaponry, which requires seven or higher. A note like this will be present, if that's the case.</span>"
+	if(heavy_weapon)
+		. += "<span class='revenminor'>This weapon requires a strength of seven or higher.</span>"
+	if(special_weapon)
+		. += "<span class='revenminor'>This weapon requires an intelligence of seven or higher.</span>"
+	if(pb_knockback >= 1)
+		. += "<span class='revenminor'>This weapon will provide knockback when point-blank.</span>"
 
 //called after the gun has successfully fired its chambered ammo.
 /obj/item/gun/proc/process_chamber(mob/living/user)
@@ -325,15 +333,12 @@ ATTACHMENTS
 				else
 					user.visible_message("<span class='danger'>[user] hip fires [src]!</span>", null, null, COMBAT_MESSAGE_RANGE)
 					shake_camera(user, recoil + 1, recoil)
+					user.adjustStaminaLossBuffered(1)
 
 //Adds logging to the attack log whenever anyone draws a gun, adds a pause after drawing a gun before you can do anything based on it's size
 /obj/item/gun/pickup(mob/living/user)
 	. = ..()
 	weapondraw(src, user)
-
-/obj/item/gun/pickup(mob/living/user)
-	. = ..()
-	play_equip_sound(src)
 
 /obj/item/gun/emp_act(severity)
 	. = ..()
@@ -507,7 +512,10 @@ ATTACHMENTS
 
 	if(safety)
 		shoot_while_safe(user)
-		return
+		if(user.a_intent == INTENT_HARM)
+			safety = 0
+		else
+			return
 
 	if(condition == 1)
 		if(condition_lvl == 0)
@@ -525,13 +533,13 @@ ATTACHMENTS
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
 					jammed = TRUE
-/*
+
 	if(condition == 1)
 		if(user.special_l >= 1)
-			if(prob(15 - (user.special_l * 0.05)))
+			if(prob(1 - (user.special_l * 0.05)))
 				if(can_jam)
 					jammed = TRUE
-*/
+
 	if(user.special_s <= 6)
 		bonus_spread += 5
 
@@ -548,11 +556,14 @@ ATTACHMENTS
 
 	if(on_cooldown())
 		return
+
 	if(user.IsWeaponDrawDelayed())
 		to_chat(user, "<span class='notice'>[src] is not yet ready to fire!</span>")
 		return
+
 	firing = TRUE
 	. = do_fire(target, user, message, params, zone_override, bonus_spread, stam_cost)
+
 	firing = FALSE
 	last_fire = world.time
 
@@ -569,7 +580,7 @@ ATTACHMENTS
 	else if(burst_size > 1 && burst_spread)
 		randomized_gun_spread = rand(0, burst_spread)
 	var/randomized_bonus_spread = rand(0, bonus_spread)
-	if(HAS_TRAIT(user, SPREAD_CONTROL))
+	if(HAS_TRAIT(user, TRAIT_SPREAD_CONTROL))
 		randomized_gun_spread = max(0, randomized_gun_spread-8)
 		randomized_bonus_spread = max(0, randomized_bonus_spread-8)
 	if(burst_size > 1)
@@ -974,6 +985,8 @@ ATTACHMENTS
 	..()
 
 /obj/item/gun/proc/zoom(mob/living/user, forced_zoom)
+	var/datum/hud/hud = user.hud_used
+
 	if(!(user?.client))
 		return
 
@@ -985,6 +998,7 @@ ATTACHMENTS
 		zoomed = !zoomed
 
 	if(zoomed)//if we need to be zoomed in
+		hud.show_hud(version = 3)
 		user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		var/_x = 0
 		var/_y = 0
@@ -1005,6 +1019,7 @@ ATTACHMENTS
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
+		hud.show_hud(version = 1)
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0

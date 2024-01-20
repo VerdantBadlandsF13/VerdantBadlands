@@ -1,5 +1,5 @@
 /mob/living/var/pain_shock_stage = 0
-/mob/living/var/pain_level = 0 //Gets overwritten every tick! If you want to add pain "resistance" or constain pain, see update_pain_level()
+/mob/living/var/pain_level = 0 //Gets overwritten every tick! If you want to add pain "resistance" or constant pain, see update_pain_level()
 /mob/living/var/pain_numb = 0 // When this is set, the mob isn't affected by shock or pain, but can't see their health.
 
 // proc to find out in how much pain the mob is at the moment
@@ -26,7 +26,6 @@
 		pain_level = 0
 
 	return pain_level
-
 
 /mob/living/carbon/proc/handle_shock() //Currently only used for humans
 	update_pain_level()

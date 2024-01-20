@@ -56,7 +56,7 @@
 	checkLiked(fraction, M)
 	reagents.reaction(M, INGEST, fraction)
 	reagents.trans_to(M, gulp_size, log = TRUE)
-	playsound(M.loc,'sound/items/drink.ogg', rand(10,50), 1)
+	playsound(M.loc,"modular_badlands/code/modules/rp_misc/sound/food/sip[rand(1,5)].ogg", rand(10,50), 1)
 	return 1
 
 /obj/item/reagent_containers/food/drinks/CheckAttackCooldown(mob/user, atom/target)

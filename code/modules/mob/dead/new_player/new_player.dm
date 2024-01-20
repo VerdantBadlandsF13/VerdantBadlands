@@ -57,7 +57,7 @@
 			if(PLAYER_READY_TO_OBSERVE)
 				output += "<p>\[ [LINKIFY_READY("Ready", PLAYER_READY_TO_PLAY)] | [LINKIFY_READY("Not Ready", PLAYER_NOT_READY)] | <b> Observe </b> \]</p>"
 	*/
-		output += "<p>Please be patient, the game is starting soon!</p>"
+		output += "<p>The round will start shortly!</p>"
 		output += "<p><a href='byond://?src=[REF(src)];refresh=1'>(Refresh)</a></p>"
 		output += "<p><a href='byond://?src=[REF(src)];refresh_chat=1)'>(Fix Chat Window)</a></p>"
 	else
@@ -188,7 +188,7 @@
 		src << browse(null, "window=playersetup") //closes the player setup window
 		new_player_panel()
 
-	if(href_list["refresh_chat"]) //fortuna addition. asset delivery pain
+	if(href_list["refresh_chat"])
 		client.nuke_chat()
 
 	if(href_list["late_join"])

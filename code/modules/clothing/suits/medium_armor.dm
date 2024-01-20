@@ -160,9 +160,13 @@
 /obj/item/clothing/suit/armored/f13/medium/duster_renegade
 	name = "renegade duster"
 	desc = "Metal armor worn under a stylish duster. For the bad boy who wants to look good while commiting murder."
-	icon_state = "duster-renegade"
-	item_state = "duster-renegade"
+	icon_state = "duster_renegade"
+	item_state = "duster_renegade"
 	armor = list("melee" = 20, "bullet" = 35, "laser" = 30, "energy" = 25, "bomb" = 20, "bio" = 5, "rad" = 10, "fire" = 25, "acid" = 5, "wound" = 10)
+
+/obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
+	name = "duster"
+	desc = "Metal armor worn under a stylish duster. Once found in a far more savage time, it's been repurposed now protecting the frail and ill. Or not."
 
 /obj/item/clothing/suit/armored/f13/medium/slam
 	name = "slammer raider armor"
@@ -173,3 +177,11 @@
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
 	armor = list("melee" = 45, "bullet" = 20, "laser" = 0, "energy" = 0, "bomb" = 40, "bio" = 10, "rad" = 10, "fire" = -25, "acid" = 0, "wound" = 10)
+
+/obj/item/clothing/suit/armored/f13/medium/finlay
+	name = "ancient pattern riot overcoat"
+	desc = "A customized and well-worn suit of pre-war riot gear, including overcoat. Reeks of whiskey or some other drinker's favourite. <br>\
+	It bears the markings of an unknown group. Odd."
+	armor = list("melee" = 45, "bullet" = 25, "laser" = 25, "energy" = 0, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 10)
+	icon_state = "finlayranger"
+	item_state = "finlayranger"

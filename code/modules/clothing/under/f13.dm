@@ -517,13 +517,36 @@
 	item_state = "raiderharness"
 	item_color = "raiderharness"
 
+/obj/item/clothing/under/f13/khan_groupie
+	name = "biker getup"
+	desc = "The apparel of a potentially psychotic biker. What's this even supposed to be?"
+	icon_state = "marlowduds"
+	item_state = "marlowduds"
+	item_color = "marlowduds"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+
 // GMB
 /obj/item/clothing/under/f13/gmb
-	name = "surplus militia outfit"
-	desc = "A surplus outfit, pulled from some old army depot and of a pattern long since obsolete. It has been fitted with the militia's patch."
-	icon_state = "merc_camo"
+	name = "militia outfit"
+	desc = "A neatly put together uniform, intended for the militia of the GMB. It has been fitted with the militia's patch."
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_mountain.dmi'
+	icon_state = "gmuniform"
+	item_state = "gmuniform"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/under/f13/gmb/officer
+	name = "militia officer outfit"
+	desc = "A clean cut vest, intended for higher ranking individuals within the GMB's camp. It has been fitted with the militia's patch."
+	icon_state = "gmuniformvest"
+	item_state = "gmuniformvest"
+
+/obj/item/clothing/under/f13/gmb/farmhand
+	name = "militia farmhand outfit"
+	desc = "A pair of overalls, normally meant for civilians within the GMB's ranks. It has been fitted with the militia's patch."
+	icon_state = "farmhand"
+	item_state = "farmhand"
 
 // DFS
 /obj/item/clothing/under/f13/merca/dfs

@@ -4,6 +4,7 @@ Woe, ballistic wounds be upon ye.
 */
 /obj/machinery/porta_turret/lbj
 	name = "auto turret"
+	desc = "A ballistic machine gun auto-turret, keyed to recognise only those of the Sanctuary."
 	installation = null
 	always_up = 1
 	use_power = NO_POWER_USE
@@ -11,6 +12,9 @@ Woe, ballistic wounds be upon ye.
 	scan_range = 9
 	max_integrity = 650
 	obj_integrity = 650
+
+	shot_delay = 1// :)
+
 	req_access = list(ACCESS_LBJ)
 	mode = TURRET_LETHAL
 	stun_projectile = /obj/item/projectile/bullet/a50MG/depleteduranium
@@ -21,7 +25,6 @@ Woe, ballistic wounds be upon ye.
 	icon_state = "syndie_off"
 	base_icon_state = "syndie"
 	faction = list(FACTION_LBJ)
-	desc = "A ballistic machine gun auto-turret, keyed to recognise only those of the Sanctuary."
 
 /obj/machinery/porta_turret/lbj/ComponentInitialize()
 	. = ..()
@@ -42,6 +45,7 @@ Woe, ballistic wounds be upon ye.
 	icon_state = "hologram_off"
 	base_icon_state = "hologram"
 	density = 0
+	mouse_opacity = FALSE
 	resistance_flags = FIRE_PROOF | ACID_PROOF | UNACIDABLE | FREEZE_PROOF | INDESTRUCTIBLE
 	scan_range = 10
 

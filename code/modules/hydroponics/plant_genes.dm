@@ -130,8 +130,6 @@
 	formatted_name += "[name] production [rate*100]%"
 	return formatted_name
 
-
-
 /datum/plant_gene/reagent/proc/set_reagent(reag_id)
 	var/datum/reagent/R = GLOB.chemical_reagents_list[reag_id]
 
@@ -351,7 +349,6 @@
 	name = "Pink Bioluminescence"
 	glow_color = "#FFB3DA"
 
-
 /*
 /datum/plant_gene/trait/teleport
 	// Makes plant teleport people when squashed or slipped on.
@@ -377,6 +374,7 @@
 		new /obj/effect/decal/cleanable/molten_object(T) //Leave a pile of goo behind for dramatic effect...
 		qdel(G)
 */
+
 /datum/plant_gene/trait/maxchem
 	// 2x to max reagents volume.
 	name = "Densified Chemicals"

@@ -14,7 +14,7 @@
 			to_chat(usr, "<span class='warning'>The controls have malfunctioned, and you cannot seem to lock the base down!</span>")
 			return 0
 	..()
-	
+
 /obj/docking_port/mobile/elevator/bos
 	name = "Brotherhood of Steel Foyer"
 	width = 6
@@ -62,7 +62,7 @@
 
 /obj/docking_port/stationary/bosaway/six
 	name = "Bos Base 6"
-	id = "Bos6" 
+	id = "Bos6"
 
 /obj/docking_port/stationary/bosaway/seven
 	name = "Bos Base 7"

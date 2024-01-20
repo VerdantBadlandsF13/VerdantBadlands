@@ -69,9 +69,6 @@
 /area/shuttle/escape)
 "q" = (
 /obj/structure/table/reinforced,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
-/obj/effect/spawner/lootdrop/food,
 /obj/item/reagent_containers/food/snacks/f13/wastelandwellington,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/shuttle/escape)

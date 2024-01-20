@@ -7,6 +7,7 @@ Properly dangerous.
 	ammo_type = /obj/item/ammo_casing/caseless/fatman
 	caliber = "mn"
 	max_ammo = 1
+	start_empty = 1
 
 /obj/item/ammo_casing/caseless/fatman
 	name = "\improper mini nuke"
@@ -65,7 +66,7 @@ Properly dangerous.
 	return BULLET_ACT_HIT
 
 /obj/item/gun/ballistic/fatman
-	name = "\improper Fat Man"
+	name = "\improper M-42 'Fat Man' Launcher"
 	desc = "A launch platform for a football sized nuclear warhead. <br>\
 	This specific model appears to be fitted with a rangefinder."
 
@@ -79,6 +80,7 @@ Properly dangerous.
 
 	mag_type = /obj/item/ammo_box/magazine/internal/fatman
 	fire_sound = 'modular_badlands/code/modules/unsorted/sound/fatman_fire.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null// NO
 	can_suppress = FALSE

@@ -22,21 +22,31 @@
 	return ..()
 	// in memoriam "Your balls finally feel full, again." ??-2020
 
+
 /obj/item/organ/genital/testicles/upon_link()
-	size = linked_organ.size
+//	size = linked_organ.size
 	update_size()
 	update_appearance()
 
+
 /obj/item/organ/genital/testicles/update_size(modified = FALSE)
+	var/new_size
 	switch(size)
 		if(BALLS_SIZE_MIN)
 			size_name = "average"
+			new_size = 1
 		if(BALLS_SIZE_DEF)
 			size_name = "enlarged"
+			new_size = 2
+		if(BALLS_SIZE_THD)//lol
+			size_name = "enlarged"
+			new_size = 3
 		if(BALLS_SIZE_MAX)
 			size_name = "engorged"
+			new_size = 4
 		else
 			size_name = "nonexistant"
+	size = new_size
 
 /obj/item/organ/genital/testicles/update_appearance()
 	. = ..()
@@ -64,7 +74,15 @@
 	else
 		color = "#[D.features["balls_color"]]"
 	shape = D.features["balls_shape"]
+	size = D.features["balls_size"]
 	fluid_rate = D.features["balls_cum_rate"]
 	fluid_mult = D.features["balls_cum_mult"]
 	fluid_efficiency = D.features["balls_efficiency"]
+
+	var/datum/reagent/fluid = find_reagent_object_from_type(D.features["balls_fluid"])
+	if(istype(fluid, /datum/reagent/blood))
+		fluid_id = H.get_blood_id()
+	else if(fluid && (fluid in GLOB.genital_fluids_list))
+		fluid_id = D.features["balls_fluid"]
+
 	toggle_visibility(D.features["balls_visibility"], FALSE)

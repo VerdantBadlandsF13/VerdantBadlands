@@ -29,6 +29,17 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
+/obj/item/projectile/beam/laser/pistol
+	name = "laser bolt"
+	damage = 24
+	armour_penetration = 0.1//Less concentrated beam of light.
+	wound_bonus = 6//Ditto.
+	bare_wound_bonus = 12
+
+/obj/item/projectile/beam/laser/pistol/wattz
+	name = "feeble laser bolt"
+	damage = 18
+
 /obj/item/projectile/beam/laser/recharger
 	name = "recharger bolt"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
@@ -66,25 +77,3 @@
 	armour_penetration = 0.3
 	wound_bonus = 45
 	bare_wound_bonus = 50
-
-/obj/item/projectile/beam/laser/pistol
-	name = "laser bolt"
-	damage = 24
-	armour_penetration = 0.1//Less concentrated beam of light.
-	wound_bonus = 6//Ditto.
-	bare_wound_bonus = 12
-
-/obj/item/projectile/beam/laser/pistol/wattz
-	name = "feeble laser bolt"
-	damage = 18
-
-/obj/item/projectile/beam/laser/pistol/stun
-	name = "compliance beam"
-	damage = 32
-	armour_penetration = 0.5
-	damage_type = STAMINA
-	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
-	light_color = LIGHT_COLOR_BLUE
-	tracer_type = /obj/effect/projectile/tracer/disabler
-	muzzle_type = /obj/effect/projectile/muzzle/disabler
-	impact_type = /obj/effect/projectile/impact/disabler

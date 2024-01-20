@@ -141,7 +141,7 @@
 			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and resuscitation is not possible...</span>"
 		else*/
 		if(getorgan(/obj/item/organ/brain))
-			. += "<span class='deadsay'>[t_He] [t_is] limp and unresponsive.</span>"
+			. += "<span class='holoparasite'>[t_He] [t_is] limp and unresponsive.</span>"
 /*
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
 		. += "<span class='deadsay'>It appears that [t_his] brain is missing...</span>"
@@ -264,16 +264,17 @@
 	if(water < THIRST_LEVEL_HARD - 50)
 		msg += "[t_He] [t_is] severely dehydrated.\n"
 
-	var/apparent_blood_volume = blood_volume
-	if(dna.species.use_skintones && skin_tone == "albino")
-		apparent_blood_volume -= 150 // enough to knock you down one tier
-	switch(apparent_blood_volume)
-		if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
-			msg += "[t_He] [t_has] pale skin.\n"
-		if(BLOOD_VOLUME_BAD to BLOOD_VOLUME_OKAY)
-			msg += "<b>[t_He] look[p_s()] like pale death.</b>\n"
-		if(-INFINITY to BLOOD_VOLUME_BAD)
-			msg += "<span class='deadsay'><b>[t_He] resemble[p_s()] a crushed, empty juice pouch.</b></span>\n"
+	if(!isrobotic(src))
+		var/apparent_blood_volume = blood_volume
+		if(dna.species.use_skintones && skin_tone == "albino")
+			apparent_blood_volume -= 150 // enough to knock you down one tier
+		switch(apparent_blood_volume)
+			if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
+				msg += "[t_He] [t_has] pale skin.\n"
+			if(BLOOD_VOLUME_BAD to BLOOD_VOLUME_OKAY)
+				msg += "<b>[t_He] look[p_s()] like pale death.</b>\n"
+			if(-INFINITY to BLOOD_VOLUME_BAD)
+				msg += "<span class='deadsay'><b>[t_He] resemble[p_s()] a crushed, empty juice pouch.</b></span>\n"
 
 	if(bleedsuppress)
 		msg += "[t_He] [t_is] embued with a power that defies bleeding.\n" // only statues and highlander sword can cause this so whatever
@@ -430,7 +431,7 @@
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 
 
-//	. += "\n[print_special()]\n"
+	. += "\n[print_special()]\n"
 
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now

@@ -139,6 +139,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"aK" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "aL" = (
 /obj/structure/stairs/east{
 	color = "#624b30"
@@ -312,6 +316,17 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"bs" = (
+/obj/structure/decoration/smokeold{
+	pixel_y = 32
+	},
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "bu" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/handsaw,
@@ -333,7 +348,7 @@
 	},
 /area/f13/tunnel)
 "bz" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
@@ -586,7 +601,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "cQ" = (
 /obj/structure/debris/v3,
@@ -1019,6 +1034,13 @@
 /obj/item/clothing/suit/armored/f13/medium/scrapchest,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"eJ" = (
+/obj/structure/badlands_props{
+	icon_state = "medical_flag";
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "eK" = (
 /obj/item/kirbyplants/dead,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -1419,6 +1441,12 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"gI" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "gJ" = (
 /obj/structure/nest/mirelurk,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1429,11 +1457,7 @@
 	pixel_y = 32
 	},
 /obj/structure/closet/crate/bin/trashbin,
-/obj/item/mine/shrapnel{
-	alpha = 125;
-	pixel_x = -7;
-	pixel_y = 2
-	},
+/obj/item/grenade/f13/mine/planted,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "gL" = (
@@ -1474,7 +1498,7 @@
 	},
 /area/f13/tunnel)
 "gR" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/liquid/water/safe,
 /area/f13/caves)
 "gS" = (
@@ -1501,7 +1525,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "gY" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
 	icon_state = "outerbordercorner"
@@ -1552,10 +1576,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"hj" = (
-/obj/machinery/vending/tool,
-/turf/open/floor/plating/rust,
-/area/f13/sewer)
 "hm" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/sidewalk,
@@ -1588,10 +1608,15 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_guns,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"ht" = (
+/obj/machinery/smartfridge/bottlerack/drug_storage,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "hw" = (
 /obj/structure/stairs/north{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "hx" = (
@@ -1817,6 +1842,9 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"is" = (
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "it" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1837,7 +1865,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "iw" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /obj/structure/decoration/rag{
 	icon_state = "skin";
 	pixel_y = 34
@@ -1851,6 +1879,10 @@
 /obj/structure/flora/wasteplant/wild_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"iA" = (
+/obj/structure/flora/wasteplant/rad_fungus,
+/turf/open/liquid/water/scum/west,
+/area/f13/caves)
 "iE" = (
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/plating/rust,
@@ -2020,6 +2052,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "jw" = (
@@ -2174,6 +2207,10 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/tunnel)
+"kd" = (
+/obj/structure/mirelurkegg,
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "ke" = (
 /obj/structure/chair/office/dark{
 	dir = 8
@@ -2225,7 +2262,7 @@
 /area/f13/sewer)
 "kv" = (
 /obj/structure/railing/handrail/rusty,
-/obj/structure/flora/wasteplant/wild_punga,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/liquid/water/safe,
 /area/f13/caves)
 "kw" = (
@@ -2297,6 +2334,9 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"kK" = (
+/turf/open/liquid/water/scum/west,
+/area/f13/caves)
 "kL" = (
 /obj/structure/sink/puddle,
 /turf/open/indestructible/ground/inside/mountain,
@@ -2435,7 +2475,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/village)
 "ls" = (
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/old,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -2473,7 +2513,7 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "lA" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /obj/structure/decoration/rag{
 	icon_state = "skin";
 	pixel_x = -32
@@ -2668,8 +2708,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "mF" = (
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "mJ" = (
 /obj/effect/decal/remains/human,
@@ -2923,6 +2962,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"nK" = (
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/bl/gmb)
 "nL" = (
 /obj/structure/table/wood/settler,
 /obj/item/instrument/guitar,
@@ -2997,9 +3040,11 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "oa" = (
-/obj/structure/flora/wasteplant/wild_punga,
+/obj/structure/nest/mirelurk{
+	max_mobs = 1
+	},
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
+/area/f13/caves)
 "oc" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Raider"
@@ -3103,8 +3148,7 @@
 	pixel_y = 32
 	},
 /obj/structure/nest/protectron{
-	spawn_time = 1000;
-	max_mobs = 1
+	spawn_time = 1000
 	},
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
@@ -3135,6 +3179,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"oC" = (
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/caves)
 "oE" = (
 /obj/effect/landmark/poster_spawner/prewar{
 	pixel_x = 31
@@ -3586,7 +3634,7 @@
 /area/f13/tunnel)
 "qt" = (
 /mob/living/simple_animal/hostile/mirelurk/hunter,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "qu" = (
 /obj/structure/barricade/bars,
@@ -3633,6 +3681,10 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"qE" = (
+/obj/machinery/light,
+/turf/open/floor/f13/wood,
+/area/f13/bl/gmb)
 "qF" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/stock_parts/cell/high,
@@ -4057,9 +4109,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "st" = (
-/obj/item/mine/shrapnel{
-	alpha = 65
-	},
+/obj/item/grenade/f13/mine/planted,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "sv" = (
@@ -4266,7 +4316,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/tunnel)
 "tf" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "tg" = (
@@ -4293,6 +4343,12 @@
 /obj/structure/debris/v4,
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
+"tl" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "tn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/prewar/poster82{
@@ -4636,7 +4692,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "uL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4710,14 +4766,10 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "uW" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
 	},
-/area/f13/tunnel)
-"uY" = (
-/obj/structure/nest/fireant,
-/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "va" = (
 /obj/item/storage/trash_stack,
@@ -4826,6 +4878,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"vz" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "vA" = (
 /obj/structure/sign/warning{
 	pixel_y = -32
@@ -4880,10 +4936,6 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/tunnel)
-"vR" = (
-/obj/structure/reagent_dispensers/barrel/three,
-/turf/open/liquid/water/scum/west,
-/area/f13/sewer)
 "vS" = (
 /obj/effect/overlay/junk/oldpipes{
 	dir = 10;
@@ -4928,7 +4980,7 @@
 	icon_state = "goo10"
 	},
 /mob/living/simple_animal/hostile/mirelurk/baby,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/mud,
 /area/f13/caves)
 "wa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5273,8 +5325,7 @@
 /area/f13/tunnel)
 "xs" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -5402,6 +5453,14 @@
 	},
 /turf/open/floor/plating,
 /area/f13/sewer)
+"yc" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "ye" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -5411,6 +5470,10 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"yg" = (
+/obj/structure/falsewall/rust,
+/turf/open/floor/f13/wood,
+/area/f13/bl/gmb)
 "yi" = (
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -5588,7 +5651,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/caves)
 "yZ" = (
 /obj/item/storage/trash_stack{
@@ -5612,6 +5675,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/indestructible/rock,
 /area/f13/building)
+"ze" = (
+/obj/structure/destructible/tribal_torch/lit,
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/bl/gmb)
 "zf" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -5721,10 +5788,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
-"zA" = (
-/obj/structure/nest/fireant,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "zB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5809,7 +5872,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "zV" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/liquid/water/safe,
 /area/f13/bl/gmb)
 "zX" = (
@@ -5935,6 +5998,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"AC" = (
+/obj/effect/spawner/lootdrop/f13/traitbooks/low,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "AE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/booth,
@@ -5994,7 +6061,7 @@
 	},
 /area/f13/tunnel)
 "AP" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "AR" = (
@@ -6151,6 +6218,10 @@
 /obj/structure/window/fulltile/ruins,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"BB" = (
+/obj/structure/flora/wasteplant/rad_fungus,
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "BC" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -6245,7 +6316,12 @@
 /area/f13/sewer)
 "BP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "BS" = (
@@ -6411,6 +6487,9 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/tunnel)
+"CC" = (
+/turf/open/liquid/water/scum/south,
+/area/f13/caves)
 "CD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -6424,12 +6503,8 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/bl/gmb)
-"CI" = (
-/obj/structure/flora/wasteplant/wild_punga,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "CJ" = (
-/obj/structure/nest/scorpion,
+/obj/structure/nest/ant,
 /turf/open/floor/carpet,
 /area/f13/sewer)
 "CN" = (
@@ -6462,7 +6537,7 @@
 /obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6472,7 +6547,7 @@
 /area/f13/building)
 "CY" = (
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "CZ" = (
 /obj/machinery/chem_heater,
@@ -6512,13 +6587,16 @@
 /area/f13/sewer)
 "Dg" = (
 /obj/structure/mirelurkegg,
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /mob/living/simple_animal/hostile/mirelurk/baby,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Di" = (
 /turf/closed/indestructible/rock,
 /area/f13/building)
+"Dj" = (
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/bl/gmb)
 "Dn" = (
 /obj/structure/bed/mattress/pregame,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -6619,7 +6697,7 @@
 	},
 /area/f13/sewer)
 "DS" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bl/gmb)
 "DT" = (
@@ -6683,11 +6761,16 @@
 	},
 /area/f13/sewer)
 "Ek" = (
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "En" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
 	icon_state = "verticalrightborderright0"
@@ -6704,10 +6787,6 @@
 /obj/item/storage/trash_stack,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plating/rust,
-/area/f13/sewer)
-"Er" = (
-/obj/structure/reagent_dispensers/barrel/four,
-/turf/open/liquid/water/scum/west,
 /area/f13/sewer)
 "Es" = (
 /obj/structure/junk/small,
@@ -6894,12 +6973,6 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
-"Ft" = (
-/obj/structure/weightlifter,
-/turf/open/floor/f13{
-	icon_state = "greenrustyfull"
-	},
-/area/f13/bl/gmb)
 "Fu" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/mask/cigarette{
@@ -7041,7 +7114,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 8
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "FX" = (
 /obj/structure/table,
@@ -7192,6 +7265,12 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"GG" = (
+/obj/structure/stairs/west{
+	color = "#A47449"
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "GJ" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -7427,7 +7506,6 @@
 "Hu" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -7496,7 +7574,7 @@
 "HH" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "HJ" = (
 /obj/structure/wreck/trash/machinepile,
@@ -7584,7 +7662,7 @@
 /turf/open/floor/carpet,
 /area/f13/sewer)
 "Ig" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
 	},
@@ -7595,6 +7673,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
+/area/f13/sewer)
+"Ii" = (
+/obj/effect/landmark/tremor_area,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "Ij" = (
 /obj/structure/closet/cabinet,
@@ -7656,6 +7738,7 @@
 /obj/structure/stairs/east{
 	alpha = 0
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
 	},
@@ -7881,9 +7964,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/f13{
-	icon_state = "greenrustyfull"
-	},
+/turf/open/floor/f13/wood,
 /area/f13/bl/gmb)
 "JA" = (
 /obj/structure/barricade/wooden,
@@ -8251,6 +8332,7 @@
 /obj/effect/decal/marking{
 	icon_state = "doublevertical"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
 "Ly" = (
@@ -8328,17 +8410,6 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/building)
-"LM" = (
-/obj/structure/car/rubbish2{
-	pixel_x = -19;
-	icon_state = "car_rubish3"
-	},
-/obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
-	},
-/turf/open/indestructible/ground/outside/road,
-/area/f13/tunnel)
 "LP" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/tunnel)
@@ -8473,7 +8544,6 @@
 /area/f13/tunnel)
 "Mp" = (
 /obj/structure/destructible/cult/talisman,
-/obj/item/clothing/head/helmet/plate/crusader,
 /obj/item/eldritch_deal,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
@@ -8522,7 +8592,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Mz" = (
-/mob/living/simple_animal/hostile/fireant,
+/mob/living/simple_animal/hostile/giantant,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "MA" = (
@@ -8668,7 +8738,7 @@
 "Na" = (
 /obj/structure/mirelurkegg,
 /mob/living/simple_animal/hostile/mirelurk/baby,
-/turf/open/liquid/water/safe,
+/turf/open/liquid/water/scum/south,
 /area/f13/caves)
 "Nb" = (
 /obj/structure/table,
@@ -8810,7 +8880,7 @@
 /area/f13/tunnel)
 "Ny" = (
 /obj/structure/debris/v1,
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerborder"
 	},
@@ -8838,7 +8908,7 @@
 	},
 /area/f13/village)
 "NF" = (
-/obj/structure/nest/scorpion,
+/obj/structure/nest/ant,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "NI" = (
@@ -8893,6 +8963,9 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"NT" = (
+/turf/open/floor/f13/wood,
+/area/f13/bl/gmb)
 "NV" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/welder_tools,
@@ -8904,7 +8977,6 @@
 "NW" = (
 /obj/structure/nest/protectron{
 	layer = 3;
-	max_mobs = 1;
 	pixel_y = 20
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -8997,8 +9069,7 @@
 /area/f13/sewer)
 "Ox" = (
 /obj/structure/nest/protectron{
-	spawn_time = 1000;
-	max_mobs = 1
+	spawn_time = 1000
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -9083,7 +9154,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "OO" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "OP" = (
@@ -9293,6 +9364,13 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"PM" = (
+/obj/structure/badlands_props{
+	icon_state = "anatomy";
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "PO" = (
 /obj/machinery/smartfridge/bottlerack/seedbin,
 /obj/effect/spawner/lootdrop/f13/seedspawner,
@@ -9395,6 +9473,9 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Qn" = (
+/turf/open/indestructible/ground/bl/gravel,
+/area/f13/caves)
 "Qq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/gibs/down{
@@ -9731,11 +9812,6 @@
 /obj/item/electropack/shockcollar,
 /turf/open/floor/plating,
 /area/f13/sewer)
-"RM" = (
-/obj/structure/barricade/wooden/strong,
-/obj/structure/barricade/wooden/planks,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "RN" = (
 /obj/structure/junk/small,
 /turf/open/floor/wood/wood_common,
@@ -9898,8 +9974,7 @@
 /area/f13/tunnel)
 "Sw" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -10076,11 +10151,21 @@
 	name = "store floor"
 	},
 /area/f13/tunnel)
+"Tg" = (
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/f13{
+	icon_state = "greenrustyfull"
+	},
+/area/f13/bl/gmb)
 "Th" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
+"Ti" = (
+/obj/structure/flora/wasteplant/wild_fungus,
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "Tj" = (
 /obj/structure/table,
 /obj/item/reagent_containers/pill/happiness,
@@ -10214,7 +10299,7 @@
 /obj/structure/obstacle/barbedwire/end{
 	dir = 4
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/indestructible/ground/bl/gravel,
 /area/f13/bl/gmb)
 "TN" = (
 /obj/structure/barricade/bars,
@@ -10393,7 +10478,12 @@
 "UF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/junk/small/tv,
+/obj/structure/junk/small/tv{
+	desc = "A dusty old television with poor reception. Turning it on only displays either static or long-lost reruns of pre-war warnings regarding impending nuclear armageddon.";
+	icon = 'icons/fallout/objects/decorations.dmi';
+	icon_state = "television";
+	name = "pre-war television"
+	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "UH" = (
@@ -10553,12 +10643,6 @@
 /area/f13/building)
 "Vp" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
-/obj/item/reagent_containers/food/snacks/grown/coyotetobacco,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
@@ -10600,7 +10684,7 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Vy" = (
-/obj/machinery/chem_dispenser,
+/obj/machinery/chem_dispenser/apothecary,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "VA" = (
@@ -10728,7 +10812,7 @@
 	},
 /area/f13/sewer)
 "We" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Wh" = (
@@ -10911,6 +10995,10 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"Xi" = (
+/obj/machinery/smartfridge/bottlerack/alchemy_rack,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "Xj" = (
 /obj/structure/toilet{
 	dir = 1
@@ -10921,7 +11009,7 @@
 	},
 /obj/machinery/light/small,
 /mob/living/simple_animal/hostile/ghoul/glowing{
-	name = "Number-One"
+	name = "Number One"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -10940,6 +11028,12 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Xm" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Xo" = (
 /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 /obj/item/ammo_box/shotgun/buck,
@@ -10977,6 +11071,10 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"Xz" = (
+/obj/structure/nest/mirelurk,
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "XA" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -11105,8 +11203,7 @@
 /area/f13/tunnel)
 "Ya" = (
 /obj/structure/nest/ghoul{
-	layer = 2.07;
-	max_mobs = 2
+	layer = 2.07
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/tunnel)
@@ -11141,7 +11238,7 @@
 /area/f13/tunnel)
 "Yi" = (
 /obj/structure/debris/v3,
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Yj" = (
@@ -11228,10 +11325,6 @@
 /obj/item/storage/box/cups,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/tunnel)
-"YA" = (
-/obj/structure/nest/gecko,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "YD" = (
 /turf/open/liquid/water/safe,
 /area/f13/tunnel)
@@ -11336,7 +11429,7 @@
 /turf/open/floor/carpet/green,
 /area/f13/tunnel)
 "YZ" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/liquid/water/safe,
 /area/f13/tunnel)
 "Za" = (
@@ -11481,7 +11574,7 @@
 	},
 /area/f13/tunnel)
 "ZB" = (
-/obj/structure/glowshroom/single,
+/obj/structure/flora/wasteplant/rad_fungus,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -14984,7 +15077,7 @@ Va
 Va
 ft
 ft
-EY
+Ii
 EY
 EY
 ft
@@ -17932,7 +18025,7 @@ Va
 Va
 OA
 Gs
-Cg
+PM
 lN
 Cg
 tE
@@ -17941,7 +18034,7 @@ Cg
 xR
 Gs
 OA
-Va
+OA
 Va
 Va
 Va
@@ -19762,7 +19855,7 @@ OA
 Gs
 HU
 OF
-Cg
+gI
 Gs
 Cg
 uo
@@ -21590,7 +21683,7 @@ OA
 Gs
 HU
 OF
-Cg
+gI
 Gs
 Cg
 Cg
@@ -21997,7 +22090,7 @@ Va
 Va
 CS
 CS
-zA
+ja
 Va
 CS
 Va
@@ -22455,7 +22548,7 @@ Va
 CS
 CS
 Va
-zA
+ja
 AM
 Va
 Va
@@ -22506,9 +22599,9 @@ Vy
 Cg
 if
 Gs
+yc
 Cg
-Cg
-Cg
+Xi
 Gs
 Gs
 OA
@@ -22959,13 +23052,13 @@ Va
 Va
 OA
 Gs
-CZ
+ld
 Mk
 JY
 Gs
+bs
 Cg
-Cg
-Cg
+Xi
 Gs
 OA
 OA
@@ -23207,7 +23300,7 @@ ft
 EY
 EY
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -23416,13 +23509,13 @@ Va
 Va
 OA
 Gs
-ld
+CZ
 OF
 Cg
 tE
 Cg
 Cg
-Cg
+ht
 Gs
 OA
 Va
@@ -24336,7 +24429,7 @@ OA
 OA
 Cg
 Cg
-Cg
+eJ
 OA
 OA
 Va
@@ -25215,7 +25308,7 @@ Va
 Va
 CS
 CS
-zA
+ja
 CS
 CS
 Va
@@ -26342,7 +26435,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -26799,7 +26892,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -27256,7 +27349,7 @@ Va
 OA
 Ko
 Lw
-Lw
+Up
 Up
 Up
 Up
@@ -27713,7 +27806,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -28170,7 +28263,7 @@ Va
 OA
 Ko
 hw
-hw
+DP
 DP
 DP
 DP
@@ -28913,7 +29006,7 @@ Va
 CS
 CS
 Va
-CS
+AC
 Va
 Va
 Va
@@ -29369,13 +29462,13 @@ Va
 CS
 CS
 CS
-ja
+Va
 Va
 Va
 Va
 Va
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -29828,11 +29921,11 @@ CS
 CS
 CS
 CS
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -30283,14 +30376,14 @@ Va
 Va
 Va
 Va
+ja
+Va
+Va
+Va
+Va
+Va
 CS
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+CS
 Va
 Va
 Va
@@ -30746,9 +30839,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -31204,8 +31297,8 @@ Cp
 Cp
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -31661,8 +31754,8 @@ Cp
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -32118,8 +32211,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -32575,7 +32668,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -33031,8 +33124,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -33380,7 +33473,7 @@ Va
 Va
 Va
 Va
-OA
+Va
 Va
 Va
 Va
@@ -33487,8 +33580,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+AP
+CS
 Va
 Va
 Va
@@ -33702,7 +33795,7 @@ Va
 Va
 Va
 EY
-EY
+Ii
 QS
 Va
 Va
@@ -33837,10 +33930,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -33944,8 +34037,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -34293,11 +34386,11 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -34402,8 +34495,8 @@ Va
 Va
 Va
 Va
-Va
-Cp
+CS
+CS
 Va
 Va
 Va
@@ -34749,12 +34842,12 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -34859,7 +34952,7 @@ Va
 Va
 Va
 Va
-Cp
+CS
 Va
 Va
 Va
@@ -35206,12 +35299,12 @@ Va
 Va
 Va
 Va
-OA
 Va
 Va
 Va
-OA
-OA
+Va
+Va
+Va
 OA
 Va
 Va
@@ -35316,8 +35409,8 @@ Va
 Va
 Va
 Va
-Cp
-Va
+CS
+CS
 Va
 Va
 Va
@@ -35666,9 +35759,9 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
+Va
+Va
+Va
 OA
 Va
 Va
@@ -35773,8 +35866,8 @@ Va
 Va
 Va
 Cp
-Cp
-Va
+CS
+CS
 Va
 Va
 Va
@@ -36122,10 +36215,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -36230,7 +36323,7 @@ Va
 Va
 Va
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -36579,10 +36672,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -36687,7 +36780,7 @@ Va
 Va
 Cp
 Cp
-Va
+CS
 Va
 Va
 Va
@@ -37036,10 +37129,10 @@ Va
 Va
 Va
 Va
-OA
-OA
-OA
-OA
+Va
+Va
+Va
+Va
 OA
 Va
 Va
@@ -37143,8 +37236,8 @@ Va
 Va
 Va
 Cp
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -37345,11 +37438,11 @@ rE
 rE
 Ee
 rS
-RM
+jL
 dO
 mf
 nd
-mf
+aK
 mf
 mf
 OO
@@ -37394,7 +37487,7 @@ ft
 ft
 ft
 EY
-EY
+Ii
 EY
 EY
 EY
@@ -37600,7 +37693,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -37800,7 +37893,7 @@ rE
 rE
 rE
 rE
-RM
+jL
 mf
 mf
 dO
@@ -37897,7 +37990,7 @@ Cr
 Cr
 Cr
 Cr
-vR
+Cr
 Cr
 vV
 ix
@@ -38056,8 +38149,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -38258,7 +38351,7 @@ rE
 xn
 rE
 dO
-RM
+jL
 mf
 mf
 mf
@@ -38282,7 +38375,7 @@ wF
 vV
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -38512,9 +38605,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -38715,7 +38808,7 @@ rE
 xn
 mf
 mf
-RM
+jL
 dO
 JV
 Va
@@ -38969,7 +39062,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -39425,8 +39518,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -39652,7 +39745,7 @@ wF
 wF
 vV
 EY
-EY
+Ii
 EY
 EY
 Va
@@ -39882,7 +39975,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -40339,7 +40432,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -40796,7 +40889,7 @@ Va
 Va
 Va
 Va
-Va
+CS
 Va
 Va
 Va
@@ -41093,7 +41186,7 @@ Va
 ix
 zk
 Cr
-Er
+Cr
 Cr
 Cr
 Cr
@@ -41252,8 +41345,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -41509,7 +41602,7 @@ Va
 Va
 Va
 ft
-EY
+Ii
 EY
 ft
 ft
@@ -41708,8 +41801,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+Xm
+CS
 Va
 Va
 Va
@@ -41937,7 +42030,7 @@ wF
 wF
 vV
 EY
-EY
+OO
 Va
 Va
 Va
@@ -42162,10 +42255,10 @@ Xb
 Xb
 Xb
 Xb
-Va
-Va
-Va
-Va
+AP
+CS
+CS
+tl
 Va
 Va
 Va
@@ -42405,7 +42498,7 @@ tM
 VK
 ix
 HF
-hj
+HF
 ix
 ix
 Va
@@ -42619,9 +42712,9 @@ Va
 gR
 Xb
 Xb
-Va
-Va
-Va
+CS
+CS
+AP
 Va
 Va
 Va
@@ -43076,9 +43169,9 @@ Va
 Va
 Xb
 Xb
-Va
-Va
-Va
+CS
+vz
+CS
 Va
 Va
 Va
@@ -43533,9 +43626,9 @@ Va
 Xb
 Xb
 Xb
-Va
-Va
-Va
+CS
+CS
+CS
 Va
 Va
 Va
@@ -43991,8 +44084,8 @@ Xb
 Xb
 Va
 Va
-Va
-Va
+CS
+AP
 Va
 Va
 Va
@@ -44441,7 +44534,7 @@ bU
 Gs
 Va
 Va
-CI
+AP
 CS
 Xb
 Xb
@@ -45356,7 +45449,7 @@ Gs
 Va
 cZ
 CS
-Zh
+oa
 cZ
 CS
 gR
@@ -46508,7 +46601,7 @@ wF
 vV
 EY
 EY
-EY
+OO
 Va
 ft
 Lc
@@ -50370,7 +50463,7 @@ Gs
 Gs
 bU
 bU
-Ft
+bU
 bU
 qS
 Gs
@@ -52861,7 +52954,7 @@ It
 dU
 DP
 DP
-Ya
+DP
 Gw
 fg
 It
@@ -54011,7 +54104,7 @@ bU
 bU
 Gs
 bU
-bU
+Tg
 bU
 Gs
 bv
@@ -54468,8 +54561,8 @@ Gs
 Gs
 Gs
 Gs
-SS
 Gs
+yg
 Gs
 Cg
 Os
@@ -54922,11 +55015,11 @@ Va
 Va
 Va
 Gs
-bU
-bU
-bU
-bU
-bU
+NT
+NT
+NT
+NT
+NT
 Gs
 Cg
 Os
@@ -55379,11 +55472,11 @@ Va
 Va
 Va
 Gs
-bU
-bU
-bU
-bU
-bU
+NT
+NT
+NT
+NT
+NT
 Gs
 Cg
 Os
@@ -55837,11 +55930,11 @@ Va
 Va
 Gs
 Jy
-bU
-bU
-bU
-bU
-cS
+NT
+NT
+NT
+qE
+Gs
 Cg
 Os
 Os
@@ -56293,11 +56386,11 @@ Va
 Va
 Va
 Gs
-bU
-bU
-bU
-bU
-bU
+NT
+NT
+NT
+NT
+NT
 Gs
 mR
 Cg
@@ -56660,7 +56753,7 @@ EY
 EY
 EY
 Va
-EY
+Ii
 EY
 EY
 EY
@@ -56750,11 +56843,11 @@ Va
 Va
 Va
 Gs
-bU
-bU
-bU
-bU
-bU
+NT
+NT
+NT
+NT
+NT
 Gs
 TZ
 XV
@@ -58064,8 +58157,8 @@ RE
 ix
 Va
 OA
-Va
-Va
+OA
+OA
 Va
 Va
 Va
@@ -58104,20 +58197,20 @@ Va
 Va
 Va
 CS
-CS
-CS
-CS
-CS
-CS
-CS
+is
+is
+is
+is
+is
+Qn
 cP
-CS
-CS
-CS
-CS
-CS
+is
+is
+Qn
+oC
+is
 TM
-Os
+mF
 mF
 Cg
 Cg
@@ -58562,20 +58655,20 @@ Va
 jh
 CS
 CS
-CS
+is
 Va
 Va
-CS
-CS
+oC
+Qn
 uK
-CS
-CS
+Qn
+Qn
 cP
-CS
-CS
+is
+is
 CV
-Os
 mF
+nK
 HH
 Cg
 Cg
@@ -59021,18 +59114,18 @@ CS
 CS
 CS
 CS
-CS
-CS
-CS
+is
+is
+is
 yY
-CS
-CS
+Qn
+Qn
 uK
-CS
-CS
+is
+Qn
 FW
-Os
 mF
+nK
 CY
 kz
 mR
@@ -59475,25 +59568,25 @@ Va
 Va
 jh
 CS
-CS
+vz
 CS
 Va
 Va
-CS
-CS
-CS
-CS
-CS
+is
+is
+is
+is
+Qn
 yY
-CS
-CS
-Os
-Os
+Qn
+Qn
+Dj
+Dj
+ze
 qh
 qh
 qh
 qh
-Va
 Va
 Va
 Va
@@ -59925,7 +60018,7 @@ CS
 CS
 CS
 CS
-zA
+ja
 fq
 Va
 Va
@@ -60629,7 +60722,7 @@ fg
 It
 dU
 DP
-LM
+nY
 DP
 DP
 fg
@@ -61262,7 +61355,7 @@ Va
 Va
 Va
 OA
-Va
+OA
 Va
 Va
 Va
@@ -62912,11 +63005,11 @@ OA
 Ko
 tc
 iK
-Ix
-ju
-ju
-ju
-ju
+dU
+DP
+DP
+DP
+DP
 tc
 iK
 Ko
@@ -62983,7 +63076,7 @@ vV
 Md
 Va
 Va
-EY
+OO
 Va
 Va
 Va
@@ -63518,7 +63611,7 @@ Va
 Va
 Va
 Va
-EY
+Ii
 EY
 Va
 Va
@@ -63561,7 +63654,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 CS
@@ -63572,7 +63665,7 @@ Hy
 xu
 sN
 CS
-CS
+vz
 CS
 Va
 Va
@@ -64499,7 +64592,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 CS
 Va
@@ -64814,11 +64907,11 @@ Va
 Va
 Va
 Va
+OO
 EY
 EY
 EY
-EY
-EY
+OO
 Va
 Va
 Va
@@ -68560,7 +68653,7 @@ vV
 vV
 EV
 GD
-CI
+CS
 Va
 Va
 Va
@@ -68915,8 +69008,8 @@ Md
 Md
 Md
 Md
+Ii
 EY
-EY
 Md
 Md
 Md
@@ -68952,7 +69045,7 @@ Md
 Md
 Md
 Md
-EY
+OO
 EY
 EY
 EY
@@ -69414,7 +69507,7 @@ EY
 EY
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -69426,7 +69519,7 @@ Va
 OA
 Va
 Va
-EY
+Ii
 EY
 zx
 EY
@@ -69473,7 +69566,7 @@ Va
 Va
 Va
 Va
-CI
+AP
 CS
 CS
 CS
@@ -69521,7 +69614,7 @@ CS
 CS
 CS
 CS
-YA
+CS
 CS
 Va
 Va
@@ -69889,7 +69982,7 @@ EY
 EY
 EY
 EY
-EY
+OO
 Va
 Va
 Va
@@ -70447,7 +70540,7 @@ Va
 Va
 Va
 CS
-CS
+is
 Va
 Va
 Va
@@ -70809,7 +70902,7 @@ EY
 EY
 EY
 EY
-EY
+Ii
 Va
 Va
 Va
@@ -70903,14 +70996,14 @@ Va
 Va
 Va
 Va
-CS
-CS
-CS
+is
+is
+is
 Va
-Xb
+CC
 Va
 Va
-AP
+BB
 Va
 Va
 Va
@@ -71362,12 +71455,12 @@ Va
 Va
 Va
 Na
-Xb
-Xb
-Xb
-CS
-Zh
-CS
+CC
+CC
+CC
+is
+Xz
+is
 Va
 Va
 Va
@@ -71815,16 +71908,16 @@ Va
 Va
 Va
 vZ
-Xb
-Xb
-Xb
-Xb
-Xb
-Xb
+CC
+CC
+CC
+CC
+CC
+CC
 qt
-CI
-CS
-CS
+BB
+is
+is
 Va
 Va
 Va
@@ -72274,13 +72367,13 @@ kl
 kl
 kl
 kl
-Xb
+CC
 kl
 kl
 kl
 kl
 kl
-CS
+is
 Va
 Va
 Va
@@ -72731,7 +72824,7 @@ kl
 QN
 KV
 kl
-CS
+is
 kl
 wA
 LT
@@ -73150,7 +73243,7 @@ CS
 Va
 Va
 Va
-YA
+CS
 CS
 CS
 Va
@@ -74978,7 +75071,7 @@ CS
 KW
 KW
 CS
-CS
+vz
 CS
 CS
 Va
@@ -76836,7 +76929,7 @@ LT
 nl
 rW
 CS
-CS
+vz
 CS
 CS
 CS
@@ -77308,7 +77401,7 @@ kl
 CS
 CS
 CS
-CS
+vz
 CS
 FK
 LT
@@ -79544,7 +79637,7 @@ Ps
 xi
 mf
 sD
-CS
+AP
 CS
 CS
 CS
@@ -83247,7 +83340,7 @@ Va
 Va
 Va
 Va
-YA
+CS
 CS
 CS
 Va
@@ -85972,7 +86065,7 @@ Va
 Va
 Va
 CS
-CS
+vz
 CS
 KW
 CS
@@ -88267,7 +88360,7 @@ CS
 CS
 CS
 CS
-CS
+vz
 CS
 Va
 Va
@@ -91468,7 +91561,7 @@ Va
 Va
 Va
 Va
-zA
+ja
 fq
 Va
 Va
@@ -92389,7 +92482,7 @@ CS
 Va
 Va
 Va
-Va
+CS
 CS
 Gp
 Tz
@@ -92845,9 +92938,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+vz
+CS
+CS
 fY
 fY
 fY
@@ -93302,9 +93395,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+CS
+CS
+CS
 Va
 Va
 CS
@@ -93759,8 +93852,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -94216,8 +94309,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -94673,8 +94766,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -95130,8 +95223,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -95587,8 +95680,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+is
 Va
 Va
 Va
@@ -96044,8 +96137,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+is
+is
 Va
 Va
 Va
@@ -96500,8 +96593,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+is
+is
 Va
 Va
 Va
@@ -96957,8 +97050,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+is
+kK
 Va
 Va
 Va
@@ -97415,8 +97508,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Va
 Va
 Va
@@ -97873,8 +97966,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Va
 Va
 Va
@@ -98330,8 +98423,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Va
 Va
 Va
@@ -98788,8 +98881,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Va
 Va
 Va
@@ -99245,9 +99338,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+kK
+kK
+kK
 Va
 Va
 Cp
@@ -99702,9 +99795,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+iA
+kK
+kK
 Va
 Va
 Va
@@ -100160,8 +100253,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Va
 Va
 Va
@@ -100618,7 +100711,7 @@ Va
 Va
 Va
 Va
-Va
+kK
 Va
 Cp
 Va
@@ -101075,7 +101168,7 @@ Va
 Va
 Va
 Va
-Va
+kK
 Va
 Va
 Va
@@ -101531,8 +101624,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+kK
+kK
 Cp
 Va
 Va
@@ -101987,9 +102080,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+kK
+kK
+iA
 Cp
 Va
 Va
@@ -102443,9 +102536,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+kK
+kK
 Va
 Va
 Va
@@ -102899,9 +102992,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+Ti
 Va
 Va
 Va
@@ -103355,9 +103448,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+is
 Va
 Va
 Va
@@ -103812,9 +103905,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+kd
 Va
 Va
 Va
@@ -104268,9 +104361,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+is
 Va
 Va
 Va
@@ -104725,9 +104818,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+is
 Va
 Va
 Va
@@ -105181,9 +105274,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+is
+is
 Va
 Va
 Va
@@ -105636,10 +105729,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+is
 Va
 Va
 Va
@@ -106090,12 +106183,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
+Zh
+CS
+CS
+CS
+CS
+KW
 Va
 Va
 Va
@@ -106546,11 +106639,11 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+cZ
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -107000,12 +107093,12 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
+KW
+CS
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -107456,11 +107549,11 @@ Va
 Cp
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+CS
+vz
 Va
 Va
 Va
@@ -107912,11 +108005,11 @@ Va
 Cp
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -108368,11 +108461,11 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+is
+CS
+CS
+CS
+CS
 Va
 Va
 Va
@@ -108824,10 +108917,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
+is
+is
+is
+CS
 Va
 Va
 Va
@@ -109279,10 +109372,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
+is
+is
+is
+kd
 Cp
 Cp
 Va
@@ -109735,10 +109828,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Cp
+kK
+kK
+is
+Ti
 Va
 Va
 Va
@@ -110186,15 +110279,15 @@ Va
 Va
 Va
 Va
-Cp
 Va
 Va
 Va
 Va
 Va
-Va
-Va
-Va
+iA
+kK
+kK
+kK
 Va
 Va
 Va
@@ -110647,10 +110740,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
+kK
+kK
+kK
+kK
 Va
 Va
 Va
@@ -111104,9 +111197,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
+is
+kK
+kK
 Va
 Va
 Va
@@ -111556,14 +111649,14 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+OA
+OA
+OA
+OA
+Ti
+is
+is
+is
 Va
 Va
 Va
@@ -111827,7 +111920,7 @@ mf
 mf
 mf
 Dw
-uY
+tH
 Dw
 We
 mf
@@ -112013,14 +112106,14 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+OA
+GG
+GG
+OA
+is
+is
+is
+is
 Va
 Va
 Va
@@ -112470,13 +112563,13 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+is
+is
+is
+is
 Va
 Va
 Va
@@ -112926,13 +113019,13 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+CS
+is
+is
+is
 Va
 Va
 Va
@@ -113383,11 +113476,11 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+CS
+CS
+CS
+is
+is
 Va
 Va
 Va
@@ -113841,8 +113934,8 @@ Va
 Va
 Va
 Va
-Va
-Va
+CS
+CS
 Va
 Va
 Va
@@ -117746,7 +117839,7 @@ Va
 Va
 Va
 kr
-uY
+tH
 Ps
 mf
 Mz
@@ -117758,7 +117851,7 @@ kr
 iz
 zG
 mf
-oa
+We
 kr
 kr
 mf
@@ -118214,7 +118307,7 @@ We
 Rz
 mf
 mf
-mf
+aK
 mf
 sz
 jL
@@ -118222,7 +118315,7 @@ mf
 kr
 mf
 mf
-mf
+aK
 mf
 mf
 JV
@@ -121878,7 +121971,7 @@ kr
 hY
 mf
 mf
-mf
+aK
 mf
 mf
 mf
@@ -122320,7 +122413,7 @@ YD
 YD
 lS
 DZ
-mf
+aK
 mf
 mf
 mf

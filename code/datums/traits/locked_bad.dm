@@ -2,7 +2,6 @@
 Intended for disabled quirks of the respective type.
 Only here for sorting, until I rework the system entirely. - Carl
 */
-
 /datum/quirk/paraplegic
 	name = "Paraplegic"
 	desc = "Your legs do not function. Nothing will ever fix this. Luckily you found a wheelchair."

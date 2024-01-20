@@ -198,12 +198,15 @@
 	name = "improvised gauze"
 	singular_name = "improvised gauze"
 	heal_brute = 0
-	desc = "A roll of cloth. Useful for staunching bleeding, healing burns, and reversing infection, but not THAT useful."
+	desc = "A roll of cloth. Useful for staunching bleeding."
 	self_delay = 60
 	other_delay = 30
 	absorption_rate = 0.15
 	absorption_capacity = 4
 	merge_type = /obj/item/stack/medical/gauze/improvised
+
+/obj/item/stack/medical/gauze/improvised/five
+	amount = 5
 
 /obj/item/stack/medical/gauze/improvised/microwave_act(obj/machinery/microwave/MW)
 	..()
@@ -502,55 +505,11 @@
 	max_amount = 20
 	grind_results = list(/datum/reagent/consumable/aloejuice = 1)
 
+/obj/item/stack/medical/mesh/aloe/five
+	amount = 5
+
 /obj/item/stack/medical/mesh/aloe/Initialize()
 	. = ..()
 	if(amount == max_amount)	 //aloe starts open lol
 		is_open = TRUE
 		update_icon()
-
-
-// ------------------
-// MOURNING DUST   (should be repathed to be less misleading at some point)
-// ------------------
-
-/obj/item/stack/medical/poultice
-	name = "mourning dust"
-	singular_name = "mourning dust"
-	desc = "A type of primitive herbal powder.\nWhile traditionally used to prepare corpses for the mourning feast, it can also treat scrapes and burns on the living, however, it is liable to cause shortness of breath when employed in this manner.\nIt is imbued with ancient wisdom."
-	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	icon_state = "mourningdust"
-	amount = 15
-	max_amount = 15
-	heal_brute = 10
-	heal_burn = 10
-	self_delay = 40
-	other_delay = 10
-	repeating = TRUE
-	merge_type = /obj/item/stack/medical/poultice
-	novariants = TRUE
-
-/obj/item/stack/medical/poultice/ten
-	amount = 10
-
-/obj/item/stack/medical/poultice/five
-	amount = 5
-
-/obj/item/stack/medical/poultice/heal(mob/living/M, mob/user)
-	if(iscarbon(M))
-		return heal_carbon(M, user, heal_brute, heal_burn)
-	return ..()
-
-/obj/item/stack/medical/poultice/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user)
-	. = ..()
-	healed_mob.adjustOxyLoss(amount_healed)
-
-/datum/chemical_reaction/mourningpoultice
-	name = "mourning dust"
-	id = "mourningdust"
-	required_reagents = list(/datum/reagent/consumable/tea/coyotetea = 10, /datum/reagent/cellulose = 20, /datum/reagent/consumable/tea/feratea = 10)
-	mob_react = FALSE
-
-/datum/chemical_reaction/mourningpoultice/on_reaction(datum/reagents/holder, multiplier)
-	var/location = get_turf(holder.my_atom)
-	for(var/i = 1, i <= multiplier, i++)
-		new /obj/item/stack/medical/poultice/five(location)

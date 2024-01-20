@@ -39,6 +39,8 @@
 	return ..()
 
 /obj/item/binoculars/proc/on_wield(obj/item/source, mob/user)
+	var/datum/hud/hud = user.hud_used
+	hud.show_hud(version = 3)
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/unwield)
 	RegisterSignal(user, COMSIG_ATOM_DIR_CHANGE, .proc/rotate)
 	listeningTo = user
@@ -93,6 +95,8 @@
 	user.client.pixel_y = world.icon_size*_y
 
 /obj/item/binoculars/proc/unwield(mob/user)
+	var/datum/hud/hud = user.hud_used
+	hud.show_hud(version = 1)
 	if(listeningTo)
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 		UnregisterSignal(user, COMSIG_ATOM_DIR_CHANGE)

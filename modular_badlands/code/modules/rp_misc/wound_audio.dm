@@ -4,13 +4,13 @@
 	sound_effect = 'sound/weapons/punch1.ogg'
 
 /datum/wound/blunt/moderate
-	sound_effect = 'sound/weapons/punch2.ogg'
-
-/datum/wound/blunt/severe
 	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/trauma1.ogg'
 
-/datum/wound/blunt/critical
+/datum/wound/blunt/severe
 	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/trauma2.ogg'
+
+/datum/wound/blunt/critical
+	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/blunt/trauma3.ogg'
 
 // Burns.
 /datum/wound/burn
@@ -50,7 +50,8 @@
 
 /datum/wound/slash/critical
 	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/slash/chop6.ogg'
-
+/*
 // Limb loss-ish.
 /datum/wound/loss
 	sound_effect = 'modular_badlands/code/modules/rp_misc/sound/gore/severed.ogg'
+*/

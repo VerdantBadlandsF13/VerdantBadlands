@@ -122,6 +122,7 @@
 	item_flags = SLOWS_WHILE_IN_HAND
 	extra_damage = -9
 	heavy_weapon = TRUE
+	recoil = 1
 	var/obj/item/minigunpackbal5mm/ammo_pack
 
 /obj/item/gun/ballistic/minigunbal5mm/Initialize()
@@ -297,6 +298,7 @@ Vindicator.
 	casing_ejector = FALSE//For now.
 	item_flags = SLOWS_WHILE_IN_HAND
 	heavy_weapon = TRUE
+	recoil = 1
 	var/obj/item/minigun4mm/ammo_pack
 
 /obj/item/gun/ballistic/minigun4mm/Initialize()

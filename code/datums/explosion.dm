@@ -162,6 +162,17 @@ GLOBAL_LIST_EMPTY(explosions)
 		for(var/mob/living/L in viewers(flash_range, epicenter))
 			L.flash_act()
 
+	//concuss mobs
+	for(var/mob/living/carbon/M in viewers(2, epicenter))
+		if(prob(20))
+			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+			M.gain_trauma(/datum/brain_trauma/mild/concussion)
+			M.confused = max(M.confused, 10)
+			M.adjust_blurriness(60)
+		else
+			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+			M.adjust_blurriness(30)
+
 	EX_PREPROCESS_CHECK_TICK
 
 	var/list/exploded_this_tick = list()	//open turfs that need to be blocked off while we sleep

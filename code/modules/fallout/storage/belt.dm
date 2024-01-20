@@ -89,10 +89,10 @@
 	new /obj/item/surgical_drapes(src)
 	new /obj/item/scalpel (src)
 	new /obj/item/handsaw(src)
-	new /obj/item/retractor(src)
-	new /obj/item/hemostat(src)
+	new /obj/item/retractor/tribal(src)
+	new /obj/item/hemostat/tribal(src)
 	new /obj/item/weldingtool/basic(src)
-	new /obj/item/bonesetter(src)
+	new /obj/item/bonesetter/tribal(src)
 
 // ---------------------------------------------
 // BANDOLIER - since TG style bandolier was useless, now takes 3 boxes of shotgun ammo, or flasks, or grenades, or improvised bombs/molotovs
@@ -110,12 +110,18 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	CANHOLD_STATIC(STR, typecacheof(list(
 		/obj/item/ammo_box/shotgun,
+		/obj/item/ammo_box/clip,
 		/obj/item/ammo_box/lasmusket,
 		/obj/item/reagent_containers/food/drinks/flask,
 		/obj/item/grenade/f13,
 		/obj/item/reagent_containers/food/drinks/bottle/molotov,
 		/obj/item/grenade/homemade
 		)))
+
+/obj/item/storage/belt/bandolier/tavern/PopulateContents()
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
+	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
 
 /obj/item/storage/belt/sabre/heavy
 	name = "heavy-duty sheath"
@@ -142,6 +148,9 @@
 	/obj/item/melee/transforming/energy/axe/protonaxe,
 	/obj/item/melee/powered/ripper)
 	starting_sword = null
+
+/obj/item/storage/belt/sabre/heavy/gmb
+	starting_sword = /obj/item/melee/smith/sword/sabre/gmb
 
 /obj/item/storage/belt/holster/ranger357/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357(src)

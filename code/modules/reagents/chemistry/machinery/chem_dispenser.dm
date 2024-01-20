@@ -189,7 +189,7 @@
 			ui.open()
 	else
 		if(!user.IsAdvancedToolUser() && !istype(src, /obj/machinery/chem_dispenser/drinks))
-			to_chat(user, "<span class='warning'>The legion has no use for drugs! Better to destroy it.</span>")
+			to_chat(user, "<span class='warning'>You can neither read nor imagine what this does.</span>")
 			return
 		if(!HAS_TRAIT(user, TRAIT_CHEMWHIZ) && !istype(src, /obj/machinery/chem_dispenser/drinks))
 			to_chat(user, "<span class='warning'>Try as you might, you have no clue how to work this thing.</span>")

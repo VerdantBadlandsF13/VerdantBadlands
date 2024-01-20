@@ -4,10 +4,10 @@
 
 	if(silent && armor > 0)
 		if(armour_penetration > 1)
-			armour_penetration = 1//Penetrating more than 100% of armour is a bit funky, let's just cap it -- DR2 LINEARMOR
-		if(armor >= 100)//The formula doesn't work for armour values 100 or more and dividing by zero is not fun -- DR2 LINEARMOR
+			armour_penetration = 1//Penetrating more than 100% of armour is a bit funky, let's just cap it
+		if(armor >= 100)//The formula doesn't work for armour values 100 or more and dividing by zero is not fun
 			return max(0, armor*(1-armour_penetration))
-		if(armor < 100)//Formula turns armor in to linearmor, reduces it by AP%, turns it back into armor. Armor is reduced by a % of its effective benefit rather than its actual value -- DR2 LINEARMOR
+		if(armor < 100)//Formula turns armor in to linearmor, reduces it by AP%, turns it back into armor. Armor is reduced by a % of its effective benefit rather than its actual value
 			return max(0, (100*armor/(100-armor)*(1-armour_penetration))/(armor/(100-armor)*(1-armour_penetration)+1))//This might be excessive brackets but I'm taking no chances
 
 	//the if "armor" check is because this is used for everything on /living, including humans

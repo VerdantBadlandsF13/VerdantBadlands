@@ -108,7 +108,7 @@
 		to_chat(user, "<span class=\"alert\">The autolathe is busy. Please wait for completion of previous operation.</span>")
 		return TRUE
 
-	if(default_deconstruction_screwdriver(user, "autolathe_t", "autolathe", O))
+	if(default_deconstruction_screwdriver(user, "[icon_state]_t", "[icon_state]", O))
 		updateUsrDialog()
 		return TRUE
 
@@ -144,9 +144,9 @@
 	if(istype(item_inserted, /obj/item/stack/ore/bluespace_crystal))
 		use_power(MINERAL_MATERIAL_AMOUNT / 10)
 	else if(item_inserted.custom_materials?.len && item_inserted.custom_materials[SSmaterials.GetMaterialRef(/datum/material/glass)])
-		flick("autolathe_r",src)//plays glass insertion animation by default otherwise
+		flick("[icon_state]_r",src)//plays glass insertion animation by default otherwise
 	else
-		flick("autolathe_o",src)//plays metal insertion animation
+		flick("[icon_state]_o",src)//plays metal insertion animation
 
 		use_power(min(1000, amount_inserted / 100))
 	updateUsrDialog()
@@ -247,7 +247,7 @@
 			if(length(picked_materials))
 				new_item.set_custom_materials(picked_materials, 1 / multiplier) //Ensure we get the non multiplied amount
 
-	icon_state = "autolathe"
+	icon_state = initial(icon_state)
 	busy = FALSE
 	updateDialog()
 

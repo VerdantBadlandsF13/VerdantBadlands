@@ -23,6 +23,7 @@
 	speed = -1.8//Actual speed handled by move_to_delay
 	move_to_delay = 1.8
 	gender = MALE
+	pixel_x = -16
 	a_intent = INTENT_HARM //So we can not move past them.
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	robust_searching = TRUE

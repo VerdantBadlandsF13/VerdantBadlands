@@ -148,16 +148,15 @@
 		return
 	to_chat(owner, "<span class='warning'>Alert: Auditory systems corrupted!.</span>")
 	switch(severity)
-		if(1)
+		if(1 to 50)
+			owner.Jitter(15)
+			owner.Dizzy(15)
+			owner.DefaultCombatKnockdown(40)
+		if(50 to INFINITY)
 			owner.Jitter(30)
 			owner.Dizzy(30)
 			owner.DefaultCombatKnockdown(80)
 			deaf = 30
-
-		if(2)
-			owner.Jitter(15)
-			owner.Dizzy(15)
-			owner.DefaultCombatKnockdown(40)
 	damage += 0.15 * severity
 
 /obj/item/organ/ears/gen2synth
@@ -175,14 +174,13 @@
 		return
 	to_chat(owner, "<span class='warning'>Alert: Auditory systems corrupted!.</span>")
 	switch(severity)
-		if(1)
+		if(1 to 50)
+			owner.Jitter(15)
+			owner.Dizzy(15)
+			owner.DefaultCombatKnockdown(40)
+		if(50 to INFINITY)
 			owner.Jitter(30)
 			owner.Dizzy(30)
 			owner.DefaultCombatKnockdown(80)
 			deaf = 30
-
-		if(2)
-			owner.Jitter(15)
-			owner.Dizzy(15)
-			owner.DefaultCombatKnockdown(40)
 	damage += 0.15 * severity

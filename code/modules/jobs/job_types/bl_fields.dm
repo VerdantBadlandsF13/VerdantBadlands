@@ -19,6 +19,33 @@
 				- Kidnapping. Someone have something you want? Try taking one of their friends, or them. People are usually worth a lot more than their share of cram alive. <br> \
 				- Negotiation. Violence has its place, but diplomacy goes a long way when it's backed up by your guns."
 
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/gmb,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/mentor = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/disciple = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/patron = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+		/datum/matchmaking_pref/protegee = list(
+			/datum/job/dfs,
+			/datum/job/wasteland/f13tavernkeep,
+		),
+	)
+
 /datum/outfit/job/dfs
 	name = "DFSdatums"
 	jobtype = /datum/job/dfs
@@ -30,14 +57,13 @@
 	uniform	= /obj/item/clothing/under/f13/merca/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
-	l_pocket = /obj/item/radio
 
 // DFS Advisor
 /datum/job/dfs/advisor
 	title = "DFS Advisor"
 	flag = F13DFSADVISOR
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0// From 1
+	spawn_positions = 0// From 1
 	description = "The highest authority in Dry Fields Security.  \
 	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading their troops directly in battle or while on patrol."
 	supervisors = "Morals."
@@ -64,8 +90,8 @@
 /datum/job/dfs/enforcer
 	title = "DFS Enforcer"
 	flag = F13DFSENFORCER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0// From 1
+	spawn_positions = 0// From 1
 	description = "Stays near the compound to ensure nobody gets in or out without verification. \
 	Guards prisoners when applicable, stops infighting and otherwise keeps the compound secure."
 	supervisors = "Advisor."
@@ -111,8 +137,8 @@
 /datum/job/dfs/agent
 	title = "DFS Agent"
 	flag = F13DFSAGENT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0// From 2
+	spawn_positions = 0// From 2
 	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
 	supervisors = "Enforcer."
 	outfit = /datum/outfit/job/dfs/agent
@@ -126,56 +152,23 @@
 /datum/job/dfs/regular
 	title = "DFS Regular"
 	flag = F13DFSREGULAR
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0// From 4
+	spawn_positions = 0// From 4
 	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
 	supervisors = "Agent."
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
-	loadout_options = list(
-	/datum/outfit/loadout/grunt/mercenary,
-	/datum/outfit/loadout/grunt/sadist,
-	/datum/outfit/loadout/grunt/punisher)
-
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
-
-// Mercenaries trade armor for a solid rifle. Something to show off for the Caravan.
-/datum/outfit/loadout/grunt/mercenary
-	name = "Mercenary"
-	r_hand = /obj/item/gun/ballistic/automatic/rangemaster
-	l_hand = /obj/item/ammo_box/magazine/m762 // 1 loaded, two empty standard magazines.
-	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
-	backpack_contents = list(/obj/item/ammo_box/magazine/m762/empty,
-							/obj/item/ammo_box/magazine/m762/empty,
-							/obj/item/melee/onehanded/knife/bayonet)
-
-// Sadists rush into combat with strong medium armor, but no firearm. Likely conscripted Raiders that proved their worth.
-/datum/outfit/loadout/grunt/sadist
-	name = "Sadist"
-	r_hand = /obj/item/twohanded/fireaxe/bmprsword
-	l_hand = /obj/item/melee/onehanded/knife/bowie
-	suit = /obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat
-	head = /obj/item/clothing/head/helmet/f13/combat
-	backpack_contents = list()
-
-// Punishers use heavy armor and shotguns to become bulwarks on the defence.
-/datum/outfit/loadout/grunt/punisher
-	name = "Punisher"
-	r_hand = /obj/item/gun/ballistic/shotgun/hunting // Full box of the fun-stuff
-	l_hand = /obj/item/melee/onehanded/knife/bowie
-	suit = /obj/item/clothing/suit/armored/f13/heavy/metal
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	backpack_contents = list(/obj/item/ammo_box/shotgun/buck)
 
 //DFS Grunt
 /datum/job/dfs/grunt
 	title = "DFS Grunt"
 	flag = F13DFSGRUNT
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 0// From -1
+	spawn_positions = 0// From -1
 	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
 	supervisors = "Regular."
 	outfit = /datum/outfit/job/dfs/grunt

@@ -132,7 +132,7 @@
 
 /obj/item/clothing/head/soft/baseball
 	name = "baseball cap"
-	desc = "It's a robust baseball hat, this one belongs to syndicate major league team."
+	desc = "It's a robust baseball hat."
 	icon_state = "baseballsoft"
 	soft_type = "baseball"
 	item_state = "baseballsoft"

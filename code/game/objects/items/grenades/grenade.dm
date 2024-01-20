@@ -13,6 +13,9 @@
 	slot_flags = ITEM_SLOT_BELT
 	resistance_flags = FLAMMABLE
 	max_integrity = 40
+
+	var/equipsound = 'modular_badlands/code/modules/unsorted/sound/grenade_equip.ogg'
+
 	var/active = 0
 	var/det_time = 50
 	var/display_timer = 1

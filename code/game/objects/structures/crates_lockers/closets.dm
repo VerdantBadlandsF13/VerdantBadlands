@@ -28,8 +28,8 @@
 	var/base_storage_capacity = 16 //F13: With wrenching changing storage_capacity, this is to record what the standard storage capacity is. Make it the same value as var/storage_capacity
 	var/anchored_storage_capacity = 32
 	var/cutting_tool = /obj/item/weldingtool
-	var/open_sound = 'sound/machines/click.ogg'
-	var/close_sound = 'sound/machines/click.ogg'
+	var/open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/lockeropenmetal.ogg"
+	var/close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/lockerclosemetal.ogg"
 	var/material_drop = /obj/item/stack/sheet/metal
 	var/material_drop_amount = 2
 	var/delivery_icon = "deliverycloset" //which icon to use when packagewrapped. null to be unwrappable.

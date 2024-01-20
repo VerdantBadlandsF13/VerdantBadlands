@@ -101,7 +101,7 @@
 
 	last_announcement = message
 
-	var/voxType = input(src, "Male or female VOX?", "VOX-gender") in list("male", "female")
+	var/voxType = input(src, "What voice would you like to speak with?", "VOX") in list("female", "male", "mil")
 
 	if(!message || announcing_vox > world.time)
 		return
@@ -147,16 +147,17 @@
 
 	word = lowertext(word)
 
-	if( (GLOB.vox_sounds[word] && voxType == "female") || (GLOB.vox_sounds_male[word] && voxType == "male") || (GLOB.vox_sounds_mil[word] && voxType == "mil") )
+	if( (GLOB.vox_sounds[word] && voxType == "female") || (GLOB.vox_sounds_male[word] &&voxType == "male") || (GLOB.vox_sounds_mil[word] &&voxType == "mil") )
 
 		var/sound_file
 
 		if(voxType == "female")
 			sound_file = GLOB.vox_sounds[word]
-		if(voxType == "male")
+		else if(voxType == "male")
 			sound_file = GLOB.vox_sounds_male[word]
 		else
 			sound_file = GLOB.vox_sounds_mil[word]
+
 		var/sound/voice = sound(sound_file, wait = 1, channel = CHANNEL_VOX)
 		voice.status = SOUND_STREAM
 

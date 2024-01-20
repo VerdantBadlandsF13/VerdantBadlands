@@ -20,6 +20,7 @@
 	var/draw_sound = 'sound/weapons/bowdraw.wav'
 	dryfire_text = "*no arrows*"
 	dryfire_sound = ""
+	can_jam = 0
 
 /obj/item/gun/ballistic/bow/process_chamber(mob/living/user, empty_chamber = 0)
 	var/obj/item/ammo_casing/AC = chambered //Find chambered round
@@ -121,5 +122,17 @@
 	item_state = "xbow"
 	icon_prefix = "xbow"
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/xbow
+	zoomable = FALSE
+	extra_speed = 400
+
+//GMB Crossbow
+/obj/item/gun/ballistic/bow/crossbow/gmb
+	name = "\improper Death"
+	desc = "The aptly named 'Death' crossbow, fitted with a spring-loaded magazine. Custom made by GMB gunsmiths. <br>\
+	Although a fairly special piece of bolt throwing hardware, it still requires drawing back before firing."
+	icon_state = "crossbow"
+	item_state = "crossbow"
+	icon_prefix = "crossbow"
+	mag_type = /obj/item/ammo_box/magazine/internal/bow/gmb
 	zoomable = FALSE
 	extra_speed = 400

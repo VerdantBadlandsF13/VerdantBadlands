@@ -171,7 +171,7 @@
 		mytray.adjustPests(rand(1,2))
 
 /datum/reagent/consumable/sugar/overdose_start(mob/living/M)
-	to_chat(M, "<span class='userdanger'>You go into hyperglycaemic shock! Lay off the twinkies!</span>")
+	to_chat(M, "<span class='userdanger'>You go into hyperglycaemic shock!</span>")
 	M.AdjustSleeping(600, FALSE)
 	. = 1
 
@@ -384,88 +384,6 @@
 		return
 	new/obj/effect/decal/cleanable/salt(T)
 
-/datum/reagent/consumable/brocjuice
-	name = "Broc Flower Juice"
-	description = "The juice of a ground-up broc flower. Heals mild hypoxia."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#302000" // rgb: 48, 32, 0
-	taste_description = "flowers"
-	water_level = 0.5
-
-/datum/reagent/consumable/brocjuice/on_mob_life(mob/living/carbon/M)
-	M.adjustOxyLoss(-1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
-	..()
-	return TRUE // update health at end of tick
-
-/datum/reagent/consumable/xanderjuice
-	name = "Xander Root Juice"
-	description = "Ground up xander root, mashed into juicy pulp. Stimulates blood production."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#302000" // rgb: 48, 32, 0
-	taste_description = "dirt"
-	water_level = 0.5
-
-/datum/reagent/consumable/xanderjuice/on_mob_life(mob/living/carbon/M)
-	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
-		M.blood_volume = min(BLOOD_VOLUME_NORMAL, M.blood_volume + 1)
-	..()
-
-/datum/reagent/consumable/agavejuice
-	name = "Agave Leaf Juice"
-	description = "Ground up agave leaf, mashed into juicy pulp. Heals minor burns."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#BAE3B4"
-	taste_description = "plants"
-	water_level = 0.5
-
-/datum/reagent/consumable/agavejuice/on_mob_life(mob/living/carbon/M)
-	M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
-	..()
-
-/datum/reagent/consumable/ferajuice
-	name = "Barrel Fruit Juice"
-	description = "Squeezed barrelfruit juice. Heals damage caused by poisons and venoms."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#E8E67E"
-	taste_description = "bitter"
-	water_level = 0.5
-
-/datum/reagent/consumable/ferajuice/on_mob_life(mob/living/carbon/M)
-	if(M.health > 20)
-		M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
-		. = TRUE // update health at end of tick
-	..()
-
-/datum/reagent/consumable/daturajuice
-	name = "Datura Juice"
-	description = "Ground up bits of the datura plant. Mildly hallucinogenic."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#ACDFCE"
-	taste_description = "bitter leaves"
-	water_level = 0.5
-
-/datum/reagent/consumable/daturajuice/on_mob_life(mob/living/carbon/M)
-	M.set_drugginess(5)
-	M.hallucination += 2
-	..()
-
-/datum/reagent/consumable/coyotejuice
-	name = "Coyote Leaf Juice"
-	description = "Juiced coyote tobacco leaves. Stimulates the nervous system."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#168B64"
-	taste_description = "leaves"
-	water_level = 0.5
-
-/datum/reagent/consumable/coyotejuice/on_mob_life(mob/living/carbon/M)
-	if(prob(10))
-		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
-		to_chat(M, "<span class='notice'>[smoke_message]</span>")
-	M.AdjustStun(-4, 0)
-	M.AdjustKnockdown(-4, 0)
-	M.AdjustUnconscious(-4, 0)
-	..()
-
 /datum/reagent/consumable/cavefungusjuice
 	name = "Cave Fungus Juice"
 	description = "Juiced cave fungus fruiting bodies."
@@ -485,8 +403,6 @@
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#274E13"
 	taste_description = "tato"
-
-
 
 /datum/reagent/consumable/blackpepper
 	name = "Black Pepper"
@@ -767,6 +683,17 @@
 			S.success_multiplier = max(0.6, S.success_multiplier) // +60% success probability on each step, compared to bacchus' blessing's ~46%
 	..()
 
+// Intended for mob production. Doesn't have utility, unlike above.
+/datum/reagent/consumable/honey_weak
+	name = "watery honey"
+	description = "Sweet sweet honey that decays into sugar. Too diluted to be of much use."
+	color = "#d3a308"
+	value = REAGENT_VALUE_COMMON
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
+	taste_description = "sweetness"
+	water_level = 2
+
 /datum/reagent/consumable/mayonnaise
 	name = "Mayonnaise"
 	description = "An white and oily mixture of mixed egg yolks."
@@ -985,40 +912,3 @@
 	taste_mult = 2
 	taste_description = "fizzy sweetness"
 	value = REAGENT_VALUE_COMMON
-
-/datum/reagent/consumable/buffalojuice
-	name = "Buffalo Juice"
-	description = "Juice from the buffalo gourd, a common herbal remedy for injuries with surprisingly potent healing properties."
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#14FF3C" // rgb: 48, 32, 0
-	taste_description = "tingling electricity"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	glass_icon_state = "Cactus Water"
-	overdose_threshold = 30
-	water_level = 1.5
-
-/datum/reagent/consumable/buffalojuice/on_mob_life(mob/living/carbon/M)
-	if(M.health < 0)
-		M.adjustToxLoss(-0.5*REM, updating_health = FALSE)
-		M.adjustBruteLoss(-0.5*REM, updating_health = FALSE)
-		M.adjustFireLoss(-0.5*REM, updating_health = FALSE)
-	if(M.oxyloss > 35)
-		M.setOxyLoss(35, 0)
-	if(M.losebreath >= 4)
-		M.losebreath -= 2
-	if(M.losebreath < 0)
-		M.losebreath = 0
-	M.adjustStaminaLoss(-0.5*REM, updating_health = FALSE)
-	if(prob(20))
-		M.AdjustAllImmobility(-20, 0)
-		M.AdjustUnconscious(-20, 0)
-	..()
-	return TRUE // update health at end of tick
-
-/datum/reagent/consumable/buffalojuice/overdose_process(mob/living/M)
-	if(prob(33))
-		M.adjustStaminaLoss(2.5*REM, updating_health = FALSE)
-		M.adjustToxLoss(1*REM, updating_health = FALSE)
-		M.losebreath++
-		. = 1
-	..()

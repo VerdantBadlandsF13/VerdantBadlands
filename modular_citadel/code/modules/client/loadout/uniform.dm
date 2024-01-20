@@ -4,8 +4,21 @@
 	cost = 2
 
 /datum/gear/uniform/harn
-	name = "gear harness"
+	name = "(Digi Friendly) gear harness"
 	path = /obj/item/clothing/under/misc/gear_harness
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
+
+/datum/gear/uniform/digi_tacti
+	name = "(Digi Friendly) tacticool turtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool
+	cost = 5
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
+
+/datum/gear/uniform/digi_tacti_skirt
+	name = "(Digi Friendly) tacticool skirtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool/skirt
+	cost = 5
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 
 //suits
 
@@ -205,6 +218,21 @@
 	path = /obj/item/clothing/under/f13/police/lieutenant
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
+/datum/gear/uniform/wasteland/police
+	name = "Police uniform"
+	path = /obj/item/clothing/under/f13/police
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/trooper
+	name = "State police uniform"
+	path = /obj/item/clothing/under/f13/police/trooper
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
+/datum/gear/uniform/wasteland/formal
+	name = "Police formal uniform"
+	path = /obj/item/clothing/under/f13/police/formal
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
+
 //US
 
 /datum/gear/uniform/usarmy
@@ -297,18 +325,6 @@
 /datum/gear/uniform/wasteland/batter
 	name = "Worn baseball uniform"
 	path = /obj/item/clothing/under/f13/batter
-
-/datum/gear/uniform/wasteland/police
-	name = "Police uniform"
-	path = /obj/item/clothing/under/f13/police
-
-/datum/gear/uniform/wasteland/trooper
-	name = "State police uniform"
-	path = /obj/item/clothing/under/f13/police/trooper
-
-/datum/gear/uniform/wasteland/formal
-	name = "Police formal uniform"
-	path = /obj/item/clothing/under/f13/police/formal
 
 /datum/gear/uniform/wasteland/roving
 	name = "Roving trader outfit"

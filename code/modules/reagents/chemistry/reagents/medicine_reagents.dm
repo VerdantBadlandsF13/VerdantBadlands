@@ -9,8 +9,12 @@
 	name = "Medicine"
 	taste_description = "bitterness"
 	value = REAGENT_VALUE_VERY_COMMON //Low prices, spess medical companies are cheapstakes and products are taxed honk...
+	var/thirst_drain = -0.25
+	var/max_thirst_drain = INFINITY
 
 /datum/reagent/medicine/on_mob_life(mob/living/carbon/M)
+	if(!HAS_TRAIT(M, TRAIT_NO_PROCESS_FOOD))
+		M.adjust_thirst(thirst_drain, max_thirst_drain)
 	current_cycle++
 	holder.remove_reagent(type, metabolization_rate / M.metabolism_efficiency) //medicine reagents stay longer if you have a better metabolism
 
@@ -1588,6 +1592,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 	pH = 9.12
+	pain_resistance = 2//As a component of skullcap.
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
 
@@ -1730,7 +1735,7 @@
 
 /datum/reagent/medicine/rehab
 	name = "Rehab"
-	description = "A potent purgative made from the buffalo gourd and other plants. Treats poisoning, purges the body, heals the liver and stomach, and treats addiction. Dangerous in high doses."
+	description = "A potent purgative. Treats poisoning, purges the body, heals the liver and stomach, and treats addiction. Dangerous in high doses."
 	color = "#91D865"
 	metabolization_rate = 0.4 * REAGENTS_METABOLISM
 	overdose_threshold = 25
@@ -1738,8 +1743,6 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/rehab/on_mob_life(mob/living/carbon/M)
-	M.adjust_nutrition(-4)
-	M.adjust_thirst(-1.5)
 	M.adjustToxLoss(-2, updating_health = FALSE, forced = TRUE) //heals TOXINLOVERs
 	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -2.5)
 	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -2.5)

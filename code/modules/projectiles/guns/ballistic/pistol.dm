@@ -19,6 +19,7 @@
 	spread = 2
 	burst_size = 1
 	fire_delay = 0
+	recoil = 0.25
 	select = FALSE
 	automatic_burst_overlay = FALSE
 	can_automatic = FALSE
@@ -115,7 +116,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	name = "\improper Beretta 93R"
-	desc = "An automatic 9mm pistol, featuring a fix muzzle brake."
+	desc = "An automatic 9mm pistol, featuring a fixed muzzle brake."
 	icon_state = "m93r"
 	fire_delay = 2
 	burst_size = 2

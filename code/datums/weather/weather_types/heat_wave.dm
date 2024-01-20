@@ -1,7 +1,7 @@
 /datum/weather/heat_wave
 	name = "heat wave"
 	desc = "Harsh heat wave will grip an entire area."
-	probability = 7
+	probability = 2
 
 	telegraph_message = "<span class='notice'>The temperature outside starts to rise unfavorably.</span>"
 	telegraph_duration = 300

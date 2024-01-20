@@ -737,7 +737,7 @@
 		/obj/item/clockwork/slab/cyborg/medical,
 		/obj/item/clockwork/weapon/ratvarian_spear)
 	borghealth = 300
-	cyborg_base_icon = "assaultron_sase"
+	cyborg_base_icon = "assaultron"
 
 /obj/item/robot_module/syndicate
 	name = "Syndicate Assault"

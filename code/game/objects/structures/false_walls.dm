@@ -300,7 +300,7 @@
 	walltype = /turf/closed/wall/rust
 
 /obj/structure/falsewall/abductor
-	name = "poylmer wall" //Fortuna edit: alien alloy -> polymer
+	name = "poylmer wall"
 	desc = "A wall with polymer alloy plating."
 	icon = 'icons/turf/walls/abductor_wall.dmi'
 	icon_state = "abductor"

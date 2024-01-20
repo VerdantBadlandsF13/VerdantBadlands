@@ -23,7 +23,7 @@
 
 /obj/structure/billboard/ritas/New()
 	..()
-	icon_state = pick("ritas2","ritas3","ritas4")
+	icon_state = pick("ritas2","ritas3")
 
 /obj/structure/billboard/ritas/pristine
 	name = "pristine Rita's Cafe billboard"
@@ -41,7 +41,7 @@
 
 /obj/structure/billboard/cola/New()
 	..()
-	icon_state = pick("cola2","cola3","cola4")
+	icon_state = pick("cola2","cola3")
 
 /obj/structure/billboard/cola/pristine
 	name = "pristine Nuka-Cola billboard"

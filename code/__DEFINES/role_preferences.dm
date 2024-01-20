@@ -37,7 +37,7 @@
 #define ROLE_INTERNAL_AFFAIRS		"internal affairs agent"
 #define ROLE_BLOODSUCKER			"bloodsucker"
 //#define ROLE_MONSTERHUNTER			"monster hunter" Disabled for now
-#define ROLE_GHOSTCAFE				"ghostcafe"
+#define ROLE_GHOSTCAFE				"Route Nine Explorer"
 #define ROLE_MINOR_ANTAG			"minorantag"
 //Missing assignment means it's not a gamemode specific role, IT'S NOT A BUG OR ERROR.
 //The gamemode specific ones are just so the gamemodes can query whether a player is old enough

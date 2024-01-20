@@ -18,6 +18,7 @@
 	slowdown = 0.5
 	fire_delay = 6
 	spread = 0
+	recoil = 1
 	force = 15 //Decent clubs generally speaking
 	flags_1 =  CONDUCT_1
 	casing_ejector = FALSE
@@ -25,6 +26,7 @@
 	spawnwithmagazine = TRUE
 	var/pump_sound = 'sound/weapons/shotgunpump.ogg'
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
+	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	var/pump_stam_cost = 2
 
 /obj/item/gun/ballistic/rifle/process_chamber(mob/living/user, empty_chamber = 0)
@@ -96,6 +98,7 @@
 	scope_x_offset = 5
 	scope_y_offset = 13
 	pump_sound = 'sound/f13weapons/cowboyrepeaterreload.ogg'
+	can_jam = 0//Until we get unique mechanics for these, considering they're not quite like most guns.
 
 /obj/item/gun/ballistic/rifle/repeater/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	..()
@@ -275,10 +278,14 @@
 	..()
 	if(HAS_TRAIT(user, TRAIT_FAST_PUMP))
 		src.pump(user)
-	if((prob(95) && !zoomed))
-		var/mob/living/carbon/human/H = user
-		playsound(loc, 'sound/f13effects/surrender.ogg', 100, 1)
-		shake_camera(user, recoil + 1, recoil)
-		to_chat(user, "<span class ='danger'>You attempt to fire the rifle from the hip unprepared, tossing you to the ground!</span>")
-		H.visible_message("<span class='danger'>[H] drops to the floor from recoil as they fire unprepared!</span>")
-		user.Knockdown(60)
+
+//Anti-Material Rifle - GMB EDITION		Keywords: .50, Bolt-action, 8 round magazine
+/obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons
+	name = "\improper Liberty"
+	desc = "A high-powered bolt action rifle, chambered in .50 caliber ammunition. Custom made by the GMB's gunsmiths. <br>\
+	Lacks the mounting for optics, and boasts fixed iron sights."
+	icon_state = "amr_gmb"
+	item_state = "amr_gmb"
+	spread = 0.25
+	recoil = 3
+	zoomable = FALSE

@@ -100,7 +100,7 @@
 	// Non mobs speakers can be small
 	if (!ismob(target))
 		extra_classes |= "small"
-	
+
 	var/list/prefixes
 
 	// Append radio icon if from a virtual speaker
@@ -153,6 +153,7 @@
 	message.maptext_height = mheight
 	message.maptext_x = (CHAT_MESSAGE_WIDTH - owner.bound_width) * -0.5
 	message.maptext = complete_text
+	message.pixel_x = -owner.pixel_x //Dogborgs and other wide boys have a pixel offset. This accounts for that
 
 	// View the message
 	LAZYADDASSOC(owned_by.seen_messages, message_loc, src)

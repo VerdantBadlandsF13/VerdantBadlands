@@ -7,12 +7,13 @@
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "grossness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
 	overdose_threshold = 35
 	addiction_threshold = 25
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
 	pain_resistance = 5
+	thirst_drain = -0.5
 
 /datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
@@ -81,7 +82,7 @@
 	description = "Chemicals found in pre-war stimpaks."
 	reagent_state = LIQUID
 	color = "#e50d0d"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
 	overdose_threshold = 25
 	addiction_threshold = 16
 	value = REAGENT_VALUE_VERY_RARE
@@ -157,16 +158,14 @@
 
 /datum/reagent/medicine/radx
 	name = "Rad-X"
-
-	description = "Reduces massive amounts of radiation and some toxin damage."
+	description = "Allows the user to prolong exposure time to radiation with less adverse effects."
 	reagent_state = LIQUID
 	color = "#ff6100"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	thirst_drain = -0.5
 
 /datum/reagent/medicine/radx/on_mob_life(mob/living/carbon/M)
-	if(M.radiation > 0)
-		M.radiation -= min(M.radiation, 8)
 	M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	..()
 	return TRUE // update health at end of tick
@@ -194,6 +193,7 @@
 	color = "#ff7200"
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	thirst_drain = -2
 
 /datum/reagent/medicine/radaway/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-3*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
@@ -217,6 +217,7 @@
 	overdose_threshold = 16
 	addiction_threshold = 6
 	pain_resistance = 80
+	thirst_drain = -0.3
 
 /datum/reagent/medicine/medx/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -231,18 +232,17 @@
 		M.maxHealth -= 50
 		M.updatehealth()
 	switch(current_cycle)
-		if(1 to INFINITY)// From 1 to 40
+		if(1 to 40)
 			M.confused += 10
 			M.blur_eyes(20)
-			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")// Below removed for the moment, especially as people continue confusing the mechanics.
-/*
+			to_chat(M, "<span class='notice'>Your head is pounding. Med-X is hard on the body. </span>")
 		if(41 to 80)
 			M.confused +=20
 			M.blur_eyes(30)
 			M.losebreath += 8
 			M.set_disgust(12)
 			M.adjustStaminaLoss(30*REAGENTS_EFFECT_MULTIPLIER)
-			to_chat(M, "<span class='danger'>Your stomach churns, your eyes cloud and you're pretty sure you just popped a lung. You shouldn't take so much med-X at once. </span>")
+			to_chat(M, "<span class='danger'>Your stomach churns, your eyes cloud and you're pretty sure you just popped a lung.</span>")
 		if(81 to 120)
 			M.confused +=40
 			M.blur_eyes(30)
@@ -251,18 +251,17 @@
 			M.set_disgust(25)
 			M.adjustStaminaLoss(40*REAGENTS_EFFECT_MULTIPLIER)
 			M.vomit(30, 1, 1, 5, 0, 0, 0, 60)
-			M.Jitter(1000)
+			M.Jitter(35)
 			M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)
 			M.visible_message("<span class='userdanger'>[M] clutches their stomach and vomits violently onto the ground, bloody froth covering their lips!</span>")
-			to_chat(M, "<span class='userdanger'>You throw up everything you've eaten in the past week and some blood to boot. You're pretty sure your heart just stopped for a second, too. </span>")
+			to_chat(M, "<span class='userdanger'>You throw up everything you've eaten in the past week and some blood to boot. You're pretty sure your heart just stopped for a second, too.</span>")
 		if(121 to INFINITY)
 			M.adjustOrganLoss(ORGAN_SLOT_EYES, 3)
-			M.Unconscious(400)
-			M.Jitter(1000)
-//			M.set_heartattack(TRUE)
-			M.visible_message("<span class='userdanger'>[M] clutches at their chest as if their heart stopped!</span>")
-			to_chat(M, "<span class='danger'>Your vision goes black and your heart stops beating as the amount of drugs in your system shut down your organs one by one. Say hello to Elvis in the afterlife. </span>")
-*/
+//			M.Unconscious(400)
+			M.Jitter(45)
+			M.visible_message("<span class='userdanger'>[M] goes stiff!</span>")
+			to_chat(M, "<span class='danger'>Your vision goes black.</span>")
+
 
 	..()
 

@@ -15,6 +15,7 @@
 	shaded_charge = 1
 	weapon_weight = WEAPON_HEAVY
 	slowdown = 0.25
+	can_charge = 0
 	flight_x_offset = 17
 	flight_y_offset = 9
 	equipsound = 'sound/f13weapons/equipsounds/yk42equip.ogg'
@@ -69,6 +70,7 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	fire_delay = 13
 	slowdown = 1
+	can_charge = 0
 	weapon_weight = WEAPON_HEAVY
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 	special_weapon = TRUE
@@ -80,6 +82,29 @@
 	item_state = null	//so the human update icon uses the icon_state instead.
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode)
 	ammo_x_offset = 3
+
+/obj/item/gun/energy/laser/complianceregulator
+	name = "AEP7-CR"
+	desc = "An odd weapon of sorts, produced prior to the Great War and designed for less-lethal work. <br>\
+	This specific example has been modified by the vault, resulting in a more powerful beam with the tradeoff of far more charge used per shot."
+	slowdown = 0.2
+	icon = 'icons/fallout/objects/guns/energy.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "AEP5CR"// WE NEED TO HAVE AN ACTUAL SPRITE TO REPLACE THIS AAAAAAAAAAAAA
+	item_state = "AEP5CR"
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_MEDIUM
+	slot_flags = ITEM_SLOT_BELT
+	ammo_type = list(/obj/item/ammo_casing/energy/disabler)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	fire_delay = 0
+	can_remove = 0
+	can_scope = TRUE// Shouldn't be needed, but for future reference.
+	scope_state = "AEP7_scope"
+	scope_x_offset = 7
+	scope_y_offset = 22
+	equipsound = 'sound/f13weapons/equipsounds/pulsepistolequip.ogg'
 
 /obj/item/gun/energy/laser/cyborg
 	name = "integrated AER9"

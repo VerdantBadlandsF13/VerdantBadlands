@@ -2,7 +2,6 @@
 Intended for disabled quirks of the respective type.
 Only here for sorting, until I rework the system entirely. - Carl
 */
-
 /datum/quirk/tribal_tech
 	name = "Primitive Tech"
 	desc = "You're able to use primitive technology."

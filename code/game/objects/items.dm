@@ -94,7 +94,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/permeability_coefficient = 1 // for chemicals/diseases
 	var/siemens_coefficient = 1 // for electrical admittance/conductance (electrocution checks and shit)
 	var/slowdown = 0 // How much clothing is slowing you down. Negative values speeds you up
-	var/armour_penetration = 0 //SET BETWEEN 0 and 1, E.G. 0.5 = 50% AP. Now a percentage reduction in armor's increased effective health. DR2 CHANGE
+	var/armour_penetration = 0 //SET BETWEEN 0 and 1, E.G. 0.5 = 50% AP. Now a percentage reduction in armor's increased effective health.
 	var/list/allowed = null //suit storage stuff.
 	var/equip_delay_self = 0 //In deciseconds, how long an item takes to equip; counts only for normal clothing slots, not pockets etc.
 	var/equip_delay_other = 20 //In deciseconds, how long an item takes to put on another person
@@ -861,8 +861,17 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	// Run the start check here so we wouldn't have to call it manually.
 	if(!delay && !tool_start_check(user, amount))
 		return
+/*
+	var/skill_modifier = 1
 
-	delay *= toolspeed
+	if(tool_behaviour == TOOL_MINING && ishuman(user))
+		if(user.mind)
+			skill_modifier = user.mind.skill_holder(/datum/skill/level/mining, JOB_SKILL_EXPERT)
+
+			if(user.mind.get_skill_level(/datum/skill/level/mining) >= JOB_SKILL_EXPERT && prob(user.mind.skill_holder(/datum/skill/level/mining, JOB_SKILL_EXPERT)))
+				mineral_scan_pulse(get_turf(user), 2)
+*/
+	delay *= toolspeed// *- skill_modifier
 
 	// Play tool sound at the beginning of tool usage.
 	play_tool_sound(target, volume)
@@ -1133,12 +1142,3 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	user.visible_message("<span class='danger'>[user] grabs \a [T]!</span>")
 	user.SetThrowDelay(6)
 	user.log_message("[user] pulled a [T]", INDIVIDUAL_ATTACK_LOG)
-
-/obj/item/gun/proc/play_equip_sound(src, volume=50)
-	if(src && equipsound && volume)
-		var/played_sound = equipsound
-
-		if(islist(equipsound))
-			played_sound = pick(equipsound)
-
-		playsound(src, played_sound, volume, 1)

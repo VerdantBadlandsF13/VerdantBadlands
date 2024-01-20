@@ -1,9 +1,7 @@
 #define CASH_CAP_GANG 1
 
 /* exchange rates X * CAP*/
-#define CASH_AUR_GANG 100 /* 100 caps to 1 AUR */
-#define CASH_DEN_GANG 4 /* 4 caps to 1 DEN */
-#define CASH_NCR_GANG 0.4 /* $100 to 40 caps */
+#define CASH_VLT_GANG 100 /* 100 caps to 1 AUR */
 
 //Gangtool device
 /obj/item/device/gangtool
@@ -38,9 +36,7 @@
 	dat +="<div class='statusDisplay'>"
 	dat += "<b>Currency conversion rates:</b><br>"
 	dat += "1 Bottle cap = [CASH_CAP_GANG] influence <br>"
-	dat += "1 NCR dollar = [CASH_NCR_GANG] influence <br>"
-	dat += "1 Denarius = [CASH_DEN_GANG] influence <br>"
-	dat += "1 Aureus = [CASH_AUR_GANG] influence <br>"
+	dat += "1 Commissary token = [CASH_VLT_GANG] influence <br>"
 	dat += "</div>"
 	dat += "<br>"
 

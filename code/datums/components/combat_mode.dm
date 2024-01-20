@@ -86,12 +86,13 @@
 		else
 			to_chat(source, self_message)
 		if(playsound)
-			source.playsound_local(source, 'sound/misc/ui_toggle_vats.ogg', 50, FALSE, pressure_affected = FALSE) //Sound from interbay!
+			source.playsound_local(source, 'sound/misc/ui_toggle_vats.ogg', 50, FALSE, pressure_affected = FALSE)
 	RegisterSignal(source, COMSIG_MOB_CLIENT_MOUSEMOVE, .proc/onMouseMove)
 	RegisterSignal(source, COMSIG_MOVABLE_MOVED, .proc/on_move)
 	if(hud_icon)
 		hud_icon.combat_on = TRUE
 		hud_icon.update_icon_state() // call this instead of update_icon to prevent potential lag
+	source.set_dir_on_move = FALSE
 	var/mob/living/L = source
 	L.toggle_combat_mode()
 
@@ -119,6 +120,7 @@
 	if(hud_icon)
 		hud_icon.combat_on = FALSE
 		hud_icon.update_icon_state() // call this instead of update_icon to prevent potential lag
+	source.set_dir_on_move = initial(source.set_dir_on_move)
 	source.stop_active_blocking()
 	source.end_parry_sequence()
 	var/mob/living/L = source

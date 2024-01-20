@@ -206,7 +206,9 @@
 	specific_heat = 20
 	fusion_power = 50
 	flags = GAS_FLAG_DANGEROUS
-	// snowflaked odor
+	// snowflaked odor - might not be something needed below, as it's 50/50 handled elsewhere
+	odor = "death"
+	odor_strength = 4
 	name = "Miasma"
 	gas_overlay = "miasma"
 	moles_visible = MOLES_GAS_VISIBLE * 60

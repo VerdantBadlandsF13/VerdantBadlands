@@ -22,20 +22,23 @@
 	var/melee_block_threshold = null
 	var/dmg_block_threshold = null
 
-	var/	durability_threshold = 5
+	var/durability_threshold = 0
 	repair_kit = /obj/item/repair_kit/arm_repair_kit
 
 /obj/item/clothing/suit/armored/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
 	if((damage + AP_mod) < durability_threshold)
 		return ..()
-	if(def_zone in protected_zones)
+	if(def_zone in body_parts_covered/*protected_zones*/)
 		damage_armor()
 	. = ..()
 
 /obj/item/clothing/suit/armored/examine(mob/user)
 	. = ..()
-	. += "The armor is at [armor_durability] durability and is providing an additional [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	if(armor.tier >= 1)
+		. += "The armor is at [armor_durability] durability and is providing an additional [armor.linebullet] bullet, [armor.linelaser] energy and [armor.linemelee] melee resistance."
+	else
+		. += "The armor is at [armor_durability] durability."
 	if(durability_threshold > 0)
 		. += "Additionally, any attack below [durability_threshold] force will not damage its durability."
 
@@ -46,31 +49,35 @@
 
 /obj/item/clothing/suit/armored/proc/use_kit(obj/item/I, mob/user)
 	var/obj/item/repair_kit/kit = I
-	while(armor_durability<100)
+	while(armor_durability < 100)
 		if(do_after(user, 10))
-			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability+1] durability.")
-			if(kit.uses_left>1)
+			to_chat(user,"You fix some of the damage on the armor, it is now at [armor_durability] durability.")
+			playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/interface/repair[rand(1,7)].ogg", 40, 0, 0)
+			if(kit.uses_left > 1)
 				kit.uses_left -= 1
 				fix_armor()
 			else
 				fix_armor()
+				to_chat(user,"You've used up the last of your repair kit.")
 				qdel(kit)
 				break
 
 /obj/item/clothing/suit/armored/proc/damage_armor()
-	if(armor.linebullet>0 && armor.linelaser>0 && armor.linemelee>0 && armor_durability>0)
+	if(armor.linebullet > 0 && armor.linelaser > 0 && armor.linemelee > 0 && armor_durability > 0)
 		armor_durability -= 1
 		armor = armor.modifyRating(linemelee = -1, linebullet = -1, linelaser = -1)
+	return
 
 /obj/item/clothing/suit/armored/proc/fix_armor()
-	if(armor_durability<100)
-		armor = armor.modifyRating(linemelee = 1, linebullet = 1, linelaser = 1)
-		armor_durability += 1
+	if(armor_durability < 100)
+		armor = armor.modifyRating(initial(armor.linemelee), initial(armor.linebullet), initial(armor.linelaser))
+		armor_durability = initial(armor_durability)
+	return
 
 /obj/item/clothing/suit/armored/Initialize()
 	. = ..()
 	var/round_armor = round((armor.linemelee + armor.linebullet + armor.linelaser) / 3)
-	if((durability_threshold <= 0) && round_armor > 30)// Weak armor, meh.
+	if((durability_threshold <= 0) && round_armor >= 30)// Weak armor, meh.
 		var/tier_ar = round(round_armor / 10)
 		durability_threshold = tier_ar
 

@@ -128,8 +128,16 @@
 		color = "#[D.features["breasts_color"]]"
 	size = D.features["breasts_size"]
 	shape = D.features["breasts_shape"]
+
 	if(!D.features["breasts_producing"])
 		DISABLE_BITFIELD(genital_flags, GENITAL_FLUID_PRODUCTION|CAN_CLIMAX_WITH|CAN_MASTURBATE_WITH)
+	else
+		var/datum/reagent/fluid = find_reagent_object_from_type(D.features["breasts_fluid"])
+		if(istype(fluid, /datum/reagent/blood))
+			fluid_id = H.get_blood_id()
+		else if(fluid && (fluid in GLOB.genital_fluids_list))
+			fluid_id = D.features["breasts_fluid"]
+
 	if(!isnum(size))
 		cached_size = breast_values[size]
 	else

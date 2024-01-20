@@ -8,6 +8,8 @@
 	material_drop = /obj/item/stack/sheet/mineral/wood
 	cutting_tool = /obj/item/screwdriver
 	can_weld_shut = FALSE
+	open_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/wardrobeopen.ogg"
+	close_sound = "modular_badlands/code/modules/rp_misc/sound/doors_and_containers/containers/wardrobeclose.ogg"
 
 /obj/structure/closet/cabinet/anchored
 	anchored = TRUE

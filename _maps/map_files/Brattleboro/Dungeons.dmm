@@ -2580,10 +2580,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/bunker)
-"fjr" = (
-/obj/structure/weightlifter,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "fjB" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -3087,10 +3083,6 @@
 	color = "000000"
 	},
 /obj/structure/table/wood,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/poppy/broc,
-/obj/item/seeds/xander,
-/obj/item/seeds/xander,
 /obj/item/cultivator,
 /obj/item/shovel,
 /obj/item/shovel/spade,
@@ -3128,9 +3120,7 @@
 	},
 /area/f13/tunnel)
 "goX" = (
-/obj/structure/nest/protectron{
-	max_mobs = 1
-	},
+/obj/structure/nest/protectron,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -3644,13 +3634,6 @@
 	icon_state = "floorgrime"
 	},
 /area/f13/ahs)
-"hvX" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plasteel/barber{
-	icon = 'icons/turf/f13floors2.dmi';
-	icon_state = "bluerustychess2"
-	},
-/area/f13/bunker)
 "hwR" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/fulltile,
@@ -8490,7 +8473,6 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/bunker)
 "pVz" = (
-/obj/structure/flora/wasteplant/wild_punga,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 5;
 	icon_state = "dirt"
@@ -10104,10 +10086,6 @@
 /obj/effect/turf_decal/caution,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
-"tfC" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plating/tunnel,
-/area/f13/bunker)
 "tfE" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -11361,12 +11339,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
-"vpy" = (
-/obj/structure/nest/supermutant,
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/bunker)
 "vqH" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plating/tunnel,
@@ -67001,7 +66973,7 @@ hrZ
 hrZ
 hrZ
 sQQ
-fjr
+nlT
 oVm
 hrZ
 hrZ
@@ -71156,7 +71128,7 @@ sor
 shC
 ekT
 qfY
-vpy
+tNV
 urK
 ekT
 jHa
@@ -74733,7 +74705,7 @@ shC
 shC
 shC
 qpP
-tfC
+qpP
 lDm
 mRq
 oQi
@@ -76543,7 +76515,7 @@ bha
 dhY
 kVk
 kVk
-hvX
+kVk
 kVk
 mRq
 kVk

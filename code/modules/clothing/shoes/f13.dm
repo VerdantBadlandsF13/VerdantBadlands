@@ -57,3 +57,18 @@
 	desc = "A pair of fancy black shoes."
 	icon_state = "fancy"
 	item_state = "fancy"
+
+// GMB
+/obj/item/clothing/shoes/f13/military/gmb
+	name = "laced militia boots"
+	desc = "A pair of laced, heavy-duty leather boots"
+	icon = 'icons/fallout/clothing/bl_mountain.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_mountain.dmi'
+	icon_state = "gmboot"
+	item_state = "gmboot"
+
+/obj/item/clothing/shoes/f13/military/gmb/leather
+	name = "leather militia boots"
+	desc = "A pair of laced, heavy-duty leather boots designed for hiking."
+	icon_state = "leatherboots"
+	item_state = "leatherboots"

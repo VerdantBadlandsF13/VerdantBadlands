@@ -39,11 +39,7 @@
 			sanitization += 7
 		if(victim.reagents.has_reagent(/datum/reagent/abraxo_cleaner/sterilizine/))
 			sanitization += 4
-		if(victim.reagents.has_reagent(/datum/reagent/medicine/mine_salve))
-			sanitization += 4
-			flesh_healing += 1
 		if(victim.reagents.has_reagent(/datum/reagent/medicine/stimpak))
-			sanitization +=0.01
 			flesh_healing += 0.5
 
 	if(limb.current_gauze)
@@ -172,7 +168,7 @@
 			if(WOUND_INFECTION_SEPTIC to INFINITY)
 				. += "Infection Level: <span class='deadsay'>LOSS IMMINENT</span>\n"
 		if(infestation > sanitization)
-			. += "\tSurgery will remove infection. Antibiotics like penicillin or miner's salve will remove infection. The burn must be treated separately with synthflesh, regenerative mesh, and ointment.\n"
+			. += "\tSurgery will remove infection. Antibiotics like penicillin will remove infection. The burn must be treated separately with synthflesh, regenerative mesh, and ointment.\n"
 
 		if(flesh_damage > 0)
 			. += "Flesh damage detected: Please apply ointment or regenerative mesh to allow recovery.\n"

@@ -84,13 +84,54 @@
 /datum/gear/donator/kits/appleplastic
 	name = "Slugger's Lootbox"
 	path = /obj/item/storage/box/large/custom_kit/appleplastic
-	ckeywhitelist = list("ApplePlastic")
+	ckeywhitelist = list("appleplastic")
 
 /obj/item/storage/box/large/custom_kit/appleplastic/PopulateContents()
 	new /obj/item/clothing/gloves/f13/baseball(src)
 	new /obj/item/twohanded/baseball/louisville(src)
 	new /obj/item/toy/tennis/baseball(src)
 	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
-	new /obj/item/gun/ballistic/automatic/pistol/pistol22(src)
-	new /obj/item/ammo_box/magazine/m22(src)
-	new /obj/item/ammo_box/magazine/m22(src)
+	new /obj/item/gun/ballistic/automatic/pistol/n99(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
+	new /obj/item/ammo_box/magazine/m10mm_adv/simple(src)
+
+/datum/gear/donator/kits/appleplastic_two
+	name = "Groupie Kit"
+	path = /obj/item/storage/box/large/custom_kit/appleplastic_two
+	ckeywhitelist = list("appleplastic")
+
+/obj/item/storage/box/large/custom_kit/appleplastic_two/PopulateContents()
+	new /obj/item/clothing/suit/armored/f13/light/khan_groupie(src)
+	new /obj/item/clothing/under/f13/khan_groupie(src)
+	new /obj/item/twohanded/legionaxe/splitter(src)
+	new /obj/item/gun/ballistic/rifle/repeater/brush(src)
+	new /obj/item/ammo_box/tube/c4570(src)
+
+/datum/gear/donator/kits/lurzefromgermany
+	name = "Robot Token"
+	path = /obj/item/storage/box/large/custom_kit/lurzefromgermany
+	ckeywhitelist = list("lurzefromgermany")
+
+/obj/item/storage/box/large/custom_kit/lurzefromgermany/PopulateContents()
+	var/player = get_mob_by_key("lurzefromgermany")
+	if(!ishuman(player))
+		return
+	robot_token(player)
+	qdel(src)
+
+/obj/item/storage/box/large/custom_kit/lurzefromgermany/proc/robot_token(mob/living/carbon/human/H)
+	H.Robotize()
+
+/datum/gear/donator/kits/metro
+	name = "Finlay's Kit"
+	path = /obj/item/storage/box/large/custom_kit/metro
+	ckeywhitelist = list("metrobotic")
+
+/obj/item/storage/box/large/custom_kit/metro/PopulateContents()
+	new /obj/item/clothing/head/helmet/finlay(src)
+	new /obj/item/clothing/suit/armored/f13/medium/finlay(src)
+	new /obj/item/gun/energy/laser/pistol/finlay_fluff(src)
+	new /obj/item/stock_parts/cell/ammo/ec(src)
+
+
+

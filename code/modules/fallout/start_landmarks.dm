@@ -1,6 +1,4 @@
 // FO13 Faction Start. Set to override for the time being to allow latejoining in their original spots.
-
-// NCR
 /obj/effect/landmark/start/f13
 	icon = 'icons/mob/landmarks.dmi'
 	jobspawn_override = TRUE
@@ -11,10 +9,18 @@
 	name = "Wastelander"
 	icon_state = "Wastelander"
 
+/obj/effect/landmark/start/f13/tavernkeep
+	name = "Tavernkeep"
+	icon_state = "Bartender"
+
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
 	name = "Vault-Tec Overseer"
+	icon_state = "Overseer"
+
+/obj/effect/landmark/start/f13/secchief
+	name = "Vault-Tec Security Chief"
 	icon_state = "Overseer"
 
 /obj/effect/landmark/start/f13/vaultdoctor
@@ -92,8 +98,8 @@
 // LBJ
 /obj/effect/landmark/start/f13/lbj_foreman
 	name = "Foreman"
-	icon_state = "Raider"
+	icon_state = "Preacher"
 
 /obj/effect/landmark/start/f13/lbj_lumberjack
 	name = "Lumberjack"
-	icon_state = "Pusher"
+	icon_state = "Shopkeeper"

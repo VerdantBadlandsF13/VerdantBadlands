@@ -270,4 +270,5 @@
 	pressure_resistance = 2
 	grind_results = list(/datum/reagent/iron = 2, /datum/reagent/iodine = 1)
 	tool_behaviour = TOOL_MINING //For the classic "digging out of prison with a spoon but you're in space so this analogy doesn't work" situation.
+	used_skills = list(/datum/skill/level/mining)
 	toolspeed = 10 //You will never willingly choose to use one of these over a shovel.

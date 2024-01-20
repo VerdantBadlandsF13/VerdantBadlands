@@ -147,7 +147,7 @@
 	time = 30
 	reqs = list(
 		/obj/item/ammo_casing/caseless/arrow = 1,
-		/obj/item/reagent_containers/food/snacks/grown/feracactus = 1,
+		/obj/item/reagent_containers/food/snacks/grown/glow = 1,
 		)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
@@ -162,7 +162,6 @@
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE
 
-
 /datum/crafting_recipe/tribalwar/cheaparrow
 	name = "Lightweight Wooden Arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/cheap
@@ -171,7 +170,6 @@
 				/obj/item/stack/sheet/mineral/sandstone = 2)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
-
 
 /datum/crafting_recipe/tribalwar/arrowwound
 	name = "Serrated Arrow"
@@ -187,6 +185,17 @@
 /datum/crafting_recipe/tribalwar/arrowembed
 	name = "Broadhead Arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/broadhead
+	time = 10
+	reqs = list(
+		/obj/item/stack/rods = 1,
+		/obj/item/stack/crafting/goodparts = 1
+		)
+	category = CAT_TRIBAL
+	tools = list(TOOL_WORKBENCH)
+
+/datum/crafting_recipe/tribalwar/arrow_gmb_bolt
+	name = "Custom Bolt"
+	result = /obj/item/ammo_casing/caseless/arrow/death
 	time = 10
 	reqs = list(
 		/obj/item/stack/rods = 1,

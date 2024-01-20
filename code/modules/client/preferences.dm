@@ -101,7 +101,113 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/eye_type = DEFAULT_EYES_TYPE	//Eye type
 	var/split_eye_colors = FALSE
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF", "mcolor3" = "FFFFFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "horns_color" = "85615a", "ears" = "None", "wings" = "None", "wings_color" = "FFF", "frills" = "None", "deco_wings" = "None", "spines" = "None", "legs" = "Plantigrade", "insect_wings" = "Plain", "insect_fluff" = "None", "insect_markings" = "None", "arachnid_legs" = "Plain", "arachnid_spinneret" = "Plain", "arachnid_mandibles" = "Plain", "mam_body_markings" = list(), "mam_ears" = "None", "mam_snouts" = "None", "mam_tail" = "None", "mam_tail_animated" = "None", "xenodorsal" = "Standard", "xenohead" = "Standard", "xenotail" = "Xenomorph Tail", "taur" = "None", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "cock_taur" = FALSE, "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE,  "has_butt" = FALSE, "butt_color" = "ffffff", "butt_size" = BUTT_SIZE_DEF,  "balls_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility"	= GEN_VISIBLE_NO_UNDIES, "butt_visibility" = GEN_VISIBLE_NO_UNDIES, "ipc_screen" = "Sunburst", "ipc_antenna" = "None", "flavor_text" = "", "silicon_flavor_text" = "", "ooc_notes" = "", "meat_type" = "Mammalian", "body_model" = MALE, "body_size" = RESIZE_DEFAULT_SIZE, "color_scheme" = OLD_CHARACTER_COLORING)
+	var/list/features = list(
+	"mcolor" = "FFFFFF",
+	"mcolor2" = "FFFFFF",
+	"mcolor3" = "FFFFFF",
+
+	"tail_lizard" = "Smooth",
+	"tail_human" = "None",
+
+	"snout" = "Round",
+
+	"horns" = "None",
+	"horns_color" = "85615a",
+
+	"ears" = "None",
+
+	"wings" = "None",
+	"wings_color" = "FFF",
+
+	"frills" = "None",
+
+	"deco_wings" = "None",
+
+	"spines" = "None",
+
+	"legs" = "Plantigrade",
+
+	"insect_wings" = "Plain",
+	"insect_fluff" = "None",
+	"insect_markings" = "None",
+
+	"arachnid_legs" = "Plain",
+	"arachnid_spinneret" = "Plain",
+	"arachnid_mandibles" = "Plain",
+
+	"mam_body_markings" = list(),
+
+	"mam_ears" = "None",
+
+	"mam_snouts" = "None",
+
+	"mam_tail" = "None",
+	"mam_tail_animated" = "None",
+
+	"xenodorsal" = "Standard",
+
+	"xenohead" = "Standard",
+
+	"xenotail" = "Xenomorph Tail",
+
+	"taur" = "None",
+
+	"genitals_use_skintone" = FALSE,
+
+	"has_cock" = FALSE,
+	"cock_shape" = DEF_COCK_SHAPE,
+	"cock_length" = COCK_SIZE_DEF,
+	"cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF,
+	"cock_color" = "ffffff",
+	"cock_taur" = FALSE,
+
+	"has_balls" = FALSE,
+	"balls_color" = "ffffff",
+	"balls_shape" = DEF_BALLS_SHAPE,
+	"balls_size" = BALLS_SIZE_DEF,
+	"balls_cum_rate" = CUM_RATE,
+	"balls_cum_mult" = CUM_RATE_MULT,
+	"balls_efficiency" = CUM_EFFICIENCY,
+	"balls_fluid" = /datum/reagent/consumable/semen,
+
+	"has_breasts" = FALSE,
+	"breasts_color" = "ffffff",
+	"breasts_size" = BREASTS_SIZE_DEF,
+	"breasts_shape" = DEF_BREASTS_SHAPE,
+	"breasts_producing" = FALSE,
+	"breasts_fluid" = /datum/reagent/consumable/milk,
+
+	"has_vag" = FALSE,
+	"vag_shape" = DEF_VAGINA_SHAPE,
+	"vag_color" = "ffffff",
+
+	"has_womb" = FALSE,
+
+	"has_butt" = FALSE,
+	"butt_color" = "ffffff",
+	"butt_size" = BUTT_SIZE_DEF,
+
+	"balls_visibility"	= GEN_VISIBLE_NO_UNDIES,
+	"breasts_visibility"= GEN_VISIBLE_NO_UNDIES,
+	"cock_visibility"	= GEN_VISIBLE_NO_UNDIES,
+	"vag_visibility"	= GEN_VISIBLE_NO_UNDIES,
+	"butt_visibility" = GEN_VISIBLE_NO_UNDIES,
+
+	"ipc_screen" = "Sunburst",
+	"ipc_antenna" = "None",
+
+	"flavor_text" = "",
+	"silicon_flavor_text" = "",
+	"ooc_notes" = "",
+
+	"meat_type" = "Mammalian",
+
+	"body_model" = MALE,
+
+	"body_size" = RESIZE_DEFAULT_SIZE,
+
+	"color_scheme" = OLD_CHARACTER_COLORING
+	)
 
 	var/custom_speech_verb = "default" //if your say_mod is to be something other than your races
 	var/custom_tongue = "default" //if your tongue is to be something other than your races
@@ -326,14 +432,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<br>"
 				dat += "<a href ='?_src_=prefs;preference=[custom_name_id];task=input'><b>[namedata["pref_name"]]:</b> [custom_names[custom_name_id]]</a> "
 			dat += "<br><br>"
-
 /*
-Records disabled until a use for them is found
 			dat += "<b>Custom job preferences:</b><BR>"
-			dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Preferred AI Core Display:</b> [preferred_ai_core_display]</a><br>"
+			dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Preferred ZAX Core Display:</b> [preferred_ai_core_display]</a><br>"
 			dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Preferred Security Department:</b> [prefered_security_department]</a><BR></td>"
 			dat += "<br>Records</b><br>"
-			dat += "<br><a href='?_src_=prefs;preference=security_records;task=input'><b>Security Records</b></a><br>"
+			dat += "<br><a href='?_src_=prefs;preference=security_records;task=input'><b>Vault Security Records</b></a><br>"
 			if(length_char(security_records) <= 40)
 				if(!length(security_records))
 					dat += "\[...\]"
@@ -342,7 +446,7 @@ Records disabled until a use for them is found
 			else
 				dat += "[TextPreview(security_records)]...<BR>"
 
-			dat += "<br><a href='?_src_=prefs;preference=medical_records;task=input'><b>Medical Records</b></a><br>"
+			dat += "<br><a href='?_src_=prefs;preference=medical_records;task=input'><b>Vault Medical Records</b></a><br>"
 			if(length_char(medical_records) <= 40)
 				if(!length(medical_records))
 					dat += "\[...\]<br>"
@@ -701,11 +805,18 @@ Records disabled until a use for them is found
 						dat += "<span style='border: 1px solid #161616; background-color: #[features["balls_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=balls_color;task=input'>Change</a><br>"
 						dat += "<b>Testicles Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=balls_visibility;task=input'>[features["balls_visibility"]]</a>"
 						dat += "<b>Testicles Shape:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=balls_shape;task=input'>[features["balls_shape"]]</a>"
+						dat += "<b>Testicles Size:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=balls_size;task=input'>[features["balls_size"]]</a>"
+						dat += "<b>Produces:</b>"
+						var/datum/reagent/balls_fluid = find_reagent_object_from_type(features["balls_fluid"])
+						if(balls_fluid && (balls_fluid in GLOB.genital_fluids_list))
+							dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=balls_fluid;task=input'>[balls_fluid.name]</a>"
+						else
+							dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=balls_fluid;task=input'>Nothing?</a>"
 				dat += APPEARANCE_CATEGORY_COLUMN
 				dat += "<h3>Vagina</h3>"
 				dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_vag'>[features["has_vag"] == TRUE ? "Yes": "No" ]</a>"
 				if(features["has_vag"])
-					dat += "<b>Vagina Type:</b> <a style='display:block;width:100px' href='?_ssrc_=prefs;preference=vag_shape;task=input'>[features["vag_shape"]]</a>"
+					dat += "<b>Vagina Type:</b> <a style='display:block;width:100px' href='?_src_=prefs;preference=vag_shape;task=input'>[features["vag_shape"]]</a>"
 					dat += "<b>Vagina Color:</b></a><BR>"
 					dat += "<span style='border: 1px solid #161616; background-color: #[features["vag_color"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=vag_color;task=input'>Change</a><br>"
 					dat += "<b>Vagina Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=vag_visibility;task=input'>[features["vag_visibility"]]</a>"
@@ -721,6 +832,13 @@ Records disabled until a use for them is found
 					dat += "<b>Breasts Shape:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_shape;task=input'>[features["breasts_shape"]]</a>"
 					dat += "<b>Breasts Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=breasts_visibility;task=input'>[features["breasts_visibility"]]</a>"
 					dat += "<b>Lactates:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_producing'>[features["breasts_producing"] == TRUE ? "Yes" : "No"]</a>"
+					if(features["breasts_producing"] == TRUE)
+						dat += "<b>Produces:</b>"
+						var/datum/reagent/breasts_fluid = find_reagent_object_from_type(features["breasts_fluid"])
+						if(breasts_fluid && (breasts_fluid in GLOB.genital_fluids_list))
+							dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_fluid;task=input'>[breasts_fluid.name]</a>"
+						else
+							dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_fluid;task=input'>Nothing?</a>"
 				dat += "</td>"
 				dat += APPEARANCE_CATEGORY_COLUMN
 				dat += "<h3>Butt</h3>"
@@ -1379,7 +1497,7 @@ Records disabled until a use for them is found
 		dat += "<br><center><a href='?_src_=prefs;preference=trait;task=reset'>Reset Quirks</a></center>"
 
 	user << browse(null, "window=preferences")
-	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>SPECIAL</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
+	var/datum/browser/popup = new(user, "mob_occupation", "<div align='center'>S.P.E.C.I.A.L.</div>", 900, 600) //no reason not to reuse the occupation window, as it's cleaner that way
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(0)
@@ -1387,7 +1505,7 @@ Records disabled until a use for them is found
 
 /datum/preferences/proc/SetSpecial(mob/user)
 //	if(!SSquirks)
-	//	to_chat(user, "<span class='danger'>The quirk subsystem is still initializing! Try again in a minute.</span>")
+//		to_chat(user, "<span class='danger'>The quirk subsystem is still initializing! Try again in a minute.</span>")
 //		return
 
 	var/list/dat = list()
@@ -2306,6 +2424,23 @@ Records disabled until a use for them is found
 					if(new_shape)
 						features["balls_shape"] = new_shape
 
+				if("balls_size")
+					var/min_T = CONFIG_GET(number/balls_min_size_prefs)
+					var/max_T = CONFIG_GET(number/balls_max_size_prefs)
+					var/new_size = input(user, "Testicle Diameter:\n([min_T]-[max_T])", "Character Preference") as num|null
+					if(new_size)
+						features["balls_size"] = clamp(new_size, min_T, max_T)
+
+				if("balls_fluid")
+					var/datum/reagent/new_fluid
+					var/list/full_options = list()
+					LAZYADD(full_options, GLOB.genital_fluids_list)
+					LAZYREMOVE(full_options, find_reagent_object_from_type(/datum/reagent/consumable/semen))
+					full_options = list(find_reagent_object_from_type(/datum/reagent/consumable/semen)) + full_options
+					new_fluid = input(user, "Balls Fluid", "Character Preference") as null|anything in full_options
+					if(new_fluid)
+						features["balls_fluid"] = new_fluid.type
+
 				if("breasts_size")
 					var/new_size = input(user, "Breast Size", "Character Preference") as null|anything in CONFIG_GET(keyed_list/breasts_cups_prefs)
 					if(new_size)
@@ -2332,6 +2467,16 @@ Records disabled until a use for them is found
 					var/n_vis = input(user, "Breasts Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
 					if(n_vis)
 						features["breasts_visibility"] = n_vis
+
+				if("breasts_fluid")
+					var/datum/reagent/new_fluid
+					var/list/full_options = list()
+					LAZYADD(full_options, GLOB.genital_fluids_list)
+					LAZYREMOVE(full_options, find_reagent_object_from_type(/datum/reagent/consumable/milk))
+					full_options = list(find_reagent_object_from_type(/datum/reagent/consumable/milk)) + full_options
+					new_fluid = input(user, "Breast Fluid", "Character Preference") as null|anything in full_options
+					if(new_fluid)
+						features["breasts_fluid"] = new_fluid.type
 
 				if("vag_shape")
 					var/new_shape
@@ -2527,10 +2672,10 @@ Records disabled until a use for them is found
 						markings[index_up] = first_marking
 
 				if("marking_remove")
-					// remove the specified marking
+					// move the specified marking up
 					var/index = text2num(href_list["marking_index"])
 					var/marking_type = href_list["marking_type"]
-					if(index > 0 && marking_type && index < length(features[marking_type]))
+					if(index && marking_type && features[marking_type])
 						// because linters are just absolutely awful:
 						var/list/L = features[marking_type]
 						L.Cut(index, index + 1)

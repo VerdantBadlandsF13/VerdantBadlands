@@ -150,7 +150,7 @@
 
 /obj/machinery/implantchair/genepurge
 	name = "Genetic purifier"
-	desc = "Used to purge a human genome of foreign influences."
+	desc = "Used to purge a subject's genome of foreign influences."
 	special = TRUE
 	special_name = "Purge genome"
 	injection_cooldown = 0
@@ -159,11 +159,10 @@
 /obj/machinery/implantchair/genepurge/implant_action(mob/living/carbon/human/H,mob/user)
 	if(!istype(H))
 		return 0
-	H.set_species(/datum/species/human, 1)//lizards go home
-	purrbation_remove(H)//remove cats
+//	H.set_species(/datum/species/human, 1)//lizards go home
+//	purrbation_remove(H)//remove cats
 	H.dna.remove_all_mutations()//hulks out
 	return 1
-
 
 /obj/machinery/implantchair/brainwash
 	name = "Neural Imprinter"

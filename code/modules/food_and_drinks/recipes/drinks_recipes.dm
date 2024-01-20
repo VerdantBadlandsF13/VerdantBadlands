@@ -1156,12 +1156,6 @@
 	results = list(/datum/reagent/consumable/nukafrutti = 3)
 	required_reagents = list(/datum/reagent/consumable/nukaberry = 1, /datum/reagent/consumable/nukaorange = 1, /datum/reagent/consumable/ice = 1)
 
-/datum/chemical_reaction/nukapunch
-	name = "Nuka Punch"
-	id = "nukapunch"
-	results = list(/datum/reagent/consumable/ethanol/nukapunch = 3)
-	required_reagents = list(/datum/reagent/consumable/ethanol/nukadark = 1, /datum/reagent/consumable/ethanol/deathroach = 1, /datum/reagent/consumable/ethanol/pungajuice = 1)
-
 /datum/chemical_reaction/nukasunrise
 	name = "Nuka Sunrise"
 	id = "nukasunrise"
@@ -1175,12 +1169,6 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol/nukacide = 5, /datum/reagent/consumable/ethanol/nukaquantum = 5, /datum/reagent/consumable/ice = 5)
 
 //vims
-
-/datum/chemical_reaction/vimcap
-	name = "Vim Captains Blend"
-	id = "vimcap"
-	results = list(/datum/reagent/consumable/ethanol/vimcap = 5)
-	required_reagents = list(/datum/reagent/consumable/vim = 10, /datum/reagent/gold = 10, /datum/reagent/consumable/ethanol/brocbrew = 10)
 
 /datum/chemical_reaction/vimquartz
 	name = "Vim Quartz"
@@ -1242,7 +1230,7 @@
 	name = "Firecracker"
 	id = "firecracker"
 	results = list(/datum/reagent/consumable/ethanol/firecracker = 2)
-	required_reagents = list(/datum/reagent/consumable/ethanol/salgam = 1, /datum/reagent/consumable/yuccajuice = 1)
+	required_reagents = list(/datum/reagent/consumable/soysauce = 1, /datum/reagent/consumable/mutjuice = 1)
 
 /datum/chemical_reaction/hardlemonade
 	name = "Hard Lemonade"
@@ -1348,12 +1336,6 @@
 	results = list(/datum/reagent/consumable/ethanol/corporate = 4)
 	required_reagents = list(/datum/reagent/consumable/vim = 1, /datum/reagent/consumable/nukawild = 1, /datum/reagent/consumable/bawls = 1)
 
-/datum/chemical_reaction/ranchwhiskey
-	name = "Ranchers Whiskey"
-	id = "ranchwhiskey"
-	results = list(/datum/reagent/consumable/ethanol/ranchwhiskey = 2)
-	required_reagents = list(/datum/reagent/consumable/tea/feratea = 1, /datum/reagent/consumable/ethanol/whiskey = 1)
-
 //finally, some fallout floats and shakes, 60s style!
 
 /datum/chemical_reaction/bawlsshake
@@ -1379,58 +1361,3 @@
 	id = "sunsetter"
 	results = list(/datum/reagent/consumable/sunsetter = 2)
 	required_reagents = list(/datum/reagent/consumable/sunset = 1, /datum/reagent/consumable/ethanol/tequila_sunrise = 1)
-
-/datum/chemical_reaction/yuccashake
-	name = "Yucca Shake"
-	id = "yuccashake"
-	results = list(/datum/reagent/consumable/yuccashake = 3)
-	required_reagents = list(/datum/reagent/consumable/yuccajuice = 1, /datum/reagent/consumable/milk = 1, /datum/reagent/consumable/cream = 1)
-
-/datum/chemical_reaction/broctea
-	name = "Broc Tea"
-	id = "broctea"
-	results = list(/datum/reagent/consumable/tea/broctea = 3)
-	required_reagents = list(/datum/reagent/consumable/brocjuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/xandertea
-	name = "Xander Tea"
-	id = "xandertea"
-	results = list(/datum/reagent/consumable/tea/xandertea = 3)
-	required_reagents = list(/datum/reagent/consumable/xanderjuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/agavetea
-	name = "Agave Tea"
-	id = "agavetea"
-	results = list(/datum/reagent/consumable/tea/agavetea = 3)
-	required_reagents = list(/datum/reagent/consumable/agavejuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/feratea
-	name = "Barrel Tea"
-	id = "feratea"
-	results = list(/datum/reagent/consumable/tea/feratea = 3)
-	required_reagents = list(/datum/reagent/consumable/ferajuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/daturatea
-	name = "Datura Tea"
-	id = "daturatea"
-	results = list(/datum/reagent/consumable/ethanol/daturatea = 3)
-	required_reagents = list(/datum/reagent/consumable/daturajuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/coyotetea
-	name = "Coyote Tea"
-	id = "coyotetea"
-	results = list(/datum/reagent/consumable/tea/coyotetea = 3)
-	required_reagents = list(/datum/reagent/consumable/coyotejuice = 1, /datum/reagent/water = 2)
-	required_temp = 315
-
-/datum/chemical_reaction/buffalotea
-	name = "Buffalo Tea"
-	id = "buffalotea"
-	results = list(/datum/reagent/consumable/tea/buffalotea = 3)
-	required_reagents = list(/datum/reagent/consumable/buffalojuice = 1, /datum/reagent/water = 2)
-	required_temp = 315

@@ -4,17 +4,17 @@
 /* exchange rates X * CAP*/
 #define CASH_VLT 100 /* 100 caps to 1 VLT */
 
-// A low value cash spawn is on average worth 25
-#define LOW_MIN 8
-#define LOW_MAX 50
+// Low value spawns.
+#define LOW_MIN 1
+#define LOW_MAX 10
 
-// A medium value cash spawn is on average worth 60ish
-#define MED_MIN 40
-#define MED_MAX 80
+// Medium value spawns.
+#define MED_MIN 20
+#define MED_MAX 50
 
-// A high value cash spawn is on average worth 280
-#define HIGH_MIN 120
-#define HIGH_MAX 440
+// High value spawns.
+#define HIGH_MIN 60
+#define HIGH_MAX 120
 
 /obj/item/stack/f13Cash //DO NOT USE THIS
 	name = "bottle cap"
@@ -148,7 +148,7 @@
 	icon_state = "spacecash"
 	flavor_desc = "An incredibly valuable token, printed within the Vault's confines. <br>\
 	If you're holding this, you're either one of their trade partners, or about to be shot."
-	value = CASH_VLT * CASH_CAP
+	value = CASH_VLT
 	merge_type = /obj/item/stack/f13Cash/vault
 
 /obj/item/stack/f13Cash/random/vault

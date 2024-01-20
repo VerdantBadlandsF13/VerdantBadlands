@@ -10,7 +10,7 @@ VAULT STUFF BELOW
 	desc = "Proof of citizenship to a vault."
 	icon_state = "id"
 	item_state = "card-doctor"
-	assignment = "citizenship permit"
+	assignment = "citizenship"
 	uses_overlays = FALSE
 
 /obj/item/card/id/dendoctor
@@ -23,7 +23,7 @@ VAULT STUFF BELOW
 
 /obj/item/card/id/chief
 	name = "crimson identification card"
-	desc = "A red card which shows dedication and leadership to the Vaults safety and security."
+	desc = "A red card which shows dedication and leadership to Vault safety and security."
 	icon_state = "chief"
 	item_state = "sec_id"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
@@ -32,9 +32,18 @@ VAULT STUFF BELOW
 
 /obj/item/card/id/sec
 	name = "red identification card"
-	desc = "A red card which shows dedication to the Security department."
+	desc = "A keycard which shows placement within the Security department."
 	icon_state = "sec"
 	item_state = "sec_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	uses_overlays = FALSE
+
+/obj/item/card/id/vfe
+	name = "identification card"
+	desc = "A keycard that shows your place in the Vault's hierarchy."
+	icon_state = "id"
+	item_state = "card-doctor"
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	uses_overlays = FALSE
@@ -47,7 +56,7 @@ VAULT STUFF BELOW
 
 /obj/item/card/id/fadedvaultid
 	name = "faded id card"
-	desc = "A and worn Vault-Tech issued ID card, broken beyond use, kept as a reminder to something."
+	desc = "A faded and worn Vault-Tech issued ID card. Broken beyond use, it's instead kept as a reminder to something."
 	icon_state = "fadedvaultid"
 	item_state = "fadedvaultid"
 	uses_overlays = FALSE
@@ -70,7 +79,7 @@ OTHER BELOW
 	assignment = "slave brand"
 	uses_overlays = FALSE
 
-/obj/item/card/id/legionbrand/Initialize()
+/obj/item/card/id/brand/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
 
@@ -128,3 +137,13 @@ OTHER BELOW
 	assignment = "old keys"
 	uses_overlays = FALSE
 	access = list(ACCESS_LBJ)
+
+// Tavern
+/obj/item/card/id/tavern_keys
+	name = "frail keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_TOWN_BAR)

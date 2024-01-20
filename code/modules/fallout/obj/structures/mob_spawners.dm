@@ -82,7 +82,7 @@
 
 /obj/structure/nest/ghoul
 	name = "ghoul nest"
-	max_mobs = 10
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/ghoul = 5,
 					/mob/living/simple_animal/hostile/ghoul/reaver = 1)
 
@@ -105,17 +105,17 @@
 
 /obj/structure/nest/ant
 	name = "ant tunnel"
-	max_mobs = 5
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/giantant = 5)
 
 /obj/structure/nest/radroach
 	name = "radroach nest"
-	max_mobs = 5
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/radroach = 1)
 
 /obj/structure/nest/fireant
 	name = "fireant tunnel"
-	max_mobs = 5
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/fireant = 1,
 					/mob/living/simple_animal/hostile/giantant = 1)
 
@@ -126,13 +126,13 @@
 
 /obj/structure/nest/molerat
 	name = "molerat nest"
-	max_mobs = 5
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/molerat = 1)
 	spawn_time = 10 SECONDS //They just love tunnelin'.. And are pretty soft
 
 /obj/structure/nest/mirelurk
 	name = "mirelurk nest"
-	max_mobs = 5
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/mirelurk = 2,
 					/mob/living/simple_animal/hostile/mirelurk/hunter = 1,
 					/mob/living/simple_animal/hostile/mirelurk/baby = 5)
@@ -140,7 +140,7 @@
 /obj/structure/nest/raider
 	name = "narrow tunnel"
 	desc = "A crude tunnel used by raiders to travel across the wasteland."
-	max_mobs = 5
+	max_mobs = 2
 	icon_state = "ventblue"
 	spawnsound = 'sound/effects/bin_close.ogg'
 	mob_types = list(/mob/living/simple_animal/hostile/raider = 5,
@@ -158,7 +158,7 @@
 					/mob/living/simple_animal/hostile/raider/tribal = 1)
 
 /obj/structure/nest/raider/ranged
-	max_mobs = 3
+	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/raider/ranged = 2,
 					/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 1,
 					/mob/living/simple_animal/hostile/raider/ranged/biker = 1)
@@ -171,27 +171,16 @@
 /obj/structure/nest/protectron
 	name = "protectron pod"
 	desc = "An old robot storage system. This one looks like it is connected to a storage system underground."
-	max_mobs = 3
+	max_mobs = 1
 	icon_state = "scanner_modified"
 	mob_types = list(/mob/living/simple_animal/hostile/handy/protectron = 5)
 
 /obj/structure/nest/assaultron
 	name = "assaultron pod"
 	desc = "An old assaultron containment pod system. This one looks like it is connected to a storage system underground."
-	max_mobs = 2
+	max_mobs = 1
 	icon_state = "scanner_modified"
 	mob_types = list(/mob/living/simple_animal/hostile/handy/assaultron = 5)
-
-/obj/structure/nest/cazador
-	name = "cazador nest"
-	max_mobs = 4
-	mob_types = list(/mob/living/simple_animal/hostile/cazador = 5,
-					/mob/living/simple_animal/hostile/cazador/young = 3)
-
-/obj/structure/nest/gecko
-	name = "gecko nest"
-	max_mobs = 5
-	mob_types = list(/mob/living/simple_animal/hostile/gecko = 5)
 
 /obj/structure/nest/spider
 	name = "spider mound"
@@ -200,51 +189,13 @@
 					/mob/living/simple_animal/hostile/poison/giant_spider/hunter = 2,
 					/mob/living/simple_animal/hostile/poison/giant_spider/nurse = 2)
 
-
 /obj/structure/nest/wolf
 	name = "wolf den"
 	max_mobs = 2
 	mob_types = list(/mob/living/simple_animal/hostile/wolf = 5)
-
-/obj/structure/nest/supermutant
-	name = "supermutant den"
-	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/supermutant/meleemutant = 5,
-					/mob/living/simple_animal/hostile/supermutant/rangedmutant = 2)
-
-/obj/structure/nest/centaur
-	name = "centaur den"
-	max_mobs = 5
-	mob_types = list(/mob/living/simple_animal/hostile/centaur = 5)
-
-/obj/structure/nest/supermutant/melee
-	mob_types = list(/mob/living/simple_animal/hostile/supermutant/meleemutant = 5)
-
-/obj/structure/nest/supermutant/ranged
-	mob_types = list(/mob/living/simple_animal/hostile/supermutant/rangedmutant = 5)
-
-/obj/structure/nest/supermutant/nightkin
-	mob_types = list(/mob/living/simple_animal/hostile/supermutant/nightkin = 5,
-					/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant = 2,
-					/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant = 1)
-
-/obj/structure/nest/nightstalker
-	name = "nightstalker nest"
-	max_mobs = 2
-	mob_types = list(/mob/living/simple_animal/hostile/stalker = 5,
-					/mob/living/simple_animal/hostile/stalkeryoung = 5)
 
 /obj/structure/nest/tunneler
 	name = "tunneler tunnel"
 	desc = "A tunnel which leads to an underground network of even more tunnels, made by the dangerous tunnelers."
 	max_mobs = 5
 	mob_types = list(/mob/living/simple_animal/hostile/trog/tunneler = 1)
-
-//Mountain range
-
-/obj/structure/nest/coldghouls
-	name = "cold ghouls tunnel"
-	desc = "A tunnel which leads to an underground network of even more tunnels, made by the dangerous tunnelers."
-	max_mobs = 5
-	mob_types = list(/mob/living/simple_animal/hostile/ghoul/coldferal = 10,
-					/mob/living/simple_animal/hostile/ghoul/frozenreaver = 2)

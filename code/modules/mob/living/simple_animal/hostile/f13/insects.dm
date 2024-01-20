@@ -26,8 +26,8 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 160
-	health = 160
+	maxHealth = 40
+	health = 40
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 20
@@ -71,8 +71,8 @@
 	emote_taunt_sound = 'sound/creatures/radroach_chitter.ogg'
 	taunt_chance = 30
 	speed = 1
-	maxHealth = 140
-	health = 140
+	maxHealth = 60
+	health = 60
 	harm_intent_damage = 8
 	obj_damage = 20
 	melee_damage_lower = 15

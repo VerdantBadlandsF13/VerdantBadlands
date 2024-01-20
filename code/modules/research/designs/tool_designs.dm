@@ -97,7 +97,7 @@
 /////////////////////////////////////////
 
 /datum/design/alienwrench
-	name = "Experimental Wrench" //Start Fortuna edit: alien tech -> experimental
+	name = "Experimental Wrench"
 	desc = "An experimental wrench obtained through advanced technology."
 	id = "alien_wrench"
 	build_path = /obj/item/wrench/abductor
@@ -212,7 +212,7 @@
 
 /datum/design/aliencautery
 	name = "Experimental Cautery"
-	desc = "An experimental cautery obtained through advanced technology." //End Fortuna edit
+	desc = "An experimental cautery obtained through advanced technology."
 	id = "alien_cautery"
 	build_path = /obj/item/cautery/alien
 	build_type = PROTOLATHE

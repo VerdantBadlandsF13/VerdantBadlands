@@ -3,7 +3,7 @@
 	description = "A chemical used to induce a euphoric high derived from brahmin dung. Fast-acting, powerful, and highly addictive."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 20
-	addiction_threshold = 12.5
+	addiction_threshold = 5
 	ghoulfriendly = TRUE
 	pain_resistance = 5
 
@@ -53,7 +53,6 @@
 
 /datum/reagent/drug/jet/addiction_act_stage2(mob/living/M)
 	M.Dizzy(5)
-	M.adjustToxLoss(1, updating_health = FALSE)
 	if(prob(30))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -63,8 +62,6 @@
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
 		for(var/i = 0, i < 4, i++)
 			step(M, pick(GLOB.cardinals))
-	M.adjustToxLoss(3, updating_health = FALSE)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5)
 	M.set_disgust(60)
 	M.Dizzy(10)
 	if(prob(40))
@@ -76,8 +73,6 @@
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
 		for(var/i = 0, i < 8, i++)
 			step(M, pick(GLOB.cardinals))
-	M.adjustToxLoss(5, updating_health = FALSE)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
 	M.set_disgust(100)
 	M.Dizzy(15)
 	if(prob(50))
@@ -91,7 +86,7 @@
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 14
-	addiction_threshold = 9
+	addiction_threshold = 5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 	pain_resistance = 5
@@ -174,13 +169,12 @@
 	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries an extreme risk of addiction."
 	reagent_state = LIQUID
 	color = "#FF0000"
-	overdose_threshold = 5.1
-	addiction_threshold = 12.5
+	overdose_threshold = 10.1
+	addiction_threshold = 5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
 	pain_resistance = 95
-
 
 /datum/reagent/drug/psycho/on_mob_life(mob/living/carbon/M)
 	var/high_message = pick("<br><font color='#FF0000'><b>FUCKING KILL!</b></font>", "<br><font color='#FF0000'><b>RAAAAR!</b></font>", "<br><font color='#FF0000'><b>BRING IT!</b></font>")
@@ -237,6 +231,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage2(mob/living/M)
 	M.hallucination += 20
 	M.Jitter(10)
@@ -246,6 +241,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage3(mob/living/M)
 	M.hallucination += 30
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
@@ -258,6 +254,7 @@
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage4(mob/living/carbon/human/M)
 	M.hallucination += 40
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
@@ -277,8 +274,8 @@
 	description = "A powerful steroid which increases the user's strength and endurance."
 	color = "#FF9900"
 	reagent_state = SOLID
-	overdose_threshold = 20
-	addiction_threshold = 11
+	overdose_threshold = 10
+	addiction_threshold = 5
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE

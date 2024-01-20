@@ -47,6 +47,7 @@
 	name = "swap hand"
 
 /obj/screen/swap_hand/Click()
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	usr.swap_hand()
 	return 1
 
@@ -63,6 +64,7 @@
 	screen_loc = ui_building
 
 /obj/screen/area_creator/Click()
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	if(usr.incapacitated() || (isobserver(usr) && !IsAdminGhost(usr)))
 		return TRUE
 	var/area/A = get_area(usr)
@@ -78,6 +80,7 @@
 	screen_loc = ui_language_menu
 
 /obj/screen/language_menu/Click()
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	var/mob/M = usr
 	var/datum/language_holder/H = M.get_language_holder()
 	H.open_language_menu(usr)
@@ -102,6 +105,7 @@
 
 	if(usr.attack_ui(slot_id))
 		usr.update_inv_hands()
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	return TRUE
 
 /obj/screen/inventory/MouseEntered()
@@ -187,6 +191,7 @@
 			I.Click(location, control, params)
 	else
 		user.swap_hand(held_index)
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	return TRUE
 
 
@@ -200,6 +205,7 @@
 /obj/screen/drop/Click()
 	if(usr.stat == CONSCIOUS)
 		usr.dropItemToGround(usr.get_active_held_item())
+		SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 
 /obj/screen/act_intent
 	name = "intent"
@@ -300,6 +306,7 @@
 		else
 			to_chat(C, "<span class='warning'>You don't have an oxygen tank!</span>")
 			return
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	C.update_action_buttons_icon()
 
 /obj/screen/mov_intent
@@ -311,6 +318,7 @@
 	toggle(usr)
 
 /obj/screen/mov_intent/update_icon_state()
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	switch(hud?.mymob?.m_intent)
 		if(MOVE_INTENT_WALK)
 			icon_state = "walking"
@@ -347,6 +355,7 @@
 
 /obj/screen/resist/Click()
 	if(isliving(usr))
+		SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 		var/mob/living/L = usr
 		L.resist()
 
@@ -378,6 +387,7 @@
 
 /obj/screen/throw_catch/Click()
 	if(iscarbon(usr))
+		SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 		var/mob/living/carbon/C = usr
 		C.toggle_throw_mode()
 
@@ -400,6 +410,7 @@
 	if (!choice)
 		return 1
 
+	SEND_SOUND(usr, sound("modular_badlands/code/modules/rp_misc/sound/interface/btnclick0[rand(1,2)].ogg",0,1,0,250))
 	return set_selected_zone(choice, usr)
 
 /obj/screen/zone_sel/MouseEntered(location, control, params)

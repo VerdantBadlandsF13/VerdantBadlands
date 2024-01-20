@@ -103,7 +103,7 @@
 	buildstackamount = 1
 
 /obj/structure/junk/micro
-	name = "rusting kitchenmachine"
+	name = "rusting kitchen machine"
 	desc = "Rusted solid, useless."
 	icon_state = "junk_micro"
 	buildstacktype = /obj/item/stack/crafting/electronicparts
@@ -162,6 +162,8 @@
 	name = "smashed optical machine"
 	desc = "A very broken, strange machine"
 	icon_state = "junk_disco"
+	buildstacktype = /obj/item/stack/crafting/electronicparts
+	buildstackamount = 1
 
 //Junk overlays
 /obj/effect/overlay/junk
@@ -388,9 +390,9 @@
 	new /obj/item/stack/sheet/mineral/wood(get_turf(src), drop_amount)
 
 
-/obj/structure/barricade/bars //FighterX2500 is this you?
+/obj/structure/barricade/bars
 	name = "metal bars"
-	desc = "Old, corroded metal bars. Ain't got a file on you, right?" //Description by Mr.Fagetti
+	desc = "Old, corroded metal bars. Ain't got a file on you, right?"
 	icon_state = "bars"
 	obj_integrity = 400
 	max_integrity = 400

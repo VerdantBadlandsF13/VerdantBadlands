@@ -545,7 +545,7 @@
 	if(!forced)
 		return
 	if(has_gravity(src))
-		playsound(src, 'modular_badlands/code/modules/rp_misc/sound/gore/fallsmash.ogg', 50, 1)
+		playsound(src, 'modular_badlands/code/modules/rp_misc/sound/gore/fallsmash.ogg', 100, 0)
 	faller.drop_all_held_items()
 
 /turf/proc/photograph(limit=20)

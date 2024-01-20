@@ -236,7 +236,7 @@
 	name = "URGENT!"
 	info = "A hastily written note has been scribbled here... <br><br> Please use the ore redemption machine in the cargo office for smelting. PLEASE! <br><br>--The Research Staff"
 
-////// Fortune 13
+////// General F13
 
 /obj/item/paper/bitterdrink
 	name = "Recipe for Bitterdrink"
@@ -247,8 +247,8 @@
 	Aquire Xander root,broc flowers,barrel cactii and bottles of Sarsaparilla.
 	<br>
 	Step 2
-	<br> 
-	Ferment Xander root,barrel cactii and broc flowers seperate. 
+	<br>
+	Ferment Xander root,barrel cactii and broc flowers seperate.
 	<br>
 	<b>Step 3
 	<br>

@@ -45,8 +45,8 @@
 
 /obj/item/projectile/bullet/c45/basketball
 	name = "miniaturised dunk'em brand basketball"
-	damage = 1
-	stamina = 5
+	damage = 2
+	stamina = 10
 
 /////////////////
 // .357 MAGNUM //
@@ -111,7 +111,7 @@
 
 /obj/item/projectile/bullet/needle/Initialize()
 	. = ..()
-	create_reagents(50, NO_REACT, NO_REAGENTS_VALUE)
+	create_reagents(10, INJECTABLE | DRAWABLE)
 
 /obj/item/projectile/bullet/needle/on_hit(atom/target, blocked = FALSE, skip = FALSE)
 	if(iscarbon(target))

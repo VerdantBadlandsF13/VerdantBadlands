@@ -9,6 +9,8 @@
 	var/mask_adjusted = 0
 	var/adjusted_flags = null
 	var/datum/beepsky_fashion/beepsky_fashion //the associated datum for applying this to a secbot
+	///Did we install a filter?
+	var/has_filter = FALSE
 
 /obj/item/clothing/mask/attack_self(mob/user)
 	if(CHECK_BITFIELD(clothing_flags, VOICEBOX_TOGGLABLE))
@@ -71,3 +73,11 @@
 	if(user)
 		user.wear_mask_update(src, toggle_off = mask_adjusted)
 		user.update_action_buttons_icon() //when mask is adjusted out, we update all buttons icon so the user's potential internal tank correctly shows as off.
+
+/**
+ * Proc called in lungs.dm to act if wearing a mask with filters, used to reduce the filters durability, return a changed gas mixture depending on the filter status
+ * Arguments:
+ * * breath - the gas mixture of the breather
+ */
+/obj/item/clothing/mask/proc/consume_filter(datum/gas_mixture/breath)
+	return breath

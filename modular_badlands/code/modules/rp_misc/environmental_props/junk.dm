@@ -138,7 +138,7 @@
 
 /obj/structure/badlands_props/medical_divider
 	name = "medical divider"
-	desc = "'A medical divider. Probably used to ensure privacy. Pervert."
+	desc = "A medical divider. Probably used to ensure privacy. Pervert."
 	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/modern_structures.dmi'
 	icon_state = "medical_divider_half"
 	density = FALSE
@@ -146,3 +146,45 @@
 /obj/structure/badlands_props/medical_divider/full
 	icon_state = "medical_divider_full"
 	density = TRUE
+
+//VB13 Billboards
+
+/obj/structure/billboard/vb
+	desc = "A weathered billboard."
+	icon = 'modular_badlands/code/modules/rp_misc/environmental_props/icons/bl_decals_wide.dmi'
+
+/obj/structure/billboard/vb/readmenace
+	name = "red menace billboard"
+	icon_state = "readmenace"
+
+/obj/structure/billboard/vb/oldantucker
+	name = "ol' dan tucker billboard"
+	icon_state = "oldantucker"
+
+/obj/structure/billboard/vb/slocumsjoe
+	name = "slocums joe billboard"
+	icon_state = "slocumsjoe"
+
+/obj/structure/billboard/vb/glazedholes
+	name = "glazed holes billboard"
+	icon_state = "glazedholes"
+
+/obj/structure/billboard/vb/superdupermart
+	name = "superdupermart billboard"
+	icon_state = "superdupermart"
+
+/obj/structure/billboard/vb/lovemybuns
+	name = "love my buns billboard"
+	icon_state = "lovemybuns"
+
+/obj/structure/billboard/vb/vaulttec
+	name = "vaultec billboard"
+	icon_state = "vaulttec"
+
+/obj/structure/billboard/vb/ratemed
+	name = "first rate medical billboard"
+	icon_state = "ratemed"
+
+/obj/structure/billboard/vb/gmtammo
+	name = "ammo depot billboard"
+	icon_state = "gmtammo"

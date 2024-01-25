@@ -40,8 +40,8 @@
 				wloss *= 2
 			adjust_thirst(-wloss)// Copy nutrition, in this regard.
 
-//		if(mobility_flags & MOBILITY_STAND && m_intent == MOVE_INTENT_RUN)
-		if(combat_flags & COMBAT_FLAG_SPRINT_ACTIVE)
+		if(mobility_flags & MOBILITY_STAND && m_intent == MOVE_INTENT_RUN)
+//		if(combat_flags & COMBAT_FLAG_SPRINT_ACTIVE)
 			var/trip_chance
 			var/turf/T = get_turf(NewLoc)
 			for(var/obj/item/I in T.contents)

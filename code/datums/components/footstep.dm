@@ -102,7 +102,7 @@
 	if(!turf_footstep)
 		return
 	playsound(T, pick(footstep_sounds[turf_footstep][1]), footstep_sounds[turf_footstep][2] * volume, TRUE, footstep_sounds[turf_footstep][3] + e_range)
-	//show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
+	show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
 
 /datum/component/footstep/proc/play_humanstep()
 	var/turf/open/T = prepare_step()
@@ -118,26 +118,26 @@
 			if(FOOTSTEP_MOB_CLAW)
 				turf_footstep = T.clawfootstep
 				L = GLOB.clawfootstep
-				//show_sound_effect(T, src)
+				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_BAREFOOT)
 				turf_footstep = T.barefootstep
 				L = GLOB.barefootstep
-				//show_sound_effect(T, src)
+				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_HEAVY)
 				turf_footstep = T.heavyfootstep
 				L = GLOB.heavyfootstep
-				//show_sound_effect(T, soundicon = SFX_ICON_JAGGED)
+				show_sound_effect(T, soundicon = SFX_ICON_JAGGED)
 			if(FOOTSTEP_MOB_SHOE)
 				turf_footstep = T.footstep
 				L = GLOB.footstep
-				//show_sound_effect(T, src)
+				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_SLIME)
 				playsound(T, 'sound/effects/footstep/slime1.ogg', 50 * volume)
-				//show_sound_effect(T, soundicon = SFX_ICON_SMALL)
+				show_sound_effect(T, soundicon = SFX_ICON_SMALL)
 				return
 			if(FOOTSTEP_MOB_CRAWL)
 				playsound(T, 'sound/effects/footstep/crawl1.ogg', 50 * volume)
-				//show_sound_effect(T, soundicon = SFX_ICON_SMALL)
+				show_sound_effect(T, soundicon = SFX_ICON_SMALL)
 				return
 		special = TRUE
 	else
@@ -163,10 +163,10 @@
 	var/powerArmor = (P.wear_suit && istype(P.wear_suit,/obj/item/clothing/suit/armored/f13/power_armor))
 	if(powerArmor)
 		if(P.m_intent == MOVE_INTENT_WALK)
-			//show_sound_effect(T)
+			show_sound_effect(T)
 			if(prob(25))
 				playsound(T, pick(powerArmorSounds), 25, TRUE)
 				return
 		else
 			playsound(T, pick(powerArmorSounds), 50, TRUE)
-			//show_sound_effect(T, soundicon = SFX_ICON_JAGGED)
+			show_sound_effect(T, soundicon = SFX_ICON_JAGGED)

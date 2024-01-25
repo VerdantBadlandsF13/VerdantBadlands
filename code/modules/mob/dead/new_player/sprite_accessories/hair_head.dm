@@ -358,7 +358,7 @@
 /datum/sprite_accessory/hair/halfshaved
 	name = "Half-shaved"
 	icon_state = "hair_halfshaved"
-	
+
 /datum/sprite_accessory/hair/halfshaved2
 	name = "Half-shaved 2"
 	icon_state = "hair_halfshave2"
@@ -832,3 +832,11 @@
 /datum/sprite_accessory/hair/ziegler
 	name = "Ziegler"
 	icon_state = "hair_ziegler"
+
+/datum/sprite_accessory/hair/hair_lopside
+	name = "Lopsided"
+	icon_state = "hair_lopside"
+
+/datum/sprite_accessory/hair/hair_unkept
+	name = "Unkept"
+	icon_state = "hair_unkept"

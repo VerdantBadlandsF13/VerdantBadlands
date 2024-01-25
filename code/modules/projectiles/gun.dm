@@ -306,22 +306,22 @@ ATTACHMENTS
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>[dryfire_text]</span>")
 	playsound(src, dryfire_sound, 30, 1)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_jammed(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon is jammed! Alt-click to clear it!</span>")
 	playsound(src, dryfire_sound, 30, 1)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_broken(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>This weapon is broken!</span>")
 	playsound(src, dryfire_sound, 30, 1)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_safe(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon has its safety on! Ctrl-click to toggle.</span>")
 	playsound(src, dryfire_sound, 30, 1)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	if(recoil)
@@ -333,10 +333,10 @@ ATTACHMENTS
 
 	if(suppressed)
 		playsound(user, fire_sound, 10, 1)
-		//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+		show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 	else
 		playsound(user, fire_sound, 50, 1)
-		//show_sound_effect(src, soundicon = SFX_ICON_JAGGED)
+		show_sound_effect(src, soundicon = SFX_ICON_JAGGED)
 		if(message)
 			if(pointblank)
 				user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
@@ -1007,7 +1007,7 @@ ATTACHMENTS
 	..()
 
 /obj/item/gun/proc/zoom(mob/living/user, forced_zoom)
-	var/datum/hud/hud = user.hud_used
+//	var/datum/hud/hud = user.hud_used
 
 	if(!(user?.client))
 		return
@@ -1020,7 +1020,7 @@ ATTACHMENTS
 		zoomed = !zoomed
 
 	if(zoomed)//if we need to be zoomed in
-		hud.show_hud(version = 3)
+//		hud.show_hud(version = 3)
 		user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		var/_x = 0
 		var/_y = 0
@@ -1041,7 +1041,7 @@ ATTACHMENTS
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
-		hud.show_hud(version = 1)
+//		hud.show_hud(version = 1)
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0

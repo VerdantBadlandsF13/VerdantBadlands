@@ -84,3 +84,8 @@
 
 #define BACKGROUND_AMBIENCE list('sound/f13ambience/distant_combat/artillery.ogg','sound/f13ambience/distant_combat/battle_1.ogg',\
 	'sound/f13ambience/distant_combat/battle_2.ogg', 'sound/f13ambience/distant_combat/battle_3.ogg')
+
+// Not quite 'sound', but used for special things relating to it.
+#define SFX_ICON_SMALL "small"
+#define SFX_ICON_FULL "default"
+#define SFX_ICON_JAGGED "boom"

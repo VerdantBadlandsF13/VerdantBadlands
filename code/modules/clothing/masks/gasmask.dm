@@ -1,8 +1,8 @@
 /obj/item/clothing/mask/gas
 	name = "gas mask"
-	desc = "A face-covering mask that can be connected to an air supply. While good for concealing your identity, it isn't good for blocking gas flow." //More accurate
+	desc = "A face-covering mask that can be connected to an air supply. Accepts multiple types of filter cartridges."
 	icon_state = "gas_alt"
-	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | ALLOWINTERNALS
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | ALLOWINTERNALS | GAS_FILTERING
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
 	w_class = WEIGHT_CLASS_NORMAL
 	item_state = "gas_alt"
@@ -11,6 +11,88 @@
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	resistance_flags = NONE
 	mutantrace_variation = STYLE_MUZZLE
+	///Max numbers of installable filters
+	var/max_filters = 1
+	///List to keep track of each filter
+	var/list/gas_filters
+	///Type of filter that spawns on roundstart
+	var/starting_filter_type = /obj/item/gas_filter
+
+/obj/item/clothing/mask/gas/Initialize(mapload)
+	. = ..()
+	if(!max_filters || !starting_filter_type)
+		return
+
+	for(var/i in 1 to max_filters)
+		var/obj/item/gas_filter/inserted_filter = new starting_filter_type(src)
+		LAZYADD(gas_filters, inserted_filter)
+	has_filter = TRUE
+
+/obj/item/clothing/mask/gas/Destroy()
+	QDEL_LAZYLIST(gas_filters)
+	return..()
+
+/obj/item/clothing/mask/gas/examine(mob/user)
+	. = ..()
+	if(max_filters > 0)
+		. += "<span class='notice'>[src] has [max_filters] slot\s for filters.</span>"
+	if(LAZYLEN(gas_filters) > 0)
+		. += "<span class='notice'>Currently there [LAZYLEN(gas_filters) == 1 ? "is" : "are"] [LAZYLEN(gas_filters)] filter\s with [get_filter_durability()]% durability.</span>"
+
+/obj/item/clothing/mask/gas/attackby(obj/item/tool, mob/user)
+	if(!istype(tool, /obj/item/gas_filter))
+		return ..()
+	if(LAZYLEN(gas_filters) >= max_filters)
+		return ..()
+	if(!user.transferItemToLoc(tool, src))
+		return ..()
+	LAZYADD(gas_filters, tool)
+	has_filter = TRUE
+	return TRUE
+
+/obj/item/clothing/mask/gas/attack_self(mob/user, list/modifiers)
+	if(!has_filter || !max_filters)
+		return
+	for(var/i in 1 to max_filters)
+		var/obj/item/gas_filter/filter = locate() in src
+		if(!filter)
+			continue
+		user.put_in_hands(filter)
+		LAZYREMOVE(gas_filters, filter)
+	if(LAZYLEN(gas_filters) <= 0)
+		has_filter = FALSE
+	return
+
+///Check _masks.dm for this one
+/obj/item/clothing/mask/gas/consume_filter(datum/gas_mixture/breath)
+	if(LAZYLEN(gas_filters) <= 0 || max_filters == 0)
+		return breath
+	var/obj/item/gas_filter/gas_filter = pick(gas_filters)
+	var/datum/gas_mixture/filtered_breath = gas_filter.reduce_filter_status(breath)
+	if(gas_filter.filter_status <= 0)
+		LAZYREMOVE(gas_filters, gas_filter)
+		qdel(gas_filter)
+	if(LAZYLEN(gas_filters) <= 0)
+		has_filter = FALSE
+	return filtered_breath
+
+/**
+ * Getter for overall filter durability, takes into consideration all filters filter_status
+ */
+/obj/item/clothing/mask/gas/proc/get_filter_durability()
+	var/max_filters_durability = LAZYLEN(gas_filters) * 100
+	var/current_filters_durability
+	for(var/obj/item/gas_filter/gas_filter as anything in gas_filters)
+		current_filters_durability += gas_filter.filter_status
+	var/durability = (current_filters_durability / max_filters_durability) * 100
+	return durability
+
+
+/*
+EVERYTHING ELSE
+*/
+
+
 
 /obj/item/clothing/mask/gas/enclave
 	name = "gas mask mk 2"

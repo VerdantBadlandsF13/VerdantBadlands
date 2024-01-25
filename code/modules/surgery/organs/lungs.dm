@@ -353,6 +353,16 @@
 			SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "smell")
 
 		handle_breath_temperature(breath, H)
+
+	// Indicates if there are moles of gas in the breath.
+	var/has_moles = breath.total_moles() != 0
+	// Check for moles of gas and handle partial pressures / special conditions.
+	if(has_moles)
+		// Breath has more than 0 moles of gas.
+		// Route gases through mask filter if breather is wearing one.
+		if(istype(H.wear_mask) && (H.wear_mask.clothing_flags & GAS_FILTERING) && H.wear_mask.has_filter)
+			breath = H.wear_mask.consume_filter(breath)
+
 	return TRUE
 
 

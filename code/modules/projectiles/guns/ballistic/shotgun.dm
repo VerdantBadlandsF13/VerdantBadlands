@@ -395,17 +395,48 @@
 
 /obj/item/gun/ballistic/automatic/shotgun/pancor
 	name = "Pancor Jackhammer"
-	desc = "The Jackhammer, despite its name, is an easy to control shotgun, even when fired on full automatic. The popular bullpup design, which places the magazine behind the trigger, makes the weapon well balanced & easy to control." //Nod to Fallout 2 in the description :)
+	desc = "The Jackhammer, despite its name, is an easy to control shotgun, even when fired on full automatic. \
+	The popular bullpup design, which places the magazine behind the trigger, makes the weapon well balanced & easy to control. \
+	As an aside, it's an absolute pain to reload."
 	icon_state = "pancor"
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	is_automatic = TRUE
-	autofire_shot_delay = 3.55
-	fire_delay = 2.85
+	autofire_shot_delay = 2
+	fire_delay = 1.50
 	recoil = 1.35
 	automatic = 1
-	pb_knockback = 1
+	pb_knockback = 2
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
+	var/locked_mag = TRUE//Disable to return standard gameplay. For deathsquad, primarily.
+
+/obj/item/gun/ballistic/automatic/shotgun/pancor/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>You must use a screwdriver to remove the magazine anchor pin.</span>"
+
+/obj/item/gun/ballistic/automatic/shotgun/pancor/attack_self(mob/living/user)
+	if(locked_mag)
+		to_chat(user, "<span class='notice'>The magazine cannot be removed without first handling the anchoring pin.</span>")
+		return
+	..()
+
+/obj/item/gun/ballistic/automatic/shotgun/pancor/attackby(obj/item/A, mob/user, params)
+	..()
+
+	if(istype(A, /obj/item/screwdriver) && locked_mag)
+		magazine.forceMove(drop_location())
+		user.put_in_hands(magazine)
+		magazine.update_icon()
+		magazine = null
+
+		if(magazine.ammo_count())
+			playsound(src, 'sound/weapons/gun_magazine_remove_full.ogg', 70, 1)
+		else
+			playsound(src, "gun_remove_empty_magazine", 70, 1)
+
+		to_chat(user, "<span class='notice'>You remove the anchoring pin, allowing the magazine to fall free.</span>")
+
+		update_icon()

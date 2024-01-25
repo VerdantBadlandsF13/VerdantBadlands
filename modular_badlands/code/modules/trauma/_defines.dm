@@ -11,7 +11,9 @@ Houses the defines required, to keep this modular.
 		handle_pain()
 	. = ..()
 
-/mob/living/proc/feels_pain()
+/mob/living/proc/feels_pain(mob/living/M)
+	if(isrobotic(M))
+		return FALSE
 	return TRUE
 
 /mob/living/silicon/feels_pain()

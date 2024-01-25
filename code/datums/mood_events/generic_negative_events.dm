@@ -1,7 +1,7 @@
 
 
 /datum/mood_event/handcuffed
-	description = "<span class='warning'>I guess my antics have finally caught up with me.</span>\n"
+	description = "<span class='warning'>I've been cuffed against my will!</span>\n"
 	mood_change = -1
 
 /datum/mood_event/broken_vow //Used for when mimes break their vow of silence

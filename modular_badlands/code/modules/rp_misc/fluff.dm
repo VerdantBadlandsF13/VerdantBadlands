@@ -6,6 +6,8 @@
 		playsound(src, mask_sound, 50, 1)
 
 /mob/living/carbon/human/proc/handle_deathdoor_sound()
+	if(isrobotic(src))
+		return
 	var/deathdoor_sound = "modular_badlands/code/modules/rp_misc/sound/gore/death/deadgasp[rand(1,5)].ogg"
 	playsound(src, deathdoor_sound, 50, 1)
 
@@ -47,6 +49,8 @@ Ignore it, if possible.
 // Audio for breathing, when stamina is low.
 // TODO: Extend breathing audio to standard states, not just low stamina?
 /mob/living/carbon/proc/handle_stamina_sounds(mob/living/M)
+	if(isrobotic(src))
+		return
 	if(world.time < last_breath)
 		return
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
@@ -82,6 +86,8 @@ Easier to have it here.
 */
 
 /mob/living/carbon/proc/handle_incineration(mob/living/M)
+	if(isrobotic(src))
+		return
 	var/incineration_sound
 	if(src.gender == FEMALE)
 		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
@@ -323,7 +329,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifedrop.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metaldrop.ogg", 95, 0)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 // Grabbing.
 /obj/item/pickup()
@@ -350,7 +356,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 0)
-	//show_sound_effect(src, soundicon = SFX_ICON_SMALL)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/reagent_containers/food/drinks/pickup()
 	. = ..()

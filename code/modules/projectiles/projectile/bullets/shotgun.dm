@@ -26,7 +26,6 @@
 	bare_wound_bonus = 120
 	sharpness = SHARP_NONE
 	embedding = null
-	hitsound = "sound/effects/wounds/crack[rand(1,2)].ogg"
 
 ////////////////////
 //	12g BUCK	  //

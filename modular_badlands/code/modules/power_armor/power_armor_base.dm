@@ -36,10 +36,10 @@
 	armor_block_chance = 100// Chance for the power armor to ignore a low AP projectile.
 	melee_block_threshold = 42// If an object's force is lower than this, the PA ignores it.
 	dmg_block_threshold = 42// Damage from ANYTHING at or above this value bypasses PA protection.
+	armor_block_threshold = 0.8 //projectiles with AP below this will be ignored.
 	durability_threshold = 15
 	var/emped = 0
 	var/requires_training = TRUE
-	var/armor_block_threshold = 0.6 //projectiles with AP below this will be ignored.
 	slowdown = 4
 
 	actions_types = list(/datum/action/item_action/toggle/pa_cell, /datum/action/item_action/toggle/pa_toggle)

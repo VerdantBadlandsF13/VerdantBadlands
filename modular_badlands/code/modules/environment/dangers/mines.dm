@@ -60,12 +60,13 @@ Landmines used by players, and pre-spawned.
 /obj/item/grenade/f13/mine/attackby(obj/item/I, mob/user, params)
 	..()
 
-/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/S)
+/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/I)
+	. = ..()
 	if(!armed)
 		return
 	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
-	if(S.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
-		to_chat(user, "<span class='notice'>You carefully destroy the detonator of the mine!</span>")
+	if(I.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
+		to_chat(user, "<span class='notice'>You carefully discard the detonator of the mine!</span>")
 		qdel(src)
 	else
 		triggermine(user)

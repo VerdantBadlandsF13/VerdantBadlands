@@ -7,6 +7,16 @@
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
 	slowdown = 0.1
 
+// T-45D - RAIDER
+/obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+	name = "crudely salvaged T-45d helmet"
+	desc = "It's a salvaged T-45d power armor helmet, fitted with rebar and gutted of most internal components."
+	icon_state = "raiderpa_helm"
+	item_state = "raiderpa_helm"
+	armor = list("tier" = 7, "energy" = 15, "bomb" = 45, "bio" = 45, "rad" = 40, "fire" = 40, "acid" = 35, "wound" = 30)
+	slowdown = 0.3
+	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
+
 // T-45D
 /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d
 	name = "salvaged T-45d helmet"
@@ -14,7 +24,7 @@
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
 	armor = list("tier" = 8, "melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 15, "bomb" = 45, "bio" = 65, "rad" = 40, "fire" = 70, "acid" = 35, "wound" = 40)
-	slowdown = 0.3
+	slowdown = 0.2
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
 
 // T-51B
@@ -24,7 +34,7 @@
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
 	armor = list("tier" = 9, "melee" = 70, "bullet" = 70, "laser" = 60, "energy" = 20, "bomb" = 45, "bio" = 70, "rad" = 50, "fire" = 75, "acid" = 35, "wound" = 40)
-	slowdown = 0.2
+	slowdown = 0.3
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
 
 // T-60A
@@ -34,7 +44,7 @@
 	icon_state = "t60helmet0"
 	item_state = "t60helmet0"
 	armor = list("tier" = 10, "melee" = 75, "bullet" = 70, "laser" = 65, "energy" = 30, "bomb" = 55, "bio" = 70, "rad" = 60, "fire" = 80, "acid" = 35, "wound" = 45)
-	slowdown = 0.1
+	slowdown = 0.4
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR|HIDESNOUT
 
 //////////////////////////
@@ -55,6 +65,15 @@
 	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes, such as t45b and so on. \
 	Now begone, report this to coders. NOW!"
 	slowdown = 4
+
+// T-45D - RAIDER
+/obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
+	name = "crudely salvaged T-45d power armor"
+	desc = "A set of T-45d power armor, though the servomotors and all valuable components have long since been stripped out of it."
+	icon_state = "raider_salvaged"
+	item_state = "raider_salvaged"
+	armor = list("tier" = 7, "energy" = 15, "bomb" = 45, "bio" = 45, "rad" = 40, "fire" = 40, "acid" = 35, "wound" = 30)
+	slowdown = 3
 
 // T-45D
 /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d

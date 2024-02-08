@@ -2,7 +2,7 @@
 Horrors.
 Generally stuff we use in dark caverns, that you could imagine come from FEV.
 Vermont forest creatures with a temporary sprite from you know where.
-Don't use these.
+To be removed once we get proper sprites.
 */
 
 //Base Horror

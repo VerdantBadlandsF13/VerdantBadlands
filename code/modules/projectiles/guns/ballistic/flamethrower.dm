@@ -112,7 +112,7 @@
 	casing_ejector = FALSE
 	item_flags = SLOWS_WHILE_IN_HAND
 	can_jam = 0
-	special_weapon = TRUE
+	condition_mul = 2
 	var/obj/item/m2flamethrowertank/ammo_pack
 
 /obj/item/gun/ballistic/m2flamethrower/Initialize()

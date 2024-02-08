@@ -250,8 +250,8 @@
 	always_available = FALSE
 	granting_trait = list(list(TRAIT_EXPLOSIVE_CRAFTING, TRAIT_ADVANCED_EXPLOSIVE_CRAFTING))
 
-/datum/crafting_recipe/weakrocket
-	name = "Low-yield HE rocket"
+/datum/crafting_recipe/rocket
+	name = "High Explosive rocket"
 	category = CAT_EXPLOSIVE
 	result = /obj/item/ammo_casing/caseless/rocket
 	reqs = list(
@@ -266,14 +266,15 @@
 	granting_trait = list(list(TRAIT_EXPLOSIVE_CRAFTING, TRAIT_ADVANCED_EXPLOSIVE_CRAFTING))
 
 /datum/crafting_recipe/strongrocket
-	name = "High-yield HE rocket"
+	name = "Thermobaric rocket"
 	category = CAT_EXPLOSIVE
-	result = /obj/item/ammo_casing/caseless/rocket/big
+	result = /obj/item/ammo_casing/caseless/rocket/thermobaric
 	reqs = list(
 		/obj/item/rocketshell = 1,
 		/obj/item/stack/crafting/electronicparts = 5,
 		/obj/item/stack/sheet/prewar = 5,
 		/obj/item/stack/ore/blackpowder = 15,
+		/datum/reagent/phlogiston = 35
 	)
 	tools = list(TOOL_AWORKBENCH)
 	time = 45

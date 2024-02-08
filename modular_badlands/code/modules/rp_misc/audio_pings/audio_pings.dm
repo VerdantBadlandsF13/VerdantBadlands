@@ -36,7 +36,7 @@ These can be found in 'defines\sound.dm', L88 onwards.
 	I.plane = CHAT_PLANE
 	I.layer = CHAT_LAYER
 
-	var/distance = GET_DIST_EUCLIDEAN(T, M)// + 1
+	var/distance = get_dist(T, M)// + 1
 	if(distance >= 6)
 		I.pixel_x = rand(0, 128)
 		I.pixel_y = rand(0, 128)

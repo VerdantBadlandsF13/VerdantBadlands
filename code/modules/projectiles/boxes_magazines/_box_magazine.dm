@@ -21,7 +21,7 @@
 	var/multiload = 1
 	var/unloadable = FALSE
 	var/start_empty = 0
-	var/start_ammo_count
+	var/start_ammo_count = 0
 	var/randomize_ammo_count = TRUE
 	var/list/bullet_cost
 	var/list/base_cost// override this one as well if you override bullet_cost

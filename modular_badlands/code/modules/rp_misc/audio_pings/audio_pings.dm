@@ -36,6 +36,7 @@ These can be found in 'defines\sound.dm', L88 onwards.
 	I.plane = CHAT_PLANE
 	I.layer = CHAT_LAYER
 
+/*
 	var/distance = get_dist(T, M)// + 1
 	if(distance >= 6)
 		I.pixel_x = rand(0, 128)
@@ -49,5 +50,6 @@ These can be found in 'defines\sound.dm', L88 onwards.
 	else
 		I.pixel_x = rand(0, 12)
 		I.pixel_y = rand(0, 12)
+*/
 
 	flick_overlay(I, clients_to_show, 6)

@@ -51,6 +51,13 @@
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = 6000, /datum/material/blackpowder = 1000)
 
+/obj/item/ammo_box/m22/improv
+	name = "bag with reloaded .22lr bullets"
+	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
+	icon_state = "improvshotbag"
+	ammo_type = /obj/item/ammo_casing/a22/junk
+	multiple_sprites = 1
+
 //9mm and .38
 /obj/item/ammo_box/c9mm
 	name = "ammo box (9mm)"
@@ -66,7 +73,8 @@
 	name = "bag with reloaded 9mm bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
-	multiple_sprites = 3
+	ammo_type = /obj/item/ammo_casing/c9mm/junk
+	multiple_sprites = 1
 
 /obj/item/ammo_box/c38box
 	name = "ammo box (.38)"
@@ -82,7 +90,8 @@
 	name = "bag with reloaded .38 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
-	multiple_sprites = 3
+	ammo_type = /obj/item/ammo_casing/c38/junk
+	multiple_sprites = 1
 
 //10mm
 /obj/item/ammo_box/c10mm
@@ -99,7 +108,8 @@
 	name = "bag with reloaded 10mm bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
-	multiple_sprites = 3
+	ammo_type = /obj/item/ammo_casing/c10mm/junk
+	multiple_sprites = 1
 
 //.357 Magnum
 /obj/item/ammo_box/a357box
@@ -117,7 +127,8 @@
 	name = "bag with reloaded .357 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
-	multiple_sprites = 3
+	ammo_type = /obj/item/ammo_casing/a357/junk
+	multiple_sprites = 1
 
 //.44 Magnum
 /obj/item/ammo_box/m44box
@@ -135,6 +146,7 @@
 	name = "bag with reloaded .44 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
+	ammo_type = /obj/item/ammo_casing/m44/junk
 	multiple_sprites = 1
 
 
@@ -153,6 +165,7 @@
 	name = "bag with reloaded .45 ACP bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
+	ammo_type = /obj/item/ammo_casing/c45/junk
 	multiple_sprites = 1
 
 //.50 AE - PLAYERS SHOULD NEVER BE ABLE TO SEE THIS OUTSIDE OF ADMIN INTERVENTION.
@@ -166,12 +179,6 @@
 	max_ammo = 30
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = 15000, /datum/material/blackpowder = 1200)
-
-/obj/item/ammo_box/m50box/improvised
-	name = "bag with reloaded .50 AE"
-	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
-	icon_state = "improvshotbag"
-	multiple_sprites = 1
 
 //.45-70 Gov't
 /obj/item/ammo_box/c4570box
@@ -214,12 +221,12 @@
 	ammo_type = /obj/item/ammo_casing/a556/a223
 	custom_materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1000)
 
-/obj/item/ammo_box/a556/sport/improvised
-	name = "bag with reloaded .223 bullets"
+/obj/item/ammo_box/a556/improvised
+	name = "bag with reloaded 5.56 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
-	multiple_sprites = 3
 	icon_state = "improvshotbag"
-
+	ammo_type = /obj/item/ammo_casing/a556/junk
+	multiple_sprites = 1
 
 //7.62x51, .308 Winchester
 /obj/item/ammo_box/a308box
@@ -243,6 +250,13 @@
 	max_ammo = 30
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1000)
+
+/obj/item/ammo_box/a762box/improvised
+	name = "bag with reloaded 7.62x51 bullets"
+	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
+	icon_state = "improvshotbag"
+	ammo_type = /obj/item/ammo_casing/a556/junk
+	multiple_sprites = 1
 
 //.50 MG and 14mm
 /obj/item/ammo_box/a50MGbox
@@ -324,7 +338,7 @@
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "38"
 	caliber = "38"
-	ammo_type = /obj/item/ammo_casing/c38
+	ammo_type = /obj/item/ammo_casing/c38/junk
 	max_ammo = 6
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000)
@@ -339,7 +353,7 @@
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "10mm2"
 	caliber = "10mm"
-	ammo_type = /obj/item/ammo_casing/c10mm
+	ammo_type = /obj/item/ammo_casing/c10mm/junk
 	max_ammo = 12
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000)
@@ -353,7 +367,7 @@
 	name = "speed loader (.357)"
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "357"
-	ammo_type = /obj/item/ammo_casing/a357
+	ammo_type = /obj/item/ammo_casing/a357/junk
 	caliber = "357"
 	max_ammo = 6
 	multiple_sprites = 1
@@ -368,7 +382,7 @@
 	name = "speed loader (.44)"
 	desc = "Designed to quickly reload revolvers."
 	icon_state = "44"
-	ammo_type = /obj/item/ammo_casing/m44
+	ammo_type = /obj/item/ammo_casing/m44/junk
 	max_ammo = 6
 	caliber = "44"
 	multiple_sprites = 1
@@ -382,7 +396,7 @@
 	desc = "Designed to quickly reload repeaters."
 	icon_state = "44tube"
 	caliber = "44"
-	ammo_type = /obj/item/ammo_casing/m44
+	ammo_type = /obj/item/ammo_casing/m44/junk
 	max_ammo = 12
 
 /obj/item/ammo_box/tube/m44/empty
@@ -395,7 +409,7 @@
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "10mm"
 	caliber = ".45"
-	ammo_type = /obj/item/ammo_casing/c45
+	ammo_type = /obj/item/ammo_casing/c45/junk
 	max_ammo = 7
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000)
@@ -486,7 +500,7 @@
 	desc = "A stripper clip."
 	icon_state = "762"
 	caliber = "a762"
-	ammo_type = /obj/item/ammo_casing/a762
+	ammo_type = /obj/item/ammo_casing/a762/junk
 	max_ammo = 5
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000)
@@ -519,7 +533,7 @@
 	name = "stripper clip (5.56x45mm)"
 	desc = "A stripper clip."
 	icon_state = "762"
-	ammo_type = /obj/item/ammo_casing/a556
+	ammo_type = /obj/item/ammo_casing/a556/junk
 	max_ammo = 5
 	multiple_sprites = 1
 	custom_materials = list(/datum/material/iron = 2000)

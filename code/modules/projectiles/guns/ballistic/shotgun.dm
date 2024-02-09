@@ -411,32 +411,3 @@
 	pb_knockback = 2
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	var/locked_mag = TRUE//Disable to return standard gameplay. For deathsquad, primarily.
-
-/obj/item/gun/ballistic/automatic/shotgun/pancor/examine(mob/user)
-	. = ..()
-	. += "<span class='notice'>You must use a screwdriver to remove the magazine anchor pin.</span>"
-
-/obj/item/gun/ballistic/automatic/shotgun/pancor/attack_self(mob/living/user)
-	if(locked_mag)
-		to_chat(user, "<span class='notice'>The magazine cannot be removed without first handling the anchoring pin.</span>")
-		return
-	..()
-
-/obj/item/gun/ballistic/automatic/shotgun/pancor/attackby(obj/item/A, mob/user, params)
-	..()
-
-	if(istype(A, /obj/item/screwdriver) && locked_mag)
-		magazine.forceMove(drop_location())
-		user.put_in_hands(magazine)
-		magazine.update_icon()
-		magazine = null
-
-		if(magazine.ammo_count())
-			playsound(src, 'sound/weapons/gun_magazine_remove_full.ogg', 70, 1)
-		else
-			playsound(src, "gun_remove_empty_magazine", 70, 1)
-
-		to_chat(user, "<span class='notice'>You remove the anchoring pin, allowing the magazine to fall free.</span>")
-
-		update_icon()

@@ -49,9 +49,9 @@
 // Linearmor is linear (so 100 armor is twice 50). Linearmor will never equal 100 armor.
 // If a mob were to have 100 health, each point of linearmor would be the equivalent to +1 effective health.
 // For example, 100 linearmor = 200 effective health or 50% damage reduction.
-	src.melee = 100*linemelee/(abs(linemelee)+100) || melee
-	src.bullet = 100*linebullet/(abs(linebullet)+100) || bullet
-	src.laser = 100*linelaser/(abs(linelaser)+100) || laser
+	src.melee = round(100*linemelee/(abs(linemelee)+100) || melee)
+	src.bullet = round(100*linebullet/(abs(linebullet)+100) || bullet)
+	src.laser = round(100*linelaser/(abs(linelaser)+100) || laser)
 
 	src.tier = 0
 	tag = ARMORID

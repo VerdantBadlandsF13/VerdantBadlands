@@ -11,6 +11,15 @@
 	body_parts_covered = CHEST|GROIN
 	armor = list("tier" = 3, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
+/obj/item/clothing/suit/armored/f13/medium/outlander
+	name = "outlander's cloak"
+	desc = "An incredibly heavy cloak, backed by kevlar weave, pouches and an old combat vest."
+	icon_state = "cloak_armored"
+	item_state = "cloak_armored"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets
+	body_parts_covered = CHEST
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /obj/item/clothing/suit/armored/f13/medium/vestarmor/finlay
 	name = "ancient pattern riot overcoat"
 	desc = "A customized and well-worn suit of pre-war riot gear, including overcoat. Reeks of whiskey or some other drinker's favourite. <br>\
@@ -52,7 +61,7 @@
 /obj/item/clothing/suit/armored/f13/medium/combat
 	name = "combat armor"
 	desc = "Military grade pre-war combat armor."
-	icon_state = "black_combat_armor"
+	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	slowdown = 0.3
 	body_parts_covered = CHEST|GROIN|LEGS
@@ -61,7 +70,7 @@
 /obj/item/clothing/suit/armored/f13/medium/combat/mk2
 	name = "reinforced combat armor"
 	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates."
-	icon_state = "black_combat_armor_mk2"
+	icon_state = "combat_armor_mk2"
 	item_state = "combat_armor_mk2"
 	slowdown = 0.35
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS

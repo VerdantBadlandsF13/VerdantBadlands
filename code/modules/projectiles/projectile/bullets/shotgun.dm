@@ -61,12 +61,14 @@
 ////////////////////
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised
+	name = "metal shrapnel"
 	damage = 4
 	wound_bonus = 62
 	bare_wound_bonus = 90
 	wound_falloff_tile = -15.5
 	tile_dropoff = 2
 	tile_dropoff_s = 2
+	embedding = list(embed_chance=25, fall_chance=60, jostle_chance=3, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.2, pain_mult=2, jostle_pain_mult=1, rip_time=25, projectile_payload = /obj/item/shrapnel)
 
 /obj/item/projectile/bullet/pellet/shotgun_improvised/Initialize()
 	. = ..()

@@ -276,9 +276,6 @@
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 
-/obj/item/clothing/head/helmet/f13/combat/dark
-	color = "#302E2E" // Dark Grey
-
 /obj/item/clothing/head/helmet/f13/combat/Initialize()
 	. = ..()
 	AddComponent(/datum/component/spraycan_paintable)

@@ -27,7 +27,6 @@ CTM - Contaminated ammunition. Identical to junk rounds, but has a very slight c
 	bare_wound_bonus = 24
 
 /obj/item/projectile/bullet/a556/junk
-	name = "hand loaded 5.56 bullet"
 	pixels_per_second = TILES_TO_PIXELS(13)
 	armour_penetration = 0.15
 
@@ -51,7 +50,6 @@ CTM - Contaminated ammunition. Identical to junk rounds, but has a very slight c
 	bare_wound_bonus = 24
 
 /obj/item/projectile/bullet/a762/junk
-	name = "hand loaded 7.62 bullet"
 	pixels_per_second = TILES_TO_PIXELS(13)
 	armour_penetration = 0.25
 

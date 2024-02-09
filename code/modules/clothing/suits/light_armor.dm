@@ -72,6 +72,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	body_parts_covered = CHEST|GROIN|LEG_LEFT|ARM_LEFT
+	armor = list("tier" = 2, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 ////////////////
 // ARMOR KITS //

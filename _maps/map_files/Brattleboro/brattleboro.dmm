@@ -2318,10 +2318,6 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
-"bbx" = (
-/obj/item/clothing/suit/armored/f13/light/badlands,
-/turf/open/floor/f13/wood,
-/area/f13/village)
 "bby" = (
 /obj/structure/table/wood,
 /obj/item/toner,
@@ -5957,15 +5953,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/village)
-"dwE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/armored/f13/light/badlands,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid";
-	name = "store floor"
-	},
-/area/f13/building/mall)
 "dwN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small/broken{
@@ -9843,7 +9830,7 @@
 /area/f13/wasteland)
 "fUq" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/f13/heavy/raidermetal,
+/obj/item/clothing/suit/armored/f13/medium/scrapchest,
 /obj/item/clothing/under/f13/raiderharness,
 /turf/open/floor/f13{
 	icon_state = "cafeteria"
@@ -11986,10 +11973,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/building/mall)
-"hmt" = (
-/turf/closed/wall/f13/supermart,
-/turf/closed/wall/f13/supermart,
-/area/f13/village)
 "hmL" = (
 /obj/machinery/door/unpowered/securedoor/gmb_door,
 /turf/open/indestructible/ground/bl/outside/gravel,
@@ -15148,7 +15131,7 @@
 /area/f13/village)
 "jua" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clothing/suit/armored/f13/medium/slam,
+/obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat,
 /obj/item/clothing/head/helmet/f13/raider/arclight,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
@@ -18172,7 +18155,6 @@
 "lrA" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/under/f13/raider_leather,
-/obj/item/clothing/suit/armored/f13/light/badlands,
 /turf/open/floor/f13{
 	icon_state = "cafeteria"
 	},
@@ -20141,18 +20123,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"mNo" = (
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/turf/closed/wall/f13/supermart,
-/turf/closed/wall/f13/supermart,
-/area/f13/village)
 "mNC" = (
 /obj/structure/table/wood,
 /obj/structure/junk/small/tv,
@@ -29129,10 +29099,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/remains/human,
-/obj/item/clothing/suit/armored/f13/light/chitinarmor{
-	name = "scale suit";
-	desc = "Essentially a bodysuit reinforced with insect chitin. Flexible and comfortable but not the most protective."
-	},
 /obj/item/clothing/head/helmet/f13/raider/supafly,
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/building/mall)
@@ -35734,14 +35700,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/wood,
 /area/f13/village)
-"wKy" = (
-/obj/structure/table,
-/obj/item/clothing/suit/armored/f13/light/badlands,
-/turf/open/floor/plasteel/f13{
-	icon_state = "whitebluerustychess";
-	name = "floor"
-	},
-/area/f13/village)
 "wKT" = (
 /obj/structure/wreck/trash/one_tire{
 	pixel_y = -10;
@@ -37005,7 +36963,7 @@
 /area/f13/wasteland)
 "xzJ" = (
 /obj/structure/closet/boxinggloves,
-/obj/item/clothing/suit/armored/f13/medium/slam,
+/obj/item/clothing/suit/armored/f13/medium/combat/scrapcombat,
 /obj/item/clothing/head/helmet/f13/raider/yankee,
 /turf/open/floor/f13,
 /area/f13/village)
@@ -61816,7 +61774,7 @@ gUZ
 vga
 mdh
 hUI
-bbx
+hKj
 hKj
 vga
 rjo
@@ -70040,7 +69998,7 @@ vcj
 tVg
 xhr
 aOJ
-wKy
+ccs
 acO
 eSu
 eSu
@@ -80066,7 +80024,7 @@ tom
 aox
 aox
 aox
-mNo
+rPL
 rPL
 rPL
 rPL
@@ -80523,7 +80481,7 @@ tom
 aox
 asc
 eSu
-mNo
+rPL
 dEL
 uhi
 vqR
@@ -81437,7 +81395,7 @@ tom
 aox
 upJ
 eSu
-hmt
+aox
 iig
 uhi
 uhi
@@ -81894,7 +81852,7 @@ rPL
 rPL
 rPL
 rPL
-hmt
+aox
 vpm
 uhi
 uhi
@@ -85546,11 +85504,11 @@ kuQ
 sYd
 tom
 tom
-mNo
 rPL
 rPL
 rPL
-mNo
+rPL
+rPL
 rPL
 rPL
 rPL
@@ -87380,7 +87338,7 @@ oeM
 cDn
 pqb
 fUc
-mNo
+rPL
 rPL
 rPL
 rPL
@@ -150475,7 +150433,7 @@ qEM
 oYS
 tzj
 ubM
-dwE
+qDL
 qDL
 mCN
 hKY

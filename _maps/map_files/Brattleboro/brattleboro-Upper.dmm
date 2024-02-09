@@ -4137,7 +4137,6 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
-/obj/item/clothing/suit/armored/f13/light/badlands,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
 "tp" = (

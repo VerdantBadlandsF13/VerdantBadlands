@@ -240,10 +240,10 @@
 /turf/open/floor/wood/wood_mosaic,
 /area/f13/village)
 "afV" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/raider/ranged/sulphiteranged{
 	name = "Cannibal Brute"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building)
 "agj" = (
@@ -535,7 +535,7 @@
 /area/f13/vault)
 "arw" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 130;
 	destination_z = 4
 	},
@@ -2114,7 +2114,7 @@
 /area/f13/village)
 "btX" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 136;
 	destination_z = 4
 	},
@@ -4904,8 +4904,8 @@
 	},
 /area/f13/building)
 "dvc" = (
-/mob/living/simple_animal/hostile/raider,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider,
 /turf/open/floor/carpet,
 /area/f13/building)
 "dvj" = (
@@ -5759,12 +5759,12 @@
 	},
 /area/f13/building)
 "dZA" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
 /mob/living/simple_animal/hostile/renegade/doc{
 	name = "Gunner Doc";
 	desc = "A veteran of the Gunners, this one specializing in field first aid."
-	},
-/obj/machinery/light/small{
-	dir = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess/redchess2,
 /area/f13/village)
@@ -5986,8 +5986,8 @@
 	},
 /area/f13/building)
 "eiy" = (
-/mob/living/simple_animal/hostile/raider/junker,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/junker,
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess,
 /area/f13/village)
 "eiB" = (
@@ -8250,11 +8250,11 @@
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/village)
 "fJz" = (
+/obj/structure/chair/old,
 /mob/living/simple_animal/hostile/retaliate/spaceman{
 	name = "Carl";
 	desc = "Hi. I don't like you."
 	},
-/obj/structure/chair/old,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/vault)
 "fKb" = (
@@ -10128,8 +10128,8 @@
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "hjA" = (
-/mob/living/simple_animal/hostile/raider/ranged/biker,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged/biker,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood3-broken"
 	},
@@ -10312,7 +10312,6 @@
 "hqs" = (
 /obj/structure/closet/anchored,
 /obj/item/shield/riot/tele,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
 /obj/item/clothing/head/helmet/riot,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/village)
@@ -10579,10 +10578,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
 /area/f13/vault/security/checkpoint)
 "hBS" = (
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Greenleaf Marauder"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "cafeteria"
 	},
@@ -12053,7 +12052,7 @@
 /area/f13/wasteland)
 "iHt" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 128;
 	destination_z = 4
 	},
@@ -12779,11 +12778,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white/whitepurplechess,
 /area/f13/vault/science)
 "jef" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/structure/wreck/trash/machinepile{
 	layer = 3;
 	icon_state = "technical_pile2"
 	},
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/ruins)
 "jfa" = (
@@ -13157,7 +13156,7 @@
 /area/f13/building)
 "juY" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 135;
 	destination_z = 4
 	},
@@ -14865,12 +14864,12 @@
 "kDu" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/ghoul,
 /obj/structure/curtain{
 	color = "#363636";
 	alpha = 255;
 	pixel_y = -32
 	},
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/wood/wood_mosaic,
 /area/f13/building)
 "kEg" = (
@@ -17321,8 +17320,8 @@
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/raider/firefighter,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/firefighter,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "miP" = (
@@ -17335,8 +17334,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/village)
 "mjm" = (
-/mob/living/simple_animal/chicken,
 /obj/machinery/light,
+/mob/living/simple_animal/chicken,
 /turf/open/floor/grass,
 /area/f13/vault/diner)
 "mjT" = (
@@ -17614,13 +17613,6 @@
 /obj/structure/wreck/bus/rusted,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
-"mtw" = (
-/mob/living/simple_animal/hostile/handy,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	icon_state = "whiteyellowchess"
-	},
-/area/f13/building)
 "mtD" = (
 /obj/structure/window/fulltile/ruins{
 	icon_state = "ruinswindowvertical"
@@ -19403,7 +19395,7 @@
 /area/f13/vault/garden)
 "nzH" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 129;
 	destination_z = 4
 	},
@@ -20183,7 +20175,6 @@
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/remains/human,
-/obj/item/clothing/suit/armored/f13/light/badlands,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "oca" = (
@@ -21095,10 +21086,10 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "oHN" = (
-/mob/living/simple_animal/cockroach,
 /obj/machinery/light{
 	dir = 8
 	},
+/mob/living/simple_animal/cockroach,
 /turf/open/floor/f13{
 	icon_state = "white"
 	},
@@ -21306,11 +21297,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/supermart,
 /area/f13/village)
-"oQs" = (
-/mob/living/simple_animal/hostile/raider/junker,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/green/greenchess,
-/area/f13/village)
 "oQZ" = (
 /obj/structure/table/wood/junk,
 /turf/open/indestructible/ground/inside/mountain,
@@ -21321,9 +21307,6 @@
 /area/f13/building)
 "oRi" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
 /obj/structure/sign/poster/contraband/punch_shit{
 	pixel_y = 32
 	},
@@ -21571,8 +21554,8 @@
 /turf/closed/indestructible/rock,
 /area/f13/caves)
 "pap" = (
-/mob/living/simple_animal/hostile/raider/thief,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/thief,
 /turf/open/floor/carpet/green,
 /area/f13/building)
 "paE" = (
@@ -21984,7 +21967,6 @@
 "ppZ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/remains/human,
-/obj/item/clothing/suit/armored/f13/light/badlands,
 /turf/open/floor/f13{
 	icon_state = "whitebluechess"
 	},
@@ -22263,12 +22245,12 @@
 	},
 /area/f13/vault/garden)
 "pxO" = (
-/mob/living/simple_animal/hostile/raider{
-	name = "S-Mart Clerks Raider"
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "gibhead"
+	},
+/mob/living/simple_animal/hostile/raider{
+	name = "S-Mart Clerks Raider"
 	},
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
@@ -22418,11 +22400,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "pEG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Greenleaf Marauder"
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "whiteyellowchess"
 	},
@@ -22558,8 +22540,8 @@
 /turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "pHL" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/effect/decal/cleanable/blood/old,
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/ruins)
 "pHY" = (
@@ -23370,10 +23352,10 @@
 /turf/open/indestructible,
 /area/admin)
 "qol" = (
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Greenleaf Marauder"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/arcade,
 /area/f13/building)
 "qow" = (
@@ -24301,7 +24283,7 @@
 /area/f13/building)
 "qSF" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 131;
 	destination_z = 4
 	},
@@ -24488,10 +24470,10 @@
 	},
 /area/f13/vault/security/checkpoint)
 "qZy" = (
+/obj/effect/decal/marking,
 /mob/living/simple_animal/hostile/raider/junker{
 	name = "Greenleaf Marauder"
 	},
-/obj/effect/decal/marking,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "raS" = (
@@ -25599,8 +25581,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
 /area/f13/vault/storage)
 "rJq" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/item/ammo_casing/spent,
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/ruins)
 "rJC" = (
@@ -25902,7 +25884,7 @@
 /area/f13/village)
 "rSR" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 132;
 	destination_z = 4
 	},
@@ -26286,8 +26268,8 @@
 /obj/structure/chair/office/dark{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/handy,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2-broken"
 	},
@@ -27820,8 +27802,8 @@
 	},
 /area/f13/building)
 "tdL" = (
-/mob/living/simple_animal/hostile/raider,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "tdT" = (
@@ -31685,9 +31667,9 @@
 	},
 /area/f13/wasteland)
 "vIG" = (
-/mob/living/simple_animal/hostile/raider/ranged/boss/junker,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged/boss/junker,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/village)
 "vIO" = (
@@ -33715,7 +33697,7 @@
 /area/f13/vault)
 "wWP" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 134;
 	destination_z = 4
 	},
@@ -33873,8 +33855,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess,
 /area/f13/village)
 "xdK" = (
-/mob/living/simple_animal/hostile/raider/ranged,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged,
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "xec" = (
@@ -34132,7 +34114,7 @@
 /area/f13/ruins)
 "xos" = (
 /turf/closed/indestructible/f13/matrix/transition{
-	destination_x = 002;
+	destination_x = 2;
 	destination_y = 133;
 	destination_z = 4
 	},
@@ -34167,11 +34149,11 @@
 	},
 /area/f13/building)
 "xpO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/raider/junker/creator{
 	name = "Greenleaf Marauder Mechanic"
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/arcade,
 /area/f13/building)
 "xqe" = (
@@ -34945,11 +34927,6 @@
 	},
 /turf/open/floor/plasteel/hydrofloor,
 /area/f13/vault/diner)
-"xVg" = (
-/mob/living/simple_animal/hostile/raider/junker/creator,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/f13/vault_floor/blue,
-/area/f13/village)
 "xVr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -34961,10 +34938,10 @@
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "floor3"
 	},
-/mob/living/simple_animal/cockroach,
 /obj/machinery/light{
 	dir = 8
 	},
+/mob/living/simple_animal/cockroach,
 /turf/open/floor/f13{
 	icon_state = "white"
 	},
@@ -76482,7 +76459,7 @@ uCz
 pUD
 iBO
 haF
-oQs
+wCo
 eVF
 haF
 dGO
@@ -81952,7 +81929,7 @@ uNV
 jfI
 qfS
 vSW
-xVg
+cup
 njy
 miS
 lWZ
@@ -112143,7 +112120,7 @@ rLe
 jwe
 aIt
 iEb
-mtw
+imF
 hYS
 hYS
 nMX

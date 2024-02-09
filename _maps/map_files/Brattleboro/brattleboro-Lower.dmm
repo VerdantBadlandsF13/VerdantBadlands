@@ -754,11 +754,11 @@
 	},
 /area/f13/bl/dfs)
 "dh" = (
+/obj/machinery/light,
 /mob/living/simple_animal/hostile/handy/protectron{
 	name = "janitron";
 	cached_multiplicative_slowdown = 3.5
 	},
-/obj/machinery/light,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -961,11 +961,11 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "ek" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/machinery/light/small{
 	brightness = 3;
 	dir = 8
 	},
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -2594,10 +2594,6 @@
 	icon_state = "redrustyfull"
 	},
 /area/f13/tunnel)
-"kB" = (
-/mob/living/simple_animal/hostile/russian,
-/turf/open/indestructible,
-/area/admin)
 "kC" = (
 /obj/structure/destructible/hobo_barrel,
 /obj/machinery/light{
@@ -3482,10 +3478,10 @@
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
 "oc" = (
+/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /mob/living/simple_animal/hostile/raider/ranged/biker{
 	name = "Raider"
 	},
-/obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	name = "metal plating"
 	},
@@ -5373,7 +5369,6 @@
 /area/f13/tunnel)
 "vE" = (
 /obj/structure/table/booth,
-/obj/item/clothing/suit/armored/f13/light/badlands,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_shotgun,
 /turf/open/floor/carpet,
 /area/f13/tunnel)
@@ -5632,12 +5627,12 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "wH" = (
-/mob/living/simple_animal/hostile/raider/firefighter,
 /obj/structure/decoration/rag{
 	icon_state = "skulls";
 	pixel_x = 2;
 	pixel_y = 33
 	},
+/mob/living/simple_animal/hostile/raider/firefighter,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
 "wI" = (
@@ -6363,7 +6358,6 @@
 /area/f13/sewer)
 "zz" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
 /obj/item/assembly/flash/handheld,
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
@@ -6544,10 +6538,10 @@
 	},
 /area/f13/tunnel)
 "Ao" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
 /obj/structure/railing/handrail{
 	dir = 8
 	},
+/mob/living/simple_animal/hostile/ghoul/reaver,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -7074,12 +7068,12 @@
 	},
 /area/f13/caves)
 "Ck" = (
-/mob/living/simple_animal/hostile/raider/ranged/biker{
-	name = "Raider"
-	},
 /obj/structure/decoration/rag{
 	layer = 8;
 	pixel_y = 33
+	},
+/mob/living/simple_animal/hostile/raider/ranged/biker{
+	name = "Raider"
 	},
 /turf/open/floor/wood/wood_fancy,
 /area/f13/tunnel)
@@ -7542,6 +7536,13 @@
 "Ee" = (
 /turf/closed/wall/f13/store,
 /area/f13/tunnel)
+"Ef" = (
+/obj/structure/table,
+/obj/item/soap,
+/turf/open/floor/f13{
+	icon_state = "white"
+	},
+/area/f13/bl/dfs)
 "Eg" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -7836,7 +7837,7 @@
 	force = 15;
 	attack_speed = 10;
 	throw_speed = 8;
-	embedding = list("embed_chance"=25)
+	embedding = list("embed_chance" = 25)
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
@@ -7910,8 +7911,8 @@
 	dir = 1
 	},
 /obj/effect/spawner/lootdrop/f13/junkspawners,
-/mob/living/simple_animal/hostile/ghoul/reaver,
 /obj/item/shard,
+/mob/living/simple_animal/hostile/ghoul/reaver,
 /turf/open/floor/carpet,
 /area/f13/tunnel)
 "FN" = (
@@ -8405,10 +8406,6 @@
 /area/f13/bl/gmb)
 "HI" = (
 /obj/structure/table/wood,
-/obj/item/clothing/suit/armored/f13/light/chitinarmor{
-	name = "scale suit";
-	desc = "Essentially a bodysuit reinforced with insect chitin. Flexible and comfortable but not the most protective."
-	},
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
 "HJ" = (
@@ -9749,7 +9746,6 @@
 /area/f13/bl/gmb)
 "Nj" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#c1caff"
@@ -9888,8 +9884,8 @@
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "NP" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee,
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
 "NR" = (
@@ -9942,13 +9938,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/village)
-"NX" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armored/f13/heavy/riotpolice,
-/turf/open/floor/f13{
-	icon_state = "redrustyfull"
-	},
-/area/f13/tunnel)
 "NY" = (
 /mob/living/simple_animal/hostile/handy{
 	name = "Mr. Vaultie";
@@ -12120,6 +12109,9 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/bl/dfs)
+"WH" = (
+/turf/closed/indestructible/rock,
+/area/admin)
 "WI" = (
 /obj/machinery/door/airlock/hatch{
 	name = "train door"
@@ -12293,10 +12285,10 @@
 	desc = "What even is this?"
 	},
 /obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/ghoul/glowing{
 	name = "Number One"
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
 	},
@@ -13444,9 +13436,9 @@ OA
 OA
 OA
 OA
-OA
-OA
-OA
+WH
+WH
+WH
 Nu
 Nu
 Nu
@@ -13901,13 +13893,13 @@ Va
 Va
 Va
 Va
-Va
-Va
-OA
-Nu
+WH
 CG
-kB
-Zn
+WH
+Nu
+vO
+vO
+vO
 Nu
 "}
 (3,1,1) = {"
@@ -14358,13 +14350,13 @@ Va
 Va
 Va
 Va
-Va
-Va
-OA
+WH
+WH
+WH
 Nu
 vO
 QQ
-xw
+vO
 Nu
 "}
 (4,1,1) = {"
@@ -14815,13 +14807,13 @@ Va
 Va
 Va
 Va
-Va
-Va
-OA
-Nu
+WH
 EK
-JZ
-TE
+WH
+Nu
+vO
+vO
+vO
 Nu
 "}
 (5,1,1) = {"
@@ -15272,9 +15264,9 @@ Va
 Va
 Va
 Va
-Va
-Va
-OA
+WH
+WH
+WH
 Nu
 Nu
 Nu
@@ -15729,14 +15721,14 @@ Va
 Va
 Va
 Va
-Va
-Va
-OA
-OA
-OA
-OA
-OA
-OA
+WH
+Zn
+WH
+WH
+WH
+WH
+WH
+WH
 "}
 (7,1,1) = {"
 OA
@@ -16186,14 +16178,14 @@ Va
 Va
 Va
 Va
+WH
+WH
+WH
 Cp
-Cp
-Cp
-Cp
-Va
-Va
-Va
-OA
+WH
+JZ
+WH
+WH
 "}
 (8,1,1) = {"
 OA
@@ -16647,10 +16639,10 @@ Va
 Va
 Va
 Cp
-Cp
-Va
-Va
-OA
+WH
+WH
+WH
+WH
 "}
 (9,1,1) = {"
 OA
@@ -17104,10 +17096,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-OA
+WH
+TE
+WH
+WH
 "}
 (10,1,1) = {"
 OA
@@ -17561,10 +17553,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-OA
+WH
+WH
+WH
+WH
 "}
 (11,1,1) = {"
 OA
@@ -18018,10 +18010,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-OA
+WH
+xw
+WH
+WH
 "}
 (12,1,1) = {"
 OA
@@ -18475,10 +18467,10 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-OA
+WH
+WH
+WH
+WH
 "}
 (13,1,1) = {"
 OA
@@ -51108,7 +51100,7 @@ YS
 YS
 Jz
 tq
-Jz
+Ef
 mp
 OA
 OA
@@ -125749,7 +125741,7 @@ Dz
 Ji
 hc
 Cz
-NX
+wB
 kA
 Ji
 OA

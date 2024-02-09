@@ -442,9 +442,9 @@
 	},
 /area/f13/vault)
 "dA" = (
-/mob/living/simple_animal/hostile/handy/protectron,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "dB" = (
@@ -683,10 +683,10 @@
 	},
 /area/f13/caves)
 "fo" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
+/mob/living/simple_animal/hostile/handy/gutsy,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -965,7 +965,7 @@
 /obj/item/stack/f13Cash/caps/onezerozerozero,
 /obj/item/stack/f13Cash/caps/onezerozerozero,
 /turf/open/indestructible,
-/area/f13/caves)
+/area/admin)
 "gW" = (
 /obj/structure/stairs/east,
 /turf/open/indestructible/ground/outside/ruins,
@@ -1145,7 +1145,7 @@
 	desc = "This man has so much wealth even his cannon shoots caps."
 	},
 /turf/open/indestructible,
-/area/f13/caves)
+/area/admin)
 "im" = (
 /obj/structure/railing/handrail/blue{
 	dir = 5;
@@ -1187,8 +1187,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "iw" = (
-/mob/living/simple_animal/hostile/handy/protectron,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "ix" = (
@@ -1270,12 +1270,12 @@
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland/bighorn)
 "iV" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/item/reagent_containers/glass/bucket,
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "floor6"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -1398,8 +1398,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "jO" = (
-/mob/living/simple_animal/hostile/handy/assaultron,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/assaultron,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "jP" = (
@@ -1713,8 +1713,8 @@
 	},
 /area/f13/tunnel)
 "ms" = (
-/mob/living/simple_animal/hostile/handy/assaultron,
 /obj/item/clothing/suit/armored/f13/medium/combat/mk2,
+/mob/living/simple_animal/hostile/handy/assaultron,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -1847,7 +1847,7 @@
 /area/f13/tunnel)
 "na" = (
 /turf/closed/indestructible/riveted,
-/area/f13/caves)
+/area/admin)
 "nk" = (
 /obj/machinery/light{
 	dir = 8;
@@ -1902,10 +1902,6 @@
 	icon_state = "verticalleftborderleft0"
 	},
 /area/f13/wasteland/bighorn)
-"nU" = (
-/obj/item/clothing/suit/armored/f13/heavy/raidermetal,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "nV" = (
 /obj/structure/nest/radroach,
 /turf/open/indestructible/ground/inside/mountain,
@@ -2654,8 +2650,8 @@
 /turf/open/floor/carpet/red,
 /area/f13/vault/dormitory)
 "tq" = (
-/mob/living/simple_animal/hostile/handy/gutsy,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/gutsy,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "ts" = (
@@ -3696,10 +3692,6 @@
 /obj/item/toy/cards/deck,
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/building)
-"Ae" = (
-/obj/item/clothing/suit/armored/f13/light/badlands,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Ah" = (
 /obj/item/clothing/head/helmet/f13/raider/psychotic,
 /turf/open/indestructible/ground/inside/mountain,
@@ -3843,12 +3835,12 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
 "Bu" = (
-/mob/living/simple_animal/hostile/ghoul,
 /obj/item/reagent_containers/glass/bucket,
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "gib1"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -4423,10 +4415,6 @@
 	dir = 4
 	},
 /area/f13/vault)
-"Fy" = (
-/obj/item/clothing/suit/armored/f13/light/chitinarmor,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "FE" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -4961,7 +4949,7 @@
 "JA" = (
 /obj/machinery/telecomms/relay/preset/telecomms,
 /turf/open/indestructible,
-/area/f13/caves)
+/area/admin)
 "JB" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
 /turf/open/indestructible/ground/inside/mountain,
@@ -4986,12 +4974,12 @@
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/caves)
 "JO" = (
-/mob/living/simple_animal/hostile/handy/protectron,
 /obj/machinery/light{
 	light_color = "#e8eaff";
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/protectron,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -5314,13 +5302,6 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
-"Mm" = (
-/mob/living/simple_animal/hostile/handy/assaultron,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/tunnel)
 "Mp" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plasteel/freezer{
@@ -5571,9 +5552,9 @@
 	},
 /area/f13/tunnel)
 "Ou" = (
-/mob/living/simple_animal/hostile/handy/assaultron,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/handy/assaultron,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "Ox" = (
@@ -6597,11 +6578,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "VJ" = (
-/mob/living/simple_animal/hostile/ghoul/glowing,
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "floor6"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/ghoul/glowing,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -16857,7 +16838,7 @@ Wf
 Wf
 Wf
 Un
-Mm
+WZ
 Un
 Un
 Un
@@ -68209,7 +68190,7 @@ hx
 hx
 hx
 hx
-Fy
+hx
 wl
 PV
 PV
@@ -85085,7 +85066,7 @@ hx
 cF
 hx
 pp
-nU
+hx
 PV
 PV
 PV
@@ -97862,7 +97843,7 @@ jy
 PV
 hx
 zy
-Ae
+hx
 hx
 jH
 hx

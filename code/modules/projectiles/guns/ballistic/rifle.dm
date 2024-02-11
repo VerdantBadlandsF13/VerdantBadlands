@@ -264,7 +264,7 @@
 	item_state = "amr"
 	mag_type = /obj/item/ammo_box/magazine/amr
 	fire_delay = 22
-	recoil = 10
+	recoil = 3
 	slowdown = 1.45 //.20 higher than the M1919 MMG.
 	spread = 0
 	force = 10 //Big clumsy and sensitive scope, makes for a poor club
@@ -287,5 +287,5 @@
 	icon_state = "amr_gmb"
 	item_state = "amr_gmb"
 	spread = 0.25
-	recoil = 3
 	zoomable = FALSE
+	pb_knockback = 1// shhhh

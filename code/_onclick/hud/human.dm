@@ -12,10 +12,18 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 //	var/mutable_appearance/scanlines
 
+/obj/screen/hud_cont_screen/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency)
+
 /obj/screen/hud_cont_screen/card
 	icon_state = "hud_full_card"
 	layer = HUCONC_LAYER
 // Badlands Hud Container - End
+
+/obj/screen/hud_cont_screen/card/Initialize()
+	. = ..()
+	AddComponent(/datum/component/largetransparency)
 
 /obj/screen/human/toggle
 	name = "toggle"

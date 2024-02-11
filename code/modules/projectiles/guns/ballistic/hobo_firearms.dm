@@ -16,6 +16,7 @@
 	burst_size = 1
 	extra_damage = 3
 	recoil = 0.25
+	condition_mul = 3
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 
 /obj/item/gun/ballistic/automatic/hobo/zipgun/update_icon_state()
@@ -36,6 +37,7 @@
 	fire_delay = 0.25
 	spread = 2
 	extra_damage = 4
+	condition_mul = 3
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe
@@ -56,6 +58,7 @@
 	autofire_shot_delay = 1.75
 	spread = 15
 	extra_damage = -6
+	condition_mul = 3
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe/update_icon_state()

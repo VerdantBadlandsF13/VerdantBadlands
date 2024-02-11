@@ -1,8 +1,7 @@
 /*
 Pulled from, as of a few months ago, something original to Foundation.
 As far as I'm aware, anyhow. If that's not the case, let me know.
-We've repurposed this for our use, with modifications where necessary.
- - Carl
+We've repurposed this for our use, with modifications where necessary. - Carl
 - - -
 Current icons:
 small - small circle

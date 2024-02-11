@@ -1,8 +1,7 @@
 /*
 Originally from Coyote Bayou, a downstream of Sunset.
 Credit to them for their work. Specifically Superlagg, IIRC.
-A bunch of edits were made by me to fit Verdant, alongside cleaning it up.
- - Carl
+A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Carl
 */
 
 #define TURRET_STUN 0

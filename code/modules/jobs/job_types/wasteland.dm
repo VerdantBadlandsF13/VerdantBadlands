@@ -9,7 +9,7 @@
 	spawn_positions = -1
 	description = "Whether you're a veteran pathfinder, or just someone down on their luck? You've the misfortune to be in this horrid place."
 	supervisors = "fate"
-	selection_color = "#cccccc"
+	selection_color = "#5a5a5a"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 

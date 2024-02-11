@@ -562,6 +562,7 @@ ATTACHMENTS
 					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
+// Intended to be cumulative. Stacked one after the other, if able.
 	if(user.special_s <= 6)
 		bonus_spread += 5
 
@@ -749,7 +750,8 @@ ATTACHMENTS
 			if(condition_lvl < 90)
 				if(do_after(user, 20, target = src))
 					to_chat(user, "<span class='notice'>You have repaired your weapon.</span>")
-					condition_lvl = min(100, condition_lvl + 40)
+					condition_lvl = initial(condition_lvl)
+					playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/interface/repair[rand(1,7)].ogg", 40, 0, 0)
 					qdel(I)
 			else
 				to_chat(user, "<span class='notice'>No need, the weapon is in good condition.</span>")

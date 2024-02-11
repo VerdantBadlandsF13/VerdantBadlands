@@ -1,6 +1,6 @@
 /datum/job/dfs
 	department_flag = DFS
-	selection_color = "#2f556b"
+	selection_color = "#966c61"
 	faction = FACTION_DFS
 	exp_type = EXP_TYPE_DFS
 

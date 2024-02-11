@@ -83,7 +83,8 @@
 	return T
 
 /datum/component/footstep/proc/play_simplestep()
-	var/turf/open/T = prepare_step()
+	var/mob/living/carbon/human/P = parent
+	var/turf/open/T = get_turf(P)
 	if(!T)
 		return
 	if(isfile(footstep_sounds) || istext(footstep_sounds))
@@ -105,7 +106,8 @@
 	show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
 
 /datum/component/footstep/proc/play_humanstep()
-	var/turf/open/T = prepare_step()
+	var/mob/living/carbon/human/P = parent
+	var/turf/open/T = get_turf(P)
 	if(!T)
 		return
 	var/mob/living/carbon/human/H = parent

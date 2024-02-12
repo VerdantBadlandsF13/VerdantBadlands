@@ -15,7 +15,7 @@
 	SEND_SIGNAL(src, COMSIG_ROCKET_IMPACT)
 
 /obj/item/projectile/bullet/rocket/a84mm_chem
-	name ="\improper chemical payload rocket"
+	name ="\improper rocket"
 	desc = "Rocket propelled chemical warfare."
 	icon_state = "missile"
 	ricochets_max = 0 //it's a ROCKET NOT A MISSILE STOP AND GET IT RIGHT AAAAAAAAAAAAAAA
@@ -40,38 +40,40 @@
 	return BULLET_ACT_HIT
 
 /obj/item/projectile/bullet/rocket/a84mm_he
-	name ="\improper low yield HE rocket"
+	name ="\improper rocket"
 	desc = "Boom."
 	icon_state = "missile"
 	damage = 65
 	armour_penetration = 0.15
-	ricochets_max = 0 //it's a MISSILE
+	ricochets_max = 0
 	shrapnel_magnitude = 12
 
 /obj/item/projectile/bullet/rocket/a84mm_he/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 1, 2, 4)
+	explosion(target, 0, 2, 4, 8)
 	new /obj/effect/temp_visual/explosion(get_turf(target))
 	return BULLET_ACT_HIT
 
-/obj/item/projectile/bullet/rocket/a84mm_he_big
-	name ="\improper high yield HE rocket"
+/obj/item/projectile/bullet/rocket/a84mm_thermobaric
+	name ="\improper rocket"
 	desc = "Boom plus."
 	icon_state = "missile"
 	damage = 85
 	armour_penetration = 0.25
-	ricochets_max = 0 //it's a MISSILE
-	shrapnel_magnitude = 24
+	ricochets_max = 0
+	shrapnel_magnitude = 6
 
-/obj/item/projectile/bullet/rocket/a84mm_he_big/on_hit(atom/target, blocked=0)
+/obj/item/projectile/bullet/rocket/a84mm_thermobaric/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 3, 5, 5)
+	explosion(target, 0, 1, 2, 4, flame_range = 4)
 	new /obj/effect/temp_visual/explosion(get_turf(target))
+	if(iscarbon(target))
+		var/mob/living/carbon/C = target
+		C.adjustOxyLoss(60)
 	return BULLET_ACT_HIT
 
-
 /obj/item/projectile/bullet/rocket/a84mm_incend
-	name ="\improper incendiary rocket"
+	name ="\improper rocket"
 	desc = "Fwoosh."
 	icon_state = "missile" //temp until sprites
 	ricochets_max = 0
@@ -90,7 +92,7 @@
 		if(istype(C))
 			C.adjust_fire_stacks(fire_stacks)
 			C.IgniteMob()
-			to_chat(C, "<span class='userdanger'>The incendiary rocket sets you ablaze!</span>")
+			to_chat(C, "<span class='userdanger'>You're set ablaze!</span>")
 			C.emote("scream")
 	return BULLET_ACT_HIT
 
@@ -139,7 +141,6 @@
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "missile_broken"
 	w_class = WEIGHT_CLASS_TINY
-
 
 /obj/item/projectile/bullet/rocket/a84mm_br/on_hit(atom/target, blocked=0)
 	..()

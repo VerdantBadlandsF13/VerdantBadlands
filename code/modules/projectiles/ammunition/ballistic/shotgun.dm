@@ -19,12 +19,13 @@
 
 /obj/item/ammo_casing/shotgun/improvised
 	name = "improvised shell"
-	desc = "An extremely weak shotgun shell with multiple small pellets made out of metal shards."
+	desc = "A bubba brand shotgun shell with multiple small pellets made out of metal shards."
 	icon_state = "improvshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/shotgun_improvised
 	custom_materials = list(/datum/material/iron=250)
 	pellets = 12
 	variance = 25
+	condition_malus = 1
 
 /obj/item/ammo_casing/shotgun/techshell
 	name = "unloaded technological shell"

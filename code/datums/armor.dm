@@ -22,13 +22,13 @@
 	var/acid
 	var/magic
 	var/wound
-	var/tierline = list(25, 50, 75, 100, 125, 150, 200, 250, 300, 350, 400, 500, 600)
-//	var/tierline = list(20, 40, 60, 80, 100, 120, 140, 160, 180, 200)// temp out
+	var/tierline = list(20, 40, 60, 80, 100, 120, 140, 160, 180, 200)
 
 /datum/armor/New(tier = 0, linemelee = 0, linebullet = 0, linelaser = 0, melee = 0, bullet = 0, laser = 0,  energy = 0, bomb = 0, bio = 0, rad = 0, fire = 0, acid = 0, magic = 0, wound = 0)
-
-	if(tier)//ASSIGNS ARMOR VALUES BASED ON TIER, IT WILL USE ARMOR VALUES INSTEAD OF THE TIER FOR THAT VALUE IF THE ARMOR VALUE IS PRESENT
-		linemelee = linemelee+tierline[tier]//If an armor has a tier value, having a linemelee value will add onto that tier value rather than replace it.
+//ASSIGNS ARMOR VALUES BASED ON TIER, IT WILL USE ARMOR VALUES INSTEAD OF THE TIER FOR THAT VALUE IF THE ARMOR VALUE IS PRESENT
+//If an armor has a tier value, having a linemelee value will add onto that tier value rather than replace it.
+	if(tier)
+		linemelee = linemelee+tierline[tier]
 		linebullet = linebullet+tierline[tier]
 		linelaser = linelaser+tierline[tier]
 		wound = wound+(tier*5)
@@ -49,9 +49,9 @@
 // Linearmor is linear (so 100 armor is twice 50). Linearmor will never equal 100 armor.
 // If a mob were to have 100 health, each point of linearmor would be the equivalent to +1 effective health.
 // For example, 100 linearmor = 200 effective health or 50% damage reduction.
-	src.melee = 100*linemelee/(abs(linemelee)+100) || melee
-	src.bullet = 100*linebullet/(abs(linebullet)+100) || bullet
-	src.laser = 100*linelaser/(abs(linelaser)+100) || laser
+	src.melee = round(100*linemelee/(abs(linemelee)+100) || melee)
+	src.bullet = round(100*linebullet/(abs(linebullet)+100) || bullet)
+	src.laser = round(100*linelaser/(abs(linelaser)+100) || laser)
 
 	src.tier = 0
 	tag = ARMORID

@@ -1,12 +1,12 @@
 GLOBAL_LIST_EMPTY(vault_doors)
 
 /obj/structure/vaultdoor
-	name = "vault door 113"
+	name = "vault door 58"
 	desc = "A conventional Vault blast door of \"Nine cog\" model. <br>\
 	A blast door design incorporates proper sealants against radiation and other hazardous elements that may be created in the event of a nuclear war, \
-	to properly protect its inhabitants."
+	to properly protect its inhabitants. This one appears fairly worn down, from either use or time."
 	icon = 'icons/fallout/machines/gear.dmi'
-	icon_state = "113closed"
+	icon_state = "oldclosed"
 	density = TRUE
 	opacity = 1
 	layer = WALL_OBJ_LAYER
@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(vault_doors)
 	return
 
 /obj/structure/vaultdoor/proc/repair()
-	icon_state = "113open"
+	icon_state = "oldopen"
 	set_opacity(1)
 	src.density = FALSE
 	is_busy = FALSE
@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(vault_doors)
 	isworn = FALSE
 
 /obj/structure/vaultdoor/proc/destroy()
-	icon_state = "113empty"
+	icon_state = "oldempty"
 	set_opacity(0)
 	src.density = FALSE
 	destroyed = TRUE
@@ -64,8 +64,8 @@ GLOBAL_LIST_EMPTY(vault_doors)
 
 /obj/structure/vaultdoor/proc/open()
 	is_busy = TRUE
-	flick("113opening", src)
-	icon_state = "113open"
+	flick("oldopening", src)
+	icon_state = "oldopen"
 	playsound(loc, 'sound/f13machines/doorgear_open.ogg', 50, 0, 10)
 	sleep(30)
 	set_opacity(0)
@@ -75,8 +75,8 @@ GLOBAL_LIST_EMPTY(vault_doors)
 
 /obj/structure/vaultdoor/proc/close()
 	is_busy = TRUE
-	flick("113closing", src)
-	icon_state = "113closed"
+	flick("oldclosing", src)
+	icon_state = "oldclosed"
 	playsound(loc, 'sound/f13machines/doorgear_close.ogg', 50, 0, 10)
 	sleep(30)
 	set_opacity(1)

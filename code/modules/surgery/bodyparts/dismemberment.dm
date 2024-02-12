@@ -63,16 +63,21 @@
 	if(HAS_TRAIT(C, TRAIT_NODISMEMBER))
 		return FALSE
 
-	if(HAS_TRAIT(C, TRAIT_NOGUT)) //Just for not allowing gutting
-		C.bleed(50)
-		return FALSE
-
+/*
 	. = list()
 	var/organ_spilled = 0
 	var/turf/T = get_turf(C)
-	C.bleed(50)
+*/
+
+	if(HAS_TRAIT(C, TRAIT_NOGUT)) //Just for not allowing gutting - Reused for less severe consequences currently.
+		playsound(get_turf(C), "modular_badlands/code/modules/rp_misc/sound/gore/destroyed_limb[rand(1,3)].ogg", 80, 1)
+		C.bleed(25)
+		return FALSE
+
+	C.bleed(150)
 	playsound(get_turf(C), "modular_badlands/code/modules/rp_misc/sound/gore/destroyed_limb[rand(1,3)].ogg", 80, 1)
 
+/*
 	for(var/X in C.internal_organs)
 		var/obj/item/organ/O = X
 		if(O.organ_flags & ORGAN_NO_DISMEMBERMENT || check_zone(O.zone) != BODY_ZONE_CHEST)
@@ -91,6 +96,7 @@
 
 	if(organ_spilled)
 		C.visible_message("<span class='danger'><B>[C]'s internal organs spill out onto the floor!</B></span>")
+*/
 
 //limb removal. The "special" argument is used for swapping a limb with a new one without the effects of losing a limb kicking in.
 /obj/item/bodypart/proc/drop_limb(special, dismembered)

@@ -10,7 +10,7 @@
 	desc = "A sulphite raider helmet, affixed with thick anti-ballistic glass over the eyes."
 	icon_state = "sulphite_helm"
 	item_state = "sulphite_helm"
-	armor = list("melee" = 25, "bullet" = 55,"laser" = 40, "energy" = 20, "bomb" = 50, "bio" = 60, "rad" = 10, "fire" = 60, "acid" = 20, "wound" = 10)
+	armor = list("tier" = 4, "energy" = 50, "bomb" = 30, "bio" = 25, "rad" = 30, "fire" = 95, "acid" = 15)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
@@ -21,7 +21,7 @@
 	icon_state = "supafly"
 	item_state = "supafly"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 40)
+	armor = list("tier" = 3, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	slowdown = 0
 
@@ -52,7 +52,6 @@
 	icon_state = "arclight"
 	item_state = "arclight"
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDESNOUT
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "bio" = 0, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 40)
 	flash_protect = 2
 	tint = 0.5
 
@@ -65,7 +64,6 @@
 	desc = "A sturdy helmet to protect against both the elements and from harm, if only it was not looking in such poor condition."
 	icon_state = "blastmaster"
 	item_state = "blastmaster"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 40, "bio" = 0, "bomb" = 90, "rad" = 0, "fire" = 25, "acid" = 25, "wound" = 40)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
@@ -95,6 +93,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	armor = list("tier" = 4, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raider/eyebot/Initialize()
 	. = ..()
@@ -113,25 +112,25 @@
 	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/f13/raidermetal
-	name = "metal raider helmet"
+	name = "crude metal helmet"
 	desc = "A metal helmet, rusty and awful."
 	icon_state = "raidermetal"
 	item_state = "raidermetal"
 	can_toggle = TRUE
-	armor = list("melee" = 35, "bullet" = 25, "laser" = 40, "energy" = 25, "bomb" = 45, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0, "wound" = 40)
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE|HIDESNOUT|HIDEFACIALHAIR
 	strip_delay = 80
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = list("tier" = 4, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/raidercombathelmet
-	name = "raider combat helmet"
-	desc = "A combat helmet modified with metal plating"
+	name = "crude combat helmet"
+	desc = "A combat helmet modified with metal plating."
 	icon_state = "raider_combat_helmet"
 	item_state = "raider_combat_helmet"
-	armor = list("melee" = 37, "bullet" = 27, "laser" = 42, "energy" = 27, "bomb" = 47, "bio" = 30, "rad" = 15, "fire" = 60, "acid" = 0, "wound" = 40)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	slowdown = 0.025
+	armor = list("tier" = 5, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
@@ -139,7 +138,6 @@
 	icon_state = "firefighter"
 	item_state = "firefighter"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 20, "bullet" = 20, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
@@ -147,6 +145,7 @@
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
+	armor = list("tier" = 3, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 45, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/wastewarhat
 	name = "warrior helmet"
@@ -155,8 +154,8 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/helmet.dmi'
 	icon_state = "wastewar"
 	item_state = "wastewar"
-	armor = list("melee" = 35, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 	flags_inv = HIDEEARS|HIDEHAIR
+	armor = list("tier" = 2, "energy" = 25, "bomb" = 25, "bio" = 25, "rad" = 0, "fire" = 25, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/wastewarhat/Initialize()
 	. = ..()
@@ -167,7 +166,7 @@
 	desc = "A gask mask with the addition of a hood."
 	icon_state = "Hooded_Gas_Mask"
 	item_state = "Hooded_Gas_Mask"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	armor = list("tier" = 2, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 90, "fire" = 0, "acid" = 0)

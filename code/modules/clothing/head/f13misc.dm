@@ -25,7 +25,7 @@
 	force = 20
 	hitsound = 'sound/items/trayhit1.ogg'
 	flags_inv = HIDEHAIR
-	armor = list("melee" = 30, "bullet" = 20, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
+	armor = list("tier" = 3, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/f13/cowboy
 	name = "cowboy hat"
@@ -33,7 +33,6 @@
 	icon_state = "cowboy"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
-	armor = list("melee" = 20, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 
 /obj/item/clothing/head/f13/cowboy/Initialize()
 	. = ..()
@@ -45,7 +44,6 @@
 	icon_state = "bandit"
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
-	armor = list("melee" = 20, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 
 /obj/item/clothing/head/f13/bandit/Initialize()
 	. = ..()
@@ -57,7 +55,6 @@
 	icon_state = "gambler"
 	item_state = "dethat"
 	flags_inv = HIDEHAIR
-	armor = list("melee" = 20, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 
 /obj/item/clothing/head/f13/gambler/Initialize()
 	. = ..()
@@ -71,7 +68,7 @@
 	icon_state = "motorcycle"
 	item_state = "motorcycle"
 	flags_cover = HEADCOVERSEYES
-	armor = list("melee" = 35, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
+	armor = list("tier" = 2, "energy" = 5, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	strip_delay = 10
 
@@ -84,7 +81,6 @@
 	desc = "A cowboy hat made from brahmin hides."
 	icon_state = "brahmin_leather_cowboy_hat"
 	item_state = "brahmin_leather_cowboy_hat"
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat/Initialize()
@@ -97,7 +93,6 @@
 	icon_state = "rusted_cowboy"
 	item_state = "rusted_cowboy"
 	flags_inv = HIDEEARS|HIDEHAIR
-	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
 
 /obj/item/clothing/head/helmet/f13/rustedcowboyhat/Initialize()
 	. = ..()
@@ -122,14 +117,14 @@
 	desc = "It's a fancy two-tone metal helmet. It's been lined with additional plating and given a fresh coat of paint."
 	icon_state = "riderw"
 	item_state = "riderw"
-	armor = list("melee" = 55, "bullet" = 35, "laser" = 35, "energy" = 15, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0, "wound" = 10)
+	armor = list("tier" = 4, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 //Vault
 
 /obj/item/clothing/head/helmet/riot/vaultsec
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50, "wound" = 50, "wound" = 50)
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 45, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 	slowdown = 0.01
 
 //Old World Militaries
@@ -142,7 +137,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_cap"
 	item_state = "army_cap"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 	dynamic_hair_suffix = "+generic"
 
 /obj/item/clothing/head/f13/army/officer
@@ -161,7 +155,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_general"
 	item_state = "army_general"
-	armor = list("melee" = 27, "bullet" = 12, "laser" = 12, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/army/beret
 	name = "US Army beret"
@@ -170,7 +163,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_beret"
 	item_state = "army_beret"
-	armor = list("melee" = 27, "bullet" = 12, "laser" = 12, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/army/beret/airborne
 	name = "US Army airborne beret"
@@ -205,7 +197,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "chinese_soldier"
 	item_state = "chinese_soldier"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/chinese/officer
 	name = "PLA officer's cap"
@@ -225,7 +216,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_officer"
 	item_state = "police_officer"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/police/sergeant
 	name = "police campaign hat"
@@ -234,7 +224,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_sergeant"
 	item_state = "police_sergeant"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/police/lieutenant
 	name = "police lieutenant's cap"
@@ -243,7 +232,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_lieutenant"
 	item_state = "police_lieutenant"
-	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/police/chief
 	name = "police chief's cap"
@@ -252,7 +240,6 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "police_chief"
 	item_state = "police_chief"
-	armor = list("melee" = 27, "bullet" = 12, "laser" = 12, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 30)
 
 /obj/item/clothing/head/f13/police/trooper
 	name = "state police campaign hat"
@@ -261,4 +248,3 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "state_trooper"
 	item_state = "state_trooper"
-	armor = list("melee" = 27, "bullet" = 12, "laser" = 12, "energy" = 15, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 10, "acid" = 0, "wound" = 10)

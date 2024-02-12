@@ -31,8 +31,9 @@
 	return
 
 /obj/item/gun/ballistic/rocketlauncher
-	name = "\improper Rockwell BigBazooka"
-	desc = "A Rockwell BigBazooka rocket launcher, with the deluxe 3 lb. trigger."
+	name = "\improper 'Hammer' rocket launcher"
+	desc = "A rocket launcher, produced for the Green Mountain Boy contingent in the area. \
+	The boys had to get creative after the last of the depot's launchers were lost in combat."
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/rocketlauncher

@@ -22,6 +22,8 @@
 	var/heavy_metal = TRUE
 	var/harmful = TRUE //pacifism check for boolet, set to FALSE if bullet is non-lethal
 	var/is_pickable = TRUE
+	/// If this is true, the gun suffers heavily condition wise. Used primarily for junk ammunition.
+	var/condition_malus = 0
 
 /obj/item/ammo_casing/spent
 	name = "spent bullet casing"

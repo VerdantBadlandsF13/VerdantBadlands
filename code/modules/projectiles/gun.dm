@@ -144,12 +144,14 @@ ATTACHMENTS
 	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 
 	var/safety = 1
-	var/safe_delay = 5
+	var/safe_delay = 15
 	var/safety_audio = 'modular_badlands/code/modules/rp_misc/sound/weapon_safety.ogg'
 
 	var/condition = 1// Should I use conditions?
 	var/condition_lvl = 100// Automatically shoved to 100 on init, regardless.
 	var/condition_mul = 1// How quickly I decay. 0.25 is easy, 1 is hard.
+	var/randomize_condition_lvl = TRUE
+
 	var/can_jam = TRUE// CAN I jam?
 	var/cell_discharge = FALSE// Instead of a traditional jam, it eats additional cell charge.
 	var/jammed = FALSE// Am I jammed?
@@ -195,7 +197,16 @@ ATTACHMENTS
 	if(gun_light)
 		alight = new (src)
 	build_zooming()
-	safety = 1// Lock the safety.
+
+	if(condition)
+		if(randomize_condition_lvl)
+			condition_lvl = rand(1,100)
+			if(can_jam && randomize_condition_lvl && !cell_discharge)
+				jammed = rand(0,1)//Rather than TRUE or FALSE, but it works the same.
+		else
+			condition_lvl = initial(condition_lvl)
+
+	safety = rand(0,1)
 
 /obj/item/gun/Destroy()
 	if(istype(pin)) // could be a typepath if qdel init hint was used before parent
@@ -295,18 +306,22 @@ ATTACHMENTS
 /obj/item/gun/proc/shoot_with_empty_chamber(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>[dryfire_text]</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_jammed(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon is jammed! Alt-click to clear it!</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_broken(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>This weapon is broken!</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_while_safe(mob/living/user as mob|obj)
 	to_chat(user, "<span class='danger'>The weapon has its safety on! Ctrl-click to toggle.</span>")
 	playsound(src, dryfire_sound, 30, 1)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user, pointblank = FALSE, mob/pbtarget, message = 1, stam_cost = 0)
 	if(recoil)
@@ -318,8 +333,10 @@ ATTACHMENTS
 
 	if(suppressed)
 		playsound(user, fire_sound, 10, 1)
+		show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 	else
 		playsound(user, fire_sound, 50, 1)
+		show_sound_effect(src, soundicon = SFX_ICON_JAGGED)
 		if(message)
 			if(pointblank)
 				user.visible_message("<span class='danger'>[user] fires [src] point blank at [pbtarget]!</span>", null, null, COMBAT_MESSAGE_RANGE)
@@ -455,7 +472,10 @@ ATTACHMENTS
 				var/stam_cost = G.getstamcost(user)
 				addtimer(CALLBACK(G, /obj/item/gun.proc/process_fire, target, user, TRUE, params, null, bonus_spread, stam_cost), loop_counter)
 
-	condition_lvl = max(0, condition_lvl - (0.25 * condition_mul))
+	if(chambered.condition_malus)
+		condition_lvl = max(0, condition_lvl - (0.5 * condition_mul))
+	else
+		condition_lvl = max(0, condition_lvl - (0.25 * condition_mul))
 
 	var/stam_cost = getstamcost(user)
 
@@ -532,14 +552,17 @@ ATTACHMENTS
 		if(condition_lvl < 60)
 			if(prob(40 - (condition_lvl * 0.67)))
 				if(can_jam)
+					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
 	if(condition == 1)
 		if(user.special_l >= 1)
 			if(prob(1 - (user.special_l * 0.05)))
 				if(can_jam)
+					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
+// Intended to be cumulative. Stacked one after the other, if able.
 	if(user.special_s <= 6)
 		bonus_spread += 5
 
@@ -726,8 +749,9 @@ ATTACHMENTS
 		if(istype(I, /obj/item/repair_kit/weapon_repair_kit))
 			if(condition_lvl < 90)
 				if(do_after(user, 20, target = src))
-					to_chat(user, "<span class='notice'>You repaired your weapon.</span>")
-					condition_lvl = min(100, condition_lvl + 40)
+					to_chat(user, "<span class='notice'>You have repaired your weapon.</span>")
+					condition_lvl = initial(condition_lvl)
+					playsound(src.loc, "modular_badlands/code/modules/rp_misc/sound/interface/repair[rand(1,7)].ogg", 40, 0, 0)
 					qdel(I)
 			else
 				to_chat(user, "<span class='notice'>No need, the weapon is in good condition.</span>")
@@ -985,7 +1009,7 @@ ATTACHMENTS
 	..()
 
 /obj/item/gun/proc/zoom(mob/living/user, forced_zoom)
-	var/datum/hud/hud = user.hud_used
+//	var/datum/hud/hud = user.hud_used
 
 	if(!(user?.client))
 		return
@@ -998,7 +1022,7 @@ ATTACHMENTS
 		zoomed = !zoomed
 
 	if(zoomed)//if we need to be zoomed in
-		hud.show_hud(version = 3)
+//		hud.show_hud(version = 3)
 		user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		var/_x = 0
 		var/_y = 0
@@ -1019,7 +1043,7 @@ ATTACHMENTS
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message("<span class='notice'>[user] looks down the [src.scope_name] of [src].</span>", "<span class='notice'>You look down the [src.scope_name] of [src].</span>")
 	else
-		hud.show_hud(version = 1)
+//		hud.show_hud(version = 1)
 		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0

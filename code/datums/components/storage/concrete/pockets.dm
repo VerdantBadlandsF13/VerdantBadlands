@@ -15,6 +15,11 @@
 /datum/component/storage/concrete/pockets/huge
 	max_w_class = WEIGHT_CLASS_NORMAL
 
+/datum/component/storage/concrete/pockets/huge/rig
+	max_items = 4
+	max_w_class = WEIGHT_CLASS_NORMAL
+	rustle_sound = TRUE
+
 /datum/component/storage/concrete/pockets/small
 	max_items = 1
 	attack_hand_interact = FALSE
@@ -130,7 +135,7 @@
 	can_hold = GLOB.storage_hat_can_hold
 
 
-/datum/component/storage/concrete/pockets/bos/paladin/
+/datum/component/storage/concrete/pockets/bos/paladin
 	max_items = 4
 	max_w_class = WEIGHT_CLASS_NORMAL
 

@@ -1,17 +1,63 @@
+/*
+Originally from Coyote Bayou, a downstream of Sunset.
+Credit to them for their work. Specifically Superlagg, IIRC.
+A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Carl
+*/
+
 #define TURRET_STUN 0
 #define TURRET_LETHAL 1
 
 #define POPUP_ANIM_TIME 5
 #define POPDOWN_ANIM_TIME 5 //Be sure to change the icon animation at the same time or it'll look bad
 
-#define TURRET_FLAG_SHOOT_ALL_REACT		(1<<0)	// The turret gets pissed off and shoots at people nearby (unless they have sec access!)
-#define TURRET_FLAG_AUTH_WEAPONS		(1<<1)	// Checks if it can shoot people that have a weapon they aren't authorized to have
-#define TURRET_FLAG_SHOOT_CRIMINALS		(1<<2)	// Checks if it can shoot people that are wanted
-#define TURRET_FLAG_SHOOT_ALL 			(1<<3)  // The turret gets pissed off and shoots at people nearby (unless they have sec access!)
-#define TURRET_FLAG_SHOOT_ANOMALOUS 	(1<<4)  // Checks if it can shoot at unidentified lifeforms (ie xenos)
-#define TURRET_FLAG_SHOOT_UNSHIELDED	(1<<5)	// Checks if it can shoot people that aren't mindshielded and who arent heads
-#define TURRET_FLAG_SHOOT_BORGS			(1<<6)	// checks if it can shoot cyborgs
-#define TURRET_FLAG_SHOOT_HEADS			(1<<7)	// checks if it can shoot at heads of staff
+/// How frequently does the turret visibly swap targets?
+#define TURRET_LASER_COOLDOWN_TIME 1 SECONDS
+/// How frequently can the turret fire?
+#define TURRET_SHOOT_DELAY_BASE 3 SECONDS
+/// How frequently does the turret scan for new targets? Beeps if object given loud flag upon scan, too.
+#define TURRET_SCAN_RATE 2 SECONDS
+/// How much of a grace period do we give players, before hosing them with bullets?
+#define TURRET_PREFIRE_DELAY 2 SECONDS
+/// How frequently should we fire, when burst firing?
+#define TURRET_BURSTFIRE_DELAY 0.2 SECONDS
+
+/// Turret is napping and passively scanning the environment at its own pace
+#define TURRET_SLEEP_MODE "sleep_mode"
+/// Turret is in Alert Mode and actively shooting a visible target
+#define TURRET_ALERT_MODE "alert_mode"
+/// Turret is in Caution Mode and actively shooting the last place a target was
+#define TURRET_CAUTION_MODE "caution_mode"
+/// Turret is in Evasion Mode and actively passively (loudly) scanning the environment for targets
+#define TURRET_EVASION_MODE "evasion_mode"
+
+/// Turret procesing is OFF
+#define TURRET_PROCESS_OFF 0
+/// Turret processing is MACHINE
+#define TURRET_PROCESS_MACHINE 1
+/// Turret processing is FAST
+#define TURRET_PROCESS_FAST 2
+
+/// The turret becomes angy at whoever shoots it, regardless of other settings
+#define TF_SHOOT_REACTION (1<<0)
+/// The turret shoots at players
+#define TF_SHOOT_PLAYERS (1<<1)
+/// The turret shoots at wildlife (ghouls, , etc)
+#define TF_SHOOT_SIMPLE_ALL (1<<2)
+/// The turret shoots raiders
+#define TF_SHOOT_SIMPLE_HOSTILE (1<<3)
+/// The turret shoots robots (gutsies, handies)
+#define TF_SHOOT_ROBOTS (1<<4)
+/// Turret ignores faction checks and treats everything is allowed to shoot as hostile
+#define TF_IGNORE_FACTION (1<<5)
+/// Turret shines a laser at its target
+#define TF_USE_LASER_POINTER (1<<6)
+/// Turret stays quiet
+#define TF_BE_REALLY_LOUD (1<<7)
+
+/// Default utility flags
+#define TURRET_DEFAULT_UTILITY TF_USE_LASER_POINTER | TF_BE_REALLY_LOUD | TF_SHOOT_REACTION
+/// Default turret targets
+#define TURRET_DEFAULT_TARGET_FLAGS TF_SHOOT_PLAYERS | TF_SHOOT_SIMPLE_ALL | TF_SHOOT_SIMPLE_HOSTILE | TF_SHOOT_ROBOTS
 
 /obj/machinery/porta_turret
 	name = "turret"
@@ -20,15 +66,17 @@
 	layer = OBJ_LAYER
 	invisibility = INVISIBILITY_OBSERVER	//the turret is invisible if it's inside its cover
 	density = TRUE
-	desc = "A covered turret that shoots at its enemies."
-	use_power = IDLE_POWER_USE				//this turret uses and requires power
-	idle_power_usage = 50		//when inactive, this turret takes up constant 50 Equipment power
-	active_power_usage = 300	//when active, this turret takes up constant 300 Equipment power
-	req_access = list(ACCESS_SECURITY) /// Only people with Security access
-	power_channel = EQUIP	//drains power from the EQUIPMENT channel
-	max_integrity = 160		//the turret's health
+	desc = "An old pre-war turret that shoots at... stuff..."
+	use_power = FALSE //this turret does not use and require power
+	idle_power_usage = 50 //when inactive, this turret takes up constant 50 Equipment power
+	active_power_usage = 300 //when active, this turret takes up constant 300 Equipment power
+	req_access = list(ACCESS_LBJ) /// Only people of the sanctuary.
+	power_channel = EQUIP //drains power from the EQUIPMENT channel
+
+	max_integrity = 160 //the turret's health
 	integrity_failure = 0.5
-	armor = list("melee" = 50, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 90, "acid" = 90)
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 100, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
+
 	/// Base turret icon state
 	var/base_icon_state = "standard"
 	/// Scan range of the turret for locating targets
@@ -55,58 +103,105 @@
 	var/stun_projectile = null
 	/// Sound of stun projectile
 	var/stun_projectile_sound
-	/// Projectile to use in stun mode when the target is resting, if any
-	var/nonlethal_projectile
-	/// Sound of stun projectile wen the target is resting, optional
-	var/nonlethal_projectile_sound
 	/// Lethal mode projectile type
 	var/lethal_projectile = null
 	/// Sound of lethal projectile
 	var/lethal_projectile_sound
-	/// Power needed per shot
-	var/reqpower = 500
-	/// Will stay active
+	/// Will stay active - NOT USED FIX THIS AAAAAAAAAAAA
 	var/always_up = FALSE
 	/// Hides the cover
 	var/has_cover = TRUE
 	/// The cover that is covering this turret
 	var/obj/machinery/porta_turret_cover/cover = null
-	/// World.time the turret last fired
-	var/last_fired = 0
-	/// Ticks until next shot (1.5 ?)
-	var/shot_delay = 15
 	/// Turret flags about who is turret allowed to shoot
-	var/turret_flags = TURRET_FLAG_SHOOT_CRIMINALS | TURRET_FLAG_SHOOT_ANOMALOUS
+	var/turret_flags = TURRET_DEFAULT_TARGET_FLAGS | TURRET_DEFAULT_UTILITY
 	/// Determines if the turret is on
 	var/on = TRUE
 	/// Same faction mobs will never be shot at, no matter the other settings
-	var/list/faction = list("turret")
+	var/list/faction = list("turret", "wastebot")
 	/// The spark system, used for generating... sparks?
 	var/datum/effect_system/spark_spread/spark_system
 	/// Linked turret control panel of the turret
 	var/obj/machinery/turretid/cp = null
 	/// The turret will try to shoot from a turf in that direction when in a wall
 	var/wall_turret_direction
-	/// If the turret is manually controlled
-	var/manual_control = FALSE
-	/// Action button holder for quitting manual control
-	var/datum/action/turret_quit/quit_action
-	/// Action button holder for switching between turret modes when manually controlling
-	var/datum/action/turret_toggle/toggle_action
-	/// Mob that is remotely controlling the turret
-	var/mob/remote_controller
-	/// MISSING:
-	var/shot_stagger = 0
+	/// Only try to shoot people at this status or lower
+	var/maximum_valid_stat = /*UN*/CONSCIOUS
+	/// The laserpointer the turret uses' icon
+	var/icon/turret_pointer_icon = 'icons/obj/projectiles.dmi'
+	/// The laserpointer the turret uses
+	var/turret_pointer_state = "red_laser"
+	/// Time between being told there's a laser there
+	COOLDOWN_DECLARE(turret_laser_pointer_antispam)
+	/// Minimum time between shots
+	var/shot_delay = TURRET_SHOOT_DELAY_BASE
+	/// Cooldown for shooting
+	COOLDOWN_DECLARE(turret_refire_delay)
+	/// Minimum time between shots
+	var/prefire_delay = TURRET_PREFIRE_DELAY
+	/// Cooldown for shooting
+	COOLDOWN_DECLARE(turret_prefire_delay)
+	/// Number of "I scanned" beeps to make
+	var/scan_ping_max = 3
+	/// Number of "I scanned" beeps left to make
+	var/scan_pings_left = 0
+	/// Rate the turret will scan for targets
+	var/scan_rate = TURRET_SCAN_RATE
+	/// Number of bursts to make in caution mode
+	var/caution_burst_max = 3
+	/// Number of bursts left to make in caution mode
+	var/caution_bursts_left = 0
+	/// We're in caution mode and beeping every time we scan for something
+	var/active_scanning = FALSE
+	/// Time between scanning for targets
+	COOLDOWN_DECLARE(turret_scan_cooldown)
+	/// Noise it makes when it sees someone it doesnt like
+	var/target_sound = 'modular_badlands/code/modules/rp_misc/sound/turret_active_scan.ogg'
+	/// Noise it makes when it scans for targets while interested
+	var/scan_ping_sound = 'modular_badlands/code/modules/rp_misc/sound/turret_idle_scan.ogg'
+	/// Noise it makes when something activates it
+	var/wakeup_sound = 'modular_badlands/code/modules/rp_misc/sound/turret_movement.ogg'
+	/// Noise it makes when it gets bored and goes to sleep
+	var/sleep_sound = 'modular_badlands/code/modules/rp_misc/sound/turret_sleep.ogg'
+	/// Noise it makes when it gets interrupted by someone hitting it
+	var/interrupt_sound = 'modular_badlands/code/modules/rp_misc/sound/turret_alarm.ogg'
+	/// Are we awake?
+	var/awake = FALSE
+	/// The last target we had, so we can shoot while still trying to scan
+	var/datum/weakref/last_target
+	/// For when we can't see our last target, shoot where they were. Kinda obsess on it, too
+	var/datum/weakref/last_target_turf
+	/// Number of shots in a burst
+	var/burst_count = 1
+	/// Delay between burst shots
+	var/burst_delay = TURRET_BURSTFIRE_DELAY
+	/// Inaccuracy in degrees
+	var/shot_spread = 15
+	/// The bullet we'll use when we try to shoot. This will override the stun and lethal projectile!
+	var/obj/item/ammo_casing/casing_type_lethal
+	/// The bullet we'll use when we try to shoot. This will override the stun and lethal projectile!
+	var/obj/item/ammo_casing/casing_type_stun
+	/// Are we shooting?
+	var/am_currently_shooting
+	/// did we already drop our loot?
+	var/dropped_loot
+	/// What state are we in?
+	var/activity_state = TURRET_SLEEP_MODE
+	/// What processing state are we in?
+	var/processing_state
 
 /obj/machinery/porta_turret/Initialize()
 	. = ..()
 	if(!base)
 		base = src
+	turret_pointer_state = pick("red_laser","green_laser","blue_laser","purple_laser")
 	update_icon()
 	//Sets up a spark system
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	if(init_process)
+		processing_state = TURRET_PROCESS_MACHINE
 
 	setup()
 	if(has_cover)
@@ -130,14 +225,21 @@
 			popDown()
 
 /obj/machinery/porta_turret/proc/check_should_process()
-	if (datum_flags & DF_ISPROCESSING)
-		if (!on || !anchored || (stat & BROKEN) || !powered())
-			//end_processing()
-			STOP_PROCESSING(SSmachines, src)
+	if (!on || !anchored || (stat & BROKEN) || !powered())
+		STOP_PROCESSING(SSfastprocess, src)
+		STOP_PROCESSING(SSmachines, src)
+		processing_state = TURRET_PROCESS_OFF
+		return FALSE
+	if(activity_state == TURRET_SLEEP_MODE)
+		STOP_PROCESSING(SSfastprocess, src)
+		START_PROCESSING(SSmachines, src)
+		processing_state = TURRET_PROCESS_MACHINE
+		return TRUE
 	else
-		if (on && anchored && !(stat & BROKEN) && powered())
-			START_PROCESSING(SSmachines, src)
-			//begin_processing()
+		STOP_PROCESSING(SSmachines, src)
+		START_PROCESSING(SSfastprocess, src)
+		processing_state = TURRET_PROCESS_FAST
+		return TRUE
 
 /obj/machinery/porta_turret/update_icon_state()
 	if(!anchored)
@@ -159,6 +261,8 @@
 			icon_state = "[base_icon_state]_unpowered"
 
 /obj/machinery/porta_turret/proc/setup(obj/item/gun/turret_gun)
+	if(!stored_gun)
+		return
 	if(stored_gun)
 		qdel(stored_gun)
 		stored_gun = null
@@ -180,8 +284,6 @@
 	//optional properties
 	if(gun_properties["shot_delay"])
 		shot_delay = gun_properties["shot_delay"]
-	if(gun_properties["reqpower"])
-		reqpower = gun_properties["reqpower"]
 
 	update_icon()
 	return gun_properties
@@ -195,7 +297,6 @@
 		cp = null
 	QDEL_NULL(stored_gun)
 	QDEL_NULL(spark_system)
-	remove_control()
 	return ..()
 
 /obj/machinery/porta_turret/ui_interact(mob/user, datum/tgui/ui)
@@ -208,23 +309,14 @@
 	var/list/data = list(
 		"locked" = locked,
 		"on" = on,
-		"check_weapons" = turret_flags & TURRET_FLAG_AUTH_WEAPONS,
-		"neutralize_criminals" = turret_flags & TURRET_FLAG_SHOOT_CRIMINALS,
-		"neutralize_all" = turret_flags & TURRET_FLAG_SHOOT_ALL,
-		"neutralize_unidentified" = turret_flags & TURRET_FLAG_SHOOT_ANOMALOUS,
-		"neutralize_nonmindshielded" = turret_flags & TURRET_FLAG_SHOOT_UNSHIELDED,
-		"neutralize_cyborgs" = turret_flags & TURRET_FLAG_SHOOT_BORGS,
-		"ignore_heads" = turret_flags & TURRET_FLAG_SHOOT_HEADS,
-		"manual_control" = manual_control,
-		"silicon_user" = FALSE,
-		"allow_manual_control" = FALSE,
+		"turret_shoot_players" = turret_flags & TF_SHOOT_PLAYERS,
+		"turret_shoot_wildlife" = turret_flags & TF_SHOOT_SIMPLE_ALL,
+		"turret_shoot_raiders" = turret_flags & TF_SHOOT_SIMPLE_HOSTILE,
+		"turret_shoot_robots" = turret_flags & TF_SHOOT_ROBOTS,
+		"turret_shoot_ignore_faction" = turret_flags & TF_IGNORE_FACTION,
+		"turret_use_laser_pointer" = turret_flags & TF_USE_LASER_POINTER,
+		"turret_make_noise" = turret_flags & TF_BE_REALLY_LOUD,
 	)
-	if(issilicon(user))
-		data["silicon_user"] = TRUE
-		if(!manual_control)
-			var/mob/living/silicon/S = user
-			if(S.hack_software)
-				data["allow_manual_control"] = TRUE
 	return data
 
 /obj/machinery/porta_turret/ui_act(action, list/params)
@@ -236,35 +328,25 @@
 		if("power")
 			if(anchored)
 				toggle_on()
-				return TRUE
 			else
-				to_chat(usr, "<span class='warning'>It has to be secured first!</span>")
-		if("authweapon")
-			turret_flags ^= TURRET_FLAG_AUTH_WEAPONS
-			return TRUE
-		if("shootcriminals")
-			turret_flags ^= TURRET_FLAG_SHOOT_CRIMINALS
-			return TRUE
-		if("shootall")
-			turret_flags ^= TURRET_FLAG_SHOOT_ALL
-			return TRUE
-		if("checkxenos")
-			turret_flags ^= TURRET_FLAG_SHOOT_ANOMALOUS
-			return TRUE
-		if("checkloyal")
-			turret_flags ^= TURRET_FLAG_SHOOT_UNSHIELDED
-			return TRUE
-		if("shootborgs")
-			turret_flags ^= TURRET_FLAG_SHOOT_BORGS
-			return TRUE
-		if("shootheads")
-			turret_flags ^= TURRET_FLAG_SHOOT_HEADS
-			return TRUE
-		if("manual")
-			if(!issilicon(usr))
-				return
-			give_control(usr)
-			return TRUE
+				to_chat(usr, span_warning("It has to be secured first!"))
+				return TRUE
+		if("turret_return_shoot_players")
+			turret_flags ^= TF_SHOOT_PLAYERS
+		if("turret_return_shoot_wildlife")
+			turret_flags ^= TF_SHOOT_SIMPLE_ALL
+		if("turret_return_shoot_raiders")
+			turret_flags ^= TF_SHOOT_SIMPLE_HOSTILE
+		if("turret_return_shoot_robots")
+			turret_flags ^= TF_SHOOT_ROBOTS
+		if("turret_return_ignore_faction")
+			turret_flags ^= TF_IGNORE_FACTION
+		if("turret_return_use_laser_pointer")
+			turret_flags ^= TF_USE_LASER_POINTER
+		if("turret_return_make_noise")
+			turret_flags ^= TF_BE_REALLY_LOUD
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), "modular_badlands/code/modules/rp_misc/sound/access_accepted.ogg", 100, FALSE, 0, ignore_walls = TRUE)
 
 /obj/machinery/porta_turret/ui_host(mob/user)
 	if(has_cover && cover)
@@ -277,7 +359,6 @@
 	. = ..()
 	if(!anchored || (stat & BROKEN) || !powered())
 		update_icon()
-		remove_control()
 	check_should_process()
 
 /obj/machinery/porta_turret/attackby(obj/item/I, mob/user, params)
@@ -285,19 +366,9 @@
 		if(istype(I, /obj/item/crowbar))
 			//If the turret is destroyed, you can remove it with a crowbar to
 			//try and salvage its components
-			to_chat(user, "<span class='notice'>You begin prying the metal coverings off...</span>")
+			to_chat(user, span_notice("You begin prying the metal coverings off..."))
 			if(I.use_tool(src, user, 20))
-				if(prob(70))
-					if(stored_gun)
-						stored_gun.forceMove(loc)
-						stored_gun = null
-					to_chat(user, "<span class='notice'>You remove the turret and salvage some components.</span>")
-					if(prob(50))
-						new /obj/item/stack/sheet/metal(loc, rand(1,4))
-					if(prob(50))
-						new /obj/item/assembly/prox_sensor(loc)
-				else
-					to_chat(user, "<span class='notice'>You remove the turret but did not manage to salvage anything.</span>")
+				drop_loot(I, user)
 				qdel(src)
 				return
 
@@ -310,13 +381,13 @@
 			setAnchored(TRUE)
 			invisibility = INVISIBILITY_MAXIMUM
 			update_icon()
-			to_chat(user, "<span class='notice'>You secure the exterior bolts on the turret.</span>")
+			to_chat(user, span_notice("You secure the exterior bolts on the turret."))
 			if(has_cover)
 				cover = new /obj/machinery/porta_turret_cover(loc) //create a new turret. While this is handled in process(), this is to workaround a bug where the turret becomes invisible for a split second
 				cover.parent_turret = src //make the cover's parent src
 		else if(anchored)
 			setAnchored(FALSE)
-			to_chat(user, "<span class='notice'>You unsecure the exterior bolts on the turret.</span>")
+			to_chat(user, span_notice("You unsecure the exterior bolts on the turret."))
 			power_change()
 			invisibility = 0
 			qdel(cover) //deletes the cover, and the turret instance itself becomes its own cover.
@@ -325,23 +396,23 @@
 		//Behavior lock/unlock mangement
 		if(allowed(user))
 			locked = !locked
-			to_chat(user, "<span class='notice'>Controls are now [locked ? "locked" : "unlocked"].</span>")
+			to_chat(user, span_notice("Controls are now [locked ? "locked" : "unlocked"]."))
 		else
-			to_chat(user, "<span class='alert'>Access denied.</span>")
+			to_chat(user, span_alert("Access denied."))
 	else if(istype(I, /obj/item/multitool) && !locked)
 		if(!multitool_check_buffer(user, I))
 			return
 		var/obj/item/multitool/M = I
 		M.buffer = src
-		to_chat(user, "<span class='notice'>You add [src] to multitool buffer.</span>")
+		to_chat(user, span_notice("You add [src] to multitool buffer."))
 	else
 		return ..()
 
 /obj/machinery/porta_turret/emag_act(mob/user)
 	if(obj_flags & EMAGGED)
 		return
-	to_chat(user, "<span class='warning'>You short out [src]'s threat assessment circuits.</span>")
-	audible_message("<span class='hear'>[src] hums oddly...</span>")
+	to_chat(user, span_warning("You short out [src]'s threat assessment circuits."))
+	audible_message(span_hear("[src] hums oddly..."))
 	obj_flags |= EMAGGED
 	controllock = TRUE
 	toggle_on(FALSE) //turns off the turret temporarily
@@ -355,38 +426,65 @@
 	if (. & EMP_PROTECT_SELF)
 		return
 	if(on)
-		//if the turret is on, the EMP no matter how severe disables the turret for a while
-		//and scrambles its settings, with a slight chance of having an emag effect
 		if(prob(50))
-			turret_flags |= TURRET_FLAG_SHOOT_CRIMINALS
-		if(prob(50))
-			turret_flags |= TURRET_FLAG_AUTH_WEAPONS
-		if(prob(20))
-			turret_flags |= TURRET_FLAG_SHOOT_ALL // Shooting everyone is a pretty big deal, so it's least likely to get turned on
+			turret_flags |= TF_SHOOT_SIMPLE_ALL
 
 		toggle_on(FALSE)
-		remove_control()
 
 		addtimer(CALLBACK(src, .proc/toggle_on, TRUE), rand(60,600))
 
-/obj/machinery/porta_turret/take_damage(damage, damage_type = BRUTE, damage_flag = 0, sound_effect = 1)
+/obj/machinery/porta_turret/take_damage(damage, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, atom/attacked_by)
 	. = ..()
 	if(. && obj_integrity > 0) //damage received
-		if(prob(30))
-			spark_system.start()
-		if(on && !(turret_flags & TURRET_FLAG_SHOOT_ALL_REACT) && !(obj_flags & EMAGGED))
-			turret_flags |= TURRET_FLAG_SHOOT_ALL_REACT
-			addtimer(CALLBACK(src, .proc/reset_attacked), 60)
+		spark_system.start()
+		if(on && (turret_flags & TF_SHOOT_REACTION) && ismob(attacked_by))
+			var/mob/thing_hit_us = attacked_by
+			if(!in_faction(thing_hit_us) || CHECK_BITFIELD(turret_flags, TF_IGNORE_FACTION))
+				interrupt_and_set_to_alert(attacked_by)
 
-/obj/machinery/porta_turret/proc/reset_attacked()
-	turret_flags &= ~TURRET_FLAG_SHOOT_ALL_REACT
+/// dumps loot all over the place
+/obj/machinery/porta_turret/proc/drop_loot(obj/item/I, mob/user)
+	if(dropped_loot)
+		return
+	var/turf/right_here = get_turf(src)
+	if(!isturf(right_here))
+		return
+	if(user)
+		to_chat(user, span_notice("You remove the turret and salvage some components."))
+	if(stored_gun)
+		stored_gun.forceMove(right_here)
+		stored_gun = null
+	new /obj/item/stack/sheet/metal(right_here, rand(10,15))
+	new /obj/item/stack/crafting/metalparts(right_here, rand(2,3))
+	new /obj/item/stack/crafting/goodparts(right_here, rand(1,2))
+	new /obj/item/stack/crafting/electronicparts(right_here, rand(4,6))
+	new /obj/item/stack/cable_coil(right_here, rand(15,20))
+	if(prob(80))
+		new /obj/item/assembly/prox_sensor(right_here)
+	if(prob(80))
+		new /obj/item/assembly/prox_sensor(right_here)
+	var/num_salvage_to_make = 1
+	if(user && HAS_TRAIT(user, TRAIT_TECHNOPHREAK))
+		num_salvage_to_make++
+	for(var/loots in 1 to num_salvage_to_make)
+		switch(rand(1,10))
+			if(1 to 3)
+				new /obj/item/salvage/low(right_here)
+			if(4 to 6)
+				new /obj/item/salvage/tool(right_here)
+			if(7 to 10)
+				new /obj/item/salvage/high(right_here)
+	dropped_loot = TRUE
 
 /obj/machinery/porta_turret/deconstruct(disassembled = TRUE)
+	playsound(get_turf(src), 'modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak1.ogg', 80, 1, falloff = 10, ignore_walls = TRUE)
+	drop_loot(null, null)
 	qdel(src)
 
 /obj/machinery/porta_turret/obj_break(damage_flag)
 	. = ..()
 	if(.)
+		playsound(get_turf(src), 'modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak2.ogg', 80, 1, falloff = 10, ignore_walls = TRUE)
 		power_change()
 		invisibility = 0
 		spark_system.start()	//creates some sparks because they look cool
@@ -397,97 +495,247 @@
 	if(cover == null && anchored)	//if it has no cover and is anchored
 		if(stat & BROKEN)	//if the turret is borked
 			qdel(cover)	//delete its cover, assuming it has one. Workaround for a pesky little bug
+			return
 		else
 			if(has_cover)
 				cover = new /obj/machinery/porta_turret_cover(loc)	//if the turret has no cover and is anchored, give it a cover
 				cover.parent_turret = src	//assign the cover its parent_turret, which would be this (src)
 
-	if(!on || (stat & (NOPOWER|BROKEN)) || manual_control)
-		return PROCESS_KILL
+	if(!on || (stat & (NOPOWER|BROKEN)))
+		return
 
-	var/list/targets = list()
-	for(var/mob/A in view(scan_range, base))
-		if(A.invisibility > SEE_INVISIBLE_LIVING)
+	if(!check_should_process())
+		return
+	/// We dont have a target, look for targets. If we just got out of shooting, beep while scanning for a while
+	if(activity_state == TURRET_SLEEP_MODE || activity_state == TURRET_EVASION_MODE)
+		if(scan_for_targets())
+			change_activity_state(TURRET_ALERT_MODE)
+		else
+			return
+
+	/// We can see our target, start blasting
+	if(activity_state == TURRET_ALERT_MODE)
+		record_target_weakref(GET_WEAKREF(last_target)) // Update our target and turf's position every time we process
+		INVOKE_ASYNC(src, .proc/shine_laser_pointer) // lazer
+		if(!can_see_target()) // If we cant see the target, go into caution mode
+			change_activity_state(TURRET_CAUTION_MODE)
+		else
+			INVOKE_ASYNC(src, .proc/open_fire_on_target)
+
+	/// We lost sight of our target, shoot where we last saw them
+	if(activity_state == TURRET_CAUTION_MODE)
+		INVOKE_ASYNC(src, .proc/shine_laser_pointer)
+		INVOKE_ASYNC(src, .proc/open_fire_on_target)
+		if(!caution_bursts_left)
+			change_activity_state(TURRET_EVASION_MODE)
+
+/// Interrupts our current mode, and sets it to alert
+/// For when something hits it and it needs to retaliate
+/obj/machinery/porta_turret/proc/interrupt_and_set_to_alert(atom/assailant)
+	clear_targets()
+	record_target_weakref(assailant)
+	if(!last_target && !last_target_turf)
+		change_activity_state(TURRET_SLEEP_MODE, TRUE)
+		return
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), interrupt_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+	change_activity_state(TURRET_ALERT_MODE, TRUE)
+
+/// Interrupts our current mode, and sets it to evasion
+/// For when our target is downed
+/obj/machinery/porta_turret/proc/interrupt_and_set_to_evasion()
+	clear_targets()
+	change_activity_state(TURRET_EVASION_MODE, TRUE)
+
+/// Changes our mode to another, and does a thing
+/obj/machinery/porta_turret/proc/change_activity_state(new_state, force_it)
+	if(new_state == activity_state && !force_it)
+		return
+	switch(new_state)
+		if(TURRET_SLEEP_MODE)
+			enter_sleep_mode()
+		if(TURRET_ALERT_MODE)
+			enter_alert_mode()
+		if(TURRET_CAUTION_MODE)
+			enter_caution_mode()
+		if(TURRET_EVASION_MODE)
+			enter_evasion_mode()
+	activity_state = new_state
+	check_should_process()
+
+/// Clears the cooldowns =3
+/obj/machinery/porta_turret/proc/clear_cooldowns()
+	COOLDOWN_RESET(src, turret_laser_pointer_antispam)
+	COOLDOWN_RESET(src, turret_refire_delay)
+	COOLDOWN_RESET(src, turret_prefire_delay)
+	COOLDOWN_RESET(src, turret_scan_cooldown)
+
+/// Scans for targets. If we're in evasion mode, also beep
+/obj/machinery/porta_turret/proc/scan_for_targets()
+	if(COOLDOWN_TIMELEFT(src, turret_scan_cooldown))
+		return
+	COOLDOWN_START(src, turret_scan_cooldown, scan_rate)
+	if(activity_state == TURRET_EVASION_MODE)
+		if(scan_pings_left)
+			if(turret_flags & TF_BE_REALLY_LOUD)
+				playsound(get_turf(src), scan_ping_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+			scan_pings_left--
+		else
+			change_activity_state(TURRET_SLEEP_MODE)
+	if(activity_state == TURRET_ALERT_MODE || activity_state == TURRET_CAUTION_MODE)
+		return
+
+	for(var/mob/living/potential_target in oview(scan_range, base))
+		/// cant shoot whats invisible
+		if(potential_target.invisibility > SEE_INVISIBLE_LIVING)
 			continue
 
-		if(turret_flags & TURRET_FLAG_SHOOT_ANOMALOUS)//if it's set to check for simple animals
-			if(isanimal(A))
-				var/mob/living/simple_animal/SA = A
-				if(SA.stat || in_faction(SA)) //don't target if dead or in faction
-					continue
-				targets += SA
+		/// Ignore target above this stat.
+		if(potential_target.stat > maximum_valid_stat)
+			continue
+
+		// Ignore stamcritted targets.
+		if(IS_STAMCRIT(potential_target))
+			continue
+
+		/// If it cares about faction, and the thing's your faction, skip it
+		if(!(turret_flags & TF_IGNORE_FACTION))
+			if(in_faction(potential_target))
 				continue
 
-		if(issilicon(A))
-			var/mob/living/silicon/sillycone = A
+		/// If its got a client, add it
+		if(turret_flags & TF_SHOOT_PLAYERS)
+			if(potential_target.client)
+				record_target_weakref(potential_target)
+				return TRUE
 
-			if(ispAI(A))
-				continue
+		/// If it's a simple mob, add it. This includes hostiles.
+		if(turret_flags & TF_SHOOT_SIMPLE_ALL)
+			if(isanimal(potential_target))
+				record_target_weakref(potential_target)
+				return TRUE
 
-			if((turret_flags & TURRET_FLAG_SHOOT_BORGS) && sillycone.stat != DEAD && iscyborg(sillycone))
-				targets += sillycone
-				continue
+		/// If it's ONLY of the HOSTILE simple mob subpath, we add it.
+		if(turret_flags & TF_SHOOT_SIMPLE_HOSTILE)
+			if(ishostile(potential_target))
+				record_target_weakref(potential_target)
+				return TRUE
 
-			if(sillycone.stat || in_faction(sillycone))
-				continue
+		/// If if its a robot, add it
+		if(turret_flags & TF_SHOOT_ROBOTS)
+			if(issilicon(potential_target))
+				record_target_weakref(potential_target)
+				return TRUE
 
-			if(iscyborg(sillycone))
-				var/mob/living/silicon/robot/sillyconerobot = A
-				if(LAZYLEN(faction) && (ROLE_SYNDICATE in faction) && sillyconerobot.emagged == TRUE)
-					continue
+/// Can we see the target?
+/obj/machinery/porta_turret/proc/can_see_target()
+	if(!last_target)
+		return FALSE
+	var/atom/seeable_target = GET_WEAKREF(last_target)
+	if(!seeable_target)
+		return FALSE
+	for(var/turf/T in getline(src,seeable_target))
+		if(T.opacity)
+			return FALSE
+	return TRUE
 
-		else if(iscarbon(A))
-			var/mob/living/carbon/C = A
-			//If not emagged, only target carbons that can use items
-			if(mode != TURRET_LETHAL && (C.stat || C.handcuffed || !(C.mobility_flags & MOBILITY_USE)))
-				continue
+/// Enter alert mode!
+/obj/machinery/porta_turret/proc/enter_alert_mode()
+	clear_cooldowns()
+	COOLDOWN_START(src, turret_prefire_delay, prefire_delay)
+	awake = TRUE
 
-			//If emagged, target all but dead carbons
-			if(mode == TURRET_LETHAL && C.stat == DEAD)
-				continue
+	popUp()
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), target_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
 
-			//if the target is a human and not in our faction, analyze threat level
-			if(ishuman(C) && !in_faction(C))
+	var/mob/our_target = GET_WEAKREF(last_target)
 
-				if(assess_perp(C) >= 4)
-					targets += C
-			else if(turret_flags & TURRET_FLAG_SHOOT_ANOMALOUS) //non humans who are not simple animals (xenos etc)
-				if(!in_faction(C))
-					targets += C
+	if(!istype(our_target))
+		return
 
-	for(var/A in GLOB.mechas_list)
-		if((get_dist(A, base) < scan_range) && can_see(base, A, scan_range))
-			var/obj/mecha/Mech = A
-			if(Mech.occupant && !in_faction(Mech.occupant)) //If there is a user and they're not in our faction
-				if(assess_perp(Mech.occupant) >= 4)
-					targets += Mech
+	our_target.visible_message(
+		span_alert("[src] swivels its gun around to face <b>[our_target]</b>!"),
+		span_userdanger("[src] suddenly aims at you!"),
+		span_alert("You hear mechanical whirring!")
+		)
 
-	if((turret_flags & TURRET_FLAG_SHOOT_ANOMALOUS) && GLOB.blobs.len && (mode == TURRET_LETHAL))
-		for(var/obj/structure/blob/B in view(scan_range, base))
-			targets += B
+/// caution mode is mostly handled elsewhere
+/obj/machinery/porta_turret/proc/enter_caution_mode()
+	caution_bursts_left = caution_burst_max
+	return
 
-	if(targets.len)
-		tryToShootAt(targets)
-	else if(!always_up)
-		popDown() // no valid targets, close the cover
+/// Set up the beeps
+/obj/machinery/porta_turret/proc/enter_evasion_mode()
+	clear_cooldowns()
+	scan_pings_left = scan_ping_max
+	caution_bursts_left = 0
 
-/obj/machinery/porta_turret/proc/randomize_shot_stagger()
-	shot_stagger = rand(0, min(2 SECONDS, round(shot_delay/3, world.tick_lag)))
+	if(always_up)
+		visible_message(span_alert("[src] acquires a new target!"))
+	else
+		visible_message(span_alert("[src] deploys its active sensors!"))
 
-/obj/machinery/porta_turret/proc/tryToShootAt(list/atom/movable/targets)
-	while(targets.len > 0)
-		var/atom/movable/M = pick(targets)
-		targets -= M
-		if(target(M))
-			return 1
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), wakeup_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+
+/// telll everyone we're going to sleep
+/obj/machinery/porta_turret/proc/enter_sleep_mode()
+	clear_cooldowns()
+	clear_targets()
+	scan_pings_left = 0
+	awake = FALSE
+
+	popDown()
+	if(always_up)
+		visible_message(span_alert("[src] loses its target and goes into passive scanning mode!"))
+	else
+		visible_message(span_alert("[src] retracts its active sensors and goes into passive scanning mode!"))
+
+	if(turret_flags & TF_BE_REALLY_LOUD)
+		playsound(get_turf(src), sleep_sound, 100, FALSE, falloff = (scan_range + 5), ignore_walls = TRUE)
+
+/// clears our targets
+/obj/machinery/porta_turret/proc/clear_targets()
+	last_target = null
+	last_target_turf = null
+
+/// Points a laser at something
+/// Kinda ignores line of sight
+/obj/machinery/porta_turret/proc/shine_laser_pointer()
+	if(!(turret_flags & TF_USE_LASER_POINTER))
+		return
+	if(COOLDOWN_TIMELEFT(src, turret_laser_pointer_antispam))
+		return
+	var/turf/where_to_shine = get_turf(activity_state == TURRET_CAUTION_MODE ? GET_WEAKREF(last_target_turf) : GET_WEAKREF(last_target))
+	if(!isturf(where_to_shine))
+		return
+	var/image/I = image(turret_pointer_icon, where_to_shine, turret_pointer_state, -10)
+	I.pixel_x = rand(-5,5)
+	I.pixel_y = rand(-5,5)
+	flick_overlay_view(I, where_to_shine, TURRET_LASER_COOLDOWN_TIME*2)
+	COOLDOWN_START(src, turret_laser_pointer_antispam, TURRET_LASER_COOLDOWN_TIME)
 
 /obj/machinery/porta_turret/proc/popUp()	//pops the turret up
+
 	if(!anchored)
 		return
 	if(raising || raised)
 		return
 	if(stat & BROKEN)
 		return
+
+// Are we a tripod/always up? Skip some and return.
+	if(always_up)
+		invisibility = 0
+		raising = 1
+		sleep(POPUP_ANIM_TIME)
+		raising = 0
+		raised = 1
+		layer = MOB_LAYER
+		update_icon()
+		return
+
 	invisibility = 0
 	raising = 1
 	if(cover)
@@ -504,6 +752,17 @@
 		return
 	if(stat & BROKEN)
 		return
+
+// Are we a tripod/always up? Skip some and return.
+	if(always_up)
+		layer = OBJ_LAYER
+		raising = 1
+		sleep(POPDOWN_ANIM_TIME)
+		raising = 0
+		raised = 0
+		update_icon()
+		return
+
 	layer = OBJ_LAYER
 	raising = 1
 	if(cover)
@@ -516,196 +775,161 @@
 	invisibility = 2
 	update_icon()
 
-/obj/machinery/porta_turret/proc/assess_perp(mob/living/carbon/human/perp)
-	var/threatcount = 0	//the integer returned
-
-	if(obj_flags & EMAGGED)
-		return 10	//if emagged, always return 10.
-
-	if((turret_flags & (TURRET_FLAG_SHOOT_ALL | TURRET_FLAG_SHOOT_ALL_REACT)) && !allowed(perp))
-		//if the turret has been attacked or is angry, target all non-sec people
-		if(!allowed(perp))
-			return 10
-
-	if(turret_flags & TURRET_FLAG_AUTH_WEAPONS)	//check for weapon authorization
-		if(isnull(perp.wear_id) || istype(perp.wear_id.GetID(), /obj/item/card/id/syndicate))
-
-			if(allowed(perp)) //if the perp has security access, return 0
-				return 0
-			if(perp.is_holding_item_of_type(/obj/item/gun) ||  perp.is_holding_item_of_type(/obj/item/melee/baton))
-				threatcount += 4
-
-			if(istype(perp.belt, /obj/item/gun) || istype(perp.belt, /obj/item/melee/baton))
-				threatcount += 2
-
-	if(turret_flags & TURRET_FLAG_SHOOT_CRIMINALS)	//if the turret can check the records, check if they are set to *Arrest* on records
-		var/perpname = perp.get_face_name(perp.get_id_name())
-		var/datum/data/record/R = find_record("name", perpname, GLOB.data_core.security)
-		if(!R || (R.fields["criminal"] == "*Arrest*"))
-			threatcount += 4
-
-	if((turret_flags & TURRET_FLAG_SHOOT_UNSHIELDED) && (!HAS_TRAIT(perp, TRAIT_MINDSHIELD)))
-		threatcount += 4
-
-	// If we aren't shooting heads then return a threatcount of 0
-	if (!(turret_flags & TURRET_FLAG_SHOOT_HEADS) && (perp.get_assignment() in GLOB.command_positions))
-		return 0
-
-	return threatcount
-
+/// Checks if the target is in the turret's faction
 /obj/machinery/porta_turret/proc/in_faction(mob/target)
 	for(var/faction1 in faction)
 		if(faction1 in target.faction)
 			return TRUE
 	return FALSE
 
-/obj/machinery/porta_turret/proc/target(atom/movable/target)
-	if(target)
-		popUp()				//pop the turret up if it's not already up.
-		setDir(get_dir(base, target))//even if you can't shoot, follow the target
-		INVOKE_ASYNC(src, .proc/shootAt, target)
-		return 1
-	return
-
-/obj/machinery/porta_turret/proc/shootAt(atom/movable/target, stagger_enabled = FALSE)
-	if(!raised) //the turret has to be raised in order to fire - makes sense, right?
+/// Records our target's weakref, and their turf's weakref
+/// Defaults to whatever's being targetttttttttttttttttted
+/obj/machinery/porta_turret/proc/record_target_weakref(atom/new_target, just_turf)
+	if(!new_target)
+		new_target = GET_WEAKREF(last_target)
+	var/turf/target_turf = get_turf(new_target)
+	if(isturf(target_turf))
+		last_target_turf = WEAKREF(target_turf)
+	if(just_turf)
 		return
+	last_target = WEAKREF(new_target)
 
-	if(last_fired + shot_delay > world.time)
+/// Read our stored weakref targets, pick if we're aiming at the mob or their last turf
+/// then pass that to start_shooting to start shooting at it
+/// If passed a target, it'll try to shoot at that target. Mainly used for direct control
+/obj/machinery/porta_turret/proc/open_fire_on_target(atom/forced_target)
+	if(istype(forced_target))
+		record_target_weakref(forced_target)
+	if((!last_target && !last_target_turf))
+		return FALSE
+	if(COOLDOWN_TIMELEFT(src, turret_prefire_delay))
 		return
-	last_fired = world.time
+	if(COOLDOWN_TIMELEFT(src, turret_refire_delay))
+		return
+	if(am_currently_shooting)
+		return TRUE
+	var/turf/target_turf = get_turf(activity_state == TURRET_CAUTION_MODE ? GET_WEAKREF(last_target_turf) : GET_WEAKREF(last_target))
+	if(!istype(target_turf))
+		return FALSE
+	setDir(get_dir(base, target_turf)) //even if you can't shoot, follow the target
 
-	if(stagger_enabled)
-		randomize_shot_stagger()
-		sleep(shot_stagger)
-
-	var/turf/T = get_turf(src)
-	var/turf/U = get_turf(target)
-	if(!istype(T) || !istype(U))
+	var/turf/our_turf = get_turf(src)
+	if(!istype(our_turf))
 		return
 
 	//Wall turrets will try to find adjacent empty turf to shoot from to cover full arc
-	if(T.density)
+	if(our_turf.density)
 		if(wall_turret_direction)
-			var/turf/closer = get_step(T,wall_turret_direction)
-			if(istype(closer) && !is_blocked_turf(closer) && T.Adjacent(closer))
-				T = closer
+			var/turf/closer = get_step(our_turf,wall_turret_direction)
+			if(istype(closer) && !is_blocked_turf(closer) && our_turf.Adjacent(closer))
+				our_turf = closer
 		else
-			var/target_dir = get_dir(T,target)
+			var/target_dir = get_dir(our_turf,target_turf)
 			for(var/d in list(0,-45,45))
-				var/turf/closer = get_step(T,turn(target_dir,d))
-				if(istype(closer) && !is_blocked_turf(closer) && T.Adjacent(closer))
-					T = closer
+				var/turf/closer = get_step(our_turf,turn(target_dir,d))
+				if(istype(closer) && !is_blocked_turf(closer) && our_turf.Adjacent(closer))
+					our_turf = closer
 					break
 
 	update_icon()
-	var/obj/item/projectile/A
-	//any emagged turrets drains 2x power and uses a different projectile?
-	if(mode == TURRET_STUN)
-		var/mob/living/carbon/C = null
-		if(iscarbon(target))
-			C = target
-		if(nonlethal_projectile && C?.resting)
-			use_power(reqpower*0.5)
-			A = new nonlethal_projectile(T)
-			playsound(loc, nonlethal_projectile_sound, 75, 1)
+
+	COOLDOWN_START(src, turret_refire_delay, shot_delay)
+	am_currently_shooting = TRUE
+	for(var/burst in 1 to burst_count)
+		setDir(get_dir(base, target_turf))
+		if(shoot_at_target(target_turf, our_turf))
+			sleep(burst_delay)
 		else
-			use_power(reqpower)
-			A = new stun_projectile(T)
-			playsound(loc, stun_projectile_sound, 75, 1)
+			interrupt_and_set_to_evasion()
+			am_currently_shooting = FALSE
+			caution_bursts_left = 0
+			return FALSE
+	am_currently_shooting = FALSE
+	if(caution_bursts_left)
+		caution_bursts_left--
+	if(forced_target)
+		clear_targets()
+	return TRUE
+
+/// Fires one shot at the target -- but only if they're okay
+/// typically only fed a turf, so if nyou're gonna ncheck for nmobs, locate them on the turf
+/obj/machinery/porta_turret/proc/shoot_at_target(atom/movable/target, turf/our_turf)
+	if(!target || !our_turf)
+		return FALSE
+	target = turf_has_valid_target(get_turf(target))
+	if(!target)
+		return FALSE
+	if(mode == TURRET_STUN)
+		playsound(src, stun_projectile_sound)
 	else
-		use_power(reqpower * 2)
-		A = new lethal_projectile(T)
-		playsound(loc, lethal_projectile_sound, 75, TRUE)
+		playsound(src, lethal_projectile_sound)
 
+	var/the_spread = rand(-shot_spread, shot_spread)
+	if(casing_type_lethal)
+		var/obj/item/ammo_casing/casing
+		if(mode == TURRET_STUN)
+			casing = new casing_type_stun(our_turf)
+		else
+			casing = new casing_type_lethal(our_turf)
+		if(!casing)
+			return FALSE
+		casing.fire_casing(
+			target = target,
+			user = src,
+			params = null,
+			distro = shot_spread,
+			quiet = null,
+			zone_override = ran_zone(),
+			spread = the_spread,
+			fired_from = src
+			)
+		qdel(casing)
+	else
+		var/obj/item/projectile/turret_projectile
+		if(mode == TURRET_STUN)
+			turret_projectile = new stun_projectile(our_turf)
+		else
+			turret_projectile = new lethal_projectile(our_turf)
+		turret_projectile.preparePixelProjectile(target, our_turf, spread = the_spread)
+		turret_projectile.firer = src
+		turret_projectile.fired_from = src
+		turret_projectile.fire()
+	return TRUE
 
-	//Shooting Code:
-	A.preparePixelProjectile(target, T)
-	A.firer = src
-	A.fired_from = src
-	A.fire()
-	return A
+/// Checks if someone on the turf is okay to shoot
+/// Returns true if someone in the turf is alive and well
+/// Also returns true if nobody's on the turf
+/// otherwise it returns false and interrupts the shooting loop
+/// oh yeah it returns the mob on the turf if it finds a shootable one
+/// and the turf if nobody's on the turf
+/// basically throw a corpse at the dot to make it think ur dead
+/obj/machinery/porta_turret/proc/turf_has_valid_target(turf/the_turf)
+	var/turf_has_nobody_on_it = TRUE
+	for(var/mob/living/person in the_turf.contents)
+		turf_has_nobody_on_it = FALSE
+		if(person.health <= 0)
+			continue // Stop stop, its probably dead!
+		if(person.stat > maximum_valid_stat)
+			continue // Stop stop, he's likely dead!
+		if(IS_STAMCRIT(person))
+			continue // Stop stop, he's stamcritted to shit!
+		return person
+	return turf_has_nobody_on_it ? the_turf : null
 
-/obj/machinery/porta_turret/proc/setState(on, mode, shoot_cyborgs)
+/obj/machinery/porta_turret/proc/setState(on, mode)
 	if(controllock)
 		return
 
-	shoot_cyborgs ? (turret_flags |= TURRET_FLAG_SHOOT_BORGS) : (turret_flags &= ~TURRET_FLAG_SHOOT_BORGS)
 	toggle_on(on)
 	src.mode = mode
 	power_change()
 
-/datum/action/turret_toggle
-	name = "Toggle Mode"
-	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
-	button_icon_state = "mech_cycle_equip_off"
-
-/datum/action/turret_toggle/Trigger()
-	var/obj/machinery/porta_turret/P = target
-	if(!istype(P))
-		return
-	P.setState(P.on,!P.mode)
-
-/datum/action/turret_quit
-	name = "Release Control"
-	icon_icon = 'icons/mob/actions/actions_mecha.dmi'
-	button_icon_state = "mech_eject"
-
-/datum/action/turret_quit/Trigger()
-	var/obj/machinery/porta_turret/P = target
-	if(!istype(P))
-		return
-	P.remove_control(FALSE)
-
-/obj/machinery/porta_turret/proc/give_control(mob/A)
-	if(manual_control || !can_interact(A))
-		return FALSE
-	remote_controller = A
-	if(!quit_action)
-		quit_action = new(src)
-	quit_action.Grant(remote_controller)
-	if(!toggle_action)
-		toggle_action = new(src)
-	toggle_action.Grant(remote_controller)
-	remote_controller.reset_perspective(src)
-	remote_controller.click_intercept = src
-	manual_control = TRUE
-	always_up = TRUE
-	popUp()
-	return TRUE
-
-/obj/machinery/porta_turret/proc/remove_control(warning_message = TRUE)
-	if(!manual_control)
-		return FALSE
-	if(remote_controller)
-		if(warning_message)
-			to_chat(remote_controller, "<span class='warning'>Your uplink to [src] has been severed!</span>")
-		quit_action.Remove(remote_controller)
-		toggle_action.Remove(remote_controller)
-		remote_controller.click_intercept = null
-		remote_controller.reset_perspective()
-	always_up = initial(always_up)
-	manual_control = FALSE
-	remote_controller = null
-	return TRUE
-
-/obj/machinery/porta_turret/proc/InterceptClickOn(mob/living/caller, params, atom/A)
-	if(!manual_control)
-		return FALSE
-	if(!can_interact(caller))
-		remove_control()
-		return FALSE
-	log_combat(caller,A,"fired with manual turret control at")
-	target(A)
-	return TRUE
-
-/obj/machinery/porta_turret/syndicate
+/obj/machinery/porta_turret/example
 	installation = null
 	always_up = 1
 	use_power = NO_POWER_USE
 	has_cover = 0
 	scan_range = 9
-	req_access = list(ACCESS_SYNDICATE)
 	mode = TURRET_LETHAL
 	stun_projectile = /obj/item/projectile/bullet
 	lethal_projectile = /obj/item/projectile/bullet
@@ -713,18 +937,14 @@
 	stun_projectile_sound = 'sound/weapons/gunshot.ogg'
 	icon_state = "syndie_off"
 	base_icon_state = "syndie"
-	faction = list(ROLE_SYNDICATE)
 	desc = "A ballistic machine gun auto-turret."
 
-/obj/machinery/porta_turret/syndicate/ComponentInitialize()
+/obj/machinery/porta_turret/example/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
 
-/obj/machinery/porta_turret/syndicate/setup()
+/obj/machinery/porta_turret/example/setup()
 	return
-
-/obj/machinery/porta_turret/syndicate/assess_perp(mob/living/carbon/human/perp)
-	return 10 //Syndicate turrets shoot everything not in their faction
 
 ////////////////////////
 //Turret Control Panel//
@@ -736,7 +956,7 @@
 	icon = 'icons/obj/machines/turret_control.dmi'
 	icon_state = "control_standby"
 	density = FALSE
-	req_access = list(ACCESS_AI_UPLOAD)
+	req_access = list(ACCESS_LBJ)
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	/// Variable dictating if linked turrets are active and will shoot targets
 	var/enabled = TRUE
@@ -748,8 +968,6 @@
 	var/control_area = null
 	/// AI is unable to use this machine if set to TRUE
 	var/ailock = FALSE
-	/// Variable dictating if linked turrets will shoot cyborgs
-	var/shoot_cyborgs = FALSE
 	/// List of all linked turrets
 	var/list/turrets = list()
 
@@ -799,7 +1017,7 @@
 		var/obj/item/multitool/M = I
 		if(M.buffer && istype(M.buffer, /obj/machinery/porta_turret))
 			turrets |= M.buffer
-			to_chat(user, "<span class='notice'>You link \the [M.buffer] with \the [src].</span>")
+			to_chat(user, span_notice("You link \the [M.buffer] with \the [src]."))
 			return
 
 	if (issilicon(user))
@@ -808,18 +1026,18 @@
 	if ( get_dist(src, user) == 0 )		// trying to unlock the interface
 		if (allowed(usr))
 			if(obj_flags & EMAGGED)
-				to_chat(user, "<span class='warning'>The turret control is unresponsive!</span>")
+				to_chat(user, span_warning("The turret control is unresponsive!"))
 				return
 
 			locked = !locked
-			to_chat(user, "<span class='notice'>You [ locked ? "lock" : "unlock"] the panel.</span>")
+			to_chat(user, span_notice("You [ locked ? "lock" : "unlock"] the panel."))
 		else
-			to_chat(user, "<span class='alert'>Access denied.</span>")
+			to_chat(user, span_alert("Access denied."))
 
 /obj/machinery/turretid/emag_act(mob/user)
 	if(obj_flags & EMAGGED)
 		return
-	to_chat(user, "<span class='notice'>You short out the turret controls' access analysis module.</span>")
+	to_chat(user, span_notice("You short out the turret controls' access analysis module."))
 	obj_flags |= EMAGGED
 	locked = FALSE
 
@@ -827,7 +1045,7 @@
 	if(!ailock || IsAdminGhost(user))
 		return attack_hand(user)
 	else
-		to_chat(user, "<span class='warning'>There seems to be a firewall preventing you from accessing this device!</span>")
+		to_chat(user, span_warning("There seems to be a firewall preventing you from accessing this device!"))
 
 /obj/machinery/turretid/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -841,7 +1059,6 @@
 	data["siliconUser"] = hasSiliconAccessInArea(user) || IsAdminGhost(user)
 	data["enabled"] = enabled
 	data["lethal"] = lethal
-	data["shootCyborgs"] = shoot_cyborgs
 	return data
 
 /obj/machinery/turretid/ui_act(action, list/params)
@@ -851,10 +1068,10 @@
 
 	switch(action)
 		if("lock")
-			if(!hasSiliconAccessInArea(usr) || IsAdminGhost(usr))
+			if(!hasSiliconAccessInArea(usr) && !IsAdminGhost(usr))
 				return
 			if((obj_flags & EMAGGED) || (stat & BROKEN))
-				to_chat(usr, "<span class='warning'>The turret control is unresponsive!</span>")
+				to_chat(usr, span_warning("The turret control is unresponsive!"))
 				return
 			locked = !locked
 			return TRUE
@@ -863,9 +1080,6 @@
 			return TRUE
 		if("mode")
 			toggle_lethal(usr)
-			return TRUE
-		if("shoot_silicons")
-			shoot_silicons(usr)
 			return TRUE
 
 /obj/machinery/turretid/proc/toggle_lethal(mob/user)
@@ -880,15 +1094,9 @@
 	log_combat(user, src, "[enabled ? "enabled" : "disabled"]")
 	updateTurrets()
 
-/obj/machinery/turretid/proc/shoot_silicons(mob/user)
-	shoot_cyborgs = !shoot_cyborgs
-	add_hiddenprint(user)
-	log_combat(user, src, "[shoot_cyborgs ? "Shooting Borgs" : "Not Shooting Borgs"]")
-	updateTurrets()
-
 /obj/machinery/turretid/proc/updateTurrets()
 	for (var/obj/machinery/porta_turret/aTurret in turrets)
-		aTurret.setState(enabled, lethal, shoot_cyborgs)
+		aTurret.setState(enabled, lethal)
 	update_icon()
 
 /obj/machinery/turretid/update_icon_state()
@@ -946,3 +1154,28 @@
 
 /obj/item/gun/energy/e_gun/turret/get_turret_properties()
 	. = ..()
+
+/* * * * * * * * * * * *
+ * Fallout 13 turrets  *
+ * * * * * * * * * * * */
+
+/// Generic 9mm hates-everything turret
+/obj/machinery/porta_turret/f13
+	name = "old autoturret"
+	icon = 'icons/obj/turrets.dmi'
+	icon_state = "syndie_off"
+	base_icon_state = "syndie"
+	desc = "An old automatic gun turret chambered in 9mm. Would rather to be left alone to ponder how it's still shooting after all these years."
+	density = TRUE
+	max_integrity = 160
+	integrity_failure = 0.5
+	always_up = TRUE
+	has_cover = FALSE
+	scan_range = 9
+	mode = TURRET_LETHAL
+	installation = null
+	turret_flags = TURRET_DEFAULT_TARGET_FLAGS | TURRET_DEFAULT_UTILITY
+	stun_projectile = /obj/item/projectile/bullet/c9mm
+	lethal_projectile = /obj/item/projectile/bullet/c9mm
+	lethal_projectile_sound = 'sound/f13weapons/9mm.ogg'
+	stun_projectile_sound = 'sound/f13weapons/9mm.ogg'

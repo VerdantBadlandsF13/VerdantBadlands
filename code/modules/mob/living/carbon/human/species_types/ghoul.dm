@@ -11,8 +11,8 @@
 	species_traits = list(HAIR,FACEHAIR,HAS_BONE,NOGENITALS, NOBLOOD)
 
 	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
-	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER,
-	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH, TRAIT_LIMBATTACHMENT)
+	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_NOHUNGER, TRAIT_NOTHIRST,
+	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH)
 
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	punchstunthreshold = 9
@@ -115,6 +115,15 @@
 		H.apply_status_effect(/datum/status_effect/ghoulheal)
 	else
 		H.remove_status_effect(/datum/status_effect/ghoulheal)
+//Temp until we get them set up properly to use rads instead.
+	if(H.nutrition < NUTRITION_LEVEL_FED)
+		H.nutrition = NUTRITION_LEVEL_FED
+	if(H.nutrition > NUTRITION_LEVEL_FED)
+		H.nutrition = NUTRITION_LEVEL_FED
+	if(H.water < THIRST_LEVEL_FULL)
+		H.water = THIRST_LEVEL_FULL
+	if(H.water > THIRST_LEVEL_FULL)
+		H.water = THIRST_LEVEL_FULL
 
 /datum/species/ghoul/glowing
 	name = "Glowing Ghoul"
@@ -153,7 +162,11 @@
 	default_color = "00FF00"
 	limbs_id = "human"
 	species_traits = list(HAIR,FACEHAIR,HAS_BONE, NOBLOOD,MUTCOLORS,EYECOLOR,LIPS,HORNCOLOR,WINGCOLOR)
-	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT, TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_LIMBATTACHMENT, TRAIT_FAKEDEATH)
+
+	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
+	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_NOHUNGER, TRAIT_NOTHIRST,
+	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH)
+
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BEAST
 	mutant_bodyparts = list("mcolor" = "FFFFFF","mcolor2" = "FFFFFF","mcolor3" = "FFFFFF", "mam_snouts" = "Husky", "mam_tail" = "Husky", "mam_ears" = "Husky", "deco_wings" = "None",
 						"mam_body_markings" = "Husky", "taur" = "None", "horns" = "None", "legs" = "Plantigrade", "meat_type" = "Mammalian")

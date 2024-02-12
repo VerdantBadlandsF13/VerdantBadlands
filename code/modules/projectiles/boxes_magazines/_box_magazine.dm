@@ -30,7 +30,6 @@
 		for (var/material in custom_materials)
 			var/material_amount = custom_materials[material]
 			LAZYSET(base_cost, material, (material_amount * 0.10))
-
 			material_amount *= 0.90 // 10% for the container
 			material_amount /= max_ammo
 			LAZYSET(bullet_cost, material, material_amount)

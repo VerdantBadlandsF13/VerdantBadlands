@@ -5,8 +5,6 @@ I really, really don't want to do it this way. Forgive me.
 /turf/open/indestructible/ground/bl
 	icon = 'modular_badlands/code/modules/environment/icons/bl_turf.dmi'
 	icon_state = "ERROR"
-	has_base_range = FALSE// Nadda. Not for the moment.
-	spillover_flags = TURF_HAS_EDGES
 	// Desert tile copypaste.
 	var/dug = FALSE
 	var/pit_sand = 1

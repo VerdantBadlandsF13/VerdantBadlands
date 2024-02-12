@@ -9,6 +9,12 @@
 			input.weak_reference = new /datum/weakref(input)
 		return input.weak_reference
 
+// TODO: Deprecate this if not expanded upon use wise.
+// It's only used for the turrets as of current.- Carl
+/proc/GET_WEAKREF(datum/weakref/input)
+	if(istype(input, /datum/weakref) && !QDELETED(input))
+		return input.resolve()
+
 /datum/proc/create_weakref() //Forced creation for admin proccalls
 	return WEAKREF(src)
 

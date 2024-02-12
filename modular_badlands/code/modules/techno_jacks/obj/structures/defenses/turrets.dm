@@ -13,7 +13,7 @@ Woe, ballistic wounds be upon ye.
 	max_integrity = 650
 	obj_integrity = 650
 
-	shot_delay = 1// :)
+	burst_count = 12// :)
 
 	req_access = list(ACCESS_LBJ)
 	mode = TURRET_LETHAL
@@ -25,16 +25,6 @@ Woe, ballistic wounds be upon ye.
 	icon_state = "syndie_off"
 	base_icon_state = "syndie"
 	faction = list(FACTION_LBJ)
-
-/obj/machinery/porta_turret/lbj/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
-
-/obj/machinery/porta_turret/lbj/setup()
-	return
-
-/obj/machinery/porta_turret/lbj/assess_perp(mob/living/carbon/human/perp)
-	return 10
 
 /obj/machinery/porta_turret/lbj/hologram
 	name = "hologram"

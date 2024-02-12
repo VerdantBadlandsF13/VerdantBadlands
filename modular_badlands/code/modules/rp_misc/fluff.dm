@@ -6,6 +6,8 @@
 		playsound(src, mask_sound, 50, 1)
 
 /mob/living/carbon/human/proc/handle_deathdoor_sound()
+	if(isrobotic(src))
+		return
 	var/deathdoor_sound = "modular_badlands/code/modules/rp_misc/sound/gore/death/deadgasp[rand(1,5)].ogg"
 	playsound(src, deathdoor_sound, 50, 1)
 
@@ -13,14 +15,14 @@
 /mob/living/carbon/proc/handle_blood_drip_sound()
 	var/drip_sound = "modular_badlands/code/modules/rp_misc/sound/gore/blood[rand(1,6)].ogg"
 	playsound(src, drip_sound, 50, 1)
-
+/*
 // UNUSED START
 // General radio audio. Perhaps extend to other things.
 // Radio fluff. Audio from IB. Initial code without modification from SR(I think???).
-/obj/item/radio/talk_into(atom/movable/M, message, channel, list/spans, datum/language/language)
+/obj/item/radio/proc/radio_vacant()
 	var/radiosound = "modular_badlands/code/modules/rp_misc/sound/radio/transmit/radio[rand(1,4)].ogg"
 	if(radiosound && listening)
-		playsound(M, radiosound, rand(20, 30))
+		playsound(src, radiosound, rand(20, 30))
 	. = ..()
 
 // Receiving a message provides feedback.
@@ -29,7 +31,7 @@
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	playsound(src, radrec_sound, rand(20, 30))
 // UNUSED END
-
+*/
 // Tuning the channel provides feedback.
 // Hooked into tuning, rather than a piece of it like 'talk_into'.
 /obj/item/radio/proc/play_change_freq()
@@ -47,6 +49,8 @@ Ignore it, if possible.
 // Audio for breathing, when stamina is low.
 // TODO: Extend breathing audio to standard states, not just low stamina?
 /mob/living/carbon/proc/handle_stamina_sounds(mob/living/M)
+	if(isrobotic(src))
+		return
 	if(world.time < last_breath)
 		return
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
@@ -80,7 +84,10 @@ Ignore it, if possible.
 Mob audio for catching fire.
 Easier to have it here.
 */
+
 /mob/living/carbon/proc/handle_incineration(mob/living/M)
+	if(isrobotic(src))
+		return
 	var/incineration_sound
 	if(src.gender == FEMALE)
 		incineration_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
@@ -322,6 +329,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifedrop.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metaldrop.ogg", 95, 0)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 // Grabbing.
 /obj/item/pickup()
@@ -348,6 +356,7 @@ General audio for grabbing and dropping items.
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/knifepickup.ogg", 95, 0)
 			if(9)
 				playsound(src, "modular_badlands/code/modules/rp_misc/sound/pickdown/metalpickup.ogg", 95, 0)
+	show_sound_effect(src, soundicon = SFX_ICON_SMALL)
 
 /obj/item/reagent_containers/food/drinks/pickup()
 	. = ..()

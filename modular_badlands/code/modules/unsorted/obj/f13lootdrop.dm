@@ -57,7 +57,6 @@
 		/obj/item/gun/ballistic/rifle/mosin, // Yes. The shitstick is civilian class.
 		/obj/item/gun/ballistic/automatic/m1garand,
 		/obj/item/gun/ballistic/automatic/rangemaster, // TAKE A LOOK AT - I consider this Civilian, through it may be extremely good for the 'civilian' stuff.
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_shotgun
@@ -103,7 +102,6 @@
 		/obj/item/gun/ballistic/automatic/m1garand,
 		/obj/item/gun/ballistic/automatic/rangemaster,
 		/obj/item/gun/ballistic/shotgun/hunting,
-
 	)
 
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_melee
@@ -174,7 +172,7 @@
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advshotgun
 	name = "mil advshotgun"
 	loot = list(
-		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead_noalt,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
 	)
@@ -206,7 +204,7 @@
 		/obj/item/gun/ballistic/automatic/bozar,
 		/obj/item/gun/ballistic/automatic/m72,
 		/obj/item/gun/ballistic/rifle/mag/antimateriel,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead_noalt,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
 	)
@@ -264,7 +262,7 @@
 		/obj/item/gun/ballistic/automatic/bozar,
 		/obj/item/gun/ballistic/automatic/m72,
 		/obj/item/gun/ballistic/rifle/mag/antimateriel,
-		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead,
+		/obj/item/gun/ballistic/shotgun/automatic/combat/neostead_noalt,
 		/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller,
 		/obj/item/gun/ballistic/automatic/shotgun/pancor,
 		/obj/item/gun/ballistic/automatic/pistol/beretta,

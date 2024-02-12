@@ -49,3 +49,4 @@
 	damage = 45
 	armour_penetration = 0.65
 	wound_bonus = 60
+	power = 0//Removes the zap to other targets.

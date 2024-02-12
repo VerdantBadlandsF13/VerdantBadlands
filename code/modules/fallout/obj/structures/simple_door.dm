@@ -88,6 +88,7 @@
 	density = 0
 	icon_state = "[door_type]open"
 	layer = OPEN_DOOR_LAYER
+	show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
 
 /obj/structure/simple_door/proc/Close(animate)
 	playsound(src.loc, close_sound, 30, 0, 0)
@@ -101,6 +102,7 @@
 	density = 1
 	moving = 0
 	layer = CLOSED_DOOR_LAYER
+	show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
 
 /* can crowbar off a lock, to force a door open. This is overriden in airlock so shouldnt be an issue */
 /obj/structure/simple_door/proc/try_to_crowbar(obj/item/I, mob/user)

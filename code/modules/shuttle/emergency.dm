@@ -460,6 +460,10 @@
 				setTimer(SSshuttle.emergencyEscapeTime * engine_coeff)
 				priority_announce("The train has resumed its journey. Estimate [timeLeft(600)] minutes until the train arrives at the target destination.", null, null, "Vault-Tec")
 
+				for(var/mob/M in GLOB.player_list)
+					if(!isnewplayer(M) && M.can_hear() && (M.client.prefs.toggles & SOUND_ANNOUNCEMENTS))
+						SEND_SOUND(M, 'modular_badlands/code/modules/rp_misc/sound/special/roundendmusic.ogg')
+
 		if(SHUTTLE_STRANDED)
 			SSshuttle.checkHostileEnvironment()
 

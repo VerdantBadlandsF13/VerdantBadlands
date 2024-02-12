@@ -1,6 +1,6 @@
 /datum/job/dfs
 	department_flag = DFS
-	selection_color = "#2f556b"
+	selection_color = "#966c61"
 	faction = FACTION_DFS
 	exp_type = EXP_TYPE_DFS
 
@@ -62,8 +62,8 @@
 /datum/job/dfs/advisor
 	title = "DFS Advisor"
 	flag = F13DFSADVISOR
-	total_positions = 0// From 1
-	spawn_positions = 0// From 1
+	total_positions = 1
+	spawn_positions = 1
 	description = "The highest authority in Dry Fields Security.  \
 	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading their troops directly in battle or while on patrol."
 	supervisors = "Morals."
@@ -90,8 +90,8 @@
 /datum/job/dfs/enforcer
 	title = "DFS Enforcer"
 	flag = F13DFSENFORCER
-	total_positions = 0// From 1
-	spawn_positions = 0// From 1
+	total_positions = 1
+	spawn_positions = 1
 	description = "Stays near the compound to ensure nobody gets in or out without verification. \
 	Guards prisoners when applicable, stops infighting and otherwise keeps the compound secure."
 	supervisors = "Advisor."
@@ -137,8 +137,8 @@
 /datum/job/dfs/agent
 	title = "DFS Agent"
 	flag = F13DFSAGENT
-	total_positions = 0// From 2
-	spawn_positions = 0// From 2
+	total_positions = 2
+	spawn_positions = 2
 	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
 	supervisors = "Enforcer."
 	outfit = /datum/outfit/job/dfs/agent
@@ -152,8 +152,8 @@
 /datum/job/dfs/regular
 	title = "DFS Regular"
 	flag = F13DFSREGULAR
-	total_positions = 0// From 4
-	spawn_positions = 0// From 4
+	total_positions = 4
+	spawn_positions = 4
 	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
 	supervisors = "Agent."
 	outfit = /datum/outfit/job/dfs/regular
@@ -167,8 +167,8 @@
 /datum/job/dfs/grunt
 	title = "DFS Grunt"
 	flag = F13DFSGRUNT
-	total_positions = 0// From -1
-	spawn_positions = 0// From -1
+	total_positions = -1
+	spawn_positions = -1
 	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
 	supervisors = "Regular."
 	outfit = /datum/outfit/job/dfs/grunt

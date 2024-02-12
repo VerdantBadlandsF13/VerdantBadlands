@@ -395,17 +395,19 @@
 
 /obj/item/gun/ballistic/automatic/shotgun/pancor
 	name = "Pancor Jackhammer"
-	desc = "The Jackhammer, despite its name, is an easy to control shotgun, even when fired on full automatic. The popular bullpup design, which places the magazine behind the trigger, makes the weapon well balanced & easy to control." //Nod to Fallout 2 in the description :)
+	desc = "The Jackhammer, despite its name, is an easy to control shotgun, even when fired on full automatic. \
+	The popular bullpup design, which places the magazine behind the trigger, makes the weapon well balanced & easy to control. \
+	As an aside, it's an absolute pain to reload."
 	icon_state = "pancor"
 	item_state = "cshotgun1"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/shotgunequip.ogg'
 	mag_type = /obj/item/ammo_box/magazine/d12g
 	is_automatic = TRUE
-	autofire_shot_delay = 3.55
-	fire_delay = 2.85
+	autofire_shot_delay = 2
+	fire_delay = 1.50
 	recoil = 1.35
 	automatic = 1
-	pb_knockback = 1
+	pb_knockback = 2
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY

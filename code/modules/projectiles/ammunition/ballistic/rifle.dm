@@ -11,6 +11,12 @@
 	desc = "A .308 sporting bullet casing."
 	projectile_type = /obj/item/projectile/bullet/a762/a308
 
+/obj/item/ammo_casing/a762/junk
+	name = "hand loaded 7.62 FMJ casing"
+	desc = "A hand loaded bullet casing. Will cause additional wear on firearms."
+	projectile_type = /obj/item/projectile/bullet/a762/junk
+	condition_malus = 1
+
 // 5.56mm
 /obj/item/ammo_casing/a556
 	name = "5.56mm FMJ bullet casing"
@@ -22,6 +28,12 @@
 	name = ".223 bullet casing"
 	desc = "A .223 bullet casing."
 	projectile_type = /obj/item/projectile/bullet/a556/a223
+
+/obj/item/ammo_casing/a556/junk
+	name = "hand loaded 5.56mm FMJ casing"
+	desc = "A hand loaded bullet casing. Will cause additional wear on firearms."
+	projectile_type = /obj/item/projectile/bullet/a556/junk
+	condition_malus = 1
 
 //5mm
 /obj/item/ammo_casing/m5mm

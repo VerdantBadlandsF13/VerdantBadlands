@@ -248,7 +248,7 @@
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis."
 	icon_state = "assaultron"
 	icon_living = "assaultron"
-	gender = FEMALE //Pffffffffffffffffffffff
+	gender = FEMALE
 	icon_dead = "gib7"
 	health = 200
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC

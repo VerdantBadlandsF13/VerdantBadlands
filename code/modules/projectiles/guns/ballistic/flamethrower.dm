@@ -112,7 +112,7 @@
 	casing_ejector = FALSE
 	item_flags = SLOWS_WHILE_IN_HAND
 	can_jam = 0
-	special_weapon = TRUE
+	condition_mul = 2
 	var/obj/item/m2flamethrowertank/ammo_pack
 
 /obj/item/gun/ballistic/m2flamethrower/Initialize()
@@ -143,7 +143,7 @@
 			ammo_pack.overheat += burst_size
 			..()
 		else
-			to_chat(user, "The flamethrower is extremely hot! You shouldn't fire it anymore or it might blow up!")
+			to_chat(user, "The pilot light is sputtering! Give it some time, champ!")
 
 /obj/item/gun/ballistic/m2flamethrower/afterattack(atom/target, mob/living/user, flag, params)
 	if(!ammo_pack || ammo_pack.loc != user)

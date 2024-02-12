@@ -42,6 +42,7 @@
 #define VOICEBOX_DISABLED 		(1<<8)	//The voicebox is currently turned off.
 #define IGNORE_HAT_TOSS			(1<<9)	//Hats with negative effects when worn (i.e the tinfoil hat).
 #define SCAN_REAGENTS			(1<<10)	// Allows helmets and glasses to scan reagents.
+#define GAS_FILTERING			(1<<11)	// Allows for a mask to use filters.
 
 // Flags for the organ_flags var on /obj/item/organ
 

@@ -2801,6 +2801,16 @@
 	smooth = 1
 	},
 /area/f13/bl/gmb)
+"mY" = (
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowvertical";
+	desc = "A handmade window frame with some glass in it. It's a bit dirty, but you can see well enough through it.";
+	name = "window"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland/bl/dfs)
 "mZ" = (
 /obj/structure/railing{
 	dir = 4;
@@ -3466,6 +3476,16 @@
 "pP" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/village)
+"pR" = (
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowvertical";
+	desc = "A handmade window frame with some glass in it. It's a bit dirty, but you can see well enough through it.";
+	name = "window"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/bl/dfs)
 "pU" = (
 /obj/structure/table/booth,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
@@ -9612,6 +9632,15 @@
 	},
 /turf/open/floor/plating,
 /area/f13/building/mall)
+"Ts" = (
+/obj/structure/window/fulltile/ruins{
+	name = "window";
+	desc = "A handmade window frame with some glass in it. It's a bit dirty, but you can see well enough through it."
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/wasteland/bl/dfs)
 "Tt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
@@ -38247,10 +38276,10 @@ mq
 mq
 GZ
 SU
-lC
-lC
-lC
-lC
+pR
+pR
+pR
+pR
 SU
 iN
 iN
@@ -45563,8 +45592,8 @@ SU
 SU
 SU
 yf
-yf
-yf
+mY
+mY
 yf
 yf
 iN
@@ -46480,7 +46509,7 @@ mq
 mq
 mq
 mq
-yf
+Ts
 iN
 iN
 iN
@@ -46937,7 +46966,7 @@ AE
 AE
 ke
 mq
-yf
+Ts
 iN
 iN
 iN
@@ -47394,7 +47423,7 @@ iN
 iN
 tI
 mq
-yf
+Ts
 iN
 iN
 iN
@@ -47851,7 +47880,7 @@ yQ
 yQ
 iZ
 mq
-yf
+Ts
 iN
 iN
 iN
@@ -48308,7 +48337,7 @@ mq
 mq
 mq
 mq
-yf
+Ts
 iN
 iN
 iN
@@ -49215,12 +49244,12 @@ jm
 jm
 yf
 yf
-yf
-yf
-yf
-yf
-yf
-yf
+mY
+mY
+mY
+mY
+mY
+mY
 yf
 yf
 iN

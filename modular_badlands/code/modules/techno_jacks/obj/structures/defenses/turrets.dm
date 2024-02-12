@@ -26,13 +26,6 @@ Woe, ballistic wounds be upon ye.
 	base_icon_state = "syndie"
 	faction = list(FACTION_LBJ)
 
-/obj/machinery/porta_turret/lbj/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES)
-
-/obj/machinery/porta_turret/lbj/setup()
-	return
-
 /obj/machinery/porta_turret/lbj/hologram
 	name = "hologram"
 	stun_projectile = /obj/item/projectile/beam/laser/pistol/stun

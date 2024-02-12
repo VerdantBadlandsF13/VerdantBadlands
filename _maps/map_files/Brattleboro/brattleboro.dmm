@@ -2010,7 +2010,8 @@
 /obj/machinery/button/door{
 	id = "gaybabyjail";
 	pixel_y = -32;
-	name = "interior gate control"
+	name = "interior gate control";
+	req_access_txt = "146"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -8207,7 +8208,8 @@
 "eRi" = (
 /obj/machinery/button/door{
 	id = "retardgay";
-	pixel_y = -32
+	pixel_y = -32;
+	req_access_txt = "146"
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -14283,7 +14285,8 @@
 /obj/machinery/button/door{
 	id = "gaybabyjail";
 	pixel_y = 32;
-	name = "interior gate control"
+	name = "interior gate control";
+	req_access_txt = "146"
 	},
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
@@ -18177,6 +18180,13 @@
 	name = "floor"
 	},
 /area/f13/village)
+"lrQ" = (
+/obj/structure/destructible/hobo_barrel/lit{
+	pixel_y = 22;
+	density = 0
+	},
+/turf/open/indestructible/ground/bl/outside/gravel,
+/area/f13/bl/gmb)
 "lrU" = (
 /obj/machinery/microwave/stove,
 /obj/effect/decal/cleanable/dirt,
@@ -21385,7 +21395,8 @@
 "nGp" = (
 /obj/machinery/button/door{
 	pixel_y = -32;
-	id = "cummander"
+	id = "cummander";
+	req_access_txt = "146"
 	},
 /obj/machinery/light,
 /turf/open/floor/f13{
@@ -22452,7 +22463,8 @@
 "omW" = (
 /obj/machinery/button/door{
 	pixel_y = 32;
-	id = "cummander"
+	id = "cummander";
+	req_access_txt = "146"
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
@@ -23410,17 +23422,6 @@
 	dir = 8
 	},
 /area/f13/wasteland/bl/gmb)
-"oRB" = (
-/obj/structure/destructible/hobo_barrel/lit{
-	pixel_y = 22;
-	pixel_x = 16;
-	density = 0
-	},
-/turf/open/indestructible/ground/bl/outside/gravel{
-	icon_state = "graveldirt3";
-	dir = 8
-	},
-/area/f13/bl/gmb)
 "oRC" = (
 /obj/machinery/door/unpowered/securedoor/gmb_door,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -23788,7 +23789,8 @@
 /obj/machinery/button/door{
 	id = "eepyplace2";
 	pixel_y = -32;
-	name = "interior gate control"
+	name = "interior gate control";
+	req_access_txt = "146"
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -23961,6 +23963,17 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"pgL" = (
+/obj/machinery/button/door{
+	id = "ranks";
+	pixel_y = 32;
+	pixel_x = 32;
+	req_access_txt = "146"
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bl/dfs)
 "pho" = (
 /obj/effect/decal/marking,
 /turf/open/indestructible/ground/outside/road{
@@ -25156,7 +25169,8 @@
 /obj/machinery/button/door{
 	id = "eepyplace";
 	name = "interior gate control";
-	pixel_x = 32
+	pixel_x = 32;
+	req_access_txt = "146"
 	},
 /turf/open/floor/f13{
 	icon_state = "redrustyfull"
@@ -25650,7 +25664,8 @@
 "qpn" = (
 /obj/machinery/button/door{
 	id = "ranks";
-	pixel_y = -32
+	pixel_y = -32;
+	req_access_txt = "146"
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -29275,10 +29290,6 @@
 	},
 /area/f13/building/mall)
 "sHl" = (
-/obj/machinery/button/door{
-	id = "ranks";
-	pixel_y = 32
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -32711,7 +32722,8 @@
 /obj/machinery/button/door{
 	id = "eepyplace";
 	pixel_y = 32;
-	name = "interior gate control"
+	name = "interior gate control";
+	req_access_txt = "146"
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom0"
@@ -34180,7 +34192,8 @@
 /obj/machinery/button/door{
 	id = "eepyplace2";
 	pixel_y = 32;
-	name = "interior gate control"
+	name = "interior gate control";
+	req_access_txt = "146"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -34813,6 +34826,9 @@
 	icon_state = "floordirty"
 	},
 /area/f13/village)
+"wjn" = (
+/turf/closed/indestructible/f13/matrix,
+/area/f13/bl/gmb)
 "wjx" = (
 /obj/structure/nest/mirelurk,
 /turf/open/indestructible/ground/bl/outside/mud,
@@ -37659,6 +37675,9 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"xTB" = (
+/turf/closed/wall/f13/sunset/brick_small_dark,
+/area/f13/caves)
 "xTQ" = (
 /obj/structure/table/wood,
 /obj/item/seeds/onion,
@@ -42246,9 +42265,9 @@ tso
 fwb
 fwb
 fwb
-fwb
-fwb
-fwb
+xTB
+oMJ
+oMJ
 oMJ
 oMJ
 oMJ
@@ -42703,11 +42722,11 @@ fwb
 fwb
 fwb
 fwb
-fwb
-fwb
-fwb
-fwb
-fwb
+xTB
+oMJ
+oMJ
+oMJ
+oMJ
 oMJ
 oMJ
 fwb
@@ -43160,12 +43179,12 @@ fxI
 fxI
 fxI
 fwb
-fwb
-fwb
-fwb
-fwb
-fwb
-fwb
+xTB
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
 oMJ
 oMJ
 fwb
@@ -43617,13 +43636,13 @@ fxI
 fxI
 fxI
 fxI
-fxI
-fwb
-fwb
-fwb
-fwb
-fwb
-fwb
+xTB
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
 oMJ
 oMJ
 fwb
@@ -44074,14 +44093,14 @@ fxI
 fxI
 fxI
 fxI
-fxI
-fxI
-fwb
-fwb
-fwb
-fwb
-fwb
-fwb
+xTB
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
+oMJ
 oMJ
 oMJ
 fwb
@@ -44531,15 +44550,15 @@ fxI
 fxI
 nCZ
 nCZ
-nCZ
-nCZ
-nCZ
-nCZ
-nCZ
-nCZ
-nCZ
-nCZ
-fwb
+iEP
+iEP
+wjn
+wjn
+iEP
+iEP
+iEP
+iEP
+xTB
 oMJ
 fwb
 fwb
@@ -44989,10 +45008,10 @@ fxI
 nCZ
 jbK
 rZz
-nCZ
+iEP
 sPi
-oRB
-nCZ
+dgR
+iEP
 rZz
 yjT
 nCZ
@@ -47276,7 +47295,7 @@ nCZ
 nCZ
 nCZ
 wvE
-wvE
+lrQ
 nCZ
 nCZ
 nCZ
@@ -67120,7 +67139,7 @@ vAF
 vAF
 xAV
 eCS
-eCS
+pgL
 eCS
 eCS
 kHy

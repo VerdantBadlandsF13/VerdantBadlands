@@ -12,7 +12,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "grass[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_grass_meadow
@@ -33,7 +33,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "grass_dead[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_dead_meadow
@@ -54,7 +54,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "grass_swamp[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_swamp
@@ -75,7 +75,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "grass_taiga[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_taiga
@@ -96,7 +96,7 @@
 
 	if(!((locate(/obj/structure) in src) || (locate(/obj/machinery) in src)))
 		plantGrass()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "grass_badlands[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_badlands
@@ -117,7 +117,7 @@
 
 /turf/open/indestructible/ground/bl/outside/dirt/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "dirt[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/dirt_tracks
@@ -126,7 +126,7 @@
 
 /obj/effect/overlay/bl_turf/dirt_tracks/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "dirttrack[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/dirt
@@ -139,7 +139,7 @@
 
 /turf/open/indestructible/ground/bl/dirt/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "dirt[rand(0,3)]"
 
 // GRAVEL
@@ -154,7 +154,7 @@
 
 /turf/open/indestructible/ground/bl/outside/gravel/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "gravel[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/gravel
@@ -168,7 +168,7 @@
 
 /turf/open/indestructible/ground/bl/gravel/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "gravel[rand(0,3)]"
 
 // MUD
@@ -183,7 +183,7 @@
 
 /turf/open/indestructible/ground/bl/outside/mud/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "mud[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/mud
@@ -197,7 +197,7 @@
 
 /turf/open/indestructible/ground/bl/mud/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "mud[rand(0,3)]"
 
 // SAND
@@ -212,7 +212,7 @@
 
 /turf/open/indestructible/ground/bl/outside/sand/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "sand[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_sand
@@ -230,7 +230,7 @@
 
 /turf/open/indestructible/ground/bl/outside/stone/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "stone[rand(0,3)]"
 
 /turf/open/indestructible/ground/bl/stone
@@ -243,7 +243,7 @@
 
 /turf/open/indestructible/ground/bl/stone/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "stone[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/rocks
@@ -252,7 +252,7 @@
 
 /obj/effect/overlay/bl_turf/rocks/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "rocks[rand(0,7)]"
 
 // CLAY
@@ -266,7 +266,7 @@
 
 /turf/open/indestructible/ground/bl/outside/clay/Initialize()
 	. = ..()
-	if(!initial(icon_state))
+	if(initial(icon_state))
 		icon_state = "clay[rand(0,3)]"
 
 /obj/effect/overlay/bl_turf/bl_clay

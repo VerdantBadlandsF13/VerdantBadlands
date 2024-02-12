@@ -1,12 +1,11 @@
 /*
 Arc Welders.
-TODO: Add the sound loop, when equipped.
+TODO: Add the sound loop, when equipped. Also, backpack.
 */
 /obj/item/gun/energy/arcwelder
 	name = "\improper Arc Welder"
 	desc = "An industrial welding tool, repurposed some time after the Great War. <br>\
 	This weapon, while powerful, uses the incredibly rare electron charge pack. Utilise it sparingly."
-
 	icon = 'modular_badlands/code/modules/unsorted/icons/weapons_64x32.dmi'
 	mob_overlay_icon = 'modular_badlands/code/modules/unsorted/icons/backslot_weapon.dmi'
 	lefthand_file = 'modular_badlands/code/modules/unsorted/icons/items_lefthand.dmi'

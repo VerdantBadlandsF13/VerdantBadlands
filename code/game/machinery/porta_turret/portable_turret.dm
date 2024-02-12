@@ -881,9 +881,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 			quiet = null,
 			zone_override = ran_zone(),
 			spread = the_spread,
-			damage_multiplier = null,
-			penetration_multiplier = null,
-			projectile_speed_multiplier = null,
 			fired_from = src
 			)
 		qdel(casing)

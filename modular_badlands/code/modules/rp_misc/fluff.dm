@@ -15,7 +15,7 @@
 /mob/living/carbon/proc/handle_blood_drip_sound()
 	var/drip_sound = "modular_badlands/code/modules/rp_misc/sound/gore/blood[rand(1,6)].ogg"
 	playsound(src, drip_sound, 50, 1)
-
+/*
 // UNUSED START
 // General radio audio. Perhaps extend to other things.
 // Radio fluff. Audio from IB. Initial code without modification from SR(I think???).
@@ -31,7 +31,7 @@
 	var/radrec_sound = "modular_badlands/code/modules/rp_misc/sound/radio/receive/radio[rand(1,4)].ogg"
 	playsound(src, radrec_sound, rand(20, 30))
 // UNUSED END
-
+*/
 // Tuning the channel provides feedback.
 // Hooked into tuning, rather than a piece of it like 'talk_into'.
 /obj/item/radio/proc/play_change_freq()

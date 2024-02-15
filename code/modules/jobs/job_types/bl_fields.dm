@@ -73,6 +73,10 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
+	loadout_options = list(
+	/datum/outfit/loadout/advisor/brute,
+	/datum/outfit/loadout/advisor/suave)
+
 /datum/outfit/job/dfs/advisor
 	name = "DFS Advisor"
 	jobtype = /datum/job/dfs/advisor
@@ -85,6 +89,19 @@
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)
+
+/datum/outfit/loadout/advisor/brute
+	name = "Brute"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
+	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
+	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+
+/datum/outfit/loadout/advisor/suave
+	name = "Suave"
+	r_hand = /obj/item/m2flamethrowertank
+	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 
 // DFS Enforcer
 /datum/job/dfs/enforcer
@@ -104,7 +121,7 @@
 	loadout_options = list(
 	/datum/outfit/loadout/enforcer/taskmaster,
 	/datum/outfit/loadout/enforcer/peacemaker,
-	/datum/outfit/loadout/enforcer/enforcer)
+	/datum/outfit/loadout/enforcer/bouncer)
 
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
@@ -127,8 +144,8 @@
 	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
 	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 
-/datum/outfit/loadout/enforcer/enforcer
-	name = "Enforcer"
+/datum/outfit/loadout/enforcer/bouncer
+	name = "Bouncer"
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	suit = /obj/item/clothing/suit/armored/f13/medium/combat/mk2
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2
@@ -144,9 +161,26 @@
 	outfit = /datum/outfit/job/dfs/agent
 	exp_requirements = 240
 
+	loadout_options = list(
+	/datum/outfit/loadout/agent/brute,
+	/datum/outfit/loadout/agent/suave)
+
 /datum/outfit/job/dfs/agent
 	name = "DFS Agent"
 	jobtype = /datum/job/dfs/agent
+
+/datum/outfit/loadout/agent/brute
+	name = "Brute"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
+	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
+	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+
+/datum/outfit/loadout/agent/suave
+	name = "Suave"
+	r_hand = /obj/item/m2flamethrowertank
+	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -159,9 +193,26 @@
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
+	loadout_options = list(
+	/datum/outfit/loadout/regular/brute,
+	/datum/outfit/loadout/regular/suave)
+
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
+
+/datum/outfit/loadout/regular/brute
+	name = "Brute"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
+	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
+	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+
+/datum/outfit/loadout/regular/suave
+	name = "Suave"
+	r_hand = /obj/item/m2flamethrowertank
+	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 
 //DFS Grunt
 /datum/job/dfs/grunt
@@ -175,6 +226,23 @@
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
 
+	loadout_options = list(
+	/datum/outfit/loadout/regular/brute,
+	/datum/outfit/loadout/regular/suave)
+
 /datum/outfit/job/dfs/grunt
 	name = "DFS Grunt"
 	jobtype = /datum/job/dfs/grunt
+
+/datum/outfit/loadout/grunt/brute
+	name = "Brute"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
+	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
+	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+
+/datum/outfit/loadout/grunt/suave
+	name = "Suave"
+	r_hand = /obj/item/m2flamethrowertank
+	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm

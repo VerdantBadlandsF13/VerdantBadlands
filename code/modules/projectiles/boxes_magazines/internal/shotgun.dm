@@ -1,6 +1,6 @@
 /obj/item/ammo_box/magazine/internal/shot
 	name = "shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	caliber = "shotgun"
 	max_ammo = 4
 	multiload = 0
@@ -16,12 +16,12 @@
 		return ..()
 
 /obj/item/ammo_box/magazine/internal/shot/trench
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 5
 
 /obj/item/ammo_box/magazine/internal/shot/tube
 	name = "dual feed shotgun internal tube"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/shot/tube_noalt
@@ -30,21 +30,21 @@
 	max_ammo = 12
 
 /obj/item/ammo_box/magazine/internal/shot/lethal
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 
 /obj/item/ammo_box/magazine/internal/shot/com
 	name = "combat shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/shot/com/compact
 	name = "compact combat shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 4
 
 /obj/item/ammo_box/magazine/internal/shot/com/citykiller
 	name = "city killer shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/internal/shot/dual
@@ -53,11 +53,11 @@
 
 /obj/item/ammo_box/magazine/internal/shot/dual/simple
 	name = "double-barrel shotgun internal magazine (simple)"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 
 /obj/item/ammo_box/magazine/internal/shot/improvised
 	name = "improvised shotgun internal magazine"
-	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
 	max_ammo = 1
 
 /obj/item/ammo_box/magazine/internal/shot/police

@@ -117,14 +117,14 @@
 	S.status = SOUND_UPDATE
 	SEND_SOUND(src, S)
 
-/client/proc/playtitlemusic(vol = 85)
+/client/proc/playtitlemusic(vol = 35)//From 85
 	if(!SSticker.login_music) // add to queue, wait for SSticker init to set the login music
 		SSticker.login_music_queue[src] = vol
 		return
 	if(prefs?.toggles & SOUND_LOBBY)
 		SEND_SOUND(src, sound(SSticker.login_music, repeat = 0, wait = 0, volume = vol, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
 
-/client/proc/playbeginmusic(vol = 75)
+/client/proc/playbeginmusic(vol = 25)//From 75
 
 	SEND_SOUND(src, sound(SSticker.begin_music, repeat = 0, wait = 0, volume = vol, channel = CHANNEL_LOBBYMUSIC))
 

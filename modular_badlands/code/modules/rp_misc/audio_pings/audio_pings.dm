@@ -32,7 +32,7 @@ These can be found in 'defines\sound.dm', L88 onwards.
 		clients_to_show -= source.client
 
 	var/image/I = image('modular_badlands/code/modules/rp_misc/audio_pings/icons/effects.dmi', loc = T, icon_state = soundicon)
-	I.plane = FIELD_OF_VISION_VISUAL_PLANE//CHAT_PLANE//
+	I.plane = CHAT_PLANE
 	I.layer = CHAT_LAYER
 
 /*

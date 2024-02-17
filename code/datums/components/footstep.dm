@@ -60,6 +60,11 @@
 			playsound(T, 'sound/effects/footstep/crawl1.ogg', 15 * volume)
 		return
 
+	if(LM.special_a >= 6)
+		show_sound_effect(T, LM, soundicon = SFX_ICON_SMALL)
+	else
+		show_sound_effect(T, LM)
+
 	if(HAS_TRAIT(LM, TRAIT_SILENT_STEP))
 		return
 
@@ -83,8 +88,7 @@
 	return T
 
 /datum/component/footstep/proc/play_simplestep()
-	var/mob/living/carbon/human/P = parent
-	var/turf/open/T = get_turf(P)
+	var/turf/open/T = prepare_step()
 	if(!T)
 		return
 	if(isfile(footstep_sounds) || istext(footstep_sounds))
@@ -106,8 +110,7 @@
 	show_sound_effect(get_turf(src), soundicon = SFX_ICON_SMALL)
 
 /datum/component/footstep/proc/play_humanstep()
-	var/mob/living/carbon/human/P = parent
-	var/turf/open/T = get_turf(P)
+	var/turf/open/T = prepare_step()
 	if(!T)
 		return
 	var/mob/living/carbon/human/H = parent
@@ -120,26 +123,20 @@
 			if(FOOTSTEP_MOB_CLAW)
 				turf_footstep = T.clawfootstep
 				L = GLOB.clawfootstep
-				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_BAREFOOT)
 				turf_footstep = T.barefootstep
 				L = GLOB.barefootstep
-				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_HEAVY)
 				turf_footstep = T.heavyfootstep
 				L = GLOB.heavyfootstep
-				show_sound_effect(T, soundicon = SFX_ICON_JAGGED)
 			if(FOOTSTEP_MOB_SHOE)
 				turf_footstep = T.footstep
 				L = GLOB.footstep
-				show_sound_effect(T, src)
 			if(FOOTSTEP_MOB_SLIME)
 				playsound(T, 'sound/effects/footstep/slime1.ogg', 50 * volume)
-				show_sound_effect(T, soundicon = SFX_ICON_SMALL)
 				return
 			if(FOOTSTEP_MOB_CRAWL)
 				playsound(T, 'sound/effects/footstep/crawl1.ogg', 50 * volume)
-				show_sound_effect(T, soundicon = SFX_ICON_SMALL)
 				return
 		special = TRUE
 	else

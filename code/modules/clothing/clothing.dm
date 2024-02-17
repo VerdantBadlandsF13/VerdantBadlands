@@ -65,6 +65,8 @@
 	var/list/armor_list = list()
 	///These are armor values that protect the clothing, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/durability_list = list()
+	///These are areas that the clothing actually covers, so it can be shown in the print out.
+	var/list/protection_list = list()
 
 	var/armor_durability = 100
 	var/repair_kit = /obj/item/repair_kit/sewingkit
@@ -323,6 +325,53 @@
 	if(armor.magic)
 		armor_list += list("MAGIC" = armor.magic)
 
+
+	var/list/covered_limbs_areas = body_parts_covered2organ_names(body_parts_covered) // what do we actually cover?
+	if(LAZYLEN(protection_list))
+		protection_list.Cut()
+	if(FULL_BODY in covered_limbs_areas)
+		protection_list += list("ENTIRE BODY")
+
+	if(HEAD in covered_limbs_areas)
+		protection_list += list("HEAD")
+	if(NECK in covered_limbs_areas)
+		protection_list += list("NECK")
+
+	if(CHEST in covered_limbs_areas)
+		protection_list += list("THORAX")
+
+	if(ARMS in covered_limbs_areas)
+		protection_list += list("ARMS")
+	if(ARM_LEFT in covered_limbs_areas)
+		protection_list += list("LEFT ARM")
+	if(ARM_RIGHT in covered_limbs_areas)
+		protection_list += list("RIGHT ARM")
+
+	if(HANDS in covered_limbs_areas)
+		protection_list += list("HANDS")
+	if(HAND_LEFT in covered_limbs_areas)
+		protection_list += list("LEFT HAND")
+	if(HAND_RIGHT in covered_limbs_areas)
+		protection_list += list("RIGHT HAND")
+
+	if(GROIN in covered_limbs_areas)
+		protection_list += list("ABDOMEN")
+
+	if(LEGS in covered_limbs_areas)
+		protection_list += list("LEGS")
+	if(LEG_LEFT in covered_limbs_areas)
+		protection_list += list("LEFT LEG")
+	if(LEG_RIGHT in covered_limbs_areas)
+		protection_list += list("RIGHT LEG")
+
+	if(FEET in covered_limbs_areas)
+		protection_list += list("FEET")
+	if(FOOT_LEFT in covered_limbs_areas)
+		protection_list += list("LEFT FOOT")
+	if(FOOT_RIGHT in covered_limbs_areas)
+		protection_list += list("RIGHT FOOT")
+
+
 	if(LAZYLEN(durability_list))
 		durability_list.Cut()
 	if(armor.fire)
@@ -345,6 +394,13 @@
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
+
+		if(LAZYLEN(protection_list))
+			readout += "\n<b>PROTECTED AREAS</b>"
+			for(var/covered_limbs_areas in protection_list)
+				var/locational = protection_list[covered_limbs_areas]
+				readout += "\n[locational]"
+
 		if(LAZYLEN(durability_list))
 			readout += "\n<b>DURABILITY</b>"
 			for(var/dam_type in durability_list)

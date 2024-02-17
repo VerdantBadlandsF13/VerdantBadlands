@@ -14,6 +14,8 @@ Houses the defines required, to keep this modular.
 /mob/living/proc/feels_pain(mob/living/M)
 	if(isrobotic(M))
 		return FALSE
+	if(isghoul(M))
+		return FALSE
 	return TRUE
 
 /mob/living/silicon/feels_pain()

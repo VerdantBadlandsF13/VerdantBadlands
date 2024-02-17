@@ -45,7 +45,7 @@
 		to_chat(usr, "<span class='danger'>This door has no biometric lock.</span>")
 		return
 
-	if(!usr.mind.assigned_role in GLOB.command_positions)
+	if(!(usr.mind.assigned_role in GLOB.command_positions))
 		to_chat(usr, "<span class='danger'>Access Denied.</span>")
 		return
 

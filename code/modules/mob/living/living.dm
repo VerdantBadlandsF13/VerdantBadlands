@@ -445,7 +445,7 @@
 			if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
 				to_chat(src, "<span class='notice'>Your mindshield prevents your mind from giving in!</span>")
 			else if(src.mind.assigned_role in GLOB.command_positions)
-				to_chat(src, "<span class='notice'>Your dedication to your department prevents you from giving in!</span>")
+				to_chat(src, "<span class='notice'>Your dedication to your underlings prevents you from giving in!</span>")
 			else
 				E.enthrallTally += 20
 				to_chat(src, "<span class='notice'>You give into [E.master]'s influence.</span>")

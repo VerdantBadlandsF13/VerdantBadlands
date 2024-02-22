@@ -316,61 +316,80 @@
 		armor_list += list("LASER" = armor.laser)
 	if(armor.energy)
 		armor_list += list("ENERGY" = armor.energy)
-	if(armor.bio)
-		armor_list += list("TOXIN" = armor.bio)
-	if(armor.bomb)
-		armor_list += list("EXPLOSIVE" = armor.bomb)
-	if(armor.rad)
-		armor_list += list("RADIATION" = armor.rad)
-	if(armor.magic)
-		armor_list += list("MAGIC" = armor.magic)
 
-
-	var/list/covered_limbs_areas = body_parts_covered2organ_names(body_parts_covered) // what do we actually cover?
+//Start - Body Areas
+	protection_list = body_parts_covered2organ_names(initial(body_parts_covered))
 	if(LAZYLEN(protection_list))
 		protection_list.Cut()
-	if(FULL_BODY in covered_limbs_areas)
+	if(protection_list & FULL_BODY)
 		protection_list += list("ENTIRE BODY")
 
-	if(HEAD in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & HEAD)
 		protection_list += list("HEAD")
-	if(NECK in covered_limbs_areas)
+	if(protection_list & NECK)
 		protection_list += list("NECK")
 
-	if(CHEST in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & CHEST)
 		protection_list += list("THORAX")
 
-	if(ARMS in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & ARMS)
 		protection_list += list("ARMS")
-	if(ARM_LEFT in covered_limbs_areas)
+	if(protection_list & ARM_LEFT)
 		protection_list += list("LEFT ARM")
-	if(ARM_RIGHT in covered_limbs_areas)
+	if(protection_list & ARM_RIGHT)
 		protection_list += list("RIGHT ARM")
 
-	if(HANDS in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & HANDS)
 		protection_list += list("HANDS")
-	if(HAND_LEFT in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - -")
+	if(protection_list & HAND_LEFT)
 		protection_list += list("LEFT HAND")
-	if(HAND_RIGHT in covered_limbs_areas)
+	if(protection_list & HAND_RIGHT)
 		protection_list += list("RIGHT HAND")
 
-	if(GROIN in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & GROIN)
 		protection_list += list("ABDOMEN")
 
-	if(LEGS in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
+
+	if(protection_list & LEGS)
 		protection_list += list("LEGS")
-	if(LEG_LEFT in covered_limbs_areas)
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - -")
+	if(protection_list & LEG_LEFT)
 		protection_list += list("LEFT LEG")
-	if(LEG_RIGHT in covered_limbs_areas)
+	if(protection_list & LEG_RIGHT)
 		protection_list += list("RIGHT LEG")
 
-	if(FEET in covered_limbs_areas)
-		protection_list += list("FEET")
-	if(FOOT_LEFT in covered_limbs_areas)
-		protection_list += list("LEFT FOOT")
-	if(FOOT_RIGHT in covered_limbs_areas)
-		protection_list += list("RIGHT FOOT")
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - - - - -")
 
+	if(protection_list & FEET)
+		protection_list += list("FEET")
+	if(protection_list)//Used for separation of areas.
+		protection_list += list("- - -")
+	if(protection_list & FOOT_LEFT)
+		protection_list += list("LEFT FOOT")
+	if(protection_list & FOOT_RIGHT)
+		protection_list += list("RIGHT FOOT")
+//End - Body Areas
 
 	if(LAZYLEN(durability_list))
 		durability_list.Cut()
@@ -378,9 +397,17 @@
 		durability_list += list("FIRE" = armor.fire)
 	if(armor.acid)
 		durability_list += list("ACID" = armor.acid)
+	if(armor.bio)
+		durability_list += list("TOXIN" = armor.bio)
+	if(armor.bomb)
+		durability_list += list("EXPLOSIVE" = armor.bomb)
+	if(armor.rad)
+		durability_list += list("RADIATION" = armor.rad)
+	if(armor.magic)
+		durability_list += list("MAGIC" = armor.magic)
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
-		. += "<span class='notice'>It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.</span>"
+		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"
 	if(salvage_tool_behavior && LAZYLEN(salvage_loot))
 		. += "<span class='notice'>It can be recycled for materials using [salvage_tool_behavior].</span>"
 
@@ -388,24 +415,28 @@
 	. = ..()
 
 	if(href_list["list_armor"])
-		var/list/readout = list("<span class='notice'><u><b>PROTECTION CLASSES (I-X)</u></b>")
+		var/list/readout = list("<span class='notice'><u><b>PROTECTION</u></b>")
 		if(LAZYLEN(armor_list))
-			readout += "\n<b>ARMOR</b>"
+			readout += "\n<b>GENERAL ARMOR</b>"
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
 
-		if(LAZYLEN(protection_list))
-			readout += "\n<b>PROTECTED AREAS</b>"
-			for(var/covered_limbs_areas in protection_list)
-				var/locational = protection_list[covered_limbs_areas]
-				readout += "\n[locational]"
+		readout += "\n<b>- - - - - -</b>"
 
 		if(LAZYLEN(durability_list))
-			readout += "\n<b>DURABILITY</b>"
+			readout += "\n<b>OTHER ARMOR</b>"
 			for(var/dam_type in durability_list)
 				var/durability_amount = durability_list[dam_type]
 				readout += "\n[dam_type] [durability_amount]" //e.g. ACID 20
+
+		readout += "\n<b>- - - - - -</b>"
+
+		if(LAZYLEN(protection_list))
+			readout += "\n<b>PROTECTED LOCATIONS</b>"
+			for(var/list/covered_limbs in protection_list)
+				readout += "\n[protection_list]"
+
 		readout += "</span>"
 
 		to_chat(usr, "[readout.Join()]")

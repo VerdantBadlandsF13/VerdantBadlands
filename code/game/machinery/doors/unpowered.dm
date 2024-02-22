@@ -8,7 +8,7 @@
 		if(istype(I))
 			if(!I || !I.registered_name)
 				return
-			if(user.mind.assigned_role in GLOB.command_positions || !registered_name || (istype(I) && (registered_name == I.registered_name)))
+			if(!registered_name || (istype(I) && (registered_name == I.registered_name)))
 				locked = !locked
 				update_icon()
 				to_chat(user, "<span class='danger'>The door is now [locked ? "locked" : "unlocked"].</span>")

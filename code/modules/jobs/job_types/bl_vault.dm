@@ -139,6 +139,46 @@ Security Chief
 		/obj/item/crowbar = 1)
 
 /*
+Engineering Chief
+*/
+
+/datum/job/vault/f13coe
+	title = "Vault-Tec Engineering Chief"
+	flag = F13VFECOE
+	head_announce = list("Engineering")
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the leader of the Engineering Team. \
+	Working with the Engineering team, Overseer and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault. \
+	Obey the Overseer's wishes, when possible. You should act as his left hand, with the Security Chief as the right, ideally."
+	supervisors = "Vault-Tec"
+	req_admin_notify = 1
+	exp_requirements = 120
+
+	outfit = /datum/outfit/job/vault/f13coe
+
+	access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+	minimal_access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+
+/datum/outfit/job/vault/f13coe
+	name = "Vault-Tec Engineer"
+	jobtype = /datum/job/vault/f13coe
+
+	id =			/obj/item/card/id/chief
+	ears = 			/obj/item/radio/headset/headset_vault/eng
+	uniform = 		/obj/item/clothing/under/f13/vault
+	belt = 			/obj/item/storage/belt/utility/full/engi
+	shoes =			/obj/item/clothing/shoes/sneakers/brown
+	head =			/obj/item/clothing/head/hardhat/white
+	gloves =		/obj/item/pda/engineering
+	r_pocket = 		/obj/item/t_scanner
+	backpack = 		/obj/item/storage/backpack/industrial
+	satchel = 		/obj/item/storage/backpack/satchel/eng
+	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
+	box = 			/obj/item/storage/box/engineer
+	backpack_contents = list(/obj/item/crowbar = 1)
+
+/*
 Security Officer
 */
 
@@ -296,7 +336,7 @@ Vault Engineer
 	id = /obj/item/card/id/vaultiecard
 	ears = 			/obj/item/radio/headset/headset_vault/eng
 	uniform = 		/obj/item/clothing/under/f13/vault
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	belt = 			/obj/item/storage/belt/utility/full
 	shoes = 		/obj/item/clothing/shoes/sneakers/red
 	gloves =		/obj/item/pda/engineering
 	head = 			/obj/item/clothing/head/hardhat

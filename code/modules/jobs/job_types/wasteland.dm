@@ -154,7 +154,7 @@
 	roleplay_exclusive_notify = 1
 	description = "You own the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
 	supervisors = "fate"
-	selection_color = "#ccd2cf"
+	selection_color = "#444040"
 
 	outfit = /datum/outfit/job/wasteland/f13tavernkeep
 

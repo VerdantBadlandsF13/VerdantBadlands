@@ -23,6 +23,10 @@
 	name = "Vault-Tec Security Chief"
 	icon_state = "Overseer"
 
+/obj/effect/landmark/start/f13/engchief
+	name = "Vault-Tec Engineering Chief"
+	icon_state = "Overseer"
+
 /obj/effect/landmark/start/f13/vaultdoctor
 	name = "Vault-Tec Doctor"
 	icon_state = "Vault-tec Doctor"

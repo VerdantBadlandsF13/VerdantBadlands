@@ -3691,6 +3691,7 @@
 #include "modular_badlands\code\modules\rp_misc\wound_audio.dm"
 #include "modular_badlands\code\modules\rp_misc\audio_pings\audio_pings.dm"
 #include "modular_badlands\code\modules\rp_misc\dfs_lift\lift_base.dm"
+#include "modular_badlands\code\modules\rp_misc\environmental_props\fluff_structures.dm"
 #include "modular_badlands\code\modules\rp_misc\environmental_props\junk.dm"
 #include "modular_badlands\code\modules\rp_misc\environmental_props\signage.dm"
 #include "modular_badlands\code\modules\rp_misc\mood\positive.dm"

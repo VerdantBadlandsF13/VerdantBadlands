@@ -162,22 +162,22 @@
 	exp_requirements = 240
 
 	loadout_options = list(
-	/datum/outfit/loadout/agent/brute,
-	/datum/outfit/loadout/agent/suave)
+	/datum/outfit/loadout/agent/acquisition,
+	/datum/outfit/loadout/agent/specialist)
 
 /datum/outfit/job/dfs/agent
 	name = "DFS Agent"
 	jobtype = /datum/job/dfs/agent
 
-/datum/outfit/loadout/agent/brute
-	name = "Brute"
+/datum/outfit/loadout/agent/acquisition
+	name = "Acquisition Agent"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
 	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
 	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
 	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
 
-/datum/outfit/loadout/agent/suave
-	name = "Suave"
+/datum/outfit/loadout/agent/specialist
+	name = "Specialist"
 	r_hand = /obj/item/m2flamethrowertank
 	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
 	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
@@ -194,22 +194,22 @@
 	exp_requirements = 120
 
 	loadout_options = list(
-	/datum/outfit/loadout/regular/brute,
-	/datum/outfit/loadout/regular/suave)
+	/datum/outfit/loadout/regular/veteran,
+	/datum/outfit/loadout/regular/rook)
 
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
 
-/datum/outfit/loadout/regular/brute
-	name = "Brute"
+/datum/outfit/loadout/regular/veteran
+	name = "Veteran"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
 	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
 	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
 	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
 
-/datum/outfit/loadout/regular/suave
-	name = "Suave"
+/datum/outfit/loadout/regular/rook
+	name = "Rook"
 	r_hand = /obj/item/m2flamethrowertank
 	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
 	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
@@ -227,22 +227,22 @@
 	exp_type = EXP_TYPE_WASTELAND
 
 	loadout_options = list(
-	/datum/outfit/loadout/regular/brute,
-	/datum/outfit/loadout/regular/suave)
+	/datum/outfit/loadout/grunt/wastrel,
+	/datum/outfit/loadout/grunt/washout)
 
 /datum/outfit/job/dfs/grunt
 	name = "DFS Grunt"
 	jobtype = /datum/job/dfs/grunt
 
-/datum/outfit/loadout/grunt/brute
-	name = "Brute"
+/datum/outfit/loadout/grunt/wastrel
+	name = "Wastrel"
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
 	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
 	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
 	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
 
-/datum/outfit/loadout/grunt/suave
-	name = "Suave"
+/datum/outfit/loadout/grunt/washout
+	name = "Washout"
 	r_hand = /obj/item/m2flamethrowertank
 	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
 	head = /obj/item/clothing/head/helmet/f13/sulphitehelm

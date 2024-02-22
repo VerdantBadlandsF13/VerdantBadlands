@@ -7,6 +7,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 GLOBAL_LIST_INIT(command_positions, list(
 	"Vault-Tec Overseer",
 	"Vault-Tec Security Chief",
+	"Vault-Tec Engineering Chief",
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
@@ -33,6 +34,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 
 	"Vault-Tec Overseer",
 	"Vault-Tec Security Chief",
+	"Vault-Tec Engineering Chief",
 	"Vault-Tec Security",
 	"Vault-Tec Doctor",
 	"Vault-Tec Scientist",
@@ -44,6 +46,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 GLOBAL_LIST_INIT(vault_positions, list(
 	"Vault-Tec Overseer",
 	"Vault-Tec Security Chief",
+	"Vault-Tec Engineering Chief",
 	"Vault-Tec Security",
 	"Vault-Tec Doctor",
 	"Vault-Tec Scientist",

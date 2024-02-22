@@ -209,11 +209,12 @@
 
 #define	F13VFEOVERSEER				(1<<0)
 #define	F13VFEHOS					(1<<1)
-#define	F13VFEOFFICER				(1<<2)
-#define	F13VFEDOCTOR				(1<<3)
-#define	F13VFESCIENTIST				(1<<4)
-#define	F13VFEENGINEER				(1<<5)
-#define	F13VFEDWELLER				(1<<6)
+#define	F13VFECOE					(1<<2)
+#define	F13VFEOFFICER				(1<<3)
+#define	F13VFEDOCTOR				(1<<4)
+#define	F13VFESCIENTIST				(1<<5)
+#define	F13VFEENGINEER				(1<<6)
+#define	F13VFEDWELLER				(1<<7)
 //END BADLANDS
 
 #define JOB_AVAILABLE 0

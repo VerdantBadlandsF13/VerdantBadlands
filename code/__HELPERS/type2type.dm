@@ -361,7 +361,7 @@
 	var/list/covered_parts = list()
 
 	if(!bpc)
-		return 0
+		return covered_parts
 
 	if(bpc & FULL_BODY)
 		covered_parts |= list(BODY_ZONE_L_ARM,BODY_ZONE_R_ARM,BODY_ZONE_HEAD,BODY_ZONE_CHEST,BODY_ZONE_L_LEG,BODY_ZONE_R_LEG)
@@ -405,6 +405,48 @@
 				covered_parts |= list(BODY_ZONE_L_LEG)
 			if(bpc & FOOT_RIGHT)
 				covered_parts |= list(BODY_ZONE_R_LEG)
+
+	return covered_parts
+
+//extended
+/proc/body_parts_covered2organ_names_extended(bpc)
+	var/list/covered_parts = list()
+	if(!bpc)
+		return covered_parts
+
+	if(bpc & FULL_BODY)
+		covered_parts |= list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+		return covered_parts
+
+	if(bpc & HEAD)
+		covered_parts |= list(BODY_ZONE_HEAD)
+	if(bpc & NECK)
+		covered_parts |= list(BODY_ZONE_PRECISE_MOUTH)
+
+	if(bpc & CHEST)
+		covered_parts |= list(BODY_ZONE_CHEST)
+	if(bpc & GROIN)
+		covered_parts |= list(BODY_ZONE_PRECISE_GROIN)
+
+	if(bpc & ARM_LEFT)
+		covered_parts |= list(BODY_ZONE_L_ARM)
+	if(bpc & ARM_RIGHT)
+		covered_parts |= list(BODY_ZONE_R_ARM)
+
+	if(bpc & HAND_LEFT)
+		covered_parts |= list(BODY_ZONE_PRECISE_L_HAND)
+	if(bpc & HAND_RIGHT)
+		covered_parts |= list(BODY_ZONE_PRECISE_R_HAND)
+
+	if(bpc & LEG_LEFT)
+		covered_parts |= list(BODY_ZONE_L_LEG)
+	if(bpc & LEG_RIGHT)
+		covered_parts |= list(BODY_ZONE_R_LEG)
+
+	if(bpc & FOOT_LEFT)
+		covered_parts |= list(BODY_ZONE_PRECISE_L_FOOT)
+	if(bpc & FOOT_RIGHT)
+		covered_parts |= list(BODY_ZONE_PRECISE_R_FOOT)
 
 	return covered_parts
 

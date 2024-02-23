@@ -63,8 +63,10 @@
 	var/zones_disabled
 	///These are armor values that protect the wearer, taken from the clothing's armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/armor_list = list()
-	///These are armor values that protect the clothing, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
+	///These are armor values that protect from odd damage, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/durability_list = list()
+	///These are armor values that protect from damage rarely encountered, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
+	var/list/special_durability_list = list()
 	///These are areas that the clothing actually covers, so it can be shown in the print out.
 	var/list/protection_list = list()
 
@@ -317,94 +319,32 @@
 	if(armor.energy)
 		armor_list += list("ENERGY" = armor.energy)
 
-//Start - Body Areas
-	protection_list = body_parts_covered2organ_names(initial(body_parts_covered))
-	if(LAZYLEN(protection_list))
-		protection_list.Cut()
-	if(protection_list & FULL_BODY)
-		protection_list += list("ENTIRE BODY")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & HEAD)
-		protection_list += list("HEAD")
-	if(protection_list & NECK)
-		protection_list += list("NECK")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & CHEST)
-		protection_list += list("THORAX")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & ARMS)
-		protection_list += list("ARMS")
-	if(protection_list & ARM_LEFT)
-		protection_list += list("LEFT ARM")
-	if(protection_list & ARM_RIGHT)
-		protection_list += list("RIGHT ARM")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & HANDS)
-		protection_list += list("HANDS")
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - -")
-	if(protection_list & HAND_LEFT)
-		protection_list += list("LEFT HAND")
-	if(protection_list & HAND_RIGHT)
-		protection_list += list("RIGHT HAND")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & GROIN)
-		protection_list += list("ABDOMEN")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & LEGS)
-		protection_list += list("LEGS")
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - -")
-	if(protection_list & LEG_LEFT)
-		protection_list += list("LEFT LEG")
-	if(protection_list & LEG_RIGHT)
-		protection_list += list("RIGHT LEG")
-
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - - - - -")
-
-	if(protection_list & FEET)
-		protection_list += list("FEET")
-	if(protection_list)//Used for separation of areas.
-		protection_list += list("- - -")
-	if(protection_list & FOOT_LEFT)
-		protection_list += list("LEFT FOOT")
-	if(protection_list & FOOT_RIGHT)
-		protection_list += list("RIGHT FOOT")
-//End - Body Areas
-
 	if(LAZYLEN(durability_list))
 		durability_list.Cut()
 	if(armor.fire)
 		durability_list += list("FIRE" = armor.fire)
-	if(armor.acid)
-		durability_list += list("ACID" = armor.acid)
-	if(armor.bio)
-		durability_list += list("TOXIN" = armor.bio)
 	if(armor.bomb)
 		durability_list += list("EXPLOSIVE" = armor.bomb)
 	if(armor.rad)
 		durability_list += list("RADIATION" = armor.rad)
+	if(armor.wound)
+		durability_list += list("WOUND" = armor.wound)
+
+	if(LAZYLEN(special_durability_list))
+		special_durability_list.Cut()
+	if(armor.acid)
+		special_durability_list += list("ACID" = armor.acid)
+	if(armor.bio)
+		special_durability_list += list("TOXIN" = armor.bio)
 	if(armor.magic)
-		durability_list += list("MAGIC" = armor.magic)
+		special_durability_list += list("MAGIC" = armor.magic)
+
+	if(LAZYLEN(protection_list))
+		protection_list.Cut()
+	protection_list = body_parts_covered2organ_names_extended(initial(body_parts_covered))
+	for(var/covered_parts in protection_list)
+		protection_list -= covered_parts
+		protection_list += uppertext(parse_zone_extended(covered_parts))
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
 		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"
@@ -422,20 +362,28 @@
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
 
-		readout += "\n<b>- - - - - -</b>"
+			readout += "\n<b>- - - - - -</b>"
 
 		if(LAZYLEN(durability_list))
-			readout += "\n<b>OTHER ARMOR</b>"
+			readout += "\n<b>SPECIAL ARMOR</b>"
 			for(var/dam_type in durability_list)
 				var/durability_amount = durability_list[dam_type]
-				readout += "\n[dam_type] [durability_amount]" //e.g. ACID 20
+				readout += "\n[dam_type] [durability_amount]" //e.g. EXPLOSIVE 20
 
-		readout += "\n<b>- - - - - -</b>"
+			readout += "\n<b>- - - - - -</b>"
+
+		if(LAZYLEN(special_durability_list))
+			readout += "\n<b>UNIQUE ARMOR</b>"
+			for(var/dam_type in special_durability_list)
+				var/special_durability_amount = special_durability_list[dam_type]
+				readout += "\n[dam_type] [special_durability_amount]" //e.g. ACID 20
+
+			readout += "\n<b>- - - - - -</b>"
 
 		if(LAZYLEN(protection_list))
-			readout += "\n<b>PROTECTED LOCATIONS</b>"
-			for(var/list/covered_limbs in protection_list)
-				readout += "\n[protection_list]"
+			readout += "\n<b>PROTECTED LOCATIONS - I DON'T WORK AAAAAAAAAAA</b>"
+			for(var/zone in protection_list)
+				readout += "\n[zone]"
 
 		readout += "</span>"
 

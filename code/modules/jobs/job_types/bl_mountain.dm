@@ -193,7 +193,7 @@
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
-	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
+	l_hand = /obj/item/gun/ballistic/rifle/lasmusket
 	r_hand = /obj/item/ammo_box/lasmusket
 
 // Volunteer

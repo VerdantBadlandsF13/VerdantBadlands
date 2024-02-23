@@ -22,7 +22,7 @@
 	name = "Laser musket"
 	desc = "Contains one laser musket, homemade, if you are to lazy to make one."
 	cost = 3000
-	contains = list(/obj/item/gun/ballistic/rifle/hobo/lasmusket,
+	contains = list(/obj/item/gun/ballistic/rifle/lasmusket,
 					/obj/item/ammo_box/lasmusket)
 
 /datum/supply_pack/goody/sharpenerf13

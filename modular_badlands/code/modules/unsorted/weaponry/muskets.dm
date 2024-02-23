@@ -1,5 +1,5 @@
 //Laser musket
-/obj/item/gun/ballistic/rifle/hobo/lasmusket
+/obj/item/gun/ballistic/rifle/lasmusket
 	name = "Laser Musket"
 	desc = "In the wasteland, one must make do, and this weapon's wielder certainly does. Made from metal scraps, electronic parts, an old rifle stock and a bottle full of dreams, the Laser Musket is sure to stop anything in its tracks and make those raiders think twice."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -23,7 +23,7 @@
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
 //Plasma musket.
-/obj/item/gun/ballistic/rifle/hobo/plasmacaster
+/obj/item/gun/ballistic/rifle/plasmacaster
 	name = "Plasma Musket"
 	desc = "The cooling looks dubious. Pray the plasma goes towards the enemy and not your face when you pull the trigger."
 	icon = 'icons/fallout/objects/guns/energy.dmi'

@@ -187,10 +187,6 @@
 	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
 	l_hand = /obj/item/ammo_box/magazine/w308
 	belt = /obj/item/storage/belt/bandolier/grenade_belt
-	backpack_contents = list(
-		/obj/item/grenade/f13/empgrenade =1,
-		/obj/item/grenade/f13/empgrenade =1,
-		)
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -220,10 +216,6 @@
 /datum/outfit/loadout/regular/rook
 	name = "Rook"
 	r_hand = /obj/item/gun/ballistic/rifle/hunting/roundstart
-	backpack_contents = list(
-		/obj/item/grenade/f13/smokebomb =1,
-		/obj/item/grenade/f13/empgrenade =1,
-		)
 
 //DFS Grunt
 /datum/job/dfs/grunt

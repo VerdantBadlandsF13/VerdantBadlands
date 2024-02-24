@@ -127,8 +127,6 @@
 	new /obj/item/grenade/f13/stinger(src)
 	new /obj/item/grenade/f13/stinger(src)
 	new /obj/item/grenade/f13/stinger(src)
-	new /obj/item/grenade/f13/smokebomb(src)
-	new /obj/item/grenade/f13/smokebomb(src)
 
 /obj/item/storage/belt/bandolier/grenade_belt_incen/PopulateContents()
 	new /obj/item/grenade/f13/incendiary(src)

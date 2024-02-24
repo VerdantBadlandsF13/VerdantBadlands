@@ -102,6 +102,9 @@
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 	extra_damage = 4
 
+/obj/item/gun/ballistic/revolver/revolver38/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
+
 ///////////////////
 // .45 ACP REVOLVERS //
 ///////////////////

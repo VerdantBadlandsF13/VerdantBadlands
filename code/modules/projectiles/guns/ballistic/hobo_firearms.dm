@@ -38,6 +38,7 @@
 	spread = 2
 	extra_damage = 4
 	condition_mul = 3
+	can_jam = FALSE
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe

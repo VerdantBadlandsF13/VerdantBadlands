@@ -64,7 +64,7 @@
 		switch(amount)
 			if(1 to 10)
 				flash_weak_pain()
-				msg = "<b>Your [partname] hurts.</b>"
+				msg = "<b>Your \the [partname] hurts.</b>"
 			if(11 to 90)
 				flash_pain()
 				handle_lowpain()

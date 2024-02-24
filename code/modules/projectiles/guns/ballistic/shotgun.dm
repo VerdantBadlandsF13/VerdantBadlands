@@ -107,6 +107,7 @@
 	extra_damage = 4
 	extra_penetration = 0.1
 	pb_knockback = 2
+	can_jam = FALSE
 
 /obj/item/gun/ballistic/revolver/single_shotgun/update_icon_state()
 	if(!magazine || !magazine.ammo_count(0))
@@ -140,6 +141,7 @@
 	extra_damage = 3
 	extra_penetration = 0.05
 	pb_knockback = 2
+	can_jam = FALSE
 
 /obj/item/gun/ballistic/revolver/caravan_shotgun/attackby(obj/item/A, mob/user, params)
 	..()
@@ -180,6 +182,7 @@
 	extra_damage = 2
 	extra_penetration = 0.15
 	pb_knockback = 2
+	can_jam = FALSE
 
 /obj/item/gun/ballistic/revolver/widowmaker/attackby(obj/item/A, mob/user, params)
 	..()
@@ -311,6 +314,9 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact
 	fire_sound = 'sound/f13weapons/auto5.ogg'
 
+/obj/item/gun/ballistic/shotgun/automatic/combat/auto5/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
+
 /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 	name = "Winchester Model 1887"
 	desc = "A pistol grip lever action shotgun with a five-shell capacity underneath plus one in chamber."
@@ -328,6 +334,9 @@
 	bayonet_state = "bayonet"
 	knife_x_offset = 23
 	knife_y_offset = 23
+
+/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/neostead
 	name = "Neostead 2000"

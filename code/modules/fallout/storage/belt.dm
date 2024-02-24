@@ -123,6 +123,18 @@
 	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
 	new /obj/item/ammo_box/clip/shotgun/loaded/buckshot(src)
 
+/obj/item/storage/belt/bandolier/grenade_belt/PopulateContents()
+	new /obj/item/grenade/f13/stinger(src)
+	new /obj/item/grenade/f13/stinger(src)
+	new /obj/item/grenade/f13/stinger(src)
+	new /obj/item/grenade/f13/smokebomb(src)
+	new /obj/item/grenade/f13/smokebomb(src)
+
+/obj/item/storage/belt/bandolier/grenade_belt_incen/PopulateContents()
+	new /obj/item/grenade/f13/incendiary(src)
+	new /obj/item/grenade/f13/incendiary(src)
+	new /obj/item/grenade/f13/incendiary(src)
+
 /obj/item/storage/belt/sabre/heavy
 	name = "heavy-duty sheath"
 	desc = "A rugged set of leather straps and metal tips to comfortably carry a large variety of blades (and even blunt objects) on your side."
@@ -178,6 +190,17 @@
 	new /obj/item/ammo_box/a357(src)
 	new /obj/item/ammo_box/a357(src)
 
+/obj/item/storage/belt/holster/legholster/dfs/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/beretta/roundstart(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+	new /obj/item/ammo_box/magazine/m9mmds(src)
+
+/obj/item/storage/belt/holster/legholster/dfs_boss/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/pistol/deagle/roundstart(src)
+	new /obj/item/ammo_box/magazine/m50(src)
+	new /obj/item/ammo_box/magazine/m50(src)
+	new /obj/item/ammo_box/magazine/m50(src)
 
 /obj/item/storage/belt/sword // new that works
 	name = "sword sheath"

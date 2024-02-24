@@ -27,3 +27,5 @@ TODO: Add the sound loop, when equipped. Also, backpack.
 	fire_delay = 0
 	inaccuracy_modifier = 0.25
 	special_weapon = TRUE
+	inhand_x_dimension = 64
+	inhand_y_dimension = 32

@@ -23,6 +23,9 @@
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 	can_jam = FALSE
 
+/obj/item/gun/ballistic/rifle/lasmusket/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 //Plasma musket.
 /obj/item/gun/ballistic/rifle/plasmacaster
 	name = "Plasma Musket"

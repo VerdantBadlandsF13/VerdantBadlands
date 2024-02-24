@@ -58,6 +58,9 @@
 	fire_sound = 'sound/f13weapons/22pistol.ogg'
 	extra_damage = 5
 
+/obj/item/gun/ballistic/automatic/pistol/pistol22/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
+
 /obj/item/gun/ballistic/automatic/pistol/n99
 	name = "Colt N99"
 	desc = "The Colt N99, an easily maintained, large-framed, long-barreled combat pistol in use by the US Army before the war. <br>\
@@ -73,6 +76,9 @@
 	suppressor_y_offset = 15
 	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
 	extra_damage = 6
+
+/obj/item/gun/ballistic/automatic/pistol/n99/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
 
 /obj/item/gun/ballistic/automatic/pistol/type17
 	name = "\improper Type-17"
@@ -114,6 +120,9 @@
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 	extra_damage = 8
 
+/obj/item/gun/ballistic/automatic/pistol/beretta/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
 	name = "\improper Beretta 93R"
 	desc = "An automatic 9mm pistol, featuring a fixed muzzle brake."
@@ -127,6 +136,9 @@
 	automatic_burst_overlay = TRUE
 	can_attachments = FALSE
 	semi_auto = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/beretta/automatic/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 /obj/item/gun/ballistic/automatic/pistol/beretta/automatic/burst_select()
 	var/mob/living/carbon/human/user = usr
@@ -203,6 +215,9 @@
 	can_suppress = FALSE
 	automatic_burst_overlay = FALSE
 	fire_sound = 'sound/f13weapons/deagle.ogg'
+
+/obj/item/gun/ballistic/automatic/pistol/deagle/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/automag
 	name = ".44 AMP"

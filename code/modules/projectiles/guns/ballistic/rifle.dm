@@ -115,6 +115,9 @@
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
 	extra_damage = 4
 
+/obj/item/gun/ballistic/rifle/repeater/cowboy/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 /obj/item/gun/ballistic/rifle/repeater/trail
 	name = "Marlin Model 1894"
 	desc = "A lever action rifle chambered in .44 Magnum."
@@ -160,6 +163,9 @@
 	scope_y_offset = 12
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+/obj/item/gun/ballistic/rifle/hunting/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 /obj/item/gun/ballistic/rifle/hunting/attackby(obj/item/A, mob/user, params)
 	..()
@@ -215,6 +221,9 @@
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
 	pump_stam_cost = 15
+
+/obj/item/gun/ballistic/rifle/enfield/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
 
 /////////////////////////////////////
 // MAGAZINE FED BOLT-ACTION RIFLES //
@@ -304,3 +313,4 @@
 	spread = 0.25
 	zoomable = FALSE
 	pb_knockback = 1// shhhh
+	randomize_condition_lvl = FALSE//Roundstart only.

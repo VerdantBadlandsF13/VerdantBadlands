@@ -93,7 +93,7 @@ Overseer
 	backpack_contents = list(
 		/obj/item/storage/box/ids = 1,
 		/obj/item/melee/classic_baton/telescopic = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/crowbar = 1)
 
@@ -134,7 +134,7 @@ Security Chief
 	backpack = 		/obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/crowbar = 1)
 
@@ -211,7 +211,7 @@ Security Officer
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	belt = 			/obj/item/storage/belt/security
-	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99
+	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart
 	l_pocket = 		/obj/item/restraints/handcuffs
 	r_pocket = 		/obj/item/assembly/flash/handheld
 	backpack = 		/obj/item/storage/backpack/security

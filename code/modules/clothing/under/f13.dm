@@ -549,18 +549,21 @@
 	item_state = "farmhand"
 
 // DFS
-/obj/item/clothing/under/f13/merca/dfs
+/obj/item/clothing/under/f13/dfs
 	name = "security team outfit"
-	desc = "A well put together uniform, alongside the DFS insignia."
+	desc = "A neatly put together uniform, intended for the average grunt of the DFS. It has been fitted with the company's patch."
+	icon = 'icons/fallout/clothing/bl_dfs.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_dfs.dmi'
+	icon_state = "dfs_uniform_grunt"
+	item_state = "dfs_uniform_grunt"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
-/obj/item/clothing/under/f13/mercc/dfs
-	name = "security lead outfit"
-	desc = "A well put together uniform, alongside the DFS insignia."
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
-
+/obj/item/clothing/under/f13/dfs/fire
+	desc = "A neatly put together uniform, intended for the average grunt of the DFS. It has been fitted with the company's patch and a sewn in firefighter's emblem."
+	icon_state = "dfs_uniform_firefighter"
+	item_state = "dfs_uniform_firefighter"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 60, "acid" = 50)
 
 // LBJ - WHY ARE THERE TWO COPIES OF ONE OBJECT ABOVE FOR LUMBERJACKS?
 /obj/item/clothing/under/f13/lumberjack/lbj

@@ -63,7 +63,6 @@
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	backpack_contents = list(
 		/obj/item/radio,
-		/obj/item/gun/ballistic/automatic/pistol/pistol22,
 		)
 
 /datum/outfit/job/wasteland/f13wastelander/pre_equip(mob/living/carbon/human/H)
@@ -79,15 +78,17 @@
 		/obj/item/clothing/suit/f13/cowboygvest,
 		/obj/item/clothing/suit/f13/westender,
 		/obj/item/clothing/suit/overalls)
+	backpack_contents += pick(
+		/obj/item/gun/ballistic/automatic/pistol/pistol22/roundstart,
+		/obj/item/gun/ballistic/revolver/revolver38/roundstart)
 
 // Wanderer - Wanderer don't tend to stay in one spot. They generally move along the Wasteland looking for their next paycheck. Starts with a shoulder pad and a shitpipe.
 /datum/outfit/loadout/wanderer
 	name = "Wanderer"
 	uniform = /obj/item/clothing/under/f13/merca
-	suit = /obj/item/clothing/suit/armored/f13/light/kit/shoulder
 	shoes = /obj/item/clothing/shoes/f13/military
-	r_hand = /obj/item/gun/ballistic/revolver/piperifle
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
+	suit = /obj/item/clothing/suit/armored/f13/light/duster
 
 // Prospector - Prospectors are scavengers. They dig through the ruins of the old world for supplies. Starts with mining equipment and technofreak.
 /datum/outfit/loadout/prospector
@@ -188,7 +189,7 @@
 	ears =			null
 	uniform =		/obj/item/clothing/under/suit_jacket/burgundy
 	suit =			/obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
-	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	suit_store =	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever/roundstart
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 	r_pocket =		/obj/item/restraints/handcuffs
 	belt =			/obj/item/storage/belt/bandolier/tavern

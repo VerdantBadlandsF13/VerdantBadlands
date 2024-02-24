@@ -52,9 +52,9 @@
 	id = /obj/item/card/id/dfs_raider_tags
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
-	neck = /obj/item/storage/belt/holster/legholster
+	neck = /obj/item/storage/belt/holster/legholster/dfs
 	ears = /obj/item/radio/headset/headset_dfs
-	uniform	= /obj/item/clothing/under/f13/merca/dfs
+	uniform = /obj/item/clothing/under/f13/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 
@@ -80,7 +80,8 @@
 /datum/outfit/job/dfs/advisor
 	name = "DFS Advisor"
 	jobtype = /datum/job/dfs/advisor
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	uniform = /obj/item/clothing/under/f13/dfs
+	neck = /obj/item/storage/belt/holster/legholster/dfs_boss
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
 /datum/outfit/job/dfs/advisor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -92,16 +93,17 @@
 
 /datum/outfit/loadout/advisor/brute
 	name = "Brute"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
-	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+	l_hand = /obj/item/twohanded/thermic_lance/reconciliation
+	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
+	head = /obj/item/clothing/head/helmet/f13/firefighter//TEMP HELMET
 
 /datum/outfit/loadout/advisor/suave
 	name = "Suave"
-	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	mask = /obj/item/clothing/mask/cigarette/pipe
+	gloves = /obj/item/melee/unarmed/brass/lovetap
+	r_hand = /obj/item/gun/ballistic/automatic/fnfal/roundstart
+	l_hand = /obj/item/ammo_box/magazine/m762
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
 // DFS Enforcer
 /datum/job/dfs/enforcer
@@ -126,29 +128,28 @@
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
 	jobtype = /datum/job/dfs/enforcer
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	uniform = /obj/item/clothing/under/f13/dfs/fire
+	belt = /obj/item/storage/belt/bandolier/grenade_belt_incen
+	gloves = /obj/item/clothing/gloves/f13/military
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
-// Fourty-five submachinegun. For when business decisions become executive! And a badass coat.
 /datum/outfit/loadout/enforcer/taskmaster
 	name = "Taskmaster"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	gloves = /obj/item/clothing/gloves/f13/military
-	suit = /obj/item/clothing/suit/armored/f13/medium/armoredcoat
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun/roundstart
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
-// To be fair: nobody fucks with a dude who uses a flamethrower. Heavy armor and VERY clearly a background of Raider. What a peacemaker!
 /datum/outfit/loadout/enforcer/peacemaker
 	name = "Peacemaker"
 	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
+	head = /obj/item/clothing/head/helmet/f13/firefighter//TEMP HELMET
 
 /datum/outfit/loadout/enforcer/bouncer
 	name = "Bouncer"
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
-	suit = /obj/item/clothing/suit/armored/f13/medium/combat/mk2
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2
+	mask = /obj/item/clothing/mask/cigarette
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5/roundstart
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
 // DFS Agent
 /datum/job/dfs/agent
@@ -168,19 +169,28 @@
 /datum/outfit/job/dfs/agent
 	name = "DFS Agent"
 	jobtype = /datum/job/dfs/agent
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs
 
 /datum/outfit/loadout/agent/acquisition
 	name = "Acquisition Agent"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
-	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle/roundstart
+	l_hand = /obj/item/ammo_box/magazine/m556/rifle
+	backpack_contents = list(
+		/obj/item/electropack/shockcollar =2,
+		/obj/item/electropack/shockcollar/explosive =1,
+		/obj/item/key/scollar =1,
+		/obj/item/key/bcollar =1,
+		)
 
 /datum/outfit/loadout/agent/specialist
 	name = "Specialist"
-	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
+	l_hand = /obj/item/ammo_box/magazine/w308
+	belt = /obj/item/storage/belt/bandolier/grenade_belt
+	backpack_contents = list(
+		/obj/item/grenade/f13/empgrenade =1,
+		/obj/item/grenade/f13/empgrenade =1,
+		)
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -200,19 +210,20 @@
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs
 
 /datum/outfit/loadout/regular/veteran
 	name = "Veteran"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
-	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+	r_hand = /obj/item/gun/ballistic/automatic/smg/mp5/roundstart
+	l_hand = /obj/item/ammo_box/magazine/uzim9mm
 
 /datum/outfit/loadout/regular/rook
 	name = "Rook"
-	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	r_hand = /obj/item/gun/ballistic/rifle/hunting/roundstart
+	backpack_contents = list(
+		/obj/item/grenade/f13/smokebomb =1,
+		/obj/item/grenade/f13/empgrenade =1,
+		)
 
 //DFS Grunt
 /datum/job/dfs/grunt
@@ -236,13 +247,11 @@
 
 /datum/outfit/loadout/grunt/wastrel
 	name = "Wastrel"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	suit = /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d_raider
-	head = /obj/item/clothing/head/helmet/f13/salvaged_pa/t45d_raider
+	suit = /obj/item/clothing/suit/armored/f13/light/outlander
+	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
 
 /datum/outfit/loadout/grunt/washout
 	name = "Washout"
-	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	suit = /obj/item/clothing/suit/armored/f13/medium/outlander
+	l_hand = /obj/item/gun/ballistic/revolver/piperifle
+

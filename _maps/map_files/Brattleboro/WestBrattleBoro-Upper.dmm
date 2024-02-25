@@ -1545,6 +1545,10 @@
 /obj/structure/table/wood/club,
 /turf/open/floor/carpet,
 /area/f13/bar)
+"gc" = (
+/obj/effect/landmark/start/f13/engchief,
+/turf/open/floor/carpet/black,
+/area/engine/engineering)
 "gd" = (
 /obj/structure/railing/corner{
 	color = "#A47449";
@@ -9146,6 +9150,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault/overseer)
+"HL" = (
+/obj/effect/landmark/start/f13/tavernkeep,
+/turf/open/floor/carpet/red,
+/area/f13/shack)
 "HN" = (
 /obj/structure/car/rubbish2{
 	icon_state = "car_rubish1"
@@ -38455,7 +38463,7 @@ zD
 zD
 zD
 Gc
-tF
+gc
 tF
 tF
 Gc
@@ -95581,7 +95589,7 @@ Jg
 Jg
 uN
 Fm
-yq
+HL
 yq
 yq
 Vu

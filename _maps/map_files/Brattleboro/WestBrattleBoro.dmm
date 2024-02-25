@@ -12774,6 +12774,10 @@
 	dir = 4
 	},
 /area/f13/vault/medical)
+"iPn" = (
+/obj/effect/landmark/start/f13/secchief,
+/turf/open/floor/carpet,
+/area/f13/vault/security)
 "iPB" = (
 /obj/structure/railing/handrail/blue,
 /obj/structure/cable{
@@ -18937,6 +18941,10 @@
 	icon_state = "white"
 	},
 /area/f13/building)
+"mUr" = (
+/mob/living/simple_animal/hostile/deathclaw/funclaw/gentle,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "mUx" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -28467,6 +28475,16 @@
 	icon_state = "verticaloutermain2"
 	},
 /area/f13/wasteland)
+"sTz" = (
+/turf/closed/indestructible/rock{
+	desc = "A wall made out of solid brick.";
+	icon = 'modular_sunset/icons/turfs/walls/brick_small_dark.dmi';
+	icon_state = "brick0";
+	icon_type_smooth = "brick";
+	name = "brick wall";
+	smooth = 1
+	},
+/area/f13/caves)
 "sUi" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -46748,7 +46766,7 @@ pac
 pac
 cOz
 rSs
-uPX
+iPn
 uPX
 cOz
 rwL
@@ -86053,12 +86071,12 @@ fdY
 fdY
 fdY
 fdY
+pac
+pac
+pac
+pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
 fdY
 fdY
 fdY
@@ -87424,9 +87442,9 @@ fdY
 fdY
 fdY
 fdY
-fdY
-fdY
-fdY
+sTz
+sTz
+sTz
 fdY
 fdY
 fdY
@@ -87881,9 +87899,9 @@ fdY
 fdY
 fdY
 fdY
-fdY
-fdY
-fdY
+sTz
+mUr
+sTz
 fdY
 fdY
 fdY
@@ -88338,9 +88356,9 @@ fdY
 fdY
 fdY
 fdY
-fdY
-fdY
-fdY
+sTz
+sTz
+sTz
 fdY
 fdY
 fdY

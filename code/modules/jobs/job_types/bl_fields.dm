@@ -22,27 +22,27 @@
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 	)
 
@@ -95,7 +95,7 @@
 	name = "Brute"
 	l_hand = /obj/item/twohanded/thermic_lance/reconciliation
 	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
-	head = /obj/item/clothing/head/helmet/f13/firefighter//TEMP HELMET
+	head = /obj/item/clothing/head/helmet/f13/dfs
 
 /datum/outfit/loadout/advisor/suave
 	name = "Suave"
@@ -143,7 +143,7 @@
 	name = "Peacemaker"
 	r_hand = /obj/item/m2flamethrowertank
 	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
-	head = /obj/item/clothing/head/helmet/f13/firefighter//TEMP HELMET
+	head = /obj/item/clothing/head/helmet/f13/dfs
 
 /datum/outfit/loadout/enforcer/bouncer
 	name = "Bouncer"
@@ -170,6 +170,7 @@
 	name = "DFS Agent"
 	jobtype = /datum/job/dfs/agent
 	suit = /obj/item/clothing/suit/armored/f13/light/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs_hood
 
 /datum/outfit/loadout/agent/acquisition
 	name = "Acquisition Agent"
@@ -187,6 +188,9 @@
 	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
 	l_hand = /obj/item/ammo_box/magazine/w308
 	belt = /obj/item/storage/belt/bandolier/grenade_belt
+	backpack_contents = list(
+		/obj/item/book/granter/trait/explosives =1,
+		)
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -207,6 +211,7 @@
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
 	suit = /obj/item/clothing/suit/armored/f13/light/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs_hood
 
 /datum/outfit/loadout/regular/veteran
 	name = "Veteran"

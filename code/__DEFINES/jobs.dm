@@ -7,6 +7,7 @@
 #define FACTION_LBJ "Lumberjack Camp"
 #define FACTION_GMB "Green Mountain Boys"
 #define FACTION_VLT "Vault Fifty-Eight"
+#define FACTION_TWN "Hillside Hideaway"
 
 
 #define ENGSEC			(1<<0)
@@ -136,7 +137,6 @@
 #define WASTELAND		(1<<8)
 
 #define F13WASTELANDER	(1<<0)
-#define F13TAVERNKEEP	(1<<1)
 
 #define RAIDER			(1<<9)
 
@@ -215,6 +215,14 @@
 #define	F13VFESCIENTIST				(1<<5)
 #define	F13VFEENGINEER				(1<<6)
 #define	F13VFEDWELLER				(1<<7)
+
+#define TWN		(1<<18)
+
+#define	F13TWNLEADERSHIP		(1<<0)
+#define F13TWNLOOKOUT			(1<<1)
+#define F13TWNTAVERNKEEP		(1<<2)
+#define F13TWNINHABITANT		(1<<4)
+
 //END BADLANDS
 
 #define JOB_AVAILABLE 0

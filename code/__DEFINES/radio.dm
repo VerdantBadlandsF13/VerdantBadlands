@@ -57,6 +57,10 @@
 #define RADIO_KEY_DFS "d"
 #define RADIO_TOKEN_DFS ":d"
 
+#define RADIO_CHANNEL_TOWN "TWN"
+#define RADIO_KEY_TOWN "h"
+#define RADIO_TOKEN_TOWN ":h"
+
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"
 

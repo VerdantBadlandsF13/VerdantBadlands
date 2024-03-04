@@ -543,6 +543,17 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"aqM" = (
+/obj/effect/decal/bl_stairway,
+/obj/structure/stairs/north{
+	alpha = 0;
+	icon = 'icons/fallout/turfs/sidewalk.dmi';
+	icon_state = "verticalleftborderleft1"
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticalleftborderleft1"
+	},
+/area/f13/wasteland)
 "arf" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
@@ -5113,10 +5124,6 @@
 	},
 /turf/open/floor/grass,
 /area/f13/vault)
-"dBU" = (
-/obj/structure/wreck/bus/orange/alt,
-/turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
 "dCA" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -8437,14 +8444,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/village)
-"fJE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "yellowdirtysolid"
-	},
-/area/engine/engineering)
 "fKb" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -10818,7 +10817,8 @@
 /obj/structure/bed/dogbed,
 /mob/living/simple_animal/hostile/wolf/playable/shepherd{
 	name = "Agnes";
-	desc = "A domestic dog, descended from a very long lineage of German Shepherds. She looks very happy to see you."
+	desc = "A domestic dog, descended from a very long lineage of German Shepherds. She looks very happy to see you.";
+	faction = list("neutral")
 	},
 /turf/open/floor/carpet,
 /area/f13/vault/security)
@@ -10829,6 +10829,18 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/building)
+"hyg" = (
+/obj/machinery/power/smes/engineering,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowfull"
+	},
+/area/f13/vault/reactor)
 "hyx" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/ruins,
@@ -11321,14 +11333,6 @@
 	},
 /turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
-"hPT" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "whiteyellowdirtychess"
-	},
-/area/engine/engineering)
 "hQm" = (
 /obj/structure/junk/machinery,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
@@ -11897,6 +11901,7 @@
 	icon = 'icons/fallout/turfs/sidewalk.dmi';
 	icon_state = "verticalrightborderright1"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright1"
 	},
@@ -12099,9 +12104,6 @@
 	},
 /obj/machinery/light{
 	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowdirtychess"
@@ -12830,12 +12832,6 @@
 /obj/item/trash/f13/cram_large,
 /turf/open/floor/carpet,
 /area/f13/building)
-"iRH" = (
-/obj/effect/decal/bl_stairway,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft0"
-	},
-/area/f13/wasteland)
 "iRM" = (
 /obj/item/ammo_casing/spent,
 /obj/item/ammo_casing/spent,
@@ -14446,6 +14442,14 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
+"jXb" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowfull"
+	},
+/area/f13/vault/reactor)
 "jXh" = (
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_y = -32
@@ -14472,9 +14476,6 @@
 /area/f13/wasteland)
 "jXA" = (
 /obj/machinery/door/unpowered/securedoor/vfe/vfe_eng,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "yellowdirtysolid"
 	},
@@ -17273,6 +17274,13 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"lPf" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
+/area/f13/vault/reactor)
 "lPD" = (
 /obj/structure/table/wood/fancy,
 /obj/machinery/door/poddoor/shutters/preopen,
@@ -18617,9 +18625,6 @@
 "mKz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowdirtychess"
@@ -20160,9 +20165,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowfull"
 	},
@@ -21098,14 +21100,6 @@
 	icon_state = "bar"
 	},
 /area/f13/building)
-"ope" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "whiteyellowfull"
-	},
-/area/f13/vault/reactor)
 "opt" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/ghoul,
@@ -21142,6 +21136,17 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/building)
+"oqx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "oqE" = (
 /obj/structure/closet/fridge,
 /obj/item/reagent_containers/food/condiment/flour,
@@ -22045,6 +22050,7 @@
 	icon = 'icons/fallout/turfs/sidewalk.dmi';
 	icon_state = "verticalleftborderleft1"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft0"
 	},
@@ -23154,14 +23160,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
-"pGo" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "yellowdirtysolid"
-	},
-/area/engine/engineering)
 "pGq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/road{
@@ -26258,14 +26256,6 @@
 	icon_state = "verticalrightborderright1"
 	},
 /area/f13/wasteland)
-"rGx" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "yellowdirtysolid"
-	},
-/area/engine/engineering)
 "rGz" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/cans,
 /turf/open/floor/f13{
@@ -26303,6 +26293,14 @@
 	dir = 8
 	},
 /area/f13/vault/security)
+"rHa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "rHn" = (
 /obj/structure/chair/sofa/left{
 	dir = 1
@@ -27739,13 +27737,6 @@
 /obj/machinery/grill,
 /turf/open/indestructible/ground/bl/outside/gravel,
 /area/f13/wasteland)
-"svU" = (
-/obj/effect/decal/marking{
-	icon_state = "doublevertical"
-	},
-/obj/effect/decal/bl_stairway,
-/turf/open/indestructible/ground/outside/road,
-/area/f13/wasteland)
 "swf" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -28588,6 +28579,9 @@
 /area/f13/building)
 "sYD" = (
 /obj/structure/chair/office/dark,
+/obj/machinery/msgterminal/vfe_guards{
+	pixel_y = 18
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -33245,9 +33239,6 @@
 /area/f13/shack)
 "vYF" = (
 /obj/machinery/door/unpowered/securedoor/vfe/vfe_eng,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "yellowdirtysolid"
 	},
@@ -34571,12 +34562,6 @@
 /obj/structure/simple_door/house,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"wNM" = (
-/obj/effect/decal/bl_stairway,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalrightborderright1"
-	},
-/area/f13/wasteland)
 "wOm" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/bottle/nutrient/l4z,
@@ -34777,6 +34762,7 @@
 	icon = 'icons/fallout/turfs/asphalt.dmi';
 	icon_state = "innermiddle"
 	},
+/obj/effect/decal/bl_stairway,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "wVT" = (
@@ -35275,7 +35261,7 @@
 "xoy" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "0-4"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowfull"
@@ -35290,14 +35276,6 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/building)
-"xoZ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "whiteyellowdirtychess"
-	},
-/area/engine/engineering)
 "xpd" = (
 /obj/structure/chair/stool/retro/black,
 /turf/open/indestructible/ground/bl/outside/gravel,
@@ -56440,7 +56418,7 @@ reS
 raS
 uBk
 tMz
-xoy
+hyg
 xtf
 fGv
 gmb
@@ -56897,7 +56875,7 @@ uBk
 okT
 uBk
 tMz
-xoy
+hyg
 xtf
 fGv
 kwr
@@ -57351,10 +57329,10 @@ svw
 svw
 svw
 svw
-okT
-uBk
-tMz
-ocD
+oqx
+cZt
+lPf
+jXb
 ocD
 jJX
 ocD
@@ -58265,11 +58243,11 @@ svw
 pac
 svw
 svw
-okT
+rHa
 uBk
 tMz
 ocD
-ope
+ocD
 nHd
 sOP
 rDR
@@ -59179,11 +59157,11 @@ svw
 pac
 svw
 iNU
-xoZ
+uBk
 uBk
 svw
 jBB
-fJE
+gRO
 qhf
 svw
 rwF
@@ -59636,11 +59614,11 @@ pac
 pac
 svw
 ejw
-hPT
-cZt
+uBk
+uBk
 vYF
-rGx
-pGo
+gRO
+gRO
 iAq
 svw
 fpN
@@ -110924,7 +110902,7 @@ fdY
 fdY
 vVF
 oWj
-iRH
+fPh
 fPh
 fPh
 fPh
@@ -112295,7 +112273,7 @@ fdY
 fdY
 vVF
 cSH
-svU
+jHT
 jHT
 jHT
 jHT
@@ -113666,7 +113644,7 @@ fdY
 fdY
 vVF
 imB
-wNM
+fxA
 fxA
 cqQ
 cqQ
@@ -114122,7 +114100,7 @@ fdY
 fdY
 fdY
 vVF
-uol
+aqM
 uol
 uol
 uol
@@ -117891,7 +117869,7 @@ ibO
 ibO
 ibO
 ibO
-dBU
+ibO
 ibO
 vvK
 ibO

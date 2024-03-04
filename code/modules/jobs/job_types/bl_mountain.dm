@@ -22,27 +22,27 @@
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 	)
 

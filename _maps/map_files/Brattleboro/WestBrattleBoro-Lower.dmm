@@ -995,10 +995,6 @@
 /obj/machinery/microwave/stove,
 /turf/open/floor/wood/wood_wide,
 /area/f13/caves)
-"hl" = (
-/obj/effect/landmark/start/f13/tavernkeep,
-/turf/open/floor/carpet/royalblack,
-/area/f13/building)
 "hm" = (
 /turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
 /area/f13/wasteland/bighorn)
@@ -21675,7 +21671,7 @@ Hk
 xk
 wU
 wv
-hl
+qg
 qg
 oY
 wU

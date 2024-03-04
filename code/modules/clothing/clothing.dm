@@ -343,8 +343,8 @@
 		protection_list.Cut()
 	protection_list = body_parts_covered2organ_names_extended(initial(body_parts_covered))
 	for(var/covered_parts in protection_list)
-		protection_list += uppertext(parse_zone_extended(covered_parts))
 		protection_list -= covered_parts
+		protection_list += uppertext(parse_zone_extended(covered_parts))
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
 		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"

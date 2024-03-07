@@ -84,6 +84,7 @@
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
+	box = /obj/item/storage/survivalkit_aid_adv
 
 /datum/outfit/loadout/commander/liberty
 	name = "Liberty"

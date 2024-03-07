@@ -13,6 +13,17 @@
 	name = "Tavernkeep"
 	icon_state = "Bartender"
 
+/obj/effect/landmark/start/f13/hillside_leadership
+	name = "Hillside Leadership"
+	icon_state = "Bartender"
+
+/obj/effect/landmark/start/f13/hillside_lookout
+	name = "Hillside Lookout"
+	icon_state = "Bartender"
+
+/obj/effect/landmark/start/f13/hillside_settler
+	name = "Hillside Inhabitant"
+	icon_state = "Bartender"
 // Vault
 
 /obj/effect/landmark/start/f13/overseer

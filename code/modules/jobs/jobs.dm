@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
+	"Hillside Leadership",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -41,6 +42,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Vault-Tec Engineer",
 	"Vault-Tec Robot",
 	"Vault Dweller",
+
+	"Hillside Leadership",
+	"Hillside Lookout",
+	"Hillside Inhabitant",
+	"Tavernkeep",
 	))
 
 GLOBAL_LIST_INIT(vault_positions, list(
@@ -57,7 +63,6 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
-	"Tavernkeep",
 	))
 
 GLOBAL_LIST_INIT(security_positions, list(
@@ -89,25 +94,34 @@ GLOBAL_LIST_INIT(lbj_positions, list(
 	"Lumberjack",
 	))
 
+GLOBAL_LIST_INIT(twn_positions, list(
+	"Hillside Leadership",
+	"Hillside Lookout",
+	"Hillside Inhabitant",
+	"Tavernkeep",
+	))
+
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_GMB = list("jobs" = gmb_positions, "color" = "#6daf838"),
 	EXP_TYPE_DFS = list("jobs" = dfs_positions, "color" = "#966c61"),
 	EXP_TYPE_LBJ = list("jobs" = lbj_positions, "color" = "#c0c473"),
 	EXP_TYPE_VLT = list("jobs" = vault_positions, "color" = "#668959"),
+	EXP_TYPE_TWN = list("jobs" = twn_positions, "color" = "#6b5f63"),
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_COMMAND = list("titles" = command_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = vault_positions | wasteland_positions | gmb_positions | dfs_positions | lbj_positions),
+	EXP_TYPE_FALLOUT = list("titles" = vault_positions | wasteland_positions | gmb_positions | dfs_positions | lbj_positions | twn_positions),
 
 	EXP_TYPE_VAULT = list("titles" = vault_positions),
 
 	EXP_TYPE_GMB = list("titles" = gmb_positions),
 	EXP_TYPE_DFS = list("titles" = dfs_positions),
 	EXP_TYPE_LBJ = list("titles" = lbj_positions),
+	EXP_TYPE_TWN = list("titles" = twn_positions),
 
 	))
 

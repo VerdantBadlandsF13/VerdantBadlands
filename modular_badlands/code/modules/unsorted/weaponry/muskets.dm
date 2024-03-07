@@ -5,8 +5,8 @@
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "lasmusket"
-	item_state = "lasmusket"
+	icon_state = "las_musket"
+	item_state = "las_musket"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lasmusket
 	fire_delay = 15
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'

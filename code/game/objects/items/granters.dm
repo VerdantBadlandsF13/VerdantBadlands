@@ -799,7 +799,16 @@
 				remarks = list("Grognak hit the Death Knight only once, but that was enough.", "Grognak is surprisingly agile, never committing too heavily on an attack, dancing between his enemies.", "Grognak isn't good at talking, but he knows it has its place. He has friends to talk for him.", "Other barbarians might change their weapons, but Grognak could never leave his beloved axe.")
 	return ..()
 
-
 /obj/item/book/granter/trait/selection/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
+
+
+
+/obj/item/book/granter/trait/research
+	name = "RESEARCH TRAIT GRANTER"
+	desc = "If you've found this outside of admin intervention, notify Carl."
+	oneuse = TRUE
+	granted_trait = TRAIT_RESEARCHER
+	traitname = "researcher"
+	remarks = list("...")

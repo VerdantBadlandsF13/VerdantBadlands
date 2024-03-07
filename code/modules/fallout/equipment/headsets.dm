@@ -95,8 +95,8 @@
 	desc = "An old, almost broken headset. You can hear crackling from the ear piece.\nTo access the town's private channel, use :h"
 	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/headset_town
-	frequency = FREQ_TOWN
+	frequency = FREQ_TWN
 	freerange = TRUE
 	freqlock = TRUE
 	factionized = TRUE
-	linked_faction = FACTION_DFS
+	linked_faction = FACTION_TWN

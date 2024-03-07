@@ -43,6 +43,7 @@
 	name = "compact pickaxe"
 	desc = "A smaller, compact version of the standard pickaxe."
 	icon_state = "minipick"
+	toolspeed = 2
 	force = 10
 	throwforce = 7
 	slot_flags = ITEM_SLOT_BELT

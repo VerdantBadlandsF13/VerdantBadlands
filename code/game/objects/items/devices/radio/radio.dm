@@ -97,6 +97,12 @@
 		switch(linked_faction)
 			if(FACTION_VLT)
 				LAZYREMOVE(GLOB.vlt_radios, src)
+			if(FACTION_GMB)
+				LAZYREMOVE(GLOB.gmb_radios, src)
+			if(FACTION_DFS)
+				LAZYREMOVE(GLOB.dfs_radios, src)
+			if(FACTION_TWN)
+				LAZYREMOVE(GLOB.twn_radios, src)
 	remove_radio_all(src) //Just to be sure
 	QDEL_NULL(wires)
 	QDEL_NULL(keyslot)
@@ -125,6 +131,8 @@
 				LAZYADD(GLOB.gmb_radios, src)
 			if(FACTION_DFS)
 				LAZYADD(GLOB.dfs_radios, src)
+			if(FACTION_TWN)
+				LAZYADD(GLOB.twn_radios, src)
 
 /obj/item/radio/ComponentInitialize()
 	. = ..()

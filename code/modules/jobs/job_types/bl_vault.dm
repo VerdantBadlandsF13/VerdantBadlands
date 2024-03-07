@@ -91,7 +91,6 @@ Overseer
 	ears = 			/obj/item/radio/headset/headset_overseer
 	backpack = 		/obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
-		/obj/item/storage/box/ids = 1,
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
@@ -132,6 +131,7 @@ Security Chief
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	backpack = 		/obj/item/storage/backpack/satchel/leather
+	box = /obj/item/storage/survivalkit_aid_adv
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
@@ -175,7 +175,6 @@ Engineering Chief
 	backpack = 		/obj/item/storage/backpack/industrial
 	satchel = 		/obj/item/storage/backpack/satchel/eng
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
-	box = 			/obj/item/storage/box/engineer
 	backpack_contents = list(/obj/item/crowbar = 1)
 
 /*
@@ -217,7 +216,7 @@ Security Officer
 	backpack = 		/obj/item/storage/backpack/security
 	satchel = 		/obj/item/storage/backpack/satchel/sec
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/sec
-	box = 			/obj/item/storage/box/security
+	box = /obj/item/storage/survivalkit_aid_adv
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/police = 1,
 		/obj/item/restraints/handcuffs = 1,
@@ -311,6 +310,7 @@ Scientist
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RESEARCHER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*
@@ -344,7 +344,6 @@ Vault Engineer
 	backpack = 		/obj/item/storage/backpack/industrial
 	satchel = 		/obj/item/storage/backpack/satchel/eng
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
-	box = 			/obj/item/storage/box/engineer
 	backpack_contents = list(/obj/item/crowbar = 1)
 
 /*

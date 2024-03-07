@@ -49,10 +49,22 @@ VAULT STUFF BELOW
 	uses_overlays = FALSE
 
 /obj/item/card/id/selfassign
-	icon_state = "silver"
+	name = "identification card"
+	icon_state = "budgetcard"
 	item_state = "silver_id"
-	desc = "A rewritable card that allows you to put your name and assignment on it."
+	desc = "An old, almost illegible card that can easily be written over with anything. Perhaps some devices might recognise it?"
 	uses_overlays = FALSE
+
+/obj/item/card/id/selfassign/attack_self(mob/user)
+	if(isliving(user))
+		var/mob/living/living_user = user
+		if(alert(user, "Action", "Pre-War Identification Card", "Show", "Modify") == "Modify")
+			registered_name = living_user.real_name
+			assignment = living_user.job
+			update_label()
+			to_chat(user, "<span class='notice'>You modify the ID card.</span>")
+			return
+	..()
 
 /obj/item/card/id/fadedvaultid
 	name = "faded id card"
@@ -138,7 +150,25 @@ OTHER BELOW
 	uses_overlays = FALSE
 	access = list(ACCESS_LBJ)
 
-// Tavern
+// Town
+/obj/item/card/id/hillside_keys
+	name = "frail keychain"
+	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_TOWN)
+
+/obj/item/card/id/hillside_leadership_keys
+	name = "hardened rusted keychain"
+	desc = "A set of keys, each marked with odd pins. They feel sturdy."
+	icon_state = "keys"
+	item_state = "keys"
+	assignment = "old keys"
+	uses_overlays = FALSE
+	access = list(ACCESS_TOWN, ACCESS_TWN_RESTRICT)
+
 /obj/item/card/id/tavern_keys
 	name = "frail keychain"
 	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
@@ -146,4 +176,13 @@ OTHER BELOW
 	item_state = "keys"
 	assignment = "old keys"
 	uses_overlays = FALSE
-	access = list(ACCESS_TOWN_BAR)
+	access = list(ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TWN_PRIVATE)
+
+/obj/item/card/id/spare_tavern_keys
+	name = "spare tavern key"
+	desc = "Intended to open a number of doors in the tavern. Nothing more. Nothing less."
+	icon_state = "key"
+	item_state = "key"
+	assignment = "old key"
+	uses_overlays = FALSE
+	access = list(ACCESS_TWN_PRIVATE)

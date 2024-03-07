@@ -54,9 +54,9 @@
 	icon_state = "duster_vet"
 	item_state = "duster_vet"
 
-/obj/item/clothing/suit/armored/f13/light/duster/brahmin
+/obj/item/clothing/suit/armored/f13/light/duster/hide
 	name = "leather duster"
-	desc = "A duster made from tanned brahmin hide. It has a thick waxy surface from the processing, making it surprisingly resistant."
+	desc = "A duster made from some manner of tanned hide. It has a thick waxy surface from the processing, making it surprisingly resistant."
 	icon_state = "duster_brahmin"
 	item_state = "duster_brahmin"
 

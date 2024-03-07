@@ -83,6 +83,7 @@
 	uniform = /obj/item/clothing/under/f13/dfs
 	neck = /obj/item/storage/belt/holster/legholster/dfs_boss
 	id = /obj/item/card/id/dfs_boss_raider_tags
+	box = /obj/item/storage/survivalkit_aid_adv
 
 /datum/outfit/job/dfs/advisor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

@@ -309,7 +309,6 @@
 		M.losebreath += 10
 		M.set_disgust(25)
 		M.adjustStaminaLoss(60*REAGENTS_EFFECT_MULTIPLIER)
-		M.vomit(30, 1, 1, 5, 0, 0, 0, 60)
 		M.Jitter(35)
 		M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)
 		M.visible_message("<span class='userdanger'>[M] goes stiff!</span>")
@@ -322,7 +321,6 @@
 		M.blur_eyes(60)
 		M.losebreath += 20
 		M.set_disgust(50)
-		M.vomit(30, 1, 1, 5, 0, 0, 0, 60)
 		M.Jitter(90)
 		M.adjustStaminaLoss(80*REAGENTS_EFFECT_MULTIPLIER)
 		M.playsound_local(M, 'sound/effects/singlebeat.ogg', 100, 0)

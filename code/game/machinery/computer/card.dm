@@ -594,4 +594,5 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	job_req = list(
 		"Vault-Tec Overseer",
 		"Vault-Tec Security Chief",
+		"Vault-Tec Engineering Chief",
 		)

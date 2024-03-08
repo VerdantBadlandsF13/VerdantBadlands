@@ -115,6 +115,9 @@
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
 	extra_damage = 4
 
+/obj/item/gun/ballistic/rifle/repeater/cowboy/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 /obj/item/gun/ballistic/rifle/repeater/trail
 	name = "Marlin Model 1894"
 	desc = "A lever action rifle chambered in .44 Magnum."
@@ -160,6 +163,9 @@
 	scope_y_offset = 12
 	pump_sound = 'sound/weapons/boltpump.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
+
+/obj/item/gun/ballistic/rifle/hunting/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 /obj/item/gun/ballistic/rifle/hunting/attackby(obj/item/A, mob/user, params)
 	..()
@@ -216,6 +222,9 @@
 	fire_sound = 'sound/f13weapons/boltfire.ogg'
 	pump_stam_cost = 15
 
+/obj/item/gun/ballistic/rifle/enfield/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
+
 /////////////////////////////////////
 // MAGAZINE FED BOLT-ACTION RIFLES //
 /////////////////////////////////////
@@ -230,6 +239,21 @@
 	. += "<span class='notice'>Alt-click to remove the magazine.</span>"
 
 /obj/item/gun/ballistic/rifle/mag/AltClick(mob/living/user)
+
+	if(jammed)
+		if(jam_fixing)
+			return
+		usr.visible_message("<span class='warning'>[usr] has begun trying to fix their weapon!<span class='warning'>")
+		jam_fixing = TRUE
+		if(do_mob(usr, usr, jam_fixtime))
+			jammed = FALSE
+			to_chat(usr, "<span class='green'>Good to go!</span>")
+			playsound(src, "sound/weapons/gun_slide_lock_[rand(1,5)].ogg", 30, 1)
+		else
+			to_chat(usr, "<span class='warning'>You must remain still to clear the jam!</span>")
+		jam_fixing = FALSE
+		return
+
 	var/obj/item/ammo_casing/AC = chambered //Find chambered round
 	if(magazine)
 		magazine.forceMove(drop_location())
@@ -289,3 +313,4 @@
 	spread = 0.25
 	zoomable = FALSE
 	pb_knockback = 1// shhhh
+	randomize_condition_lvl = FALSE//Roundstart only.

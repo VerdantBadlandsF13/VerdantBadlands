@@ -96,8 +96,6 @@
 	new /obj/item/stack/cable_coil(src,30,pick("red"))
 
 
-
-
 /obj/item/storage/belt/utility/servant/PopulateContents()
 	new /obj/item/screwdriver/brass(src)
 	new /obj/item/wirecutters/brass(src)

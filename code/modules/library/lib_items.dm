@@ -17,6 +17,7 @@
 	icon_state = "book-0"
 	desc = "A great place for storing knowledge."
 	opacity = 0
+	density = TRUE
 	resistance_flags = FLAMMABLE
 
 /obj/structure/bookshelf/New()

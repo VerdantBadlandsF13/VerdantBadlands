@@ -78,6 +78,7 @@
 #define EXP_TYPE_GMB			"Green Mountain Boys"
 #define EXP_TYPE_LBJ			"Lumberjack Camp"
 #define EXP_TYPE_VLT			"Vault Fifty-Eight"
+#define EXP_TYPE_TWN			"Hillside Hideaway"
 
 //Flags in the players table in the db
 #define DB_FLAG_EXEMPT 							(1<<0)

@@ -7,7 +7,7 @@
 	default_color = "00FF00"
 	blacklisted = 0
 	sexes = 0
-	species_traits = list(MUTCOLORS,NOEYES,NOTRANSSTING,HAS_FLESH,HAS_BONE,HAIR,ROBOTIC_LIMBS)
+	species_traits = list(MUTCOLORS,NOEYES,NOTRANSSTING,HAIR,ROBOTIC_LIMBS)
 
 	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
 	TRAIT_NOSOFTCRIT, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_LIMBATTACHMENT,
@@ -69,14 +69,4 @@
 		return
 	H.dna.features["ipc_screen"] = new_ipc_screen
 	H.update_body()
-
-/datum/species/ipc/spec_life(mob/living/carbon/human/H)
-	if(H.nutrition < NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.nutrition > NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.water < THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
-	if(H.water > THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
 

@@ -5,6 +5,7 @@ GLOBAL_LIST_EMPTY(faction_radios)
 GLOBAL_LIST_EMPTY(vlt_radios)
 GLOBAL_LIST_EMPTY(gmb_radios)
 GLOBAL_LIST_EMPTY(dfs_radios)
+GLOBAL_LIST_EMPTY(twn_radios)
 
 /obj/machinery/radioterminal
 	name = "radio control"
@@ -47,6 +48,10 @@ GLOBAL_LIST_EMPTY(dfs_radios)
 			for(var/obj/item/radio/radio in GLOB.dfs_radios)
 				if(radio.linked_mob)
 					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
+		if(FACTION_TWN)
+			for(var/obj/item/radio/radio in GLOB.twn_radios)
+				if(radio.linked_mob)
+					dat += "<a href='?src=[REF(src)];terminate=[REF(radio)]'> [radio.name] linked to [radio.linked_mob]<br>"
 	var/datum/browser/popup = new(user, "radio_console", "Radio Terminal")
 	popup.set_content(dat)
 	popup.open()
@@ -70,6 +75,8 @@ GLOBAL_LIST_EMPTY(dfs_radios)
 					LAZYREMOVE(GLOB.gmb_radios, terminate)
 				if(FACTION_DFS)
 					LAZYREMOVE(GLOB.dfs_radios, terminate)
+				if(FACTION_TWN)
+					LAZYREMOVE(GLOB.twn_radios, terminate)
 	updateUsrDialog()
 	return
 
@@ -115,3 +122,8 @@ GLOBAL_LIST_EMPTY(dfs_radios)
 	name = "local radio control"
 	assigned_faction = FACTION_DFS
 	req_one_access = list(ACCESS_DFS)
+
+/obj/machinery/radioterminal/twn
+	name = "local radio control"
+	assigned_faction = FACTION_TWN
+	req_one_access = list(ACCESS_TWN_RESTRICT)

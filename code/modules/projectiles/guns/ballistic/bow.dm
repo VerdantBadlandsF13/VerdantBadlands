@@ -136,3 +136,4 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/bow/gmb
 	zoomable = FALSE
 	extra_speed = 400
+	randomize_condition_lvl = FALSE//Roundstart only.

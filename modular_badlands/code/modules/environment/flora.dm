@@ -157,23 +157,59 @@
 	name = "licorice pulp"
 	description = "Pulped licorice root."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#14FF3C" // rgb: 48, 32, 0
+	color = "#614100" // rgb: 48, 32, 0
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
+	pain_resistance = 3
 
 /datum/reagent/consumable/licoricepulp/on_mob_life(mob/living/carbon/M)
-	if(prob(20))
-		for(var/organ in M.internal_organs)
-			M.adjustOrganLoss(-1 *REAGENTS_EFFECT_MULTIPLIER, 150)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = -0.45
+		if(61 to 80)
+			organDam = -0.40
+		if(41 to 60)
+			organDam = -0.30
+		if(20 to 40)
+			organDam = -0.20
+		if(0 to 20)
+			organDam = -0.10
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustOrganLoss(ORGAN_SLOT_WOMB,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
 	..()
 	return TRUE // update health at end of tick
 
 /datum/reagent/consumable/licoricepulp/overdose_process(mob/living/M)
-	if(prob(33))
-		M.adjustStaminaLoss(2.5*REM, updating_health = FALSE)
-		M.adjustToxLoss(1*REM, updating_health = FALSE)
-		M.losebreath++
-		. = 1
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/toxLoss = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = 0.25
+			toxLoss = 1.00
+		if(61 to 80)
+			organDam = 0.30
+			toxLoss = 1.05
+		if(41 to 60)
+			organDam = 0.40
+			toxLoss = 1.10
+		if(20 to 40)
+			organDam = 0.50
+			toxLoss = 1.20
+		if(0 to 20)
+			organDam = 0.60
+			toxLoss = 1.35
+	M.adjustOrganLoss(ORGAN_SLOT_HEART,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS,organDam*REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustStaminaLoss(2.5*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
+	M.adjustToxLoss(toxLoss*REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
+	M.losebreath++
+	. = 1
 	..()
 
 ////////////////////////
@@ -199,18 +235,56 @@
 	description = "Pulped milkweed flower, pod and sap."
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	water_level = -0.05
-	color = ""
-	taste_description = ""
+	color = "#F77CA4"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	glass_icon_state = ""
 	overdose_threshold = 15
+	pain_resistance = 2
 
 /datum/reagent/consumable/milkweedpulp/on_mob_life(mob/living/carbon/M)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/fireLoss = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = -0.25
+			fireLoss = -0.25
+		if(61 to 80)
+			organDam = -0.2
+			fireLoss = -0.2
+		if(41 to 60)
+			organDam = -0.15
+			fireLoss = -0.15
+		if(20 to 40)
+			organDam = -0.1
+			fireLoss = -0.1
+		if(0 to 20)
+			organDam = -0.05
+			fireLoss = -0.05
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustFireLoss(fireLoss * REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
 	..()
 	return TRUE // update health at end of tick
 
 /datum/reagent/consumable/milkweedpulp/overdose_process(mob/living/M)
+	var/roll = rand(0,100)
+	var/toxLoss = 0
+	var/dizzy = 0
+	switch(roll)
+		if(81 to 100)
+			toxLoss = 0.1 * REAGENTS_EFFECT_MULTIPLIER
+		if(61 to 80)
+			toxLoss = 0.2 * REAGENTS_EFFECT_MULTIPLIER
+		if(41 to 60)
+			toxLoss = 0.3 * REAGENTS_EFFECT_MULTIPLIER
+		if(21 to 40)
+			toxLoss = 0.4 * REAGENTS_EFFECT_MULTIPLIER
+		if(0 to 20)
+			toxLoss = 0.5 * REAGENTS_EFFECT_MULTIPLIER
+	M.adjustToxLoss(toxLoss, updating_health = FALSE)
+	. = 1
+	M.Dizzy(dizzy)
 	..()
+
 ////////////////////////
 //	END CHEMS		 //
 ///////////////////////
@@ -240,11 +314,70 @@
 	overdose_threshold = 15
 
 /datum/reagent/consumable/yarrowpulp/on_mob_life(mob/living/carbon/M)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/bruteLoss = 0
+	var/tempInc = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = -0.25
+			bruteLoss = -0.25
+			tempInc = 0.25
+		if(61 to 80)
+			organDam = -0.2
+			bruteLoss = -0.2
+			tempInc = 0.25
+		if(41 to 60)
+			organDam = -0.15
+			bruteLoss = -0.15
+			tempInc = 0.25
+		if(21 to 40)
+			organDam = -0.1
+			bruteLoss = -0.1
+			tempInc = 0.25
+		if(0 to 20)
+			organDam = -0.05
+			bruteLoss = -0.05
+			tempInc = 0.25
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustBruteLoss(bruteLoss * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjust_bodytemperature(tempInc)
 	..()
 	return TRUE // update health at end of tick
 
 /datum/reagent/consumable/yarrowpulp/overdose_process(mob/living/M)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/toxLoss = 0
+	var/tempInc = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = 0.5
+			toxLoss = 0.1
+			tempInc = 0.75
+		if(61 to 80)
+			organDam = 0.75
+			toxLoss = 0.2
+			tempInc = 0.85
+		if(41 to 60)
+			organDam = 1
+			toxLoss = 0.3
+			tempInc = 0.95
+		if(21 to 40)
+			organDam = 1.25
+			toxLoss = 0.4
+			tempInc = 1.05
+		if(0 to 20)
+			organDam = 1.5
+			toxLoss = 0.5
+			tempInc = 1.15
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustToxLoss(toxLoss * REAGENTS_EFFECT_MULTIPLIER, updating_health = FALSE)
+	M.adjust_bodytemperature(tempInc)
+	M.losebreath++
+	. = 1
 	..()
+
 ////////////////////////
 //	END CHEMS		 //
 ///////////////////////
@@ -273,12 +406,56 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	glass_icon_state = ""
 	overdose_threshold = 5
+	addiction_threshold = 1.25
+	pain_resistance = 20
 
 /datum/reagent/consumable/skullcappulp/on_mob_life(mob/living/carbon/M)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/toxLoss = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = 0.05
+			toxLoss = 0.05
+		if(61 to 80)
+			organDam = 0.1
+			toxLoss = 0.1
+		if(41 to 60)
+			organDam = 0.2
+			toxLoss = 0.2
+		if(21 to 40)
+			organDam = 0.4
+			toxLoss = 0.4
+		if(0 to 20)
+			organDam = 0.8
+			toxLoss = 0.8
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustToxLoss(toxLoss * REAGENTS_EFFECT_MULTIPLIER,150)
 	..()
 	return TRUE // update health at end of tick
 
 /datum/reagent/consumable/skullcappulp/overdose_process(mob/living/M)
+	var/roll = rand(0,100)
+	var/organDam = 0
+	var/toxLoss = 0
+	switch(roll)
+		if(81 to 100)
+			organDam = 0.4
+			toxLoss = 0.4
+		if(61 to 80)
+			organDam = 0.8
+			toxLoss = 0.8
+		if(41 to 60)
+			organDam = 1.6
+			toxLoss = 1.6
+		if(21 to 40)
+			organDam = 3.2
+			toxLoss = 3.2
+		if(0 to 20)
+			organDam = 6.4
+			toxLoss = 6.4
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH,organDam * REAGENTS_EFFECT_MULTIPLIER,150)
+	M.adjustToxLoss(toxLoss * REAGENTS_EFFECT_MULTIPLIER,150)
 	..()
 ////////////////////////
 //	END CHEMS		 //

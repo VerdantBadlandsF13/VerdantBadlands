@@ -3,7 +3,7 @@
 /datum/component/swimming
 	dupe_mode = COMPONENT_DUPE_UNIQUE
 	var/lengths = 0 // How far have we swum?
-	var/lengths_for_bonus = 25 // If you swim this much, you'll count as having "excercised" and thus gain a buff.
+	var/lengths_for_bonus = 5 // If you swim this much, you'll count as having "excercised" and thus gain a buff.
 	var/list/species = list()
 	var/drowning = FALSE
 	var/ticks_drowned = 0
@@ -29,11 +29,11 @@
 
 /datum/component/swimming/proc/onMove()
 	lengths ++
-	if(lengths > lengths_for_bonus)
+	if(lengths >= lengths_for_bonus)
 		var/mob/living/L = parent
 		SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "exercise", /datum/mood_event/exercise)
 		L.apply_status_effect(STATUS_EFFECT_EXERCISED) // Swimming is really good excercise!
-		L.adjustStaminaLoss(5) // Tiring, however.
+		L.adjustStaminaLoss(15) // Tiring, however.
 		lengths = 0
 
 // Damn edge cases

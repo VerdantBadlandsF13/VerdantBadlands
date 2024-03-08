@@ -1,12 +1,12 @@
 //Laser musket
-/obj/item/gun/ballistic/rifle/hobo/lasmusket
+/obj/item/gun/ballistic/rifle/lasmusket
 	name = "Laser Musket"
 	desc = "In the wasteland, one must make do, and this weapon's wielder certainly does. Made from metal scraps, electronic parts, an old rifle stock and a bottle full of dreams, the Laser Musket is sure to stop anything in its tracks and make those raiders think twice."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "lasmusket"
-	item_state = "lasmusket"
+	icon_state = "las_musket"
+	item_state = "las_musket"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lasmusket
 	fire_delay = 15
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
@@ -21,9 +21,13 @@
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	can_jam = FALSE
+
+/obj/item/gun/ballistic/rifle/lasmusket/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 //Plasma musket.
-/obj/item/gun/ballistic/rifle/hobo/plasmacaster
+/obj/item/gun/ballistic/rifle/plasmacaster
 	name = "Plasma Musket"
 	desc = "The cooling looks dubious. Pray the plasma goes towards the enemy and not your face when you pull the trigger."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
@@ -42,3 +46,4 @@
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
+	can_jam = FALSE

@@ -229,6 +229,7 @@
 			new impact_effect_type(target_loca, hitx, hity)
 
 		W.add_dent(WALL_DENT_SHOT, hitx, hity)
+		playsound(target_loca, sound("modular_badlands/code/modules/rp_misc/sound/projectiles/impact/rock/bulletrock[rand(1,12)].ogg",0,1,0,250))
 
 		return BULLET_ACT_HIT
 
@@ -247,6 +248,8 @@
 			var/obj/item/bodypart/B = L.get_bodypart(def_zone)
 			if(B && B.status == BODYPART_ROBOTIC) // So if you hit a robotic, it sparks instead of bloodspatters
 				do_sparks(2, FALSE, target.loc)
+				//Assume it's metal. Using PA effects for now, until I get proper audio for it. - Carl
+				playsound(target_loca, sound("modular_badlands/code/modules/rp_misc/sound/projectiles/impact/pa/bulletpa[rand(1,10)].ogg",0,1,0,250))
 				if(prob(25))
 					new /obj/effect/decal/cleanable/oil(target_loca)
 			else if(isalien(L))
@@ -259,6 +262,9 @@
 					new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, bloodtype_to_color())
 
 				L.add_splatter_floor(target_loca)
+				//Assume it's flesh.
+				playsound(target_loca, sound("modular_badlands/code/modules/rp_misc/sound/projectiles/impact/flesh/bulletflesh[rand(1,9)].ogg",0,1,0,250))
+
 		else if(impact_effect_type && !hitscan)
 			new impact_effect_type(target_loca, hitx, hity)
 
@@ -291,7 +297,7 @@
 						SEND_SOUND(L, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 						C.gain_trauma(/datum/brain_trauma/mild/concussion)
 					else if(prob(10))
-						L.visible_message("<span class='danger'>[L] starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
+						L.visible_message("<span class='danger'>[L] begins to violently shake!</span>", COMBAT_MESSAGE_RANGE)
 						SEND_SOUND(L, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
 						C.gain_trauma(/datum/brain_trauma/mild/concussion)
 						L.Unconscious(100)

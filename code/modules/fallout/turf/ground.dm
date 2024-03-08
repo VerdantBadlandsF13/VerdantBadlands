@@ -1,8 +1,6 @@
 //Fallout 13 general indestructible floor directory
 
 /turf
-	var/baseturf_icon
-	var/baseturf_dir = 0
 
 /turf/open/indestructible/ground
 	icon = 'icons/fallout/turfs/ground.dmi'
@@ -20,8 +18,6 @@
 /turf/open/indestructible/ground/New()
 	..()
 	baseturfs = src.type
-	baseturf_icon = icon_state
-	baseturf_dir = dir
 
 /turf/open/indestructible/ground/attack_paw(mob/user)
 	return src.attack_hand(user)

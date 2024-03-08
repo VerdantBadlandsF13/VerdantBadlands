@@ -37,10 +37,10 @@
 	if(victim.reagents)
 		if(victim.reagents.has_reagent(/datum/reagent/medicine/spaceacillin))
 			sanitization += 7
-		if(victim.reagents.has_reagent(/datum/reagent/abraxo_cleaner/sterilizine/))
-			sanitization += 4
-		if(victim.reagents.has_reagent(/datum/reagent/medicine/stimpak))
-			flesh_healing += 0.5
+		if(victim.reagents.has_reagent(/datum/reagent/abraxo_cleaner/sterilizine))
+			sanitization += 2
+		if(victim.reagents.has_reagent(/datum/reagent/medicine/super_stimpak))
+			flesh_healing += 1
 
 	if(limb.current_gauze)
 		limb.seep_gauze(WOUND_BURN_SANITIZATION_RATE)

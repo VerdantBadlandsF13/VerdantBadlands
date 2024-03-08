@@ -274,11 +274,3 @@
 		var/datum/species/species = H.dna.species
 		species.liked_food = initial(species.liked_food)
 		species.disliked_food = initial(species.disliked_food)
-
-/datum/quirk/light_step
-	name = "Light Step"
-	desc = "You walk with a gentle step, making stepping on sharp objects quieter and less painful."
-	value = 1
-	mob_trait = TRAIT_LIGHT_STEP
-	gain_text = "<span class='notice'>You walk with a little more litheness.</span>"
-	lose_text = "<span class='danger'>You start tromping around like a barbarian.</span>"

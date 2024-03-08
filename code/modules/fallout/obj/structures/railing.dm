@@ -13,7 +13,7 @@
 /obj/structure/railing/wood/underlayer
 	layer = BELOW_MOB_LAYER
 
-/obj/structure/railing/wood/post 
+/obj/structure/railing/wood/post
 	icon_state = "post_wood"
 	density = FALSE
 
@@ -37,6 +37,7 @@
 	name = "handrail"
 	desc = "A waist high handrail, perhaps you could climb over it."
 	icon_state = "handrail_y"
+	plane = MOB_PLANE
 	layer = WALL_OBJ_LAYER
 
 /obj/structure/railing/handrail/underlayer

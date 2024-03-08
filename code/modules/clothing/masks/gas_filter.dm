@@ -89,14 +89,9 @@
 	filter_status = max(filter_status - danger_points - FILTERS_CONSTANT_WEAR, 0)
 	return breath
 
-/obj/item/gas_filter/damaged
-	name = "damaged gas filter"
-	desc = "A piece of filtering cloth to be used with atmospheric gas masks and emergency gas masks, it seems damaged."
-	filter_status = 50 //override on initialize
-
-/obj/item/gas_filter/damaged/Initialize(mapload)
+/obj/item/gas_filter/random/Initialize(mapload)
 	. = ..()
-	filter_status = rand(35, 65)
+	filter_status = rand(5, 85)
 
 /obj/item/gas_filter/plasmaman
 	name = "plasmaman atmospheric gas filter"

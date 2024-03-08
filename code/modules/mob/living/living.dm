@@ -58,6 +58,7 @@
 /mob/living/proc/ZImpactDamage(turf/T, levels)
 	visible_message("<span class='danger'>[src] crashes into [T] with a sickening noise!</span>", \
 					"<span class='userdanger'>You crash into [T] with a sickening noise!</span>")
+	playsound(src, 'modular_badlands/code/modules/rp_misc/sound/gore/fallsmash.ogg', 100, 0)
 	adjustBruteLoss((levels * 5) ** 1.5)
 	DefaultCombatKnockdown(levels * 50)
 
@@ -445,7 +446,7 @@
 			if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
 				to_chat(src, "<span class='notice'>Your mindshield prevents your mind from giving in!</span>")
 			else if(src.mind.assigned_role in GLOB.command_positions)
-				to_chat(src, "<span class='notice'>Your dedication to your department prevents you from giving in!</span>")
+				to_chat(src, "<span class='notice'>Your dedication to your underlings prevents you from giving in!</span>")
 			else
 				E.enthrallTally += 20
 				to_chat(src, "<span class='notice'>You give into [E.master]'s influence.</span>")
@@ -1158,11 +1159,11 @@
 
 	var/blocked = getarmor(null, "rad")
 
+// Do we have Rad-X in our system?
 	if(HAS_TRAIT(src,TRAIT_RADX))
-		blocked *= 2
-
-	if(special_e >= 8)
-		blocked *= 1.25
+		blocked *= 15//:)
+	else if(special_e)// Otherwise, we fall back to endurance.
+		blocked *= special_e/10
 
 /*
 	if(user.perks.have(/datum/perk/radresist))

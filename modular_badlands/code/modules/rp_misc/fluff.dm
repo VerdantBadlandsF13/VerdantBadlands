@@ -56,12 +56,12 @@ Ignore it, if possible.
 	if(getStaminaLoss() > STAMINA_NEAR_CRIT)
 		handle_crit_stamina_sound()
 		to_chat(src, span_warning("You're too tired to keep this up! Make sure you rest."))
-		last_breath = world.time + 12 SECONDS
+		last_breath = world.time + 48 SECONDS
 		return
 	if(getStaminaLoss() > STAMINA_LOW)
 		handle_low_stamina_sound()
 		to_chat(src, span_danger("You're becoming winded. Take a break."))
-		last_breath = world.time + 5 SECONDS
+		last_breath = world.time + 24 SECONDS
 		return
 
 /mob/living/carbon/proc/handle_low_stamina_sound(mob/living/M)
@@ -128,7 +128,7 @@ Determines how badly a broadcasting radio suffers from dead air.
 The number refers to the odds that each character in a message is potentially dead air.
 */
 #define RADSTATIC_NONE 0// Vault.
-#define RADSTATIC_LIGHT 12// GMB exclusive, for now.
+#define RADSTATIC_LIGHT 12// GMB and Town.
 #define RADSTATIC_MEDIUM 18// For DFS.
 #define RADSTATIC_HEAVY 24// All other radio sets. Handheld or otherwise.
 #define RADSTATIC_STORM 95// Used for global overrides, on storm conditions.
@@ -175,8 +175,12 @@ GLOBAL_LIST_EMPTY(radio_sets)
 /obj/item/radio/headset/headset_gmb
 	ranged_static = RADSTATIC_LIGHT
 
+/obj/item/radio/headset/headset_town
+	ranged_static = RADSTATIC_LIGHT
+
 /obj/item/radio/headset/headset_dfs
 	ranged_static = RADSTATIC_MEDIUM
+
 
 /*
 General audio for grabbing and dropping items.

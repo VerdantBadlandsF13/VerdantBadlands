@@ -22,27 +22,27 @@
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 	)
 
@@ -84,6 +84,7 @@
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/commander
 	uniform = /obj/item/clothing/under/f13/gmb/officer
 	id = /obj/item/card/id/gmb_commander_keys
+	box = /obj/item/storage/survivalkit_aid_adv
 
 /datum/outfit/loadout/commander/liberty
 	name = "Liberty"
@@ -159,13 +160,13 @@
 
 /datum/outfit/loadout/walker/marksmen
 	name = "Watchdog"
-	r_hand = /obj/item/gun/ballistic/rifle/enfield
+	r_hand = /obj/item/gun/ballistic/rifle/enfield/roundstart
 	l_hand = /obj/item/ammo_box/a308
 
 /datum/outfit/loadout/walker/motorised
 	name = "Motorised"
-	r_hand = /obj/item/gun/ballistic/rifle/enfield
-	l_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic/roundstart
+	l_hand = /obj/item/ammo_box/magazine/m9mmds
 
 // Militia
 /datum/job/gmb/militia
@@ -179,7 +180,7 @@
 	exp_requirements = 120
 
 	loadout_options = list(
-	/datum/outfit/loadout/militia/hunter,
+	/datum/outfit/loadout/militia/reserve,
 	/datum/outfit/loadout/militia/musketeer)
 
 /datum/outfit/job/gmb/militia
@@ -187,13 +188,14 @@
 	jobtype = /datum/job/gmb/militia
 	suit = /obj/item/clothing/suit/armored/f13/light/gmb/militia
 
-/datum/outfit/loadout/militia/hunter
+/datum/outfit/loadout/militia/reserve
 	name = "Reserve"
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy
+	l_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy/roundstart
+	r_hand = /obj/item/ammo_box/tube/a357
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
-	l_hand = /obj/item/gun/ballistic/rifle/hobo/lasmusket
+	l_hand = /obj/item/gun/ballistic/rifle/lasmusket/roundstart
 	r_hand = /obj/item/ammo_box/lasmusket
 
 // Volunteer

@@ -30,13 +30,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 /// Turret is in Evasion Mode and actively passively (loudly) scanning the environment for targets
 #define TURRET_EVASION_MODE "evasion_mode"
 
-/// Turret procesing is OFF
-#define TURRET_PROCESS_OFF 0
-/// Turret processing is MACHINE
-#define TURRET_PROCESS_MACHINE 1
-/// Turret processing is FAST
-#define TURRET_PROCESS_FAST 2
-
 /// The turret becomes angy at whoever shoots it, regardless of other settings
 #define TF_SHOOT_REACTION (1<<0)
 /// The turret shoots at players
@@ -75,7 +68,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 
 	max_integrity = 160 //the turret's health
 	integrity_failure = 0.5
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 100, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
+	armor = list("tier" = 9, "energy" = 100, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 
 	/// Base turret icon state
 	var/base_icon_state = "standard"
@@ -107,10 +100,10 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	var/lethal_projectile = null
 	/// Sound of lethal projectile
 	var/lethal_projectile_sound
-	/// Will stay active - NOT USED FIX THIS AAAAAAAAAAAA
-	var/always_up = FALSE
+	/// Will stay active
+	var/always_up = TRUE
 	/// Hides the cover
-	var/has_cover = TRUE
+	var/has_cover = FALSE
 	/// The cover that is covering this turret
 	var/obj/machinery/porta_turret_cover/cover = null
 	/// Turret flags about who is turret allowed to shoot
@@ -187,8 +180,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	var/dropped_loot
 	/// What state are we in?
 	var/activity_state = TURRET_SLEEP_MODE
-	/// What processing state are we in?
-	var/processing_state
 
 /obj/machinery/porta_turret/Initialize()
 	. = ..()
@@ -200,8 +191,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
-	if(init_process)
-		processing_state = TURRET_PROCESS_MACHINE
 
 	setup()
 	if(has_cover)
@@ -226,19 +215,15 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 
 /obj/machinery/porta_turret/proc/check_should_process()
 	if (!on || !anchored || (stat & BROKEN) || !powered())
+		//end_processing()
 		STOP_PROCESSING(SSfastprocess, src)
 		STOP_PROCESSING(SSmachines, src)
-		processing_state = TURRET_PROCESS_OFF
 		return FALSE
 	if(activity_state == TURRET_SLEEP_MODE)
 		STOP_PROCESSING(SSfastprocess, src)
-		START_PROCESSING(SSmachines, src)
-		processing_state = TURRET_PROCESS_MACHINE
 		return TRUE
 	else
-		STOP_PROCESSING(SSmachines, src)
 		START_PROCESSING(SSfastprocess, src)
-		processing_state = TURRET_PROCESS_FAST
 		return TRUE
 
 /obj/machinery/porta_turret/update_icon_state()
@@ -926,7 +911,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 
 /obj/machinery/porta_turret/example
 	installation = null
-	always_up = 1
 	use_power = NO_POWER_USE
 	has_cover = 0
 	scan_range = 9
@@ -1170,7 +1154,6 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	max_integrity = 160
 	integrity_failure = 0.5
 	always_up = TRUE
-	has_cover = FALSE
 	scan_range = 9
 	mode = TURRET_LETHAL
 	installation = null

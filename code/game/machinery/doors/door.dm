@@ -285,10 +285,13 @@
 
 
 /obj/machinery/door/proc/open()
+	if(locked == TRUE)
+		return
 	if(!density)
 		return 1
 	if(operating)
 		return
+	show_sound_effect(get_turf(src), soundicon = SFX_ICON_JAGGED)
 	operating = TRUE
 	do_animate("opening")
 	set_opacity(0)

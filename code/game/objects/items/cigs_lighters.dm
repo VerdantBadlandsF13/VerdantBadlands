@@ -342,7 +342,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 // CIGARS //
 ////////////
 /obj/item/clothing/mask/cigarette/cigar
-	name = "premium cigar"
+	name = "pre-war cigar"
 	desc = "A brown roll of tobacco and... well, you're not quite sure. This thing's huge!"
 	icon_state = "cigaroff"
 	icon_on = "cigaron"
@@ -354,7 +354,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 40
 
 /obj/item/clothing/mask/cigarette/cigar/cohiba
-	name = "\improper Cohiba Robusto cigar"
+	name = "\improper pristine pre-war cigar"
 	desc = "There's little more you could want from a cigar."
 	icon_state = "cigar2off"
 	icon_on = "cigar2on"
@@ -363,7 +363,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 80
 
 /obj/item/clothing/mask/cigarette/cigar/havana
-	name = "premium Havanian cigar"
+	name = "premium pre-war cigar"
 	desc = "A cigar fit for only the best of the best."
 	icon_state = "cigar2off"
 	icon_on = "cigar2on"

@@ -159,7 +159,7 @@
 
 /obj/structure/urinal
 	name = "urinal"
-	desc = "The HU-452, an experimental urinal. Comes complete with experimental urinal cake."
+	desc = "A urinal. Comes complete with a urinal cake. Probably."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "urinal"
 	density = FALSE
@@ -228,7 +228,7 @@
 
 /obj/item/reagent_containers/food/urinalcake
 	name = "urinal cake"
-	desc = "The noble urinal cake, protecting the station's pipes from the station's pee. Do not eat."
+	desc = "The noble urinal cake, protecting the pipes. Do not eat."
 	icon = 'icons/obj/items_and_weapons.dmi'
 	icon_state = "urinalcake"
 	w_class = WEIGHT_CLASS_TINY
@@ -241,7 +241,7 @@
 
 /obj/machinery/shower
 	name = "shower"
-	desc = "The HS-451. Installed in the 2550s by the Nanotrasen Hygiene Division."
+	desc = "An old shower."
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "shower"
 	density = FALSE

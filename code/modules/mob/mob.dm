@@ -36,7 +36,17 @@
 			continue
 		var/datum/atom_hud/alternate_appearance/AA = v
 		AA.onNewMob(src)
-	set_nutrition(rand(NUTRITION_LEVEL_START_MIN, NUTRITION_LEVEL_START_MAX), rand(THIRST_LEVEL_START_MIN, THIRST_LEVEL_START_MAX))
+
+	if(!HAS_TRAIT(src,TRAIT_NOHUNGER))
+		set_nutrition(rand(NUTRITION_LEVEL_START_MIN, NUTRITION_LEVEL_START_MAX))
+	else
+		set_nutrition(NUTRITION_LEVEL_WELL_FED)
+
+	if(!HAS_TRAIT(src,TRAIT_NOTHIRST))
+		set_thirst(rand(THIRST_LEVEL_START_MIN, THIRST_LEVEL_START_MAX))
+	else
+		set_thirst(THIRST_LEVEL_FULL)
+
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)

@@ -20,27 +20,27 @@
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/vault,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 	)
 
@@ -91,9 +91,8 @@ Overseer
 	ears = 			/obj/item/radio/headset/headset_overseer
 	backpack = 		/obj/item/storage/backpack/satchel/leather
 	backpack_contents = list(
-		/obj/item/storage/box/ids = 1,
 		/obj/item/melee/classic_baton/telescopic = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/crowbar = 1)
 
@@ -132,11 +131,51 @@ Security Chief
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	backpack = 		/obj/item/storage/backpack/satchel/leather
+	box = /obj/item/storage/survivalkit_aid_adv
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart = 1,
 		/obj/item/ammo_box/magazine/m10mm_adv/simple = 3,
 		/obj/item/crowbar = 1)
+
+/*
+Engineering Chief
+*/
+
+/datum/job/vault/f13coe
+	title = "Vault-Tec Engineering Chief"
+	flag = F13VFECOE
+	head_announce = list("Engineering")
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are the leader of the Engineering Team. \
+	Working with the Engineering team, Overseer and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault. \
+	Obey the Overseer's wishes, when possible. You should act as his left hand, with the Security Chief as the right, ideally."
+	supervisors = "Vault-Tec"
+	req_admin_notify = 1
+	exp_requirements = 120
+
+	outfit = /datum/outfit/job/vault/f13coe
+
+	access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+	minimal_access = list(ACCESS_VFE, ACCESS_VFE_RESTRICT, ACCESS_VFE_SECURITY, ACCESS_VFE_MEDICAL, ACCESS_VFE_SCIENCE, ACCESS_VFE_ENGINEERING)
+
+/datum/outfit/job/vault/f13coe
+	name = "Vault-Tec Engineer"
+	jobtype = /datum/job/vault/f13coe
+
+	id =			/obj/item/card/id/chief
+	ears = 			/obj/item/radio/headset/headset_vault/eng
+	uniform = 		/obj/item/clothing/under/f13/vault
+	belt = 			/obj/item/storage/belt/utility/full/engi
+	shoes =			/obj/item/clothing/shoes/sneakers/brown
+	head =			/obj/item/clothing/head/hardhat/white
+	gloves =		/obj/item/pda/engineering
+	r_pocket = 		/obj/item/t_scanner
+	backpack = 		/obj/item/storage/backpack/industrial
+	satchel = 		/obj/item/storage/backpack/satchel/eng
+	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
+	backpack_contents = list(/obj/item/crowbar = 1)
 
 /*
 Security Officer
@@ -171,13 +210,13 @@ Security Officer
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	belt = 			/obj/item/storage/belt/security
-	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99
+	r_hand =		/obj/item/gun/ballistic/automatic/pistol/n99/roundstart
 	l_pocket = 		/obj/item/restraints/handcuffs
 	r_pocket = 		/obj/item/assembly/flash/handheld
 	backpack = 		/obj/item/storage/backpack/security
 	satchel = 		/obj/item/storage/backpack/satchel/sec
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/sec
-	box = 			/obj/item/storage/box/security
+	box = /obj/item/storage/survivalkit_aid_adv
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/police = 1,
 		/obj/item/restraints/handcuffs = 1,
@@ -271,6 +310,7 @@ Scientist
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST_EXPERT, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_RESEARCHER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ENCLAVE_CODES, TRAIT_GENERIC)// Used for opening the vault door. :)
 
 /*
@@ -296,7 +336,7 @@ Vault Engineer
 	id = /obj/item/card/id/vaultiecard
 	ears = 			/obj/item/radio/headset/headset_vault/eng
 	uniform = 		/obj/item/clothing/under/f13/vault
-	belt = 			/obj/item/storage/belt/utility/full/engi
+	belt = 			/obj/item/storage/belt/utility/full
 	shoes = 		/obj/item/clothing/shoes/sneakers/red
 	gloves =		/obj/item/pda/engineering
 	head = 			/obj/item/clothing/head/hardhat
@@ -304,7 +344,6 @@ Vault Engineer
 	backpack = 		/obj/item/storage/backpack/industrial
 	satchel = 		/obj/item/storage/backpack/satchel/eng
 	duffelbag = 	/obj/item/storage/backpack/duffelbag/engineering
-	box = 			/obj/item/storage/box/engineer
 	backpack_contents = list(/obj/item/crowbar = 1)
 
 /*

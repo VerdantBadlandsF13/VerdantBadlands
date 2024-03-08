@@ -115,15 +115,6 @@
 		H.apply_status_effect(/datum/status_effect/ghoulheal)
 	else
 		H.remove_status_effect(/datum/status_effect/ghoulheal)
-//Temp until we get them set up properly to use rads instead.
-	if(H.nutrition < NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.nutrition > NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.water < THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
-	if(H.water > THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
 
 /datum/species/ghoul/glowing
 	name = "Glowing Ghoul"

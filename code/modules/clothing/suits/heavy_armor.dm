@@ -56,6 +56,25 @@
 	allowed = list(/obj/item/twohanded, /obj/item/melee/onehanded, /obj/item/melee/smith, /obj/item/melee/smith/twohand, /obj/item/shield)
 
 //////////////
+//	DFS		//
+//////////////
+
+/obj/item/clothing/suit/armored/f13/heavy/dfs
+	name = "modified turnout gear"
+	desc = "An old set of turnout gear, modified for use by the DFS group in the area. This is next-to-none in terms of protection against incendiary weaponry."
+	icon = 'icons/fallout/clothing/bl_dfs.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_dfs.dmi'
+	icon_state = "dfs_firefighter"
+	item_state = "dfs_firefighter"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	armor = list("tier" = 4, "energy" = 60, "bomb" = 30, "bio" = 60, "rad" = 60, "fire" = 100, "acid" = 60)
+	strip_delay = 120
+	resistance_flags = FIRE_PROOF | UNACIDABLE
+
+//////////////
 //	OTHER	//
 //////////////
 

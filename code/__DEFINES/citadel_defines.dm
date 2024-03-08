@@ -120,7 +120,7 @@
 #define DEFAULT_NO_EYE_STATE		"no_eye"
 
 //special species definitions
-#define MINIMUM_MUTANT_COLOR	"#202020" //this is how dark players mutant parts and skin can be
+#define MINIMUM_MUTANT_COLOR	"#000000" //this is how dark players mutant parts and skin can be - From "#202020"
 
 //defines for different matrix sections
 #define MATRIX_RED			"red"

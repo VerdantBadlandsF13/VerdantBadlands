@@ -22,27 +22,27 @@
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/rival = list(
 			/datum/job/gmb,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/disciple = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/patron = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 		/datum/matchmaking_pref/protegee = list(
 			/datum/job/dfs,
-			/datum/job/wasteland/f13tavernkeep,
+			/datum/job/town/f13tavernkeep,
 		),
 	)
 
@@ -52,9 +52,9 @@
 	id = /obj/item/card/id/dfs_raider_tags
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
-	neck = /obj/item/storage/belt/holster/legholster
+	neck = /obj/item/storage/belt/holster/legholster/dfs
 	ears = /obj/item/radio/headset/headset_dfs
-	uniform	= /obj/item/clothing/under/f13/merca/dfs
+	uniform = /obj/item/clothing/under/f13/dfs
 	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 
@@ -73,11 +73,17 @@
 	access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 	minimal_access = list(ACCESS_DFS, ACCESS_DFS_BOSS)
 
+	loadout_options = list(
+	/datum/outfit/loadout/advisor/brute,
+	/datum/outfit/loadout/advisor/suave)
+
 /datum/outfit/job/dfs/advisor
 	name = "DFS Advisor"
 	jobtype = /datum/job/dfs/advisor
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	uniform = /obj/item/clothing/under/f13/dfs
+	neck = /obj/item/storage/belt/holster/legholster/dfs_boss
 	id = /obj/item/card/id/dfs_boss_raider_tags
+	box = /obj/item/storage/survivalkit_aid_adv
 
 /datum/outfit/job/dfs/advisor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -85,6 +91,20 @@
 		return
 	ADD_TRAIT(H, TRAIT_HARD_YARDS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LIFEGIVER, TRAIT_GENERIC)
+
+/datum/outfit/loadout/advisor/brute
+	name = "Brute"
+	l_hand = /obj/item/twohanded/thermic_lance/reconciliation
+	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs
+
+/datum/outfit/loadout/advisor/suave
+	name = "Suave"
+	mask = /obj/item/clothing/mask/cigarette/pipe
+	gloves = /obj/item/melee/unarmed/brass/lovetap
+	r_hand = /obj/item/gun/ballistic/automatic/fnfal/roundstart
+	l_hand = /obj/item/ammo_box/magazine/m762
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
 // DFS Enforcer
 /datum/job/dfs/enforcer
@@ -104,34 +124,33 @@
 	loadout_options = list(
 	/datum/outfit/loadout/enforcer/taskmaster,
 	/datum/outfit/loadout/enforcer/peacemaker,
-	/datum/outfit/loadout/enforcer/enforcer)
+	/datum/outfit/loadout/enforcer/bouncer)
 
 /datum/outfit/job/dfs/enforcer
 	name = "DFS Enforcer"
 	jobtype = /datum/job/dfs/enforcer
-	uniform = /obj/item/clothing/under/f13/mercc/dfs
+	uniform = /obj/item/clothing/under/f13/dfs/fire
+	belt = /obj/item/storage/belt/bandolier/grenade_belt_incen
+	gloves = /obj/item/clothing/gloves/f13/military
 	id = /obj/item/card/id/dfs_boss_raider_tags
 
-// Fourty-five submachinegun. For when business decisions become executive! And a badass coat.
 /datum/outfit/loadout/enforcer/taskmaster
 	name = "Taskmaster"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun
-	l_hand = /obj/item/ammo_box/magazine/tommygunm45 // Fifty rounds on tap. Two spare sticks.
-	gloves = /obj/item/clothing/gloves/f13/military
-	suit = /obj/item/clothing/suit/armored/f13/medium/armoredcoat
+	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun/roundstart
+	l_hand = /obj/item/ammo_box/magazine/tommygunm45
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
-// To be fair: nobody fucks with a dude who uses a flamethrower. Heavy armor and VERY clearly a background of Raider. What a peacemaker!
 /datum/outfit/loadout/enforcer/peacemaker
 	name = "Peacemaker"
 	r_hand = /obj/item/m2flamethrowertank
-	suit = /obj/item/clothing/suit/armored/f13/heavy/sulphite
-	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
+	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs
 
-/datum/outfit/loadout/enforcer/enforcer
-	name = "Enforcer"
-	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
-	suit = /obj/item/clothing/suit/armored/f13/medium/combat/mk2
-	head = /obj/item/clothing/head/helmet/f13/combat/mk2
+/datum/outfit/loadout/enforcer/bouncer
+	name = "Bouncer"
+	mask = /obj/item/clothing/mask/cigarette
+	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5/roundstart
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
 // DFS Agent
 /datum/job/dfs/agent
@@ -144,9 +163,35 @@
 	outfit = /datum/outfit/job/dfs/agent
 	exp_requirements = 240
 
+	loadout_options = list(
+	/datum/outfit/loadout/agent/acquisition,
+	/datum/outfit/loadout/agent/specialist)
+
 /datum/outfit/job/dfs/agent
 	name = "DFS Agent"
 	jobtype = /datum/job/dfs/agent
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs_hood
+
+/datum/outfit/loadout/agent/acquisition
+	name = "Acquisition Agent"
+	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle/roundstart
+	l_hand = /obj/item/ammo_box/magazine/m556/rifle
+	backpack_contents = list(
+		/obj/item/electropack/shockcollar =2,
+		/obj/item/electropack/shockcollar/explosive =1,
+		/obj/item/key/scollar =1,
+		/obj/item/key/bcollar =1,
+		)
+
+/datum/outfit/loadout/agent/specialist
+	name = "Specialist"
+	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
+	l_hand = /obj/item/ammo_box/magazine/w308
+	belt = /obj/item/storage/belt/bandolier/grenade_belt
+	backpack_contents = list(
+		/obj/item/book/granter/trait/explosives =1,
+		)
 
 // DFS Regular
 /datum/job/dfs/regular
@@ -159,9 +204,24 @@
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
+	loadout_options = list(
+	/datum/outfit/loadout/regular/veteran,
+	/datum/outfit/loadout/regular/rook)
+
 /datum/outfit/job/dfs/regular
 	name = "DFS Regular"
 	jobtype = /datum/job/dfs/regular
+	suit = /obj/item/clothing/suit/armored/f13/light/dfs
+	head = /obj/item/clothing/head/helmet/f13/dfs_hood
+
+/datum/outfit/loadout/regular/veteran
+	name = "Veteran"
+	r_hand = /obj/item/gun/ballistic/automatic/smg/mp5/roundstart
+	l_hand = /obj/item/ammo_box/magazine/uzim9mm
+
+/datum/outfit/loadout/regular/rook
+	name = "Rook"
+	r_hand = /obj/item/gun/ballistic/rifle/hunting/roundstart
 
 //DFS Grunt
 /datum/job/dfs/grunt
@@ -175,6 +235,21 @@
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND
 
+	loadout_options = list(
+	/datum/outfit/loadout/grunt/wastrel,
+	/datum/outfit/loadout/grunt/washout)
+
 /datum/outfit/job/dfs/grunt
 	name = "DFS Grunt"
 	jobtype = /datum/job/dfs/grunt
+
+/datum/outfit/loadout/grunt/wastrel
+	name = "Wastrel"
+	suit = /obj/item/clothing/suit/armored/f13/light/outlander
+	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
+
+/datum/outfit/loadout/grunt/washout
+	name = "Washout"
+	suit = /obj/item/clothing/suit/armored/f13/medium/outlander
+	l_hand = /obj/item/gun/ballistic/revolver/piperifle
+

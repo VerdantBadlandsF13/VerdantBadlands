@@ -9,7 +9,8 @@
 
 	forbids = "The town's binding rules: <br> \
 				- You're a group of wasters in an organised community.<br> \
-				- The Lookout-on-duty's word is generally law. Try to follow it. They're there to keep you safe, after all."
+				- The Lookout-on-duty's word is generally law, enforcing the current leadership's wishes. Try to follow it.<br> \
+				- Authority is key. They're there to keep you safe, after all."
 
 	enforces = "The town's founding principles: <br> \
 				- Tending to your own over others. <br> \
@@ -58,7 +59,7 @@
 /datum/outfit/job/town
 	name = "TWNdatums"
 	jobtype = /datum/job/dfs
-	id = /obj/item/card/id/hillside_keys
+	id = /obj/item/card/id/hilltop_keys
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
 	neck = /obj/item/storage/belt/holster/legholster/dfs
@@ -73,13 +74,14 @@
 
 
 /datum/job/town/f13townleader
-	title = "Hillside Leadership"
+	title = "Hilltop Leadership"
 	flag = F13TWNLEADERSHIP
 	total_positions = 1
 	spawn_positions = 1
 	req_admin_notify = 1
 	roleplay_exclusive_notify = 1
-	description = "You own the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
+	description = "You're an elected leader of the Hilltop. Whether that had been honest or otherwise, it matters not. \
+	Now, you're either guiding or controlling those under you."
 	supervisors = "fate"
 
 	outfit = /datum/outfit/job/town/f13townleader
@@ -88,16 +90,16 @@
 	minimal_access = list(ACCESS_TOWN, ACCESS_TWN_RESTRICT)
 
 /datum/outfit/job/town/f13townleader
-	name = "Hillside Leader"
+	name = "Hilltop Leader"
 	jobtype = /datum/job/town/f13townleader
-	id =			/obj/item/card/id/hillside_leadership_keys
+	id =			/obj/item/card/id/hilltop_leadership_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 
 
 
 
 /datum/job/town/f13lookout
-	title = "Hillside Lookout"
+	title = "Hilltop Lookout"
 	flag = F13TWNLOOKOUT
 	total_positions = 2
 	spawn_positions = 2
@@ -112,7 +114,7 @@
 /datum/outfit/job/town/f13lookout
 	name = "Lookout"
 	jobtype = /datum/job/town/f13lookout
-	id =			/obj/item/card/id/hillside_leadership_keys
+	id =			/obj/item/card/id/hilltop_leadership_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 
 
@@ -125,7 +127,7 @@
 	spawn_positions = 1
 	req_admin_notify = 1
 	roleplay_exclusive_notify = 1
-	description = "You own the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
+	description = "You own, or at the very least manage, the local's favourite drinking spot. For better or worse. Prepare for a bad weekend."
 	supervisors = "fate"
 
 	outfit = /datum/outfit/job/town/f13tavernkeep
@@ -143,7 +145,7 @@
 
 
 /datum/job/town/f13settler
-	title = "Hillside Inhabitant"
+	title = "Hilltop Inhabitant"
 	flag = F13TWNINHABITANT
 	total_positions = -1
 	spawn_positions = -1
@@ -156,7 +158,7 @@
 	minimal_access = list(ACCESS_TOWN)
 
 /datum/outfit/job/town/f13settler
-	name = "Hillside Inhabitant"
+	name = "Hilltop Inhabitant"
 	jobtype = /datum/job/town/f13settler
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 

@@ -11,7 +11,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Commander",
 	"DFS Advisor",
 	"Foreman",
-	"Hillside Leadership",
+	"Hilltop Leadership",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -43,9 +43,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 	"Vault-Tec Robot",
 	"Vault Dweller",
 
-	"Hillside Leadership",
-	"Hillside Lookout",
-	"Hillside Inhabitant",
+	"Hilltop Leadership",
+	"Hilltop Lookout",
+	"Hilltop Inhabitant",
 	"Tavernkeep",
 	))
 
@@ -95,9 +95,9 @@ GLOBAL_LIST_INIT(lbj_positions, list(
 	))
 
 GLOBAL_LIST_INIT(twn_positions, list(
-	"Hillside Leadership",
-	"Hillside Lookout",
-	"Hillside Inhabitant",
+	"Hilltop Leadership",
+	"Hilltop Lookout",
+	"Hilltop Inhabitant",
 	"Tavernkeep",
 	))
 

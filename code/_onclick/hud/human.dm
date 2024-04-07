@@ -100,9 +100,7 @@
 	icon_state = "power_display"
 	screen_loc = ui_lingchemdisplay
 
-#define ui_coolant_display "EAST,SOUTH+3:15"
-//Leaving this at the default position, but, it'll need to be changed for, reasons that will be obvious on testing...
-
+#define ui_coolant_display "EAST,SOUTH+7:25"
 /obj/screen/synth
 	invisibility = INVISIBILITY_ABSTRACT
 

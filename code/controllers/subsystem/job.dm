@@ -433,6 +433,7 @@ SUBSYSTEM_DEF(job)
 		log_game(message)
 		message_admins(message)
 		RejectPlayer(player)
+
 //Gives the player the stuff he should have with his rank
 /datum/controller/subsystem/job/proc/EquipRank(mob/M, rank, joined_late = FALSE)
 	var/mob/dead/new_player/N
@@ -497,21 +498,15 @@ SUBSYSTEM_DEF(job)
 	if(job)
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 		job.radio_help_message(M)
-		to_chat(M, "<FONT color='blue'><B>[job.description]</b>")
-		to_chat(M, "<FONT color='red'><b>[job.forbids]</b>")
-		to_chat(M, "<FONT color='green'><b>[job.enforces]</b>")
-		if(job.req_admin_notify)
-			to_chat(M, "<b>You are playing a job that is important for Game Progression. If you have to disconnect immediately, please notify the admins via adminhelp. Otherwise put your locker gear back into the locker and cryo out.</b>")
-		if(job.roleplay_exclusive_notify)
-			to_chat(M, "<b>You are playing a job that is important for roleplay. In the event of an offensive raid, you are not permitted to participate in an attack. Please refrain from running dungeons when possible.</b>")
-		if(job.custom_spawn_text)
-			to_chat(M, "<b>[job.custom_spawn_text]</b>")
+		job.job_help_message(M)
 		if(CONFIG_GET(number/minimal_access_threshold))
 			to_chat(M, "<span class='notice'><B>As this station was initially staffed with a [CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></span>")
+
 	//if(ishuman(H))
 		//var/mob/living/carbon/human/wageslave = H
 		//to_chat(M, "<b><span class = 'big'>Your account ID is [wageslave.account_id].</span></b>")
 		//H.add_memory("Your account ID is [wageslave.account_id].")
+
 	if(job && H)
 		if(job.dresscodecompliant)// CIT CHANGE - dress code compliance
 			equip_loadout(N, H) // CIT CHANGE - allows players to spawn with loadout items
@@ -519,6 +514,7 @@ SUBSYSTEM_DEF(job)
 		equip_loadout(N, H, TRUE)//CIT CHANGE - makes players spawn with in-backpack loadout items properly. A little hacky but it works
 
 	return H
+
 /*
 /datum/controller/subsystem/job/proc/handle_auto_deadmin_roles(client/C, rank)
 	if(!C?.holder)

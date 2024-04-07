@@ -151,7 +151,7 @@ OTHER BELOW
 	access = list(ACCESS_LBJ)
 
 // Town
-/obj/item/card/id/hillside_keys
+/obj/item/card/id/hilltop_keys
 	name = "frail keychain"
 	desc = "A set of keys, each marked with odd pins. They feel like they could fall apart."
 	icon_state = "keys"
@@ -160,7 +160,7 @@ OTHER BELOW
 	uses_overlays = FALSE
 	access = list(ACCESS_TOWN)
 
-/obj/item/card/id/hillside_leadership_keys
+/obj/item/card/id/hilltop_leadership_keys
 	name = "hardened rusted keychain"
 	desc = "A set of keys, each marked with odd pins. They feel sturdy."
 	icon_state = "keys"

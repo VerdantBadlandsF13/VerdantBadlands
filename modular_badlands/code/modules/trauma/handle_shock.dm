@@ -2,7 +2,7 @@
 
 /mob/living/carbon/human/handle_shock()
 	..()
-	if(status_flags & GODMODE || !feels_pain())
+	if(status_flags & GODMODE || !feels_pain(src))
 		return 0
 
 	var/pain_goes_up = TRUE

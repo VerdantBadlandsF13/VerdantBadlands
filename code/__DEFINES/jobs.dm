@@ -7,7 +7,7 @@
 #define FACTION_LBJ "Lumberjack Camp"
 #define FACTION_GMB "Green Mountain Boys"
 #define FACTION_VLT "Vault Fifty-Eight"
-#define FACTION_TWN "Hillside Hideaway"
+#define FACTION_TWN "Hilltop Hideaway"
 
 
 #define ENGSEC			(1<<0)

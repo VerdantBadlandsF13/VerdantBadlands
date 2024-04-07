@@ -101,6 +101,8 @@ Light, followed by extreme.
 */
 
 /mob/living/carbon/proc/handle_lowpain(mob/living/M)
+	if(isrobotic(src))//Checked here and in 'feels_pain' Why do we need it twice? I 'unno.
+		return
 	if(world.time < last_breath)
 		return
 	var/lowpain_sound
@@ -112,6 +114,21 @@ Light, followed by extreme.
 	last_breath = world.time + 2 MINUTES
 
 /mob/living/carbon/proc/handle_highpain(mob/living/M)
+	if(isrobotic(src))//Checked here and in 'feels_pain' Why do we need it twice? I 'unno.
+		return
+	if(world.time < last_breath)
+		return
+	var/highpain_sound
+	if(src.gender == FEMALE)
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
+	else
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
+	playsound(src, highpain_sound, 50, 0)
+	last_breath = world.time + 2 MINUTES
+
+/mob/living/carbon/proc/handle_extremepain(mob/living/M)
+	if(isrobotic(src))//Checked here and in 'feels_pain' Why do we need it twice? I 'unno.
+		return
 	if(world.time < last_breath)
 		return
 	var/highpain_sound

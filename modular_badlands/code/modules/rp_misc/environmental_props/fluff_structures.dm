@@ -116,3 +116,7 @@
 	else
 		soundloop_two.stop(src)
 	..()
+
+/obj/item/radio/intercom/vb_st_rad/twn
+	frequency = 1367
+	channels = list(RADIO_CHANNEL_TOWN = 1)

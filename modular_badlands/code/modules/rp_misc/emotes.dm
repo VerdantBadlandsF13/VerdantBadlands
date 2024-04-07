@@ -211,6 +211,8 @@
 	if(!ishuman(user))
 		return
 	var/mob/living/carbon/human/human_user = user
+	if(isrobotic(user))
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/other/robolaugh.ogg"
 	if(human_user.gender == FEMALE)
 		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_laugh[rand(1,3)].ogg"
 	else

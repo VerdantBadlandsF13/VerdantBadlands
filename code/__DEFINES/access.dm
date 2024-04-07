@@ -128,7 +128,7 @@ also be like that but I can't be arsed to go back and change them all*/
 #define ACCESS_VFE_ENGINEERING	153	//general vault 58 engineering access
 #define ACCESS_VFE_SCIENCE		154	//general vault 58 science access
 
-#define ACCESS_TWN_RESTRICT			155//Hillside secrets. :)
+#define ACCESS_TWN_RESTRICT			155//Hilltop secrets. :)
 #define ACCESS_TWN_PRIVATE			156//Tavernkeep's spare ID access.
 //END BL
 

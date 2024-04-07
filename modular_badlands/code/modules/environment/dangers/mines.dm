@@ -6,7 +6,7 @@ Landmines used by players, and pre-spawned.
 	desc = "An explosive charge, designed and produced before the Great War. <br>\
 	Many such examples still litter the wasteland, killing indiscriminately. <br>\
 	<span class='revenminor'>You can bury and uncover this with a shovel, making it near impossible to detect or visible once more. <br>\
-	Additionally, you can use a screwdriver to disarm it.</span>"
+	Additionally, you can use a screwdriver and wire manipulating tools to disarm it.</span>"
 	density = FALSE
 	anchored = FALSE
 	icon = 'modular_badlands/code/modules/unsorted/icons/items.dmi'
@@ -20,12 +20,25 @@ Landmines used by players, and pre-spawned.
 	var/range_light = 1
 	var/range_flash = 0
 
+/*
+Init stuff.
+*/
+/obj/item/grenade/f13/mine/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
+
 /obj/item/grenade/f13/mine/Initialize()
 	. = ..()
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = .proc/on_entered
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
+	wires = new /datum/wires/explosive/mine/random(src)
+
+/obj/item/grenade/f13/mine/Destroy()
+	qdel(wires)
+	wires = null
+	return ..()
 
 /obj/item/grenade/f13/mine/planted/New()
 	. = ..()
@@ -36,13 +49,12 @@ Landmines used by players, and pre-spawned.
 
 /obj/item/grenade/f13/mine/planted/heavy/New()
 	. = ..()
-	icon_state = "landmine_active"
-	anchored = TRUE
-	armed = TRUE
 	range_light = 2
 	range_flash = 3
-	add_appearance()
 
+/*
+Arming Self
+*/
 /obj/item/grenade/f13/mine/attack_self(mob/user)
 	if(armed)
 		to_chat(user, "<span class='danger'>The mine is already armed!</span>") //how did we get here
@@ -53,40 +65,42 @@ Landmines used by players, and pre-spawned.
 		add_appearance()
 		return
 
+/*
+Destruction
+*/
 /obj/item/grenade/f13/mine/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir)
 	. = ..()
 	triggermine()
 
-/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/user, params)
-	..()
-
-/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/I)
-	. = ..()
+/obj/item/grenade/f13/mine/screwdriver_act(mob/living/user, obj/item/S)
 	if(!armed)
 		return
 	to_chat(user, "<span class='danger'>You begin carefully disarming [src].</span>")
-	if(I.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
+	if(S.use_tool(src, user, 200, volume=100)) //20 seconds base, if you don't want to play the game of chance
 		to_chat(user, "<span class='notice'>You carefully discard the detonator of the mine!</span>")
 		qdel(src)
 	else
 		triggermine(user)
 
-/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/living/user, params)
+/obj/item/grenade/f13/mine/attackby(obj/item/I, mob/user, params)
+	if(is_wire_tool(I))
+		wires.interact(user)
 	if(istype(I, /obj/item/shovel))
 		if(hidden == 0)
 			if(do_after(user, 20, target = loc))
-				to_chat(user, "You covered landmine with some debris.")
+				to_chat(user, "You covered the landmine with some debris.")
 				icon_state = "landmine_hidden"
 				hidden = 1
 				remove_appearance()
 				return
 		else
 			if(do_after(user, 20, target = loc))
-				to_chat(user, "You uncovered landmine.")
+				to_chat(user, "You uncover the landmine.")
 				icon_state = "landmine_active"
 				hidden = 0
 				add_appearance()
 				return
+	else ..()
 
 /*
 Procs

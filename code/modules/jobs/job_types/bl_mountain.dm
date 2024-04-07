@@ -67,7 +67,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	description = "The head of the Brattleboro GMB group. All members of the Brattleboro GMB answer directly to them."
-	supervisors = "Morals."
+	supervisors = "morals"
 	outfit = /datum/outfit/job/gmb/commander
 	req_admin_notify = 1
 	exp_requirements = 960
@@ -110,7 +110,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	description = "A general purpose surgeon and field doctor of the camp. Rather important. Acts as authority in the absence of a Commander."
-	supervisors = "Commander."
+	supervisors = "the Commander"
 	outfit = /datum/outfit/job/gmb/practitioner
 	req_admin_notify = 1
 	roleplay_exclusive_notify = 1
@@ -141,7 +141,7 @@
 	spawn_positions = 2
 	description = "A veteran militia member tasked with diplomacy, relations, retrieval and scouting as well as leading patrols. \
 	Answers only to the Commander and, in their absence, the Practitioner."
-	supervisors = "Commander."
+	supervisors = "the Commander"
 	outfit = /datum/outfit/job/gmb/walker
 	exp_requirements = 240
 	access = list(ACCESS_GMB, ACCESS_GMB_MOTORPOOL)
@@ -175,7 +175,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	description = "A more well trained Volunteer. The main working force of the GMB."
-	supervisors = "Commander."
+	supervisors = "the Commander"
 	outfit = /datum/outfit/job/gmb/militia
 	exp_requirements = 120
 
@@ -205,7 +205,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	description = "You're essentially just a wastelander."
-	supervisors = "Commander."
+	supervisors = "the Commander"
 	outfit = /datum/outfit/job/gmb/volunteer
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND

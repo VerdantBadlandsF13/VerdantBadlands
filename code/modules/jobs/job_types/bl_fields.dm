@@ -66,7 +66,7 @@
 	spawn_positions = 1
 	description = "The highest authority in Dry Fields Security.  \
 	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading their troops directly in battle or while on patrol."
-	supervisors = "Morals."
+	supervisors = "morals"
 	outfit = /datum/outfit/job/dfs/advisor
 	req_admin_notify = 1
 	exp_requirements = 960
@@ -114,7 +114,7 @@
 	spawn_positions = 1
 	description = "Stays near the compound to ensure nobody gets in or out without verification. \
 	Guards prisoners when applicable, stops infighting and otherwise keeps the compound secure."
-	supervisors = "Advisor."
+	supervisors = "the Advisor"
 	outfit = /datum/outfit/job/dfs/enforcer
 	req_admin_notify = 1
 	exp_requirements = 480
@@ -159,7 +159,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
-	supervisors = "Enforcer."
+	supervisors = "the Enforcer"
 	outfit = /datum/outfit/job/dfs/agent
 	exp_requirements = 240
 
@@ -200,7 +200,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
-	supervisors = "Agent."
+	supervisors = "the Agents"
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
 
@@ -230,7 +230,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
-	supervisors = "Regular."
+	supervisors = "the Regulars"
 	outfit = /datum/outfit/job/dfs/grunt
 	exp_requirements = 60
 	exp_type = EXP_TYPE_WASTELAND

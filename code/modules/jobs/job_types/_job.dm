@@ -42,9 +42,6 @@
 	//If this is set to 1, a text is printed to the player when jobs are assigned, telling him that he cannot engage in raids.
 	var/roleplay_exclusive_notify
 
-	// This is for Citadel specific tweaks to job notices.
-	var/custom_spawn_text
-
 	//If you have the use_age_restriction_for_jobs config option enabled and the database set up, this option will add a requirement for players to be at least minimal_player_age days old. (meaning they first signed in at least that many days before.)
 	var/minimal_player_age = 0
 

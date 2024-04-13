@@ -64,9 +64,9 @@
 	flag = F13DFSADVISOR
 	total_positions = 1
 	spawn_positions = 1
-	description = "The highest authority in Dry Fields Security.  \
-	Despite the name, Advisors are responsible for anything ranging from giving out orders to patrols while at base to leading their troops directly in battle or while on patrol."
-	supervisors = "morals"
+	description = "The biggest rat knows where all the best cheese is. And you're not him. \
+	You're the biggest cat in the whole barn, who patiently waited for the rats to fatten up before making dinner out of them."
+	supervisors = "the Executive"
 	outfit = /datum/outfit/job/dfs/advisor
 	req_admin_notify = 1
 	exp_requirements = 960
@@ -94,12 +94,15 @@
 
 /datum/outfit/loadout/advisor/brute
 	name = "Brute"
+	desc = "You beat the fuck out of everyone around you until they stopped asking questions. It worked so far, so why stop?"
 	l_hand = /obj/item/twohanded/thermic_lance/reconciliation
 	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
 	head = /obj/item/clothing/head/helmet/f13/dfs
 
 /datum/outfit/loadout/advisor/suave
 	name = "Suave"
+	desc = "This position you're in? You didn't earn it by being here the longest, you did it because you meticulously planned your ascension. \
+	The Executive noticed it and made you into what you are now; the Boss."
 	mask = /obj/item/clothing/mask/cigarette/pipe
 	gloves = /obj/item/melee/unarmed/brass/lovetap
 	r_hand = /obj/item/gun/ballistic/automatic/fnfal/roundstart
@@ -112,8 +115,11 @@
 	flag = F13DFSENFORCER
 	total_positions = 1
 	spawn_positions = 1
-	description = "Stays near the compound to ensure nobody gets in or out without verification. \
-	Guards prisoners when applicable, stops infighting and otherwise keeps the compound secure."
+	description = "You're one of a kind. \
+	You stopped boasting and shouting years ago, and it's what made your Advisor notice you. \
+	Whether you came from the ranks of the Agents or Regulars? \
+	The combination of your veterancy, track record, and general demeanour means you were made into his right-hand man, bodyguard, and confidant. \
+	You are freakishly loyal, even when you turn out to be the wrangler for certain kinds of Advisors."
 	supervisors = "the Advisor"
 	outfit = /datum/outfit/job/dfs/enforcer
 	req_admin_notify = 1
@@ -136,18 +142,27 @@
 
 /datum/outfit/loadout/enforcer/taskmaster
 	name = "Taskmaster"
+	desc = "You were an Acquisition Agent once. \
+	But your ability to squeeze every ounce of work from slaves and intimidate grunts into running head first into minefields was picked up on by your Advisor. \
+	Now you run the day to day operations of the crew for the Boss while he takes it easy."
 	r_hand = /obj/item/gun/ballistic/automatic/smg/tommygun/roundstart
 	l_hand = /obj/item/ammo_box/magazine/tommygunm45
 	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
 
 /datum/outfit/loadout/enforcer/peacemaker
 	name = "Peacemaker"
+	desc = "You were never subtle, or really that smart. \
+	Everyone around you knows that and questions why you were put into this position. \
+	But they never do so out loud because they fear you. You're not a manager or a bodyguard, you're the Advisor's Pitbull"
 	r_hand = /obj/item/m2flamethrowertank
 	suit = /obj/item/clothing/suit/armored/f13/heavy/dfs
 	head = /obj/item/clothing/head/helmet/f13/dfs
 
 /datum/outfit/loadout/enforcer/bouncer
 	name = "Bouncer"
+	desc = "Nobody knows you. All they know is your name. \
+	You're not loyal any more, you are fanatically devoted to your Advisor and shadow his every movement. \
+	Countless times you saved his life, even if he didn't notice."
 	mask = /obj/item/clothing/mask/cigarette
 	r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5/roundstart
 	suit = /obj/item/clothing/suit/armored/f13/light/dfs/command
@@ -158,7 +173,9 @@
 	flag = F13DFSAGENT
 	total_positions = 2
 	spawn_positions = 2
-	description = "A Regular specialized in subtlety and subterfuge. Not typically involved in combat, Agents are responsible for exploration, spying and kidnapping."
+	description = "You're smart. Smarter than most of your comrades. \
+	The Boss clearly knows that and respects you for it because your ascension to rookiedom was swiftly ended as you were made an agent. \
+	A spy, a saboteur, a diplomat and general handsome guy with a killer smile. Truth is, you were made an agent because you didn't fry all your braincells with jet yet."
 	supervisors = "the Enforcer"
 	outfit = /datum/outfit/job/dfs/agent
 	exp_requirements = 240
@@ -175,6 +192,9 @@
 
 /datum/outfit/loadout/agent/acquisition
 	name = "Acquisition Agent"
+	desc = "While you were smart enough to be made into an agent, you never achieved the same level of tactfulness as others. \
+	You'll never climb up the ranks, but you're fine with that. Why? Because you've got the best job in the world. Officially, you're a conscription manager. \
+	Formally, you're a slaver."
 	r_hand = /obj/item/gun/ballistic/automatic/assault_rifle/roundstart
 	l_hand = /obj/item/ammo_box/magazine/m556/rifle
 	backpack_contents = list(
@@ -186,11 +206,16 @@
 
 /datum/outfit/loadout/agent/specialist
 	name = "Specialist"
+	desc = "You're in line to become the next Boss. \
+	You and all the other specialists. \
+	All that is left is to prove that you're not just a moron with authority, and can actually coerce people into doing your bidding. \
+	You'll prove it by extorting wasters and rousing lesser gangs against each other for fun."
 	r_hand = /obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
 	l_hand = /obj/item/ammo_box/magazine/w308
 	belt = /obj/item/storage/belt/bandolier/grenade_belt
 	backpack_contents = list(
 		/obj/item/book/granter/trait/explosives =1,
+		/obj/item/book/granter/crafting_recipe/blueprint/trapper =1,
 		)
 
 // DFS Regular
@@ -199,7 +224,9 @@
 	flag = F13DFSREGULAR
 	total_positions = 4
 	spawn_positions = 4
-	description = "Backbone of the DFS. They are members who have demonstrated their ability crush resistance and hold their own."
+	description = "You don't pretend to be a raider any more. Why would you? \
+	You're a real warrior, you've got the track record and scars to prove it, and like to show it off to those useless grunts. \
+	You memorised the two most important pairs of words to say when a superior talks to you: 'Yes Boss.' and 'Sorry Boss.'"
 	supervisors = "the Agents"
 	outfit = /datum/outfit/job/dfs/regular
 	exp_requirements = 120
@@ -216,11 +243,16 @@
 
 /datum/outfit/loadout/regular/veteran
 	name = "Veteran"
+	desc = "You remember your days as a rookie as if they were childhood memories. You were young and stupid then. \
+	Now you spend your days complaining about the new rookies while smoking or kneecapping stray wasters with your buddies."
 	r_hand = /obj/item/gun/ballistic/automatic/smg/mp5/roundstart
 	l_hand = /obj/item/ammo_box/magazine/uzim9mm
 
 /datum/outfit/loadout/regular/rook
 	name = "Rook"
+	desc = "Congratulations soldier, you're someone now. \
+	Bet it feels good doesn't it? It's only been an hour, and you already firmly believe that grunts should be be beaten if they dare raise their eyes to look at you. \
+	But everyone else knows the truth; that new equipment? You stole it. Those new stripes on your uniform? You ripped them off a corpse."
 	r_hand = /obj/item/gun/ballistic/rifle/hunting/roundstart
 
 //DFS Grunt
@@ -229,7 +261,9 @@
 	flag = F13DFSGRUNT
 	total_positions = -1
 	spawn_positions = -1
-	description = "The lowest on the totem pole, Grunts are either wastelanders or outlaws in need of a more organized group."
+	description = "You are the lowest of the low, just wasteland scum given a gun and vague directions of what to point it at. \
+	You either joined voluntarily with the promise of easy caps and chems, or had been'conscripted' as a child. \
+	You've got next to no hope of climbing the ranks unless you prove yourself."
 	supervisors = "the Regulars"
 	outfit = /datum/outfit/job/dfs/grunt
 	exp_requirements = 60
@@ -245,11 +279,16 @@
 
 /datum/outfit/loadout/grunt/wastrel
 	name = "Wastrel"
+	desc = "You consider yourself lucky because you had the choice of joining or not. \
+	You don't know this, but not joining when offered to usually means being strung up by the ankles and used for target practice."
 	suit = /obj/item/clothing/suit/armored/f13/light/outlander
 	r_hand = /obj/item/gun/ballistic/revolver/single_shotgun
 
 /datum/outfit/loadout/grunt/washout
 	name = "Washout"
+	desc = "The DFS is all you know. The DFS is all you've ever known. \
+	Your earliest memories were that of following a squad as a child soldier, running the pockets of the dead or serving as bait for cretins with a conscience. \
+	But look at you, you're a real man now, you shot someone."
 	suit = /obj/item/clothing/suit/armored/f13/medium/outlander
 	l_hand = /obj/item/gun/ballistic/revolver/piperifle
 

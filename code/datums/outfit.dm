@@ -1,5 +1,6 @@
 /datum/outfit
 	var/name = "Naked"
+	var/desc = "Debug fluff text."
 
 	var/uniform = null
 	var/suit = null

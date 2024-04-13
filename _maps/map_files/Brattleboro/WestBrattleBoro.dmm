@@ -14184,12 +14184,6 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/building)
-"jLI" = (
-/obj/structure/destructible/hobo_barrel/lit,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalleftborderleft1"
-	},
-/area/f13/wasteland)
 "jLM" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/white/side,
 /area/f13/vault/medical)
@@ -17841,12 +17835,6 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/building)
-"mdD" = (
-/obj/structure/destructible/hobo_barrel/lit,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticalrightborderright1"
-	},
-/area/f13/wasteland)
 "meh" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "storewindowvertical";
@@ -25330,10 +25318,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"qVy" = (
-/obj/effect/landmark/start/f13/hillside_lookout,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/shack)
 "qVE" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -27976,6 +27960,10 @@
 	icon_state = "bar"
 	},
 /area/f13/vault/diner)
+"syp" = (
+/obj/effect/landmark/start/f13/hilltop_lookout,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/shack)
 "syA" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner{
@@ -59166,7 +59154,7 @@ cqQ
 cqQ
 fxA
 fxA
-mdD
+fxA
 fxA
 cqQ
 cqQ
@@ -61911,7 +61899,7 @@ lrQ
 lrQ
 uol
 uol
-jLI
+uol
 fPh
 fPh
 fPh
@@ -132576,7 +132564,7 @@ yhE
 pXe
 kkN
 gqW
-kkN
+syp
 kkN
 gqW
 fdY
@@ -133033,7 +133021,7 @@ nLP
 kLu
 jdi
 gqW
-kkN
+syp
 kkN
 gqW
 fdY
@@ -134859,7 +134847,7 @@ pac
 gqW
 gHc
 pdZ
-qVy
+kkN
 kkN
 kkN
 kkN
@@ -135316,7 +135304,7 @@ pac
 gqW
 ovu
 vKD
-qVy
+kkN
 kkN
 kkN
 kkN

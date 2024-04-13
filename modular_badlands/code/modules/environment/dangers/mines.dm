@@ -6,7 +6,7 @@ Landmines used by players, and pre-spawned.
 	desc = "An explosive charge, designed and produced before the Great War. <br>\
 	Many such examples still litter the wasteland, killing indiscriminately. <br>\
 	<span class='revenminor'>You can bury and uncover this with a shovel, making it near impossible to detect or visible once more. <br>\
-	Additionally, you can use a screwdriver and wire manipulating tools to disarm it.</span>"
+	Additionally, you can use wirecutters and wire manipulating tools to disarm it.</span>"
 	density = FALSE
 	anchored = FALSE
 	icon = 'modular_badlands/code/modules/unsorted/icons/items.dmi'
@@ -17,7 +17,7 @@ Landmines used by players, and pre-spawned.
 	var/hidden = FALSE
 	var/range_devastation = 0
 	var/range_heavy = 0
-	var/range_light = 1
+	var/range_light = 2
 	var/range_flash = 0
 
 /*
@@ -33,7 +33,7 @@ Init stuff.
 		COMSIG_ATOM_ENTERED = .proc/on_entered
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
-	wires = new /datum/wires/explosive/mine/random(src)
+	wires = new /datum/wires/explosive/f13_mine(src)
 
 /obj/item/grenade/f13/mine/Destroy()
 	qdel(wires)
@@ -49,8 +49,9 @@ Init stuff.
 
 /obj/item/grenade/f13/mine/planted/heavy/New()
 	. = ..()
+	range_heavy = 1
 	range_light = 2
-	range_flash = 3
+	range_flash = 1
 
 /*
 Arming Self

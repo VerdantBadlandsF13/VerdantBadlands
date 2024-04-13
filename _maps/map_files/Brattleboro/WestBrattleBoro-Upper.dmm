@@ -428,6 +428,10 @@
 /obj/structure/chair/sofa/corner,
 /turf/open/floor/carpet/blue,
 /area/f13/building)
+"bL" = (
+/obj/structure/ladder/unbreakable_normal,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/city/bighorn)
 "bM" = (
 /obj/structure/car/rubbish3,
 /turf/open/indestructible/ground/outside/road,
@@ -455,15 +459,6 @@
 /area/f13/building)
 "bR" = (
 /turf/closed/wall/f13/sunset/brick_small_dark,
-/area/f13/shack)
-"bS" = (
-/obj/structure/sink/kitchen{
-	dir = 1;
-	pixel_y = 18
-	},
-/turf/open/floor/f13{
-	icon_state = "bar"
-	},
 /area/f13/shack)
 "bV" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_pistol,
@@ -537,7 +532,7 @@
 /turf/open/floor/carpet,
 /area/f13/building)
 "ck" = (
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 1
 	},
 /turf/open/floor/f13{
@@ -1721,6 +1716,13 @@
 	},
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
+"go" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/open/transparent/openspace,
+/area/f13/shack)
 "gp" = (
 /obj/structure/wreck/trash/machinepile{
 	layer = 3;
@@ -2563,12 +2565,6 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
-"jg" = (
-/obj/machinery/processor,
-/turf/open/floor/f13{
-	icon_state = "bar"
-	},
-/area/f13/shack)
 "jh" = (
 /obj/machinery/light{
 	dir = 1
@@ -2704,12 +2700,6 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
-"jC" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/condiment/sugar,
-/obj/item/reagent_containers/food/condiment/sugar,
-/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
-/area/f13/shack)
 "jE" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -2955,7 +2945,7 @@
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
 "ky" = (
-/obj/machinery/light,
+/obj/machinery/light/broken,
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
 /area/f13/shack)
 "kz" = (
@@ -3573,11 +3563,19 @@
 	dir = 9
 	},
 /area/f13/shack)
+"mJ" = (
+/obj/item/storage/trash_stack,
+/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
+/area/f13/shack)
 "mK" = (
 /obj/item/trash/can,
 /mob/living/simple_animal/hostile/raider/ranged,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
+"mL" = (
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/shack)
 "mM" = (
 /obj/structure/sign/poster/prewar/poster73{
 	pixel_y = 32
@@ -4483,7 +4481,7 @@
 /turf/open/floor/carpet/red,
 /area/f13/bar)
 "pW" = (
-/obj/effect/landmark/start/f13/hillside_leadership,
+/obj/effect/landmark/start/f13/hilltop_leadership,
 /turf/open/floor/f13{
 	icon_state = "chapel"
 	},
@@ -4506,6 +4504,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"pZ" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/shack)
 "qa" = (
 /obj/structure/shelf_wood,
 /obj/item/book/granter/crafting_recipe/gunsmith_one,
@@ -4721,7 +4725,7 @@
 /area/f13/shack)
 "qP" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 1
 	},
 /turf/open/floor/f13{
@@ -5833,7 +5837,7 @@
 /area/f13/building)
 "uI" = (
 /obj/structure/rack/shelf_metal,
-/obj/machinery/light{
+/obj/machinery/light/broken{
 	dir = 1
 	},
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
@@ -6014,6 +6018,10 @@
 	},
 /turf/open/floor/carpet,
 /area/f13/bar)
+"vs" = (
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/bl/outside/gravel,
+/area/f13/city/bighorn)
 "vt" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
@@ -6148,7 +6156,8 @@
 /turf/open/floor/carpet,
 /area/f13/bar)
 "vW" = (
-/obj/structure/simple_door/interior,
+/obj/structure/obstacle/old_locked_door,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13{
 	icon_state = "whitebluechess"
 	},
@@ -6207,6 +6216,7 @@
 /area/f13/wasteland)
 "wi" = (
 /obj/structure/simple_door/wood,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
 /area/f13/shack)
 "wj" = (
@@ -6724,6 +6734,12 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/building)
+"xS" = (
+/obj/effect/decal/remains/deadeyebot,
+/turf/open/floor/f13{
+	icon_state = "whitebluechess"
+	},
+/area/f13/shack)
 "xT" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /turf/open/indestructible/ground/outside/roof,
@@ -8614,16 +8630,6 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
-"Ed" = (
-/obj/structure/closet/fridge,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/turf/open/floor/f13{
-	icon_state = "bar"
-	},
-/area/f13/shack)
 "Ee" = (
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
@@ -9186,6 +9192,12 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/bar)
+"FU" = (
+/obj/machinery/light/broken{
+	dir = 1
+	},
+/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
+/area/f13/shack)
 "FV" = (
 /mob/living/simple_animal/hostile/raider/ranged/biker,
 /turf/open/indestructible/ground/outside/roof,
@@ -9308,7 +9320,7 @@
 	dir = 8;
 	light_color = "#c1caff"
 	},
-/obj/effect/landmark/start/f13/hillside_settler,
+/obj/effect/landmark/start/f13/hilltop_settler,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -9738,6 +9750,12 @@
 	icon_state = "verticalleftborderright0"
 	},
 /area/f13/wasteland)
+"HO" = (
+/obj/effect/landmark/start/f13/hilltop_settler,
+/turf/open/floor/f13/wood{
+	icon_state = "oakfloor1"
+	},
+/area/f13/bar)
 "HP" = (
 /obj/machinery/light{
 	dir = 8
@@ -9903,10 +9921,6 @@
 /obj/structure/wreck/trash/two_tire,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
-"Ir" = (
-/obj/structure/simple_door/interior,
-/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
-/area/f13/shack)
 "Is" = (
 /obj/structure/chair/bench,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
@@ -10626,6 +10640,14 @@
 	},
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
+"KZ" = (
+/obj/effect/overlay/turfs/cliff/corner{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = -8
+	},
+/turf/open/transparent/openspace,
+/area/f13/shack)
 "Lb" = (
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck,
@@ -10999,7 +11021,7 @@
 "Mr" = (
 /obj/structure/table/reinforced,
 /obj/machinery/processor/chopping_block,
-/obj/machinery/light,
+/obj/machinery/light/broken,
 /turf/open/floor/f13{
 	icon_state = "bar"
 	},
@@ -11071,7 +11093,7 @@
 	dir = 1;
 	light_color = "#706891"
 	},
-/obj/effect/landmark/start/f13/hillside_settler,
+/obj/effect/landmark/start/f13/hilltop_settler,
 /turf/open/floor/f13/wood{
 	icon_state = "oakfloor1"
 	},
@@ -12930,12 +12952,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/wasteland)
-"SX" = (
-/obj/effect/landmark/start/f13/hillside_settler,
-/turf/open/floor/f13/wood{
-	icon_state = "oakfloor1"
-	},
-/area/f13/bar)
 "SY" = (
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13{
@@ -12950,6 +12966,13 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"Ta" = (
+/obj/effect/overlay/turfs/cliff{
+	dir = 4;
+	pixel_x = 9
+	},
+/turf/open/transparent/openspace,
+/area/f13/shack)
 "Tb" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/terminal{
@@ -12988,13 +13011,6 @@
 /obj/item/toy/cards/deck,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
-"Tf" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/condiment/rice,
-/obj/item/reagent_containers/food/condiment/rice,
-/obj/item/reagent_containers/food/condiment/rice,
-/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
-/area/f13/shack)
 "Tg" = (
 /obj/item/kirbyplants/random,
 /obj/structure/railing/corner{
@@ -13070,12 +13086,6 @@
 /obj/structure/railing,
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"Ts" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/food/condiment/flour,
-/obj/item/reagent_containers/food/condiment/flour,
-/turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
-/area/f13/shack)
 "Tt" = (
 /obj/structure/wreck/trash/bus_door,
 /turf/open/indestructible/ground/bl/outside/gravel,
@@ -13565,9 +13575,6 @@
 /area/f13/wasteland)
 "Vh" = (
 /obj/structure/closet/fridge,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/storage/fancy/egg_box,
 /turf/open/floor/f13{
 	icon_state = "bar"
 	},
@@ -14945,6 +14952,7 @@
 /area/f13/building)
 "ZW" = (
 /obj/structure/window/fulltile/wood,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
 /area/f13/shack)
 "ZY" = (
@@ -80413,7 +80421,7 @@ Df
 CB
 WB
 Df
-Df
+vs
 Sc
 Df
 Df
@@ -80878,7 +80886,7 @@ Df
 Df
 Df
 Sc
-Df
+vs
 Df
 Df
 IM
@@ -81778,7 +81786,7 @@ pE
 IM
 IM
 Df
-Df
+vs
 Df
 nC
 Df
@@ -88625,11 +88633,11 @@ CM
 CM
 bR
 qP
-Fc
-jg
+YT
+YT
 Mr
 mN
-xO
+mJ
 xO
 ky
 bR
@@ -89086,9 +89094,9 @@ YT
 YT
 YT
 Of
-xO
-xO
-xO
+go
+Vu
+Vu
 ZW
 LT
 Yv
@@ -89538,14 +89546,14 @@ wo
 CM
 CM
 bR
-bS
+YT
 YT
 YT
 tw
 mN
-xO
-xO
-xO
+KZ
+Vu
+Vu
 ZW
 LT
 LE
@@ -89995,14 +90003,14 @@ CM
 CM
 CM
 bR
-Ed
+YT
 YT
 YT
 tw
 mN
-xO
-xO
-xO
+Vu
+Ta
+Vu
 ZW
 LT
 LE
@@ -90458,13 +90466,13 @@ YT
 tw
 mN
 mN
-mN
+xO
 mN
 bR
 LT
 LE
 tb
-rD
+bL
 rD
 eW
 zm
@@ -90484,7 +90492,7 @@ rD
 rD
 sE
 sE
-sE
+mL
 sE
 sE
 qn
@@ -90910,11 +90918,11 @@ CM
 CM
 bR
 mN
-YT
-YT
+Of
 mN
 mN
-xO
+mN
+FU
 xO
 xO
 wi
@@ -91366,14 +91374,14 @@ CM
 CM
 CM
 bR
-Ts
+ro
 xO
 xO
+mJ
+mN
+mN
 xO
-Ir
-xO
-xO
-xO
+mN
 bR
 LT
 LE
@@ -91823,7 +91831,7 @@ bR
 bR
 bR
 bR
-Tf
+ro
 xO
 xO
 xO
@@ -92276,11 +92284,11 @@ Fv
 YT
 bR
 bR
-dX
+pZ
 dX
 dX
 mN
-jC
+ro
 xO
 xO
 ky
@@ -92734,13 +92742,13 @@ Bu
 bR
 bR
 ck
-dX
+xS
 dX
 vW
 xO
 xO
-mN
-mN
+xO
+xO
 mN
 xO
 xO
@@ -92756,7 +92764,7 @@ UC
 Mt
 MF
 wR
-SX
+wR
 Mt
 Mt
 Mt
@@ -93198,7 +93206,7 @@ uI
 ro
 mN
 xO
-xO
+mN
 xO
 xO
 ky
@@ -93211,7 +93219,7 @@ rD
 LT
 os
 Gr
-wR
+HO
 wR
 Vq
 QF
@@ -93667,7 +93675,7 @@ rD
 rD
 LT
 os
-SX
+wR
 wR
 wR
 rI
@@ -94581,7 +94589,7 @@ rD
 rD
 LT
 os
-SX
+wR
 wR
 wR
 wR

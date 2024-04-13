@@ -343,7 +343,7 @@
 		protection_list.Cut()
 	protection_list = body_parts_covered2organ_names_extended(initial(body_parts_covered))
 	for(var/covered_parts in protection_list)
-//		protection_list -= covered_parts
+		protection_list -= covered_parts//This is horrid and pulled from elsewhere. I'll fix it eventually. - Carl
 		protection_list += uppertext(parse_zone_extended(covered_parts))
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))

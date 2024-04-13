@@ -540,6 +540,11 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
+"eg" = (
+/obj/effect/decal/remains/human,
+/obj/structure/mine_support,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "ek" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /turf/open/indestructible/ground/inside/mountain,
@@ -746,6 +751,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
+"fA" = (
+/obj/structure/obstacle/barbedwire{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "fC" = (
 /obj/structure/chair/sofa/corp{
 	dir = 1
@@ -982,6 +993,13 @@
 /obj/item/stack/f13Cash/caps/onezerozerozero,
 /obj/item/stack/f13Cash/caps/onezerozerozero,
 /turf/open/indestructible,
+/area/f13/caves)
+"gS" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
+	},
+/obj/structure/mine_support,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "gW" = (
 /obj/structure/stairs/east,
@@ -1662,6 +1680,13 @@
 	icon_state = "reddirtysolid"
 	},
 /area/f13/vault/security)
+"lO" = (
+/obj/structure/ladder/unbreakable_normal,
+/turf/open/floor/f13{
+	color = "#818181";
+	icon_state = "floorrustysolid"
+	},
+/area/f13/tunnel)
 "lP" = (
 /obj/structure/railing/handrail/rusty/end,
 /turf/open/floor/f13{
@@ -1889,6 +1914,11 @@
 	},
 /turf/open/floor/carpet/green,
 /area/f13/vault/atrium)
+"nn" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/outside/ruins,
+/area/f13/tunnel)
 "nq" = (
 /obj/machinery/door/unpowered/securedoor/vfe{
 	bio_lock = 1
@@ -3060,6 +3090,12 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
+"vG" = (
+/turf/open/floor/f13{
+	icon_state = "rampuptop";
+	dir = 1
+	},
+/area/f13/tunnel)
 "vJ" = (
 /obj/structure/debris/v4,
 /turf/closed/mineral/random/low_chance,
@@ -3995,6 +4031,12 @@
 	icon_state = "floordirty"
 	},
 /area/f13/tunnel)
+"Ca" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Cd" = (
 /obj/structure/chair/sofa/corner{
 	dir = 4
@@ -4066,6 +4108,12 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/tunnel)
+"Cu" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Cw" = (
 /obj/item/grenade/f13/mine/planted,
 /turf/open/floor/f13{
@@ -4498,6 +4546,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building/bighornbunker)
+"Fn" = (
+/obj/effect/decal/remains/robot,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Fo" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
@@ -5208,6 +5260,11 @@
 	icon_state = "reddirtysolid"
 	},
 /area/f13/vault/security)
+"Kn" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/ruins,
+/area/f13/tunnel)
 "Ks" = (
 /obj/structure/fluff/tram_rail/floor,
 /obj/effect/landmark/tram/left_part,
@@ -6897,6 +6954,11 @@
 "Wu" = (
 /obj/effect/spawner/lootdrop/f13/ammo_military,
 /turf/open/liquid/water/safe,
+/area/f13/caves)
+"Wv" = (
+/obj/structure/destructible/hobo_barrel/lit,
+/obj/structure/mine_support,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "Ww" = (
 /obj/item/target,
@@ -80662,8 +80724,8 @@ PV
 xk
 xk
 xk
-PV
-PV
+xk
+xk
 PV
 PV
 PV
@@ -81115,12 +81177,12 @@ PV
 PV
 PV
 PV
-PV
-PV
+hx
+eg
+an
+an
+an
 xk
-xk
-xk
-PV
 PV
 PV
 PV
@@ -81566,17 +81628,17 @@ hx
 hx
 hx
 hx
+Ca
+PV
+PV
+PV
+PV
+Fn
 hx
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-xk
-xk
+Wf
+Wf
+nn
+an
 xk
 PV
 PV
@@ -82023,23 +82085,23 @@ PV
 PV
 hx
 hx
+fA
+Wv
+PV
+PV
+Lp
 hx
 hx
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+Kn
+Wf
+Wf
+an
 xk
 xk
 xk
-PV
-PV
-PV
+xk
+xk
+xk
 PV
 PV
 PV
@@ -82480,23 +82542,23 @@ PV
 PV
 PV
 PV
+fA
 hx
 hx
 hx
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+hx
+hx
+hx
+Kn
+Wf
+Wf
+an
+an
+an
+an
+an
+an
 xk
-xk
-xk
-PV
-PV
 PV
 PV
 PV
@@ -82937,23 +82999,23 @@ jy
 jy
 PV
 PV
+Cu
 hx
 hx
+Ca
 hx
-hx
+yV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+an
+Rb
+VS
+iP
+iP
+iP
+vG
+lO
+an
 xk
-xk
-xk
-PV
 PV
 PV
 PV
@@ -83395,21 +83457,21 @@ PV
 PV
 PV
 PV
+Lp
 hx
-hx
-hx
-hx
+fA
+Zj
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-xk
-xk
+an
+Rb
+Rb
+an
+an
+an
+an
+an
+an
 xk
 xk
 PV
@@ -83854,14 +83916,14 @@ PV
 PV
 PV
 hx
-hx
+fA
 PV
 PV
 PV
-PV
-PV
-PV
-PV
+an
+an
+an
+an
 PV
 PV
 PV
@@ -84311,7 +84373,7 @@ hx
 hx
 hx
 hx
-hx
+gS
 PV
 PV
 PV

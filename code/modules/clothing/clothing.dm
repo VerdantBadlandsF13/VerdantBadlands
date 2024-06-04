@@ -341,10 +341,8 @@
 
 	if(LAZYLEN(protection_list))
 		protection_list.Cut()
-	protection_list = body_parts_covered2organ_names_extended(initial(body_parts_covered))
-	for(var/covered_parts in protection_list)
-		protection_list -= covered_parts//This is horrid and pulled from elsewhere. I'll fix it eventually. - Carl
-		protection_list += uppertext(parse_zone_extended(covered_parts))
+	if(body_parts_covered)
+		protection_list += list("zone" = body_parts_covered)
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
 		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"
@@ -381,9 +379,9 @@
 			readout += "\n<b>- - - - - -</b>"
 
 		if(LAZYLEN(protection_list))
-			readout += "\n<b>PROTECTED LOCATIONS - I DON'T WORK AAAAAAAAAAA</b>"
-			for(var/zone in protection_list)
-				readout += "\n[zone]"
+			readout += "\n<b>PROTECTED LOCATIONS</b>"
+			for(body_parts_covered in protection_list)
+				readout += "\n[parse_zone_extended(protection_list)]" //e.g. THORAX
 
 		readout += "</span>"
 

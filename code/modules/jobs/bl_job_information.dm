@@ -15,30 +15,43 @@ The actual information.
 
 	dat += "\n<b>- - - - - -</b>"
 
-	if(job)
+//	rank = job.title
 
+	if(job.forbids)
 		dat += "<FONT color='red'><b>[job.forbids]</b>"
+	else
+		dat += "<FONT color='blue'><B>Your job has no forbidden actions. This is a bug. Tell Carl.</b>"
+	if(job.enforces)
 		dat += "<FONT color='green'><b>[job.enforces]</b>"
+	else
+		dat += "<FONT color='blue'><B>Your job has no enforced actions. This is a bug. Tell Carl.</b>"
 
-		dat += "\n<b>- - - - - -</b>"
+	dat += "\n<b>- - - - - -</b>"
 
+	if(job.description)
 		dat += "<FONT color='blue'><B>[job.description]</b>"
+	else
+		dat += "<FONT color='blue'><B>Your job has no description. This is a bug. Tell Carl.</b>"
+
+	dat += "\n<b>- - - - - -</b>"
+
+	if(job.req_admin_notify)
+		dat += "<b>You are playing a job that is important for Game Progression. If you have to disconnect immediately, please notify the admins via adminhelp. Otherwise put your locker gear back into the spawn location and head to a matrix.</b>"
 
 		dat += "\n<b>- - - - - -</b>"
 
-		if(req_admin_notify)
-			dat += "<b>You are playing a job that is important for Game Progression. If you have to disconnect immediately, please notify the admins via adminhelp. Otherwise put your locker gear back into the spawn location and head to a matrix.</b>"
+	if(job.roleplay_exclusive_notify)
+		dat += "<b>You are playing a job that is important for roleplay. In the event of an offensive raid, you are not permitted to participate in an attack. Please refrain from running dungeons when possible.</b>"
 
-			dat += "\n<b>- - - - - -</b>"
+		dat += "\n<b>- - - - - -</b>"
 
-		if(roleplay_exclusive_notify)
-			dat += "<b>You are playing a job that is important for roleplay. In the event of an offensive raid, you are not permitted to participate in an attack. Please refrain from running dungeons when possible.</b>"
-
-			dat += "\n<b>- - - - - -</b>"
-
+/*
 	var/datum/browser/popup = new(M, "mob_occupation", "Special Information", 640, 400) // Set up the popup browser window
 	popup.set_content(dat)
 	popup.open()
+*/
+
+	to_chat(usr, "[dat.Join()]")
 
 /*
 This is the proc used to display the above.

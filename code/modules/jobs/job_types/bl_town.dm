@@ -9,7 +9,7 @@
 
 	forbids = "The town's binding rules: <br> \
 				- You're a group of wasters in an organised community.<br> \
-				- The Lookout-on-duty's word is generally law, enforcing the current leadership's wishes. Try to follow it.<br> \
+				- The Lookout-on-Duty's word is generally law, enforcing the current leadership's wishes. Try to follow it.<br> \
 				- Authority is key. They're there to keep you safe, after all."
 
 	enforces = "The town's founding principles: <br> \
@@ -109,6 +109,10 @@
 	As an Evangelist, you came here on a most devout mission: Teach the local hicks about the love of Christ. \
 	What ended up happening was your swift ascension to a position of leadership in the town thanks to your moderate level of education and accrued goodwill from the locals. \
 	Unlike most other influential men here, you genuinely wish only the best for the settlers."
+	backpack_contents = list(
+		/obj/item/book/granter/trait/holy =1,
+		/obj/item/storage/book/bible =1,
+		)
 
 /datum/outfit/loadout/f13townleader/sheriff
 	name = "Sheriff"
@@ -158,7 +162,7 @@
 /datum/outfit/loadout/f13lookout/mercenary
 	name = "Mercenary"
 	desc = "You love money. \
-	Hilltop can't defend itself with just it's inbred gang of law enforcers, and so they often resolve that issue by hiring bounty hunters, mercenaries, foreign deserters, or reformed raiders to protect it from the outside. \
+	Hilltop can't defend itself with just its inbred gang of law enforcers, and so they often resolve that issue by hiring bounty hunters, mercenaries, foreign deserters, or reformed raiders to protect it from the outside. \
 	You'd sooner turn tail than die for this place, but this is why you took this job. \
 	It pays incredibly well and shooting a 'witch' once in a while isn't really dangerous to you."
 

@@ -101,6 +101,23 @@
 	icon_state = "book1"
 	remarks = list("One smooth motion...", "Palm the bolt...", "Push up, rotate back, push forward, down...", "Don't slap yourself with the bolt...", "Wait, what's this about pumping?", "Who just scribbled \"Z\" and \"LMB\" on this page?")
 
+/obj/item/book/granter/trait/holy
+	name = "An Apocalyptic Love Tale"
+	desc = "Need some reminding about your gods? Look no further."
+	oneuse = TRUE
+	granted_trait = TRAIT_HOLY
+	traitname = "holy"
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "folder_sblue"
+	remarks = list("Misguided ideals...", "Beneath one's thoughts...", "Relics, each of 'em...")
+
+/obj/item/book/granter/trait/holy/on_reading_finished(mob/user)
+	. = ..()
+	if(!user.mind)
+		return
+	else
+		user.mind.isholy = TRUE
+
 ///ACTION BUTTONS///
 
 /obj/item/book/granter/action

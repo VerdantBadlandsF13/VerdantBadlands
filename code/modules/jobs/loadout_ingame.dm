@@ -92,9 +92,10 @@
 		if (J && LAZYLEN(J.loadout_options))
 			for (var/a in J.loadout_options) //Copy the options from the job
 				var/datum/outfit/o = a
-				loadout_options[initial(o.name)] = a
-				data_names.Add(initial(o.name))
-				fluff_text.Add(initial(o.desc))
+				var/outfit_name = initial(o.name)
+				loadout_options[outfit_name] = a
+				data_names.Add(outfit_name)
+				fluff_text[outfit_name] = initial(o.desc)
 			return ..()
 
 	//If they don't have a job they cant use this
@@ -128,7 +129,7 @@
 /datum/component/loadout_selector/ui_data(mob/user)
 	var/list/data = list()
 	data["outfits"] = data_names
-	data["fluff"] = fluff_text
+	data["fluff"] = fluff_text[selected_name]
 	data["selected"] = selected_name
 	if (selected_name)
 		data["items"] = selected_items

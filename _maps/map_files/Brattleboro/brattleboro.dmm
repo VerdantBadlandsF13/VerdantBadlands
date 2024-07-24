@@ -6457,8 +6457,7 @@
 	dir = 8
 	},
 /obj/structure/rack/shelf_metal,
-/obj/item/key/motorcycle,
-/obj/item/key/motorcycle,
+/obj/item/clothing/head/helmet/f13/motorcycle,
 /turf/open/floor/plasteel/f13/vault_floor,
 /area/f13/bl/gmb)
 "dLm" = (
@@ -29738,11 +29737,6 @@
 	icon_state = "grassdirt1";
 	dir = 1
 	},
-/area/f13/wasteland)
-"sQx" = (
-/obj/effect/decal/marking,
-/obj/item/key/motorcycle,
-/turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "sQZ" = (
 /turf/open/indestructible/ground/inside/mountain,
@@ -54912,7 +54906,7 @@ oeM
 cxu
 oeM
 cnh
-sQx
+cnh
 qDq
 hKj
 hKj

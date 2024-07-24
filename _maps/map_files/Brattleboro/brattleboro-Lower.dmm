@@ -5589,6 +5589,7 @@
 /area/f13/caves)
 "wb" = (
 /obj/structure/table/wood/settler,
+/obj/item/key/motorcycle,
 /turf/open/floor/f13/wood,
 /area/f13/village)
 "we" = (

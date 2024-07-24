@@ -28,15 +28,14 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 	return 0
 
 /obj/item/storage/book/bible
-	name = "bible"
-	desc = "Apply to head repeatedly."
+	name = "hallowed text"
+	desc = "Text to channel one's spiritual beliefs. Are you prepared for the coming days?"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "bible"
 	item_state = "bible"
 	lefthand_file = 'icons/mob/inhands/misc/books_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/books_righthand.dmi'
 	var/mob/affecting = null
-	var/deity_name = "Christ"
 	force_string = "holy"
 
 /obj/item/storage/book/bible/Initialize()
@@ -44,7 +43,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 	AddComponent(/datum/component/anti_magic, FALSE, TRUE)
 
 /obj/item/storage/book/bible/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is offering [user.p_them()]self to [deity_name]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	user.visible_message("<span class='suicide'>[user] is offering [user.p_them()]self! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
 
 /obj/item/storage/book/bible/attack_self(mob/living/carbon/human/user)
@@ -52,7 +51,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 		return
 	if(GLOB.bible_icon_state) // if there is already a bible icon return FALSE
 		return FALSE
-	if(user.job != "Chaplain") // if the user is not the chaplain, return FALSE
+	if(user.job != "Hilltop Leadership") // if the user is not the chaplain, return FALSE
 		return FALSE
 
 	var/list/skins = list()
@@ -90,7 +89,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 		return FALSE
 	if(user.incapacitated())
 		return FALSE
-	if(user.job != "Chaplain")
+	if(user.job != "Hilltop Leadership")
 		return FALSE
 	return TRUE
 
@@ -98,7 +97,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 	for(var/X in H.bodyparts)
 		var/obj/item/bodypart/BP = X
 		if(BP.status == BODYPART_ROBOTIC)
-			to_chat(user, "<span class='warning'>[src.deity_name] refuses to heal this metallic taint!</span>")
+			to_chat(user, "<span class='warning'>Your aura refuses to heal this metallic taint!</span>")
 			return 0
 
 	var/heal_amt = 5
@@ -109,8 +108,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 			var/obj/item/bodypart/affecting = X
 			if(affecting.heal_damage(heal_amt, heal_amt))
 				H.update_damage_overlays()
-		H.visible_message("<span class='notice'>[user] heals [H] with the power of [deity_name]!</span>")
-		to_chat(H, "<span class='boldnotice'>May the power of [deity_name] compel you to be healed!</span>")
+		H.visible_message("<span class='notice'>[user] heals [H] with the power of their aura!</span>")
 		playsound(src.loc, "punch", 25, 1, -1)
 		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, "blessing", /datum/mood_event/blessing)
 	return 1
@@ -227,7 +225,6 @@ GLOBAL_LIST_INIT(bibleitemstates, list("bible", "koran", "scrapbook", "bible",  
 
 /obj/item/storage/book/bible/syndicate
 	icon_state ="ebook"
-	deity_name = "The Syndicate"
 	throw_speed = 2
 	throwforce = 18
 	throw_range = 7

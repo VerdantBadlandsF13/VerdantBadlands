@@ -186,6 +186,9 @@
 	So long as they all serve as it's biker division."
 	r_hand = /obj/item/gun/ballistic/automatic/pistol/beretta/automatic/roundstart
 	l_hand = /obj/item/ammo_box/magazine/m9mmds
+	backpack_contents = list(
+		/obj/item/key/motorcycle = 1,
+		)
 
 // Militia
 /datum/job/gmb/militia

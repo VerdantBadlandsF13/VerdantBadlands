@@ -1233,7 +1233,7 @@
 /area/f13/sewer)
 "fg" = (
 /obj/structure/closet/crate,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/old,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -11517,7 +11517,7 @@
 /area/f13/building)
 "Tn" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/old,
 /turf/open/floor/f13{
 	color = "#818181";
 	icon_state = "floorrustysolid"

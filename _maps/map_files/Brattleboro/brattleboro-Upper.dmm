@@ -6434,6 +6434,12 @@
 /obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/building)
+"Dt" = (
+/obj/effect/landmark/start/f13/dfs_agent,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/bl/dfs)
 "Du" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/storage/trash_stack{
@@ -46828,7 +46834,7 @@ IL
 mY
 fv
 pI
-pI
+Dt
 rg
 pI
 Zz
@@ -48656,7 +48662,7 @@ IL
 mY
 fv
 pI
-pI
+Dt
 Bp
 pI
 Zz

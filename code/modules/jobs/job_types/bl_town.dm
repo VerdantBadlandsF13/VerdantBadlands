@@ -197,6 +197,17 @@
 	id =			/obj/item/card/id/tavern_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 
+/datum/outfit/job/town/f13tavernkeep/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	if(!H.gang)
+		var/datum/gang/hilltop/HT = GLOB.hilltop
+		GLOB.all_gangs |= HT
+		HT.add_member(H)
+		H.gang = HT
+
 /datum/job/town/f13settler
 	title = "Hilltop Inhabitant"
 	flag = F13TWNINHABITANT

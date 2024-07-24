@@ -594,9 +594,14 @@
 			if(prob(min(acidpwr*acid_volume/10, 90))) //Applies disfigurement
 				affecting.receive_damage(acidity, 2*acidity)
 				emote("scream")
+
+/*
+Disabling this block for now. - Carl
 				facial_hair_style = "Shaved"
 				hair_style = "Bald"
 				update_hair()
+*/
+
 				ADD_TRAIT(src, TRAIT_DISFIGURED, TRAIT_GENERIC)
 
 		update_damage_overlays()

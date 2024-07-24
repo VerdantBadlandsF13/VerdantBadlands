@@ -30020,12 +30020,6 @@
 	icon_state = "redchess"
 	},
 /area/f13/village)
-"tbs" = (
-/obj/effect/landmark/start/f13/dfs_agent,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/bl/dfs)
 "tbG" = (
 /obj/structure/table/reinforced,
 /obj/item/restraints/handcuffs,
@@ -40298,7 +40292,7 @@ sQZ
 sQZ
 rxx
 kqM
-sQZ
+fwb
 fwb
 fwb
 fwb
@@ -40755,7 +40749,7 @@ sQZ
 pCC
 sQZ
 sQZ
-sQZ
+fwb
 fwb
 fwb
 fwb
@@ -40877,7 +40871,7 @@ sQZ
 sQZ
 uZt
 pCC
-sQZ
+fwb
 oum
 vaR
 fwb
@@ -41209,10 +41203,10 @@ rxx
 lrH
 tSO
 sQZ
-sQZ
-sQZ
-sQZ
-sQZ
+fwb
+oum
+fwb
+fwb
 fwb
 fwb
 tom
@@ -41334,7 +41328,7 @@ sQZ
 sQZ
 sQZ
 sQZ
-sQZ
+fwb
 pEQ
 sQZ
 rxx
@@ -41665,11 +41659,11 @@ fwb
 fwb
 fwb
 fwb
-sQZ
-sQZ
-sQZ
+fwb
+fwb
 sQZ
 qJd
+fwb
 fwb
 tom
 tom
@@ -75128,7 +75122,7 @@ jJn
 jJn
 bOd
 ujF
-tbs
+eCS
 eCS
 iRl
 bOd
@@ -75585,7 +75579,7 @@ jJn
 jJn
 bOd
 mGV
-tbs
+eCS
 eCS
 eCS
 rBY

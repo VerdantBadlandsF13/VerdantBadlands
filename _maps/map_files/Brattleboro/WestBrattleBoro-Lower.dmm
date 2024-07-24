@@ -1681,7 +1681,10 @@
 	},
 /area/f13/vault/security)
 "lO" = (
-/obj/structure/ladder/unbreakable_normal,
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "funclaw"
+	},
 /turf/open/floor/f13{
 	color = "#818181";
 	icon_state = "floorrustysolid"

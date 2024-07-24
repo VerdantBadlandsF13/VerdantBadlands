@@ -14,7 +14,8 @@ GLOBAL_LIST_INIT(gang_names, list ( \
 //Which social factions are allowed to join gangs?
 GLOBAL_LIST_INIT(allowed_gang_factions, list ( \
 "Raiders",
-"Tribal", \
+"Tribal",
+"Hilltop Market", \
 ))
 
 // List of all existing gangs
@@ -23,7 +24,11 @@ GLOBAL_LIST_EMPTY(all_gangs)
 //Great Khans
 GLOBAL_DATUM_INIT(greatkhans, /datum/gang/greatkhans, new)
 
+//Den Mob
 GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
+
+//Hilltop Market
+GLOBAL_DATUM_INIT(hilltop, /datum/gang/hilltop, new)
 
 /datum/gang
 	var/name = "gang"
@@ -88,6 +93,7 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/clothing/hat,
 		/datum/gang_item/clothing/glasses/sunglasses
 	)
+
 /datum/gang/denmob
 	name = "Den Mob"
 	color = "#fcfdaa"
@@ -104,6 +110,40 @@ GLOBAL_DATUM_INIT(denmob, /datum/gang/denmob, new)
 		/datum/gang_item/clothing/glasses/sunglasses,
 		/datum/gang_item/weapon/type17,
 		/datum/gang_item/weapon/type93
+	)
+
+//For the Tavernkeep.
+/datum/gang/hilltop
+	name = "Hilltop Market"
+	color = "#4441c1"
+	round_start = TRUE
+	boss_items = list(
+		/datum/gang_item/equipment/mentats,
+		/datum/gang_item/equipment/fixer,
+		/datum/gang_item/equipment/stimpak,
+
+		/datum/gang_item/equipment/c4,
+		/datum/gang_item/equipment/stinger,
+		/datum/gang_item/equipment/molotov,
+		/datum/gang_item/equipment/dynamite,
+		/datum/gang_item/equipment/he,
+
+		/datum/gang_item/weapon/shuriken,
+		/datum/gang_item/weapon/switchblade,
+		/datum/gang_item/weapon/brass,
+		/datum/gang_item/weapon/spikedbaseball,
+		/datum/gang_item/weapon/slugger,
+		/datum/gang_item/weapon/sappers,
+
+		/datum/gang_item/weapon/type17,
+		/datum/gang_item/weapon/type93,
+
+		/datum/gang_item/equipment/chemmakingkit,
+
+		/datum/gang_item/equipment/bundleanarchist,
+		/datum/gang_item/equipment/bundlegunner,
+		/datum/gang_item/equipment/bundledenboss,
+		/datum/gang_item/equipment/bundleboss,
 	)
 
 /datum/gang/New(starting_members, starting_leader)

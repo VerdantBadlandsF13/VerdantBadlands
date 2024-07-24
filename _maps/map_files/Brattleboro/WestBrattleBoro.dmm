@@ -19609,6 +19609,12 @@
 	dir = 4
 	},
 /area/f13/vault)
+"niN" = (
+/obj/machinery/base_dispenser/ammo,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "reddirtysolid"
+	},
+/area/f13/vault/security/armory)
 "niV" = (
 /obj/structure/disposalpipe/junction/flip,
 /turf/closed/indestructible/vaultdoor,
@@ -44793,7 +44799,7 @@ pac
 pac
 pac
 kzH
-eqk
+niN
 eqk
 eqk
 eqk
@@ -110643,11 +110649,11 @@ fdY
 fdY
 fdY
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
+pac
+pac
+pac
+pac
 fdY
 gPC
 gPC
@@ -111100,11 +111106,11 @@ fdY
 fdY
 fdY
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
+dEr
+dEr
+dEr
+pac
 fdY
 gPC
 sfB
@@ -111557,11 +111563,11 @@ fdY
 fdY
 fdY
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
+dEr
+dEr
+dEr
+pac
 fdY
 gPC
 coO
@@ -112014,11 +112020,11 @@ fdY
 fdY
 fdY
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
+dEr
+dEr
+dEr
+pac
 fdY
 gPC
 ltM
@@ -112471,11 +112477,11 @@ fdY
 fdY
 fdY
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+pac
+pac
+pac
+pac
+pac
 fdY
 gPC
 gPC

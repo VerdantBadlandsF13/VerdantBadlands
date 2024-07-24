@@ -429,7 +429,10 @@
 /turf/open/floor/carpet/blue,
 /area/f13/building)
 "bL" = (
-/obj/structure/ladder/unbreakable_normal,
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "funclaw"
+	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/city/bighorn)
 "bM" = (
@@ -4868,7 +4871,7 @@
 /area/f13/shack)
 "rq" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/old,
 /turf/open/floor/f13{
 	icon_state = "warnplate";
 	dir = 6

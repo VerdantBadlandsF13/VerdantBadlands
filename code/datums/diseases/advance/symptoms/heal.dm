@@ -474,7 +474,7 @@
 			return 0.5
 		if(RAD_BURN_THRESHOLD to RAD_MOB_MUTATE)
 			return 0.75
-		if(RAD_MOB_MUTATE to RAD_MOB_KNOCKDOWN)
+		if(RAD_MOB_KNOCKDOWN to RAD_MOB_MUTATE)
 			return 1
 		else
 			return 1.5

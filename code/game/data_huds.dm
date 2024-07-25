@@ -246,7 +246,7 @@
 			radholder.icon_state = "hudradsafe"
 		if((RAD_MOB_SAFE+1) to RAD_MOB_MUTATE)
 			radholder.icon_state = "hudraddanger"
-		if((RAD_MOB_MUTATE+1) to RAD_MOB_VOMIT)
+		if(RAD_MOB_VOMIT to (RAD_MOB_MUTATE+1))
 			radholder.icon_state = "hudradlethal"
 		if((RAD_MOB_VOMIT+1) to INFINITY)
 			radholder.icon_state = "hudradnuke"

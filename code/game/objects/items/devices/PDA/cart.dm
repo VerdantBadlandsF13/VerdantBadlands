@@ -508,7 +508,7 @@ Code:
 		
 	switch(href_list["choice"])
 		if("Send Signal")
-			INVOKE_ASYNC(radio, /obj/item/integrated_signaler.proc/send_activation)
+			INVOKE_ASYNC(radio, TYPE_PROC_REF(/obj/item/integrated_signaler, send_activation))
 			playsound(src, 'sound/machines/terminal_select.ogg', 50, 1)
 
 		if("Signal Frequency")

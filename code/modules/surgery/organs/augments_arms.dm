@@ -35,7 +35,7 @@
 	items_list += I
 	// ayy only dropped signal for performance, we can't possibly have shitcode that doesn't call it when removing items from a mob, right?
 	// .. right??!
-	RegisterSignal(I, COMSIG_ITEM_DROPPED, .proc/magnetic_catch)
+	RegisterSignal(I, COMSIG_ITEM_DROPPED, PROC_REF(magnetic_catch))
 
 /obj/item/organ/cyberimp/arm/proc/magnetic_catch(datum/source, mob/user)
 	. = COMPONENT_DROPPED_RELOCATION

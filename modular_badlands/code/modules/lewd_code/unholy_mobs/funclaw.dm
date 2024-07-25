@@ -110,11 +110,11 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 
 	if(male)
 		pound(M)
-		addtimer(CALLBACK(src, .proc/pound, M), rand(8, 12))
+		addtimer(CALLBACK(src, PROC_REF(pound), M), rand(8, 12))
 
 	if(!male)
 		poundf(M)
-		addtimer(CALLBACK(src, .proc/poundf, M), rand(8, 12))
+		addtimer(CALLBACK(src, PROC_REF(poundf), M), rand(8, 12))
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/pickNewHole(mob/living/M)
 	switch(rand(2))
@@ -204,7 +204,7 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 		refractory_period = world.time + rand(100, 150) // Sex cooldown
 		set_lust(0) // Nuts at 400
 
-		addtimer(CALLBACK(src, .proc/slap, M), 15)
+		addtimer(CALLBACK(src, PROC_REF(slap), M), 15)
 		return
 
 	var/message
@@ -243,7 +243,7 @@ These function regardless of prefs, as they're intended to be admin-spawn only.
 	refractory_period = world.time + rand(100, 150) // Sex cooldown
 	set_lust(0) // Nuts at 400
 
-	addtimer(CALLBACK(src, .proc/slap, M), 15)
+	addtimer(CALLBACK(src, PROC_REF(slap), M), 15)
 
 
 /mob/living/simple_animal/hostile/deathclaw/funclaw/proc/slap(mob/living/M)

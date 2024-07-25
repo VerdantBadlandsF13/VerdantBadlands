@@ -1,6 +1,6 @@
 /turf/open/indestructible/ground/bl/outside/grass_standard/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/bl/outside/grass_standard/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)

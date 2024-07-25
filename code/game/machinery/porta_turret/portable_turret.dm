@@ -200,7 +200,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 		base.layer = NOT_HIGH_OBJ_LAYER
 		underlays += base
 	if(!has_cover)
-		INVOKE_ASYNC(src, .proc/popUp)
+		INVOKE_ASYNC(src, PROC_REF(popUp))
 
 /obj/machinery/porta_turret/proc/toggle_on(set_to)
 	var/current = on
@@ -403,7 +403,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	toggle_on(FALSE) //turns off the turret temporarily
 	update_icon()
 	//6 seconds for the traitor to gtfo of the area before the turret decides to ruin his shit
-	addtimer(CALLBACK(src, .proc/toggle_on, TRUE), 6 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(toggle_on), TRUE), 6 SECONDS)
 	//turns it back on. The cover popUp() popDown() are automatically called in process(), no need to define it here
 
 /obj/machinery/porta_turret/emp_act(severity)
@@ -416,7 +416,7 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 
 		toggle_on(FALSE)
 
-		addtimer(CALLBACK(src, .proc/toggle_on, TRUE), rand(60,600))
+		addtimer(CALLBACK(src, PROC_REF(toggle_on), TRUE), rand(60,600))
 
 /obj/machinery/porta_turret/take_damage(damage, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, atom/attacked_by)
 	. = ..()
@@ -501,16 +501,16 @@ A bunch of edits were made by me to fit Verdant, alongside cleaning it up. - Car
 	/// We can see our target, start blasting
 	if(activity_state == TURRET_ALERT_MODE)
 		record_target_weakref(GET_WEAKREF(last_target)) // Update our target and turf's position every time we process
-		INVOKE_ASYNC(src, .proc/shine_laser_pointer) // lazer
+		INVOKE_ASYNC(src, PROC_REF(shine_laser_pointer)) // lazer
 		if(!can_see_target()) // If we cant see the target, go into caution mode
 			change_activity_state(TURRET_CAUTION_MODE)
 		else
-			INVOKE_ASYNC(src, .proc/open_fire_on_target)
+			INVOKE_ASYNC(src, PROC_REF(open_fire_on_target))
 
 	/// We lost sight of our target, shoot where we last saw them
 	if(activity_state == TURRET_CAUTION_MODE)
-		INVOKE_ASYNC(src, .proc/shine_laser_pointer)
-		INVOKE_ASYNC(src, .proc/open_fire_on_target)
+		INVOKE_ASYNC(src, PROC_REF(shine_laser_pointer))
+		INVOKE_ASYNC(src, PROC_REF(open_fire_on_target))
 		if(!caution_bursts_left)
 			change_activity_state(TURRET_EVASION_MODE)
 

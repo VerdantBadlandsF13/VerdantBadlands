@@ -61,7 +61,7 @@ Arming Self
 		to_chat(user, "<span class='danger'>The mine is already armed!</span>") //how did we get here
 	if(user.dropItemToGround(src))
 		anchored = TRUE
-		addtimer(CALLBACK(src, .proc/arm), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(arm)), 5 SECONDS)
 		to_chat(user, "<span class='notice'>You drop the mine and activate the 5-second arming process.</span>")
 		add_appearance()
 		return
@@ -133,7 +133,7 @@ Enter & Exit stuff.
 		visible_message("<span class='danger'>[arrived] deftly avoids \the [icon2html(src, viewers(src))] [src]!</span>")
 		return
 
-	INVOKE_ASYNC(src, .proc/triggermine, arrived)
+	INVOKE_ASYNC(src, PROC_REF(triggermine), arrived)
 
 /*
 The big bang.

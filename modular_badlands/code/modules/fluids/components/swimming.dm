@@ -21,9 +21,9 @@
 	var/mob/M = parent
 	M.visible_message("<span class='notice'>[parent] starts splashing around in the water!</span>")
 	M.add_movespeed_modifier(/datum/movespeed_modifier/water_wading)
-	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, .proc/onMove)
-	RegisterSignal(parent, COMSIG_CARBON_SPECIESCHANGE, .proc/onChangeSpecies)
-	RegisterSignal(parent, COMSIG_MOB_ATTACK_HAND_TURF, .proc/try_leave_pool)
+	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(onMove))
+	RegisterSignal(parent, COMSIG_CARBON_SPECIESCHANGE, PROC_REF(onChangeSpecies))
+	RegisterSignal(parent, COMSIG_MOB_ATTACK_HAND_TURF, PROC_REF(try_leave_pool))
 	START_PROCESSING(SSprocessing, src)
 	enter_pool()
 

@@ -109,7 +109,7 @@
 		to_chat(user, "<span class=\"alert\">The autolathe is busy. Please wait for completion of previous operation.</span>")
 		return TRUE
 
-	if(default_deconstruction_screwdriver(user, "[icon_state]_t", "[icon_state]", O))
+	if(default_deconstruction_screwdriver(user, "[icon_state]_t", "[initial(icon_state)]", O))
 		updateUsrDialog()
 		return TRUE
 

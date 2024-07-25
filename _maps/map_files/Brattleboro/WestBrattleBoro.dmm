@@ -549,6 +549,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
+"aqH" = (
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 10
+	},
+/area/f13/bar)
 "aqM" = (
 /obj/effect/decal/bl_stairway,
 /obj/structure/stairs/north{
@@ -710,6 +716,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/whitegreenfull,
 /area/f13/vault/medical/chemistry)
+"avU" = (
+/turf/open/floor/f13{
+	icon_state = "plating"
+	},
+/area/f13/bar)
 "awd" = (
 /obj/structure/closet/toolcloset,
 /obj/structure/sign/warning/fire{
@@ -4341,6 +4352,16 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblack,
 /area/f13/building)
+"cXk" = (
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/fallout/turfs/walls/tunnel.dmi';
+	icon_state = "tunnel0";
+	icon_type_smooth = "tunnel";
+	name = "utility wall";
+	smooth = 1
+	},
+/area/f13/bar)
 "cXq" = (
 /obj/machinery/vending/medical{
 	pixel_y = 31;
@@ -9190,6 +9211,12 @@
 /obj/item/stack/f13Cash/random/low,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white/whiteyellowchess/whiteyellowchess2,
 /area/f13/building)
+"glB" = (
+/obj/structure/ladder/unbreakable_normal,
+/turf/open/floor/f13{
+	icon_state = "plating"
+	},
+/area/f13/bar)
 "glC" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -14538,6 +14565,15 @@
 	icon_state = "whiteyellowfull"
 	},
 /area/f13/vault/reactor)
+"jXe" = (
+/obj/structure/railing/handrail/rusty{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 6
+	},
+/area/f13/bar)
 "jXh" = (
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_y = -32
@@ -15676,6 +15712,15 @@
 /obj/structure/wreck/bus/rusted/segmented16,
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
+"kMl" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 1
+	},
+/area/f13/bar)
 "kMw" = (
 /mob/living/simple_animal/hostile/raider/junker,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -16207,6 +16252,9 @@
 	icon_state = "rare"
 	},
 /area/f13/building)
+"ldr" = (
+/turf/open/transparent/openspace,
+/area/f13/bar)
 "ldF" = (
 /obj/structure/car/rubbish4,
 /turf/open/indestructible/ground/bl/outside/dirt,
@@ -16747,6 +16795,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating/random,
 /area/f13/vault/vents)
+"lui" = (
+/obj/structure/railing/handrail/rusty{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 5
+	},
+/area/f13/bar)
 "luF" = (
 /obj/structure/sign/warning/nosmoking/circle{
 	pixel_y = 32
@@ -18049,6 +18106,12 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood/wood_fancy/wood_fancy_dark,
 /area/f13/building)
+"mls" = (
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 1
+	},
+/area/f13/bar)
 "mlw" = (
 /obj/structure/chair/bench{
 	dir = 4
@@ -23869,6 +23932,15 @@
 	icon_state = "housewood2"
 	},
 /area/f13/building)
+"pXC" = (
+/obj/structure/railing/handrail/rusty{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 4
+	},
+/area/f13/bar)
 "pXG" = (
 /obj/structure/chair/comfy/brown{
 	dir = 1
@@ -30940,6 +31012,12 @@
 /obj/structure/debris/v1,
 /turf/open/indestructible/ground/bl/outside/gravel,
 /area/f13/wasteland)
+"uoz" = (
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 9
+	},
+/area/f13/bar)
 "uoA" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -34347,6 +34425,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet,
 /area/f13/building)
+"wyS" = (
+/obj/machinery/light,
+/turf/open/floor/f13{
+	icon_state = "warnplate"
+	},
+/area/f13/bar)
 "wze" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -36439,6 +36523,11 @@
 	icon_state = "white"
 	},
 /area/f13/building)
+"xVY" = (
+/turf/open/floor/f13{
+	icon_state = "warnplate"
+	},
+/area/f13/bar)
 "xWw" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright2"
@@ -36557,6 +36646,12 @@
 	icon_state = "whitebluechess"
 	},
 /area/f13/building)
+"xZP" = (
+/turf/open/floor/f13{
+	icon_state = "warnplate";
+	dir = 8
+	},
+/area/f13/bar)
 "yat" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "storewindowhorizontal";
@@ -118424,11 +118519,11 @@ pac
 fdY
 fdY
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+cXk
+cXk
+cXk
+cXk
 gPC
 hLX
 hLX
@@ -118881,11 +118976,11 @@ pac
 pac
 fdY
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+uoz
+xZP
+aqH
+cXk
 gPC
 hLX
 hLX
@@ -119338,11 +119433,11 @@ pac
 pac
 fdY
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+mls
+glB
+xVY
+cXk
 gPC
 hLX
 hLX
@@ -119795,11 +119890,11 @@ fdY
 pac
 pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+kMl
+avU
+wyS
+cXk
 gPC
 pJz
 hLX
@@ -120252,11 +120347,11 @@ fdY
 pac
 pac
 pac
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+mls
+glB
+xVY
+cXk
 gPC
 tLl
 hLX
@@ -120709,11 +120804,11 @@ fdY
 pac
 pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+lui
+pXC
+jXe
+cXk
 gPC
 aUn
 lVw
@@ -121166,11 +121261,11 @@ fdY
 pac
 pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+ldr
+ldr
+ldr
+cXk
 gPC
 gPC
 gPC
@@ -121623,11 +121718,11 @@ pac
 pac
 pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+ldr
+ldr
+ldr
+cXk
 fdY
 fdY
 fdY
@@ -122080,11 +122175,11 @@ pac
 pac
 pac
 fdY
-fdY
-fdY
-fdY
-fdY
-fdY
+cXk
+cXk
+cXk
+cXk
+cXk
 fdY
 fdY
 fdY

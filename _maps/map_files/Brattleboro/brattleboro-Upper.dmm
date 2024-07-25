@@ -9865,6 +9865,12 @@
 	name = "store floor"
 	},
 /area/f13/building/mall)
+"Tf" = (
+/obj/structure/railing{
+	dir = 10
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/wasteland)
 "Tg" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -36484,7 +36490,7 @@ PW
 PW
 PW
 rI
-xF
+Tf
 PW
 PW
 PW
@@ -58863,7 +58869,7 @@ PW
 PW
 PW
 rI
-PW
+Tf
 PW
 PW
 PW

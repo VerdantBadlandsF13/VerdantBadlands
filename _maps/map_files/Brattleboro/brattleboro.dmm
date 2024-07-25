@@ -3793,16 +3793,6 @@
 /obj/structure/destructible/hobo_barrel/lit,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/village)
-"bWv" = (
-/obj/structure/table/wood/club,
-/obj/structure/railing/dancing_pole{
-	pixel_y = -8
-	},
-/obj/structure/railing/dancing_pole/top{
-	name = "umbrella pole"
-	},
-/turf/open/indestructible/cobble,
-/area/f13/village)
 "bWG" = (
 /obj/structure/car/rubbish2,
 /turf/open/indestructible/ground/outside/road{
@@ -14544,7 +14534,9 @@
 /area/f13/village)
 "iSe" = (
 /obj/structure/reagent_dispensers/compostbin,
-/turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
+/turf/open/indestructible/ground/bl/outside/gravel{
+	icon_state = "grassdirt1"
+	},
 /area/f13/wasteland/bl/gmb)
 "iTX" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -14753,7 +14745,10 @@
 /obj/item/shovel/spade,
 /obj/item/cultivator,
 /obj/item/reagent_containers/glass/bucket/wood,
-/turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
+/turf/open/indestructible/ground/bl/outside/gravel{
+	icon_state = "grassdirt1";
+	dir = 1
+	},
 /area/f13/wasteland/bl/gmb)
 "jbX" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -35581,7 +35576,9 @@
 /area/f13/village)
 "wAL" = (
 /obj/machinery/hydroponics/soil,
-/turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
+/turf/open/indestructible/ground/bl/outside/gravel{
+	icon_state = "grassdirt2"
+	},
 /area/f13/wasteland/bl/gmb)
 "wAU" = (
 /obj/item/kirbyplants/random,
@@ -80706,7 +80703,7 @@ oeM
 pqb
 nRs
 jOs
-bWv
+eOw
 eQe
 ugj
 pqb
@@ -81320,7 +81317,7 @@ voM
 kvC
 amx
 woD
-fxI
+vFM
 wAL
 xpd
 fxI
@@ -81777,7 +81774,7 @@ efh
 pue
 vvR
 efh
-fxI
+vFM
 wAL
 xpd
 fxI
@@ -82234,7 +82231,7 @@ pue
 nbA
 kvC
 efh
-fxI
+gqz
 wAL
 xpd
 fxI

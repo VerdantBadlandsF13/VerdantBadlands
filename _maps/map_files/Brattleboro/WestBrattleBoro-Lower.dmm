@@ -241,6 +241,12 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
+"bM" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/f13{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/tunnel)
 "bR" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/f13/wood,
@@ -1174,6 +1180,13 @@
 	dir = 9
 	},
 /area/f13/vault)
+"ip" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "iq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
@@ -1360,6 +1373,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/holodeck)
+"ju" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/destructible/hobo_barrel/lit,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "jv" = (
 /obj/structure/stairs/south{
 	alpha = 0
@@ -1680,16 +1698,6 @@
 	icon_state = "reddirtysolid"
 	},
 /area/f13/vault/security)
-"lO" = (
-/obj/structure/ladder/unbreakable{
-	height = 1;
-	id = "funclaw"
-	},
-/turf/open/floor/f13{
-	color = "#818181";
-	icon_state = "floorrustysolid"
-	},
-/area/f13/tunnel)
 "lP" = (
 /obj/structure/railing/handrail/rusty/end,
 /turf/open/floor/f13{
@@ -2218,6 +2226,15 @@
 	dir = 8
 	},
 /area/f13/vault)
+"pX" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/tunnel)
 "pY" = (
 /obj/structure/fence/corner{
 	dir = 8
@@ -2606,6 +2623,17 @@
 /obj/structure/table/snooker,
 /turf/open/floor/f13/wood,
 /area/f13/building/bighornbunker)
+"st" = (
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "funclaw"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/f13{
+	color = "#818181";
+	icon_state = "floorrustysolid"
+	},
+/area/f13/tunnel)
 "su" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
@@ -3092,12 +3120,6 @@
 	color = "#A47449"
 	},
 /turf/open/indestructible/ground/inside/subway,
-/area/f13/tunnel)
-"vG" = (
-/turf/open/floor/f13{
-	icon_state = "rampuptop";
-	dir = 1
-	},
 /area/f13/tunnel)
 "vJ" = (
 /obj/structure/debris/v4,
@@ -3937,6 +3959,13 @@
 "Be" = (
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/building)
+"Bi" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/f13{
+	icon_state = "rampuptop";
+	dir = 1
+	},
+/area/f13/tunnel)
 "Bk" = (
 /obj/structure/closet/crate/wooden,
 /obj/effect/spawner/lootdrop/maintenance,
@@ -4738,6 +4767,16 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland/bighorn)
+"GI" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "rampuptop";
+	dir = 1
+	},
+/area/f13/tunnel)
 "GQ" = (
 /obj/structure/showcase/horrific_experiment,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4921,6 +4960,10 @@
 	dir = 1
 	},
 /area/f13/vault)
+"Ij" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "Ik" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/traitbooks/low,
@@ -5219,6 +5262,16 @@
 /obj/effect/decal/cleanable/oil/slippery,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/ruins,
+/area/f13/tunnel)
+"Ka" = (
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/fallout/turfs/walls/tunnel.dmi';
+	icon_state = "tunnel0";
+	icon_type_smooth = "tunnel";
+	name = "utility wall";
+	smooth = 1
+	},
 /area/f13/tunnel)
 "Kb" = (
 /obj/structure/table/reinforced,
@@ -5632,6 +5685,18 @@
 	dir = 9
 	},
 /area/f13/vault)
+"Nm" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/tunnel)
 "Nq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_bows,
@@ -5937,6 +6002,15 @@
 	icon_state = "wide-broken1"
 	},
 /area/f13/building)
+"Pl" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkdirtysolid"
+	},
+/area/f13/tunnel)
 "Pr" = (
 /obj/structure/simple_door/bunker,
 /turf/open/indestructible/ground/outside/ruins,
@@ -6347,6 +6421,16 @@
 /obj/effect/spawner/lootdrop/f13/ammo_civilian,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
+"Sk" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/floor/f13{
+	icon_state = "rampuptop";
+	dir = 1
+	},
+/area/f13/tunnel)
 "Sm" = (
 /obj/structure/closet/cabinet/vb_wardrobe,
 /obj/item/clothing/under/f13/vault,
@@ -6463,6 +6547,11 @@
 	dir = 10
 	},
 /area/f13/vault)
+"Ti" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/tunnel)
 "Tj" = (
 /obj/structure/fluff/tram_rail{
 	dir = 1
@@ -82559,8 +82648,8 @@ an
 an
 an
 an
-an
-an
+PV
+PV
 xk
 PV
 PV
@@ -83010,14 +83099,14 @@ hx
 yV
 PV
 an
-Rb
 VS
-iP
-iP
-iP
-vG
-lO
+VS
+bM
+bM
+bM
 an
+PV
+PV
 xk
 PV
 PV
@@ -83467,14 +83556,14 @@ Zj
 PV
 PV
 an
-Rb
-Rb
+VS
+VS
+bM
+bM
+Ij
 an
-an
-an
-an
-an
-an
+PV
+PV
 xk
 xk
 PV
@@ -83926,10 +84015,10 @@ PV
 an
 an
 an
-an
-PV
-PV
-PV
+Nm
+bM
+Ij
+jG
 PV
 PV
 xk
@@ -84380,13 +84469,13 @@ gS
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+an
+Rb
+GI
+Pl
+bM
+Ti
+jG
 PV
 PV
 PV
@@ -84837,13 +84926,13 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+an
+Rb
+Sk
+pX
+bM
+Ij
+jG
 PV
 PV
 PV
@@ -85294,13 +85383,13 @@ PV
 PV
 PV
 PV
-jy
-jy
-jy
-jy
-jy
-PV
-PV
+jG
+jG
+jG
+ip
+bM
+Ij
+jG
 PV
 PV
 jy
@@ -85753,11 +85842,11 @@ PV
 jy
 jy
 jy
-PV
-PV
-PV
-jy
-PV
+jG
+Ij
+bM
+Ij
+jG
 PV
 jy
 jy
@@ -86210,11 +86299,11 @@ PV
 PV
 PV
 jy
-jy
-PV
-PV
-PV
-jy
+jG
+Ij
+bM
+Ij
+jG
 PV
 jy
 PV
@@ -86667,11 +86756,11 @@ PV
 PV
 PV
 PV
-PV
-jy
-jy
-jy
-PV
+jG
+Ij
+bM
+Ij
+jG
 jy
 PV
 PV
@@ -87124,11 +87213,11 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
+jG
+Ij
+Ij
+Ij
+an
 PV
 PV
 PV
@@ -87581,11 +87670,11 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
+jG
+jG
+ju
+bM
+an
 PV
 PV
 PV
@@ -88039,10 +88128,10 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
+jG
+jG
+bM
+an
 PV
 PV
 PV
@@ -88496,10 +88585,10 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
+jG
+an
+Ij
+an
 PV
 PV
 PV
@@ -88952,11 +89041,11 @@ hx
 PV
 PV
 hx
-aY
 PV
-PV
-PV
-PV
+jG
+ju
+Ij
+jG
 PV
 PV
 PV
@@ -89409,14 +89498,14 @@ hx
 uD
 hx
 hx
-hx
-hx
-hx
 PV
+jG
+Ij
+Ij
+Ka
+Ka
+Ka
 PV
-PV
-PV
-hx
 uD
 PV
 hx
@@ -89866,14 +89955,14 @@ hx
 hx
 hx
 hx
-hx
-hx
-hx
-hx
 PV
+jG
+Ij
+Ij
+Bi
+st
+Ka
 PV
-hx
-hx
 hx
 hx
 hx
@@ -90320,17 +90409,17 @@ hx
 PV
 PV
 PV
+hx
+hx
+hx
 PV
+an
+Ij
+bM
+Ka
+Ka
+Ka
 PV
-PV
-PV
-PV
-hx
-hx
-hx
-hx
-hx
-hx
 hx
 hx
 hx
@@ -90778,16 +90867,16 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
 hx
 hx
-hx
+PV
+an
+jG
+jG
+jG
+PV
+PV
+PV
 hx
 hx
 TV
@@ -91235,16 +91324,16 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
 hx
 hx
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
 hx
 hx
 hx
@@ -91693,13 +91782,13 @@ PV
 PV
 PV
 jy
-jy
+hx
+hx
 PV
 PV
 PV
-PV
-PV
-PV
+hx
+hx
 hx
 hx
 hx
@@ -92150,16 +92239,16 @@ PV
 jy
 jy
 PV
-PV
-PV
-PV
-PV
-PV
-PV
 hx
 hx
 hx
-PV
+hx
+hx
+hx
+hx
+hx
+hx
+hx
 PV
 PV
 hx
@@ -92608,10 +92697,10 @@ jy
 PV
 PV
 PV
-jy
-PV
-PV
-PV
+hx
+hx
+hx
+hx
 hx
 hx
 hx
@@ -93066,12 +93155,12 @@ PV
 PV
 jy
 jy
-PV
-PV
+uD
 hx
 hx
 hx
 hx
+uD
 PV
 PV
 PV
@@ -93524,7 +93613,7 @@ jy
 PV
 PV
 PV
-PV
+hx
 hx
 hx
 PV

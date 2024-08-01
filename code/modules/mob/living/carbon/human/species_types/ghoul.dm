@@ -1,8 +1,3 @@
-//ghouls-heal from radiation, do not breathe. do not go into crit. terrible at melee, easily dismembered.
-//cannot use medical chemicals to heal brute or burn, must heal from rads, sutures. can use antitoxin chemicals.  //actually changed my mind i'll give stims reduced effect instead
-//Slower than humans at combat armor speed, appear dead. rotted organs unable to use for transplant.
-//like before, they cannot take piercing wounds or burn wounds or slash wounds, but they can have their bones broken by any source of wound now instead of being impervious
-
 /datum/species/ghoul
 	name = "Ghoul"
 	id = "ghoul"
@@ -12,7 +7,7 @@
 
 	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
 	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_NOHUNGER, TRAIT_NOTHIRST,
-	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH)
+	TRAIT_EASYLIMBDISABLE)
 
 	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
 	punchstunthreshold = 9
@@ -115,15 +110,6 @@
 		H.apply_status_effect(/datum/status_effect/ghoulheal)
 	else
 		H.remove_status_effect(/datum/status_effect/ghoulheal)
-//Temp until we get them set up properly to use rads instead.
-	if(H.nutrition < NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.nutrition > NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.water < THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
-	if(H.water > THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
 
 /datum/species/ghoul/glowing
 	name = "Glowing Ghoul"
@@ -165,7 +151,7 @@
 
 	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
 	TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_NOHUNGER, TRAIT_NOTHIRST,
-	TRAIT_EASYLIMBDISABLE, TRAIT_FAKEDEATH)
+	TRAIT_EASYLIMBDISABLE)
 
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BEAST
 	mutant_bodyparts = list("mcolor" = "FFFFFF","mcolor2" = "FFFFFF","mcolor3" = "FFFFFF", "mam_snouts" = "Husky", "mam_tail" = "Husky", "mam_ears" = "Husky", "deco_wings" = "None",

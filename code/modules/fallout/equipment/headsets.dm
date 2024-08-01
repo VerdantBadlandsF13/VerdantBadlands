@@ -88,3 +88,15 @@
 	freqlock = TRUE
 	factionized = TRUE
 	linked_faction = FACTION_DFS
+
+// DFS
+/obj/item/radio/headset/headset_town
+	name = "pre-war headset"
+	desc = "An old, almost broken headset. You can hear crackling from the ear piece.\nTo access the town's private channel, use :h"
+	icon_state = "com_headset"
+	keyslot = new /obj/item/encryptionkey/headset_town
+	frequency = FREQ_TWN
+	freerange = TRUE
+	freqlock = TRUE
+	factionized = TRUE
+	linked_faction = FACTION_TWN

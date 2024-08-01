@@ -4,6 +4,8 @@
 	icon = 'icons/fallout/structures/fences.dmi'
 	icon_state = "railing"
 	flags_1 = ON_BORDER_1
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = OBJITEM_PLANE
 	density = TRUE
 	anchored = TRUE
 	pass_flags_self = LETPASSTHROW

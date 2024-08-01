@@ -3,11 +3,11 @@
 	id = "synthliz"
 	say_mod = "beeps"
 	default_color = "00FF00"
-	species_traits = list(MUTCOLORS,NOTRANSSTING,EYECOLOR,LIPS,HAIR,HAS_FLESH,HAS_BONE,ROBOTIC_LIMBS)
+	species_traits = list(MUTCOLORS,NOTRANSSTING,EYECOLOR,LIPS,HAIR,ROBOTIC_LIMBS)
 
 	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOHARDCRIT,
 	TRAIT_NOSOFTCRIT, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_LIMBATTACHMENT,
-	TRAIT_FAKEDEATH, TRAIT_NOHUNGER, TRAIT_NOTHIRST, TRAIT_NOPAIN, TRAIT_RESISTLOWPRESSURE, TRAIT_NOBREATH, TRAIT_AUXILIARY_LUNGS)
+	TRAIT_NOHUNGER, TRAIT_NOTHIRST, TRAIT_NOPAIN, TRAIT_RESISTLOWPRESSURE, TRAIT_NOBREATH, TRAIT_AUXILIARY_LUNGS)
 
 	inherent_biotypes = MOB_ROBOTIC|MOB_HUMANOID|MOB_REPTILE|MOB_SYNTH
 	mutant_bodyparts = list("ipc_antenna" = "Synthetic Lizard - Antennae","mam_tail" = "Synthetic Lizard", "mam_snouts" = "Synthetic Lizard - Snout", "legs" = "Digitigrade", "mam_body_markings" = "Synthetic Lizard - Plates", "taur" = "None")
@@ -43,13 +43,3 @@
 		chem.reaction_mob(H, TOUCH, 2 ,0) //heal a little
 		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)
 		return TRUE
-
-/datum/species/synthliz/spec_life(mob/living/carbon/human/H)
-	if(H.nutrition < NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.nutrition > NUTRITION_LEVEL_FED)
-		H.nutrition = NUTRITION_LEVEL_FED
-	if(H.water < THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL
-	if(H.water > THIRST_LEVEL_FULL)
-		H.water = THIRST_LEVEL_FULL

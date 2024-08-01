@@ -77,7 +77,7 @@
 
 /obj/item/twohanded/legionaxe/splitter
 	name = "splitter"
-	desc = "A heavy fireman axe from the old world, restored to working order by an unknown craftsmen. Excellent for smashing doors or heads."
+	desc = "A heavy fireman axe from the old world, restored to working order by an unknown craftsman. Excellent for smashing doors or heads."
 
 // Fire Axe			Keywords: Damage 25/46
 /obj/item/twohanded/fireaxe
@@ -478,6 +478,12 @@
 	throw_range = 3
 	attack_verb = list("burned", "welded", "cauterized", "melted", "charred")
 	hitsound = 'sound/items/welder2.ogg'
+
+// DFS Advisor melee.
+/obj/item/twohanded/thermic_lance/reconciliation
+	name = "Reconciliation"
+	desc = "A repurposed tool, once meant to bind together, now intended to separate. This has an odd grip allowing for extended reach, similar to that of a spear."
+	max_reach = 2
 
 /obj/item/twohanded/thermic_lance/ComponentInitialize()
 	. = ..()

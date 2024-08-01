@@ -92,8 +92,9 @@
 			dat = main_win(user)
 		if(AUTOLATHE_CATEGORY_MENU)
 			dat = category_win(user,selected_category)
-		if(AUTOLATHE_SEARCH_MENU)
-			dat = search_win(user)
+// Commented out until we actually get the exploits fixed, or we deprecate fabs entirely. - Carl
+//		if(AUTOLATHE_SEARCH_MENU)
+//			dat = search_win(user)
 
 	var/datum/browser/popup = new(user, name, name, 400, 500)
 	popup.set_content(dat)
@@ -108,7 +109,7 @@
 		to_chat(user, "<span class=\"alert\">The autolathe is busy. Please wait for completion of previous operation.</span>")
 		return TRUE
 
-	if(default_deconstruction_screwdriver(user, "[icon_state]_t", "[icon_state]", O))
+	if(default_deconstruction_screwdriver(user, "[icon_state]_t", "[initial(icon_state)]", O))
 		updateUsrDialog()
 		return TRUE
 
@@ -274,6 +275,8 @@
 	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"
 	dat += materials_printout()
 
+// Commented out until we actually get the exploits fixed, or we deprecate fabs entirely. - Carl
+/*
 	dat += "<form name='search' action='?src=[REF(src)]'>\
 	<input type='hidden' name='src' value='[REF(src)]'>\
 	<input type='hidden' name='search' value='to_search'>\
@@ -281,6 +284,7 @@
 	<input type='text' name='to_search'>\
 	<input type='submit' value='Search'>\
 	</form><hr>"
+*/
 
 	var/line_length = 1
 	dat += "<table style='width:100%' align='center'><tr>"

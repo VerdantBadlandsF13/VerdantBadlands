@@ -38,6 +38,7 @@
 	spread = 2
 	extra_damage = 4
 	condition_mul = 3
+	can_jam = FALSE
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe
@@ -58,7 +59,7 @@
 	autofire_shot_delay = 1.75
 	spread = 15
 	extra_damage = -6
-	condition_mul = 3
+	condition_mul = 6
 	fire_sound = 'sound/weapons/Gunshot.ogg'
 
 /obj/item/gun/ballistic/automatic/autopipe/update_icon_state()

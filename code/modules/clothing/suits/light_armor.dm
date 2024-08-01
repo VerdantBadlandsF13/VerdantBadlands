@@ -56,7 +56,7 @@
 
 /obj/item/clothing/suit/armored/f13/light/duster/brahmin
 	name = "leather duster"
-	desc = "A duster made from tanned brahmin hide. It has a thick waxy surface from the processing, making it surprisingly resistant."
+	desc = "A duster made from some manner of tanned hide. It has a thick waxy surface from the processing, making it surprisingly resistant."
 	icon_state = "duster_brahmin"
 	item_state = "duster_brahmin"
 
@@ -154,7 +154,7 @@
 
 /obj/item/clothing/suit/armored/f13/light/leathercoat
 	name = "thick leather coat"
-	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
+	desc = "Reinforced leather jacket with a overcoat. Well insulated, though it creaks a lot while moving."
 	icon_state = "leather_coat_fighter"
 	item_state = "leather_coat_fighter"
 	siemens_coefficient = 0.8
@@ -232,3 +232,25 @@
 	icon_state = "gmbrowncoatplated"
 	item_state = "gmbrowncoatplated"
 	armor = list("tier" = 6, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+// DFS
+// Single armour type for majority of the faction.
+// The 'security overcoat', the one directly below, is intended for the 'police' roles.
+/obj/item/clothing/suit/armored/f13/light/dfs
+	name = "security overcoat"
+	desc = "An old armour vest beneath a trenchcoat, backed by additional plating. The standard protection of Dry Field Security members."
+	icon = 'icons/fallout/clothing/bl_dfs.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/bl_dfs.dmi'
+	icon_state = "dfs_sec_duster"
+	item_state = "dfs_sec_duster"
+	body_parts_covered = CHEST|LEGS|ARMS
+	armor = list("tier" = 4, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+
+/obj/item/clothing/suit/armored/f13/light/dfs/command
+	name = "security vest"
+	desc = "An old armour vest and radio combination. This one has additional kevlar woven into it."
+	icon_state = "dfs_command_vest"
+	item_state = "dfs_command_vest"
+	body_parts_covered = CHEST|GROIN
+	armor = list("tier" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
+

@@ -279,6 +279,9 @@
 	spread = 15
 	recoil = 0.5
 
+/obj/item/gun/ballistic/automatic/smg/tommygun/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 //P90				Keywords: 10mm, Automatic, 50 rounds. Special modifiers: damage +1
 /obj/item/gun/ballistic/automatic/smg/p90
 	name = "\improper FN P90c"
@@ -323,6 +326,9 @@
 	can_suppress = FALSE
 	can_unsuppress = FALSE
 	fire_sound = 'sound/weapons/Gunshot_silenced.ogg'
+
+/obj/item/gun/ballistic/automatic/smg/mp5/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 ////////////////////
 //SEMI-AUTO RIFLES//
@@ -390,7 +396,7 @@
 
 /obj/item/gun/ballistic/automatic/marksman/sniper
 	name = "\improper DKS 501"
-	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert."
+	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks."
 	icon_prefix = "sniperrifle"
 	icon_state = "sniper_rifle"
 	item_state = "sniper_rifle"
@@ -407,6 +413,9 @@
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	extra_penetration = 0.25
 	extra_damage = 10
+
+/obj/item/gun/ballistic/automatic/marksman/sniper/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 //////////////////
 //ASSAULT RIFLES//
@@ -438,6 +447,9 @@
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 	extra_damage = -3
 	extra_penetration = 0.05
+
+/obj/item/gun/ballistic/automatic/assault_rifle/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 /obj/item/gun/ballistic/automatic/type93
 	name = "\improper Type 93 assault rifle"
@@ -500,6 +512,9 @@
 	recoil = 0.25
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
+
+/obj/item/gun/ballistic/automatic/fnfal/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
 
 //H&K G11				Keywords: 4.73mm, Automatic, 50 round magazine
 /obj/item/gun/ballistic/automatic/g11

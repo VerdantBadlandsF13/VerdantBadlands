@@ -86,6 +86,26 @@
 	. += "[get_ammo(0,0)] of those are live rounds."
 
 ///////////////////
+// .38 SPECIAL	 //
+///////////////////
+
+/obj/item/gun/ballistic/revolver/revolver38
+	name = "\improper Colt Cobra"
+	desc = "A customized Colt Cobra revolver chambered for .38 special."
+	weapon_weight = WEAPON_LIGHT
+	w_class = WEIGHT_CLASS_TINY
+	item_state = "detective"
+	icon_state = "detective"
+	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	fire_delay = 2
+	spread = 1
+	fire_sound = 'sound/f13weapons/9mm.ogg'
+	extra_damage = 4
+
+/obj/item/gun/ballistic/revolver/revolver38/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only.
+
+///////////////////
 // .45 ACP REVOLVERS //
 ///////////////////
 

@@ -63,8 +63,12 @@
 	var/zones_disabled
 	///These are armor values that protect the wearer, taken from the clothing's armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/armor_list = list()
-	///These are armor values that protect the clothing, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
+	///These are armor values that protect from odd damage, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
 	var/list/durability_list = list()
+	///These are armor values that protect from damage rarely encountered, taken from its armor datum. List updates on examine because it's currently only used to print armor ratings to chat in Topic().
+	var/list/special_durability_list = list()
+	///These are areas that the clothing actually covers, so it can be shown in the print out.
+	var/list/protection_list = list()
 
 	var/armor_durability = 100
 	var/repair_kit = /obj/item/repair_kit/sewingkit
@@ -314,24 +318,34 @@
 		armor_list += list("LASER" = armor.laser)
 	if(armor.energy)
 		armor_list += list("ENERGY" = armor.energy)
-	if(armor.bio)
-		armor_list += list("TOXIN" = armor.bio)
-	if(armor.bomb)
-		armor_list += list("EXPLOSIVE" = armor.bomb)
-	if(armor.rad)
-		armor_list += list("RADIATION" = armor.rad)
-	if(armor.magic)
-		armor_list += list("MAGIC" = armor.magic)
 
 	if(LAZYLEN(durability_list))
 		durability_list.Cut()
 	if(armor.fire)
 		durability_list += list("FIRE" = armor.fire)
+	if(armor.bomb)
+		durability_list += list("EXPLOSIVE" = armor.bomb)
+	if(armor.rad)
+		durability_list += list("RADIATION" = armor.rad)
+	if(armor.wound)
+		durability_list += list("WOUND" = armor.wound)
+
+	if(LAZYLEN(special_durability_list))
+		special_durability_list.Cut()
 	if(armor.acid)
-		durability_list += list("ACID" = armor.acid)
+		special_durability_list += list("ACID" = armor.acid)
+	if(armor.bio)
+		special_durability_list += list("TOXIN" = armor.bio)
+	if(armor.magic)
+		special_durability_list += list("MAGIC" = armor.magic)
+
+	if(LAZYLEN(protection_list))
+		protection_list.Cut()
+	if(body_parts_covered)
+		protection_list += list("zone" = body_parts_covered)
 
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
-		. += "<span class='notice'>It has a <a href='?src=[REF(src)];list_armor=1'>tag</a> listing its protection classes.</span>"
+		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"
 	if(salvage_tool_behavior && LAZYLEN(salvage_loot))
 		. += "<span class='notice'>It can be recycled for materials using [salvage_tool_behavior].</span>"
 
@@ -339,17 +353,36 @@
 	. = ..()
 
 	if(href_list["list_armor"])
-		var/list/readout = list("<span class='notice'><u><b>PROTECTION CLASSES (I-X)</u></b>")
+		var/list/readout = list("<span class='notice'><u><b>PROTECTION</u></b>")
 		if(LAZYLEN(armor_list))
-			readout += "\n<b>ARMOR</b>"
+			readout += "\n<b>GENERAL ARMOR</b>"
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
+
+			readout += "\n<b>- - - - - -</b>"
+
 		if(LAZYLEN(durability_list))
-			readout += "\n<b>DURABILITY</b>"
+			readout += "\n<b>SPECIAL ARMOR</b>"
 			for(var/dam_type in durability_list)
 				var/durability_amount = durability_list[dam_type]
-				readout += "\n[dam_type] [durability_amount]" //e.g. ACID 20
+				readout += "\n[dam_type] [durability_amount]" //e.g. EXPLOSIVE 20
+
+			readout += "\n<b>- - - - - -</b>"
+
+		if(LAZYLEN(special_durability_list))
+			readout += "\n<b>UNIQUE ARMOR</b>"
+			for(var/dam_type in special_durability_list)
+				var/special_durability_amount = special_durability_list[dam_type]
+				readout += "\n[dam_type] [special_durability_amount]" //e.g. ACID 20
+
+			readout += "\n<b>- - - - - -</b>"
+
+		if(LAZYLEN(protection_list))
+			readout += "\n<b>PROTECTED LOCATIONS</b>"
+			for(body_parts_covered in protection_list)
+				readout += "\n[parse_zone_extended(protection_list)]" //e.g. THORAX
+
 		readout += "</span>"
 
 		to_chat(usr, "[readout.Join()]")

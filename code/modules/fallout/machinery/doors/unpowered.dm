@@ -306,10 +306,64 @@
 
 // ------------------------------------
 // Badlands
-// Tavern
+// Tavern - Hilltop
 
 /obj/machinery/door/unpowered/securedoor/tavern
 	name = "tavern door"
 	max_integrity = 1250
 	obj_integrity = 1250
 	req_access_txt = "137"
+
+/obj/machinery/door/unpowered/securedoor/twn_exterior_door
+	name = "heavy secure door"
+	req_access_txt = "136"
+	icon_state = "secure_steel"
+
+/obj/machinery/door/unpowered/securedoor/twn_exterior_door/update_icon()
+	if(density)
+		icon_state = "secure_steel"
+	else
+		icon_state = "secure_steel_open"
+
+/obj/machinery/door/unpowered/securedoor/twn_exterior_door/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen1.ogg',40,1)
+			flick("secure_steel_opening", src)
+		if("closing")
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose1.ogg',40,1)
+			flick("secure_steel_closing", src)
+
+/obj/machinery/door/unpowered/securedoor/twn_door
+	name = "secure door"
+	req_access_txt = "136"
+
+/obj/machinery/door/unpowered/securedoor/twn_private
+	name = "barred door"
+	max_integrity = 1250
+	obj_integrity = 1250
+	req_access_txt = "156"
+
+/obj/machinery/door/unpowered/celldoor/twn_cell
+	name = "cell door"
+	req_access_txt = "136"
+
+/obj/machinery/door/unpowered/securedoor/twn_command
+	name = "secure door"
+	req_access_txt = "155"
+	icon_state = "metal"
+
+/obj/machinery/door/unpowered/securedoor/twn_command/update_icon()
+	if(density)
+		icon_state = "metal"
+	else
+		icon_state = "metalopen"
+
+/obj/machinery/door/unpowered/securedoor/twn_command/do_animate(animation)
+	switch(animation)
+		if("opening")
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldooropen2.ogg',40,1)
+			flick("metalopening", src)
+		if("closing")
+			playsound(src,'modular_badlands/code/modules/rp_misc/sound/doors_and_containers/metaldoorclose2.ogg',40,1)
+			flick("metalclosing", src)

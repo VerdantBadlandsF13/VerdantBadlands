@@ -717,7 +717,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 //PITCHFORKS
 
 /obj/item/pitchfork
-	icon_state = "pitchfork0"
+	icon_state = "pitchfork_wasteland"
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "pitchfork"
@@ -740,7 +740,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/pitchfork/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=20, force_wielded=30, icon_wielded="pitchfork1")
+	AddComponent(/datum/component/two_handed, force_unwielded=20, force_wielded=30, icon_wielded="pitchfork_wasteland")
 	AddElement(/datum/element/sword_point)
 
 /// triggered on wield of two handed item

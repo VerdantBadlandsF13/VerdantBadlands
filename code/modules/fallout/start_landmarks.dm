@@ -13,6 +13,17 @@
 	name = "Tavernkeep"
 	icon_state = "Bartender"
 
+/obj/effect/landmark/start/f13/hilltop_leadership
+	name = "Hilltop Leadership"
+	icon_state = "town_leadership"
+
+/obj/effect/landmark/start/f13/hilltop_lookout
+	name = "Hilltop Lookout"
+	icon_state = "town_lookout"
+
+/obj/effect/landmark/start/f13/hilltop_settler
+	name = "Hilltop Inhabitant"
+	icon_state = "town_settler"
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
@@ -21,6 +32,10 @@
 
 /obj/effect/landmark/start/f13/secchief
 	name = "Vault-Tec Security Chief"
+	icon_state = "Overseer"
+
+/obj/effect/landmark/start/f13/engchief
+	name = "Vault-Tec Engineering Chief"
 	icon_state = "Overseer"
 
 /obj/effect/landmark/start/f13/vaultdoctor

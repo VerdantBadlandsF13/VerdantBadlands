@@ -1756,7 +1756,7 @@
 		M.setToxLoss(35, 0)
 	for(var/datum/reagent/R in M.reagents.addiction_list)
 		M.reagents.addiction_list.Remove(R)
-		to_chat(M, "<span class='notice'>The thought of [R.name] makes you sick. was it worth it to begin with?</span>")
+		to_chat(M, "<span class='notice'>The thought of [R.name] makes you sick. Was it worth it to begin with?</span>")
 	M.confused = max(M.confused, 4)
 	if(ishuman(M) && prob(15))
 		var/mob/living/carbon/human/H = M

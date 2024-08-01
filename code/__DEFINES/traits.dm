@@ -290,7 +290,7 @@
 #define TRAIT_GUNSMITH_ONE      "gunsmith_one" //crafts poor guns
 #define TRAIT_GUNSMITH_TWO      "gunsmith_two" //crafts mid level guns
 #define TRAIT_GUNSMITH_THREE    "gunsmith_three" //crafts weapon parts
-#define TRAIT_GUNSMITH_FOUR     "gunsmith_four" //currently unused
+#define TRAIT_GUNSMITH_FOUR     "gunsmith_four" //Upgrading the lathes.
 
 //non-mob traits
 #define TRAIT_PARALYSIS				"paralysis" //Used for limb-based paralysis, where replacing the limb will fix it

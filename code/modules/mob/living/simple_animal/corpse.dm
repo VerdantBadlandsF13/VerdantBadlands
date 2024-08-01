@@ -142,12 +142,25 @@
 	facial_hair_style = "Long Beard"
 	skin_tone = "caucasian1"
 
+/obj/effect/mob_spawn/human/corpse/witch
+	name = "Witch Corpse"
+	outfit = /datum/outfit/wizardcorpse_other
+	hair_style = "Bedhead (Long)"
+	skin_tone = "albino"
+
 /datum/outfit/wizardcorpse
 	name = "Space Wizard Corpse"
 	uniform = /obj/item/clothing/under/color/lightpurple
 	suit = /obj/item/clothing/suit/wizrobe
 	shoes = /obj/item/clothing/shoes/sandal/magic
 	head = /obj/item/clothing/head/wizard
+
+/datum/outfit/wizardcorpse_other
+	name = "Witch Corpse"
+	uniform = /obj/item/clothing/under/f13/erpdress
+	suit = /obj/item/clothing/suit/wizrobe/black
+	shoes = /obj/item/clothing/shoes/f13/fancy
+	head = /obj/item/clothing/head/wizard/black
 
 
 /obj/effect/mob_spawn/human/corpse/nanotrasensoldier

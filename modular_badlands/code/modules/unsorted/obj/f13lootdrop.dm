@@ -44,6 +44,7 @@
 	loot = list(
 		/obj/item/gun/ballistic/automatic/pistol/type17,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
+		/obj/item/gun/ballistic/revolver/revolver38,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil,
 		/obj/item/gun/ballistic/revolver/revolver45,
 		/obj/item/gun/ballistic/automatic/pistol/m1911,
@@ -84,6 +85,7 @@
 		/obj/item/gun/ballistic/rifle/mosin,
 		/obj/item/gun/ballistic/automatic/pistol/type17,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
+		/obj/item/gun/ballistic/revolver/revolver38,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil,
 		/obj/item/gun/ballistic/revolver/revolver45,
 		/obj/item/gun/ballistic/automatic/pistol/m1911,

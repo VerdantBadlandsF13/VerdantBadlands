@@ -38,12 +38,24 @@
 				to_chat(user, "<span class='notice'>You feed \the [src] with schematics from 'Guns and Bullets, Part 4'. You'll still need to provide it with some high-quality metal parts.</span>")
 				constage = 1
 				upgrade_step = 1
+				categories = list(
+							"Tools",
+							"Electronics",
+							"Construction",
+							)
 				qdel(O)
 		if(constage == 1)
 			if(istype(O, /obj/item/crafting/fuse))
 				to_chat(user, "<span class='notice'>You upgrade \the [src] with a new fuse. You'll still need to install a makeshift reloader to finish the process.</span>")
 				constage = 2
 				upgrade_step = 2
+				categories = list(
+							"Tools",
+							"Electronics",
+							"Construction",
+							"Misc",
+							"Dinnerware",
+							)
 				qdel(O)
 		if(constage == 2)
 			if(istype(O, /obj/item/crafting/reloader))

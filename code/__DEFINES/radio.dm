@@ -57,6 +57,10 @@
 #define RADIO_KEY_DFS "d"
 #define RADIO_TOKEN_DFS ":d"
 
+#define RADIO_CHANNEL_TOWN "TWN"
+#define RADIO_KEY_TOWN "h"
+#define RADIO_TOKEN_TOWN ":h"
+
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"
 
@@ -77,6 +81,7 @@
 #define FREQ_VAULT 1361 //Vault
 #define FREQ_GMB 1363 //GMB
 #define FREQ_DFS 1365 //DFS
+#define FREQ_TWN 1367 //HILLTOP
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

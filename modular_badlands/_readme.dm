@@ -11,3 +11,6 @@ You've plenty of other codebases to pick from. Use those instead. - Carl
 #warn Said libraries are for consistent gameplay.
 #warn This is alongside certain mechanics, which need them to function as intended.
 #endif
+/*
+Need to find a clearer solution than the above. - Carll
+*/

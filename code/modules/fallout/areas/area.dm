@@ -255,6 +255,7 @@
 	icon_state = "citycaves"
 	environment = 8
 	grow_chance = 25
+	outdoors = TRUE
 
 /area/f13/chapel
 	name = "Chapel"
@@ -374,6 +375,7 @@
 	ambientmusic = list('sound/f13ambience/cave.ogg')
 	environment = 8
 	grow_chance = 75
+	outdoors = TRUE
 
 /area/f13/subway
 	name = "Subway"

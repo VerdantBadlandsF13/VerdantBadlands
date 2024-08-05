@@ -175,7 +175,7 @@
 		if(!istype(next) || !istype(current))
 			return	//not happening.
 		if(!turf_check(next, current))
-			to_chat(user, "Your \the [AM] can not go onto [next]!")
+			to_chat(user, "Your [AM.name] can not go onto [next]!")
 			return
 		if(!Process_Spacemove(direction) || !isturf(AM.loc))
 			return

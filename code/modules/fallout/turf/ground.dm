@@ -174,7 +174,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -251,7 +251,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -432,7 +432,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 

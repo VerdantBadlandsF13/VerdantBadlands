@@ -17,7 +17,6 @@
 
 /turf/closed/Initialize(mapload)
 	. = ..()
-	update_air_ref()
 
 /turf/open
 	//used for spacewind
@@ -38,15 +37,13 @@
 		air = new(2500,src)
 
 		air.copy_from_turf(src)
-		update_air_ref()
+		update_air_ref(planetary_atmos ? 1 : 2)
 	. = ..()
 
 /turf/open/Destroy()
 	if(active_hotspot)
 		QDEL_NULL(active_hotspot)
 	return ..()
-
-/turf/proc/update_air_ref()
 
 /////////////////GAS MIXTURE PROCS///////////////////
 

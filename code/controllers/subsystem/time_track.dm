@@ -82,7 +82,6 @@ SUBSYSTEM_DEF(time_track)
 			MAPTICK_LAST_INTERNAL_TICK_USAGE,
 			length(SStimer.timer_id_dict),
 			SSair.cost_turfs,
-			SSair.turf_process_time(),
 			SSair.cost_equalize,
 			SSair.cost_post_process,
 			SSair.cost_groups,

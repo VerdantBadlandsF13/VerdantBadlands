@@ -14,20 +14,14 @@ What are the archived variables for?
 	var/list/analyzer_results //used for analyzer feedback - not initialized until its used
 	var/_extools_pointer_gasmixture // Contains the index in the gas vector for this gas mixture in rust land. Don't. Touch. This. Var.
 
-GLOBAL_LIST_INIT(auxtools_atmos_initialized,FALSE)
-
-// So that this auxmos proc shows up properly in profiling.
-/datum/gas_mixture/proc/gasmixture_register_wrapper()
-	__gasmixture_register()
+GLOBAL_VAR_INIT(auxtools_atmos_initialized,FALSE)
 
 /datum/gas_mixture/New(volume)
 	if (!isnull(volume))
 		initial_volume = volume
-	if(!GLOB.auxtools_atmos_initialized)
-		AUXTOOLS_CHECK(AUXMOS)
-		if(auxtools_atmos_init(GLOB.gas_data))
-			GLOB.auxtools_atmos_initialized = TRUE
-	gasmixture_register_wrapper()
+	if(!GLOB.auxtools_atmos_initialized && auxtools_atmos_init(GLOB.gas_data))
+		GLOB.auxtools_atmos_initialized = TRUE
+	__gasmixture_register()
 	reaction_results = new
 
 /datum/gas_mixture/vv_edit_var(var_name, var_value)

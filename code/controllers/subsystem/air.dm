@@ -71,8 +71,8 @@ SUBSYSTEM_DEF(air)
 	var/excited_group_pressure_goal = 1
 	// Target for excited_group_pressure_goal; can go below this, if it determines the thread is taking too long.
 	var/excited_group_pressure_goal_target = 1
-	// If this is set to 0, monstermos won't process planet atmos
-	var/planet_equalize_enabled = 0
+	/// Planet airs will share this ratio with the planet turfs per tick
+	var/planet_share_ratio = 0.25
 
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"

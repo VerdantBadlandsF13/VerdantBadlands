@@ -512,7 +512,7 @@
 	user.last_lewd_datum = src
 	if(user.cleartimer)
 		deltimer(user.cleartimer)
-	user.cleartimer = addtimer(CALLBACK(user, /mob/living/proc/clear_lewd_datum), 300, TIMER_STOPPABLE)
+	user.cleartimer = addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living, clear_lewd_datum)), 300, TIMER_STOPPABLE)
 	return ..()
 
 /datum/interaction/lewd/get_action_link_for(mob/living/user, mob/living/target)

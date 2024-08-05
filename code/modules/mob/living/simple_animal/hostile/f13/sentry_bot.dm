@@ -196,7 +196,7 @@ Otherwise, it's automated.
 	F.prep_missile()
 	F.missile_cooldown = TRUE
 	playsound(src, 'sound/f13npc/sentry/ml_post_launch.ogg', 75, FALSE)
-	addtimer(CALLBACK(F, /mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown), 150)
+	addtimer(CALLBACK(F, TYPE_PROC_REF(/mob/living/simple_animal/hostile/sentrybot, missile_afterfire_cooldown)), 150)
 
 /mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown()
 	missile_cooldown = FALSE

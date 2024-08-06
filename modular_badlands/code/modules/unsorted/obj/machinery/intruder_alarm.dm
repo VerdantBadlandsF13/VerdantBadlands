@@ -276,7 +276,7 @@ Procs below here.
 		var/mob/living/silicon/SILICON = i
 		if(SILICON.triggerAlarm("Intruder", src, cameras, trigger))
 			//Cancel silicon alert after 1 minute
-			addtimer(CALLBACK(SILICON, /mob/living/silicon.proc/cancelAlarm,"Intruder",src,trigger), 600)
+			addtimer(CALLBACK(SILICON, TYPE_PROC_REF(/mob/living/silicon, cancelAlarm),"Intruder",src,trigger), 600)
 
 	START_PROCESSING(SSobj, src)
 

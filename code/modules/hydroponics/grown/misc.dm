@@ -230,7 +230,7 @@
 /obj/item/reagent_containers/food/snacks/grown/cherry_bomb/proc/prime(mob/living/lanced_by)
 	icon_state = "cherry_bomb_lit"
 	playsound(src, 'sound/effects/fuse.ogg', seed.potency, 0)
-	addtimer(CALLBACK(src, /obj/item/reagent_containers/food/snacks/grown/cherry_bomb/proc/detonate), rand(50, 100))
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/reagent_containers/food/snacks/grown/cherry_bomb, detonate)), rand(50, 100))
 
 /obj/item/reagent_containers/food/snacks/grown/cherry_bomb/proc/detonate()
 	reagents.chem_temp = 1000 //Sets off the black powder
@@ -334,7 +334,7 @@
 			fusedactive = TRUE
 			defused = FALSE
 			playsound(src, 'sound/effects/fuse.ogg', 100, 0)
-			addtimer(CALLBACK(src, .proc/prime), 5 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(prime)), 5 SECONDS)
 			icon_state = "coconut_grenade_active"
 			desc = "RUN!"
 			if(!seed.get_gene(/datum/plant_gene/trait/glow))
@@ -449,7 +449,7 @@
 			to_chat(user, "<span class='notice'>You swallow a gulp of [src].</span>")
 		var/fraction = min(5/reagents.total_volume, 1)
 		reagents.reaction(M, INGEST, fraction)
-		addtimer(CALLBACK(reagents, /datum/reagents.proc/trans_to, M, 5), 5)
+		addtimer(CALLBACK(reagents, TYPE_PROC_REF(/datum/reagents, trans_to), M, 5), 5)
 		playsound(M.loc,"modular_badlands/code/modules/rp_misc/sound/food/sip[rand(1,5)].ogg", rand(10,50), 1)
 
 /obj/item/reagent_containers/food/snacks/grown/coconut/afterattack(obj/target, mob/user, proximity)

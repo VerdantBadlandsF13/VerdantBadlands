@@ -122,8 +122,8 @@ This WILL wipe entire groups of players, if not the server. It's intended to be 
 /mob/living/simple_animal/hostile/sentrybot/death()
 	do_sparks(3, TRUE, src)
 	for(var/i in 1 to 3)
-		addtimer(CALLBACK(src, .proc/do_death_beep), i * 1 SECONDS)
-	addtimer(CALLBACK(src, .proc/self_destruct), 4 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(do_death_beep)), i * 1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(self_destruct)), 4 SECONDS)
 	return ..()
 
 /mob/living/simple_animal/hostile/sentrybot/Aggro()
@@ -196,7 +196,7 @@ Otherwise, it's automated.
 	F.prep_missile()
 	F.missile_cooldown = TRUE
 	playsound(src, 'sound/f13npc/sentry/ml_post_launch.ogg', 75, FALSE)
-	addtimer(CALLBACK(F, /mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown), 150)
+	addtimer(CALLBACK(F, TYPE_PROC_REF(/mob/living/simple_animal/hostile/sentrybot, missile_afterfire_cooldown)), 150)
 
 /mob/living/simple_animal/hostile/sentrybot/proc/missile_afterfire_cooldown()
 	missile_cooldown = FALSE

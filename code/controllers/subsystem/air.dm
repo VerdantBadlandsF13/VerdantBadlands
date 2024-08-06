@@ -71,14 +71,14 @@ SUBSYSTEM_DEF(air)
 	var/excited_group_pressure_goal = 1
 	// Target for excited_group_pressure_goal; can go below this, if it determines the thread is taking too long.
 	var/excited_group_pressure_goal_target = 1
-	// If this is set to 0, monstermos won't process planet atmos
-	var/planet_equalize_enabled = 0
+	/// Planet airs will share this ratio with the planet turfs per tick
+	var/planet_share_ratio = 0.25
 
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"
 	msg += "HP:[round(cost_highpressure,1)]|"
 	msg += "HS:[round(cost_hotspots,1)]|"
-	msg += "HE:[round(heat_process_time(),1)]|"
+	//msg += "HE:[round(heat_process_time(),1)]|"
 	msg += "SC:[round(cost_superconductivity,1)]|"
 	msg += "PN:[round(cost_pipenets,1)]|"
 	msg += "AM:[round(cost_atmos_machinery,1)]"
@@ -114,11 +114,9 @@ SUBSYSTEM_DEF(air)
 
 /datum/controller/subsystem/air/proc/extools_update_ssair()
 
-/datum/controller/subsystem/air/proc/auxtools_update_reactions()
-
 /datum/controller/subsystem/air/proc/add_reaction(datum/gas_reaction/r)
 	gas_reactions += r
-	sortTim(gas_reactions, /proc/cmp_gas_reaction)
+	sortTim(gas_reactions, GLOBAL_PROC_REF(cmp_gas_reaction))
 	auxtools_update_reactions()
 
 /proc/reset_all_air()
@@ -129,9 +127,6 @@ SUBSYSTEM_DEF(air)
 		CHECK_TICK
 	message_admins("Air reset done.")
 	SSair.can_fire = 1
-
-/datum/controller/subsystem/air/proc/thread_running()
-	return FALSE
 
 /proc/fix_corrupted_atmos()
 
@@ -443,19 +438,11 @@ SUBSYSTEM_DEF(air)
 	if(finish_turf_processing_auxtools(TICK_REMAINING_MS) || thread_running())
 		pause()
 
+/*
 /datum/controller/subsystem/air/proc/post_process_turfs(resumed = 0)
 	if(post_process_turfs_auxtools(resumed,TICK_REMAINING_MS))
 		pause()
-
-/datum/controller/subsystem/air/proc/finish_turf_processing_auxtools()
-/datum/controller/subsystem/air/proc/process_turfs_auxtools()
-/datum/controller/subsystem/air/proc/post_process_turfs_auxtools()
-/datum/controller/subsystem/air/proc/process_turf_equalize_auxtools()
-/datum/controller/subsystem/air/proc/process_excited_groups_auxtools()
-/datum/controller/subsystem/air/proc/get_amt_gas_mixes()
-/datum/controller/subsystem/air/proc/get_max_gas_mixes()
-/datum/controller/subsystem/air/proc/turf_process_time()
-/datum/controller/subsystem/air/proc/heat_process_time()
+*/
 
 /datum/controller/subsystem/air/StartLoadingMap()
 	map_loading = TRUE

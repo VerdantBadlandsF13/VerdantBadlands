@@ -26,7 +26,7 @@ SUBSYSTEM_DEF(monster_wave)
 			to_chat(M, "<span class='notice'>You feel the ground rumble subtly beneath your feet.</font></span>")
 		return // 50/50 chance for it to either fire or not fire
 	successful_firing++
-	addtimer(CALLBACK(src, .proc/spawn_monsterwave), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(spawn_monsterwave)), 10 SECONDS)
 	for(var/M in GLOB.player_list)
 		shake_camera(M, 3, 2)
 		to_chat(M, "<span class='notice'>You feel the ground tremor violently beneath your feet!</font></span>")

@@ -66,7 +66,7 @@
 	covered = TRUE
 	qdel(GetComponent(/datum/component/spawner/ranged))
 	add_overlay(covering_icon_state) // add_overlay handles text as icon states
-	addtimer(CALLBACK(src, /obj/structure/nest/proc/collapse), 2 MINUTES)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/structure/nest, collapse)), 2 MINUTES)
 	return TRUE
 
 /obj/structure/nest/proc/collapse()

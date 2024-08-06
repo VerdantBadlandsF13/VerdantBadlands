@@ -1199,7 +1199,7 @@
 /area/f13/mountain_area)
 "iT" = (
 /turf/closed/indestructible/rock,
-/area/f13/underground/cave)
+/area/f13/caves)
 "jb" = (
 /obj/structure/wreck/trash/three_barrels,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
@@ -4878,7 +4878,7 @@
 "IC" = (
 /obj/structure/fans/tiny/invisible,
 /turf/closed/indestructible/rock,
-/area/f13/underground/cave)
+/area/f13/caves)
 "IE" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -6768,7 +6768,7 @@
 /area/f13/enclave)
 "Yc" = (
 /turf/closed/indestructible/rock/snow,
-/area/f13/underground/cave)
+/area/f13/caves)
 "Yg" = (
 /obj/machinery/light/small{
 	brightness = 3;

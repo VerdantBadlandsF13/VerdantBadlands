@@ -72,12 +72,10 @@
 		to_chat(user, "<span class='warning'>What the... [src] is stuck to your hand!</span>")
 		ADD_TRAIT(src, TRAIT_NODROP, STICKY_NODROP)
 
-	if(user.special_i <= 3)
-		switch(rand(1,5))
-			if(3)
-				to_chat(user, "<span class='warning'>Huh? How does this thing work?</span>")
-				preprime(user, 5, FALSE)
-				return FALSE
+	if(user.special_i <= 3 && prob(20)) // 1 in 5 chance
+		to_chat(user, "<span class='warning'>Huh? How does this thing work?</span>")
+		preprime(user, 5, FALSE)
+		return FALSE
 
 /obj/item/grenade/examine(mob/user)
 	. = ..()
@@ -122,7 +120,7 @@
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	item_state = initial(item_state) + "_active"
-	addtimer(CALLBACK(src, .proc/prime), isnull(delayoverride)? det_time : delayoverride)
+	addtimer(CALLBACK(src, PROC_REF(prime)), isnull(delayoverride)? det_time : delayoverride)
 
 // for ticking sound until detonation
 /obj/item/grenade/proc/primetimer(mob/user, delayoverride, msg = TRUE, volume = 60)
@@ -138,7 +136,7 @@
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	item_state = initial(item_state) + "_active"
-	addtimer(CALLBACK(src, .proc/prime), isnull(delayoverride)? det_time : delayoverride)
+	addtimer(CALLBACK(src, PROC_REF(prime)), isnull(delayoverride)? det_time : delayoverride)
 
 // For hissing fuse sound
 /obj/item/grenade/proc/primefuse(mob/user, delayoverride, msg = TRUE, volume = 60)
@@ -155,7 +153,7 @@
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	item_state = initial(item_state) + "_active"
-	addtimer(CALLBACK(src, .proc/prime), isnull(delayoverride)? det_time : delayoverride)
+	addtimer(CALLBACK(src, PROC_REF(prime)), isnull(delayoverride)? det_time : delayoverride)
 
 
 /obj/item/grenade/proc/prime(mob/living/lanced_by)

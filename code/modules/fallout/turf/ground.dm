@@ -91,7 +91,7 @@
 
 /turf/open/indestructible/ground/outside/proc/setTurfHazard(newTurfHazard)
 	turfHazard = newTurfHazard
-	RegisterSignal(turfHazard, COMSIG_PARENT_QDELETING, .proc/clear_turfhazard)
+	RegisterSignal(turfHazard, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfhazard))
 
 /turf/open/indestructible/ground/outside/proc/clear_turfhazard()
 	UnregisterSignal(turfHazard, COMSIG_PARENT_QDELETING)
@@ -99,7 +99,7 @@
 
 /turf/open/indestructible/ground/outside/proc/setTurfMines(newTurfMines)
 	turfMines = newTurfMines
-	RegisterSignal(turfMines, COMSIG_PARENT_QDELETING, .proc/clear_turfmines)
+	RegisterSignal(turfMines, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfmines))
 
 /turf/open/indestructible/ground/outside/proc/clear_turfmines()
 	UnregisterSignal(turfMines, COMSIG_PARENT_QDELETING)
@@ -157,7 +157,7 @@
 
 /turf/open/indestructible/ground/outside/savannah/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/savannah/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -174,7 +174,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -234,7 +234,7 @@
 
 /turf/open/indestructible/ground/outside/desert/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/desert/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -251,7 +251,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -415,7 +415,7 @@
 
 /turf/open/indestructible/ground/outside/snow/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/outside/snow/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -432,7 +432,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -493,7 +493,7 @@
 
 /turf/open/indestructible/ground/inside/mountain/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/inside/mountain/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)

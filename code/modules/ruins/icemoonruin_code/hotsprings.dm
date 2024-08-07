@@ -23,7 +23,7 @@ GLOBAL_LIST_EMPTY(cursed_minds)
 	if(GLOB.cursed_minds[L.mind])
 		return
 	GLOB.cursed_minds[L.mind] = TRUE
-	RegisterSignal(L.mind, COMSIG_PARENT_QDELETING, .proc/remove_from_cursed)
+	RegisterSignal(L.mind, COMSIG_PARENT_QDELETING, PROC_REF(remove_from_cursed))
 //	L = death(L, "animal") // We don't have a wabbajack setup. Death be upon ye instead.
 	var/turf/T = find_safe_turf()
 	L.forceMove(T)

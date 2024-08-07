@@ -72,8 +72,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 'verdantbadlandsf13/auxmos'
-          ref: 'v2.3.1'
+          repository: 'Putnam3145/auxmos'
+          ref: 'v2.5.1'
           path: 'auxmos'
 
       - name: Cache cargo registry
@@ -115,7 +115,7 @@ jobs:
         run: |
           cargo build --manifest-path auxmos/Cargo.toml --target=${{env.target}} --release --verbose
           ldd auxmos/target/${{env.target}}/release/libauxmos.so
-      
+
       - name: Upload libauxmos artifact
         uses: actions/upload-artifact@v2
         with:
@@ -170,6 +170,7 @@ jobs:
           bash tools/ci/install_auxmos.sh
       - name: Compile and run tests
         run: |
+          bash tools/ci/install_node.sh
           bash tools/ci/install_byond.sh
           source $HOME/BYOND/byond/bin/byondsetup
           tools/build/build --ci -DCIBUILDING
@@ -182,7 +183,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Compile
-        run: pwsh tools/ci/build.ps1
+        run: |
+          bash tools/ci/install_node.sh
+          pwsh tools/ci/build.ps1
         env:
           DM_EXE: "C:\\byond\\bin\\dm.exe"
       - name: Create artifact

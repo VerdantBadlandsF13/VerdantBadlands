@@ -32,9 +32,9 @@
 /mob/var/last_pain_message = ""
 /mob/var/next_pain_time = 0
 
-// partname is the name of a body part
+// part is a body part
 // amount is a num from 1 to 100
-/mob/living/carbon/proc/pain(partname, amount, force, burning = 0)
+/mob/living/carbon/proc/pain(obj/item/bodypart/part, amount, force, burning = 0)
 	if(stat >= 2 || IsSleeping())
 		return
 	if(!feels_pain() || has_painkillers())
@@ -44,35 +44,35 @@
 	if(amount > 50 && prob(amount / 5) && get_active_hand())
 		flash_agony()
 		handle_lowpain()
-		to_chat(src, "<span class='danger'>The pain in your [partname] causes you to wince and drop [get_active_hand()]!</span>")
+		to_chat(src, "<span class='danger'>The pain in your [part.name] causes you to wince and drop \the [get_active_hand()]!</span>")
 		src.dropItemToGround(force=TRUE)
 	var/msg
 	if(burning)
 		switch(amount)
 			if(1 to 10)
 				flash_weak_pain()
-				msg = "<span class='danger'>Your [partname] burns.</span>"
+				msg = "<span class='danger'>Your [part.name] burns.</span>"
 			if(11 to 90)
 				flash_pain()
 				handle_lowpain()
-				msg = "<span class='danger'><font size=2>Your [partname] burns badly!</font></span>"
+				msg = "<span class='danger'><font size=2>Your [part.name] burns badly!</font></span>"
 			if(91 to 10000)
 				flash_agony()
 				handle_highpain()
-				msg = "<span class='danger'><font size=3>OH GOD! Your [partname] is on fire!</font></span>"
+				msg = "<span class='danger'><font size=3>OH GOD! Your [part.name] is on fire!</font></span>"
 	else
 		switch(amount)
 			if(1 to 10)
 				flash_weak_pain()
-				msg = "<b>Your [partname] hurts.</b>"
+				msg = "<b>Your [part.name] hurts.</b>"
 			if(11 to 90)
 				flash_pain()
 				handle_lowpain()
-				msg = "<b><font size=2>Your [partname] hurts badly.</font></b>"
+				msg = "<b><font size=2>Your [part.name] hurts badly.</font></b>"
 			if(91 to INFINITY)
 				flash_agony()
 				handle_highpain()
-				msg = "<b><font size=3>OH GOD! Your [partname] is hurting terribly!</font></b>"
+				msg = "<b><font size=3>OH GOD! Your [part.name] is hurting terribly!</font></b>"
 	if(msg && (msg != last_pain_message || prob(10)))
 		last_pain_message = msg
 		to_chat(src, msg)
@@ -109,7 +109,7 @@
 	for(var/obj/item/organ/I in internal_organs)
 		if(I.damage > 2)
 			if(prob(2))
-				custom_pain("You feel a sharp pain in your [I]", 1)
+				custom_pain("You feel a sharp pain in your [I.name]", 1)
 
 	var/toxDamageMessage = null
 	var/toxMessageProb = 1

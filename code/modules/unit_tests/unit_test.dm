@@ -92,7 +92,7 @@ GLOBAL_VAR(test_log)
 		if (initial(test_to_run.focus))
 			tests_to_run = list(test_to_run)
 			break
-	tests_to_run = sortTim(tests_to_run, /proc/cmp_unit_test_priority)
+	tests_to_run = sortTim(tests_to_run, GLOBAL_PROC_REF(cmp_unit_test_priority))
 
 	for(var/I in tests_to_run)
 		CHECK_TICK //We check tick first because the unit test we run last may be so expensive that checking tick will lock up this loop forever

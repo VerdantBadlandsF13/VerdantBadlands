@@ -123,9 +123,9 @@
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
-				if("c" || "d" || "e")
+				if("c", "d", "e")
 					modifier = 2
-				if("f" || "g" || "h")
+				if("f", "g", "h")
 					modifier = 3
 				if("i")
 					modifier = 4
@@ -143,9 +143,9 @@
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
-				if("c" || "d" || "e")
+				if("c", "d", "e")
 					modifier = 2
-				if("f" || "g" || "h")
+				if("f", "g", "h")
 					modifier = 3
 				if("i")
 					modifier = 4
@@ -164,9 +164,9 @@
 			var/modifier = 1
 			var/obj/item/organ/genital/breasts/B = target.getorganslot(ORGAN_SLOT_BREASTS)
 			switch(B.size)
-				if("c" || "d" || "e")
+				if("c", "d", "e")
 					modifier = 2
-				if("f" || "g" || "h")
+				if("f", "g", "h")
 					modifier = 3
 				if("i")
 					modifier = 4

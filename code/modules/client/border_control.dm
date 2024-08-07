@@ -121,7 +121,7 @@ GLOBAL_PROTECT(whitelistLoaded)
 		else
 			LAZYINITLIST(GLOB.whitelistedCkeys)
 
-			ADD_SORTED(GLOB.whitelistedCkeys, keyAsCkey, /proc/cmp_text_asc)
+			ADD_SORTED(GLOB.whitelistedCkeys, keyAsCkey, GLOBAL_PROC_REF(cmp_text_asc))
 
 			BC_SaveWhitelist()
 			return 1

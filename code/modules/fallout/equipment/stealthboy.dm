@@ -66,7 +66,7 @@
 	charge -= 10 * charge_use
 	playsound(target, 'sound/effects/sparks4.ogg', 20, 1)
 	START_PROCESSING(SSobj, src)
-	RegisterSignal(target, COMSIG_PROJECTILE_ON_HIT, .proc/disrupt)
+	RegisterSignal(target, COMSIG_PROJECTILE_ON_HIT, PROC_REF(disrupt))
 
 /obj/item/stealthboy/proc/Deactivate()
 	active = FALSE

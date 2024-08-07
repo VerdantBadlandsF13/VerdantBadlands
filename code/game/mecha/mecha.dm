@@ -433,7 +433,7 @@
 		for(var/mob/M in get_hearers_in_view(7,src))
 			if(M.client)
 				speech_bubble_recipients.Add(M.client)
-		INVOKE_ASYNC(GLOBAL_PROC, /proc/flick_overlay, image('icons/mob/talk.dmi', src, "machine[say_test(raw_message)]",MOB_LAYER+1), speech_bubble_recipients, 30)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), image('icons/mob/talk.dmi', src, "machine[say_test(raw_message)]",MOB_LAYER+1), speech_bubble_recipients, 30)
 
 ////////////////////////////
 ///// Action processing ////
@@ -1021,7 +1021,7 @@
 
 	if(L && L.client)
 		L.update_mouse_pointer()
-		INVOKE_ASYNC(L.client, /client/.proc/change_view, CONFIG_GET(string/default_view))
+		INVOKE_ASYNC(L.client, TYPE_PROC_REF(/client, change_view), CONFIG_GET(string/default_view))
 		zoom_mode = 0
 
 /////////////////////////

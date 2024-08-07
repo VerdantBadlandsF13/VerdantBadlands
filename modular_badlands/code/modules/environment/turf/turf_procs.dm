@@ -1,6 +1,6 @@
 /turf/open/indestructible/ground/bl/outside/grass_standard/proc/setTurfPlant(newTurfPlant)
 	turfPlant = newTurfPlant
-	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, .proc/clear_turfplant)
+	RegisterSignal(turfPlant, COMSIG_PARENT_QDELETING, PROC_REF(clear_turfplant))
 
 /turf/open/indestructible/ground/bl/outside/grass_standard/proc/clear_turfplant()
 	UnregisterSignal(turfPlant, COMSIG_PARENT_QDELETING)
@@ -17,7 +17,7 @@
 		return TRUE
 
 	//loop through neighbouring turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/bl/outside/grass_standard/T in RANGE_TURFS(3, src))
+	for(var/turf/open/indestructible/ground/bl/outside/grass_standard/T in RANGE_TURFS(1, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 

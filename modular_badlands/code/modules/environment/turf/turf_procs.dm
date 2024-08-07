@@ -24,8 +24,8 @@
 	//use weight to try to spawn grass
 	if(prob(Weight))
 
-		//If surrounded on 5+ sides, pick from lush
-		if(Weight == (5 * GRASS_WEIGHT))
+		//If surrounded on 3+ sides, pick from lush
+		if(Weight == (3 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)

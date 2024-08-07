@@ -1,0 +1,26 @@
+{
+	"map_name": "Debug",
+	"map_path": "map_files/debug",
+	"map_file": [
+		"debug.dmm"
+	],
+	"station_ruin_budget":0,
+	"space_ruin_levels":0,
+	"space_empty_levels":0,
+	"shuttles": {
+		"cargo":"cargo_pahrump",
+		"emergency": "emergency_pahrump",
+		"ferry": "ferry_fancy"
+	},
+	"traits":[
+		{
+			"Gravity": true,
+			"Baseturf": "/turf/open/indestructible/ground/inside/mountain",
+			"Up": 1,
+			"No Parallax": true,
+			"Linkage" : null,
+			"Name": "debug"
+		}
+	],
+	"minetype": "none"
+}

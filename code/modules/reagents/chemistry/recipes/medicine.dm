@@ -421,7 +421,7 @@
 	name = "Super Stimpak Fluid"
 	id = /datum/reagent/medicine/super_stimpak
 	results = list(/datum/reagent/medicine/super_stimpak = 2)
-	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 1) //1 mutfruit at 50 potency yields 6 mutfruit juice
+	required_reagents = list(/datum/reagent/blood = 2, /datum/reagent/medicine/stimpak = 1, /datum/reagent/consumable/mutjuice = 2) //1 mutfruit at 50 potency yields 6 mutfruit juice
 	OptimalTempMin 		= 65
 	OptimalTempMax		= 95
 	ExplodeTemp			= 100

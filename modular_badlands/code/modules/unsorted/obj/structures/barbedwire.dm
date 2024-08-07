@@ -68,6 +68,7 @@
 	amount = 10
 	max_amount = 10
 	attack_verb = list("hit", "bludgeoned", "whacked")
+	merge_type = /obj/item/stack/barbwire_coil
 
 //checking to see there's no wire on the turf, prevents stacking it, outside of the original object.
 /obj/item/stack/barbwire_coil/proc/check_for_wire(mob/user as mob)

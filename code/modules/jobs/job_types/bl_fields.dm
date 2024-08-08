@@ -10,7 +10,7 @@
 	forbids = "Dry Fields Security forbids: <br> \
 				- Provoking wars. You're tough, but not undefeatable. Know what battles you can and can't afford. <br> \
 				- Farming. While not forbidden by any rule or technicality, it is much more cost effective to coerce the locals into giving you what you want. <br> \
-				- Overextend. Never isolate yourself unless you're undercover. A team works better together."
+				- Overextension. Never isolate yourself unless you're undercover. A team works better together."
 
 	enforces = "Dry Fields Security expects: <br> \
 				- Strongarming. Appearing tough and responding to diplomacy with a show of force can work miracles. <br> \

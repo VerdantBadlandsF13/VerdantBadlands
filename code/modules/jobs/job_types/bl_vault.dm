@@ -357,6 +357,9 @@ Vault Dweller
 	department_head = list("Overseer")
 	total_positions = -1
 	spawn_positions = -1
+	description = "You're one of many within this old-world vault. Bankrolled by your ancestors ages ago, it's here that their lineage continues. \
+	By all accounts, it's a well lit, comfy hole in the earth, with a well established compound on the surface for trading. \
+	Try to listen to the Overseer, lest you wish to fall on their bad side."
 	exp_requirements = 60
 	exp_type = EXP_TYPE_FALLOUT
 
@@ -377,7 +380,8 @@ Vault Dweller
 	spawn_positions = 1
 	description = "You are a Robotic unit assigned to Vault Fifty-Eight. \
 	As a Robot for Vault-Tec, you're bound to the orders of the assigned Overseer, Security and Dwellers, in that order for priority. \
-	Should the Overseer or Security declare something, you must follow it."
+	Should the Overseer or Security declare something, you must follow it. You may ignore the general population otherwise, \
+	so long as it doesn't conflict with your laws."
 	exp_requirements = 60
 
 /datum/job/vault/f13borg/equip(mob/living/carbon/human/H, visualsOnly = FALSE, announce = TRUE, latejoin = FALSE, datum/outfit/outfit_override = null, client/preference_source)

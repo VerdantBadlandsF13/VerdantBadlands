@@ -62,15 +62,25 @@
 	id = /obj/item/card/id/hilltop_keys
 	backpack = /obj/item/storage/backpack/trekker
 	satchel = /obj/item/storage/backpack/satchel/trekker
-	neck = /obj/item/storage/belt/holster/legholster/dfs
 	ears = /obj/item/radio/headset/headset_town
-	uniform = /obj/item/clothing/under/f13/dfs
-	shoes = /obj/item/clothing/shoes/f13/military
 	r_pocket = /obj/item/flashlight/flare
 // Spare radio for general communication.
 	backpack_contents = list(
 		/obj/item/radio,
 		)
+
+/datum/outfit/job/town/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = pick(
+		/obj/item/clothing/under/f13/settler, \
+		/obj/item/clothing/under/f13/lumberjack, \
+		/obj/item/clothing/under/f13/roving)
+	shoes = pick(
+		/obj/item/clothing/shoes/f13/rag, \
+		/obj/item/clothing/shoes/f13/military/explorer, \
+		/obj/item/clothing/shoes/f13/tan, \
+		/obj/item/clothing/shoes/f13/brownie, \
+		/obj/item/clothing/shoes/f13/fancy)
 
 /datum/job/town/f13townleader
 	title = "Hilltop Leadership"
@@ -109,6 +119,9 @@
 	As an Evangelist, you came here on a most devout mission: Teach the local hicks about the love of Christ. \
 	What ended up happening was your swift ascension to a position of leadership in the town thanks to your moderate level of education and accrued goodwill from the locals. \
 	Unlike most other influential men here, you genuinely wish only the best for the settlers."
+	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
+	suit = /obj/item/clothing/suit/armored/riot/chaplain/witchhunter
+	uniform = /obj/item/clothing/under/f13/chaplain
 	backpack_contents = list(
 		/obj/item/book/granter/trait/holy =1,
 		/obj/item/storage/book/bible =1,
@@ -242,24 +255,70 @@
 	You are without a doubt the main economic drive of the town. \
 	All thanks to outsider traders who often take a detour to purchase your brew with the hopes of reselling it all over Battleborough and beyond. \
 	No refunds."
+	backpack_contents =  list(/obj/item/cultivator/rake=1,
+							/obj/item/shovel/spade=1,
+		/obj/item/reagent_containers/glass/bucket = 1,
+		/obj/item/storage/bag/plants/portaseeder = 1)
+
+/datum/outfit/job/f13settler/moonshiner/pre_equip(mob/living/carbon/human/H)
+	..()
+	suit = pick(
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
+		/obj/item/clothing/suit/f13/slavelabor,
+		/obj/item/clothing/suit/f13/vest,
+		/obj/item/clothing/suit/f13/cowboygvest,
+		/obj/item/clothing/suit/f13/westender,
+		/obj/item/clothing/suit/overalls)
+	suit_store = pick(
+		/obj/item/gun/ballistic/revolver/single_shotgun,
+		/obj/item/gun/ballistic/revolver/piperifle)
 
 /datum/outfit/loadout/f13settler/sidewalker
 	name = "Sidewalker"
 	desc = "While a resident of Hilltop, you don't actually have a house here on accounts of being either too poor or too new for one. \
 	This sorry state of events leaves you to take the most disgraceful jobs available around the place or go prospect the many ruins outside of town."
+	shoes = /obj/item/clothing/shoes/f13/rag
+	backpack_contents =  list(/obj/item/cultivator/rake=1,
+							/obj/item/shovel/spade=1)
+
+/datum/outfit/job/f13settler/sidewalker/pre_equip(mob/living/carbon/human/H)
+	..()
+	suit = pick(
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
+		/obj/item/clothing/suit/f13/slavelabor,
+		/obj/item/clothing/suit/f13/vest,
+		/obj/item/clothing/suit/f13/cowboygvest,
+		/obj/item/clothing/suit/f13/westender,
+		/obj/item/clothing/suit/overalls)
+	suit_store = pick(
+		/obj/item/gun/ballistic/revolver/single_shotgun,
+		/obj/item/gun/ballistic/revolver/piperifle)
 
 /datum/outfit/loadout/f13settler/barber
 	name = "Barber"
 	desc = "You learned to cut hair and do it with unequalled precision. \
 	Sadly due to circumstances only known to you, you had to expand your business practice to surgery and medicine in order to make end's meet. \
 	You likely learned to perform surgery by practising on the desperate."
+	gloves = /obj/item/clothing/gloves/color/latex
+	neck = /obj/item/clothing/neck/stethoscope
+	belt = /obj/item/storage/belt/medical
+	backpack_contents =  list(/obj/item/smelling_salts=1,
+							/obj/item/reagent_containers/glass/bottle/epinephrine=2,
+							/obj/item/storage/firstaid/ancient=1,
+							/obj/item/razor=1)
 
 /datum/outfit/loadout/f13settler/handyman
 	name = "Handyman"
 	desc = "Formally you are equal in status to the Homeowners. The only difference is that you are called to fix just about anything and everything in town. \
 	Walls, floors, sweeping the streets, squeaky bed, unhinged door. If something is broken, you are ready to get paid to fix it."
+	l_hand = /obj/item/storage/toolbox/old
+	backpack_contents = list(/obj/item/book/granter/trait/techno=1)
 
 /datum/outfit/loadout/f13settler/homeowner
 	name = "Homeowner"
 	desc = "You lucked out. You actually own a place to sleep in at night. \
 	And this is because you are either really good at what you do, or because you are involved in the local Moonshining business as a farmer."
+	backpack_contents = list(
+		/obj/item/stack/sheet/metal/fifty = 1,
+		/obj/item/stack/sheet/mineral/wood/fifty = 1,
+		/obj/item/toy/crayon/spraycan = 1)

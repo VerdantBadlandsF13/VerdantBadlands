@@ -10,6 +10,7 @@
 	states |= icon_states('icons/obj/hydroponics/growing_vegetables.dmi')
 	states |= icon_states('goon/icons/obj/hydroponics.dmi')
 	states |= icon_states('icons/fallout/flora/flora.dmi')
+	states |= icon_states('modular_badlands/code/modules/environment/icons/bl_flora_bw.dmi')
 	var/list/paths = subtypesof(/obj/item/seeds) - /obj/item/seeds - typesof(/obj/item/seeds/sample) - /obj/item/seeds/lavaland
 
 	for(var/seedpath in paths)

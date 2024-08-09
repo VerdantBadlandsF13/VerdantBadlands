@@ -2200,6 +2200,7 @@
 /obj/machinery/msgterminal{
 	dir = 4
 	},
+/obj/structure/table,
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "kp" = (

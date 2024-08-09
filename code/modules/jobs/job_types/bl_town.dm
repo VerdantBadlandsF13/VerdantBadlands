@@ -119,9 +119,9 @@
 	As an Evangelist, you came here on a most devout mission: Teach the local hicks about the love of Christ. \
 	What ended up happening was your swift ascension to a position of leadership in the town thanks to your moderate level of education and accrued goodwill from the locals. \
 	Unlike most other influential men here, you genuinely wish only the best for the settlers."
+	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
 	suit = /obj/item/clothing/suit/armored/riot/chaplain/witchhunter
 	uniform = /obj/item/clothing/under/f13/chaplain
-	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
 	backpack_contents = list(
 		/obj/item/book/granter/trait/holy =1,
 		/obj/item/storage/book/bible =1,

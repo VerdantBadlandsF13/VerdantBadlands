@@ -398,7 +398,7 @@
 	name = "Imitation Stimpak Fluid"
 	id = /datum/reagent/medicine/stimpakimitation
 	results = list(/datum/reagent/medicine/stimpakimitation = 2)
-	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/consumable/mutjuice = 1)
+	required_reagents = list(/datum/reagent/blood = 1, /datum/reagent/consumable/yarrowpulp = 1)
 	OptimalTempMin 		= 500 // Lower area of bell curve for determining heat based rate reactions
 	OptimalTempMax		= 650 // Upper end for above
 	ExplodeTemp			= 9999 //Temperature at which reaction explodes

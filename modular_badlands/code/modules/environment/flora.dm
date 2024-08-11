@@ -46,6 +46,10 @@
 	icon_state = "ERROR"
 	species = "error_or_something_lol"
 	plantname = "Error Bush"
+	icon_grow = "licorice-grow"//for checks
+	icon_dead = "licorice-dead"//for checks
+	icon_harvest = "licorice-harvest"//for checks
+	growing_icon = 'modular_badlands/code/modules/environment/icons/bl_flora_bw.dmi'
 	product = /obj/item/reagent_containers/food/snacks/grown/bl
 	lifespan = 100
 	endurance = 30
@@ -55,7 +59,6 @@
 	potency = 30
 	growthstages = 1
 	rarity = 20
-	growing_icon = 'modular_badlands/code/modules/environment/icons/bl_flora_bw.dmi'
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 
 /obj/item/seeds/bl/licorice
@@ -64,6 +67,9 @@
 	icon_state = "seed"
 	species = "licorice"
 	plantname = "licorice bush"
+	icon_grow = "licorice-grow"
+	icon_dead = "licorice-dead"
+	icon_harvest = "licorice-harvest"
 	product = /obj/item/reagent_containers/food/snacks/grown/bl/licorice
 	lifespan = 100
 	endurance = 30
@@ -81,6 +87,9 @@
 	icon_state = "seed"
 	species = "milkweed"
 	plantname = "milkweed bush"
+	icon_grow = "milkweed-grow"
+	icon_dead = "milkweed-dead"
+	icon_harvest = "milkweed-harvest"
 	product = /obj/item/reagent_containers/food/snacks/grown/bl/milkweed
 	lifespan = 100
 	endurance = 30
@@ -98,6 +107,9 @@
 	icon_state = "seed"
 	species = "yarrow"
 	plantname = "yarrow bush"
+	icon_grow = "yarrow-grow"
+	icon_dead = "yarrow-dead"
+	icon_harvest = "yarrow-harvest"
 	product = /obj/item/reagent_containers/food/snacks/grown/bl/yarrow
 	lifespan = 100
 	endurance = 30
@@ -115,6 +127,9 @@
 	icon_state = "seed"
 	species = "skullcap"
 	plantname = "skullcap bush"
+	icon_grow = "skullcap-grow"
+	icon_dead = "skullcap-dead"
+	icon_harvest = "skullcap-harvest"
 	product = /obj/item/reagent_containers/food/snacks/grown/bl/skullcap
 	lifespan = 100
 	endurance = 30

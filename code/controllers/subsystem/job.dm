@@ -499,6 +499,7 @@ SUBSYSTEM_DEF(job)
 		to_chat(M, "<b>As the [rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
 		job.radio_help_message(M)
 
+/*
 		to_chat(M, "<FONT color='red'><b>[job.forbids]</b>")
 		to_chat(M, "<FONT color='green'><b>[job.enforces]</b>")
 		if(job.req_admin_notify)
@@ -509,8 +510,10 @@ SUBSYSTEM_DEF(job)
 			to_chat(M, "-------------------------------------------")
 			to_chat(M, "<FONT color='grey'><B>[job.description]</b>")
 			to_chat(M, "-------------------------------------------")
+*/
 
 //		job.job_help_message(M)
+		job.ShowJobStuff(M)
 
 		if(CONFIG_GET(number/minimal_access_threshold))
 			to_chat(M, "<span class='notice'><B>As this station was initially staffed with a [CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] have been added to your ID card.</B></span>")

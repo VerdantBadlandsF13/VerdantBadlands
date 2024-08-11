@@ -63,7 +63,7 @@
 				<i>What just happened? Where are you?</i></span>")
 
 			var/mob/living/carbon/human/M = AM
-			M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
+			M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", "", "", COMBAT_MESSAGE_RANGE)
 			M.Unconscious(100)
 			M.Jitter(15)
 
@@ -98,7 +98,7 @@
 		<i>What just happened? Where are you?</i></span>")
 
 		var/mob/living/carbon/human/M = AM
-		M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", COMBAT_MESSAGE_RANGE)
+		M.visible_message("<span class='danger'>[M] falls to the floor and starts having a seizure!</span>", "", "", COMBAT_MESSAGE_RANGE)
 		M.Unconscious(100)
 		M.Jitter(15)
 

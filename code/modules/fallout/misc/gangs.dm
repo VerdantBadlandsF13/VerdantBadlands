@@ -172,7 +172,7 @@ GLOBAL_DATUM_INIT(hilltop, /datum/gang/hilltop, new)
 	if(!round_start)
 		add_verb(new_leader,/mob/living/proc/setcolor)
 	add_verb(new_leader,/mob/living/proc/leavegang)
-	to_chat(new_leader, "<span class='notice'>You have become a new leader of the [name]! You can now invite and remove members at will. You have also received a Gangtool device that allows you to buy a special gear for you and your gang.</span>")
+	to_chat(new_leader, "<span class='notice'>You have become a new leader of the [name]! You've also received a support radio.</span>")
 
 	var/obj/item/device/gangtool/gangtool = new(new_leader)
 	gangtool.gang = new_leader.gang

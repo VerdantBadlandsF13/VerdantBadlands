@@ -14,6 +14,24 @@
 	can_jam = 0
 	heavy_weapon = TRUE
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/pistol
+	name = "Cold Waters"
+	desc = "A flare gun, converted to fit a much different sort of projectile. <br>\
+	Inscribed on the grip are the words 'Cold Waters'. Whatever that means."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	icon_state = "coldwater"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	item_state = "308-sawn"
+	inaccuracy_modifier = 0.2
+	recoil = 2
+	equipsound = 'sound/f13weapons/equipsounds/pistolequip.ogg'
+	w_class = WEIGHT_CLASS_NORMAL
+	weapon_weight = WEAPON_LIGHT
+	heavy_weapon = FALSE
+	randomize_condition_lvl = FALSE//Roundstart only.
+
+
 /obj/item/gun/ballistic/revolver/grenadelauncher/attackby(obj/item/A, mob/user, params)
 	..()
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))

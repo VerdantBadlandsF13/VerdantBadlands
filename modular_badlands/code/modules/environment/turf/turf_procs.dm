@@ -12,7 +12,7 @@
 
 	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
 		setTurfPlant(new randPlant(src))
 		return TRUE
 

@@ -179,6 +179,9 @@
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 	extra_damage = 5
 
+/obj/item/gun/ballistic/automatic/pistol/m1911/roundstart
+	randomize_condition_lvl = FALSE//Roundstart only
+
 /obj/item/gun/ballistic/automatic/pistol/mk23
 	name = "\improper Mk. 23 SOCOM"
 	desc = "The Mk. 23 SOCOM, manufactured by Heckler & Koch. A pre-war wonder, and deserving of its rightful throne among .45 combat handguns."

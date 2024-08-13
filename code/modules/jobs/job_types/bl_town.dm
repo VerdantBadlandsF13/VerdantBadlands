@@ -119,8 +119,6 @@
 	As an Evangelist, you came here on a most devout mission: Teach the local hicks about the love of Christ. \
 	What ended up happening was your swift ascension to a position of leadership in the town thanks to your moderate level of education and accrued goodwill from the locals. \
 	Unlike most other influential men here, you genuinely wish only the best for the settlers."
-	head = /obj/item/clothing/head/helmet/chaplain/witchunter_hat
-	suit = /obj/item/clothing/suit/armored/riot/chaplain/witchhunter
 	uniform = /obj/item/clothing/under/f13/chaplain
 	backpack_contents = list(
 		/obj/item/book/granter/trait/holy =1,
@@ -132,6 +130,12 @@
 	desc = "A very intelligent man from a very far away land in ancient times once said that a state is a human community that successfully claims the monopoly of physical force in a given territory. \
 	You took this quote to heart early in your life and decided to become the only legitimate kind of statesman: a Sheriff. \
 	Your word is law, the lookouts only ever stop looking out to look up (at you), and your make sure to keep the troublemakers out; be they raiders, mercenaries, or republicans."
+	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911/roundstart=1,
+		/obj/item/ammo_box/magazine/m45=2,
+		/obj/item/restraints/handcuffs/cable/zipties=2,
+		)
 
 /datum/outfit/loadout/f13townleader/councilman
 	name = "Councilman"
@@ -139,6 +143,10 @@
 	A string of extremely fortunate events simply fell in your lap while you were working your usual scam artist gig. \
 	You found a pre-war book on law. Soon after, you manage to fake your way to be a member on the Hilltop Council. \
 	You've got the cleanest suit, the people's respect, a safe home, a big leather chair, and most importantly? A lot of funds to embezzle."
+	uniform = /obj/item/clothing/under/suit/turtle/grey
+	backpack_contents = list(
+		/obj/item/toy/seashell=1,
+		)
 
 /datum/job/town/f13lookout
 	title = "Hilltop Lookout"
@@ -165,12 +173,20 @@
 	jobtype = /datum/job/town/f13lookout
 	id =			/obj/item/card/id/hilltop_leadership_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
+	backpack_contents = list(
+		/obj/item/clothing/accessory/armband=1,
+		/obj/item/restraints/handcuffs/cable/zipties=2,
+		)
 
 /datum/outfit/loadout/f13lookout/deputy
 	name = "Deputy"
 	desc = "You love the law. \
 	She may be blind, but she is a beautiful mistress and you would sooner lay down your life for her than see her be defiled by some outsider. \
 	You keep the gate safe, you walk the beat, and sometimes you beat information out of witches. All in a day's work."
+	backpack_contents = list(
+		/obj/item/gun/ballistic/shotgun/hunting=1,
+		/obj/item/ammo_box/shotgun/improvised=1,
+		)
 
 /datum/outfit/loadout/f13lookout/mercenary
 	name = "Mercenary"
@@ -178,6 +194,10 @@
 	Hilltop can't defend itself with just its inbred gang of law enforcers, and so they often resolve that issue by hiring bounty hunters, mercenaries, foreign deserters, or reformed raiders to protect it from the outside. \
 	You'd sooner turn tail than die for this place, but this is why you took this job. \
 	It pays incredibly well and shooting a 'witch' once in a while isn't really dangerous to you."
+	backpack_contents = list(
+		/obj/item/gun/ballistic/rifle/hunting=1,
+		/obj/item/ammo_box/a762box/improvised=1,
+		)
 
 /datum/outfit/loadout/f13lookout/warrior
 	name = "Warrior"
@@ -185,6 +205,11 @@
 	Since then you've started calling yourself a warrior and followed the other Lookouts around and telling them you want to kill the bad guys. \
 	In every other situation you'd have been escorted home and forgotten about the gun. \
 	But since you never actually asked for a wage, the Lookouts took you in as one of their own."
+	backpack_contents = list(
+		/obj/item/shield/riot/scrapshield=1,
+		/obj/item/melee/onehanded/club=1,
+		/obj/item/gun/ballistic/revolver/revolver38=1,
+		)
 
 /datum/job/town/f13tavernkeep
 	title = "Tavernkeep"
@@ -196,7 +221,8 @@
 	description = "You are the proprietor of the local B&B-Tavern-Speakeasy-Pawnshop combo in Hilltop. \
 	You love your job, you love your customers, and you love to point your gun at punks who want to start trouble. \
 	You sadly can't chase them to far away because of your limp, which you love to tell the story of to your patrons. \
-	Said story changes to become even more interesting every hour."
+	Said story changes to become even more interesting every hour. <br>\
+	Remember that you've a radio to call your contacts, with which you can make under the table purchases."
 	supervisors = "fate"
 
 	outfit = /datum/outfit/job/town/f13tavernkeep
@@ -207,8 +233,14 @@
 /datum/outfit/job/town/f13tavernkeep
 	name = "Tavernkeep"
 	jobtype = /datum/job/town/f13tavernkeep
+	suit = /obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
 	id =			/obj/item/card/id/tavern_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/grenadelauncher/pistol=1,
+		/obj/item/ammo_casing/a40mmg=3,
+		/obj/item/ammo_casing/a40mm=1,
+		)
 
 /datum/outfit/job/town/f13tavernkeep/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -219,6 +251,12 @@
 		var/datum/gang/hilltop/HT = GLOB.hilltop
 		GLOB.all_gangs |= HT
 		HT.add_member(H)
+		HT.add_leader(H)
+		remove_verb(H,/mob/living/proc/invitegang)
+		remove_verb(H,/mob/living/proc/removemember)
+		remove_verb(H,/mob/living/proc/transferleader)
+		remove_verb(H,/mob/living/proc/setwelcome)
+		remove_verb(H,/mob/living/proc/leavegang)
 		H.gang = HT
 
 /datum/job/town/f13settler

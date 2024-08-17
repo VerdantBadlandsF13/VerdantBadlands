@@ -234,6 +234,7 @@
 #define TRAIT_FORCED_STANDING 	"forced_standing"
 #define TRAIT_RADX				"radx_active"
 #define TRAIT_SNEAK				"in_stealth" // Whether we're sneaking.
+#define TRAIT_PREP_TACKLE		"tackle_prepared" // Whether we've prepared a tackle.
 #define TRAIT_HANDS_BLOCKED		"handsblocked" // Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 
 // mobility flag traits

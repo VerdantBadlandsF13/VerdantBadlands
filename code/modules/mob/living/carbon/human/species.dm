@@ -133,6 +133,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/eye_type = "normal"
 
 	var/datum/action/innate/sneak/stealth
+	var/datum/action/innate/tackle/charge
+
 
 ///////////
 // PROCS //
@@ -1240,6 +1242,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	return
 
 /datum/species/proc/after_equip_job(datum/job/J, mob/living/carbon/human/H)
+
+	if(H.special_s >= 4)
+		to_chat(H, "As you have enough strength points, you know how to tackle. A number of special stats modify effectiveness.")
+		charge = new
+		charge.Grant(H)
 
 	if(H.special_i <= 2)
 		to_chat(H,"You're an idiot!")

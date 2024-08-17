@@ -250,6 +250,7 @@
 	if(!H.gang)
 		var/datum/gang/hilltop/HT = GLOB.hilltop
 		GLOB.all_gangs |= HT
+		H.gang = HT
 		HT.add_member(H)
 		HT.add_leader(H)
 		remove_verb(H,/mob/living/proc/invitegang)
@@ -257,7 +258,6 @@
 		remove_verb(H,/mob/living/proc/transferleader)
 		remove_verb(H,/mob/living/proc/setwelcome)
 		remove_verb(H,/mob/living/proc/leavegang)
-		H.gang = HT
 
 /datum/job/town/f13settler
 	title = "Hilltop Inhabitant"

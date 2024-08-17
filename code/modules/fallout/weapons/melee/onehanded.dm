@@ -63,7 +63,7 @@
 
 /obj/item/melee/onehanded/machete/gladius
 	name = "gladius"
-	desc = "A heavy cutting blade, made for war and mass produced in Legion territory."
+	desc = "A heavy cutting blade, made for war. Mass produced in the post-war world."
 	icon_state = "gladius"
 	item_state = "gladius"
 	force = 36
@@ -73,7 +73,7 @@
 
 /obj/item/melee/onehanded/machete/spatha
 	name = "spatha"
-	desc = "This long blade is favoured by Legion officers and leaders, a finely crafted weapon with good steel and hilt made from bronze and bone."
+	desc = "This long blade is favoured by leaders, a finely crafted weapon with good steel and hilt made from bronze and bone."
 	icon_state = "spatha"
 	item_state = "spatha"
 	force = 38

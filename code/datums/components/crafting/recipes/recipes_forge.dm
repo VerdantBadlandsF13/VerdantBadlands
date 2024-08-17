@@ -303,7 +303,7 @@
 	always_available = FALSE
 
 /datum/crafting_recipe/legionlance
-	name = "Legion Lance"
+	name = "Heavy Lance"
 	result = /obj/item/twohanded/spear/lance
 	reqs = list(
 		/obj/item/stack/sheet/metal = 18,
@@ -316,9 +316,8 @@
 	subcategory = CAT_MELEE
 	always_available = FALSE
 
-
 /datum/crafting_recipe/legionshield
-	name = "Legion Shield"
+	name = "Heavy Shield"
 	result = /obj/item/shield/riot/legion
 	reqs = list(
 		/obj/item/stack/sheet/metal = 8,

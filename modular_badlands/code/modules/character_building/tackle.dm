@@ -44,7 +44,7 @@ Probably not where this should be, but it works. As with stealth.
 		to_chat(owner, span_noticealien("You prepare to strike..."))
 		ADD_TRAIT(owner, TRAIT_PREP_TACKLE, name)
 		var/mob/living/carbon/human/H = owner
-		tackler = H.AddComponent(/datum/component/tackler, stamina_cost -= owner.special_e, base_knockdown = owner.special_s, range = owner.special_a, speed = owner.special_a, skill_mod = owner.special_l, min_distance = owner.special_a)
+		tackler = H.AddComponent(/datum/component/tackler, stamina_cost -= owner.special_e, base_knockdown = owner.special_s, range = owner.special_a, speed = owner.special_a, skill_mod = owner.special_l, min_distance/* = owner.special_a*/)
 
 
 	return TRUE

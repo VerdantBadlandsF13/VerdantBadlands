@@ -106,7 +106,7 @@
 
 /obj/structure/flora/wild_plant/update_icon()
 	if(dead)
-		icon_state = icon_state = myseed.icon_dead
+		icon_state = myseed.icon_dead
 	else if(harvest)
 		if(!myseed.icon_harvest)
 			icon_state = "[myseed.icon_grow][myseed.growthstages]"

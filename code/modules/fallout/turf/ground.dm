@@ -60,7 +60,8 @@
 #define HAZARD_WEIGHT				1
 #define MINES_WEIGHT				1
 
-#define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 5, /obj/structure/flora/stump = 1)
+#define DESOLATE_PLANT_SPAWN_LIST	list(/obj/structure/flora/grass/wasteland = 5, /obj/structure/flora/stump = 1, \
+/obj/structure/flora/not_tree/wasteland_fallen = 1, /obj/structure/flora/not_tree/brushwood = 1)
 
 #define SNOW_PLANT_SPAWN_LIST		list(/obj/structure/flora/tree/tall = 12, /obj/structure/flora/grass = 10, \
 /obj/structure/flora/grass/brown = 9, /obj/structure/flora/grass/green = 8, \

@@ -36,6 +36,9 @@ export const LoadoutSelect = (props, context) => {
               </Section>
             </Stack.Item>
             <Stack.Item fill fitted>
+              <Section>
+                {data.fluff}
+              </Section>
               <Section fill>
                 <Button style={{ "display": "block", "text-align": "center" }} content={"Finished"} onClick={() => act('loadout_confirm')} />
               </Section>

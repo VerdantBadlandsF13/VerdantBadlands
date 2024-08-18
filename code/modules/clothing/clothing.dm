@@ -339,11 +339,6 @@
 	if(armor.magic)
 		special_durability_list += list("MAGIC" = armor.magic)
 
-	if(LAZYLEN(protection_list))
-		protection_list.Cut()
-	if(body_parts_covered)
-		protection_list += list("zone" = body_parts_covered)
-
 	if(LAZYLEN(armor_list) || LAZYLEN(durability_list))
 		. += "<span class='notice'>You can take a closer <a href='?src=[REF(src)];list_armor=1'>look</a> at it to get an idea of the provided protection.</span>"
 	if(salvage_tool_behavior && LAZYLEN(salvage_loot))
@@ -378,10 +373,11 @@
 
 			readout += "\n<b>- - - - - -</b>"
 
-		if(LAZYLEN(protection_list))
-			readout += "\n<b>PROTECTED LOCATIONS</b>"
-			for(body_parts_covered in protection_list)
-				readout += "\n[parse_zone_extended(protection_list)]" //e.g. THORAX
+		if(body_parts_covered)
+			readout += "\n<b>PROTECTED LOCATIONS</b><ul>"
+			for(var/zone in body_parts_covered2organ_names_extended(body_parts_covered))
+				readout += "<li>[parse_zone_extended(zone)]</li>" //e.g. THORAX
+			readout += "</ul>"
 
 		readout += "</span>"
 

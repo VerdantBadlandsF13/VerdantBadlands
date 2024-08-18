@@ -174,7 +174,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(1, src))
+	for(var/turf/open/indestructible/ground/outside/savannah/T in RANGE_TURFS(2, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -182,7 +182,7 @@
 	if(prob(Weight))
 
 		//If surrounded on 5+ sides, pick from lush
-		if(Weight == (5 * GRASS_WEIGHT))
+		if(Weight >= (5 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
@@ -251,7 +251,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(1, src))
+	for(var/turf/open/indestructible/ground/outside/desert/T in RANGE_TURFS(2, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -259,7 +259,7 @@
 	if(prob(Weight))
 
 		//If surrounded on 5+ sides, pick from not lush, thanks. Vermont. :)
-		if(Weight == (5 * GRASS_WEIGHT))
+		if(Weight >= (5 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)
@@ -432,7 +432,7 @@
 		return TRUE
 
 	//loop through neighbouring desert turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(1, src))
+	for(var/turf/open/indestructible/ground/outside/snow/T in RANGE_TURFS(2, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -440,7 +440,7 @@
 	if(prob(Weight))
 
 		//If surrounded on 5+ sides, pick from lush
-		if(Weight == (5 * GRASS_WEIGHT))
+		if(Weight >= (5 * GRASS_WEIGHT))
 			randPlant = pickweight(SNOW_PLANT_SPAWN_LIST)
 		else
 			randPlant = pickweight(SNOW_PLANT_SPAWN_LIST)

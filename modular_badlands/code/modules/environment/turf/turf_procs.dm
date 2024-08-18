@@ -12,12 +12,12 @@
 
 	//spontaneously spawn grass
 	if(Plantforce || prob(GRASS_SPONTANEOUS))
-		randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
+		randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST) //Create a new grass object at this location, and assign var
 		setTurfPlant(new randPlant(src))
 		return TRUE
 
 	//loop through neighbouring turfs, if they have grass, then increase weight
-	for(var/turf/open/indestructible/ground/bl/outside/grass_standard/T in RANGE_TURFS(1, src))
+	for(var/turf/open/indestructible/ground/bl/outside/grass_standard/T in RANGE_TURFS(2, src))
 		if(T.turfPlant)
 			Weight += GRASS_WEIGHT
 
@@ -25,7 +25,7 @@
 	if(prob(Weight))
 
 		//If surrounded on 3+ sides, pick from lush
-		if(Weight == (3 * GRASS_WEIGHT))
+		if(Weight >= (3 * GRASS_WEIGHT))
 			randPlant = pickweight(VERMONT_PLANT_SPAWN_LIST)
 		else
 			randPlant = pickweight(DESOLATE_PLANT_SPAWN_LIST)

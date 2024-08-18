@@ -177,7 +177,7 @@
 		lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 		righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 
-/obj/item/melee/powered/surgeripper/examine(mob/living/user)
+/obj/item/melee/powered/surgripper/examine(mob/living/user)
 	. = ..()
 	. += "<span class = 'notice> It's set to [tool_behaviour == TOOL_SCALPEL ? "scalpel" : "saw"] mode. </span>"
 

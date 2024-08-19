@@ -1,6 +1,6 @@
 /obj/structure/statue/sandstone/mars
 	name = "statue of Mars"
-	desc = "A statue dedicated to Legion's God of War."
+	desc = "A statue dedicated to a God of War."
 	icon_state = "marsred"
 
 //Wood

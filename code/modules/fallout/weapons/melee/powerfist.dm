@@ -58,7 +58,7 @@
 // Goliath				Throws targets far. Max damage 50.
 /obj/item/melee/powerfist/f13/goliath
 	name = "Goliath"
-	desc = "A massive, experimental metal gauntlet captured by the Legion. The piston-powered ram on top is designed to throw targets very, very far."
+	desc = "A massive, experimental metal gauntlet. The piston-powered ram on top is designed to throw targets very, very far."
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
@@ -177,7 +177,7 @@
 		lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 		righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 
-/obj/item/melee/powered/surgeripper/examine(mob/living/user)
+/obj/item/melee/powered/surgripper/examine(mob/living/user)
 	. = ..()
 	. += "<span class = 'notice> It's set to [tool_behaviour == TOOL_SCALPEL ? "scalpel" : "saw"] mode. </span>"
 

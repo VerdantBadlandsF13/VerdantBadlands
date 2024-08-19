@@ -5,10 +5,10 @@
 
 //Gangtool device
 /obj/item/device/gangtool
-	name = "Gangtool device"
-	desc = "A device that allows you to contact underground suppliers for special gear. Suppliers are only willing to talk to the leaders of the gangs."
-	icon = 'icons/obj/device.dmi'
-	icon_state = "gangtool-red"
+	name = "support radio"
+	desc = "A handheld radio that allows you to contact underground suppliers. Suppliers are only willing to talk to the distributors directly."
+	icon = 'icons/obj/radio.dmi'
+	icon_state = "walkietalkie"
 	item_state = "radio"
 	lefthand_file = 'icons/mob/inhands/misc/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/devices_righthand.dmi'
@@ -27,9 +27,9 @@
 		return
 
 	var/dat
-	dat += "Gang Name: <B>[gang.name]</B><br>"
+	dat += "Title: <B>[gang.name]</B><br>"
 	dat += "Your Influence: <B>[gang.influence]</B><br>"
-	dat += "You can gain influence by doing various tasks, or by bribing underground suppliers by using valid currency on the Gangtool device.<br>"
+	dat += "You can gain influence by doing various tasks, or by bribing underground suppliers by using valid currency.<br>"
 	dat += "<hr>"
 
 	dat += "<br>"
@@ -60,7 +60,7 @@
 
 	dat += "<a href='?src=\ref[src];choice=refresh'>Refresh</a><br>"
 
-	var/datum/browser/popup = new(user, "gangtool", "Welcome to GangTool v3.6", 350, 625)
+	var/datum/browser/popup = new(user, "supply_radio", "Welcome to the Network", 350, 625)
 	popup.set_content(dat)
 	popup.open()
 
@@ -93,7 +93,7 @@
 		gang.influence += inserted_value
 		I.use(currency.amount)
 		playsound(src, 'sound/items/change_jaws.ogg', 60, 1)
-		to_chat(usr, "You gain [inserted_value] gang influence by bribing underground suppliers.")
+		to_chat(usr, "You gain [inserted_value] influence by bribing underground suppliers.")
 		attack_self(usr)
 	else
 		to_chat(usr, "Invalid currency! Do not try our patience!")

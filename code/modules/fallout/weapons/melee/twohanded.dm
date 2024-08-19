@@ -281,8 +281,8 @@
 
 // Lance		Keywords: LEGION, Damage 25/40, Reach
 /obj/item/twohanded/spear/lance
-	name = "legion lance"
-	desc = "A long spear made in the Legions war foundries. Useful for fighting tribals and hunting when ammunition is scarce."
+	name = "heavy lance"
+	desc = "A long spear made in the post-war period. Useful for fighting tribals and hunting when ammunition is scarce."
 	icon_state = "spear-lance"
 	icon_prefix = "spear-lance"
 

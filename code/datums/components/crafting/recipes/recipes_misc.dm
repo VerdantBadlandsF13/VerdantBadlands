@@ -221,7 +221,7 @@
 	time = 120
 
 /datum/crafting_recipe/rip/crossexecution
-	name = "Legion Cross"
+	name = "Cross"
 	result = /obj/structure/cross
 	time = 60
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 10)

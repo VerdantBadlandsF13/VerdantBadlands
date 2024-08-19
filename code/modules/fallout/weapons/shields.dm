@@ -55,8 +55,8 @@
 
 //Legion shield
 /obj/item/shield/riot/legion
-	name = "legion shield"
-	desc = "Heavy shield with metal pieces bolted to a wood backing, with a painted yellow bull insignia in the centre. Repair with metal."
+	name = "heavy shield"
+	desc = "A heavy shield with metal pieces bolted to a wood backing, with a painted bull insignia in the centre. Repair with metal."
 	icon_state = "shield_legion"
 	item_state = "shield_legion"
 	block_parry_data = /datum/block_parry_data/shield/legion

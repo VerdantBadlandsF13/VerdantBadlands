@@ -375,7 +375,7 @@
 	if(!bpc)
 		return covered_parts
 
-	if(bpc & FULL_BODY)
+	if((bpc & FULL_BODY) == FULL_BODY)
 		covered_parts |= list(BODY_ZONE_L_ARM,BODY_ZONE_R_ARM,BODY_ZONE_HEAD,BODY_ZONE_CHEST,BODY_ZONE_L_LEG,BODY_ZONE_R_LEG)
 
 	else
@@ -426,7 +426,7 @@
 	if(!bpce)
 		return covered_parts_extended
 
-	if(bpce & FULL_BODY)
+	if((bpce & FULL_BODY) == FULL_BODY)
 		covered_parts_extended |= list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 		return covered_parts_extended
 

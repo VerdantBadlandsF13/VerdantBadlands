@@ -343,17 +343,29 @@
 /proc/zone2body_parts_covered(def_zone)
 	switch(def_zone)
 		if(BODY_ZONE_CHEST)
-			return list(CHEST, GROIN)
-		if(BODY_ZONE_HEAD)
-			return list(HEAD)
+			return CHEST|GROIN
+		if(BODY_ZONE_PRECISE_GROIN)
+			return GROIN
+		if(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_EYES)
+			return HEAD
+		if(BODY_ZONE_PRECISE_MOUTH)
+			return NECK
 		if(BODY_ZONE_L_ARM)
-			return list(ARM_LEFT, HAND_LEFT)
+			return ARM_LEFT|HAND_LEFT
+		if(BODY_ZONE_PRECISE_L_HAND)
+			return HAND_LEFT
 		if(BODY_ZONE_R_ARM)
-			return list(ARM_RIGHT, HAND_RIGHT)
+			return ARM_RIGHT|HAND_RIGHT
+		if(BODY_ZONE_PRECISE_R_HAND)
+			return HAND_RIGHT
 		if(BODY_ZONE_L_LEG)
-			return list(LEG_LEFT, FOOT_LEFT)
+			return LEG_LEFT|FOOT_LEFT
+		if(BODY_ZONE_PRECISE_L_FOOT)
+			return FOOT_LEFT
 		if(BODY_ZONE_R_LEG)
-			return list(LEG_RIGHT, FOOT_RIGHT)
+			return LEG_RIGHT|FOOT_RIGHT
+		if(BODY_ZONE_PRECISE_R_FOOT)
+			return FOOT_RIGHT
 
 //Turns a Body_parts_covered bitfield into a list of organ/limb names.
 //(I challenge you to find a use for this) -I found a use for it!!

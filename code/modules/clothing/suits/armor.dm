@@ -15,8 +15,6 @@
 	armor = null
 	blood_overlay_type = "armor"
 
-	var/list/protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
-
 	var/armor_block_chance = null// Chance for the armor to ignore a low AP projectile.
 	var/deflection_chance = null// Chance for the armor to redirect a low AP projectile.
 	var/melee_block_threshold = null// If an object's force is lower than this, the armor ignores it.
@@ -30,7 +28,7 @@
 	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
 	if((damage + AP_mod) < durability_threshold)
 		return ..()
-	if(def_zone in protected_zones)
+	if(zone2body_parts_covered(def_zone) & body_parts_covered)
 		damage_armor()
 	. = ..()
 
@@ -111,7 +109,7 @@
 	if(src.armor_durability<40)
 		return
 
-	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			var/ratio = rand(0,100)
 			if(ratio <= deflection_chance)
@@ -123,7 +121,7 @@
 			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your armor shrugs off the strike!</span>")
@@ -131,7 +129,7 @@
 			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_UNARMED) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_UNARMED) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your armor shrugs off the strike!</span>")
@@ -172,7 +170,7 @@
 		return
 
 // Only AP of a certain caliber should present a threat. Otherwise? Ignore.
-	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			var/ratio = rand(0,100)
 			if(ratio <= deflection_chance)
@@ -184,7 +182,7 @@
 			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your armor shrugs off the strike!</span>")
@@ -192,7 +190,7 @@
 			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_UNARMED) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_UNARMED) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your armor shrugs off the strike!</span>")
@@ -232,7 +230,7 @@
 	if(src.armor_durability<80)
 		return
 
-	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			var/ratio = rand(0,100)
 			if(ratio <= deflection_chance)
@@ -244,7 +242,7 @@
 			block_return[BLOCK_RETURN_SET_DAMAGE_TO] = 0
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your armor shrugs off the strike!</span>")

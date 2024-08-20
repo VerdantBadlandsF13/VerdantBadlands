@@ -128,7 +128,7 @@
 #define HAND_RIGHT	(1<<10)
 #define HANDS		(HAND_LEFT | HAND_RIGHT)
 #define NECK		(1<<11)
-#define FULL_BODY	(~0)
+#define FULL_BODY	(HEAD|CHEST|GROIN|LEGS|FEET|ARMS|HANDS|NECK)
 
 //flags for alternate styles: These are hard sprited so don't set this if you didn't put the effort in
 #define NORMAL_STYLE		0

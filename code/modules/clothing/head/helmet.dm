@@ -12,7 +12,6 @@
 	strip_delay = 60
 	resistance_flags = NONE
 	flags_cover = HEADCOVERSEYES
-	var/list/protected_zones = list(BODY_ZONE_HEAD)
 
 	dog_fashion = /datum/dog_fashion/head/helmet
 
@@ -59,7 +58,7 @@
 	var/AP_mod = armour_penetration * (damage * 1.5) // So, 100% AP bullet with 20 damage will be considered as 50 damage.
 	if((damage + AP_mod) < durability_threshold)
 		return ..()
-	if(def_zone in protected_zones)
+	if(zone2body_parts_covered(def_zone) & body_parts_covered)
 		damage_armor()
 	. = ..()
 

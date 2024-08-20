@@ -21,7 +21,6 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
-	protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 
 	repair_kit = /obj/item/repair_kit/pa_repair_kit
 
@@ -228,7 +227,7 @@
 		return
 
 // Only AP of a certain caliber should present a threat. Otherwise? Ignore.
-	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+	if(check_armor_penetration(object) <= src.armor_block_threshold && (attack_type == ATTACK_TYPE_PROJECTILE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			var/ratio = rand(0,100)
 			if(ratio <= deflection_chance)
@@ -241,7 +240,7 @@
 			return BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 
 // Melee should very rarely do anything.
-	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (def_zone in protected_zones))
+	if(damage <= src.melee_block_threshold && (attack_type == ATTACK_TYPE_MELEE) && (zone2body_parts_covered(def_zone) & body_parts_covered))
 		if(prob(armor_block_chance))
 			if(ismob(loc))
 				to_chat(loc, "<span class='warning'>Your power armor shrugs off the strike!</span>")

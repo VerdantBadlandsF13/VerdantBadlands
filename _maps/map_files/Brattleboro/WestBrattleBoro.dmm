@@ -13425,6 +13425,10 @@
 /obj/effect/decal/cleanable/blood/gibs/core{
 	icon_state = "gib3"
 	},
+/mob/living/simple_animal/hostile/handy{
+	name = "Mr. Orderly";
+	desc = "A crazed pre-war medical robot, armed with a cutting saw."
+	},
 /turf/open/floor/f13{
 	icon_state = "rare";
 	dir = 1
@@ -16782,6 +16786,16 @@
 	},
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
+	},
+/area/f13/building)
+"ltj" = (
+/obj/machinery/light,
+/mob/living/simple_animal/hostile/handy{
+	name = "Mr. Orderly";
+	desc = "A crazed pre-war medical robot, armed with a cutting saw."
+	},
+/turf/open/floor/f13{
+	icon_state = "rare"
 	},
 /area/f13/building)
 "ltM" = (
@@ -111450,7 +111464,7 @@ hkt
 kSc
 dRZ
 tYb
-rlr
+ltj
 dRZ
 psq
 ibO

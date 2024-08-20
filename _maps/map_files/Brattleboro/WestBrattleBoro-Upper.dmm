@@ -5334,6 +5334,15 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
+"sU" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing{
+	color = "#A47449"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "sV" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -9525,6 +9534,16 @@
 	icon_state = "housewood3-broken"
 	},
 /area/f13/building)
+"Ha" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "Hc" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontalbottomborderbottom2right"
@@ -12842,6 +12861,16 @@
 /obj/structure/table,
 /turf/open/indestructible/ground/outside/roof,
 /area/f13/wasteland)
+"SH" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 8
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "SI" = (
 /obj/structure/railing/corner{
 	dir = 8;
@@ -86117,9 +86146,9 @@ Ee
 Ee
 xE
 qZ
+sU
 ge
 ge
-qZ
 xE
 my
 my
@@ -86574,9 +86603,9 @@ Ee
 Ee
 xE
 YA
+sU
 ge
 ge
-gi
 xE
 my
 my
@@ -87031,9 +87060,9 @@ Ee
 Ee
 xE
 ER
-qZ
-qZ
-qZ
+SH
+Ha
+Ha
 xE
 xE
 xE

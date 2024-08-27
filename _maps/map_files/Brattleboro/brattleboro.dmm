@@ -883,7 +883,6 @@
 	icon_state = "medicalcrate"
 	},
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/item/reagent_containers/blood/radaway,
 /obj/item/reagent_containers/glass/bottle/chloralhydrate,
 /obj/item/reagent_containers/glass/bottle/chloralhydrate,
 /obj/item/reagent_containers/syringe,
@@ -1895,6 +1894,15 @@
 /obj/structure/junk/cabinet,
 /turf/open/floor/wood,
 /area/f13/building)
+"aOG" = (
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/bl/outside/gravel{
+	icon_state = "graveldirt3";
+	dir = 4
+	},
+/area/f13/wasteland/bl/gmb)
 "aOJ" = (
 /turf/closed/wall/f13/sunset/brick_small_light,
 /area/f13/village)
@@ -3142,8 +3150,6 @@
 /area/f13/village)
 "bCL" = (
 /obj/structure/closet/crate,
-/obj/item/reagent_containers/pill/patch/turbo,
-/obj/item/reagent_containers/pill/patch/turbo,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/village)
@@ -8007,6 +8013,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"eIz" = (
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "eII" = (
 /obj/structure/barricade/wooden,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -8873,6 +8885,13 @@
 /mob/living/simple_animal/hostile/radroach,
 /turf/open/floor/wood/wood_wide,
 /area/f13/village)
+"flO" = (
+/obj/item/grenade/f13/mine/planted,
+/turf/open/indestructible/ground/bl/outside/dirt{
+	icon_state = "grassdirt1";
+	dir = 4
+	},
+/area/f13/wasteland)
 "fmb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11384,6 +11403,9 @@
 	pixel_y = 5;
 	pixel_x = -3
 	},
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_x = 32
+	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
 "gPn" = (
@@ -12001,6 +12023,13 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
 	},
+/area/f13/wasteland)
+"hkN" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 1;
+	pixel_x = 7
+	},
+/turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
 "hkP" = (
 /obj/structure/legion_extractor,
@@ -18720,6 +18749,13 @@
 	},
 /turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass,
 /area/f13/wasteland/bl/gmb)
+"lMx" = (
+/obj/machinery/radioterminal/gmb{
+	dir = 1
+	},
+/obj/structure/window/reinforced/spawner,
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "lMI" = (
 /obj/machinery/door/poddoor/gate{
 	name = "exterior gate";
@@ -19537,6 +19573,12 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"mnZ" = (
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_x = 32
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "moG" = (
 /obj/structure/railing/wood/underlayer{
 	pixel_y = -1
@@ -22322,6 +22364,15 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"oeo" = (
+/obj/structure/badlands_props/factionised/gmb_flag_worn{
+	pixel_x = -32
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "verticalrightborderright0"
+	},
+/area/f13/wasteland)
 "oeH" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_south"
@@ -24283,6 +24334,15 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"pob" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_x = -32
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "poc" = (
 /obj/item/storage/trash_stack{
 	layer = 2
@@ -26026,6 +26086,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/wood_common,
 /area/f13/village)
+"qyj" = (
+/obj/structure/badlands_props/factionised/dfs_graffiti{
+	pixel_x = 16
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain1"
+	},
+/area/f13/wasteland)
 "qyl" = (
 /obj/structure/tires/five,
 /obj/structure/decoration/rag{
@@ -27100,9 +27168,16 @@
 	},
 /area/f13/wasteland)
 "rhP" = (
-/obj/machinery/radioterminal/gmb{
-	dir = 4;
-	pixel_x = -4
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/pen/fountain{
+	pixel_y = 7
+	},
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_y = 32
 	},
 /turf/open/floor/wood/wood_common,
 /area/f13/bl/gmb)
@@ -27339,6 +27414,18 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
+"roV" = (
+/obj/structure/table/wood,
+/obj/item/radio/intercom/vb_st_rad{
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_y = 32
+	},
+/turf/open/floor/wood/wood_common,
+/area/f13/bl/gmb)
 "roX" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/table/wood,
@@ -28964,6 +29051,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/village)
+"snk" = (
+/obj/structure/obstacle/barbedwire/end,
+/turf/open/indestructible/ground/bl/outside/dirt,
+/area/f13/wasteland)
 "snR" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -33000,6 +33091,14 @@
 	dir = 4
 	},
 /area/f13/wasteland)
+"uSo" = (
+/obj/structure/badlands_props/factionised/gmb_flag_worn{
+	pixel_y = -32
+	},
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/wasteland)
 "uSz" = (
 /obj/structure/chair/office,
 /turf/open/floor/wood/wood_common,
@@ -33426,6 +33525,12 @@
 /turf/open/indestructible/ground/bl/outside/dirt{
 	icon_state = "grassdirt2";
 	dir = 8
+	},
+/area/f13/wasteland)
+"vjQ" = (
+/obj/item/grenade/f13/mine/planted,
+/turf/open/indestructible/ground/bl/outside/grass_standard/swamp_grass{
+	icon_state = "grassdirt3"
 	},
 /area/f13/wasteland)
 "vjY" = (
@@ -33879,6 +33984,15 @@
 	icon_state = "grassmud3"
 	},
 /area/f13/wasteland)
+"vwg" = (
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/bl/outside/gravel{
+	icon_state = "graveldirt3";
+	dir = 1
+	},
+/area/f13/wasteland/bl/gmb)
 "vwi" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/kirbyplants/random{
@@ -45680,7 +45794,7 @@ nCZ
 kvC
 kvC
 aaR
-imr
+pob
 kvC
 yeE
 kvC
@@ -52528,7 +52642,7 @@ tfM
 sMJ
 sMJ
 sMJ
-wmM
+aOG
 tfM
 tfM
 tfM
@@ -53002,7 +53116,7 @@ qrS
 nCZ
 gXi
 hdK
-rhP
+kvC
 kvC
 dno
 nCZ
@@ -53457,7 +53571,7 @@ tfM
 tfM
 qrS
 eWz
-kvC
+kOV
 kvC
 kvC
 kvC
@@ -53914,9 +54028,9 @@ tfM
 tfM
 qrS
 eWz
+roV
 uWY
-uWY
-kvC
+lMx
 kvC
 kvC
 nCZ
@@ -54356,7 +54470,7 @@ tfM
 sMJ
 sMJ
 sMJ
-fKZ
+vwg
 tfM
 tfM
 tfM
@@ -54371,7 +54485,7 @@ tfM
 tfM
 qrS
 nCZ
-acg
+rhP
 aXa
 nCZ
 eRL
@@ -57784,7 +57898,7 @@ hJZ
 anP
 rfS
 rMM
-tom
+cVR
 tom
 tom
 tom
@@ -59113,7 +59227,7 @@ nRs
 tom
 tom
 uKN
-uSl
+flO
 tom
 tom
 tom
@@ -60742,7 +60856,7 @@ fwb
 fwb
 nCZ
 oXV
-kvC
+mnZ
 kvC
 nCZ
 ycE
@@ -70534,7 +70648,7 @@ aTh
 cDu
 oeM
 cDu
-cDu
+qyj
 oeM
 lMI
 sri
@@ -70785,7 +70899,7 @@ tom
 xqq
 bxc
 wCj
-wCj
+eIz
 bxc
 wCj
 xqq
@@ -70989,8 +71103,8 @@ wko
 cDu
 aTh
 cDu
-oeM
 ibB
+oeM
 cDu
 cDu
 nps
@@ -71647,8 +71761,8 @@ hzz
 lpp
 lpp
 pqb
-nRs
-anP
+uSo
+gas
 anP
 anP
 anP
@@ -72161,7 +72275,7 @@ lqT
 lqT
 xqq
 bEW
-fKZ
+vwg
 tfM
 tfM
 tfM
@@ -88837,7 +88951,7 @@ tom
 tom
 tom
 tom
-tom
+cVR
 tom
 xEe
 jPV
@@ -89274,7 +89388,7 @@ pqb
 nRs
 anP
 anP
-fyK
+vjQ
 dhp
 tom
 tom
@@ -91110,7 +91224,7 @@ anP
 anP
 anP
 anP
-anP
+rzZ
 anP
 anP
 anP
@@ -91132,7 +91246,7 @@ tom
 tom
 tom
 tom
-tom
+cVR
 tom
 tom
 tom
@@ -95436,7 +95550,7 @@ ayW
 mYK
 pSJ
 anP
-anP
+gas
 anP
 anP
 nhS
@@ -95893,7 +96007,7 @@ rSx
 rSx
 rSx
 rSx
-rSx
+oeo
 rSx
 rSx
 rSx
@@ -139290,9 +139404,9 @@ ubM
 ubM
 ubM
 ubM
-anP
-anP
-anP
+snk
+qnE
+hkN
 fwb
 fwb
 fwb

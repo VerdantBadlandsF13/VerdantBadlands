@@ -1103,7 +1103,7 @@
 /area/f13/caves)
 "hK" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "hO" = (
@@ -2347,6 +2347,13 @@
 /obj/structure/car/rubbish4,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland/bighorn)
+"qE" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/shieldwall/standard_owb/active,
+/turf/open/floor/f13{
+	icon_state = "plating"
+	},
+/area/f13/bl/lbj)
 "qH" = (
 /obj/machinery/door/unpowered/securedoor/vfe/glass,
 /turf/open/floor/carpet/green,
@@ -5159,6 +5166,10 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/building)
+"Jv" = (
+/turf/closed/indestructible/rock,
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "Jx" = (
 /obj/structure/showcase/horrific_experiment,
 /turf/open/floor/f13{
@@ -7576,7 +7587,7 @@
 /area/f13/tunnel)
 "ZM" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -78409,7 +78420,7 @@ PV
 PV
 PV
 PV
-xk
+Jv
 PV
 PV
 PV
@@ -116780,8 +116791,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+xk
+xk
 xk
 xk
 xk
@@ -117237,9 +117248,9 @@ PV
 PV
 PV
 PV
-PV
-PV
 xk
+PR
+PR
 PR
 PR
 PR
@@ -117694,9 +117705,9 @@ PV
 PV
 PV
 PV
-PV
-PV
 xk
+PR
+QU
 oJ
 oJ
 oJ
@@ -118151,9 +118162,9 @@ PV
 PV
 PV
 PV
-PV
-PV
 xk
+PR
+QU
 oJ
 oJ
 oJ
@@ -118608,9 +118619,9 @@ PV
 PV
 PV
 PV
-PV
-PV
 xk
+PR
+PR
 PR
 PR
 PR
@@ -119065,8 +119076,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+xk
+xk
 xk
 xk
 xk
@@ -119536,7 +119547,7 @@ PR
 oJ
 oJ
 oJ
-JW
+qE
 oJ
 oJ
 oJ
@@ -119993,7 +120004,7 @@ oJ
 oJ
 oJ
 oJ
-JW
+qE
 oJ
 oJ
 oJ
@@ -120450,7 +120461,7 @@ PR
 oJ
 oJ
 oJ
-JW
+qE
 oJ
 oJ
 oJ
@@ -120893,8 +120904,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+xk
+xk
 xk
 xk
 xk
@@ -121350,9 +121361,9 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
+xk
+PR
+PR
 PR
 PR
 PR
@@ -121807,9 +121818,9 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
+xk
+PR
+QU
 oJ
 oJ
 oJ
@@ -122264,9 +122275,9 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
+xk
+PR
+QU
 oJ
 oJ
 oJ
@@ -122721,9 +122732,9 @@ PV
 PV
 PV
 PV
-PV
-PV
-PV
+xk
+PR
+PR
 PR
 PR
 PR
@@ -123178,8 +123189,8 @@ PV
 PV
 PV
 PV
-PV
-PV
+xk
+xk
 xk
 xk
 xk

@@ -11542,7 +11542,7 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/building)
 "hWA" = (
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /turf/open/indestructible/ground/bl/outside/stone,
 /area/f13/wasteland)
 "hWD" = (
@@ -21513,7 +21513,8 @@
 "ovu" = (
 /obj/item/radio/intercom/vb_st_rad/twn{
 	pixel_x = 1;
-	pixel_y = 1
+	pixel_y = 1;
+	layer = 4
 	},
 /obj/structure/closet/cabinet/vb_desk,
 /turf/open/floor/plasteel/f13/stone/rugged,
@@ -35600,7 +35601,7 @@
 /turf/open/indestructible/ground/bl/outside/mud,
 /area/f13/wasteland)
 "xml" = (
-/obj/item/reagent_containers/pill/patch/jet,
+/obj/item/reagent_containers/hypospray/inhaler/jet,
 /obj/item/stack/f13Cash/random/high,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalleftborderleft1"

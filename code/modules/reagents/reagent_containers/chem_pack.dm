@@ -49,3 +49,10 @@
 	if(sealed)
 		return
 	..()
+
+/obj/item/reagent_containers/chem_pack/radaway
+	name = "RadAway"
+	icon_state = "bloodpack_radaway"
+	desc = "RadAway is an intravenous chemical solution that bonds with radiation and toxin particles and passes them through the body's system. It takes some time to work and is a potent diuretic."
+	sealed = 1
+	list_reagents = list(/datum/reagent/medicine/radaway = 100)

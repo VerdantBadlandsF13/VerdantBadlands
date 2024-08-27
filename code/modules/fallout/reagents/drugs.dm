@@ -1,6 +1,7 @@
 /datum/reagent/drug/jet
 	name = "Jet Inhalant"
-	description = "A chemical used to induce a euphoric high derived from brahmin dung. Fast-acting, powerful, and highly addictive."
+	description = "A chemical used to induce a euphoric high derived from brahmin dung. Fast-acting, powerful, and highly addictive. <br>\
+	This is intended to be inhaled."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 20
 	addiction_threshold = 5
@@ -82,7 +83,8 @@
 
 /datum/reagent/drug/turbo
 	name = "Turbo Inhalant"
-	description = "A chemical compound that, when inhaled, vastly increases the user's reflexes and slows their perception of time. Carries a risk of addiction and extreme nausea and toxin damage if overdosed."
+	description = "A chemical compound that, when inhaled, vastly increases the user's reflexes and slows their perception of time. Carries a risk of addiction and extreme nausea and toxin damage if overdosed. <br>\
+	This is intended to be inhaled."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
 	overdose_threshold = 14
@@ -158,7 +160,6 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(20)
 	M.Dizzy(20)
-	M.adjustToxLoss(6, updating_health = FALSE)
 	if(prob(50))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -166,7 +167,8 @@
 
 /datum/reagent/drug/psycho
 	name = "Psycho Fluid"
-	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries an extreme risk of addiction."
+	description = "Makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries an extreme risk of addiction. <br>\
+	This is intended to be taken intravenously."
 	reagent_state = LIQUID
 	color = "#FF0000"
 	overdose_threshold = 10.1
@@ -271,15 +273,16 @@
 
 /datum/reagent/drug/buffout
 	name = "Buffout Powder"
-	description = "A powerful steroid which increases the user's strength and endurance."
+	description = "A powerful steroid which increases the user's strength and endurance. <br>\
+	This is intended to be taken orally."
 	color = "#FF9900"
 	reagent_state = SOLID
 	overdose_threshold = 10
-	addiction_threshold = 5
+	addiction_threshold = 10
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
-	pain_resistance = 40
+	pain_resistance = 5
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/carbon/human/M)
 	..()

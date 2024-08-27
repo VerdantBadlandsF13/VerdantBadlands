@@ -648,6 +648,12 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"cA" = (
+/obj/structure/badlands_props/factionised/gmb_flag_worn{
+	pixel_y = -32
+	},
+/turf/open/indestructible/ground/bl/mud,
+/area/f13/caves)
 "cB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2395,6 +2401,12 @@
 /obj/item/stack/f13Cash/random/low,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
+"jE" = (
+/obj/structure/badlands_props/factionised/gmb_flag{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "jF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/right{
@@ -3177,7 +3189,12 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/building)
 "mF" = (
-/turf/open/indestructible/ground/bl/gravel,
+/obj/structure/barricade/bars{
+	max_integrity = 1000;
+	name = "strong metal bars";
+	obj_integrity = 1000
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "mG" = (
 /obj/structure/rack/shelf_metal,
@@ -3432,7 +3449,7 @@
 "nK" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/bl/gravel,
-/area/f13/bl/gmb)
+/area/f13/caves)
 "nL" = (
 /obj/structure/table/wood/settler,
 /obj/item/instrument/guitar,
@@ -6088,6 +6105,12 @@
 	name = "metal plating"
 	},
 /area/f13/sewer)
+"xU" = (
+/obj/structure/badlands_props/factionised/gmb_flag_worn{
+	pixel_y = 32
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "xV" = (
 /obj/machinery/light/small{
 	brightness = 3;
@@ -6376,8 +6399,7 @@
 /turf/closed/indestructible/rock,
 /area/f13/building)
 "ze" = (
-/obj/structure/destructible/tribal_torch/lit,
-/turf/open/indestructible/ground/bl/gravel,
+/turf/closed/wall/mineral/wood,
 /area/f13/bl/gmb)
 "zf" = (
 /obj/structure/closet/crate/miningcar,
@@ -7407,10 +7429,8 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "CV" = (
-/obj/structure/obstacle/barbedwire{
-	dir = 4
-	},
-/turf/open/indestructible/ground/bl/gravel,
+/obj/machinery/door/unpowered/celldoor/gmb_gate,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "CW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7428,7 +7448,7 @@
 "CY" = (
 /obj/structure/table/wood,
 /turf/open/indestructible/ground/bl/gravel,
-/area/f13/bl/gmb)
+/area/f13/caves)
 "CZ" = (
 /obj/machinery/chem_heater,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -7478,8 +7498,11 @@
 /turf/closed/indestructible/rock,
 /area/f13/building)
 "Dj" = (
-/turf/open/indestructible/ground/bl/mud,
-/area/f13/bl/gmb)
+/obj/structure/badlands_props/factionised/dfs_graffiti{
+	pixel_x = 16
+	},
+/turf/closed/wall/rust,
+/area/f13/bl/dfs)
 "Dl" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/homemade_melee,
 /obj/structure/table/reinforced,
@@ -8174,10 +8197,10 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "FW" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 8
+/obj/structure/badlands_props/factionised/gmb_graffiti{
+	pixel_x = 16
 	},
-/turf/open/indestructible/ground/bl/gravel,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "FX" = (
 /obj/structure/reagent_dispensers/rainwater_tank{
@@ -8614,7 +8637,7 @@
 /obj/structure/table/wood,
 /obj/item/flashlight/lantern,
 /turf/open/indestructible/ground/bl/gravel,
-/area/f13/bl/gmb)
+/area/f13/caves)
 "HI" = (
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
@@ -8978,9 +9001,9 @@
 /area/f13/bl/gmb)
 "Jf" = (
 /obj/structure/closet/crate/medical,
-/obj/item/reagent_containers/blood/radaway,
-/obj/item/reagent_containers/blood/radaway,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /turf/open/floor/f13{
@@ -11614,11 +11637,11 @@
 /turf/open/floor/carpet/black,
 /area/f13/bl/dfs)
 "TM" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 4
+/obj/structure/badlands_props/factionised/gmb_flag_worn{
+	pixel_y = -32
 	},
-/turf/open/indestructible/ground/bl/gravel,
-/area/f13/bl/gmb)
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "TP" = (
 /obj/machinery/vending/hydroseeds,
 /turf/open/floor/f13{
@@ -21881,7 +21904,7 @@ Gs
 Gs
 Gs
 Gs
-Cg
+jE
 uo
 uo
 lY
@@ -44486,7 +44509,7 @@ Va
 Va
 Va
 OA
-mp
+Dj
 kT
 kT
 Ws
@@ -59319,12 +59342,12 @@ OA
 OA
 OA
 OA
-TZ
-TZ
-TZ
-TZ
-TZ
-TZ
+OA
+ze
+ze
+ze
+ze
+ze
 TZ
 TZ
 TZ
@@ -59776,13 +59799,13 @@ is
 Qn
 oC
 is
-TM
-mF
-mF
+cP
+Qn
+Qn
 Cg
 Cg
-Cg
-Cg
+FW
+CV
 Cg
 Cg
 Cg
@@ -60222,8 +60245,8 @@ Va
 jh
 CS
 CS
-is
-Va
+cA
+wE
 Va
 oC
 Qn
@@ -60233,13 +60256,13 @@ Qn
 cP
 is
 is
-CV
-mF
+uK
+Qn
 nK
 HH
 Cg
 Cg
-Cg
+mF
 Cg
 Cg
 mR
@@ -60690,17 +60713,17 @@ Qn
 uK
 is
 Qn
-FW
-mF
+yY
+Qn
 nK
 CY
 kz
 mR
-TZ
-TZ
-TZ
-TZ
-TZ
+OA
+OA
+OA
+OA
+OA
 Gs
 Gs
 Gs
@@ -61147,14 +61170,14 @@ Qn
 yY
 Qn
 Qn
-Dj
-Dj
+is
+is
+oC
 ze
-TZ
-TZ
-TZ
-TZ
-Va
+ze
+ze
+OA
+OA
 Va
 Va
 OA
@@ -61605,13 +61628,13 @@ OA
 OA
 OA
 OA
+ze
+ze
+ze
 OA
 OA
 OA
-Va
-Va
-Va
-Va
+OA
 Va
 Va
 OA
@@ -62061,11 +62084,11 @@ Va
 Va
 Va
 Va
-Va
-Va
-Va
-Va
-Va
+OA
+OA
+OA
+OA
+OA
 Va
 Va
 Va
@@ -78959,7 +78982,7 @@ CS
 CS
 CS
 CS
-CS
+TM
 kl
 kl
 CP
@@ -79408,7 +79431,7 @@ kl
 kl
 kl
 kl
-CS
+xU
 KW
 CS
 CS

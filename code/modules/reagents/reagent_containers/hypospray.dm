@@ -148,7 +148,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak
 	name = "stimpak"
-	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
+	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body. <br>\
+	This is intended to be taken intravenously. Using it in any other manner may be fatal."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_stimpak"
 	volume = 10
@@ -185,7 +186,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	name = "super stimpak"
-	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
+	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb. <br>\
+	This is intended to be taken intravenously. Using it in any other manner may be fatal."
 	icon_state = "hypo_superstimpak"
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/medicine/super_stimpak = 10)
@@ -201,7 +203,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/medx
 	name = "Med-X"
-	desc = "A short-lasting shot of Med-X applied via hypodermic needle."
+	desc = "A short-lasting shot of Med-X applied via hypodermic needle. <br>\
+	This is intended to be taken intravenously. Using it in any other manner may be fatal."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_medx"
 	volume = 15
@@ -220,7 +223,8 @@
 
 /obj/item/reagent_containers/hypospray/medipen/psycho
 	name = "Psycho"
-	desc = "Contains Psycho, a drug that makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries a risk of addiction."
+	desc = "Contains Psycho, a drug that makes the user hit harder and shrug off slight stuns, but causes slight brain damage and carries a risk of addiction. <br>\
+	This is intended to be taken intravenously. Using it in any other manner may be fatal."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "hypo_psycho"
 	volume = 10
@@ -233,6 +237,48 @@
 		return
 	else
 		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg', 100, 1)
+
+// ---------------------------------
+// JET
+//This and Turbo need to be turned into proper inhalers, so we don't have the 'inject' fluff with it. Oh well, it'll work for now. - Carl
+/obj/item/reagent_containers/hypospray/medipen/jet
+	name = "Jet"
+	desc = "A highly addictive meta-amphetamine that produces a fast-acting, intense euphoric high on the user. <br>\
+	This is intended to be taken as an inhalant. Using it in any other manner may be fatal."
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "hypo_jet"
+	volume = 10
+	amount_per_transfer_from_this = 10
+	list_reagents = list(/datum/reagent/drug/jet = 10)
+	reagent_flags = TRANSPARENT
+
+/obj/item/reagent_containers/hypospray/medipen/jet/attack()
+	. = ..()
+	if(!list_reagents)
+		return
+	else
+		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg', 100, 1)
+
+// ---------------------------------
+// TURBO
+//This and Jet need to be turned into proper inhalers, so we don't have the 'inject' fluff with it. Oh well, it'll work for now. - Carl
+/obj/item/reagent_containers/hypospray/medipen/turbo
+	name = "Turbo"
+	desc = "A chem that vastly increases the user's reflexes and slows their perception of time. <br>\
+	This is intended to be taken as an inhalant. Using it in any other manner may be fatal."
+	icon = 'icons/fallout/objects/medicine/drugs.dmi'
+	icon_state = "hypo_turbo"
+	volume = 5
+	amount_per_transfer_from_this = 5
+	list_reagents = list(/datum/reagent/drug/turbo = 5)
+	reagent_flags = TRANSPARENT
+
+/obj/item/reagent_containers/hypospray/medipen/turbo/attack()
+	. = ..()
+	if(!list_reagents)
+		return
+	else
+		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg', 100, 1)
 
 // End Fallout -------------------------------------------------
 

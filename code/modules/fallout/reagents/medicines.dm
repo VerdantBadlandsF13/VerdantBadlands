@@ -3,7 +3,8 @@
 
 /datum/reagent/medicine/stimpak
 	name = "Stimpak Fluid"
-	description = "Rapidly heals damage when injected. Toxic if ingested or inhaled."
+	description = "Rapidly heals damage when injected. Toxic if ingested or inhaled. <br>\
+	This is intended to be taken intravenously."
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "grossness"
@@ -69,7 +70,8 @@
 
 /datum/reagent/medicine/stimpakimitation
 	name = "Imitation Stimpak Fluid"
-	description = "Rapidly heals damage when injected. A poor man's stimpak."
+	description = "Rapidly heals damage when injected. A poor man's stimpak. <br>\
+	Unlike its real counterparts, this can be taken in any manner."
 	reagent_state = LIQUID
 	color = "#FFA500"
 	ghoulfriendly = TRUE
@@ -87,7 +89,8 @@
 
 /datum/reagent/medicine/super_stimpak
 	name = "super stim chemicals"
-	description = "Chemicals found in pre-war stimpaks."
+	description = "Chemicals found in pre-war stimpaks. <br>\
+	This is intended to be taken intravenously."
 	reagent_state = LIQUID
 	color = "#e50d0d"
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
@@ -177,7 +180,8 @@
 
 /datum/reagent/medicine/radx
 	name = "Rad-X"
-	description = "Allows the user to prolong exposure time to radiation with less adverse effects."
+	description = "Allows the user to prolong exposure time to radiation with less adverse effects. <br>\
+	This is intended to be taken orally."
 	reagent_state = LIQUID
 	color = "#ff6100"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
@@ -219,7 +223,8 @@
 
 /datum/reagent/medicine/radaway
 	name = "Radaway"
-	description = "A potent anti-radiation drug."
+	description = "A potent anti-radiation drug. <br>\
+	This is intended to be taken intravenously."
 	reagent_state = LIQUID
 	color = "#ff7200"
 	metabolization_rate = 2 * REAGENTS_METABOLISM
@@ -253,7 +258,9 @@
 
 /datum/reagent/medicine/medx
 	name = "Med-X"
-	description = "Med-X is a potent painkiller, allowing users to withstand high amounts of pain and continue functioning. Addictive. Prolonged presence in the body can cause seizures and organ damage."
+	description = "Med-X is a potent painkiller, allowing users to withstand high amounts of pain and continue functioning. Addictive. \
+	Prolonged presence in the body can cause seizures and organ damage. <br>\
+	This is intended to be taken intravenously."
 	reagent_state = LIQUID
 	color = "#6D6374"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
@@ -261,6 +268,14 @@
 	addiction_threshold = 16
 	pain_resistance = 80
 	thirst_drain = -0.3
+
+/datum/reagent/medicine/medx/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	if(iscarbon(M) && M.stat != DEAD)
+		if(method in list(INGEST, VAPOR, TOUCH))
+			M.adjustToxLoss(1.5*reac_volume*REAGENTS_EFFECT_MULTIPLIER)
+			if(show_message)
+				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
+	..()
 
 /datum/reagent/medicine/medx/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -333,13 +348,22 @@
 
 /datum/reagent/medicine/mentat
 	name = "Mentat Powder"
-	description = "A powerful drug that heals and increases the perception and intelligence of the user."
+	description = "A powerful drug that heals and increases the perception and intelligence of the user. <br>\
+	This is intended to be taken orally."
 	color = "#C8A5DC"
 	reagent_state = SOLID
 	overdose_threshold = 25
 	addiction_threshold = 15
 	ghoulfriendly = TRUE
 	pain_resistance = -25
+
+/datum/reagent/medicine/mentat/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	if(iscarbon(M) && M.stat != DEAD)
+		if(method in list(INJECT, VAPOR, TOUCH))
+			M.adjustToxLoss(1.5*reac_volume*REAGENTS_EFFECT_MULTIPLIER)
+			if(show_message)
+				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
+	..()
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
@@ -395,11 +419,20 @@
 
 /datum/reagent/medicine/fixer
 	name = "Fixer Powder"
-	description = "Treats addictions while also purging other chemicals from the body. Side effects include nausea."
+	description = "Treats addictions while also purging other chemicals from the body. Side effects include nausea. <br>\
+	This is intended to be taken orally."
 	reagent_state = SOLID
 	color = "#C8A5DC"
 	ghoulfriendly = TRUE
 	pain_resistance = -10
+
+/datum/reagent/medicine/fixer/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
+	if(iscarbon(M) && M.stat != DEAD)
+		if(method in list(INJECT, VAPOR, TOUCH))
+			M.adjustToxLoss(1.5*reac_volume*REAGENTS_EFFECT_MULTIPLIER)
+			if(show_message)
+				to_chat(M, "<span class='warning'>You don't feel so good...</span>")
+	..()
 
 /datum/reagent/medicine/fixer/on_mob_life(mob/living/carbon/M)
 	for(var/datum/reagent/R in M.reagents.addiction_list)

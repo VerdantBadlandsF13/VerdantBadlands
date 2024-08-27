@@ -91,7 +91,7 @@
 
 /datum/crafting_recipe/jet
 	name = "Jet"
-	result = /obj/item/reagent_containers/pill/patch/jet
+	result = /obj/item/reagent_containers/hypospray/medipen/jet
 	reqs = list(/obj/item/clothing/mask/cigarette = 1,
 				/datum/reagent/consumable/milk = 10,
 				/obj/item/toy/crayon/spraycan = 1)
@@ -100,9 +100,18 @@
 	category = CAT_MEDICAL
 	always_available = FALSE
 
+/datum/crafting_recipe/jet_recycle
+	name = "Recycle Jet"
+	result = /obj/item/reagent_containers/hypospray/medipen/jet
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 1,
+				/obj/item/reagent_containers/hypospray/medipen/jet = 1)
+	time = 60
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MEDICAL
+
 /datum/crafting_recipe/turbo
 	name = "Turbo"
-	result = /obj/item/reagent_containers/pill/patch/turbo
+	result = /obj/item/reagent_containers/hypospray/medipen/turbo
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 2,
 				/obj/item/reagent_containers/food/snacks/grown/bl/milkweed = 2,
 				/datum/reagent/consumable/ethanol/whiskey = 15)
@@ -110,6 +119,15 @@
 	tools = list(TOOL_WORKBENCH)
 	category = CAT_MEDICAL
 	always_available = FALSE
+
+/datum/crafting_recipe/turbo_recycle
+	name = "Recycle Turbo"
+	result = /obj/item/reagent_containers/hypospray/medipen/turbo
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/bl/skullcap = 1,
+				/obj/item/reagent_containers/hypospray/medipen/turbo = 1)
+	time = 60
+	tools = list(TOOL_WORKBENCH)
+	category = CAT_MEDICAL
 
 /datum/crafting_recipe/psycho
 	name = "Psycho"

@@ -46,33 +46,6 @@
 /obj/item/reagent_containers/pill/patch/get_belt_overlay()
 	return mutable_appearance('icons/obj/clothing/belt_overlays.dmi', "pouch")
 
-
-// ---------------------------------
-// JET
-
-/obj/item/reagent_containers/pill/patch/jet
-	name = "Jet"
-	desc = "A highly addictive meta-amphetamine that produces a fast-acting, intense euphoric high on the user."
-	list_reagents = list(/datum/reagent/drug/jet = 10)
-	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	icon_state = "patch_jet"
-	swallow_audio = 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg'
-
-/obj/item/reagent_containers/pill/patch/jet/afterattack()
-	. = ..()
-	playsound(loc, swallow_audio, 100, 1)
-
-// ---------------------------------
-// TURBO
-
-/obj/item/reagent_containers/pill/patch/turbo
-	name = "Turbo"
-	desc = "A chem that vastly increases the user's reflexes and slows their perception of time."
-	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	icon_state = "patch_turbo"
-	list_reagents = list(/datum/reagent/drug/turbo = 5)
-
-
 // ---------------------------------
 // CUSTOM POWDER
 

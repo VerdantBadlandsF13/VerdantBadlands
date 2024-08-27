@@ -2069,7 +2069,7 @@
 /area/f13/bunker)
 "fbT" = (
 /obj/structure/table,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /obj/item/storage/pill_bottle/chem_tin/radx,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
@@ -5852,7 +5852,7 @@
 /area/f13/tunnel)
 "nSe" = (
 /obj/structure/table,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /turf/open/floor/plasteel/barber{
 	icon_state = "plating"
 	},
@@ -7167,7 +7167,7 @@
 "qnV" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/chem_pack/radaway,
 /turf/open/floor/plasteel/barber{
 	icon = 'icons/turf/f13floors2.dmi';
 	icon_state = "bluerustychess2"

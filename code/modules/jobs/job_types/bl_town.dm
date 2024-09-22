@@ -132,6 +132,7 @@
 	Your word is law, the lookouts only ever stop looking out to look up (at you), and your make sure to keep the troublemakers out; be they raiders, mercenaries, or republicans."
 	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband=1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/roundstart=1,
 		/obj/item/ammo_box/magazine/m45=2,
 		/obj/item/restraints/handcuffs/cable/zipties=2,

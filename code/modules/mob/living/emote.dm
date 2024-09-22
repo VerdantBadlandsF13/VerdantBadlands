@@ -427,12 +427,6 @@
 	key_third_person = "wsmiles"
 	message = "smiles weakly."
 
-/datum/emote/living/yawn
-	key = "yawn"
-	key_third_person = "yawns"
-	message = "yawns."
-	emote_type = EMOTE_AUDIBLE
-
 /datum/emote/living/custom
 	key = "me"
 	key_third_person = "custom"

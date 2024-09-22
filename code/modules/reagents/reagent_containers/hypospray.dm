@@ -90,6 +90,7 @@
 	flags_1 = null
 	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/preservahyde = 3, /datum/reagent/medicine/coagulant = 2)
 	custom_premium_price = PRICE_ALMOST_EXPENSIVE
+	var/use_sound
 
 /obj/item/reagent_containers/hypospray/medipen/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to choke on \the [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -99,6 +100,9 @@
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 		return
+
+	if(use_sound)
+		playsound(loc, use_sound, 100, 1)
 
 	if(M == user)
 		to_chat(M, "<span class='notice'>You jab yourself with the [src].</span>")
@@ -155,13 +159,7 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/medicine/stimpak = 10)
-
-/obj/item/reagent_containers/hypospray/medipen/stimpak/attack()
-	. = ..()
-	if(!list_reagents)
-		return
-	else
-		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/stim_use.ogg', 100, 1)
+	use_sound = 'modular_badlands/code/modules/rp_misc/sound/medical/stim_use.ogg'
 
 /obj/item/reagent_containers/hypospray/medipen/stimpak/on_reagent_change(changetype)
 	update_icon()
@@ -210,13 +208,7 @@
 	volume = 15
 	amount_per_transfer_from_this = 15
 	list_reagents = list(/datum/reagent/medicine/medx = 15)
-
-/obj/item/reagent_containers/hypospray/medipen/medx/attack()
-	. = ..()
-	if(!list_reagents)
-		return
-	else
-		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingmedx.ogg', 100, 1)
+	use_sound = 'modular_badlands/code/modules/rp_misc/sound/medical/usingmedx.ogg'
 
 // ---------------------------------
 // PSYCHO
@@ -230,13 +222,11 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/psycho = 10)
+	use_sound = 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg'
 
-/obj/item/reagent_containers/hypospray/medipen/psycho/attack()
+/obj/item/reagent_containers/hypospray/medipen/psycho/attack(mob/living/carbon/druggy)
 	. = ..()
-	if(!list_reagents)
-		return
-	else
-		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingpsycho.ogg', 100, 1)
+	druggy.emote("warcry")
 
 // ---------------------------------
 // JET
@@ -251,13 +241,7 @@
 	amount_per_transfer_from_this = 10
 	list_reagents = list(/datum/reagent/drug/jet = 10)
 	reagent_flags = TRANSPARENT
-
-/obj/item/reagent_containers/hypospray/medipen/jet/attack()
-	. = ..()
-	if(!list_reagents)
-		return
-	else
-		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg', 100, 1)
+	use_sound = 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg'
 
 // ---------------------------------
 // TURBO
@@ -272,13 +256,7 @@
 	amount_per_transfer_from_this = 5
 	list_reagents = list(/datum/reagent/drug/turbo = 5)
 	reagent_flags = TRANSPARENT
-
-/obj/item/reagent_containers/hypospray/medipen/turbo/attack()
-	. = ..()
-	if(!list_reagents)
-		return
-	else
-		playsound(loc, 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg', 100, 1)
+	use_sound = 'modular_badlands/code/modules/rp_misc/sound/medical/usingjet.ogg'
 
 // End Fallout -------------------------------------------------
 

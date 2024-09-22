@@ -357,7 +357,7 @@
 "cS" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/medical/ointment/twelve,
-/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/gauze/improvised,
 /obj/item/razor,
 /obj/structure/closet/locker/medcabinet{
 	pixel_y = 25
@@ -549,6 +549,7 @@
 "eg" = (
 /obj/effect/decal/remains/human,
 /obj/structure/mine_support,
+/obj/item/pickaxe,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "ek" = (
@@ -593,6 +594,15 @@
 	icon_state = "plating"
 	},
 /area/f13/building)
+"eH" = (
+/obj/effect/decal/cleanable/crayon{
+	color = "#900000";
+	icon_state = "skull";
+	pixel_y = 32;
+	name = "grafitti"
+	},
+/turf/open/indestructible/ground/outside/ruins,
+/area/f13/tunnel)
 "eJ" = (
 /obj/effect/decal/cleanable/ash/large,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_advlongarms,
@@ -1001,10 +1011,8 @@
 /turf/open/indestructible,
 /area/f13/caves)
 "gS" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 8
-	},
-/obj/structure/mine_support,
+/obj/item/pickaxe,
+/obj/effect/decal/remains/human,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "gW" = (
@@ -1027,6 +1035,10 @@
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "QMLoad"
+	},
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
@@ -1273,6 +1285,10 @@
 /obj/machinery/conveyor{
 	dir = 5;
 	id = "QMUnload"
+	},
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
@@ -2866,6 +2882,10 @@
 	dir = 9;
 	id = "QMLoad"
 	},
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
 "tU" = (
@@ -4046,6 +4066,10 @@
 	dir = 1;
 	id = "QMUnload"
 	},
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
 "BO" = (
@@ -4314,6 +4338,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
 "DK" = (
@@ -4426,6 +4454,10 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8;
+	color = "#A47449"
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
@@ -4779,6 +4811,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/landmark/start/f13/hilltop_settler,
 /turf/open/floor/f13{
 	icon_state = "rampuptop";
 	dir = 1
@@ -4863,6 +4896,7 @@
 /area/f13/building)
 "Hq" = (
 /obj/structure/simple_door/metal/dirtystore,
+/obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -5600,8 +5634,10 @@
 	},
 /area/f13/vault/atrium)
 "MH" = (
-/obj/machinery/mineral/wasteland_vendor/bank,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/item/restraints/legcuffs/beartrap{
+	armed = 1
+	},
+/turf/open/floor/wood/wood_wide,
 /area/f13/building)
 "MJ" = (
 /obj/structure/shelf_wood,
@@ -6310,6 +6346,10 @@
 	dir = 10;
 	id = "QMUnload"
 	},
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/building)
 "Rk" = (
@@ -6437,6 +6477,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/landmark/start/f13/hilltop_settler,
 /turf/open/floor/f13{
 	icon_state = "rampuptop";
 	dir = 1
@@ -10110,20 +10151,20 @@ PV
 PV
 PV
 PV
+xk
+xk
+xk
+xk
+xk
 PV
 PV
 PV
 PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
-PV
+xk
+xk
+xk
+xk
+xk
 PV
 PV
 PV
@@ -10568,18 +10609,18 @@ PV
 xk
 xk
 xk
+Hk
+Hk
+Hk
 xk
 xk
 xk
 xk
 xk
 xk
-xk
-xk
-xk
-xk
-xk
-xk
+Hk
+Hk
+Hk
 xk
 xk
 xk
@@ -11026,6 +11067,7 @@ xk
 Hk
 Hk
 Hk
+vZ
 Hk
 Hk
 Hk
@@ -11034,8 +11076,7 @@ Hk
 Hk
 Hk
 Hk
-Hk
-Hk
+vZ
 Hk
 Hk
 Hk
@@ -11483,7 +11524,6 @@ xk
 Hk
 Hx
 aG
-vZ
 aG
 aG
 aG
@@ -11492,7 +11532,8 @@ aG
 aG
 aG
 aG
-vZ
+aG
+aG
 aG
 Hx
 Hk
@@ -17426,7 +17467,7 @@ xk
 xk
 Hk
 Hk
-MH
+aJ
 zB
 zB
 Hk
@@ -27027,7 +27068,7 @@ hx
 hx
 hx
 le
-fs
+MH
 fs
 Pj
 fs
@@ -82645,7 +82686,7 @@ PV
 PV
 PV
 PV
-fA
+Cu
 hx
 hx
 hx
@@ -83102,15 +83143,15 @@ jy
 jy
 PV
 PV
-Cu
 hx
 hx
-Ca
+hx
+hx
 hx
 yV
 PV
 an
-VS
+eH
 VS
 bM
 bM
@@ -83562,7 +83603,7 @@ PV
 PV
 Lp
 hx
-fA
+hx
 Zj
 PV
 PV
@@ -84018,8 +84059,8 @@ PV
 PV
 PV
 PV
+gS
 hx
-fA
 PV
 PV
 PV
@@ -84474,9 +84515,9 @@ KT
 hx
 hx
 hx
-hx
-hx
-gS
+PV
+PV
+Lp
 PV
 PV
 PV

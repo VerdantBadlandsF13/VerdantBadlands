@@ -122,7 +122,7 @@ Light, followed by extreme.
 	if(src.gender == FEMALE)
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
 	else
-		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/man_pain[rand(1,3)].ogg"
 	playsound(src, highpain_sound, 50, 0)
 	last_breath = world.time + 2 MINUTES
 
@@ -135,7 +135,7 @@ Light, followed by extreme.
 	if(src.gender == FEMALE)
 		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/woman_pain[rand(1,4)].ogg"
 	else
-		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/male_pain[rand(1,3)].ogg"
+		highpain_sound = "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/man_pain[rand(1,3)].ogg"
 	playsound(src, highpain_sound, 50, 0)
 	last_breath = world.time + 2 MINUTES
 

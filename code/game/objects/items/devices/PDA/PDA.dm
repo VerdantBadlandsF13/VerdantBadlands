@@ -80,11 +80,6 @@ GLOBAL_LIST_EMPTY(PDAs)
 	var/allow_emojis = TRUE //if the pda can send emojis and actually have them parsed as such
 	var/list/pipsounds = list("modular_sunset/sound/pipsounds/pip1.ogg", "modular_sunset/sound/pipsounds/pip2.ogg", "modular_sunset/sound/pipsounds/pip3.ogg")
 
-	light_system = MOVABLE_LIGHT_DIRECTIONAL
-	light_range = 4
-	light_power = 0.8
-	light_color = "#99FF33"
-
 	var/obj/item/card/id/id = null //Making it possible to slot an ID card into the PDA so it can function as both.
 	var/ownjob = null //related to above
 
@@ -103,6 +98,12 @@ GLOBAL_LIST_EMPTY(PDAs)
 	var/list/blocked_pdas
 
 	var/list/saved_frequencies = list("Common" = FREQ_COMMON)
+
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_range = 4
+	light_power = 0.8
+	light_color = "#99FF33"
+	light_on = FALSE
 
 /obj/item/pda/suicide_act(mob/living/carbon/user)
 	var/deathMessage = msg_input(user)
@@ -1032,11 +1033,11 @@ GLOBAL_LIST_EMPTY(PDAs)
 		return
 	if(fon)
 		fon = FALSE
-		light_on = FALSE
+		set_light_on(FALSE)
 		playsound(src, "modular_sunset/sound/pipsounds/piplightoff.ogg", 50, 1)
 	else if(f_lum)
 		fon = TRUE
-		light_on = TRUE
+		set_light_on(TRUE)
 		playsound(src, "modular_sunset/sound/pipsounds/piplighton.ogg", 50, 1)
 	update_icon()
 

@@ -522,9 +522,9 @@
 	},
 /area/f13/bl/gmb)
 "bV" = (
-/obj/structure/sink/kitchen{
-	dir = 4;
-	pixel_x = -12
+/obj/structure/sink/greyscale{
+	dir = 8;
+	pixel_x = -14
 	},
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
@@ -1645,7 +1645,6 @@
 	pixel_y = 32
 	},
 /obj/structure/closet/crate/bin/trashbin,
-/obj/item/grenade/f13/mine/planted,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
 "gM" = (
@@ -3433,12 +3432,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bl/gmb)
 "nI" = (
-/obj/structure/simple_door/metal/ventilation,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/closed/indestructible/f13vaultrusted{
-	name = "rusty reinforced wall"
-	},
-/area/f13/sewer)
+/obj/item/grenade/f13/mine/planted,
+/turf/open/floor/f13/wood,
+/area/f13/bl/gmb)
 "nJ" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -45107,7 +45103,7 @@ Cr
 Cr
 Cr
 vV
-nI
+do
 HF
 HF
 RE
@@ -56609,7 +56605,7 @@ NT
 NT
 NT
 NT
-NT
+nI
 Gs
 Cg
 Os

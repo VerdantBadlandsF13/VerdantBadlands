@@ -465,6 +465,7 @@
 
 /proc/get_all_jobs()
 	return list("Wastelander", "Tavernkeep",
+				"Hilltop Leadership", "Hilltop Lookout", "Hilltop Inhabitant",
 				"Commander", "Practitioner", "Walker", "Militia", "Volunteer",
 				"DFS Advisor", "DFS Enforcer", "DFS Agent", "DFS Regular", "DFS Grunt",
 				"Vault-Tec Overseer", "Vault-Tec Security Chief", "Vault-Tec Engineering Chief",

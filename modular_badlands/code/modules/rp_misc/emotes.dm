@@ -343,3 +343,63 @@
 		var/mob/living/L = user
 		L.Knockdown(200)
 		L.Paralyze(200)
+
+/datum/emote/living/yawn
+	key = "yawn"
+	key_third_person = "yawns"
+	message = "yawns."
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/yawn/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/female_yawn[rand(1,3)].ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/male_yawn[rand(1,2)].ogg"
+
+/datum/emote/living/mumble
+	key = "mumble"
+	key_third_person = "mumbles"
+	message = "mumbles!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/mumble/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/mumble_female.ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/mumble_male.ogg"
+
+/datum/emote/living/hum
+	key = "hum"
+	key_third_person = "hums"
+	message = "hums!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hum/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/female/femalehumming.ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/forced_emotes/male/malehumming.ogg"
+
+/datum/emote/living/hem
+	key = "hem"
+	key_third_person = "hems"
+	message = "hems!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hem/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human_user = user
+	if(human_user.gender == FEMALE)
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/female/hem_female.ogg"
+	else
+		return "modular_badlands/code/modules/rp_misc/sound/character_fluff/emotes/male/hem_male.ogg"

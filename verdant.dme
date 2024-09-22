@@ -3699,7 +3699,6 @@
 #include "modular_badlands\code\modules\rp_misc\fluff.dm"
 #include "modular_badlands\code\modules\rp_misc\screen_objs.dm"
 #include "modular_badlands\code\modules\rp_misc\secret_areas.dm"
-#include "modular_badlands\code\modules\rp_misc\tips.dm"
 #include "modular_badlands\code\modules\rp_misc\wound_audio.dm"
 #include "modular_badlands\code\modules\rp_misc\audio_pings\audio_pings.dm"
 #include "modular_badlands\code\modules\rp_misc\dfs_lift\lift_base.dm"

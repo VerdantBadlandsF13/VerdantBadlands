@@ -1257,6 +1257,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		to_chat(H,"You can understand idiots!")
 		H.grant_language(/datum/language/aphasia)
 
+	if(H.special_i >= 9)
+		to_chat(H,"You can teach the basic concepts of your trainings.")
+		H.verbs += /mob/living/proc/teach_skill
+
 	if(H.special_a >= 6)
 		to_chat(H,"As you have enough agility points, you know how to sneak. Higher points increases effectiveness.")
 		stealth = new

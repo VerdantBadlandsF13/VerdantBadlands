@@ -3649,6 +3649,7 @@
 #include "modular_badlands\_readme.dm"
 #include "modular_badlands\code\modules\character_building\stealth.dm"
 #include "modular_badlands\code\modules\character_building\tackle.dm"
+#include "modular_badlands\code\modules\character_building\teach.dm"
 #include "modular_badlands\code\modules\environment\flora.dm"
 #include "modular_badlands\code\modules\environment\dangers\mines.dm"
 #include "modular_badlands\code\modules\environment\dangers\mines_wires.dm"

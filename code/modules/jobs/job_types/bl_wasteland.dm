@@ -7,9 +7,31 @@
 	faction = FACTION_WASTELAND
 	total_positions = -1
 	spawn_positions = -1
-	description = "Whether you're a veteran pathfinder, or just someone down on their luck? You've the misfortune to be in this horrid place."
+
+	description = "Vermont. Specifically, 'Brattleboro', or, as the locals call it, 'Battleboro'. \
+	Unless you're from the Republic, in which case it's the 'Battleboro Contested Zone'. A hellscape. <br>\
+	<br>\
+	Those who inhabit this area are among a special breed: <br>\
+	 - Republican washouts that don't make the cut for the Guard, even as conscripts. Traitors and deserters alike. <br>\
+	 - The few trying to tame the struggle of day-to-day life. <br>\
+	 - All the other dregs of life. Raiders, rapists, thieves, etc. <br>\
+	<br>\
+	You, of all people, would know this very well. Try to get an 'in' with the locals, or carve your own way forward."
+
 	supervisors = "fate"
 	selection_color = "#5a5a5a"
+
+	forbids = "Subverting Danger: <br> \
+				- Even minor injuries are often lethal without treatment. Assure your stock of supplies don't dry up. <br>\
+				- Environmental dangers are abundant in Vermont. Monitor your geiger counter, keep an eye to the ground and make sure RadX is in reach. <br>\
+				- Tend to your own. You never know who'll stab you in the back. <br>\
+				- When in doubt, listen to your gut."
+
+	enforces = "General Tips: <br> \
+				- The higher you are, the less static your radio will both pick up and send. <br> \
+				- Track the double 'H'. Hydration and Hunger. <br>\
+				- Inspect your equipment regularly. Keep goods meant for patching close; spares even closer.<br>\
+				- Your S.P.E.C.I.A.L. score modifies all manner of things. Here's hoping you filled that form out correctly."
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
 
@@ -45,8 +67,9 @@
 
 	loadout_options = list(
 	/datum/outfit/loadout/wanderer,
-	/datum/outfit/loadout/prospector,
-	/datum/outfit/loadout/exile)
+	/datum/outfit/loadout/scavenger,
+	/datum/outfit/loadout/exile,
+	/datum/outfit/loadout/tribal)
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"
@@ -75,41 +98,51 @@
 		/obj/item/clothing/suit/f13/cowboygvest,
 		/obj/item/clothing/suit/f13/westender,
 		/obj/item/clothing/suit/overalls)
-	suit_store = pick(
-		/obj/item/gun/ballistic/revolver/single_shotgun,
-		/obj/item/gun/ballistic/revolver/piperifle,
-		/obj/item/gun/ballistic/automatic/autopipe)
-	backpack_contents += pick(
-		/obj/item/gun/ballistic/automatic/pistol/pistol22/roundstart,
-		/obj/item/gun/ballistic/revolver/revolver38/roundstart)
 
-// Wanderer - Wanderer don't tend to stay in one spot. They generally move along the Wasteland looking for their next paycheck.
 /datum/outfit/loadout/wanderer
 	name = "Wanderer"
+	desc = "You've been on the road for quite some time, with your trusty sidearm and old pair of boots. \
+	Perhaps now is the time for settling down somewhere? Or you could continue on your trek; it's not like you're hurting for choice."
 	uniform = /obj/item/clothing/under/f13/merca
 	shoes = /obj/item/clothing/shoes/f13/military
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	suit = /obj/item/clothing/suit/armored/f13/light/duster
+	suit_store = /obj/item/gun/ballistic/revolver/piperifle
+	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1)
 
-// Prospector - Prospectors are scavengers. They dig through the ruins of the old world for supplies. Starts with mining equipment.
-/datum/outfit/loadout/prospector
-	name = "Prospector"
-	shoes = /obj/item/clothing/shoes/f13/military
+/datum/outfit/loadout/scavenger
+	name = "Scavenger"
+	desc = "Battleboro is yet another in the list of many places you've been to, tearing apart to find its riches. \
+	Even after all this time, surely there's something left for an individual like you to unearth. Right?"
+	shoes = /obj/item/clothing/shoes/f13/military/explorer
 	r_hand = /obj/item/storage/backpack/duffelbag/scavengers
-	l_hand = /obj/item/pickaxe/drill
+	l_hand = /obj/item/pickaxe
 	belt = /obj/item/storage/belt
 	backpack_contents = list(/obj/item/mining_scanner=1,
 							/obj/item/metaldetector=1,
 							/obj/item/shovel=1,
-							/obj/item/book/granter/trait/techno=1,
-							/obj/item/storage/box/vendingmachine=1)
+							/obj/item/gun/ballistic/automatic/pistol/pistol22/roundstart=1)
 
-// Vault Exile - Probably not a great person. They're given what you'd expect of a proper wastrel, with some fluff to boot.
 /datum/outfit/loadout/exile
 	name = "Exiled Dweller"
+	desc = "Vault Fifty-Eight, an economic hub in the area. Your former home. Unless you're a freak from another vault altogether. \
+	You've either managed to find or build a shotgun, and whatever the reason for your exile, you've made a pretty decent living out here in the wastes."
 	uniform = /obj/item/clothing/under/f13/exile
-	shoes = /obj/item/clothing/shoes/f13/military
+	shoes = /obj/item/clothing/shoes/f13/military/leather
 	gloves = 	/obj/item/pda/dweller
 	id = /obj/item/card/id/fadedvaultid
+	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
 	backpack_contents = list(/obj/item/card/id/selfassign=1)
 
+/datum/outfit/loadout/tribal
+	name = "Tribal"
+	desc = "Vermont itself isn't home to many known tribes, so while you're likely to have come out of state, you've nonetheless found a place here. \
+	You're a unique sight, if nothing else. Now, how do you intend to communicate with the locals?"
+	l_hand = /obj/item/gun/ballistic/bow/tribal
+	uniform = /obj/item/clothing/under/f13/raiderrags
+	mask = /obj/item/clothing/mask/facewrap
+	shoes = /obj/item/clothing/shoes/f13/rag
+	suit_store = /obj/item/twohanded/spear/bonespear
+	belt = /obj/item/storage/belt/tribe_quiver
+	backpack_contents = list(/obj/item/clothing/accessory/talisman=1,
+							/obj/item/warpaint_bowl=1)

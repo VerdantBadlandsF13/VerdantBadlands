@@ -1,4 +1,4 @@
-//#define LOWMEMORYMODE //uncomment this to load centcom and the debug testing arena.
+#define LOWMEMORYMODE //uncomment this to load centcom and the debug testing arena.
 
 #include "map_files\generic\CentCom.dmm"
 

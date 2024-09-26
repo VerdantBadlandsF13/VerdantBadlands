@@ -57,14 +57,14 @@
 	production = 5
 	yield = 3
 	potency = 30
-	growthstages = 1
+	growthstages = 3
 	rarity = 20
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
 
 /obj/item/seeds/bl/licorice
 	name = "licorice seed pack"
 	desc = "An average seed pack for licorice."
-	icon_state = "seed"
+	icon_state = "licorice"
 	species = "licorice"
 	plantname = "licorice bush"
 	icon_grow = "licorice-grow"
@@ -77,14 +77,14 @@
 	production = 5
 	yield = 3
 	potency = 30
-	growthstages = 1
+	growthstages = 3
 	rarity = 20
 	reagents_add = list(/datum/reagent/consumable/licoricepulp = 0.05)
 
 /obj/item/seeds/bl/milkweed
 	name = "milkweed seed pack"
 	desc = "An average seed pack for milkweed."
-	icon_state = "seed"
+	icon_state = "milkweed"
 	species = "milkweed"
 	plantname = "milkweed bush"
 	icon_grow = "milkweed-grow"
@@ -97,14 +97,14 @@
 	production = 5
 	yield = 3
 	potency = 30
-	growthstages = 1
+	growthstages = 3
 	rarity = 20
 	reagents_add = list(/datum/reagent/consumable/milkweedpulp = 0.05)
 
 /obj/item/seeds/bl/yarrow
 	name = "yarrow seed pack"
 	desc = "An average seed pack for yarrow."
-	icon_state = "seed"
+	icon_state = "yarrow"
 	species = "yarrow"
 	plantname = "yarrow bush"
 	icon_grow = "yarrow-grow"
@@ -117,14 +117,14 @@
 	production = 5
 	yield = 3
 	potency = 30
-	growthstages = 1
+	growthstages = 3
 	rarity = 20
 	reagents_add = list(/datum/reagent/consumable/yarrowpulp = 0.05)
 
 /obj/item/seeds/bl/skullcap
 	name = "skullcap seed pack"
 	desc = "An average seed pack for skullcap."
-	icon_state = "seed"
+	icon_state = "skullcap"
 	species = "skullcap"
 	plantname = "skullcap bush"
 	icon_grow = "skullcap-grow"
@@ -137,7 +137,7 @@
 	production = 5
 	yield = 3
 	potency = 30
-	growthstages = 1
+	growthstages = 3
 	rarity = 20
 	reagents_add = list(/datum/reagent/consumable/skullcappulp = 0.05)
 

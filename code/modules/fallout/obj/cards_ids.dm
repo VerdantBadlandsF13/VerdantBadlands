@@ -179,7 +179,7 @@ OTHER BELOW
 	access = list(ACCESS_TOWN, ACCESS_TOWN_BAR, ACCESS_TWN_PRIVATE)
 
 /obj/item/card/id/spare_tavern_keys
-	name = "spare tavern key"
+	name = "staff tavern key"
 	desc = "Intended to open a number of doors in the tavern. Nothing more. Nothing less."
 	icon_state = "key"
 	item_state = "key"

@@ -235,6 +235,7 @@
 #define TRAIT_RADX				"radx_active"
 #define TRAIT_SNEAK				"in_stealth" // Whether we're sneaking.
 #define TRAIT_PREP_TACKLE		"tackle_prepared" // Whether we've prepared a tackle.
+#define TRAIT_TEACHING			"teaching" // Whether we've the ability to teach or not.
 #define TRAIT_HANDS_BLOCKED		"handsblocked" // Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 
 // mobility flag traits
@@ -330,6 +331,7 @@
 #define SHOES_TRAIT "shoes" //inherited from your sweet kicks
 #define GLOVE_TRAIT "glove" //inherited by your cool gloves
 #define BOOK_TRAIT "granter (book)" // knowledge is power
+#define TAUGHT_TRAIT "granter (taught)" // knowledge is power 2.0
 
 // unique trait sources, still defines
 #define STATUE_TRAIT "statue"

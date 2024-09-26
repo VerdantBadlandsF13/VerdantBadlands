@@ -94,7 +94,7 @@
 	That was until you started getting involved in the politics of the Republic. \
 	Freedom is only really guaranteed for those who's families lived in Vermont before the bombs fell. \
 	And even then, the closer your ties are to the National Guard survivors, the more important you are. \
-	Getting sent to Battleborough wasn't a choice. It was punishment for questioning the Status Quo."
+	Getting sent to Battleboro wasn't a choice. It was punishment for questioning the Status Quo."
 	r_hand = /obj/item/gun/ballistic/rifle/mag/antimateriel/gmb_irons
 
 /datum/outfit/loadout/commander/death
@@ -218,13 +218,13 @@
 	desc = "You knew it would come, the mandatory conscription into the Militia. \
 	The officer promised you that you'd be in the  logistic or administrative reserve, but you've drawn the short straw. \
 	You were sent to the feral edge of the Republic's borders with an old rifle and one week of combat training. \
-	Yesterday you received a letter from your family, your mother almost had a heart attack at the news of your deployment to Battleborough contested zone."
+	Yesterday you received a letter from your family, your mother almost had a heart attack at the news of your deployment to the Battleboro contested zone."
 	l_hand = /obj/item/gun/ballistic/rifle/repeater/cowboy/roundstart
 	r_hand = /obj/item/ammo_box/tube/a357
 
 /datum/outfit/loadout/militia/musketeer
 	name = "Musketeer"
-	desc = "You've been a Green Mountain Boy for around a decade now, and Battleborough isn't your first, or last, deployment. \
+	desc = "You've been a Green Mountain Boy for around a decade now, and Battleboro isn't your first, or last, deployment. \
 	You know you're doing the Republic proud, and keep its borders and citizens safe. \
 	Yesterday you received a letter from your family, they hope you'll be home for thanksgiving this year."
 	l_hand = /obj/item/gun/ballistic/rifle/lasmusket/roundstart

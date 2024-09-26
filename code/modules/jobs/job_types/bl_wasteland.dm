@@ -12,9 +12,9 @@
 	Unless you're from the Republic, in which case it's the 'Battleboro Contested Zone'. A hellscape. <br>\
 	<br>\
 	Those who inhabit this area are among a special breed: <br>\
-	 - Republican washouts that don't make the cut for the Guard, even as conscripts. Traitors and deserters alike. <br>\
-	 - The few trying to tame the struggle of day-to-day life. <br>\
-	 - All the other dregs of life. Raiders, rapists, thieves, etc. <br>\
+	- Republican washouts that don't make the cut for the Guard, even as conscripts. Traitors and deserters alike. <br>\
+	- The few trying to tame the struggle of day-to-day life. <br>\
+	- All the other dregs of life. Raiders, rapists, thieves, etc. <br>\
 	<br>\
 	You, of all people, would know this very well. Try to get an 'in' with the locals, or carve your own way forward."
 

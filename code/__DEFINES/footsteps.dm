@@ -6,7 +6,7 @@
 #define FOOTSTEP_GRASS		"grass"
 #define FOOTSTEP_WATER		"water"
 #define FOOTSTEP_LAVA		"lava"
-#define FOOTSTEP_MEAT		"meat"
+#define FOOTSTEP_MUD		"mud"
 #define FOOTSTEP_RUST		"rust"
 #define FOOTSTEP_LOOSE_SAND	"sand"
 #define FOOTSTEP_SNOW		"snow"
@@ -58,13 +58,16 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/wood2.ogg',
 		'sound/effects/footstep/wood3.ogg',
 		'sound/effects/footstep/wood4.ogg',
-		'sound/effects/footstep/wood5.ogg'), 100, 0),
+		'sound/effects/footstep/wood5.ogg',
+		'sound/effects/footstep/wood6.ogg'), 25, 0),
 	FOOTSTEP_FLOOR = list(list(
 		'sound/effects/footstep/floor1.ogg',
 		'sound/effects/footstep/floor2.ogg',
 		'sound/effects/footstep/floor3.ogg',
 		'sound/effects/footstep/floor4.ogg',
-		'sound/effects/footstep/floor5.ogg'), 75, -1),
+		'sound/effects/footstep/floor5.ogg',
+		'sound/effects/footstep/floor6.ogg',
+		'sound/effects/footstep/floor7.ogg'), 25, -1),
 	FOOTSTEP_PLATING = list(list(
 		'sound/effects/footstep/plating1.ogg',
 		'sound/effects/footstep/plating2.ogg',
@@ -97,8 +100,13 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
-	FOOTSTEP_MEAT = list(list(
-		'sound/effects/meatslap.ogg'), 100, 0),
+	FOOTSTEP_MUD = list(list(
+		'sound/effects/footstep/mud1.ogg',
+		'sound/effects/footstep/mud2.ogg',
+		'sound/effects/footstep/mud3.ogg',
+		'sound/effects/footstep/mud4.ogg',
+		'sound/effects/footstep/mud5.ogg',
+		'sound/effects/footstep/mud6.ogg'), 100, 0),
 	FOOTSTEP_RUST = list(list(
 		'sound/effects/footstep/hull1.ogg',
 		'sound/effects/footstep/hull2.ogg',
@@ -176,8 +184,13 @@ GLOBAL_LIST_INIT(barefootstep, list(
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
-	FOOTSTEP_MEAT = list(list(
-		'sound/effects/meatslap.ogg'), 100, 0),
+	FOOTSTEP_MUD = list(list(
+		'sound/effects/footstep/mud1.ogg',
+		'sound/effects/footstep/mud2.ogg',
+		'sound/effects/footstep/mud3.ogg',
+		'sound/effects/footstep/mud4.ogg',
+		'sound/effects/footstep/mud5.ogg',
+		'sound/effects/footstep/mud6.ogg'), 100, 0),
 	FOOTSTEP_RUST = list(list(
 		'sound/effects/footstep/hull1.ogg',
 		'sound/effects/footstep/hull2.ogg',
@@ -249,8 +262,13 @@ GLOBAL_LIST_INIT(clawfootstep, list(
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
-	FOOTSTEP_MEAT = list(list(
-		'sound/effects/meatslap.ogg'), 100, 0),
+	FOOTSTEP_MUD = list(list(
+		'sound/effects/footstep/mud1.ogg',
+		'sound/effects/footstep/mud2.ogg',
+		'sound/effects/footstep/mud3.ogg',
+		'sound/effects/footstep/mud4.ogg',
+		'sound/effects/footstep/mud5.ogg',
+		'sound/effects/footstep/mud6.ogg'), 100, 0),
 	FOOTSTEP_RUST = list(list(
 		'sound/effects/footstep/hull1.ogg',
 		'sound/effects/footstep/hull2.ogg',
@@ -296,8 +314,13 @@ GLOBAL_LIST_INIT(heavyfootstep, list(
 		'sound/effects/footstep/lava1.ogg',
 		'sound/effects/footstep/lava2.ogg',
 		'sound/effects/footstep/lava3.ogg'), 100, 0),
-	FOOTSTEP_MEAT = list(list(
-		'sound/effects/meatslap.ogg'), 100, 0),
+	FOOTSTEP_MUD = list(list(
+		'sound/effects/footstep/mud1.ogg',
+		'sound/effects/footstep/mud2.ogg',
+		'sound/effects/footstep/mud3.ogg',
+		'sound/effects/footstep/mud4.ogg',
+		'sound/effects/footstep/mud5.ogg',
+		'sound/effects/footstep/mud6.ogg'), 100, 0),
 	FOOTSTEP_RUST = list(list(
 		'sound/effects/footstep/hull1.ogg',
 		'sound/effects/footstep/hull2.ogg',

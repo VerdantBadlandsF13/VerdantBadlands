@@ -127,10 +127,13 @@ Security Chief
 	id = 			/obj/item/card/id/chief
 	gloves =		/obj/item/pda/captain
 	uniform = 		/obj/item/clothing/under/f13/vault
+	suit =			/obj/item/clothing/suit/armored/f13/light/vfe_vest
 	shoes = 		/obj/item/clothing/shoes/f13/military
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	backpack = 		/obj/item/storage/backpack/satchel/leather
+	l_pocket = 		/obj/item/restraints/handcuffs
+	r_pocket = 		/obj/item/assembly/flash/handheld
 	box = /obj/item/storage/survivalkit_aid_adv
 	backpack_contents = list(
 		/obj/item/melee/classic_baton/telescopic = 1,

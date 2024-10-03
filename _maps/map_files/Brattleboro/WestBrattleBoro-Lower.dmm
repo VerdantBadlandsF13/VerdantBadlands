@@ -141,12 +141,6 @@
 	icon_state = "plating"
 	},
 /area/f13/tunnel)
-"be" = (
-/obj/effect/landmark/start/f13/secchief,
-/turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	dir = 4
-	},
-/area/f13/vault)
 "bg" = (
 /obj/structure/legion_extractor,
 /turf/open/indestructible/ground/inside/mountain,
@@ -988,28 +982,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/bighornbunker)
 "gR" = (
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
 /turf/open/indestructible,
-/area/f13/caves)
+/area/admin)
 "gS" = (
 /obj/item/pickaxe,
 /obj/effect/decal/remains/human,
@@ -1161,32 +1135,9 @@
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_dark,
 /area/f13/caves)
 "il" = (
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/obj/item/stack/f13Cash/caps/onezerozerozero,
-/mob/living/simple_animal/hostile/raider/junker/boss{
-	name = "Mister Caps";
-	desc = "This man has so much wealth even his cannon shoots caps."
-	},
-/turf/open/indestructible,
-/area/f13/caves)
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/white/whitepurplechess,
+/area/f13/vault/science)
 "im" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 9
@@ -1315,6 +1266,16 @@
 	icon_state = "floor6"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/tunnel)
+"iZ" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/hologram{
+	pixel_x = 28
+	},
+/obj/machinery/porta_turret/lbj/hologram,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -1933,7 +1894,7 @@
 /area/f13/tunnel)
 "na" = (
 /turf/closed/indestructible/riveted,
-/area/f13/caves)
+/area/admin)
 "nk" = (
 /obj/machinery/light{
 	dir = 8;
@@ -2092,6 +2053,12 @@
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
+/area/f13/tunnel)
+"oO" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/remains/human,
+/obj/item/pickaxe,
+/turf/open/indestructible/ground/outside/ruins,
 /area/f13/tunnel)
 "oP" = (
 /obj/machinery/light/small{
@@ -2785,7 +2752,8 @@
 /area/f13/vault/dormitory)
 "tp" = (
 /obj/item/restraints/legcuffs/beartrap{
-	armed = 1
+	armed = 1;
+	icon_state = "beartrap1"
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -5223,7 +5191,7 @@
 "JA" = (
 /obj/machinery/telecomms/relay/preset/telecomms,
 /turf/open/indestructible,
-/area/f13/caves)
+/area/admin)
 "JB" = (
 /obj/effect/spawner/lootdrop/f13/themed_weapons/mil_melee,
 /turf/open/indestructible/ground/inside/mountain,
@@ -5635,7 +5603,8 @@
 /area/f13/vault/atrium)
 "MH" = (
 /obj/item/restraints/legcuffs/beartrap{
-	armed = 1
+	armed = 1;
+	icon_state = "beartrap1"
 	},
 /turf/open/floor/wood/wood_wide,
 /area/f13/building)
@@ -6928,6 +6897,10 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building)
+"Vv" = (
+/obj/machinery/door/unpowered/securedoor/vfe/glass,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/white/whitepurplechess,
+/area/f13/vault/science)
 "Vw" = (
 /obj/structure/chair/left{
 	dir = 8
@@ -24610,7 +24583,7 @@ is
 aX
 aX
 aX
-be
+vp
 vp
 vp
 vp
@@ -31399,7 +31372,7 @@ xk
 an
 an
 Wf
-Wf
+oO
 an
 an
 an
@@ -33293,9 +33266,9 @@ wD
 LL
 LL
 LL
-LL
-LL
-LL
+yG
+yG
+yG
 LL
 LL
 LL
@@ -33683,7 +33656,7 @@ Un
 gi
 Un
 QW
-Un
+iZ
 cr
 an
 xk
@@ -33747,15 +33720,15 @@ ta
 ta
 ta
 ta
-LL
-LL
-LL
+il
+Vv
+il
 ta
 ta
 ta
-LL
-LL
-LL
+il
+Vv
+il
 ta
 ta
 ta
@@ -123273,7 +123246,7 @@ PV
 PV
 xk
 na
-il
+gR
 JA
 gR
 na

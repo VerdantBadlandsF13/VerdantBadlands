@@ -42,6 +42,8 @@
 
 /obj/item/projectile/beam/laser/recharger
 	name = "recharger bolt"
+	damage = 16
+	armour_penetration = 0.1
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
@@ -50,8 +52,8 @@
 
 /obj/item/projectile/beam/laser/recharger/pistol
 	name = "recharger bolt"
-	damage = 24
-	armour_penetration = 0.1
+	damage = 18//Pistol is supposedly more advanced. Argue that it's more 'concentrated' or whatever.
+	armour_penetration = 0.3//Ditto.
 
 /obj/item/projectile/beam/laser/wattz2k
 	name = "heavy laser bolt"

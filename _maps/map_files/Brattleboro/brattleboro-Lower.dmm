@@ -3151,6 +3151,7 @@
 /area/f13/tunnel)
 "mx" = (
 /obj/machinery/autolathe/ammo,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "my" = (
@@ -3285,6 +3286,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_energy,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -4698,6 +4700,7 @@
 /area/f13/building)
 "sy" = (
 /obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "sz" = (
@@ -5406,6 +5409,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/large,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_energy,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -6237,7 +6241,6 @@
 	},
 /area/f13/sewer)
 "yy" = (
-/obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_smg,
 /obj/structure/guncase,
 /obj/effect/spawner/lootdrop/f13/themed_weapons/civ_guns_smg,
@@ -7290,6 +7293,7 @@
 	brightness = 3;
 	dir = 8
 	},
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_energy_sidearms,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -8379,6 +8383,7 @@
 "GI" = (
 /obj/structure/closet/crate/large,
 /obj/item/clothing/suit/armored/f13/heavy/salvaged_pa/t45d,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_energy_rifles,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -9400,7 +9405,7 @@
 	},
 /area/f13/sewer)
 "KM" = (
-/obj/structure/rack/shelf_metal,
+/obj/machinery/jukebox,
 /turf/open/floor/wood/wood_fancy,
 /area/f13/bl/dfs)
 "KN" = (
@@ -10300,6 +10305,13 @@
 /obj/structure/furnace,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building)
+"Oz" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/table/booth,
+/turf/open/floor/wood/wood_fancy,
+/area/f13/bl/dfs)
 "OA" = (
 /turf/closed/indestructible/rock,
 /area/f13/caves)
@@ -12692,6 +12704,7 @@
 /area/f13/sewer)
 "XO" = (
 /obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/plating/rust,
 /area/f13/sewer)
 "XP" = (
@@ -47249,7 +47262,7 @@ Va
 Va
 OA
 mp
-zo
+Oz
 kT
 kT
 kT
@@ -47706,8 +47719,8 @@ Va
 Va
 OA
 mp
-kT
-kT
+Eu
+Eu
 kT
 kT
 kT
@@ -128858,7 +128871,7 @@ Va
 Va
 Va
 Va
-OA
+Va
 Va
 Va
 Va

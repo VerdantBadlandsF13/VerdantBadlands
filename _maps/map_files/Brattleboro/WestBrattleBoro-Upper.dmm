@@ -1259,6 +1259,13 @@
 	icon_state = "verylittleshadowleft"
 	},
 /area/f13/city/bighorn)
+"eF" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/white/whitebluechess/whitebluechess2,
+/area/engine/engineering)
 "eG" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -4026,6 +4033,16 @@
 "oj" = (
 /turf/closed/wall/f13/store,
 /area/f13/shack)
+"ok" = (
+/obj/structure/rack/shelf_metal,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "ol" = (
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -4816,6 +4833,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/f13,
 /area/f13/shack)
 "re" = (
@@ -4881,6 +4900,11 @@
 /obj/structure/rack/shelf_metal,
 /turf/open/floor/wood/wood_mosaic/wood_mosaic_light,
 /area/f13/shack)
+"rp" = (
+/obj/structure/table/wood,
+/obj/item/card/id/spare_tavern_keys,
+/turf/open/floor/carpet/red,
+/area/f13/bar)
 "rq" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/toolbox/old,
@@ -7203,8 +7227,11 @@
 /area/f13/city/bighorn)
 "zn" = (
 /obj/structure/rack/shelf_metal,
-/turf/open/floor/f13,
-/area/f13/shack)
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "zo" = (
 /obj/structure/barricade/sandbag_wall{
 	dir = 1;
@@ -7453,6 +7480,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"zY" = (
+/obj/machinery/light,
+/turf/open/floor/carpet,
+/area/engine/engineering)
 "zZ" = (
 /obj/structure/bed/dogbed{
 	name = "soft pet bed";
@@ -9964,6 +9995,16 @@
 /obj/structure/chair/bench,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"It" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/repair_kit/sewingkit,
+/obj/item/repair_kit/sewingkit,
+/obj/item/repair_kit/sewingkit,
+/obj/item/repair_kit/sewingkit,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "Iu" = (
 /obj/structure/fireplace,
 /turf/open/indestructible/cobble/side{
@@ -10818,6 +10859,16 @@
 	icon_state = "outerbordercorner"
 	},
 /area/f13/wasteland)
+"LB" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/repair_kit/weapon_repair_kit,
+/obj/item/repair_kit/weapon_repair_kit,
+/obj/item/repair_kit/weapon_repair_kit,
+/obj/item/repair_kit/weapon_repair_kit,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "LC" = (
 /obj/effect/decal/marking{
 	icon_state = "doubleverticalbottom"
@@ -13128,6 +13179,16 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/f13/building)
+"Tn" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/repair_kit/arm_repair_kit,
+/obj/item/repair_kit/arm_repair_kit,
+/obj/item/repair_kit/arm_repair_kit,
+/obj/item/repair_kit/arm_repair_kit,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "To" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/beakers,
@@ -13367,6 +13428,10 @@
 /obj/structure/simple_door/metal/store,
 /turf/open/floor/f13,
 /area/f13/building)
+"Uh" = (
+/obj/machinery/light,
+/turf/open/floor/carpet/black,
+/area/engine/engineering)
 "Ui" = (
 /obj/structure/railing{
 	dir = 10
@@ -13462,10 +13527,6 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/caves)
-"Uy" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/transparent/openspace,
-/area/f13/bar)
 "Uz" = (
 /obj/structure/easel,
 /obj/item/canvas/twentythreeXtwentythree,
@@ -14455,9 +14516,14 @@
 /area/f13/bar)
 "XY" = (
 /obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
-/turf/open/floor/f13,
-/area/f13/shack)
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/repair_kit/pa_repair_kit,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "whiteyellowdirtychess"
+	},
+/area/engine/engineering)
 "Ya" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/box/drinkingglasses,
@@ -14945,6 +15011,10 @@
 	},
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
+"ZG" = (
+/obj/machinery/light,
+/turf/open/floor/plasteel/f13/vault_floor/blue/white/whitebluechess/whitebluechess2,
+/area/engine/engineering)
 "ZH" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/f13{
@@ -25197,7 +25267,7 @@ ik
 ik
 ik
 ik
-Uy
+lA
 AC
 Fq
 Fq
@@ -38920,7 +38990,7 @@ wo
 wo
 wo
 Gc
-vI
+ok
 vI
 vI
 eI
@@ -39377,7 +39447,7 @@ wo
 wo
 wo
 Gc
-vI
+zn
 vI
 vI
 eI
@@ -39846,7 +39916,7 @@ zD
 hF
 tF
 tF
-tF
+Uh
 Gc
 wo
 wo
@@ -40299,7 +40369,7 @@ zD
 zD
 zD
 zD
-zD
+zY
 Gc
 Vm
 tF
@@ -41205,9 +41275,9 @@ wo
 wo
 wo
 Gc
+Tn
 vI
-vI
-vI
+LB
 eI
 zD
 dD
@@ -41662,9 +41732,9 @@ wo
 wo
 wo
 Gc
+XY
 vI
-vI
-vI
+It
 eI
 dk
 zD
@@ -42129,11 +42199,11 @@ Gc
 Gc
 Gc
 Gc
-qf
+eF
 MP
 XS
 XS
-XS
+ZG
 Gc
 wo
 wo
@@ -85533,7 +85603,7 @@ IM
 pE
 pE
 WW
-zn
+kL
 Rq
 Rq
 Rq
@@ -86447,10 +86517,10 @@ IM
 pE
 pE
 WW
-XY
+kL
 Rh
 Rq
-zn
+kL
 Rq
 mN
 Nc
@@ -98344,7 +98414,7 @@ fI
 MA
 Mt
 Wb
-Wb
+rp
 Mt
 Dc
 kC

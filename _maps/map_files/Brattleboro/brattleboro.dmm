@@ -16263,6 +16263,11 @@
 /obj/structure/flora/grass/jungle/b,
 /turf/open/indestructible/ground/bl/outside/dirt,
 /area/f13/wasteland)
+"jVh" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/repair_kit/weapon_repair_kit,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bl/gmb)
 "jVn" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/bars,
@@ -35583,6 +35588,7 @@
 /area/f13/village)
 "wmL" = (
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -66733,7 +66739,7 @@ pLk
 bBN
 rZg
 iEP
-wCj
+jVh
 wCj
 wCj
 wCj

@@ -197,8 +197,8 @@
 	total_positions = 4
 	spawn_positions = 4
 	description = "You weren't just born in the Vermont Wasteland. \
-	You were born a citizen of the Vermont Republic and since birth was bathed in it's ideology and culture. \
-	If you read the names on your local community's memorial, recognize one or two names that belong to your family. \
+	You were born a citizen of the Vermont Republic and since birth have been bathed in it's ideology and culture. \
+	If you read the names on your local community's memorial, you'd recognize one or two that belong to your family. \
 	There was no obligation for you to join the ranks of the militia, because it was naturally expected of you."
 	supervisors = "the Commander"
 	outfit = /datum/outfit/job/gmb/militia

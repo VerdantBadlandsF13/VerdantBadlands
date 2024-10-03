@@ -6223,6 +6223,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowdirtychess"
 	},
@@ -6898,6 +6899,13 @@
 /obj/structure/disposalpipe/junction,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"eHu" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/gun/energy/laser/complianceregulator,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "reddirtysolid"
+	},
+/area/f13/vault/security/armory)
 "eHw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9284,6 +9292,7 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
@@ -9652,7 +9661,7 @@
 /turf/closed/wall/f13/wood/interior,
 /area/f13/village)
 "gCA" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/vault)
 "gDk" = (
@@ -25839,6 +25848,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/arcade,
 /area/f13/building)
+"rgW" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/f13/themed_weapons/spec_energy,
+/obj/structure/window/reinforced/spawner,
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/plasteel/f13/vault_floor/floor{
+	icon_state = "reddirtysolid"
+	},
+/area/f13/vault/security/armory)
 "rgZ" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -31060,7 +31079,7 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/ruins)
 "uig" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/f13/village)
 "uiA" = (
@@ -34017,6 +34036,7 @@
 "wdo" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc,
 /turf/open/floor/f13{
 	icon_state = "redchess"
 	},
@@ -34154,7 +34174,7 @@
 	},
 /area/f13/building)
 "wic" = (
-/obj/machinery/autolathe,
+/obj/machinery/autolathe/constructionlathe,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess/bluechess2,
 /area/f13/village)
@@ -44269,7 +44289,7 @@ pac
 kzH
 oRi
 eqk
-rfK
+rgW
 eqk
 xqL
 kzH
@@ -44726,7 +44746,7 @@ pac
 kzH
 wcO
 eqk
-eqk
+rfK
 eqk
 kjk
 kzH
@@ -45185,7 +45205,7 @@ niN
 eqk
 eqk
 eqk
-eqk
+eHu
 kzH
 hem
 kos
@@ -57068,10 +57088,10 @@ frK
 jyA
 wPe
 jyN
-vty
-vty
-vty
-vty
+pac
+pac
+pac
+pac
 lBF
 olH
 urh
@@ -57525,10 +57545,10 @@ cZm
 jyA
 wPe
 jyN
-efu
-tTc
-tTc
-fnh
+pac
+pac
+pac
+pac
 lBF
 eOi
 tAL
@@ -57982,10 +58002,10 @@ sRh
 kZv
 vXK
 jyN
-vty
-vty
-vty
-vty
+pac
+pac
+pac
+pac
 lBF
 eOi
 tAL

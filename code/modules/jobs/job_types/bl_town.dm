@@ -329,7 +329,8 @@
 	shoes = /obj/item/clothing/shoes/f13/rag
 	backpack_contents =  list(/obj/item/cultivator/rake=1,
 							/obj/item/shovel/spade=1)
-	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1)
+	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1,
+							/obj/item/ammo_box/c38box/improvised=1)
 
 /datum/outfit/loadout/f13settler/barber
 	name = "Barber"

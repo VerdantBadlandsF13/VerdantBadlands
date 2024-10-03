@@ -192,13 +192,13 @@ GLOBAL_LIST_INIT(trash_craft, list(
 	/obj/item/crafting/reloader = 5,
 	/obj/item/crafting/lunchbox = 5,
 	/obj/item/crafting/wonderglue = 5,
-	/obj/item/crafting/small_gear = 1,
-	/obj/item/crafting/large_gear = 1
+	/obj/item/crafting/small_gear = 5,
+	/obj/item/crafting/large_gear = 5
 ))
 
 GLOBAL_LIST_INIT(trash_gun, list(
-	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
-	/obj/item/gun/ballistic/revolver/widowmaker = 1
+	/obj/item/gun/ballistic/automatic/zipgun = 1,
+	/obj/item/gun/ballistic/revolver/single_shotgun = 1
 ))
 
 GLOBAL_LIST_INIT(trash_money, list(

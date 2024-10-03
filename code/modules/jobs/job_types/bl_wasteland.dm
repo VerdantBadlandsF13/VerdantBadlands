@@ -108,7 +108,8 @@
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	suit = /obj/item/clothing/suit/armored/f13/light/duster
 	suit_store = /obj/item/gun/ballistic/revolver/piperifle
-	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1)
+	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1,
+							/obj/item/ammo_box/c38box/improvised=1)
 
 /datum/outfit/loadout/scavenger
 	name = "Scavenger"
@@ -132,7 +133,8 @@
 	gloves = 	/obj/item/pda/dweller
 	id = /obj/item/card/id/fadedvaultid
 	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
-	backpack_contents = list(/obj/item/card/id/selfassign=1)
+	backpack_contents = list(/obj/item/card/id/selfassign=1,
+							/obj/item/ammo_box/shotgun/improvised=1)
 
 /datum/outfit/loadout/tribal
 	name = "Tribal"

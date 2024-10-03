@@ -70,7 +70,7 @@
 	fire_delay = 0
 	slowdown = 0.2
 	w_class = WEIGHT_CLASS_NORMAL
-	weapon_weight = WEAPON_LIGHT //Can dual wield, which makes up for the meh damage. Especially so with the Magneto.
+	weapon_weight = WEAPON_LIGHT //Can dual wield. Light frame.
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/wattz)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
@@ -110,10 +110,10 @@
 	scope_y_offset = 22
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
-/obj/item/gun/energy/laser/pistol/finlay_fluff
+/obj/item/gun/energy/laser/pistol/aged
 	name = "\improper weathered AEP7 laser pistol"
-	desc = "An old pre-war laser pistol. Judging from the aged exterior, this hasn't seen much use in a long time.<br>\
-	That, or it's seen too much in a short period. Regardless, the mounting for a scope atop the weapon has been snapped clean off.<br>\
+	desc = "An old pre-war laser pistol. Judging from the aged exterior, this hasn't seen much use in a long time. <br>\
+	That, or it's seen too much in a short period. Regardless, the mounting for a scope atop the weapon has been snapped clean off. <br>\
 	Atop that, if it weren't bad enough, it also appears to have a cracked focusing lense."
 	extra_damage = -6
 	can_scope = FALSE

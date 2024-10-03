@@ -515,6 +515,10 @@
 	/obj/item/assembly/timer = 5,
 	/obj/item/assembly/prox_sensor = 5)
 
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc/Initialize(mapload) //on mapload, pick how many shit to spawn
+	lootcount = rand(1, 4)
+	. = ..()
+
 /obj/effect/spawner/lootdrop/f13/alcoholspawner //TIER 7 ALCOHOL
 	name = "alcoholspawner"
 	lootdoubles = TRUE

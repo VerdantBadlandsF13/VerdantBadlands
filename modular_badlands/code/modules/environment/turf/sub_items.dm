@@ -9,10 +9,12 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/effect/decal/bl_stairway
+	name = "up"
 	icon = 'modular_badlands/code/modules/environment/icons/bl_decals.dmi'
 	icon_state = "up"
 
 /obj/effect/decal/bl_stairway/down
+	name = "down"
 	icon_state = "down"
 
 /obj/effect/decal/bl_stairway/ex_act(severity)

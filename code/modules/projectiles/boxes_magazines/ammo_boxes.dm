@@ -56,6 +56,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/a22/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //9mm and .38
@@ -74,6 +75,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/c9mm/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 /obj/item/ammo_box/c38box
@@ -91,6 +93,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/c38/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //10mm
@@ -109,6 +112,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/c10mm/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //.357 Magnum
@@ -128,6 +132,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/a357/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //.44 Magnum
@@ -147,6 +152,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/m44/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 
@@ -166,6 +172,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/c45/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //.50 AE - PLAYERS SHOULD NEVER BE ABLE TO SEE THIS OUTSIDE OF ADMIN INTERVENTION.
@@ -226,6 +233,7 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/a556/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //7.62x51, .308 Winchester
@@ -255,7 +263,8 @@
 	name = "bag with reloaded 7.62x51 bullets"
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
-	ammo_type = /obj/item/ammo_casing/a556/junk
+	ammo_type = /obj/item/ammo_casing/a762/junk
+	max_ammo = 8//Temp until we get proper sprites.
 	multiple_sprites = 1
 
 //.50 MG and 14mm

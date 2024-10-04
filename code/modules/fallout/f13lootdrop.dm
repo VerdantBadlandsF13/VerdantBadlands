@@ -203,7 +203,7 @@
 	loot = list(
 				/obj/item/reagent_containers/hypospray/medipen/stimpak,
 				/obj/item/storage/pill_bottle/chem_tin/radx,
-				/obj/item/reagent_containers/blood/radaway,
+				/obj/item/reagent_containers/chem_pack/radaway,
 				/obj/item/storage/pill_bottle/chem_tin/mentats
 				)
 
@@ -215,7 +215,7 @@
 	lootcount = 1
 
 	loot = list(/obj/item/storage/pill_bottle/chem_tin/radx,
-				/obj/item/reagent_containers/blood/radaway,
+				/obj/item/reagent_containers/chem_pack/radaway,
 				/obj/item/storage/pill_bottle/chem_tin/mentats,
 				/obj/item/reagent_containers/hypospray/medipen/stimpak,
 				/obj/item/reagent_containers/medspray/styptic,
@@ -228,8 +228,8 @@
 	lootcount = 1
 
 	loot = list(
-				/obj/item/reagent_containers/pill/patch/jet,
-				/obj/item/reagent_containers/pill/patch/turbo,
+				/obj/item/reagent_containers/hypospray/medipen/jet,
+				/obj/item/reagent_containers/hypospray/medipen/turbo,
 				/obj/item/reagent_containers/pill/stimulant,
 				/obj/item/reagent_containers/hypospray/medipen/medx,
 				/obj/item/storage/pill_bottle/chem_tin/buffout
@@ -514,6 +514,10 @@
 	/obj/item/crafting/reloader = 5,
 	/obj/item/assembly/timer = 5,
 	/obj/item/assembly/prox_sensor = 5)
+
+/obj/effect/spawner/lootdrop/f13/crafting/crafting_misc/Initialize(mapload) //on mapload, pick how many shit to spawn
+	lootcount = rand(1, 4)
+	. = ..()
 
 /obj/effect/spawner/lootdrop/f13/alcoholspawner //TIER 7 ALCOHOL
 	name = "alcoholspawner"

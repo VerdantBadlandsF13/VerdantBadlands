@@ -434,7 +434,7 @@
 					// you need earmuffs, inacusiate, or replacement
 			else if(ears.damage >= 5)
 				to_chat(src, "<span class='warning'>Your ears start to ring!</span>")
-			SEND_SOUND(src, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+			SEND_SOUND(src, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,5))
 		return effect_amount //how soundbanged we are
 
 

@@ -353,9 +353,7 @@
 	var/list/holdingitems
 	var/mortar_mode = MORTAR_JUICE
 	var/blacklistchems = list(
-		/obj/item/reagent_containers/pill/patch/turbo,
 		/obj/item/reagent_containers/pill/buffout,
-		/obj/item/reagent_containers/pill/patch/jet,
 	)
 /obj/item/reagent_containers/glass/mortar/Initialize()
 	. = ..()

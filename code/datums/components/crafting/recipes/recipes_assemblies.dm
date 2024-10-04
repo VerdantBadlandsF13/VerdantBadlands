@@ -127,6 +127,15 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_ROBOT
 
+/datum/crafting_recipe/iv_drip
+	name = "IV Drip"
+	result = /obj/machinery/iv_drip
+	reqs = list(/obj/item/stack/sheet/metal = 15,
+				/obj/item/stack/rods = 5)
+	time = 60
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+
 /////////////////////
 //Farming & Cooking//
 /////////////////////

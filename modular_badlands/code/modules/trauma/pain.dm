@@ -1,5 +1,5 @@
 /mob/proc/flash_pain()
-	overlay_fullscreen("pain", /obj/screen/fullscreen/pain, 2)
+	overlay_fullscreen("pain", /obj/screen/fullscreen/pain)
 	spawn(50)
 		clear_fullscreen("pain")
 
@@ -9,7 +9,7 @@
 	plane = FULLSCREEN_PLANE
 
 /mob/proc/flash_weak_pain()
-	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/weak, 2)
+	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/weak)
 	spawn(50)
 		clear_fullscreen("pain")
 
@@ -19,7 +19,7 @@
 	plane = FULLSCREEN_PLANE
 
 /mob/proc/flash_agony()
-	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/agony, 2)
+	overlay_fullscreen("pain", /obj/screen/fullscreen/pain/agony)
 	spawn(50)
 		clear_fullscreen("pain")
 
@@ -56,7 +56,7 @@
 				flash_pain()
 				handle_lowpain()
 				msg = "<span class='danger'><font size=2>Your [part.name] burns badly!</font></span>"
-			if(91 to 10000)
+			if(91 to INFINITY)
 				flash_agony()
 				handle_highpain()
 				msg = "<span class='danger'><font size=3>OH GOD! Your [part.name] is on fire!</font></span>"

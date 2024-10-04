@@ -201,7 +201,7 @@ ATTACHMENTS
 	if(condition)
 		if(randomize_condition_lvl)
 			condition_lvl = rand(1,100)
-			if(can_jam && randomize_condition_lvl && !cell_discharge)
+			if(condition_lvl <= 25 && can_jam && randomize_condition_lvl && !cell_discharge)
 				jammed = rand(0,1)//Rather than TRUE or FALSE, but it works the same.
 		else
 			condition_lvl = initial(condition_lvl)
@@ -555,12 +555,11 @@ ATTACHMENTS
 					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
 					jammed = TRUE
 
-	if(condition == 1)
-		if(user.special_l >= 1)
-			if(prob(1 - (user.special_l * 0.05)))
-				if(can_jam)
-					playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
-					jammed = TRUE
+			if(user.special_l >= 1)
+				if(prob(1 - (user.special_l * 0.05)))
+					if(can_jam)
+						playsound(src, "modular_badlands/code/modules/rp_misc/sound/interface/break/eqbreak[rand(1,2)].ogg")
+						jammed = TRUE
 
 // Intended to be cumulative. Stacked one after the other, if able.
 	if(user.special_s <= 6)

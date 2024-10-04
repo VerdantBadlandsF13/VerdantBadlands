@@ -130,7 +130,7 @@
 /obj/item/storage/box/large/custom_kit/metro/PopulateContents()
 	new /obj/item/clothing/head/helmet/finlay(src)
 	new /obj/item/clothing/suit/armored/f13/medium/vestarmor/finlay(src)
-	new /obj/item/gun/energy/laser/pistol/finlay_fluff(src)
+	new /obj/item/gun/energy/laser/pistol/aged(src)
 	new /obj/item/stock_parts/cell/ammo/ec(src)
 
 

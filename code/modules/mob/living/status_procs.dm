@@ -575,11 +575,6 @@
 /////////////////////////////////// DISABILITIES ////////////////////////////////////
 /mob/living/proc/add_quirk(quirktype, spawn_effects) //separate proc due to the way these ones are handled
 
-/*
-	if(special_i >= 9)
-		verbs |= /mob/living/proc/teach_skill
-*/
-
 	if(HAS_TRAIT(src, quirktype))
 		return
 	var/datum/quirk/T = quirktype

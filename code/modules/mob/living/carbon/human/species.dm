@@ -1257,6 +1257,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		to_chat(H,"You can understand idiots!")
 		H.grant_language(/datum/language/aphasia)
 
+	if(H.special_i >= 9)
+		to_chat(H,"You can teach the basic concepts of your trainings.")
+		H.verbs += /mob/living/proc/teach_skill
+
 	if(H.special_a >= 6)
 		to_chat(H,"As you have enough agility points, you know how to sneak. Higher points increases effectiveness.")
 		stealth = new
@@ -1862,7 +1866,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 											"<span class='userdanger'>You have been knocked senseless!</span>")
 							H.confused = max(H.confused, 20)
 							H.adjust_blurriness(10)
-							SEND_SOUND(H, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+							SEND_SOUND(H, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,5))
 						if(prob(10))
 							H.gain_trauma(/datum/brain_trauma/mild/concussion)
 					else

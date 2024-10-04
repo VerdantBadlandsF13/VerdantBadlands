@@ -131,7 +131,9 @@
 	You took this quote to heart early in your life and decided to become the only legitimate kind of statesman: a Sheriff. \
 	Your word is law, the lookouts only ever stop looking out to look up (at you), and your make sure to keep the troublemakers out; be they raiders, mercenaries, or republicans."
 	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
+	shoes = /obj/item/clothing/shoes/f13/military/explorer
 	backpack_contents = list(
+		/obj/item/clothing/accessory/armband=1,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/roundstart=1,
 		/obj/item/ammo_box/magazine/m45=2,
 		/obj/item/restraints/handcuffs/cable/zipties=2,
@@ -144,6 +146,7 @@
 	You found a pre-war book on law. Soon after, you manage to fake your way to be a member on the Hilltop Council. \
 	You've got the cleanest suit, the people's respect, a safe home, a big leather chair, and most importantly? A lot of funds to embezzle."
 	uniform = /obj/item/clothing/under/suit/turtle/grey
+	shoes = /obj/item/clothing/shoes/f13/fancy
 	backpack_contents = list(
 		/obj/item/toy/seashell=1,
 		)
@@ -183,6 +186,9 @@
 	desc = "You love the law. \
 	She may be blind, but she is a beautiful mistress and you would sooner lay down your life for her than see her be defiled by some outsider. \
 	You keep the gate safe, you walk the beat, and sometimes you beat information out of witches. All in a day's work."
+	head = /obj/item/clothing/head/helmet/f13/motorcycle
+	suit = /obj/item/clothing/suit/armored/f13/light/leathermk2
+	shoes = /obj/item/clothing/shoes/f13/military/explorer
 	backpack_contents = list(
 		/obj/item/gun/ballistic/shotgun/hunting=1,
 		/obj/item/ammo_box/shotgun/improvised=1,
@@ -194,6 +200,9 @@
 	Hilltop can't defend itself with just its inbred gang of law enforcers, and so they often resolve that issue by hiring bounty hunters, mercenaries, foreign deserters, or reformed raiders to protect it from the outside. \
 	You'd sooner turn tail than die for this place, but this is why you took this job. \
 	It pays incredibly well and shooting a 'witch' once in a while isn't really dangerous to you."
+	head = /obj/item/clothing/head/helmet/f13/hoodedmask
+	suit = /obj/item/clothing/suit/armored/f13/medium/combat/duster
+	shoes = /obj/item/clothing/shoes/f13/military
 	backpack_contents = list(
 		/obj/item/gun/ballistic/rifle/hunting=1,
 		/obj/item/ammo_box/a762box/improvised=1,
@@ -205,6 +214,8 @@
 	Since then you've started calling yourself a warrior and followed the other Lookouts around and telling them you want to kill the bad guys. \
 	In every other situation you'd have been escorted home and forgotten about the gun. \
 	But since you never actually asked for a wage, the Lookouts took you in as one of their own."
+	head = /obj/item/clothing/head/helmet/f13/wastewarhat
+	suit = /obj/item/clothing/suit/armored/f13/light/leather_jacket
 	backpack_contents = list(
 		/obj/item/shield/riot/scrapshield=1,
 		/obj/item/melee/onehanded/club=1,
@@ -233,7 +244,8 @@
 /datum/outfit/job/town/f13tavernkeep
 	name = "Tavernkeep"
 	jobtype = /datum/job/town/f13tavernkeep
-	suit = /obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
+	suit =			/obj/item/clothing/suit/armored/f13/medium/duster_renegade/tavern
+	shoes =			/obj/item/clothing/shoes/f13/fancy
 	id =			/obj/item/card/id/tavern_keys
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 	backpack_contents = list(
@@ -279,58 +291,46 @@
 	/datum/outfit/loadout/f13settler/sidewalker,
 	/datum/outfit/loadout/f13settler/barber,
 	/datum/outfit/loadout/f13settler/handyman,
-	/datum/outfit/loadout/f13settler/homeowner)
+	/datum/outfit/loadout/f13settler/homeowner,
+	/datum/outfit/loadout/f13settler/tavernstaff)
 
 /datum/outfit/job/town/f13settler
 	name = "Hilltop Inhabitant"
 	jobtype = /datum/job/town/f13settler
 	l_pocket =		/obj/item/storage/bag/money/small/wastelander
 
+/datum/outfit/job/town/f13settler/pre_equip(mob/living/carbon/human/H)
+	..()
+	suit = pick(
+		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
+		/obj/item/clothing/suit/f13/slavelabor,
+		/obj/item/clothing/suit/f13/vest,
+		/obj/item/clothing/suit/f13/cowboygvest,
+		/obj/item/clothing/suit/f13/westender,
+		/obj/item/clothing/suit/overalls)
 
 /datum/outfit/loadout/f13settler/moonshiner
 	name = "Moonshiner"
 	desc = "You make the best moonshine in all of Vermont, and those who say otherwise will get to taste your second speciality: the knuckle sandwich. \
 	You are without a doubt the main economic drive of the town. \
-	All thanks to outsider traders who often take a detour to purchase your brew with the hopes of reselling it all over Battleborough and beyond. \
+	All thanks to outsider traders who often take a detour to purchase your brew with the hopes of reselling it all over Battleboro and beyond. \
 	No refunds."
+	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
 	backpack_contents =  list(/obj/item/cultivator/rake=1,
 							/obj/item/shovel/spade=1,
 		/obj/item/reagent_containers/glass/bucket = 1,
 		/obj/item/storage/bag/plants/portaseeder = 1)
 
-/datum/outfit/job/f13settler/moonshiner/pre_equip(mob/living/carbon/human/H)
-	..()
-	suit = pick(
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
-		/obj/item/clothing/suit/f13/slavelabor,
-		/obj/item/clothing/suit/f13/vest,
-		/obj/item/clothing/suit/f13/cowboygvest,
-		/obj/item/clothing/suit/f13/westender,
-		/obj/item/clothing/suit/overalls)
-	suit_store = pick(
-		/obj/item/gun/ballistic/revolver/single_shotgun,
-		/obj/item/gun/ballistic/revolver/piperifle)
-
 /datum/outfit/loadout/f13settler/sidewalker
 	name = "Sidewalker"
 	desc = "While a resident of Hilltop, you don't actually have a house here on accounts of being either too poor or too new for one. \
 	This sorry state of events leaves you to take the most disgraceful jobs available around the place or go prospect the many ruins outside of town."
+	suit_store = /obj/item/gun/ballistic/revolver/piperifle
 	shoes = /obj/item/clothing/shoes/f13/rag
 	backpack_contents =  list(/obj/item/cultivator/rake=1,
 							/obj/item/shovel/spade=1)
-
-/datum/outfit/job/f13settler/sidewalker/pre_equip(mob/living/carbon/human/H)
-	..()
-	suit = pick(
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
-		/obj/item/clothing/suit/f13/slavelabor,
-		/obj/item/clothing/suit/f13/vest,
-		/obj/item/clothing/suit/f13/cowboygvest,
-		/obj/item/clothing/suit/f13/westender,
-		/obj/item/clothing/suit/overalls)
-	suit_store = pick(
-		/obj/item/gun/ballistic/revolver/single_shotgun,
-		/obj/item/gun/ballistic/revolver/piperifle)
+	backpack_contents = list(/obj/item/gun/ballistic/revolver/revolver38/roundstart=1,
+							/obj/item/ammo_box/c38box/improvised=1)
 
 /datum/outfit/loadout/f13settler/barber
 	name = "Barber"
@@ -360,3 +360,12 @@
 		/obj/item/stack/sheet/metal/fifty = 1,
 		/obj/item/stack/sheet/mineral/wood/fifty = 1,
 		/obj/item/toy/crayon/spraycan = 1)
+
+/datum/outfit/loadout/f13settler/tavernstaff
+	name = "Tavern Staff"
+	desc = "Whatever your relation to the Tavernkeep, you've the benefits of access to a spare room. \
+	It's likely that this space is shared, and regardless of whether or not you actually work in the building, you somehow have a key. \
+	Try not to anger the establishment's owner or you run the risk of losing this privilege."
+	l_hand = /obj/item/gun/ballistic/automatic/zipgun
+	backpack_contents = list(/obj/item/card/id/spare_tavern_keys=1,
+							/obj/item/melee/onehanded/knife/switchblade=1)

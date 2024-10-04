@@ -165,12 +165,12 @@ GLOBAL_LIST_EMPTY(explosions)
 	//concuss mobs
 	for(var/mob/living/carbon/M in viewers(2, epicenter))
 		if(prob(20))
-			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,5))
 			M.gain_trauma(/datum/brain_trauma/mild/concussion)
 			M.confused = max(M.confused, 10)
 			M.adjust_blurriness(60)
 		else
-			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,250))
+			SEND_SOUND(M, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,5))
 			M.adjust_blurriness(30)
 
 	EX_PREPROCESS_CHECK_TICK

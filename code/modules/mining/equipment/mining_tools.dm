@@ -17,7 +17,7 @@
 	toolspeed = 1
 	usesound = list('sound/effects/picaxe1.ogg', 'sound/effects/picaxe2.ogg', 'sound/effects/picaxe3.ogg')
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
-	var/digrange = 1
+	var/digrange = 0//From 1
 
 /obj/item/pickaxe/attack_self(mob/user)
 	if(initial(digrange) > 0)
@@ -76,7 +76,7 @@
 	desc = "A pickaxe with a light rose gold head and some red glowing runes. Extremely robust at cracking rock walls and digging up dirt."
 	force = 19
 	custom_materials = list(/datum/material/gold=4000)
-	digrange = 3
+//	digrange = 3
 
 /obj/item/pickaxe/plasteel
 	name = "plasteel-tipped pickaxe"
@@ -124,7 +124,7 @@
 	name = "diamond-tipped cyborg mining drill" //To inherit the NODROP_1 flag, and easier to change borg specific drill mechanics.
 	icon_state = "diamonddrill"
 	toolspeed = 0.4
-	digrange = 2
+//	digrange = 2
 
 /obj/item/pickaxe/drill/jackhammer
 	name = "sonic jackhammer"
@@ -135,7 +135,7 @@
 	usesound = 'sound/weapons/sonic_jackhammer.ogg'
 	hitsound = 'sound/weapons/sonic_jackhammer.ogg'
 	desc = "Cracks rocks with sonic blasts, and doubles as a demolition power tool for smashing walls."
-	digrange = 2
+//	digrange = 2
 
 /obj/item/shovel
 	name = "shovel"

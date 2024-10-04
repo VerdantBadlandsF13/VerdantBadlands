@@ -74,6 +74,11 @@
 		last_act = world.time
 		to_chat(user, "<span class='notice'>You start picking...</span>")
 
+		visible_message("Dust is kicked into the air.")
+		playsound(src,'sound/f13effects/grill.ogg',75,0,2)//Good enough.
+		for(var/turf/open/indestructible/ground/inside/mountain/TD in orange(1, get_turf(src)))
+			new /obj/effect/particle_effect/smoke/teargas/mine_dust(TD)
+
 		if(I.use_tool(src, user, 40, volume=50))
 			var/range = I.digrange //Store the current digrange so people don't cheese digspeed swapping for faster mining
 			var/list/dug_tiles = list()
@@ -106,6 +111,9 @@
 	playsound(src, 'sound/effects/break_stone.ogg', 50, 1) //beautiful destruction
 	if(user.mind.skill_holder)
 		user.mind.auto_gain_experience(/datum/skill/level/mining, 5, BARE_USE_TOOL_MULT)
+
+	for(var/turf/open/indestructible/ground/inside/mountain/TR in orange(4, get_turf(src)))
+		TR.collapse_check()
 
 /turf/closed/mineral/attack_animal(mob/living/simple_animal/user)
 	if((user.environment_smash & ENVIRONMENT_SMASH_WALLS) || (user.environment_smash & ENVIRONMENT_SMASH_RWALLS))

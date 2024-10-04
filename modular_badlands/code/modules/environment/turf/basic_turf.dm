@@ -177,9 +177,9 @@
 	desc = "There's dark days ahead, friend."
 	icon_state = "mud"
 	slowdown = 3
-	footstep = FOOTSTEP_MEAT
-	barefootstep = FOOTSTEP_MEAT
-	clawfootstep = FOOTSTEP_MEAT
+	footstep = FOOTSTEP_MUD
+	barefootstep = FOOTSTEP_MUD
+	clawfootstep = FOOTSTEP_MUD
 
 /turf/open/indestructible/ground/bl/outside/mud/Initialize()
 	. = ..()
@@ -191,9 +191,9 @@
 	desc = "There's dark days ahead, friend."
 	icon_state = "mud"
 	slowdown = 3
-	footstep = FOOTSTEP_MEAT
-	barefootstep = FOOTSTEP_MEAT
-	clawfootstep = FOOTSTEP_MEAT
+	footstep = FOOTSTEP_MUD
+	barefootstep = FOOTSTEP_MUD
+	clawfootstep = FOOTSTEP_MUD
 
 /turf/open/indestructible/ground/bl/mud/Initialize()
 	. = ..()

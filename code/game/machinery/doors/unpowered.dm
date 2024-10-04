@@ -38,6 +38,7 @@
 		return
 	else
 		registered_name = null
+		locked = FALSE
 		to_chat(usr, "<span class='danger'>This door now has no biometric lock.</span>")
 
 /obj/machinery/door/unpowered/proc/check_bio_reset()

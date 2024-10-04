@@ -54,12 +54,6 @@
 			if(prob(10))
 				user.adjustEarDamage(-5, -5)
 
-/datum/emote/living/carbon/human/mumble
-	key = "mumble"
-	key_third_person = "mumbles"
-	message = "mumbles!"
-	emote_type = EMOTE_AUDIBLE
-
 /datum/emote/living/carbon/human/pale
 	key = "pale"
 	message = "goes pale for a second."

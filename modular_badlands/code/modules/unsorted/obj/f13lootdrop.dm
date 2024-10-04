@@ -288,3 +288,39 @@
 		/obj/item/melee/onehanded/knife/bowie,
 		/obj/item/melee/onehanded/knife/trench,
 	)
+
+
+////////////
+// ENERGY //
+////////////
+/obj/effect/spawner/lootdrop/f13/themed_weapons/civ_energy
+	name = "civ energy"
+	loot = list(
+		/obj/item/gun/energy/laser/wattz,
+		/obj/item/gun/energy/laser/pistol/aged,
+	)
+
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_energy_sidearms
+	name = "mil energy sidearms"
+	loot = list(
+		/obj/item/gun/energy/laser/wattz/recharger,
+		/obj/item/gun/energy/laser/pistol,
+	)
+
+/obj/effect/spawner/lootdrop/f13/themed_weapons/mil_energy_rifles
+	name = "mil energy rifles"
+	loot = list(
+		/obj/item/gun/energy/laser/aer9/recharger,
+		/obj/item/gun/energy/laser/wattz2k,
+		/obj/item/gun/energy/laser/aer9,
+	)
+
+/obj/effect/spawner/lootdrop/f13/themed_weapons/spec_energy
+	name = "special energy"
+	loot = list(
+		/obj/item/gun/energy/laser/plasma,
+		/obj/item/gun/energy/laser/plasma/glock,
+		/obj/item/gun/energy/pulse,
+//		/obj/item/gun/energy/teslacannon,//Not finished, but worth including.
+//		/obj/item/gun/energy/arcwelder,//Ditto. At least this one has a sprite.
+	)

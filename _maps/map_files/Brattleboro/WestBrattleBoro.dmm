@@ -1577,6 +1577,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor{
 	icon_state = "whiteyellowfull"
 	},
@@ -2028,7 +2031,10 @@
 	desc = "Looks like this button controls the blast door.";
 	pixel_y = -32
 	},
-/turf/open/floor/plasteel/f13/vault_floor/plating/random,
+/turf/open/floor/f13{
+	icon_state = "warnplatecorner";
+	dir = 8
+	},
 /area/f13/vault)
 "bos" = (
 /obj/effect/decal/marking,
@@ -14665,14 +14671,6 @@
 	icon_state = "oakfloor1"
 	},
 /area/f13/building)
-"jXb" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor{
-	icon_state = "whiteyellowfull"
-	},
-/area/f13/vault/reactor)
 "jXe" = (
 /obj/structure/railing/handrail/rusty{
 	dir = 4
@@ -21231,9 +21229,6 @@
 	dir = 1
 	},
 /area/f13/vault/security)
-"ofi" = (
-/turf/open/floor/plasteel/f13/vault_floor/green/whitegreenfull,
-/area/f13/vault/garden)
 "ofo" = (
 /obj/structure/chair/bench{
 	dir = 4;
@@ -23456,10 +23451,6 @@
 "pCI" = (
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault)
-"pCN" = (
-/obj/machinery/msgterminal/command,
-/turf/open/floor/plasteel/f13/vault_floor/plating/random,
-/area/f13/vault/storage)
 "pDg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -33443,13 +33434,6 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/f13/building)
-"vLo" = (
-/obj/structure/table,
-/obj/machinery/msgterminal/vfe_guards,
-/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull{
-	icon_state = "whiteredchess"
-	},
-/area/f13/building)
 "vLH" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -32
@@ -38856,11 +38840,11 @@ pac
 pac
 pac
 pac
-eaC
-eaC
-eaC
-eaC
-eaC
+pac
+pac
+pac
+pac
+pac
 pac
 pac
 pac
@@ -39314,9 +39298,9 @@ pac
 pac
 pac
 eaC
-tIu
-hLe
-srK
+eaC
+eaC
+eaC
 eaC
 pac
 pac
@@ -39767,13 +39751,13 @@ pac
 pac
 pac
 pac
+pac
+pac
+pac
 eaC
-eaC
-eaC
-eaC
-ulz
-nbT
-gRq
+tIu
+hLe
+srK
 eaC
 pac
 pac
@@ -40224,12 +40208,12 @@ pac
 pac
 pac
 pac
+pac
+pac
+pac
 eaC
-pCN
-eaC
-eaC
-jVa
-fAQ
+ulz
+nbT
 gRq
 eaC
 pac
@@ -40681,11 +40665,11 @@ pac
 pac
 pac
 pac
+pac
+pac
+pac
 eaC
-eaC
-eaC
-eaC
-ulz
+jVa
 fAQ
 gRq
 eaC
@@ -41142,9 +41126,9 @@ pac
 pac
 pac
 eaC
-gpo
-aEL
-rSS
+ulz
+fAQ
+gRq
 eaC
 pac
 pac
@@ -41599,9 +41583,9 @@ pac
 pac
 pac
 eaC
-eaC
-eaC
-eaC
+gpo
+aEL
+rSS
 eaC
 pac
 dqS
@@ -46130,7 +46114,7 @@ pqp
 wXD
 nqn
 wXD
-wXD
+pqp
 eBA
 eBA
 eBA
@@ -47042,7 +47026,7 @@ gZL
 gZL
 gZL
 gZL
-ofi
+tDH
 gZL
 gZL
 gZL
@@ -58054,8 +58038,8 @@ svw
 oqx
 cZt
 lPf
-jXb
-ocD
+rDR
+mcv
 jJX
 ocD
 iZm
@@ -131320,7 +131304,7 @@ sSH
 sSH
 sSH
 vJr
-vLo
+rZO
 hNm
 vJr
 oPK

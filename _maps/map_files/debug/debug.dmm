@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/effect/landmark/start/f13/dfs_advisor,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "aB" = (
 /obj/machinery/light/floor,
@@ -38,11 +38,11 @@
 /area/f13/wasteland)
 "es" = (
 /obj/effect/landmark/start/f13/gmb_commander,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "ew" = (
 /obj/effect/landmark/start/f13/hilltop_settler,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "eF" = (
 /obj/machinery/autolathe/constructionlathe,
@@ -61,7 +61,7 @@
 /area/f13/admeme)
 "gI" = (
 /obj/effect/landmark/start/f13/vaultengineer,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "gM" = (
 /obj/structure/shieldwall/large/active,
@@ -69,7 +69,7 @@
 /area/centcom/vip)
 "gX" = (
 /obj/structure/billboard/vb/gmtammo,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "hd" = (
 /obj/structure/shieldwall/standard/lethal,
@@ -87,15 +87,15 @@
 /area/centcom/vip)
 "la" = (
 /obj/effect/landmark/start/f13/secchief,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "nw" = (
 /obj/structure/billboard/vb/glazedholes,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "qA" = (
 /obj/effect/landmark/start/f13/gmb_volunteer,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "rk" = (
 /obj/item/gun/magic/wand/death/debug,
@@ -110,7 +110,7 @@
 /area/f13/wasteland/bl/lbj)
 "sd" = (
 /obj/effect/landmark/start/f13/dfs_regular,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "tv" = (
 /obj/item/storage/box/disks_plantgene,
@@ -125,7 +125,7 @@
 /area/f13/admeme)
 "uX" = (
 /obj/effect/landmark/start/f13/wastelander,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "vO" = (
 /turf/open/liquid/water/scum_aboveground/north,
@@ -146,7 +146,7 @@
 /area/centcom/vip)
 "wT" = (
 /obj/effect/landmark/start/f13/vaultscientist,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "xb" = (
 /obj/machinery/base_dispenser/ammo,
@@ -154,19 +154,19 @@
 /area/centcom/vip)
 "xC" = (
 /obj/structure/billboard/vb/lovemybuns,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "yx" = (
 /obj/effect/landmark/start/f13/lbj_foreman,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "yE" = (
 /obj/effect/landmark/start/f13/dfs_grunt,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "yH" = (
 /obj/effect/landmark/start/f13/vaultdoctor,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "zQ" = (
 /obj/item/melee/bokken/debug,
@@ -174,7 +174,7 @@
 /area/f13/wasteland/bl/lbj)
 "Ap" = (
 /obj/effect/landmark/start/f13/gmb_militia,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "AL" = (
 /turf/closed/indestructible/f13/matrix,
@@ -191,19 +191,19 @@
 /area/f13/wasteland/bl/lbj)
 "Cj" = (
 /obj/effect/landmark/start/f13/dfs_agent,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "CO" = (
 /obj/effect/landmark/latejoin,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Dg" = (
 /obj/effect/landmark/start/f13/overseer,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "DP" = (
 /obj/effect/landmark/start/f13/vaultrobot,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Ea" = (
 /obj/machinery/shield_switch,
@@ -215,16 +215,23 @@
 /area/f13/admeme)
 "ET" = (
 /obj/structure/billboard/vb/vaulttec,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Fk" = (
 /obj/structure/billboard/vb/oldantucker,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "FE" = (
 /obj/item/gun/energy/arcwelder,
 /turf/open/indestructible/ground/bl/outside/stone,
 /area/centcom/vip)
+"FM" = (
+/obj/item/restraints/legcuffs/beartrap{
+	armed = 1;
+	icon_state = "beartrap1"
+	},
+/turf/open/indestructible/ground/bl/outside/grass_standard/meadow,
+/area/f13/wasteland)
 "Gc" = (
 /turf/open/indestructible/necropolis,
 /area/cordon)
@@ -237,12 +244,22 @@
 /area/centcom/vip)
 "GZ" = (
 /obj/structure/billboard/vb/slocumsjoe,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
+/area/admin)
+"Hj" = (
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Hy" = (
 /obj/machinery/light/floor,
 /turf/open/indestructible/ground/bl/outside/stone,
 /area/centcom/vip)
+"Ij" = (
+/obj/item/restraints/legcuffs/beartrap{
+	armed = 1;
+	icon_state = "beartrap1"
+	},
+/turf/open/floor/wood/wood_common,
+/area/admin)
 "Jb" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -251,7 +268,7 @@
 /area/centcom/vip)
 "Ku" = (
 /obj/effect/landmark/start/f13/gmb_practitioner,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "LL" = (
 /obj/machinery/autolathe/ammo/unlocked_basic,
@@ -259,7 +276,7 @@
 /area/centcom/vip)
 "Ml" = (
 /obj/structure/billboard/vb/superdupermart,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "MQ" = (
 /obj/structure/obstacle/barbedwire/end{
@@ -278,7 +295,7 @@
 /area/centcom/vip)
 "Nm" = (
 /obj/effect/landmark/start/f13/tavernkeep,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "NA" = (
 /obj/structure/shieldwall/standard_owb/active,
@@ -286,7 +303,7 @@
 /area/centcom/vip)
 "NP" = (
 /obj/effect/landmark/start/f13/lbj_lumberjack,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Oe" = (
 /obj/structure/anvil/debugsuper,
@@ -295,11 +312,11 @@
 /area/centcom/vip)
 "Ov" = (
 /obj/effect/landmark/start/f13/hilltop_leadership,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "OS" = (
 /obj/effect/landmark/start/f13/hilltop_lookout,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Pa" = (
 /obj/machinery/base_dispenser/food,
@@ -307,7 +324,7 @@
 /area/centcom/vip)
 "PF" = (
 /obj/effect/landmark/start/f13/dfs_enforcer,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Qs" = (
 /obj/item/seeds/bl/skullcap,
@@ -315,7 +332,7 @@
 /area/f13/admeme)
 "Qy" = (
 /obj/effect/landmark/start/f13/vaultdweller,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "QO" = (
 /obj/machinery/plantgenes,
@@ -334,11 +351,11 @@
 /area/centcom/vip)
 "RZ" = (
 /obj/effect/landmark/start/f13/engchief,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Sy" = (
 /obj/structure/billboard/vb/readmenace,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Tm" = (
 /turf/open/liquid/water/scum/east,
@@ -353,7 +370,7 @@
 /area/centcom/vip)
 "Vr" = (
 /obj/structure/billboard/vb/ratemed,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "Wb" = (
 /turf/closed/indestructible/f13/matrix,
@@ -370,7 +387,7 @@
 /area/f13/wasteland/bl/lbj)
 "XV" = (
 /obj/effect/landmark/start/f13/vaultsecurityofficer,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 "XX" = (
 /turf/open/liquid/water/scum/south,
@@ -396,7 +413,7 @@
 /area/admin)
 "Zq" = (
 /obj/effect/landmark/start/f13/gmb_walker,
-/turf/open/indestructible/sound/pool,
+/turf/open/floor/wood/wood_common,
 /area/admin)
 
 (1,1,1) = {"
@@ -455,15 +472,15 @@ Gc
 Wb
 fH
 Wb
-fH
-fH
-fH
-fH
-fH
-fH
-fH
-fH
-fH
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
+Hj
 yH
 aa
 Wb
@@ -625,7 +642,7 @@ uM
 EA
 iS
 iS
-fH
+Hj
 Ap
 Wb
 "}
@@ -648,7 +665,7 @@ uM
 uM
 bj
 bR
-fH
+Hj
 Ku
 Wb
 "}
@@ -671,7 +688,7 @@ uM
 uM
 bR
 bR
-fH
+Hj
 qA
 Wb
 "}
@@ -694,7 +711,7 @@ uM
 uM
 iS
 iS
-fH
+Hj
 Zq
 Wb
 "}
@@ -717,7 +734,7 @@ uM
 uM
 wq
 iS
-fH
+Hj
 Ov
 Wb
 "}
@@ -740,7 +757,7 @@ wq
 wq
 iS
 iS
-fH
+Hj
 OS
 Wb
 "}
@@ -763,7 +780,7 @@ aB
 dJ
 dJ
 iS
-fH
+Hj
 ew
 Wb
 "}
@@ -786,7 +803,7 @@ dJ
 dJ
 dJ
 iS
-fH
+Hj
 yx
 Wb
 "}
@@ -809,7 +826,7 @@ dJ
 dJ
 dJ
 iS
-fH
+Hj
 NP
 Wb
 "}
@@ -832,7 +849,7 @@ dJ
 dJ
 dJ
 Hy
-fH
+Hj
 Dg
 Wb
 "}
@@ -853,9 +870,9 @@ dJ
 dJ
 dJ
 dJ
-dJ
-fH
-fH
+FM
+Ij
+Hj
 la
 Wb
 "}
@@ -876,10 +893,10 @@ dJ
 dJ
 dJ
 dJ
-dJ
-fH
-fH
-fH
+FM
+Ij
+Hj
+Hj
 Wb
 "}
 (22,1,1) = {"

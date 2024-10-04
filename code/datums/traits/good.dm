@@ -274,3 +274,35 @@
 		var/datum/species/species = H.dna.species
 		species.liked_food = initial(species.liked_food)
 		species.disliked_food = initial(species.disliked_food)
+
+/////////////////
+// Item Traits //
+/////////////////
+/datum/quirk/random_explosive
+	name = "Scavenged Explosives"
+	desc = "You've managed to procure explosives, via some means or another. Try not to blow yourself up."
+	value = 1
+	var/obj/item/trait_item
+	var/where_to_give
+
+/datum/quirk/random_explosive/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	trait_item = pick(
+		/obj/item/grenade/f13/stinger,
+		/obj/item/grenade/f13/frag,
+		/obj/item/grenade/f13/he_grenade,
+		/obj/item/grenade/f13/incendiary,
+		/obj/item/grenade/f13/dynamite,
+		/obj/item/grenade/plastic/c4,
+		/obj/item/grenade/homemade/coffeepotbomb,
+		/obj/item/grenade/homemade/firebomb,
+		/obj/item/reagent_containers/food/drinks/bottle/molotov/filled,
+		/obj/item/grenade/f13/plasma/remnant)//Fingers crossed they don't get this. :)
+	trait_item = new trait_item(get_turf(quirk_holder))
+	var/list/slots = list(
+		"in your left pocket" = SLOT_L_STORE,
+		"in your right pocket" = SLOT_R_STORE,
+		"in your backpack" = SLOT_IN_BACKPACK
+
+	)
+	where_to_give = H.equip_in_one_of_slots(trait_item, slots, FALSE) || "at your feet"

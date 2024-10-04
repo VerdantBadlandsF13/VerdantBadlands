@@ -423,8 +423,8 @@
 //NCR Facewrap
 
 /obj/item/clothing/mask/ncr_facewrap
-	name = "desert facewrap"
-	desc = "A facewrap commonly employed by NCR troops in desert environments."
+	name = "heavy facewrap"
+	desc = "A facewrap commonly employed by infantry in temperate environments."
 	icon_state = "ncr_facewrap"
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEFACE|HIDEFACIALHAIR

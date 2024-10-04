@@ -12,7 +12,7 @@
 	All kinds of people end up on the road as you have, simply picking a direction and moving their feet until they drop dead. <br>\
 	Couriers bringing packages and mail from town to town, paid just enough to sure up their supplies for the next trip. <br>\
 	Prospectors delving into ruins in search of a big payday. <br>\
-	Travellig merchants, doctors, musicians even. <br>\
+	Travelling merchants, doctors, musicians roam to try and find their next client. <br>\
 	A diverse group so commonly reduced to that one simple name: Wastelander. <br>\
 	<br>\
 	As for where you've ended up? Vermont. Specifically, 'Brattleboro', or, as the locals call it, 'Battleboro'. \
@@ -99,11 +99,30 @@
 	..()
 	head = pick(
 		/obj/item/clothing/head/f13/stormchaser, \
-		/obj/item/clothing/head/f13/headscarf)
+		/obj/item/clothing/head/f13/gambler, \
+		/obj/item/clothing/head/soft/f13/baseball)
+	mask = pick(
+		/obj/item/clothing/mask/breath, \
+		/obj/item/clothing/mask/gas, \
+		/obj/item/clothing/mask/gas/glass, \
+		/obj/item/clothing/mask/surgical, \
+		/obj/item/clothing/mask/facewrap, \
+		/obj/item/clothing/mask/ncr_facewrap)
+	neck = pick(
+		/obj/item/clothing/neck/mantle/ragged, \
+		/obj/item/clothing/neck/mantle/poncho, \
+		/obj/item/clothing/neck/mantle/peltfur, \
+		/obj/item/clothing/neck/mantle/peltmountain, \
+		/obj/item/clothing/neck/mantle/gecko)
 	uniform = pick(
 		/obj/item/clothing/under/f13/settler, \
 		/obj/item/clothing/under/f13/lumberjack, \
-		/obj/item/clothing/under/f13/roving)
+		/obj/item/clothing/under/f13/roving, \
+		/obj/item/clothing/under/f13/rustic, \
+		/obj/item/clothing/under/pants/f13/ghoul, \
+		/obj/item/clothing/under/pants/f13/cloth, \
+		/obj/item/clothing/under/pants/f13/caravan, \
+		/obj/item/clothing/under/pants/f13/rag)
 	suit = pick(
 		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer,
 		/obj/item/clothing/suit/f13/slavelabor,

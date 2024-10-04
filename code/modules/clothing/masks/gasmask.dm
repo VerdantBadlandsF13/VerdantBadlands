@@ -233,7 +233,7 @@ EVERYTHING ELSE
 		return TRUE
 
 /obj/item/clothing/mask/gas/syndicate
-	name = "syndicate mask"
+	name = "tactical mask"
 	desc = "A close-fitting tactical mask that can be connected to an air supply."
 	icon_state = "syndicate"
 	strip_delay = 60
@@ -333,8 +333,8 @@ EVERYTHING ELSE
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/mask/gas/ranger
-	name = "ranger gas mask"
-	desc = "A close-fitting tactical mask issued to all NCR Rangers."
+	name = "combat gas mask"
+	desc = "A close-fitting tactical mask issued to a group long since departed."
 	icon_state = "rangermask"
 	item_state = "rangermask"
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR

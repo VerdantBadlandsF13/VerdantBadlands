@@ -14,8 +14,8 @@
 	permeability_coefficient = 0.9
 
 /obj/item/clothing/neck/mantle/gecko
-	name = "gecko skin mantle"
-	desc = "Made from tanned young gecko hides, too thin to be useful for armor. The small claws are still attached."
+	name = "scaled mantle"
+	desc = "Made from tanned hides, too thin to be useful for armor. Small claws are still attached."
 	icon_state = "gecko"
 
 /obj/item/clothing/neck/mantle/gray
@@ -103,17 +103,13 @@
 
 /obj/item/clothing/neck/mantle/peltfur
 	name = "fur pelt"
-	desc = "A pelt made from longhorner fur."
+	desc = "A pelt made from a heavy fur pelt."
 	icon_state = "peltfur"
-	cold_protection = CHEST|GROIN|ARMS
-	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/neck/mantle/peltmountain
 	name = "fur pelt"
-	desc = "A pelt made from a mountain bear, brought in from Colorado."
+	desc = "A pelt made from a mountain bear."
 	icon_state = "peltmountain"
-	cold_protection = CHEST|GROIN|ARMS
-	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/neck/mantle/ragged
 	name = "ragged mantle"
@@ -124,7 +120,7 @@
 	name = "poncho"
 	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains."
 	icon_state = "poncho"
-	body_parts_covered = CHEST|GROIN|ARMS
+	body_parts_covered = CHEST|GROIN
 
 /obj/item/clothing/neck/mantle/umbo
 	name = "Roman mantle"

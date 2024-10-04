@@ -250,12 +250,12 @@
 	icon_state = "beartrap"
 	desc = "A trap used to catch bears and other legged creatures."
 	var/armed = FALSE
-	var/trap_damage = 30
+	var/trap_damage = 60
 
 /obj/item/restraints/legcuffs/beartrap/Initialize()
 	. = ..()
 	icon_state = "[initial(icon_state)][armed]"
-	
+
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)

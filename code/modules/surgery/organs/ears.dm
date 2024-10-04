@@ -37,7 +37,7 @@
 		deaf = max(deaf - 1, 0)
 		if(prob(damage / 20) && (damage > low_threshold))
 			adjustEarDamage(0, 4)
-			SEND_SOUND(owner, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg'))
+			SEND_SOUND(owner, sound('modular_badlands/code/modules/rp_misc/sound/gore/contusion.ogg',0,1,0,5))
 			to_chat(owner, "<span class='warning'>The ringing in your ears grows louder, blocking out any external noises for a moment.</span>")
 	else if(!. && !deaf)
 		deaf = 1	//stop being not deaf you deaf idiot

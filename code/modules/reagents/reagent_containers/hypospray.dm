@@ -1,4 +1,4 @@
-//In this document Psycho, Med-X
+//In this document: Psycho, Med-X, Stims, Turbo, Etc.
 /obj/item/reagent_containers/hypospray
 	name = "hypospray"
 	desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."

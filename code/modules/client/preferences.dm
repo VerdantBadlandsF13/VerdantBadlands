@@ -1513,67 +1513,210 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 
 	dat += "<center><b>Allocate points</b></center>"
-	dat += "<div class='panel redborder'><center>Note: SPECIAL is essential to gameplay.</center></div><br>"
+	dat += "<div class='panel redborder'><center>Note: SPECIAL is essential to gameplay. <br>\
+	Every special modifies something about a character and how they interact with the world.</center></div><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 
 	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
 	dat += "<BR>"
 
 	dat += "<b>Strength:</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
-	dat += "Strength is the overall measure of a character's fitness. It handles matters such as recoil, <br>\
-	melee damage and more. Characters with a low strength stat will be unable to use firearms effectively, <br>\
+	dat += "Strength is the overall measure of a character's fitness. It handles matters such as recoil, \
+	melee damage and more. Characters with a low strength stat will be unable to use firearms effectively, \
 	alongside suffering heavily in melee combat."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "- Melee attack damage multiplier, in the form of an additive, for a value of (x/10)."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Heavy firearms cannot be utilised when strength is under seven."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Strength heavily modifies rapidly increasing weapon spread. <br>\
+				- - S < 7 = 5 + SPREAD <br>\
+				- - S < 5 = 20 + SPREAD <br>\
+				- - S < 3 = 35 + SPREAD <br>\
+				- - S < 3 = 5% chance of a random number between +35 to +125 for spread. <br>\
+				- - - All of the above is additive."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- It's not possible to mine standard stone when strength is under five. <br>\
+			- - It's not possible to mine tough stone when strength is under six."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Strength of 4 or more enables tackling as a mechanic. <br>\
+				- - Knockdown = (S in Seconds)"
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Perception:</b> <a href='?_src_=prefs;preference=special_p;task=input'>[special_p]</a><BR>"
-	dat += "Perception is the overall measure of a character's cognition. It handles matters such as trap detection, <br>\
-	firearm accuracy and more. Characters with a high perception stat will be able to see what's in someone's pockets, <br>\
+	dat += "Perception is the overall measure of a character's cognition. It handles matters such as trap detection, \
+	firearm accuracy and more. Characters with a high perception stat will be able to see what's in someone's pockets, \
 	can spot buried traps and have significantly increased firearm accuracy."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "- Landmines around the world are more or less dangerous, depending on perception. <br>\
+				- - 6 to 8 perception allows a player to see landmines somewhat easily. <br>\
+				- - 9 or higher perception receive an alert above landmines, and sees them far more easily. <br>\
+				- - 5 or lower perception has very limited visibility of landmines."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Perception of 6 or higher allows strip menu to display items in pockets."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Base weapon inaccuracy. (Weapon Weight * 25 * Inaccuracy Modifier + 50 + PERCEPTION * 5)"
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Endurance:</b> <a href='?_src_=prefs;preference=special_e;task=input'>[special_e]</a><BR>"
-	dat += "Endurance is the overall measure of a character's fortitude. It handles matters such as health, <br>\
-	radiation resistance and more. Characters with a low endurance stat will take far less damage before perishing, <br>\
+	dat += "Endurance is the overall measure of a character's fortitude. It handles matters such as health, \
+	radiation resistance and more. Characters with a low endurance stat will take far less damage before perishing, \
 	and will be forced to rely heavily on anti-radiation chems."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "- E * 3 = Health"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- 8 or higher provides a hidden perk, providing 125% resistance to radiation."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- 6 or higher makes you immune to both bisection and gutting."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Modifies tackling. <br>\
+				- - Stamina cost = (50 - E)"
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Charisma:</b> <a href='?_src_=prefs;preference=special_c;task=input'>[special_c]</a><BR>"
-	dat += "Charisma is the overall measure of a character's charm. It handles matters such as speech, <br>\
+	dat += "Charisma is the overall measure of a character's charm. It handles matters such as speech, \
 	lies and more. Currently, a character with charisma as their dump stat will have issues communicating. <br>\
 	They will stutter, speak gibberish and overall find themselves a stump when it comes to social interactions."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "- Stutter is present in game by default, for healthy characters. \
+	Charisma modifies chance, and this is only present if your special is set to 3 or lower. <br>\
+				- - 0 to 40 (STUTTER STRENGTH) - C * 10"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Charisma of 8 or higher provides access to terrifying presence."
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Intelligence:</b> <a href='?_src_=prefs;preference=special_i;task=input'>[special_i]</a><BR>"
-	dat += "Intelligence is the overall measure of a character's intellect. It handles matters such as reading, <br>\
-	using advanced weaponry and more. Currently, a character with low intelligence will have be incapable of <br>\
-	using energy weapons. Extremely low values will prevent speaking English, while the inverse will allow you to <br>\
+	dat += "Intelligence is the overall measure of a character's intellect. It handles matters such as reading, \
+	using advanced weaponry and more. Currently, a character with low intelligence will have be incapable of \
+	using energy weapons. Extremely low values will prevent speaking English, while the inverse will allow you to \
 	communicate with the lowest of intelligence characters."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "- 4 or lower intelligence cannot read books."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- 3 or lower may accidentally fumble a grenade upon preparing to throw."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- 9 or higher intelligence enables a character to  teach traits and perks."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Intelligence under seven cannot use specialised energy weaponry. <br>\
+				- - Intelligence of three or lower cannot use energy weaponry."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Language modifications. <br>\
+				- - 2 or lower cannot understand English, and can only speak babbletalk to other idiots. <br>\
+				- - 8 or higher can understand and speak babble talk to the idiots."
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Agility:</b> <a href='?_src_=prefs;preference=special_a;task=input'>[special_a]</a><BR>"
-	dat += "Agility is the overall measure of a character's gracefulness. It handles matters such as theft, <br>\
-	stealth and more. Currently, a character with high agility will have much more success with stealthboys, provide <br>\
+	dat += "Agility is the overall measure of a character's gracefulness. It handles matters such as theft, \
+	stealth and more. Currently, a character with high agility will have much more success with stealthboys, provide \
 	no warning to those they pickpocket, move much faster and overall outpace most characters athletically."
 
 	dat += "<BR>"
 	dat += "<BR>"
 
+	dat += "(Alpha of a character is by default 255. For context, a ghost is 0 to non-ghosts.)"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Stealthboy strength is influenced by agility. <br>\
+				- - Default Alpha(Visibility) of 60 - A * 5 = Alpha"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Sneaking, a skill we have for all player mobs with 6 or more agility, is heavily modified. <br>\
+				- - Default Alpha(Visibility) of 100 - A * 5 = Alpha"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Player audio popups are smaller when walking around, if your agility is 6 or higher."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Character movement speed is modified by agility. <br>\
+				- - Value of 5 - A / 20 = Speed Modifier <br>\
+				- - - Default speed modifier for a character is 1 (100%)."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Agility of eight or higher allows strip menu use without an alert being shown."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Agility of eight or higher makes you immune to setting off landmines."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Modifies tackling. <br>\
+				- - Range = (A) <br>\
+				- - Minimum Distance (DISABLED) = (A) <br>\
+				- - Speed = (A)"
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
+	dat += "<BR>"
+
 	dat += "<b>Luck:</b> <a href='?_src_=prefs;preference=special_l;task=input'>[special_l]</a><BR>"
-	dat += "Luck is the overall measure of a character's fortune. It handles a large number of outcomes, <br>\
-	from looting, weapon jamming and more. Currently, a character with low luck will find their ballistic weapons failing frequently, <br>\
+	dat += "Luck is the overall measure of a character's fortune. It handles a large number of outcomes, \
+	from looting, weapon jamming and more. Currently, a character with low luck will find their ballistic weapons failing frequently, \
 	and find far less when scavenging."
 
 	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Lockpick difficulty. <br>\
+				- - Currently limited to lockboxes and disabled. <br>\
+				- - - L * 5 to difficulty reduction."
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Modification of getting an additional item from search loot piles. <br>\
+				- - Default of 10% + L * 3.5 = Probability"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Firearm jamming chance modification. Only applies after initial jamming check, if a weapon is roughly half condition. <br>\
+				- - Default of 1% - L * 0.05 = Probability"
+	dat += "<BR>"
+	dat += "<BR>"
+	dat += "- Modifies tackling. <br>\
+				- - Skill Modifier = (L)"
+
+	dat += "<BR>"
+	dat += "<center><b>- - - - - - - - - -</b></center>"
 	dat += "<BR>"
 
 	if (total>40)

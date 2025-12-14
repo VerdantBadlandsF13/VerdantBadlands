@@ -111,12 +111,14 @@ GLOBAL_LIST_EMPTY(allTerminals)
 			dat += "<tr>"
 			dat += "<td width='55%'>"
 			if(src.terminalid == "vault")
-				dat += "<br>Vault Fifty-Eight"
-			if(src.terminalid == "vaultguards")
 				dat += "<br>Vault Fifty-Eight Exterior"
+			if(src.terminalid == "vaultguards")
+				dat += "<br>Vault Fifty-Eight Guardpost"
+			if(src.terminalid == "vaultinterior")
+				dat += "<br>Vault Fifty-Eight Interior"
 			dat += "</td>"
 			dat += "<td width='45%'>"
-			dat += "<br><A href='?src=[REF(src)];setScreen=11'>Send Message to Command</A><br>"
+			dat += "<br><A href='?src=[REF(src)];setScreen=11'>Send Message to Vault-Tec</A><br>"
 			dat += "</td>"
 			dat += "</tr>"
 
@@ -172,25 +174,27 @@ GLOBAL_LIST_EMPTY(allTerminals)
 			dat += "<a href='?src=[REF(src)];setScreen=0'><< Discard Message</a> <br>"
 
 		if(10) //unused for now but may be useful later
-			dat += "<b>Message to Command</b> <br><br>"
+			dat += "<b>Message to Vault-Tec</b> <br><br>"
 			if(src.terminalid == "vault")
-				dat += "<b>Vault Fifty-Eight</b> <br><br>"
-			if(src.terminalid == "vaultguards")
 				dat += "<b>Vault Fifty-Eight Exterior</b> <br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=11'>Send Message to Command</a> <br><br>"
+			if(src.terminalid == "vaultguards")
+				dat += "<b>Vault Fifty-Eight Guardpost</b> <br><br>"
+			if(src.terminalid == "vaultinterior")
+				dat += "<b>Vault Fifty-Eight Interior</b> <br><br>"
+			dat += "<a href='?src=[REF(src)];setScreen=11'>Send Message to Vault-Tec</a> <br><br>"
 
 		if(11)
-			var/message = input(usr,"Send a message to command staff. Ensure it makes sense IC.","") as message|null
+			var/message = input(usr,"Send a message to Vault-Tec staff. Ensure it makes sense IC.","") as message|null
 			if(message)
-				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>COMMAND MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:N/A")
-				log_terminal("[key_name(usr)] sent a COMMAND message, '[message]' from the terminal at [AREACOORD(usr)].")
+				message_admins("[ADMIN_LOOKUPFLW(usr)] has sent <font size=2>VAULT-TEC MESSAGE</font> FROM terminal:[ADMIN_LOOKUPFLW(src)]. '[message]' <br>Jump to the reply terminal:N/A")
+				log_terminal("[key_name(usr)] sent a VAULT-TEC message, '[message]' from the terminal at [AREACOORD(usr)].")
 				screen = 6
-				dat += "<span class='good'>Message to Command delivered.</span><br><br>"
+				dat += "<span class='good'>Message to Vault-Tec delivered.</span><br><br>"
 				updateUsrDialog()
 				playsound(src, 'sound/f13machines/terminalmenuenter.ogg', 20, 1)
 			else
 				screen = 7
-				dat += "<span class='bad'>Message to Command aborted.</span><br><br>"
+				dat += "<span class='bad'>Message to Vault-Tec aborted.</span><br><br>"
 				updateUsrDialog()
 				playsound(src, 'sound/f13machines/terminalmenucancel.ogg', 20, 1)
 			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
@@ -402,17 +406,22 @@ GLOBAL_LIST_EMPTY(allTerminals)
 
 /obj/machinery/msgterminal/vfe
 	terminalid = "vault"
-	terminal = "Vault Fifty-Eight Interior"
+	terminal = "Vault Fifty-Eight Exterior"
 	terminalType = 2
 
 /obj/machinery/msgterminal/vfe_guards
 	terminalid = "vaultguards"
-	terminal = "Vault Fifty-Eight Exterior"
+	terminal = "Vault Fifty-Eight Guardpost"
 	terminalType = 2
 
-/obj/machinery/msgterminal/command
-	terminalid = "command"
-	terminal = "COMMAND"
+/obj/machinery/msgterminal/vfe_interior
+	terminalid = "vaultinterior"
+	terminal = "Vault Fifty-Eight Interior"
+	terminalType = 2
+
+/obj/machinery/msgterminal/vfe_command
+	terminalid = "vaulttec"
+	terminal = "Vault-Tec"
 	terminalType = 3
 
 // so admins can easily jump-to-area

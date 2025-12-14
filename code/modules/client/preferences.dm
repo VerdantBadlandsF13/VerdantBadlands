@@ -1571,7 +1571,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	dat += "- Perception of 6 or higher allows strip menu to display items in pockets."
 	dat += "<BR>"
 	dat += "<BR>"
-	dat += "- Base weapon inaccuracy. (Weapon Weight * 25 * Inaccuracy Modifier + 50 + PERCEPTION * 5)"
+	dat += "- Base weapon inaccuracy. (Weapon Weight * 25 * Inaccuracy Modifier + 50 - PERCEPTION * 5)"
 
 	dat += "<BR>"
 	dat += "<center><b>- - - - - - - - - -</b></center>"

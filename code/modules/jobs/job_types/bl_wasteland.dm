@@ -12,7 +12,7 @@
 	All kinds of people end up on the road as you have, simply picking a direction and moving their feet until they drop dead. <br>\
 	Couriers bringing packages and mail from town to town, paid just enough to sure up their supplies for the next trip. <br>\
 	Prospectors delving into ruins in search of a big payday. <br>\
-	Travelling merchants, doctors, musicians roam to try and find their next client. <br>\
+	Travelling merchants, doctors and musicians roam to try and find their next client. <br>\
 	A diverse group so commonly reduced to that one simple name: Wastelander. <br>\
 	<br>\
 	As for where you've ended up? Vermont. Specifically, 'Brattleboro', or, as the locals call it, 'Battleboro'. \

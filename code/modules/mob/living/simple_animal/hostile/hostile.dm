@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile
-	faction = list("hostile") //Overriden by mob settings. See 'no_infight' var below.
+	faction = list("hostile") //Overriden by mob settings. See 'no_infight' var below for prevention.
 	stop_automated_movement_when_pulled = 0
 	obj_damage = 40
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES //Bitflags. Set to ENVIRONMENT_SMASH_STRUCTURES to break closets,tables,racks, etc; ENVIRONMENT_SMASH_WALLS for walls; ENVIRONMENT_SMASH_RWALLS for rwalls
@@ -66,6 +66,7 @@
 	var/hide_phrase = "" //Camouflages the mob (Sets it to a defined alpha value, regardless if already 'hiddeb') upon hearing
 
 	var/no_infight = TRUE//Whether or not this mob is given a faction shared by the all other hostile creatures.
+//Given the density of hostile mobs, we don't want infighting by default. Especially since it destroys terrain and prevents player progress naturally.
 
 /mob/living/simple_animal/hostile/Initialize()
 	. = ..()
@@ -75,7 +76,7 @@
 	wanted_objects = typecacheof(wanted_objects)
 
 	if(no_infight)
-		faction += "no_infight"
+		faction |= "no_infight"
 
 /mob/living/simple_animal/hostile/Destroy()
 	targets_from = null

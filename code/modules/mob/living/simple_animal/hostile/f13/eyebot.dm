@@ -21,6 +21,7 @@
 	maxHealth = 70
 	health = 70
 	healable = 0
+	force_threshold = 12
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	blood_volume = 0
 	faction = list("hostile", "enclave", "wastebot", "ghoul", "cazador", "supermutant", "bighorner")

@@ -9,7 +9,7 @@
 	color = "#eb0000"
 	taste_description = "grossness"
 	metabolization_rate = 1 * REAGENTS_METABOLISM
-	overdose_threshold = 11
+	overdose_threshold = 40
 	addiction_threshold = 11
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
@@ -94,7 +94,7 @@
 	reagent_state = LIQUID
 	color = "#e50d0d"
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
-	overdose_threshold = 11
+	overdose_threshold = 20
 	addiction_threshold = 11
 	value = REAGENT_VALUE_VERY_RARE
 	ghoulfriendly = TRUE
@@ -264,7 +264,7 @@
 	reagent_state = LIQUID
 	color = "#6D6374"
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
-	overdose_threshold = 16
+	overdose_threshold = 30
 	addiction_threshold = 16
 	pain_resistance = 80
 	thirst_drain = -0.3
@@ -439,7 +439,7 @@
 		M.reagents.addiction_list.Remove(R)
 		to_chat(M, "<span class='notice'>You feel like you've gotten over your need for [R.name].</span>")
 	M.confused = max(M.confused, 4)
-	if(ishuman(M) && prob(50))
+	if(ishuman(M) && prob(5))
 		var/mob/living/carbon/human/H = M
 		H.vomit(10)
 	..()

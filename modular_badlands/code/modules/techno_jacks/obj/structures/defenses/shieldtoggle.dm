@@ -9,7 +9,7 @@ Lightswitch 2.0
 	icon_state = "shieldtoggle_on"
 	plane = ABOVE_WALL_PLANE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF | FREEZE_PROOF
-	req_one_access = list(ACCESS_VFE_SECURITY)
+	req_access = list(ACCESS_VFE_SECURITY)
 	var/area/area = null
 
 /obj/machinery/shield_switch/Initialize()

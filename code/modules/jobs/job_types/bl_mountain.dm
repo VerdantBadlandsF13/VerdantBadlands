@@ -19,6 +19,8 @@
 				- Ensure a consistent food supply for your militia company and citizens. <br> \
 				- Make contact and build rapport with existing powers in the area."
 
+	blacklisted_quirks = list(/datum/quirk/random_explosive, /datum/quirk/random_chem, /datum/quirk/random_weapon, /datum/quirk/stims)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/gmb,

@@ -279,9 +279,9 @@
 // Item Traits //
 /////////////////
 /datum/quirk/random_explosive
-	name = "Scavenged Explosives"
+	name = "Scavenged Explosive"
 	desc = "You've managed to procure explosives, via some means or another. Try not to blow yourself up."
-	value = 1
+	value = 2
 	var/obj/item/trait_item
 	var/where_to_give
 
@@ -298,6 +298,84 @@
 		/obj/item/grenade/homemade/firebomb,
 		/obj/item/reagent_containers/food/drinks/bottle/molotov/filled,
 		/obj/item/grenade/f13/plasma/remnant)//Fingers crossed they don't get this. :)
+	trait_item = new trait_item(get_turf(quirk_holder))
+	var/list/slots = list(
+		"in your left pocket" = SLOT_L_STORE,
+		"in your right pocket" = SLOT_R_STORE,
+		"in your backpack" = SLOT_IN_BACKPACK
+
+	)
+	where_to_give = H.equip_in_one_of_slots(trait_item, slots, FALSE) || "at your feet"
+
+/datum/quirk/random_chem
+	name = "Scavenged Chems"
+	desc = "You've managed to scrounge up some chems. Try not to take them all at once."
+	value = 1
+	var/obj/item/trait_item
+	var/where_to_give
+
+/datum/quirk/random_chem/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	trait_item = pick(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/imitation,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak/super,
+		/obj/item/reagent_containers/hypospray/medipen/medx,
+		/obj/item/reagent_containers/hypospray/medipen/psycho,
+		/obj/item/reagent_containers/hypospray/medipen/jet,
+		/obj/item/reagent_containers/hypospray/medipen/turbo,
+		/obj/item/storage/pill_bottle/chem_tin/mentats,
+		/obj/item/storage/pill_bottle/chem_tin/fixer,
+		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/buffout)
+	trait_item = new trait_item(get_turf(quirk_holder))
+	var/list/slots = list(
+		"in your left pocket" = SLOT_L_STORE,
+		"in your right pocket" = SLOT_R_STORE,
+		"in your backpack" = SLOT_IN_BACKPACK
+
+	)
+	where_to_give = H.equip_in_one_of_slots(trait_item, slots, FALSE) || "at your feet"
+
+/datum/quirk/random_weapon
+	name = "Scavenged Weapon"
+	desc = "You've managed to pry this weapon from an old corpse's hands. Perhaps it's worth something? There's no guessing the condition it's in until you get a good look at it."
+	value = 2
+	var/obj/item/trait_item
+	var/where_to_give
+
+/datum/quirk/random_weapon/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	trait_item = pick(
+		/obj/item/gun/ballistic/automatic/pistol/type17,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil,
+		/obj/item/gun/ballistic/rifle/hunting,
+		/obj/item/gun/ballistic/rifle/mosin,
+		/obj/item/gun/ballistic/revolver/caravan_shotgun,
+		/obj/item/gun/ballistic/revolver/widowmaker,
+		/obj/item/gun/ballistic/automatic/autopipe,
+		/obj/item/gun/ballistic/automatic/smg/american180)
+	trait_item = new trait_item(get_turf(quirk_holder))
+	var/list/slots = list(
+		"in your left pocket" = SLOT_L_STORE,
+		"in your right pocket" = SLOT_R_STORE,
+		"in your backpack" = SLOT_IN_BACKPACK
+
+	)
+	where_to_give = H.equip_in_one_of_slots(trait_item, slots, FALSE) || "at your feet"
+
+/datum/quirk/stims
+	name = "Double Stims"
+	desc = "You've saved two stims for a rainy day. Now, of all times, they might be needed."
+	value = 2
+	var/obj/item/trait_item
+	var/where_to_give
+
+/datum/quirk/stims/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	trait_item = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak)
 	trait_item = new trait_item(get_turf(quirk_holder))
 	var/list/slots = list(
 		"in your left pocket" = SLOT_L_STORE,

@@ -19,6 +19,8 @@
 				- Kidnapping. Someone have something you want? Try taking one of their friends, or them. People are usually worth a lot more than their share of cram alive. <br> \
 				- Negotiation. Violence has its place, but diplomacy goes a long way when it's backed up by your guns."
 
+	blacklisted_quirks = list(/datum/quirk/random_explosive, /datum/quirk/random_chem, /datum/quirk/random_weapon, /datum/quirk/stims)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/dfs,

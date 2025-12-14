@@ -14,6 +14,7 @@ This WILL wipe entire groups of players, if not the server. It's intended to be 
 	gender = NEUTER
 	health = 640
 	maxHealth = 640
+	force_threshold = 32
 	speak_chance = 1
 	turns_per_move = 5
 	move_to_delay = 5

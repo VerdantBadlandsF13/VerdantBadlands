@@ -19,6 +19,7 @@
 	move_resist = MOVE_FORCE_OVERPOWERING // Can't be pulled
 	health = 130 //7 shots of 9mm
 	maxHealth = 130
+	force_threshold = 12
 	healable = FALSE
 	stat_attack = UNCONSCIOUS
 	melee_damage_lower = 28
@@ -59,6 +60,7 @@
 	icon_dead = "robot_dead"
 	health = 200
 	maxHealth = 200
+	force_threshold = 24
 	melee_damage_lower = 72
 	melee_damage_upper = 72
 	attack_sound = 'sound/items/welder.ogg'
@@ -80,7 +82,7 @@
 
 /mob/living/simple_animal/hostile/handy/liberator
 	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
+	desc = "A small pre-War drone used by the People's Liberation Army."
 	icon = 'icons/fallout/mobs/robots/weirdrobots.dmi'
 	icon_state = "liberator"
 	icon_living = "leberator"
@@ -115,7 +117,7 @@
 
 /mob/living/simple_animal/hostile/handy/liberator/yellow
 	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
+	desc = "A small pre-War drone used by the People's Liberation Army."
 	icon_state = "liberator_y"
 	icon_living = "leberator_y"
 	icon_dead = "liberator_y_d"
@@ -128,6 +130,7 @@
 	icon_dead = "robobrain"
 	health = 480
 	maxHealth = 480
+	force_threshold = 32//Sentrybot level.
 	melee_damage_lower = 24
 	melee_damage_upper = 72//why would you even get close?
 	extra_projectiles = 0
@@ -199,6 +202,7 @@
 	icon_dead = "protectron_dead"
 	health = 130
 	maxHealth = 130
+	force_threshold = 16
 	move_to_delay = 4
 	melee_damage_lower = 15
 	melee_damage_upper = 25
@@ -251,8 +255,9 @@
 	gender = FEMALE
 	icon_dead = "gib7"
 	health = 200
-	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	maxHealth = 200
+	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
+	force_threshold = 24
 	move_to_delay = 1.8
 	melee_damage_lower = 55
 	melee_damage_upper = 60

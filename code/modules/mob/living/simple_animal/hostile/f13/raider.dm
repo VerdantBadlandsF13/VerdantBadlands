@@ -180,16 +180,26 @@
 //////////////
 // SULPHITE //
 //////////////
-
+//Acts as a mini-boss with appropriate loot.
 /mob/living/simple_animal/hostile/raider/sulphite
 	name = "Sulphite Brawler"
 	desc = "A raider with low military grade armor and a shishkebab"
 	icon_state = "sulphite"
 	icon_living = "sulphite"
 	icon_dead= "sulphite_dead"
+	maxHealth = 140
+	health = 140
+	force_threshold = 24
+	damage_coeff = list(BRUTE = 0.75, BURN = 0.1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	melee_damage_lower = 40
 	melee_damage_upper = 55
+	melee_damage_type = BURN
+	armour_penetration = 0.2
+	wound_bonus = 0
+	bare_wound_bonus = 0
+	sharpness = SHARP_EDGED
 	footstep_type = FOOTSTEP_MOB_SHOE
+	loot = list(/obj/item/shishkebabpack)//For beating this PITA.
 
 /////////////
 // JUNKERS //
@@ -230,7 +240,7 @@
 	minimum_distance = 8
 	projectiletype = /obj/item/projectile/bullet/c45
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	footstep_type = FOOTSTEP_MOB_SHOE/*
+	footstep_type = FOOTSTEP_MOB_SHOE
 	var/max_mobs = 2
 	var/mob_types = list(/mob/living/simple_animal/hostile/eyebot)
 	var/spawn_time = 15 SECONDS
@@ -248,7 +258,7 @@
 /mob/living/simple_animal/hostile/raider/junker/creator/Destroy()
 	qdel(GetComponent(/datum/component/spawner/ranged))
 	. = ..()
-*/
+
 /mob/living/simple_animal/hostile/raider/junker/creator/Aggro()
 	..()
 	summon_backup(10)

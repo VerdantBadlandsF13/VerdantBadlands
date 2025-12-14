@@ -20,6 +20,8 @@
 				- Trading: Provide lumber, food and other material to those that require it in trade. <br> \
 				- Secrecy: You are not to speak of your origin, if you even remember such."
 
+	blacklisted_quirks = list(/datum/quirk/random_explosive, /datum/quirk/random_chem, /datum/quirk/random_weapon, /datum/quirk/stims)
+
 /datum/outfit/job/lbj
 	name = "LBJdatums"
 	jobtype = /datum/job/lbj

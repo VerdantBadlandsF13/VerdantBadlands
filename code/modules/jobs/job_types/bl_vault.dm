@@ -17,6 +17,8 @@
 				- Maintaining security and cohesion between your fellow dwellers. <br> \
 				- Obeying the words of Security and the Overseer."
 
+	blacklisted_quirks = list(/datum/quirk/random_explosive, /datum/quirk/random_chem, /datum/quirk/random_weapon, /datum/quirk/stims)
+
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/vault,

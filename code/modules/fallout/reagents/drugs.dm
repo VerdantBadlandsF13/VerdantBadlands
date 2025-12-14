@@ -87,7 +87,7 @@
 	This is intended to be inhaled."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
-	overdose_threshold = 14
+	overdose_threshold = 20
 	addiction_threshold = 5
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
@@ -95,10 +95,10 @@
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
 	..()
-	ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+	ADD_TRAIT(M, TRAIT_IGNORESLOWDOWN, "[type]")//From TRAIT_IGNOREDAMAGESLOWDOWN
 
 /datum/reagent/drug/turbo/on_mob_delete(mob/M)
-	REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
+	REMOVE_TRAIT(M, TRAIT_IGNORESLOWDOWN, "[type]")
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)
@@ -277,7 +277,7 @@
 	This is intended to be taken orally."
 	color = "#FF9900"
 	reagent_state = SOLID
-	overdose_threshold = 10
+	overdose_threshold = 20
 	addiction_threshold = 10
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
